@@ -1,0 +1,22 @@
+diff --git a/src/Core/org/objectweb/proactive/core/body/BodyImpl.java b/src/Core/org/objectweb/proactive/core/body/BodyImpl.java
+index 03be826..12db2b9 100644
+--- a/src/Core/org/objectweb/proactive/core/body/BodyImpl.java
++++ b/src/Core/org/objectweb/proactive/core/body/BodyImpl.java
+@@ -301,7 +301,7 @@ public abstract class BodyImpl extends AbstractBody implements java.io.Serializa
+     @Override
+     protected int internalReceiveReply(Reply reply) throws java.io.IOException {
+         // JMX Notification
+-        if (!isProActiveInternalObject && (this.mbean != null)) {
++        if (!isProActiveInternalObject && (this.mbean != null) && reply.getResult().getResultObjet() != null &&  reply.getResult().getException() == null) {
+             this.mbean.sendNotification(NotificationType.replyReceived);
+         }
+ 
+@@ -593,7 +593,7 @@ public abstract class BodyImpl extends AbstractBody implements java.io.Serializa
+             }
+ 
+             // JMX Notification
+-            if (!isProActiveInternalObject && (mbean != null)) {
++            if (!isProActiveInternalObject && (mbean != null) && reply.getResult().getResultObjet() != null &&  reply.getResult().getException() == null) {
+                 RequestNotificationData data = new RequestNotificationData(request.getSourceBodyID(), request
+                         .getSenderNodeURL(), BodyImpl.this.bodyID, BodyImpl.this.nodeURL, request
+                         .getMethodName(), getRequestQueue().size());

@@ -1,0 +1,303 @@
+diff --git a/WebContent/WEB-INF/portal.properties b/WebContent/WEB-INF/portal.properties
+index f1d1f8f..dd2f951 100644
+--- a/WebContent/WEB-INF/portal.properties
++++ b/WebContent/WEB-INF/portal.properties
+@@ -1,4 +1,4 @@
+-scheduler.url=rmi://localhost:1099
++scheduler.url=rmi://tagada:1099
+ 
+ # scheduler user that is used as cache
+ scheduler.cache.login=watcher
+@@ -12,4 +12,4 @@ scheduler.cache.refreshrate=3500
+ #every 10 min by default
+ lease.renew.rate=600000
+ 
+-rm.url=rmi://localhost:1099
++rm.url=rmi://tagada:1099
+diff --git a/build.xml b/build.xml
+index bd57c28..dad12bf 100644
+--- a/build.xml
++++ b/build.xml
+@@ -67,7 +67,7 @@
+ 		</war>
+ 	</target>
+ 
+-	<target name="doc-jaxrs" depends="doc-jaxb" description="Generate JAX-RS documentation">
++	<target name="doc" depends="doc-jaxb" description="Generate JAX-RS documentation">
+ 		<javadoc classpathref="src.classpath" sourcepath="${src.dir}" destdir="${build.dir}/jaxrsdocs/" extdirs="${lib.dir}" doclet="com.lunatech.doclets.jax.jaxrs.JAXRSDoclet" docletpathref="src.classpath">
+ 			<package name="org.ow2.proactive_grid_cloud_portal.*" />
+ 			<link href="../jaxbdocs/" />
+diff --git a/src/org/ow2/proactive_grid_cloud_portal/MyCachingSchedulerProxyUserInterface.java b/src/org/ow2/proactive_grid_cloud_portal/MyCachingSchedulerProxyUserInterface.java
+new file mode 100644
+index 0000000..b014ed1
+--- /dev/null
++++ b/src/org/ow2/proactive_grid_cloud_portal/MyCachingSchedulerProxyUserInterface.java
+@@ -0,0 +1,124 @@
++/*
++ * ################################################################
++ *
++ * ProActive Parallel Suite(TM): The Java(TM) library for
++ *    Parallel, Distributed, Multi-Core Computing for
++ *    Enterprise Grids & Clouds
++ *
++ * Copyright (C) 1997-2011 INRIA/University of
++ *                 Nice-Sophia Antipolis/ActiveEon
++ * Contact: proactive@ow2.org or contact@activeeon.com
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Affero General Public License
++ * as published by the Free Software Foundation; version 3 of
++ * the License.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Affero General Public License for more details.
++ *
++ * You should have received a copy of the GNU Affero General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ * If needed, contact us to obtain a release under GPL Version 2 or 3
++ * or a different license than the AGPL.
++ *
++ *  Initial developer(s):               The ActiveEon Team
++ *                        http://www.activeeon.com/
++ *  Contributor(s):
++ *
++ * ################################################################
++ * $$ACTIVEEON_INITIAL_DEV$$
++ */
++
++package org.ow2.proactive_grid_cloud_portal;
++
++import java.security.KeyException;
++import java.security.PublicKey;
++
++import javax.security.auth.login.LoginException;
++
++import org.objectweb.proactive.api.PAActiveObject;
++import org.objectweb.proactive.api.PAFuture;
++import org.ow2.proactive.authentication.crypto.CredData;
++import org.ow2.proactive.authentication.crypto.Credentials;
++import org.ow2.proactive.scheduler.common.SchedulerAuthenticationInterface;
++import org.ow2.proactive.scheduler.common.SchedulerConnection;
++import org.ow2.proactive.scheduler.common.exception.InternalSchedulerException;
++import org.ow2.proactive.scheduler.common.exception.SchedulerException;
++import org.ow2.proactive.scheduler.common.util.CachingSchedulerProxyUserInterface;
++import org.ow2.proactive.utils.console.MBeanInfoViewer;
++
++/**
++ * Class that extends SchedulerProxyUserInterface as released in 3.0.x
++ * can be removed when the api will be released with Scheduling 3.1.x 
++ * 
++ *
++ */
++public class MyCachingSchedulerProxyUserInterface extends CachingSchedulerProxyUserInterface {
++
++    
++    /**
++     * initialize the connection the scheduler. 
++     * Must be called only once.
++     * Create the corresponding credential object before sending it
++     * to the scheduler.
++     * @param url the scheduler's url 
++     * @param user the username to use
++     * @param pwd the password to use
++     * @param myEventsOnly if true only listen to user events 
++     * @throws SchedulerException thrown if the scheduler is not available
++     * @throws LoginException if the couple username/password is invalid
++     */
++    public void init(String url, String user, String pwd, boolean myEventsOnly) throws SchedulerException, LoginException {
++        SchedulerAuthenticationInterface auth = SchedulerConnection.join(url);
++        PublicKey pubKey = auth.getPublicKey();
++
++        try {
++            Credentials cred = Credentials.createCredentials(new CredData(CredData.parseLogin(user), CredData
++                    .parseDomain(user), pwd), pubKey);
++            this.uischeduler = auth.login(cred);
++        } catch (KeyException e) {
++            throw new InternalSchedulerException(e);
++        }
++        CachingSchedulerProxyUserInterface ao = (CachingSchedulerProxyUserInterface) PAActiveObject
++                .getStubOnThis();
++        schedulerState = this.uischeduler.addEventListener(ao, myEventsOnly, true);
++        schedulerState = PAFuture.getFutureValue(schedulerState);
++    }
++    
++    /**
++     * initialize the connection the scheduler. 
++     * Must be called only once.
++     * Create the corresponding credential object before sending it
++     * to the scheduler.
++     * @param url the scheduler's url 
++     * @param credData credentials
++     * @param myEventsOnly only retrieve user events
++     * @throws SchedulerException thrown if the scheduler is not available
++     * @throws LoginException if the couple username/password is invalid
++     */
++    public void init(String url, CredData credData, boolean myEventsOnly) throws SchedulerException, LoginException {
++        SchedulerAuthenticationInterface auth = SchedulerConnection.join(url);
++        PublicKey pubKey = auth.getPublicKey();
++
++        try {
++            Credentials cred = Credentials.createCredentials(credData, pubKey);
++            this.uischeduler = auth.login(cred);
++            mbeaninfoviewer = new MBeanInfoViewer(auth, credData.getLogin(), cred);
++        } catch (KeyException e) {
++            throw new InternalSchedulerException(e);
++        }
++        
++        CachingSchedulerProxyUserInterface ao = (CachingSchedulerProxyUserInterface) PAActiveObject
++                .getStubOnThis();
++        schedulerState = this.uischeduler.addEventListener(ao, myEventsOnly, true);
++        schedulerState = PAFuture.getFutureValue(schedulerState);
++    }
++    
++    
++}
+diff --git a/src/org/ow2/proactive_grid_cloud_portal/SchedulerStateRest.java b/src/org/ow2/proactive_grid_cloud_portal/SchedulerStateRest.java
+index f028d69..e4fac2b 100644
+--- a/src/org/ow2/proactive_grid_cloud_portal/SchedulerStateRest.java
++++ b/src/org/ow2/proactive_grid_cloud_portal/SchedulerStateRest.java
+@@ -120,7 +120,6 @@ public class SchedulerStateRest implements SchedulerRestInterface {
+     private CachingSchedulerProxyUserInterface cachedState;
+     private volatile boolean isCacheEnabled = true;
+ 
+-
+     /**
+      * Returns the ids of the current jobs under a list of string.
+      * @param sessionId a valid session id
+@@ -240,33 +239,35 @@ public class SchedulerStateRest implements SchedulerRestInterface {
+ 
+         Entry<AtomicLong, SchedulerState> entry = stateAndrevision.entrySet().iterator().next();
+ 
+-        SchedulerState state = entry.getValue();
+-
+-		String user = SchedulerSessionMapper.getInstance().getUsernames()
+-				.get(sessionId);
+-		if (myJobs && user != null && user.trim().length() > 0) {
+-			for (JobState j : state.getPendingJobs()) {
+-				if (j.getOwner().equals(user))
+-					jobs.add(j);
+-			}
+-			for (JobState j : state.getRunningJobs()) {
+-				if (j.getOwner().equals(user))
+-					jobs.add(j);
+-			}
+-			for (JobState j : state.getFinishedJobs()) {
+-				if (j.getOwner().equals(user))
+-					jobs.add(j);
+-			}
+-		} else {
+-			jobs.addAll(state.getPendingJobs());
+-			jobs.addAll(state.getRunningJobs());
+-			jobs.addAll(state.getFinishedJobs());
+-		}
+-
+-		if (range != -1 && index != -1) {
+-			JobState.setSortingOrder(JobState.DESC_ORDER);
+-			Collections.sort(jobs);
+-		}
++        SchedulerState state;
++        if (myJobs) {
++            state = s.getState();
++        } else {
++            state = entry.getValue();
++        }
++//        String user = SchedulerSessionMapper.getInstance().getUsernames().get(sessionId);
++        //		if (myJobs && user != null && user.trim().length() > 0) {
++        //			for (JobState j : state.getPendingJobs()) {
++        //				if (j.getOwner().equals(user))
++        //					jobs.add(j);
++        //			}
++        //			for (JobState j : state.getRunningJobs()) {
++        //				if (j.getOwner().equals(user))
++        //					jobs.add(j);
++        //			}
++        //			for (JobState j : state.getFinishedJobs()) {
++        //				if (j.getOwner().equals(user))
++        //					jobs.add(j);
++        //			}
++
++        jobs.addAll(state.getPendingJobs());
++        jobs.addAll(state.getRunningJobs());
++        jobs.addAll(state.getFinishedJobs());
++
++        if (range != -1 && index != -1) {
++            JobState.setSortingOrder(JobState.DESC_ORDER);
++            Collections.sort(jobs);
++        }
+ 
+         //filter the result if needed
+         jobs = subList(jobs, index, range);
+@@ -403,6 +404,7 @@ public class SchedulerStateRest implements SchedulerRestInterface {
+ 
+         return js;
+     }
++
+     /**
+      * Returns the job result associated to the job referenced by the
+      * id <code>jobid</code>
+@@ -1156,18 +1158,16 @@ public class SchedulerStateRest implements SchedulerRestInterface {
+          * ", cache is disabled"); } }
+          */
+ 
+-        MySchedulerProxyUserInterface scheduler;
+-        scheduler = PAActiveObject.newActive(MySchedulerProxyUserInterface.class, new Object[] {});
++        MyCachingSchedulerProxyUserInterface scheduler;
++        scheduler = PAActiveObject.newActive(MyCachingSchedulerProxyUserInterface.class, new Object[] {});
+ 
+         String url = PortalConfiguration.getProperties().getProperty(PortalConfiguration.scheduler_url);
+ 
+-        if ((username == null) ||
+-                (password == null)  ) {
++        if ((username == null) || (password == null)) {
+             throw new LoginException("empty login/password");
+         }
+ 
+-
+-        scheduler.init(url, username, password);
++        scheduler.init(url, username, password,true);
+ 
+         String sessionId = "" + SchedulerSessionMapper.getInstance().add(scheduler, username);
+         logger.info("binding user " + username + " to session " + sessionId);
+@@ -1196,8 +1196,8 @@ public class SchedulerStateRest implements SchedulerRestInterface {
+             throws ActiveObjectCreationException, NodeException, KeyException, LoginException,
+             SchedulerException {
+ 
+-        MySchedulerProxyUserInterface scheduler = PAActiveObject.newActive(
+-                MySchedulerProxyUserInterface.class, new Object[] {});
++        MyCachingSchedulerProxyUserInterface scheduler = PAActiveObject.newActive(
++                MyCachingSchedulerProxyUserInterface.class, new Object[] {});
+ 
+         String url = PortalConfiguration.getProperties().getProperty(PortalConfiguration.scheduler_url);
+ 
+@@ -1210,15 +1210,13 @@ public class SchedulerStateRest implements SchedulerRestInterface {
+                 throw new LoginException(e.getMessage());
+             }
+         } else {
+-            if ((multipart.getUsername() == null) ||
+-                    (multipart.getPassword() == null)  ) {
++            if ((multipart.getUsername() == null) || (multipart.getPassword() == null)) {
+                 throw new LoginException("empty login/password");
+             }
+ 
+-
+             CredData credData = new CredData(CredData.parseLogin(multipart.getUsername()),
+                 CredData.parseDomain(multipart.getUsername()), multipart.getPassword(), multipart.getSshKey());
+-            scheduler.init(url, credData);
++            scheduler.init(url, credData, true);
+         }
+ 
+         String sessionId = "" + SchedulerSessionMapper.getInstance().add(scheduler, null);
+@@ -1270,7 +1268,7 @@ public class SchedulerStateRest implements SchedulerRestInterface {
+      * 
+      * return s.getInfo("ProActiveScheduler:name=AllAccounts"); }
+      */
+-    
++
+     /**
+      * returns the version of the rest api
+      * @return returns the version of the rest api

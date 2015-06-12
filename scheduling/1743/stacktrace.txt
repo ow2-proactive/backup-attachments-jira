@@ -1,0 +1,904 @@
+2012-11-23 15:50:41
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (20.8-b03 mixed mode):
+"RMI TCP Connection(6009)-132.166.132.82" daemon prio=6 tid=0x00000000086c1000 nid=0x1888 runnable [0x0000000009a0f000]
+java.lang.Thread.State: RUNNABLE
+at java.net.SocketInputStream.socketRead0(Native Method)
+at java.net.SocketInputStream.read(SocketInputStream.java:129)
+at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+locked <0x00000000ec6b15e0> (a java.io.BufferedInputStream)
+at java.io.FilterInputStream.read(FilterInputStream.java:66)
+at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000ec6b0948> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"RMI TCP Connection(6008)-132.166.132.82" daemon prio=6 tid=0x0000000008c3d800 nid=0xbc4 runnable [0x000000000980f000]
+java.lang.Thread.State: RUNNABLE
+at java.net.SocketInputStream.socketRead0(Native Method)
+at java.net.SocketInputStream.read(SocketInputStream.java:129)
+at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+locked <0x00000000ea4da880> (a java.io.BufferedInputStream)
+at java.io.FilterInputStream.read(FilterInputStream.java:66)
+at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000fd4d8d08> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"pool-2-thread-1407" prio=6 tid=0x0000000008c2f000 nid=0x19c8 waiting on condition [0x000000000e67f000]
+java.lang.Thread.State: TIMED_WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bec59348> (a java.util.concurrent.SynchronousQueue$TransferStack)
+at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:196)
+at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:424)
+at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:323)
+at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:874)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:945)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"Dispatcher-Thread-404" daemon prio=6 tid=0x00000000086bf000 nid=0x1a94 in Object.wait() [0x000000000ff2f000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000ca95a380> (a java.util.ArrayList)
+at java.lang.Object.wait(Object.java:485)
+at org.apache.log4j.AsyncAppender$Dispatcher.run(AsyncAppender.java:540)
+locked <0x00000000ca95a380> (a java.util.ArrayList)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"ProActive log4j flusher" prio=6 tid=0x00000000086bb800 nid=0x1a0 in Object.wait() [0x000000000ee7f000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000ca95a540> (a org.objectweb.proactive.core.util.log.remote.ThrottlingProvider)
+at org.objectweb.proactive.core.util.log.remote.ThrottlingProvider.run(ThrottlingProvider.java:248)
+locked <0x00000000ca95a540> (a org.objectweb.proactive.core.util.log.remote.ThrottlingProvider)
+at org.objectweb.proactive.core.util.log.remote.ProActiveAppender$RunLogFlusher.run(ProActiveAppender.java:204)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-3-thread-5" prio=6 tid=0x0000000008c39800 nid=0x1584 waiting on condition [0x000000000fe2f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000becb9930> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-3-thread-4" prio=6 tid=0x0000000008c39000 nid=0x1c7c waiting on condition [0x000000000fd2f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000becb9930> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-3-thread-3" prio=6 tid=0x0000000008c38000 nid=0x17f4 waiting on condition [0x000000000fc2f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000becb9930> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-3-thread-2" prio=6 tid=0x0000000008c37800 nid=0xd90 waiting on condition [0x000000000fb2f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000becb9930> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-4-thread-5" prio=6 tid=0x0000000008c36800 nid=0x1828 waiting on condition [0x000000000fa2e000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000cb734d48> (a java.util.concurrent.CountDownLatch$Sync)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:811)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:969)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1281)
+at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:207)
+at org.objectweb.proactive.utils.SweetCountDownLatch.await(SweetCountDownLatch.java:66)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.waitForResponse(AgentImpl.java:727)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.access$300(AgentImpl.java:691)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:492)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:470)
+at org.objectweb.proactive.extensions.pamr.remoteobject.message.PAMRMessage.send(PAMRMessage.java:116)
+at org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObject.receiveMessage(PAMRRemoteObject.java:93)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.receiveMessage(RemoteObjectSet.java:169)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:183)
+at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:82)
+at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:166)
+at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:341)
+at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:188)
+at org.objectweb.proactive.core.body.HalfBody$HalfLocalBodyStrategy.sendRequest(HalfBody.java:301)
+at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:997)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:551)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:516)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:437)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:267)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:161)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.task.launcher._StubForkedJavaTaskLauncher.getProgress(_StubForkedJavaTaskLauncher.java)
+at org.ow2.proactive.scheduler.core.SchedulerCore$3.run(SchedulerCore.java:771)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000bf137b90> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"pool-4-thread-4" prio=6 tid=0x0000000008c36000 nid=0x15c0 waiting on condition [0x000000000f92e000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000cb733f70> (a java.util.concurrent.CountDownLatch$Sync)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:811)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:969)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1281)
+at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:207)
+at org.objectweb.proactive.utils.SweetCountDownLatch.await(SweetCountDownLatch.java:66)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.waitForResponse(AgentImpl.java:727)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.access$300(AgentImpl.java:691)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:492)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:470)
+at org.objectweb.proactive.extensions.pamr.remoteobject.message.PAMRMessage.send(PAMRMessage.java:116)
+at org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObject.receiveMessage(PAMRRemoteObject.java:93)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.receiveMessage(RemoteObjectSet.java:169)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:183)
+at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:82)
+at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:166)
+at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:341)
+at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:188)
+at org.objectweb.proactive.core.body.HalfBody$HalfLocalBodyStrategy.sendRequest(HalfBody.java:301)
+at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:997)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:551)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:516)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:437)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:267)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:161)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.task.launcher._StubForkedJavaTaskLauncher.getProgress(_StubForkedJavaTaskLauncher.java)
+at org.ow2.proactive.scheduler.core.SchedulerCore$3.run(SchedulerCore.java:771)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000bf135f50> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"pool-4-thread-3" prio=6 tid=0x0000000008c35800 nid=0x1740 waiting on condition [0x000000000f82e000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000cb734c98> (a java.util.concurrent.CountDownLatch$Sync)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:811)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:969)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1281)
+at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:207)
+at org.objectweb.proactive.utils.SweetCountDownLatch.await(SweetCountDownLatch.java:66)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.waitForResponse(AgentImpl.java:727)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.access$300(AgentImpl.java:691)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:492)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:470)
+at org.objectweb.proactive.extensions.pamr.remoteobject.message.PAMRMessage.send(PAMRMessage.java:116)
+at org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObject.receiveMessage(PAMRRemoteObject.java:93)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.receiveMessage(RemoteObjectSet.java:169)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:183)
+at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:82)
+at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:166)
+at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:341)
+at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:188)
+at org.objectweb.proactive.core.body.HalfBody$HalfLocalBodyStrategy.sendRequest(HalfBody.java:301)
+at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:997)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:551)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:516)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:437)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:267)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:161)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.task.launcher._StubForkedJavaTaskLauncher.getProgress(_StubForkedJavaTaskLauncher.java)
+at org.ow2.proactive.scheduler.core.SchedulerCore$3.run(SchedulerCore.java:771)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000bf137310> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"pool-3-thread-1" prio=6 tid=0x0000000008c34800 nid=0x1e28 waiting on condition [0x000000000f72f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000becb9930> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-5-thread-5" prio=6 tid=0x0000000008c34000 nid=0xe7c waiting on condition [0x000000000f47f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf062ef0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-5-thread-4" prio=6 tid=0x0000000008c33000 nid=0xefc waiting on condition [0x000000000f62f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf062ef0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-5-thread-3" prio=6 tid=0x0000000008c32800 nid=0x171c waiting on condition [0x000000000f37f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf062ef0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-4-thread-2" prio=6 tid=0x0000000008c31800 nid=0x1c50 waiting on condition [0x000000000f27e000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000cb734bc8> (a java.util.concurrent.CountDownLatch$Sync)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:811)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:969)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1281)
+at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:207)
+at org.objectweb.proactive.utils.SweetCountDownLatch.await(SweetCountDownLatch.java:66)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.waitForResponse(AgentImpl.java:727)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.access$300(AgentImpl.java:691)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:492)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:470)
+at org.objectweb.proactive.extensions.pamr.remoteobject.message.PAMRMessage.send(PAMRMessage.java:116)
+at org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObject.receiveMessage(PAMRRemoteObject.java:93)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.receiveMessage(RemoteObjectSet.java:169)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:183)
+at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:82)
+at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:166)
+at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:341)
+at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:188)
+at org.objectweb.proactive.core.body.HalfBody$HalfLocalBodyStrategy.sendRequest(HalfBody.java:301)
+at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:997)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:551)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:516)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:437)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:267)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:161)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.task.launcher._StubForkedJavaTaskLauncher.getProgress(_StubForkedJavaTaskLauncher.java)
+at org.ow2.proactive.scheduler.core.SchedulerCore$3.run(SchedulerCore.java:771)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000bf137750> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"pool-4-thread-1" prio=6 tid=0x0000000008c31000 nid=0x1970 waiting on condition [0x000000000f17e000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000cb734af8> (a java.util.concurrent.CountDownLatch$Sync)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:811)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:969)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1281)
+at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:207)
+at org.objectweb.proactive.utils.SweetCountDownLatch.await(SweetCountDownLatch.java:66)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.waitForResponse(AgentImpl.java:727)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.access$300(AgentImpl.java:691)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:492)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:470)
+at org.objectweb.proactive.extensions.pamr.remoteobject.message.PAMRMessage.send(PAMRMessage.java:116)
+at org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObject.receiveMessage(PAMRRemoteObject.java:93)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.receiveMessage(RemoteObjectSet.java:169)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:183)
+at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:82)
+at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:166)
+at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:341)
+at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:188)
+at org.objectweb.proactive.core.body.HalfBody$HalfLocalBodyStrategy.sendRequest(HalfBody.java:301)
+at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:997)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:551)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:516)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:437)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:267)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:161)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.task.launcher._StubForkedJavaTaskLauncher.getProgress(_StubForkedJavaTaskLauncher.java)
+at org.ow2.proactive.scheduler.core.SchedulerCore$3.run(SchedulerCore.java:771)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000bf136390> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"pool-6-thread-5" prio=6 tid=0x0000000008c30000 nid=0x1ef8 waiting on condition [0x000000000f07f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf090b20> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-5-thread-2" prio=6 tid=0x0000000008c2f800 nid=0x29c waiting on condition [0x000000000ef7f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf062ef0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-6-thread-4" prio=6 tid=0x0000000008510000 nid=0x1bc waiting on condition [0x000000000ed7f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf090b20> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-6-thread-3" prio=6 tid=0x0000000008510800 nid=0x1964 waiting on condition [0x000000000ec7f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf090b20> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-5-thread-1" prio=6 tid=0x000000000850f000 nid=0x1804 waiting on condition [0x000000000eb7f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf062ef0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"Thread for AC" prio=6 tid=0x00000000086c2000 nid=0x1884 in Object.wait() [0x000000000ea7f000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bec6cd38> (a org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue)
+at java.lang.Object.wait(Object.java:485)
+at org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue.waitForAC(FuturePool.java:615)
+locked <0x00000000bec6cd38> (a org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue)
+at org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue.run(FuturePool.java:559)
+Locked ownable synchronizers:
+None
+"pool-6-thread-2" prio=6 tid=0x00000000086c0800 nid=0x1978 waiting on condition [0x000000000e87f000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf090b20> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"pool-6-thread-1" prio=6 tid=0x00000000086bf800 nid=0x1de0 waiting on condition [0x000000000b7df000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bf090b20> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"DestroyJavaVM" prio=6 tid=0x00000000086bc000 nid=0x1b48 waiting on condition [0x0000000000000000]
+java.lang.Thread.State: RUNNABLE
+Locked ownable synchronizers:
+None
+"Scheduler Accounts Manager Refresher" daemon prio=2 tid=0x00000000086bd800 nid=0x79c waiting on condition [0x000000000e77f000]
+java.lang.Thread.State: TIMED_WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000becca128> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:196)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2025)
+at java.util.concurrent.DelayQueue.take(DelayQueue.java:164)
+at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:609)
+at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:602)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"Thread-19" prio=6 tid=0x00000000086ba000 nid=0x18dc waiting on condition [0x000000000c4df000]
+java.lang.Thread.State: TIMED_WAITING (sleeping)
+at java.lang.Thread.sleep(Native Method)
+at org.ow2.proactive.scheduler.core.SchedulerCore$2.run(SchedulerCore.java:485)
+Locked ownable synchronizers:
+None
+"JMX server connection timeout 51" daemon prio=6 tid=0x00000000086ba800 nid=0x1d40 in Object.wait() [0x000000000e57f000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bf042fb8> (a [I)
+at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:150)
+locked <0x00000000bf042fb8> (a [I)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"RMI TCP Accept-0" daemon prio=6 tid=0x00000000086b5800 nid=0x1760 runnable [0x000000000b9df000]
+java.lang.Thread.State: RUNNABLE
+at java.net.PlainSocketImpl.socketAccept(Native Method)
+at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+locked <0x00000000bf035070> (a java.net.SocksSocketImpl)
+at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+at java.net.ServerSocket.accept(ServerSocket.java:430)
+at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:34)
+at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"derby.rawStoreDaemon" daemon prio=6 tid=0x00000000086b9000 nid=0x10a8 in Object.wait() [0x000000000c3df000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000beddae40> (a org.apache.derby.impl.services.daemon.BasicDaemon)
+at org.apache.derby.impl.services.daemon.BasicDaemon.rest(Unknown Source)
+locked <0x00000000beddae40> (a org.apache.derby.impl.services.daemon.BasicDaemon)
+at org.apache.derby.impl.services.daemon.BasicDaemon.run(Unknown Source)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"Timer-1" daemon prio=6 tid=0x00000000086b8800 nid=0x1db4 in Object.wait() [0x000000000c2df000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bedbdc30> (a java.util.TaskQueue)
+at java.lang.Object.wait(Object.java:485)
+at java.util.TimerThread.mainLoop(Timer.java:483)
+locked <0x00000000bedbdc30> (a java.util.TaskQueue)
+at java.util.TimerThread.run(Timer.java:462)
+Locked ownable synchronizers:
+None
+"derby.antiGC" daemon prio=2 tid=0x00000000086b7800 nid=0x17e8 in Object.wait() [0x000000000c1df000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000beddb4e0> (a org.apache.derby.impl.services.monitor.AntiGC)
+at java.lang.Object.wait(Object.java:485)
+at org.apache.derby.impl.services.monitor.AntiGC.run(Unknown Source)
+locked <0x00000000beddb4e0> (a org.apache.derby.impl.services.monitor.AntiGC)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"Thread-15" prio=6 tid=0x00000000086b7000 nid=0x1328 in Object.wait() [0x000000000c0df000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bedbe088> (a java.lang.Object)
+at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.freeze(FileSystemServerImpl.java:651)
+locked <0x00000000bedbe088> (a java.lang.Object)
+at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.run(FileSystemServerImpl.java:594)
+Locked ownable synchronizers:
+None
+"Thread-14" prio=6 tid=0x00000000086b6000 nid=0x1710 in Object.wait() [0x000000000bfdf000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bedda580> (a java.lang.Object)
+at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.freeze(FileSystemServerImpl.java:651)
+locked <0x00000000bedda580> (a java.lang.Object)
+at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.run(FileSystemServerImpl.java:594)
+Locked ownable synchronizers:
+None
+"RMI Scheduler(0)" daemon prio=6 tid=0x00000000086b5000 nid=0x1dec waiting on condition [0x000000000bddf000]
+java.lang.Thread.State: TIMED_WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000bedbe260> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:196)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2025)
+at java.util.concurrent.DelayQueue.take(DelayQueue.java:164)
+at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:609)
+at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:602)
+at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"GC Daemon" daemon prio=2 tid=0x00000000086b4000 nid=0x3ec in Object.wait() [0x000000000bcdf000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bedc1cd0> (a sun.misc.GC$LatencyLock)
+at sun.misc.GC$Daemon.run(GC.java:100)
+locked <0x00000000bedc1cd0> (a sun.misc.GC$LatencyLock)
+Locked ownable synchronizers:
+None
+"RMI Reaper" prio=6 tid=0x00000000086b3800 nid=0x18d0 in Object.wait() [0x000000000bbdf000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bedc6b30> (a java.lang.ref.ReferenceQueue$Lock)
+at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+locked <0x00000000bedc6b30> (a java.lang.ref.ReferenceQueue$Lock)
+at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+at sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:333)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"RMI TCP Accept-0" daemon prio=6 tid=0x00000000086b2800 nid=0x1904 runnable [0x000000000badf000]
+java.lang.Thread.State: RUNNABLE
+at java.net.PlainSocketImpl.socketAccept(Native Method)
+at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+locked <0x00000000bedbe4c8> (a java.net.SocksSocketImpl)
+at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+at java.net.ServerSocket.accept(ServerSocket.java:430)
+at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"SchedulerCore on pamr://1/Node1989599431" prio=6 tid=0x000000000850e800 nid=0x1b9c waiting on condition [0x000000000b6de000]
+java.lang.Thread.State: WAITING (parking)
+at sun.misc.Unsafe.park(Native Method)
+parking to wait for <0x00000000cb714210> (a java.util.concurrent.CountDownLatch$Sync)
+at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:811)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:969)
+at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1281)
+at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:207)
+at org.objectweb.proactive.utils.SweetCountDownLatch.await(SweetCountDownLatch.java:66)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.waitForResponse(AgentImpl.java:727)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$Patient.access$300(AgentImpl.java:691)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:492)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:470)
+at org.objectweb.proactive.extensions.pamr.remoteobject.message.PAMRMessage.send(PAMRMessage.java:116)
+at org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObject.receiveMessage(PAMRRemoteObject.java:93)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.receiveMessage(RemoteObjectSet.java:169)
+at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:183)
+at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:82)
+at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:166)
+at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:341)
+at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:188)
+at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:815)
+at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:997)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:551)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:516)
+at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:437)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:198)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:140)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.task.launcher._StubForkedJavaTaskLauncher.terminate(_StubForkedJavaTaskLauncher.java)
+at org.ow2.proactive.scheduler.core.SchedulerCore.endJob(SchedulerCore.java:942)
+at org.ow2.proactive.scheduler.core.SchedulerCore.killJob(SchedulerCore.java:1913)
+locked <0x00000000bec9ddf0> (a org.ow2.proactive.scheduler.core.SchedulerCore)
+at sun.reflect.GeneratedMethodAccessor280.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+at java.lang.reflect.Method.invoke(Method.java:597)
+at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:399)
+at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:257)
+at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:201)
+at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:626)
+at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:587)
+at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:949)
+at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+at org.objectweb.proactive.Service.blockingServeOldest(Service.java:166)
+at org.ow2.proactive.scheduler.core.SchedulerCore.runActivity(SchedulerCore.java:601)
+at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:203)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=15d4eb20-13ad54355ba-7ffa49c535b8cab65356-15d4eb20-13ad54355ba-8000" daemon prio=6 tid=0x000000000850e000 nid=0x920 waiting on condition [0x000000000b5df000]
+java.lang.Thread.State: TIMED_WAITING (sleeping)
+at java.lang.Thread.sleep(Native Method)
+at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:251)
+Locked ownable synchronizers:
+None
+"RestartTaskTimer" prio=6 tid=0x000000000850d000 nid=0x1820 in Object.wait() [0x000000000b4df000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000becacfd0> (a java.util.TaskQueue)
+at java.lang.Object.wait(Object.java:485)
+at java.util.TimerThread.mainLoop(Timer.java:483)
+locked <0x00000000becacfd0> (a java.util.TaskQueue)
+at java.util.TimerThread.run(Timer.java:462)
+Locked ownable synchronizers:
+None
+"RemoveJobTimer" prio=6 tid=0x000000000850c800 nid=0x1f00 in Object.wait() [0x000000000b3df000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000becacb60> (a java.util.TaskQueue)
+at java.lang.Object.wait(Object.java:485)
+at java.util.TimerThread.mainLoop(Timer.java:483)
+locked <0x00000000becacb60> (a java.util.TaskQueue)
+at java.util.TimerThread.run(Timer.java:462)
+Locked ownable synchronizers:
+None
+"SchedulerRMProxy on pamr://1/Node1989599431" prio=6 tid=0x000000000850b800 nid=0x16bc in Object.wait() [0x000000000b2df000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bec7f218> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(BlockingRequestQueueImpl.java:215)
+locked <0x00000000bec7f218> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(BlockingRequestQueueImpl.java:302)
+at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(BlockingRequestQueueImpl.java:154)
+locked <0x00000000bec7f218> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+at org.objectweb.proactive.Service.blockingRemoveOldest(Service.java:629)
+at org.objectweb.proactive.Service.blockingRemoveOldest(Service.java:655)
+at org.ow2.proactive.scheduler.core.rmproxies.UserRMProxy.runActivity(UserRMProxy.java:135)
+at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:203)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=15d4eb20-13ad54355ba-7ffb49c535b8cab65356-15d4eb20-13ad54355ba-8000" daemon prio=6 tid=0x000000000850b000 nid=0x1b18 waiting on condition [0x000000000b1df000]
+java.lang.Thread.State: TIMED_WAITING (sleeping)
+at java.lang.Thread.sleep(Native Method)
+at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:251)
+Locked ownable synchronizers:
+None
+"SchedulerAuthentication on pamr://1/Node1989599431" prio=6 tid=0x000000000850a000 nid=0x1c94 in Object.wait() [0x000000000b0de000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000cb72a770> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:342)
+locked <0x00000000cb72a770> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:298)
+locked <0x00000000cb72a770> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.future.FutureProxy.getRaisedException(FutureProxy.java:245)
+locked <0x00000000cb72a770> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:275)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:161)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.core._StubSchedulerFrontend.connect(_StubSchedulerFrontend.java)
+at org.ow2.proactive.scheduler.authentication.SchedulerAuthentication.login(SchedulerAuthentication.java:120)
+at sun.reflect.GeneratedMethodAccessor305.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+at java.lang.reflect.Method.invoke(Method.java:597)
+at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:399)
+at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:257)
+at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:201)
+at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:626)
+at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:587)
+at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:949)
+at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:323)
+at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:203)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=15d4eb20-13ad54355ba-7ffc49c535b8cab65356-15d4eb20-13ad54355ba-8000" daemon prio=6 tid=0x0000000008509800 nid=0x1030 waiting on condition [0x000000000afdf000]
+java.lang.Thread.State: TIMED_WAITING (sleeping)
+at java.lang.Thread.sleep(Native Method)
+at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:251)
+Locked ownable synchronizers:
+None
+"SchedulerFrontend on pamr://1/Node1989599431" prio=6 tid=0x0000000008a2e000 nid=0x1ec8 in Object.wait() [0x000000000aede000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000cb738f88> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:342)
+locked <0x00000000cb738f88> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:298)
+locked <0x00000000cb738f88> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.future.FutureProxy.getRaisedException(FutureProxy.java:245)
+locked <0x00000000cb738f88> (a org.objectweb.proactive.core.body.future.FutureProxy)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:275)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:161)
+at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:116)
+at pa.stub.org.ow2.proactive.scheduler.core._StubSchedulerCore.killJob(_StubSchedulerCore.java)
+at org.ow2.proactive.scheduler.core.SchedulerFrontend.killJob(SchedulerFrontend.java:880)
+at sun.reflect.GeneratedMethodAccessor279.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+at java.lang.reflect.Method.invoke(Method.java:597)
+at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:399)
+at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:257)
+at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:201)
+at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:626)
+at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:587)
+at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:949)
+at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:323)
+at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:203)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=15d4eb20-13ad54355ba-7ffd49c535b8cab65356-15d4eb20-13ad54355ba-8000" daemon prio=6 tid=0x0000000008a2d800 nid=0x1834 waiting on condition [0x000000000addf000]
+java.lang.Thread.State: TIMED_WAITING (sleeping)
+at java.lang.Thread.sleep(Native Method)
+at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:251)
+Locked ownable synchronizers:
+None
+"SessionTimer" prio=6 tid=0x0000000008857800 nid=0x1fe4 in Object.wait() [0x000000000acdf000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000becc9b88> (a java.util.TaskQueue)
+at java.lang.Object.wait(Object.java:485)
+at java.util.TimerThread.mainLoop(Timer.java:483)
+locked <0x00000000becc9b88> (a java.util.TaskQueue)
+at java.util.TimerThread.run(Timer.java:462)
+Locked ownable synchronizers:
+None
+"Monitoring the Futures" daemon prio=6 tid=0x0000000008401000 nid=0x10c0 waiting on condition [0x0000000009c0f000]
+java.lang.Thread.State: TIMED_WAITING (sleeping)
+at java.lang.Thread.sleep(Native Method)
+at org.objectweb.proactive.core.body.future.FutureMonitoring.monitoringDelay(FutureMonitoring.java:96)
+at org.objectweb.proactive.core.body.future.FutureMonitoring.run(FutureMonitoring.java:175)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"Message routing: message reader for agent 1" daemon prio=6 tid=0x00000000085d5800 nid=0x18f8 runnable [0x000000000990f000]
+java.lang.Thread.State: RUNNABLE
+at java.net.SocketInputStream.socketRead0(Native Method)
+at java.net.SocketInputStream.read(SocketInputStream.java:129)
+at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+at java.io.BufferedInputStream.read1(BufferedInputStream.java:258)
+at java.io.BufferedInputStream.read(BufferedInputStream.java:317)
+locked <0x00000000bec591d0> (a java.io.BufferedInputStream)
+at org.objectweb.proactive.extensions.pamr.client.Tunnel.read(Tunnel.java:106)
+at org.objectweb.proactive.extensions.pamr.client.Tunnel.read(Tunnel.java:96)
+at org.objectweb.proactive.extensions.pamr.client.Tunnel.readMessage(Tunnel.java:144)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$MessageReader.readMessage(AgentImpl.java:830)
+at org.objectweb.proactive.extensions.pamr.client.AgentImpl$MessageReader.run(AgentImpl.java:803)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+None
+"PAMR: Heartbeat timer" prio=6 tid=0x00000000085e4800 nid=0x11d0 in Object.wait() [0x000000000970f000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bed99580> (a java.util.TaskQueue)
+at java.util.TimerThread.mainLoop(Timer.java:509)
+locked <0x00000000bed99580> (a java.util.TaskQueue)
+at java.util.TimerThread.run(Timer.java:462)
+Locked ownable synchronizers:
+None
+"pool-1-thread-1 - Acceptor0 SelectChannelConnector@0.0.0.0:65025" prio=6 tid=0x00000000084ef000 nid=0x1aa8 runnable [0x000000000950f000]
+java.lang.Thread.State: RUNNABLE
+at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:273)
+at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:255)
+at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:136)
+at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:69)
+locked <0x00000000bed814f0> (a sun.nio.ch.Util$2)
+locked <0x00000000bed814e0> (a java.util.Collections$UnmodifiableSet)
+locked <0x00000000bed81000> (a sun.nio.ch.WindowsSelectorImpl)
+at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:80)
+at org.mortbay.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:459)
+at org.mortbay.io.nio.SelectorManager.doSelect(SelectorManager.java:192)
+at org.mortbay.jetty.nio.SelectChannelConnector.accept(SelectChannelConnector.java:124)
+at org.mortbay.jetty.AbstractConnector$Acceptor.run(AbstractConnector.java:707)
+at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+at java.lang.Thread.run(Thread.java:662)
+Locked ownable synchronizers:
+<0x00000000bed80d20> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+"Timer-0" daemon prio=6 tid=0x000000000840b800 nid=0x1f60 in Object.wait() [0x000000000940f000]
+java.lang.Thread.State: TIMED_WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bed80410> (a java.util.TaskQueue)
+at java.util.TimerThread.mainLoop(Timer.java:509)
+locked <0x00000000bed80410> (a java.util.TaskQueue)
+at java.util.TimerThread.run(Timer.java:462)
+Locked ownable synchronizers:
+None
+"Low Memory Detector" daemon prio=6 tid=0x0000000006832000 nid=0x1fcc runnable [0x0000000000000000]
+java.lang.Thread.State: RUNNABLE
+Locked ownable synchronizers:
+None
+"C2 CompilerThread1" daemon prio=10 tid=0x0000000006824800 nid=0xe44 waiting on condition [0x0000000000000000]
+java.lang.Thread.State: RUNNABLE
+Locked ownable synchronizers:
+None
+"C2 CompilerThread0" daemon prio=10 tid=0x000000000680f800 nid=0x1f68 waiting on condition [0x0000000000000000]
+java.lang.Thread.State: RUNNABLE
+Locked ownable synchronizers:
+None
+"Attach Listener" daemon prio=10 tid=0x000000000680e800 nid=0x1a20 waiting on condition [0x0000000000000000]
+java.lang.Thread.State: RUNNABLE
+Locked ownable synchronizers:
+None
+"Signal Dispatcher" daemon prio=10 tid=0x000000000680d800 nid=0x1e2c runnable [0x0000000000000000]
+java.lang.Thread.State: RUNNABLE
+Locked ownable synchronizers:
+None
+"Finalizer" daemon prio=8 tid=0x00000000067b1000 nid=0x1750 in Object.wait() [0x0000000007aef000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bed9cce0> (a java.lang.ref.ReferenceQueue$Lock)
+at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+locked <0x00000000bed9cce0> (a java.lang.ref.ReferenceQueue$Lock)
+at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+Locked ownable synchronizers:
+None
+"Reference Handler" daemon prio=10 tid=0x00000000067b0000 nid=0x15d8 in Object.wait() [0x00000000079ef000]
+java.lang.Thread.State: WAITING (on object monitor)
+at java.lang.Object.wait(Native Method)
+waiting on <0x00000000bed9cca0> (a java.lang.ref.Reference$Lock)
+at java.lang.Object.wait(Object.java:485)
+at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+locked <0x00000000bed9cca0> (a java.lang.ref.Reference$Lock)
+Locked ownable synchronizers:
+None
+"VM Thread" prio=10 tid=0x00000000067a4800 nid=0x1a24 runnable
+"GC task thread#0 (ParallelGC)" prio=6 tid=0x0000000000509000 nid=0xdac runnable
+"GC task thread#1 (ParallelGC)" prio=6 tid=0x000000000050a800 nid=0x1848 runnable
+"GC task thread#2 (ParallelGC)" prio=6 tid=0x000000000050c800 nid=0x1abc runnable
+"GC task thread#3 (ParallelGC)" prio=6 tid=0x000000000050e800 nid=0x17e0 runnable
+"GC task thread#4 (ParallelGC)" prio=6 tid=0x0000000000512000 nid=0xeb8 runnable
+"GC task thread#5 (ParallelGC)" prio=6 tid=0x0000000000513800 nid=0x18cc runnable
+"GC task thread#6 (ParallelGC)" prio=6 tid=0x0000000000514800 nid=0x1038 runnable
+"GC task thread#7 (ParallelGC)" prio=6 tid=0x0000000000516000 nid=0x145c runnable
+"GC task thread#8 (ParallelGC)" prio=6 tid=0x000000000051b000 nid=0x1f04 runnable
+"GC task thread#9 (ParallelGC)" prio=6 tid=0x000000000051d800 nid=0x126c runnable
+"GC task thread#10 (ParallelGC)" prio=6 tid=0x000000000051e800 nid=0x1a00 runnable
+"GC task thread#11 (ParallelGC)" prio=6 tid=0x000000000051f800 nid=0x1ff4 runnable
+"GC task thread#12 (ParallelGC)" prio=6 tid=0x0000000000520000 nid=0x1ca8 runnable
+"VM Periodic Task Thread" prio=10 tid=0x000000000683c000 nid=0x1c3c waiting on condition
+JNI global references: 1191
+

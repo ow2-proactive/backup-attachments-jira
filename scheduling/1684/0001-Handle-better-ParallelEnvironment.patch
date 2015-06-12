@@ -1,0 +1,71 @@
+Handle better ParallelEnvironment
+
+- TestMultiNodesSubmission : add test for ParallelEnvironment.getNumberOfNodesNeeded()
+
+- ClientTastState : setParallelEnvironment inthe constructor
+                    remove getParallelEnvironment() method that causes TestMultiNodesSubmission to hang on pinging alive nodes
+
+diff --git a/src/scheduler/src/org/ow2/proactive/scheduler/task/ClientTaskState.java b/src/scheduler/src/org/ow2/proactive/scheduler/task/ClientTaskState.java
+index a826f34..7fe6b67 100644
+--- a/src/scheduler/src/org/ow2/proactive/scheduler/task/ClientTaskState.java
++++ b/src/scheduler/src/org/ow2/proactive/scheduler/task/ClientTaskState.java
+@@ -58,6 +58,8 @@ public final class ClientTaskState extends TaskState {
+         this.cancelJobOnError = taskState.isCancelJobOnError();
+         this.maxNumberOfExecution = taskState.getMaxNumberOfExecution();
+ 
++        this.setParallelEnvironment(taskState.getParallelEnvironment());
++        
+         // Store only task IDs here; #restoreDependences is later called by
+         // ClientJobState in order for this instance to store references to the
+         // same ClientTaskState instances as the ones held in the
+@@ -145,11 +147,11 @@ public final class ClientTaskState extends TaskState {
+      * This property is not available for this implementation. Calling this
+      * method will throw a RuntimeException
+      */
+-    @Override
++  /*  @Override
+     public ParallelEnvironment getParallelEnvironment() {
+         throw new RuntimeException(
+             "Not implemented: the ParallelEnvironment  atttribute is not available on client side.");
+-    }
++    } */
+ 
+     /**
+      * This property is not available for this implementation. Calling this
+diff --git a/src/scheduler/tests/functionaltests/TestJobMultiNodesSubmission.java b/src/scheduler/tests/functionaltests/TestJobMultiNodesSubmission.java
+index bc953d7..c62d901 100644
+--- a/src/scheduler/tests/functionaltests/TestJobMultiNodesSubmission.java
++++ b/src/scheduler/tests/functionaltests/TestJobMultiNodesSubmission.java
+@@ -38,6 +38,7 @@ package functionaltests;
+ 
+ import java.io.File;
+ import java.net.URL;
++import java.util.List;
+ import java.util.Map.Entry;
+ 
+ import org.junit.Assert;
+@@ -45,7 +46,9 @@ import org.ow2.proactive.resourcemanager.common.RMState;
+ import org.ow2.proactive.resourcemanager.frontend.ResourceManager;
+ import org.ow2.proactive.scheduler.common.job.JobId;
+ import org.ow2.proactive.scheduler.common.job.JobResult;
++import org.ow2.proactive.scheduler.common.job.JobState;
+ import org.ow2.proactive.scheduler.common.task.TaskResult;
++import org.ow2.proactive.scheduler.common.task.TaskState;
+ 
+ 
+ /**
+@@ -94,6 +97,11 @@ public class TestJobMultiNodesSubmission extends SchedulerConsecutive {
+         RMState rms = rmAdmin.getState();
+         Assert.assertEquals(4, rms.getTotalNodesNumber() - rms.getFreeNodesNumber());
+ 
++        JobState js = SchedulerTHelper.getSchedulerInterface().getJobState(id);
++        List<TaskState> tasks = js.getTasks();
++        TaskState ts = tasks.get(0);
++        Assert.assertEquals(4, ts.getNumberOfNodesNeeded());
++        
+         //wait for job to be finished
+         SchedulerTHelper.waitForEventJobFinished(id);
+ 
+-- 
+1.7.0.4
+

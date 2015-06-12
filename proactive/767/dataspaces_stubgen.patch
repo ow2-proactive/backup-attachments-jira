@@ -1,0 +1,28 @@
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/dataspaces/build.xml b/src/Extensions/org/objectweb/proactive/extensions/dataspaces/build.xml
+index 4bd8e3c..acc5771 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/dataspaces/build.xml
++++ b/src/Extensions/org/objectweb/proactive/extensions/dataspaces/build.xml
+@@ -6,5 +6,9 @@
+ 
+ 	<target name="-compile">
+ 		<compile_extension module="dataspaces" />
++		<java classname="${stubgenerator.class}" fork="true">
++			<classpath refid="project.classpath" />
++			<arg line="-srcDir ${cl.extensions.dir} -pkg org.objectweb.proactive.extensions.dataspaces" />
++		</java>
+ 	</target>
+ </project>
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/vfsprovider/build.xml b/src/Extensions/org/objectweb/proactive/extensions/vfsprovider/build.xml
+index 75f7ffb..df96eac 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/vfsprovider/build.xml
++++ b/src/Extensions/org/objectweb/proactive/extensions/vfsprovider/build.xml
+@@ -6,5 +6,9 @@
+ 
+ 	<target name="-compile">
+ 		<compile_extension module="vfsprovider" />
++		<java classname="${stubgenerator.class}" fork="true">
++			<classpath refid="project.classpath" />
++			<arg line="-srcDir ${cl.extensions.dir} -pkg org.objectweb.proactive.extensions.vfsprovider" />
++		</java>
+ 	</target>
+ </project>

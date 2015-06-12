@@ -1,0 +1,82 @@
+diff --git a/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java b/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java
+index d5d85e9..501f240 100644
+--- a/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java
++++ b/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java
+@@ -35,10 +35,13 @@ import java.io.File;
+ 
+ import org.apache.log4j.Logger;
+ import org.mortbay.jetty.Connector;
++import org.mortbay.jetty.Handler;
+ import org.mortbay.jetty.Server;
+ import org.mortbay.jetty.nio.SelectChannelConnector;
+ import org.mortbay.jetty.servlet.Context;
++import org.mortbay.jetty.servlet.FilterHolder;
+ import org.mortbay.jetty.servlet.ServletHolder;
++import org.mortbay.servlet.GzipFilter;
+ import org.mortbay.xml.XmlConfiguration;
+ import org.objectweb.proactive.core.config.PAProperties;
+ import org.objectweb.proactive.core.util.log.Loggers;
+@@ -123,6 +126,10 @@ public class HTTPServer {
+ 
+         this.context = new Context(server, "/", Context.SESSIONS);
+ 
++        FilterHolder gzipHolder = new FilterHolder(GzipFilter.class);
++        gzipHolder.setInitParameter("mimeTypes", "application/java");
++        this.context.addFilter(gzipHolder, "/*", Handler.DEFAULT);
++
+         this.server.start();
+         // If a random port is used we have to set it
+         PAProperties.PA_XMLHTTP_PORT.setValue(connector.getLocalPort());
+diff --git a/src/Core/org/objectweb/proactive/core/remoteobject/http/util/HttpMessageSender.java b/src/Core/org/objectweb/proactive/core/remoteobject/http/util/HttpMessageSender.java
+index b525972..4164486 100644
+--- a/src/Core/org/objectweb/proactive/core/remoteobject/http/util/HttpMessageSender.java
++++ b/src/Core/org/objectweb/proactive/core/remoteobject/http/util/HttpMessageSender.java
+@@ -36,12 +36,16 @@ import java.io.BufferedOutputStream;
+ import java.io.DataInputStream;
+ import java.io.EOFException;
+ import java.io.IOException;
++import java.io.InputStream;
+ import java.net.ConnectException;
+ import java.net.HttpURLConnection;
+ import java.net.URI;
+ import java.net.URISyntaxException;
+ import java.net.URL;
+ import java.net.UnknownHostException;
++import java.util.zip.GZIPInputStream;
++import java.util.zip.Inflater;
++import java.util.zip.InflaterInputStream;
+ 
+ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.Constants;
+@@ -111,7 +115,7 @@ public class HttpMessageSender {
+             connection.setRequestMethod("GET");
+             connection.setRequestProperty("Content-Length", "" + bytes.length);
+             connection.setRequestProperty("Content-Type", SERVICE_REQUEST_CONTENT_TYPE);
+-            connection.setUseCaches(false);
++            connection.setRequestProperty("Accept-Encoding", "gzip, deflate");
+             connection.connect();
+ 
+             //write data in the stream
+@@ -121,9 +125,21 @@ public class HttpMessageSender {
+             out.flush();
+             out.close();
+ 
++            //create the appropriate stream wrapper based on
++            //the encoding type
++            String encoding = connection.getContentEncoding();
++            InputStream resultingInputStream = null;
++            if (encoding != null && encoding.equalsIgnoreCase("gzip")) {
++                resultingInputStream = new GZIPInputStream(connection.getInputStream());
++            } else if (encoding != null && encoding.equalsIgnoreCase("deflate")) {
++                resultingInputStream = new InflaterInputStream(connection.getInputStream(),
++                    new Inflater(true));
++            } else {
++                resultingInputStream = connection.getInputStream();
++            }
+             //Get data returned in the connection
+             DataInputStream in = null;
+-            in = new DataInputStream(new BufferedInputStream(connection.getInputStream()));
++            in = new DataInputStream(new BufferedInputStream(resultingInputStream));
+ 
+             byte[] buf = new byte[0];
+             byte[] acc = new byte[1024];

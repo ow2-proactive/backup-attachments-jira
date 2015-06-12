@@ -1,0 +1,13 @@
+        <prop key="proactive.rmi.port" value="1099" />
+        <!--  PNP protocol config -->
+	   <prop key="proactive.pnp.port" value="12000" />
+        <!--  PAMR protocol config -->
+        <prop key="proactive.net.router.port" value="33647"/>
+        <prop key="proactive.net.router.address" value="scheduler-rm-pamr"/>
+        <prop key="proactive.communication.pamr.agent.id" value="1" />
+        <prop key="proactive.communication.pamr.agent.magic_cookie" value="server"/>
+        <!--  Multi-Protocol COMMUNICATION  config -->
+        <prop key="proactive.hostname" value="node" />
+        <prop key="proactive.communication.protocol" value="rmi" />
+        <prop key="proactive.communication.additional_protocols" value="pamr,http,pnp" />
+        <prop key="proactive.communication.protocols.order" value="pamr,rmi,http,pnp" />

@@ -1,0 +1,92 @@
+diff --git a/src/Core/org/objectweb/proactive/core/config/PAProperties.java b/src/Core/org/objectweb/proactive/core/config/PAProperties.java
+index c0db450..ec47d0f 100644
+--- a/src/Core/org/objectweb/proactive/core/config/PAProperties.java
++++ b/src/Core/org/objectweb/proactive/core/config/PAProperties.java
+@@ -509,6 +509,11 @@ public enum PAProperties {
+     /** Duration of each performance test in ms */
+     PA_TEST_PERF_DURATION("proactive.test.perf.duration", PAPropertiesType.INTEGER),
+ 
++    /** PAMR: indicate if the tests should use an already-started router, or a new router 
++     * should be started
++     * */
++    PA_TEST_PAMR_ROUTER_STARTED("proactive.test.pamr.routerAlreadyStarted", PAPropertiesType.BOOLEAN),
++
+     /**
+      * Functional test timeout in ms
+      *
+diff --git a/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml b/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
+index a691351..355cecd 100644
+--- a/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
++++ b/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
+@@ -52,6 +52,9 @@
+         <prop key="proactive.filetransfer.buffer_size_kb" value="256" />
+ 
+         <prop key="proactive.test.perf.duration" value="30000" />
++		
++		<!-- pamr(ssh) unit tests - by default, assume router inside JVM -->
++		<prop key="proactive.test.pamr.routerAlreadyStarted" value="false"/>
+         
+         <prop key="proactive.log4j.appender.provider" value="org.objectweb.proactive.core.util.log.remote.ThrottlingProvider" />
+     </properties>
+diff --git a/src/Tests/functionalTests/FunctionalTest.java b/src/Tests/functionalTests/FunctionalTest.java
+index b7a8b04..a8b30ff 100644
+--- a/src/Tests/functionalTests/FunctionalTest.java
++++ b/src/Tests/functionalTests/FunctionalTest.java
+@@ -68,16 +68,19 @@ public class FunctionalTest {
+             // Configure the Message routing
+             if (MessageRoutingRemoteObjectFactory.PROTOCOL_ID.equals(PAProperties.PA_COMMUNICATION_PROTOCOL
+                     .getValue())) {
+-                RouterConfig config = new RouterConfig();
+-
+-                if (!PAProperties.PA_NET_ROUTER_PORT.isSet() ||
+-                    PAProperties.PA_NET_ROUTER_PORT.getValueAsInt() == 0) {
+-                    router = Router.createAndStart(config);
+-                    PAProperties.PA_NET_ROUTER_PORT.setValue(router.getPort());
+-                } else {
+-                    config.setPort(PAProperties.PA_NET_ROUTER_PORT.getValueAsInt());
+-                    router = Router.createAndStart(config);
+-                }
++		// if router not already started
++		if(PAProperties.PA_TEST_PAMR_ROUTER_STARTED.isTrue()) {
++		    RouterConfig config = new RouterConfig();
++
++		    if (!PAProperties.PA_NET_ROUTER_PORT.isSet() ||
++			    PAProperties.PA_NET_ROUTER_PORT.getValueAsInt() == 0) {
++			router = Router.createAndStart(config);
++			PAProperties.PA_NET_ROUTER_PORT.setValue(router.getPort());
++		    } else {
++			config.setPort(PAProperties.PA_NET_ROUTER_PORT.getValueAsInt());
++			router = Router.createAndStart(config);
++		    }
++		}
+             }
+         } catch (IOException e) {
+             throw new RuntimeException(e);
+diff --git a/src/Tests/performanceTests/bandwidth/TestMessageRouting.java b/src/Tests/performanceTests/bandwidth/TestMessageRouting.java
+index 9945e8b..d104ce1 100644
+--- a/src/Tests/performanceTests/bandwidth/TestMessageRouting.java
++++ b/src/Tests/performanceTests/bandwidth/TestMessageRouting.java
+@@ -37,7 +37,8 @@ import org.objectweb.proactive.core.config.PAProperties;
+ public class TestMessageRouting extends Bandwidth {
+     static {
+         PAProperties.PA_COMMUNICATION_PROTOCOL.setValue("pamr");
+-        PAProperties.PA_NET_ROUTER_ADDRESS.setValue("localhost");
++	if(!PAProperties.PA_TEST_PAMR_ROUTER_STARTED.isTrue())
++	    PAProperties.PA_NET_ROUTER_ADDRESS.setValue("localhost");
+     }
+ 
+     public TestMessageRouting() {
+diff --git a/src/Tests/performanceTests/throughput/TestMessageRouting.java b/src/Tests/performanceTests/throughput/TestMessageRouting.java
+index 57496c4..d756f70 100644
+--- a/src/Tests/performanceTests/throughput/TestMessageRouting.java
++++ b/src/Tests/performanceTests/throughput/TestMessageRouting.java
+@@ -43,7 +43,8 @@ public class TestMessageRouting extends Throughput {
+ 
+     static {
+         PAProperties.PA_COMMUNICATION_PROTOCOL.setValue("pamr");
+-        PAProperties.PA_NET_ROUTER_ADDRESS.setValue("localhost");
++	if(!PAProperties.PA_TEST_PAMR_ROUTER_STARTED.isTrue())
++	    PAProperties.PA_NET_ROUTER_ADDRESS.setValue("localhost");
+     }
+ 
+     public TestMessageRouting() {

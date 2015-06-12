@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProActiveDescriptor  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://www-sop.inria.fr/oasis/proactive/schema/3.2/DescriptorSchema.xsd"> 
+	
+	
+	<componentDefinition>
+		<virtualNodesDefinition>
+			<virtualNode name="MasterVN" property="unique_singleAO"/>
+			<virtualNode name="WorkersVN" property="multiple" />
+		</virtualNodesDefinition>
+	</componentDefinition>
+	<deployment>
+		<mapping>
+			<map virtualNode="MasterVN">
+				<jvmSet>
+					<currentJVM protocol="rmi"/>
+				</jvmSet>
+			</map>
+			
+			<map virtualNode="WorkersVN">
+				<jvmSet>
+					<vmName value="Jvm"/>
+				</jvmSet>
+			</map>
+		</mapping>
+		
+		<jvms>
+			<jvm name="Jvm">
+				<acquisition>
+					<serviceReference refid="p2p"/>
+				</acquisition>
+			</jvm>
+		</jvms>
+	</deployment>
+	
+	<infrastructure>
+		<services>
+			<serviceDefinition id="p2p">
+				<P2PService 
+					nodesAsked="2"
+					port="6000">
+						<peerSet>
+							<peer>rmi://localhost:6444</peer>
+						</peerSet>
+					</P2PService>
+			</serviceDefinition>
+		</services>
+		
+	</infrastructure>
+	
+	<!-- 
+ <ProActiveDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www-sop.inria.fr/oasis/proactive/schema/3.2/DescriptorSchema.xsd">                            
+  <componentDefinition>
+   <virtualNodesDefinition>
+   <virtualNode name="Dispatcher"/>
+   </virtualNodesDefinition>
+  </componentDefinition>
+  <deployment>
+   <mapping>
+    <map virtualNode="Dispatcher">
+     <jvmSet>
+      <vmName value="Jvm1"/>
+     </jvmSet>
+    </map>
+   </mapping>
+   <jvms>
+    <jvm name="Jvm1">
+     <creation>
+      <processReference refid="jvmProcess"/>
+     </creation>
+    </jvm>
+   </jvms>
+  </deployment>
+  <infrastructure>
+   <processes>
+    <processDefinition id="jvmProcess">
+     <jvmProcess class="org.objectweb.proactive.core.process.JVMNodeProcess"/>
+    </processDefinition>
+   </processes>
+  </infrastructure>
+ </ProActiveDescriptor>
+
+-->
+
+	<!-- 
+		<descriptorVariable name="PROACTIVE_HOME" value="z:\Desktop\TUTORIAL_CHINE\workspace\ProActive"/>
+		<descriptorVariable name="JAVA" value="C:\Program Files\Java\jre1.6.0_01\bin\java"/>
+	-->
+<!-- 		<descriptorVariable name="PROACTIVE_HOME" value="/user/cmathieu/home/Desktop/TUTORIAL_CHINE/workspace/ProActive"/>
+		<descriptorVariable name="JAVA" value="/user/cmathieu/home/Java/java"/> -->
+	
+</ProActiveDescriptor>
+	

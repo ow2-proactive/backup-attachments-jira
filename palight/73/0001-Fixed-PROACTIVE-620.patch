@@ -1,0 +1,146 @@
+From 1a0096dd9964c7acc24fc25ba013e204f425e35c Mon Sep 17 00:00:00 2001
+From: cmathieu <clement.mathieu@activeeon.com>
+Date: Thu, 5 Mar 2009 13:38:46 +0100
+Subject: [PATCH] Fixed PROACTIVE-620
+
+Introduce a functional change in initActivity(). A review is required
+---
+ .../objectweb/proactive/core/body/ActiveBody.java  |    2 +
+ .../objectweb/proactive/core/body/HalfBody.java    |    2 +
+ .../core/body/ProActiveMetaObjectFactory.java      |    2 +-
+ .../proactive/core/util/ThreadStoreImpl.java       |   35 +++++++++++++++++--
+ 4 files changed, 36 insertions(+), 5 deletions(-)
+
+diff --git a/src/Core/org/objectweb/proactive/core/body/ActiveBody.java b/src/Core/org/objectweb/proactive/core/body/ActiveBody.java
+index 1450049..a874940 100644
+--- a/src/Core/org/objectweb/proactive/core/body/ActiveBody.java
++++ b/src/Core/org/objectweb/proactive/core/body/ActiveBody.java
+@@ -186,6 +186,8 @@ public class ActiveBody extends ComponentBodyImpl implements Runnable, java.io.S
+                 this.initActive = null; // we won't do it again
+             }
+ 
++            threadStore.open();
++
+             /* We may race with a termination request in immediate service */
+             RunActive thisRunActive = this.runActive;
+             if (thisRunActive != null) {
+diff --git a/src/Core/org/objectweb/proactive/core/body/HalfBody.java b/src/Core/org/objectweb/proactive/core/body/HalfBody.java
+index eb33b80..9cb09e1 100644
+--- a/src/Core/org/objectweb/proactive/core/body/HalfBody.java
++++ b/src/Core/org/objectweb/proactive/core/body/HalfBody.java
+@@ -87,6 +87,8 @@ public class HalfBody extends AbstractBody {
+     private HalfBody(MetaObjectFactory factory) throws ActiveObjectCreationException, NodeException {
+         super(null, NodeFactory.getHalfBodiesNode().getNodeInformation().getURL(), factory, Job.DEFAULT_JOBID);
+ 
++        super.threadStore.open();
++
+         //SECURITY
+         if (this.securityManager == null) {
+             this.securityManager = factory.getProActiveSecurityManager();
+diff --git a/src/Core/org/objectweb/proactive/core/body/ProActiveMetaObjectFactory.java b/src/Core/org/objectweb/proactive/core/body/ProActiveMetaObjectFactory.java
+index b3cf679..3007514 100644
+--- a/src/Core/org/objectweb/proactive/core/body/ProActiveMetaObjectFactory.java
++++ b/src/Core/org/objectweb/proactive/core/body/ProActiveMetaObjectFactory.java
+@@ -409,7 +409,7 @@ public class ProActiveMetaObjectFactory implements MetaObjectFactory, java.io.Se
+     // end inner class RemoteBodyFactoryImpl
+     protected static class ThreadStoreFactoryImpl implements ThreadStoreFactory, java.io.Serializable {
+         public ThreadStore newThreadStore() {
+-            return new org.objectweb.proactive.core.util.ThreadStoreImpl();
++            return new org.objectweb.proactive.core.util.ThreadStoreImpl(false);
+         }
+     }
+ 
+diff --git a/src/Core/org/objectweb/proactive/core/util/ThreadStoreImpl.java b/src/Core/org/objectweb/proactive/core/util/ThreadStoreImpl.java
+index 1fb650c..9b3ed89 100644
+--- a/src/Core/org/objectweb/proactive/core/util/ThreadStoreImpl.java
++++ b/src/Core/org/objectweb/proactive/core/util/ThreadStoreImpl.java
+@@ -31,17 +31,22 @@
+  */
+ package org.objectweb.proactive.core.util;
+ 
++import org.apache.log4j.Logger;
++import org.objectweb.proactive.core.util.log.ProActiveLogger;
++
++
+ /**
+  * <p>
+  * A straightford implementation of the threadstore interface.
+  * </p>
+- *
++ * 
+  * @author The ProActive Team
+- * @version 1.0,  2002/05
+- * @since   ProActive 0.9.2
++ * @version 1.0, 2002/05
++ * @since ProActive 0.9.2
+  */
+ @SuppressWarnings("serial")
+ public class ThreadStoreImpl implements ThreadStore, java.io.Serializable {
++    static final Logger logger = ProActiveLogger.getLogger(ThreadStoreImpl.class.getName());
+     private int counter;
+     private boolean defaultOpenState;
+     private transient boolean open;
+@@ -55,9 +60,15 @@ public class ThreadStoreImpl implements ThreadStore, java.io.Serializable {
+ 
+     /**
+      * Constructor for ThreadStoreImpl.
+-     * @param isOpened true is the store is opened after creation
++     * 
++     * @param isOpened
++     *            true is the store is opened after creation
+      */
+     public ThreadStoreImpl(boolean isOpened) {
++        if (logger.isDebugEnabled()) {
++            logger.debug("ThreadStore created  " + this);
++        }
++
+         defaultOpenState = isOpened;
+         open = defaultOpenState;
+     }
+@@ -73,6 +84,10 @@ public class ThreadStoreImpl implements ThreadStore, java.io.Serializable {
+      * @see ThreadStore#enter()
+      */
+     public synchronized void enter() {
++        if (logger.isDebugEnabled()) {
++            logger.debug("ThreadStore enter   " + this);
++        }
++
+         while (!open) {
+             try {
+                 wait();
+@@ -86,6 +101,10 @@ public class ThreadStoreImpl implements ThreadStore, java.io.Serializable {
+      * @see ThreadStore#exit()
+      */
+     public synchronized void exit() {
++        if (logger.isDebugEnabled()) {
++            logger.debug("ThreadStore exit    " + this);
++        }
++
+         counter--;
+         notifyAll();
+     }
+@@ -94,6 +113,10 @@ public class ThreadStoreImpl implements ThreadStore, java.io.Serializable {
+      * @see ThreadStore#close()
+      */
+     public synchronized void close() {
++        if (logger.isDebugEnabled()) {
++            logger.debug("ThreadStore close   " + this);
++        }
++
+         open = false;
+         while ((counter != 0) && !open) {
+             try {
+@@ -107,6 +130,10 @@ public class ThreadStoreImpl implements ThreadStore, java.io.Serializable {
+      * @see ThreadStore#open()
+      */
+     public synchronized void open() {
++        if (logger.isDebugEnabled()) {
++            logger.debug("ThreadStore open    " + this);
++        }
++
+         open = true;
+         notifyAll();
+     }
+-- 
+1.7.2.3
+

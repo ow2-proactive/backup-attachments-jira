@@ -1,0 +1,131 @@
+Index: src/Tests/functionalTests/mop/serialuid/DummyClass.java
+===================================================================
+--- src/Tests/functionalTests/mop/serialuid/DummyClass.java	(revision )
++++ src/Tests/functionalTests/mop/serialuid/DummyClass.java	(revision )
+@@ -0,0 +1,21 @@
++package functionalTests.mop.serialuid;
++
++import java.io.Serializable;
++
++
++/**
++ * DummyClass
++ *
++ * @author The ProActive Team
++ */
++public class DummyClass implements Serializable {
++
++    public DummyClass() {
++
++    }
++
++    public SerializableClassWithUID returnUID() {
++        return new SerializableClassWithUID();
++    }
++
++}
+Index: src/Tests/functionalTests/mop/serialuid/SerializableClassWithUID.java
+===================================================================
+--- src/Tests/functionalTests/mop/serialuid/SerializableClassWithUID.java	(revision )
++++ src/Tests/functionalTests/mop/serialuid/SerializableClassWithUID.java	(revision )
+@@ -0,0 +1,18 @@
++package functionalTests.mop.serialuid;
++
++import java.io.Serializable;
++
++
++/**
++ * SerializableClass
++ *
++ * @author The ProActive Team
++ */
++public class SerializableClassWithUID implements Serializable {
++
++    private static final long serialVersionUID = 666L;
++
++    public SerializableClassWithUID() {
++
++    }
++}
+Index: src/Tests/functionalTests/mop/serialuid/TestUID.java
+===================================================================
+--- src/Tests/functionalTests/mop/serialuid/TestUID.java	(revision )
++++ src/Tests/functionalTests/mop/serialuid/TestUID.java	(revision )
+@@ -0,0 +1,54 @@
++package functionalTests.mop.serialuid;
++
++import functionalTests.FunctionalTest;
++import org.junit.Assert;
++import org.junit.Test;
++import org.objectweb.proactive.api.PAActiveObject;
++
++import java.lang.reflect.Field;
++
++
++/**
++ * TestUID
++ *
++ * @author The ProActive Team
++ */
++public class TestUID extends FunctionalTest {
++
++    /**
++     * tests that serialVersionUID attributes, when defined, are reported in automatically generated Stubs when :
++     * - Creating an ActiveObject of a class which defines a serialVersionUID (Active Object Stub)
++     * - Calling a method on any Active Object which returns an object with a serialVersionUID (Future Stub)
++     */
++    @Test
++    public void test() throws Exception {
++
++        Object initialObject = new SerializableClassWithUID();
++
++        SerializableClassWithUID ao1 = (SerializableClassWithUID) PAActiveObject.newActive(
++                SerializableClassWithUID.class.getName(), new Object[] {});
++
++        Field f0 = initialObject.getClass().getDeclaredField("serialVersionUID");
++        f0.setAccessible(true);
++
++        Field[] fields = ao1.getClass().getDeclaredFields();
++        for (Field f : fields) {
++            System.out.println(f);
++        }
++
++        Field f1 = ao1.getClass().getDeclaredField("serialVersionUID");
++        f1.setAccessible(true);
++        Assert.assertEquals(f1.getLong(ao1), f0.getLong(initialObject));
++        Assert.assertEquals(f1.getModifiers(), f0.getModifiers());
++
++        DummyClass ao2 = (DummyClass) PAActiveObject.newActive(DummyClass.class.getName(), new Object[] {});
++        SerializableClassWithUID future1 = ao2.returnUID();
++        Field f2 = future1.getClass().getDeclaredField("serialVersionUID");
++
++        f2.setAccessible(true);
++
++        Assert.assertEquals(f2.getLong(future1), f0.getLong(initialObject));
++        Assert.assertEquals(f2.getModifiers(), f0.getModifiers());
++
++    }
++}
+Index: src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java	(revision 21263)
++++ src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java	(revision )
+@@ -148,6 +148,18 @@
+                 generatedCtClass.addInterface(pool.get(Serializable.class.getName()));
+             }
+ 
++            // serialUID
++            try {
++                CtField uidField = superCtClass.getDeclaredField("serialVersionUID");
++                if (uidField != null) {
++                    generatedCtClass.addField(new CtField(uidField, generatedCtClass), ((Long) uidField
++                            .getConstantValue()).toString() +
++                        "L");
++                }
++            } catch (Exception e) {
++
++            }
++
+             CtClass ctStubO = null;
+             try {
+                 ctStubO = pool.get(StubObject.class.getName());

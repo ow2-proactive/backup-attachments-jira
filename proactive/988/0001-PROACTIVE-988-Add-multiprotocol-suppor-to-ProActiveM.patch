@@ -1,0 +1,416 @@
+From 66014f59363496d655346f5ac4091b8c1f67e03d Mon Sep 17 00:00:00 2001
+From: cmathieu <clement.mathieu@activeeon.com>
+Date: Fri, 25 Feb 2011 14:21:13 +0100
+Subject: [PATCH] PROACTIVE-988: Add multiprotocol suppor to ProActiveMarshall(In|Out)putStream
+
+ProActive classloader now try to download the class from all known URLs
+of the remote runtime.
+---
+ .../proactive/core/runtime/ProActiveRuntime.java   |    7 ++-
+ .../ProActiveRuntimeRemoteObjectAdapter.java       |    4 ++
+ .../remote/ProActiveMarshalInputStream.java        |   19 ++++---
+ .../remote/ProActiveMarshalOutputStream.java       |    8 ++--
+ .../util/converter/remote/ProActiveMarshaller.java |   16 +++++-
+ .../remote/ProActiveRemoteClassLoader.java         |   54 +++++++++-----------
+ .../extensions/pamr/client/AgentImpl.java          |    2 +-
+ .../pamr/client/ProActiveMessageHandler.java       |    4 +-
+ .../pamr/remoteobject/PAMRRemoteObjectFactory.java |    2 +-
+ .../pamr/remoteobject/message/PAMRMessage.java     |    3 +-
+ .../proactive/extensions/pnp/PNPROMessage.java     |    3 +-
+ .../pnp/PNPRemoteObjectFactoryBackend.java         |    2 +-
+ .../proactive/extensions/pnp/PNPServerHandler.java |    3 +-
+ .../dataspaces/mock/MOCKProActiveRuntime.java      |    4 ++
+ 14 files changed, 76 insertions(+), 55 deletions(-)
+
+diff --git a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntime.java b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntime.java
+index a9a59c1..d4a3568 100644
+--- a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntime.java
++++ b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntime.java
+@@ -193,12 +193,17 @@ public interface ProActiveRuntime extends SecurityEntity {
+     public void killRT(boolean softly);
+ 
+     /**
+-     * Returns the url of this ProActiveRuntime on the local or remote VM
++     * Returns the default url of this ProActiveRuntime on the local or remote VM
+      * This information is cached using the remote object adapter pattern
+      */
+     public String getURL();
+ 
+     /**
++     * Returns all the urls of this ProActiveRuntime. 
++     */
++    public String[] getURLs();
++
++    /**
+      * Returns all Active Objects deployed on the node with the given name on
+      * this ProActiveRuntime
+      * @param nodeName the name of the node
+diff --git a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeRemoteObjectAdapter.java b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeRemoteObjectAdapter.java
+index e7ed83d..66a2f59 100644
+--- a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeRemoteObjectAdapter.java
++++ b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeRemoteObjectAdapter.java
+@@ -179,6 +179,10 @@ public class ProActiveRuntimeRemoteObjectAdapter extends Adapter<ProActiveRuntim
+         return this.url;
+     }
+ 
++    public String[] getURLs() {
++        return target.getURLs();
++    }
++
+     public VMInformation getVMInformation() {
+         return this.vmInformation;
+     }
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalInputStream.java b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalInputStream.java
+index 86a13f2..4669695 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalInputStream.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalInputStream.java
+@@ -56,7 +56,7 @@ public class ProActiveMarshalInputStream extends ObjectInputStream {
+ 
+     public ProActiveMarshalInputStream(InputStream in) throws IOException {
+         super(in);
+-        remoteLoader = new ProActiveRemoteClassLoader();
++        this.remoteLoader = new ProActiveRemoteClassLoader();
+     }
+ 
+     @Override
+@@ -65,11 +65,11 @@ public class ProActiveMarshalInputStream extends ObjectInputStream {
+             // first, try to resolve the class locally
+             return super.resolveClass(desc);
+         } catch (ClassNotFoundException e) {
+-            // try to load the class using the pamr class loader
++            // try to load the class using the proactive remote class loader
+             String clazzName = desc.getName();
+             try {
+-                String runtimeURL = readRuntimeURL();
+-                return this.remoteLoader.loadClass(clazzName, runtimeURL);
++                String[] runtimeURLs = readRuntimeURLs();
++                return this.remoteLoader.loadClass(clazzName, runtimeURLs);
+             } catch (ClassCastException e1) {
+                 throw new ClassNotFoundException("Cannot load the class " + clazzName +
+                     " - violation of the pamr serialization protocol.");
+@@ -77,9 +77,14 @@ public class ProActiveMarshalInputStream extends ObjectInputStream {
+         }
+     }
+ 
+-    private String readRuntimeURL() throws IOException, ClassNotFoundException {
++    private String[] readRuntimeURLs() throws IOException, ClassNotFoundException {
+         // the protocol guarantees that the URL is the next object in the stream
+-        return (String) readObject();
++        Object o = readObject();
++        try {
++            return (String[]) o;
++        } catch (ClassCastException e) {
++            // Before Programming 5.0.2 the classes were annotated by a single URL (default runtime url)
++            return new String[] { (String) o };
++        }
+     }
+-
+ }
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalOutputStream.java b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalOutputStream.java
+index d344832..e70f8b3 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalOutputStream.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshalOutputStream.java
+@@ -52,16 +52,16 @@ import java.io.OutputStream;
+  */
+ public class ProActiveMarshalOutputStream extends ObjectOutputStream {
+ 
+-    private final String localRuntimeUrl;
++    final private String[] localRuntimeURLs;
+ 
+-    public ProActiveMarshalOutputStream(OutputStream out, String localRuntimeUrl) throws IOException {
++    public ProActiveMarshalOutputStream(OutputStream out, String[] localRuntimeURLs) throws IOException {
+         super(out);
+-        this.localRuntimeUrl = localRuntimeUrl;
++        this.localRuntimeURLs = localRuntimeURLs;
+     }
+ 
+     @Override
+     protected void annotateClass(Class<?> cl) throws IOException {
+         // write the local runtime URL
+-        writeObject(this.localRuntimeUrl);
++        writeObject(this.localRuntimeURLs);
+     }
+ }
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java
+index 2c7e091..f8c50ac 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java
+@@ -41,6 +41,8 @@ import java.io.ByteArrayOutputStream;
+ import java.io.IOException;
+ import java.io.InputStream;
+ 
++import org.objectweb.proactive.core.runtime.ProActiveRuntime;
++
+ 
+ /**
+  * This class is responsible for the serialization/deserialization process
+@@ -49,17 +51,25 @@ import java.io.InputStream;
+  */
+ public class ProActiveMarshaller {
+ 
+-    private final String localRuntimeURL;
++    final private String[] localRuntimeURLs;
++
++    public ProActiveMarshaller(ProActiveRuntime rt) {
++        this.localRuntimeURLs = rt.getURLs();
++    }
+ 
+     public ProActiveMarshaller(String localRuntimeURL) {
+-        this.localRuntimeURL = localRuntimeURL;
++        this.localRuntimeURLs = new String[] { localRuntimeURL };
++    }
++
++    public ProActiveMarshaller(String[] localRuntimeURLs) {
++        this.localRuntimeURLs = localRuntimeURLs.clone();
+     }
+ 
+     public byte[] marshallObject(Object o) throws IOException {
+         ProActiveMarshalOutputStream serializer = null;
+         try {
+             ByteArrayOutputStream baos = new ByteArrayOutputStream();
+-            serializer = new ProActiveMarshalOutputStream(baos, this.localRuntimeURL);
++            serializer = new ProActiveMarshalOutputStream(baos, this.localRuntimeURLs);
+             serializer.writeObject(o);
+             serializer.flush();
+             return baos.toByteArray();
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveRemoteClassLoader.java b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveRemoteClassLoader.java
+index 9522378..e99e528 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveRemoteClassLoader.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveRemoteClassLoader.java
+@@ -47,6 +47,8 @@ import org.objectweb.proactive.core.runtime.RuntimeFactory;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
++import edu.emory.mathcs.backport.java.util.Arrays;
++
+ 
+ /**
+  *
+@@ -56,32 +58,34 @@ public class ProActiveRemoteClassLoader {
+ 
+     final static private Logger logger = ProActiveLogger.getLogger(Loggers.CLASSLOADING);
+ 
+-    private final Map<String, Loader> loaderCache;
++    final private Map<String, Loader> loaderCache;
+ 
+     public ProActiveRemoteClassLoader() {
+         loaderCache = new ConcurrentHashMap<String, Loader>();
+     }
+ 
+-    public Class<?> loadClass(String clazzName, String runtimeURL) throws ClassNotFoundException {
++    public Class<?> loadClass(String clazzName, String[] runtimeURLs) throws ClassNotFoundException {
+ 
+         ClassLoader parent = Thread.currentThread().getContextClassLoader();
+         // attempt to load using the parent
+         try {
+             return parent.loadClass(clazzName);
+         } catch (ClassNotFoundException e) {
+-            try {
+-                Loader pamrLoader = getOrCreateLoader(parent, runtimeURL);
+-                return pamrLoader.loadClass(clazzName);
+-            } catch (ProActiveException proActiveEx) {
+-                if (logger.isDebugEnabled()) {
+-                    logger
+-                            .debug("Cannot load " +
+-                                clazzName +
+-                                " using the pamr class loader, reason: cannot look up the runtime where the class data is, at url " +
+-                                runtimeURL);
++
++            for (String rURL : runtimeURLs) {
++                try {
++                    Loader loader = getOrCreateLoader(parent, rURL);
++                    return loader.loadClass(clazzName);
++                } catch (ProActiveException e1) {
++                    logger.debug("Failed to load " + clazzName + " from " + rURL, e1);
++                } catch (ClassNotFoundException e1) {
++                    logger.debug("Failed to load " + clazzName + " from " + rURL, e1);
+                 }
+-                throw e;
+             }
++
++            // All loader failed 
++            throw new ClassNotFoundException("Failed to load " + clazzName + " from " +
++                Arrays.toString(runtimeURLs));
+         }
+     }
+ 
+@@ -116,11 +120,11 @@ public class ProActiveRemoteClassLoader {
+ 
+     private static class Loader extends ClassLoader {
+ 
+-        private final ProActiveRuntime clazzLocation;
++        final private ProActiveRuntime runtime;
+ 
+         public Loader(ClassLoader parent, ProActiveRuntime runtime) {
+             super(parent);
+-            this.clazzLocation = runtime;
++            this.runtime = runtime;
+         }
+ 
+         protected Class<?> findClass(String clazzName) throws ClassNotFoundException {
+@@ -134,10 +138,6 @@ public class ProActiveRemoteClassLoader {
+                 return ret;
+             } catch (ClassNotFoundException e) {
+                 try {
+-                    if (clazzLocation == null)
+-                        throw new ClassNotFoundException("Cannot load class " + clazzName +
+-                            " reason: the remote ProActive runtime where this class resides is not available");
+-
+                     byte[] clazzData = readClassData(clazzName);
+                     if (logger.isTraceEnabled()) {
+                         logger.trace("Succeffully downloaded " + clazzName + " class definition ");
+@@ -145,10 +145,9 @@ public class ProActiveRemoteClassLoader {
+                     return defineClass(clazzName, clazzData, 0, clazzData.length);
+                 } catch (ClassNotFoundException e2) {
+                     if (logger.isDebugEnabled()) {
+-                        logger.debug("Cannot load class from the remote ProActive runtime:" + e.getMessage(),
+-                                e);
++                        logger.debug("Cannot load class from ProActive runtime " + this.runtime, e2);
+                     }
+-                    throw new ClassNotFoundException(clazzName + " (both locally and from " + clazzLocation +
++                    throw new ClassNotFoundException(clazzName + " (both locally and from " + this.runtime +
+                         ")", e2);
+                 }
+             }
+@@ -159,18 +158,15 @@ public class ProActiveRemoteClassLoader {
+             if (logger.isTraceEnabled())
+                 logger.trace("Attempt to download class " + clazzName + " from the remote runtime");
+             try {
+-                byte[] b = this.clazzLocation.getClassData(clazzName);
++                byte[] b = this.runtime.getClassData(clazzName);
+                 if (b == null || b.length == 0) {
+-                    throw new ClassNotFoundException("Class not found on " + clazzLocation + ": " + clazzName);
++                    throw new ClassNotFoundException("Class " + clazzName + " not found on " + runtime);
+                 }
+-
+                 return b;
+             } catch (ProActiveRuntimeException e) {
+-                throw new ClassNotFoundException("Communication error occured while trying to download " +
+-                    clazzName + " from" + clazzLocation);
++                throw new ClassNotFoundException("Class " + clazzName + " not found on " + runtime +
++                    ": remote call failed", e);
+             }
+-
+         }
+     }
+-
+ }
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pamr/client/AgentImpl.java b/src/Extensions/org/objectweb/proactive/extensions/pamr/client/AgentImpl.java
+index 8168140..8ba27b0 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pamr/client/AgentImpl.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pamr/client/AgentImpl.java
+@@ -390,7 +390,7 @@ public class AgentImpl implements Agent, AgentImplMBean {
+ 
+                 // Reschedule the task
+                 this.heartbeatTask = new HeartbeatTask();
+-                this.timer.schedule(this.heartbeatTask, hb / 3, hb / 3);
++                this.timer.scheduleAtFixedRate(this.heartbeatTask, hb / 3, hb / 3);
+             }
+         } catch (MalformedMessageException e) {
+             throw new RouterHandshakeException("Invalid router response: corrupted " +
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pamr/client/ProActiveMessageHandler.java b/src/Extensions/org/objectweb/proactive/extensions/pamr/client/ProActiveMessageHandler.java
+index 380dcbc..3028e0c 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pamr/client/ProActiveMessageHandler.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pamr/client/ProActiveMessageHandler.java
+@@ -44,6 +44,7 @@ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.body.future.MethodCallResult;
+ import org.objectweb.proactive.core.body.request.Request;
+ import org.objectweb.proactive.core.remoteobject.SynchronousReplyImpl;
++import org.objectweb.proactive.core.runtime.ProActiveRuntime;
+ import org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl;
+ import org.objectweb.proactive.core.util.converter.remote.ProActiveMarshaller;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+@@ -107,8 +108,7 @@ public class ProActiveMessageHandler implements MessageHandler {
+             // get the runtime URL
+             // if the local Agent has received a DataRequestMessage,
+             // means that a ProActiveRuntime exists on this machine
+-            String runtimeUrl = ProActiveRuntimeImpl.getProActiveRuntime().getURL();
+-            this.marshaller = new ProActiveMarshaller(runtimeUrl);
++            this.marshaller = new ProActiveMarshaller(ProActiveRuntimeImpl.getProActiveRuntime());
+         }
+ 
+         public void run() {
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/PAMRRemoteObjectFactory.java b/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/PAMRRemoteObjectFactory.java
+index 3cff4e0..dd2a3dc 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/PAMRRemoteObjectFactory.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/PAMRRemoteObjectFactory.java
+@@ -332,6 +332,6 @@ public class PAMRRemoteObjectFactory extends AbstractRemoteObjectFactory impleme
+     }
+ 
+     public ObjectOutputStream getProtocolObjectOutputStream(OutputStream out) throws IOException {
+-        return new ProActiveMarshalOutputStream(out, ProActiveRuntimeImpl.getProActiveRuntime().getURL());
++        return new ProActiveMarshalOutputStream(out, ProActiveRuntimeImpl.getProActiveRuntime().getURLs());
+     }
+ }
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/message/PAMRMessage.java b/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/message/PAMRMessage.java
+index 75064ba..82e302e 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/message/PAMRMessage.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/message/PAMRMessage.java
+@@ -90,8 +90,7 @@ public abstract class PAMRMessage implements Serializable {
+         // get the runtime URL
+         // TODO - maybe properly synchronize, to make sure that
+         // MessageRoutingROF.createRemoteObject() for a PART was called before
+-        String runtimeUrl = ProActiveRuntimeImpl.getProActiveRuntime().getURL();
+-        this.marshaller = new ProActiveMarshaller(runtimeUrl);
++        this.marshaller = new ProActiveMarshaller(ProActiveRuntimeImpl.getProActiveRuntime());
+     }
+ 
+     /**
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPROMessage.java b/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPROMessage.java
+index 45fab78..2da95da 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPROMessage.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPROMessage.java
+@@ -83,8 +83,7 @@ abstract class PNPROMessage implements Serializable {
+         this.uri = uri;
+         this.agent = agent;
+         this.returnedObject = null;
+-        String runtimeUrl = ProActiveRuntimeImpl.getProActiveRuntime().getURL();
+-        this.marshaller = new ProActiveMarshaller(runtimeUrl);
++        this.marshaller = new ProActiveMarshaller(ProActiveRuntimeImpl.getProActiveRuntime());
+     }
+ 
+     /**
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPRemoteObjectFactoryBackend.java b/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPRemoteObjectFactoryBackend.java
+index 3e3bd36..c96af46 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPRemoteObjectFactoryBackend.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPRemoteObjectFactoryBackend.java
+@@ -267,6 +267,6 @@ public class PNPRemoteObjectFactoryBackend extends AbstractRemoteObjectFactory i
+     }
+ 
+     public ObjectOutputStream getProtocolObjectOutputStream(OutputStream out) throws IOException {
+-        return new ProActiveMarshalOutputStream(out, ProActiveRuntimeImpl.getProActiveRuntime().getURL());
++        return new ProActiveMarshalOutputStream(out, ProActiveRuntimeImpl.getProActiveRuntime().getURLs());
+     }
+ }
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPServerHandler.java b/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPServerHandler.java
+index 344283a..9cafe03 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPServerHandler.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pnp/PNPServerHandler.java
+@@ -78,8 +78,7 @@ class PNPServerHandler extends SimpleChannelHandler {
+ 
+     public PNPServerHandler(Executor executor) {
+         this.executor = executor;
+-        String runtimeUrl = ProActiveRuntimeImpl.getProActiveRuntime().getURL();
+-        this.marshaller = new ProActiveMarshaller(runtimeUrl);
++        this.marshaller = new ProActiveMarshaller(ProActiveRuntimeImpl.getProActiveRuntime());
+     }
+ 
+     @Override
+diff --git a/src/Tests/unitTests/dataspaces/mock/MOCKProActiveRuntime.java b/src/Tests/unitTests/dataspaces/mock/MOCKProActiveRuntime.java
+index 16368d3..4d270d4 100644
+--- a/src/Tests/unitTests/dataspaces/mock/MOCKProActiveRuntime.java
++++ b/src/Tests/unitTests/dataspaces/mock/MOCKProActiveRuntime.java
+@@ -187,6 +187,10 @@ public class MOCKProActiveRuntime implements ProActiveRuntime {
+         return null;
+     }
+ 
++    public String[] getURLs() {
++        return null;
++    }
++
+     public VMInformation getVMInformation() {
+         return info;
+     }
+-- 
+1.7.4
+

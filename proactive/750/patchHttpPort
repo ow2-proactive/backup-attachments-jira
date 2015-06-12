@@ -1,0 +1,90 @@
+Index: src/Core/org/objectweb/proactive/core/remoteobject/http/message/HttpRemoteObjectLookupMessage.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/http/message/HttpRemoteObjectLookupMessage.java	
++++ src/Core/org/objectweb/proactive/core/remoteobject/http/message/HttpRemoteObjectLookupMessage.java	
+@@ -57,7 +57,7 @@
+      * Constructs an HTTP Message
+      * @param urn The urn of the Object (it can be an active object or a runtime).
+      */
+-    public HttpRemoteObjectLookupMessage(String urn, URI url, int port) {
++    public HttpRemoteObjectLookupMessage(String urn, URI url) {
+         super(url.toString());
+         this.urn = urn;
+         if (!this.urn.startsWith("/")) {
+Index: src/Core/org/objectweb/proactive/core/remoteobject/http/HTTPRemoteObjectFactory.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/http/HTTPRemoteObjectFactory.java	
++++ src/Core/org/objectweb/proactive/core/remoteobject/http/HTTPRemoteObjectFactory.java
+@@ -107,7 +107,6 @@
+ 
+         try {
+             u = new URL(url.toString());
+-            int port = u.getPort();
+             url = URI.create(u.toString());
+         } catch (MalformedURLException e) {
+             url = URI.create(HTTPTransportServlet.get().getURL() + url.toString());
+@@ -140,14 +139,8 @@
+      * @return a UniversalBody
+      */
+     public RemoteObject lookup(URI url) throws ProActiveException {
+-        int port = url.getPort();
+-
+-        if (port == -1) {
+-            port = PAProperties.PA_XMLHTTP_PORT.getValueAsInt();
+-        }
+-
+         String urn = url.getPath();
+-        HttpRemoteObjectLookupMessage message = new HttpRemoteObjectLookupMessage(urn, url, port);
++        HttpRemoteObjectLookupMessage message = new HttpRemoteObjectLookupMessage(urn, url);
+         try {
+             message.send();
+         } catch (HTTPRemoteException e) {
+Index: src/Core/org/objectweb/proactive/core/remoteobject/http/util/HttpMessage.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/http/util/HttpMessage.java
++++ src/Core/org/objectweb/proactive/core/remoteobject/http/util/HttpMessage.java
+@@ -45,10 +45,8 @@
+     protected Object returnedObject;
+     protected String url;
+ 
+-    //    private int port;
+     public HttpMessage(String url) {
+         this.url = url;
+-        //        this.port = port;
+     }
+ 
+     /**
+Index: src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectHelper.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectHelper.java
++++ src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectHelper.java
+@@ -105,13 +105,27 @@
+      * @return the uri with all values set
+      */
+     public static URI expandURI(URI uri) {
+-        if (uri.getScheme() == null) {
+-            int port = uri.getPort();
++        int port = uri.getPort();
++        String protocol = uri.getScheme();
++        if (protocol == null) {
+             if (port == -1) {
++                // Set port and protocol (using default)
+                 uri = URIBuilder.buildURIFromProperties(uri.getHost(), uri.getPath());
+             } else {
++                // Set only protocol (using default) 
+                 uri = URIBuilder.setProtocol(uri, PAProperties.PA_COMMUNICATION_PROTOCOL.getValue());
+             }
++        } else {
++            if (port == -1) {
++                try {
++                    RemoteObjectFactory rof = AbstractRemoteObjectFactory.getRemoteObjectFactory(protocol);
++                    port = rof.getPort();
++                    // Set only port (using RemoteObjectFactory's one) 
++                    uri = URIBuilder.setPort(uri, port);
++                } catch (UnknownProtocolException e) {
++                    logger.debug(e.getMessage());
++                }
++            }
+         }
+         return uri;
+     }

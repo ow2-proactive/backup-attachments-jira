@@ -1,0 +1,334 @@
+Thread 27657: (state = BLOCKED)
+ - java.lang.Shutdown.exit(int) @bci=96, line=218 (Interpreted frame)
+ - java.lang.Terminator$1.handle(sun.misc.Signal) @bci=8, line=35 (Interpreted frame)
+ - sun.misc.Signal$1.run() @bci=8, line=195 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27656: (state = BLOCKED)
+ - java.lang.Shutdown.exit(int) @bci=96, line=218 (Interpreted frame)
+ - java.lang.Terminator$1.handle(sun.misc.Signal) @bci=8, line=35 (Interpreted frame)
+ - sun.misc.Signal$1.run() @bci=8, line=195 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27652: (state = BLOCKED)
+ - java.lang.Shutdown.exit(int) @bci=96, line=218 (Interpreted frame)
+ - java.lang.Terminator$1.handle(sun.misc.Signal) @bci=8, line=35 (Interpreted frame)
+ - sun.misc.Signal$1.run() @bci=8, line=195 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27058: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.waitFor(long) @bci=128, line=327 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.waitFor() @bci=2, line=283 (Interpreted frame)
+ - org.objectweb.proactive.api.PAFuture.waitFor(java.lang.Object) @bci=30, line=135 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.core.RMCore$1.run() @bci=34, line=338 (Interpreted frame)
+
+
+Thread 27047: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=474 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.nodesource.NodeSource$NodeLookupThread.run() @bci=25, line=257 (Interpreted frame)
+
+
+Thread 27046: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.waitFor(long) @bci=128, line=327 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.waitFor() @bci=2, line=283 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.reify(org.objectweb.proactive.core.mop.MethodCall) @bci=3, line=411 (Interpreted frame)
+ - pa.stub.java.util._StubLinkedList.iterator() @bci=32 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.nodesource.utils.Pinger.ping() @bci=41, line=123 (Interpreted frame)
+ - sun.reflect.NativeMethodAccessorImpl.invoke0(java.lang.reflect.Method, java.lang.Object, java.lang.Object[]) @bci=0 (Interpreted frame)
+ - sun.reflect.NativeMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=87, line=39 (Interpreted frame)
+ - sun.reflect.DelegatingMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=6, line=25 (Compiled frame)
+ - java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) @bci=111, line=585 (Compiled frame)
+ - org.objectweb.proactive.core.mop.MethodCall.execute(java.lang.Object) @bci=206, line=395 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(org.objectweb.proactive.Body) @bci=14, line=230 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.RequestImpl.serve(org.objectweb.proactive.Body) @bci=39, line=174 (Interpreted frame)
+ - org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(org.objectweb.proactive.core.body.request.Request) @bci=166, line=562 (Interpreted frame)
+ - org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(org.objectweb.proactive.core.body.request.Request) @bci=45, line=525 (Interpreted frame)
+ - org.objectweb.proactive.core.body.AbstractBody.serve(org.objectweb.proactive.core.body.request.Request) @bci=84, line=922 (Interpreted frame)
+ - org.objectweb.proactive.Service.serve(org.objectweb.proactive.core.body.request.Request) @bci=5, line=116 (Interpreted frame)
+ - org.ow2.proactive.authentication.RestrictedService.runActivity(org.objectweb.proactive.Body) @bci=76, line=79 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27045: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27044: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureMonitoring.monitoringDelay() @bci=4, line=91 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureMonitoring.run() @bci=46, line=170 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27043: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.waitFor(long) @bci=128, line=327 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.waitFor() @bci=2, line=283 (Interpreted frame)
+ - org.objectweb.proactive.api.PAFuture.waitFor(java.lang.Object) @bci=30, line=135 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.nodesource.NodeSource.finishNodeSourceShutdown() @bci=55, line=459 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.nodesource.NodeSource.shutdown() @bci=49, line=406 (Interpreted frame)
+ - sun.reflect.NativeMethodAccessorImpl.invoke0(java.lang.reflect.Method, java.lang.Object, java.lang.Object[]) @bci=0 (Interpreted frame)
+ - sun.reflect.NativeMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=87, line=39 (Interpreted frame)
+ - sun.reflect.DelegatingMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=6, line=25 (Compiled frame)
+ - java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) @bci=111, line=585 (Compiled frame)
+ - org.objectweb.proactive.core.mop.MethodCall.execute(java.lang.Object) @bci=206, line=395 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(org.objectweb.proactive.Body) @bci=14, line=230 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.RequestImpl.serve(org.objectweb.proactive.Body) @bci=39, line=174 (Interpreted frame)
+ - org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(org.objectweb.proactive.core.body.request.Request) @bci=166, line=562 (Interpreted frame)
+ - org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(org.objectweb.proactive.core.body.request.Request) @bci=45, line=525 (Interpreted frame)
+ - org.objectweb.proactive.core.body.AbstractBody.serve(org.objectweb.proactive.core.body.request.Request) @bci=84, line=922 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest(org.objectweb.proactive.core.body.request.RequestFilter, long) @bci=24, line=175 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest() @bci=3, line=150 (Interpreted frame)
+ - org.objectweb.proactive.Service.fifoServing() @bci=13, line=126 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(org.objectweb.proactive.Body) @bci=8, line=317 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27042: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27041: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(long) @bci=53, line=210 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(org.objectweb.proactive.core.body.request.RequestFilter, boolean, long) @bci=124, line=297 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(org.objectweb.proactive.core.body.request.RequestFilter, long) @bci=4, line=149 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest(org.objectweb.proactive.core.body.request.RequestFilter, long) @bci=6, line=173 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest() @bci=3, line=150 (Interpreted frame)
+ - org.objectweb.proactive.Service.fifoServing() @bci=13, line=126 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(org.objectweb.proactive.Body) @bci=8, line=317 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27040: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27039: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(long) @bci=53, line=210 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.waitForRequest(long) @bci=41, line=238 (Interpreted frame)
+ - org.objectweb.proactive.Service.waitForRequest() @bci=5, line=444 (Interpreted frame)
+ - org.ow2.proactive.authentication.RestrictedService.runActivity(org.objectweb.proactive.Body) @bci=19, line=74 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27038: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27037: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(long) @bci=53, line=210 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(org.objectweb.proactive.core.body.request.RequestFilter, boolean, long) @bci=124, line=297 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(org.objectweb.proactive.core.body.request.RequestFilter, long) @bci=4, line=149 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest(org.objectweb.proactive.core.body.request.RequestFilter, long) @bci=6, line=173 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest() @bci=3, line=150 (Interpreted frame)
+ - org.objectweb.proactive.Service.fifoServing() @bci=13, line=126 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(org.objectweb.proactive.Body) @bci=8, line=317 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27036: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27035: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.frontend.RMUserImpl$Pinger.run() @bci=30, line=369 (Interpreted frame)
+
+
+Thread 27034: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(long) @bci=53, line=210 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.waitForRequest(long) @bci=41, line=238 (Interpreted frame)
+ - org.objectweb.proactive.Service.waitForRequest() @bci=5, line=444 (Interpreted frame)
+ - org.ow2.proactive.authentication.RestrictedService.runActivity(org.objectweb.proactive.Body) @bci=19, line=74 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27033: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27032: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.frontend.RMUserImpl$Pinger.run() @bci=30, line=369 (Interpreted frame)
+
+
+Thread 27031: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(long) @bci=53, line=210 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.waitForRequest(long) @bci=41, line=238 (Interpreted frame)
+ - org.objectweb.proactive.Service.waitForRequest() @bci=5, line=444 (Interpreted frame)
+ - org.ow2.proactive.authentication.RestrictedService.runActivity(org.objectweb.proactive.Body) @bci=19, line=74 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27030: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27029: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(long) @bci=53, line=210 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(org.objectweb.proactive.core.body.request.RequestFilter, boolean, long) @bci=124, line=297 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(org.objectweb.proactive.core.body.request.RequestFilter, long) @bci=4, line=149 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest(org.objectweb.proactive.core.body.request.RequestFilter, long) @bci=6, line=173 (Interpreted frame)
+ - org.objectweb.proactive.Service.blockingServeOldest() @bci=3, line=150 (Interpreted frame)
+ - org.objectweb.proactive.Service.fifoServing() @bci=13, line=126 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(org.objectweb.proactive.Body) @bci=8, line=317 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27028: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27026: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - org.objectweb.proactive.core.body.future.FutureProxy.waitFor(long) @bci=128, line=327 (Interpreted frame)
+ - org.objectweb.proactive.api.PAFuture.waitFor(java.lang.Object, long) @bci=31, line=164 (Interpreted frame)
+ - org.objectweb.proactive.api.PAFuture.waitForAll(java.util.List, long) @bci=55, line=207 (Interpreted frame)
+ - org.objectweb.proactive.api.PAFuture.waitForAll(java.util.List) @bci=2, line=180 (Interpreted frame)
+ - org.ow2.proactive.resourcemanager.core.RMCore.shutdown(boolean) @bci=110, line=716 (Interpreted frame)
+ - sun.reflect.NativeMethodAccessorImpl.invoke0(java.lang.reflect.Method, java.lang.Object, java.lang.Object[]) @bci=0 (Interpreted frame)
+ - sun.reflect.NativeMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=87, line=39 (Interpreted frame)
+ - sun.reflect.DelegatingMethodAccessorImpl.invoke(java.lang.Object, java.lang.Object[]) @bci=6, line=25 (Compiled frame)
+ - java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) @bci=111, line=585 (Compiled frame)
+ - org.objectweb.proactive.core.mop.MethodCall.execute(java.lang.Object) @bci=206, line=395 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(org.objectweb.proactive.Body) @bci=14, line=230 (Interpreted frame)
+ - org.objectweb.proactive.core.body.request.RequestImpl.serve(org.objectweb.proactive.Body) @bci=39, line=174 (Interpreted frame)
+ - org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(org.objectweb.proactive.core.body.request.Request) @bci=166, line=562 (Interpreted frame)
+ - org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(org.objectweb.proactive.core.body.request.Request) @bci=45, line=525 (Interpreted frame)
+ - org.objectweb.proactive.core.body.AbstractBody.serve(org.objectweb.proactive.core.body.request.Request) @bci=84, line=922 (Interpreted frame)
+ - org.objectweb.proactive.Service.serve(org.objectweb.proactive.core.body.request.Request) @bci=5, line=116 (Interpreted frame)
+ - org.ow2.proactive.authentication.RestrictedService.runActivity(org.objectweb.proactive.Body) @bci=76, line=79 (Interpreted frame)
+ - org.objectweb.proactive.core.body.ActiveBody.run() @bci=55, line=197 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27025: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Compiled frame; information may be imprecise)
+ - org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run() @bci=63, line=244 (Compiled frame)
+
+
+Thread 27022: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=120 (Interpreted frame)
+ - sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run() @bci=95, line=501 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27017: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - sun.rmi.transport.DGCImpl$LeaseChecker.run() @bci=3, line=310 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27014: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - sun.misc.GC$Daemon.run() @bci=51, line=100 (Interpreted frame)
+
+
+Thread 27013: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=120 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=136 (Interpreted frame)
+ - sun.rmi.transport.ObjectTable$Reaper.run() @bci=3, line=336 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27012: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=474 (Interpreted frame)
+ - java.util.TimerThread.mainLoop() @bci=28, line=483 (Interpreted frame)
+ - java.util.TimerThread.run() @bci=1, line=462 (Interpreted frame)
+
+
+Thread 27011: (state = IN_NATIVE)
+ - java.net.PlainSocketImpl.socketAccept(java.net.SocketImpl) @bci=0 (Interpreted frame)
+ - java.net.PlainSocketImpl.accept(java.net.SocketImpl) @bci=7, line=384 (Interpreted frame)
+ - java.net.ServerSocket.implAccept(java.net.Socket) @bci=50, line=450 (Interpreted frame)
+ - java.net.ServerSocket.accept() @bci=48, line=421 (Interpreted frame)
+ - sun.rmi.transport.tcp.TCPTransport.run() @bci=59, line=340 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27009: (state = IN_NATIVE)
+ - sun.nio.ch.PollArrayWrapper.poll0(long, int, long) @bci=0 (Compiled frame; information may be imprecise)
+ - sun.nio.ch.PollArrayWrapper.poll(int, int, long) @bci=13, line=100 (Compiled frame)
+ - sun.nio.ch.SelectorImpl.lockAndDoSelect(long) @bci=37, line=69 (Compiled frame)
+ - sun.nio.ch.SelectorImpl.select(long) @bci=30, line=80 (Compiled frame)
+ - org.mortbay.io.nio.SelectorManager.doSelect(int) @bci=24, line=167 (Compiled frame)
+ - org.mortbay.jetty.AbstractConnector$Acceptor.run() @bci=151, line=707 (Interpreted frame)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.runTask(java.lang.Runnable) @bci=43, line=650 (Interpreted frame)
+ - java.util.concurrent.ThreadPoolExecutor$Worker.run() @bci=28, line=675 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=595 (Interpreted frame)
+
+
+Thread 27008: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.util.TimerThread.mainLoop() @bci=201, line=509 (Interpreted frame)
+ - java.util.TimerThread.run() @bci=1, line=462 (Interpreted frame)
+
+
+Thread 27007: (state = BLOCKED)
+ - java.lang.Shutdown.exit(int) @bci=96, line=218 (Interpreted frame)
+ - java.lang.Runtime.exit(int) @bci=14, line=90 (Interpreted frame)
+ - java.lang.System.exit(int) @bci=4, line=869 (Interpreted frame)
+ - functionalTests.FunctionalTest$2.run() @bci=240, line=212 (Interpreted frame)
+ - java.util.TimerThread.mainLoop() @bci=221, line=512 (Interpreted frame)
+ - java.util.TimerThread.run() @bci=1, line=462 (Interpreted frame)
+
+
+Thread 26994: (state = BLOCKED)
+
+
+Thread 26993: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=120 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=136 (Interpreted frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=3, line=159 (Interpreted frame)
+
+
+Thread 26992: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=474 (Interpreted frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=46, line=116 (Interpreted frame)
+
+
+Thread 26988: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Thread.join(long) @bci=38, line=1095 (Interpreted frame)
+ - java.lang.Thread.join() @bci=2, line=1148 (Interpreted frame)
+ - java.lang.Shutdown.runHooks() @bci=75, line=132 (Interpreted frame)
+ - java.lang.Shutdown.sequence() @bci=26, line=173 (Interpreted frame)
+ - java.lang.Shutdown.exit(int) @bci=96, line=218 (Interpreted frame)
+ - java.lang.Runtime.exit(int) @bci=14, line=90 (Interpreted frame)
+ - java.lang.System.exit(int) @bci=4, line=869 (Interpreted frame)
+ - org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(java.lang.String[]) @bci=737, line=773 (Interpreted frame)
+
+

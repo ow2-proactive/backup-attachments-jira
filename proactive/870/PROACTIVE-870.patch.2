@@ -1,0 +1,108 @@
+diff --git a/src/Core/org/objectweb/proactive/core/ssh/SshConfig.java b/src/Core/org/objectweb/proactive/core/ssh/SshConfig.java
+index 4342d42..c5b0d1b 100644
+--- a/src/Core/org/objectweb/proactive/core/ssh/SshConfig.java
++++ b/src/Core/org/objectweb/proactive/core/ssh/SshConfig.java
+@@ -64,6 +64,7 @@ public class SshConfig {
+     private long gcIdleTime;
+     private int connectTimeout;
+     private String sshDirPath;
++    private String DEFAULT = "*";
+ 
+     /**
+      * A Map of String and a Map of Token,String is used to represent the ssh configuration file,
+@@ -154,7 +155,7 @@ public class SshConfig {
+      */
+     public void addHostInformation(String hostname, SshToken request, String information) {
+         if (isCapable(request)) {
+-            if (hostname.charAt(0) == '*') {
++            if ((hostname.charAt(0) == '*') && (hostname.length() > 1)) {
+                 hostname = hostname.substring(1);
+             }
+             Map<SshToken, String> hostsInfos = sshInfos.get(hostname);
+@@ -168,7 +169,8 @@ public class SshConfig {
+                 if (hostsInfos.get(request) != null) {
+                     if (logger.isDebugEnabled()) {
+                         logger.debug("Ssh configuration : information " + information + " as " +
+-                            request.toString().toLowerCase() + " for " + hostname +
++                            request.toString().toLowerCase() +
++                            (hostname.equalsIgnoreCase(DEFAULT) ? " as default" : " for " + hostname) +
+                             " is already declared, ignored");
+                     }
+                     return;
+@@ -177,7 +179,8 @@ public class SshConfig {
+             }
+             if (logger.isDebugEnabled()) {
+                 logger.debug("Ssh configuration : " + information + " as " +
+-                    request.toString().toLowerCase() + " stored for " + hostname);
++                    request.toString().toLowerCase() + " stored " +
++                    (hostname.equalsIgnoreCase(DEFAULT) ? "as default." : "for " + hostname + "."));
+             }
+         } else {
+             logger.warn("Ssh configuration option \"" + request.getValue() + " = " + information +
+@@ -185,6 +188,10 @@ public class SshConfig {
+         }
+     }
+ 
++    public void addDefaultHostInformation(SshToken request, String information) {
++        this.addHostInformation(DEFAULT, request, information);
++    }
++
+     /**
+      * Replace host by hostname in the map table because
+      * ssh allow to use nickname in it configuration file
+@@ -247,10 +254,18 @@ public class SshConfig {
+             }
+         }
+         hostInfos = sshInfos.get(hostname);
+-        if (hostInfos != null && hostInfos.get(tok) != null)
++        if (hostInfos != null && hostInfos.get(tok) != null) {
+             return hostInfos.get(tok);
+-        else
+-            return null;
++        } else {
++            Map<SshToken, String> map = sshInfos.get(DEFAULT);
++            if (map != null) {
++                String defaultValue = map.get(tok);
++                if (defaultValue != null) {
++                    return defaultValue;
++                }
++            }
++        }
++        return null;
+     }
+ 
+     /**
+diff --git a/src/Core/org/objectweb/proactive/core/ssh/SshConnection.java b/src/Core/org/objectweb/proactive/core/ssh/SshConnection.java
+index 92a80ae..b7f8407 100644
+--- a/src/Core/org/objectweb/proactive/core/ssh/SshConnection.java
++++ b/src/Core/org/objectweb/proactive/core/ssh/SshConnection.java
+@@ -119,7 +119,7 @@ public class SshConnection {
+             // Connection cannot be opened
+             if (logger.isInfoEnabled()) {
+                 StringBuffer sb = new StringBuffer();
+-                sb.append("SSH Authentication failed for " + username + "@" + hostname + ":" + port);
++                sb.append("SSH Authentication failed for " + username + "@" + hostname + ":" + port+". ");
+                 sb.append("Following SSH private keys have been tried:");
+                 for (String key : keys) {
+                     sb.append("\t" + key);
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/util/socketfactory/MessageRoutingSshSocketFactory.java b/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/util/socketfactory/MessageRoutingSshSocketFactory.java
+index 19fb7e8..3a730da 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/util/socketfactory/MessageRoutingSshSocketFactory.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/pamr/remoteobject/util/socketfactory/MessageRoutingSshSocketFactory.java
+@@ -89,14 +89,13 @@ public class MessageRoutingSshSocketFactory implements MessageRoutingSocketFacto
+ 
+         if (PAMRConfig.PA_PAMRSSH_REMOTE_PORT.isSet()) {
+             int port = PAMRConfig.PA_PAMRSSH_REMOTE_PORT.getValue();
+-            this.config.addHostInformation(PAMRConfig.PA_NET_ROUTER_ADDRESS.getValue(), SshToken.PORT, String
++            this.config.addDefaultHostInformation(SshToken.PORT, String
+                     .valueOf(port));
+         }
+ 
+         if (PAMRConfig.PA_PAMRSSH_REMOTE_USERNAME.isSet()) {
+             String username = PAMRConfig.PA_PAMRSSH_REMOTE_USERNAME.getValue();
+-
+-            this.config.addHostInformation(PAMRConfig.PA_NET_ROUTER_ADDRESS.getValue(), SshToken.USERNAME,
++            this.config.addDefaultHostInformation(SshToken.USERNAME,
+                     username);
+         }
+ 

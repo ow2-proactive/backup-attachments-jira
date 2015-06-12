@@ -1,0 +1,1116 @@
+2010-12-10 16:13:37,009 - Rank is 0
+2010-12-10 16:13:40,423 - Different previous URL registered by this agent has been found. Remove previous registration.
+2010-12-10 16:13:40,439 - Node rmi://192.168.1.17:1100/node added. URL is stored in C:\Windows\TEMP\_PA-AGENT_URL_node-0
+2010-12-10 16:13:40,439 - Connected to the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-10 16:13:56,288 - java.lang.Exception: An exception occured while executing the script 
+2010-12-10 16:13:56,288 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:277)
+2010-12-10 16:13:56,288 - 	at org.ow2.proactive.scripting.ScriptHandler.handle(ScriptHandler.java:70)
+2010-12-10 16:13:56,288 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.executeEnvScript(ForkedJavaExecutable.java:306)
+2010-12-10 16:13:56,288 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.createProcessAndPrepareCommand(ForkedJavaExecutable.java:242)
+2010-12-10 16:13:56,288 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.execute(ForkedJavaExecutable.java:167)
+2010-12-10 16:13:56,288 - 	at org.ow2.proactive.scheduler.task.launcher.ForkedJavaTaskLauncher.doTask(ForkedJavaTaskLauncher.java:135)
+2010-12-10 16:13:56,288 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2010-12-10 16:13:56,288 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2010-12-10 16:13:56,288 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2010-12-10 16:13:56,288 - 	at java.lang.reflect.Method.invoke(Method.java:597)
+2010-12-10 16:13:56,288 - 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+2010-12-10 16:13:56,288 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:253)
+2010-12-10 16:13:56,288 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:197)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:616)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:577)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:944)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:313)
+2010-12-10 16:13:56,289 - 	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+2010-12-10 16:13:56,289 - 	at java.lang.Thread.run(Thread.java:619)
+2010-12-10 16:13:56,289 - Caused by: javax.script.ScriptException: sun.org.mozilla.javascript.internal.EcmaError: TypeError: [JavaPackage com.activeeon.scheduler.scripts.tools.BatchExecuter1] is not a function, it is sun.org.mozilla.javascript.internal.NativeJavaPackage. (<Unknown source>#10) in <Unknown source> at line number 10
+2010-12-10 16:13:56,289 - 	at com.sun.script.javascript.RhinoScriptEngine.eval(RhinoScriptEngine.java:110)
+2010-12-10 16:13:56,289 - 	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:232)
+2010-12-10 16:13:56,289 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:272)
+2010-12-10 16:13:56,289 - 	... 21 more
+2010-12-10 16:14:28,918 - java.lang.Exception: An exception occured while executing the script 
+2010-12-10 16:14:28,918 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:277)
+2010-12-10 16:14:28,918 - 	at org.ow2.proactive.scripting.ScriptHandler.handle(ScriptHandler.java:70)
+2010-12-10 16:14:28,918 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.executeEnvScript(ForkedJavaExecutable.java:306)
+2010-12-10 16:14:28,918 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.createProcessAndPrepareCommand(ForkedJavaExecutable.java:242)
+2010-12-10 16:14:28,918 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.execute(ForkedJavaExecutable.java:167)
+2010-12-10 16:14:28,918 - 	at org.ow2.proactive.scheduler.task.launcher.ForkedJavaTaskLauncher.doTask(ForkedJavaTaskLauncher.java:135)
+2010-12-10 16:14:28,918 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2010-12-10 16:14:28,918 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2010-12-10 16:14:28,918 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2010-12-10 16:14:28,918 - 	at java.lang.reflect.Method.invoke(Method.java:597)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:253)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:197)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:616)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:577)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:944)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:313)
+2010-12-10 16:14:28,918 - 	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+2010-12-10 16:14:28,918 - 	at java.lang.Thread.run(Thread.java:619)
+2010-12-10 16:14:28,918 - Caused by: javax.script.ScriptException: sun.org.mozilla.javascript.internal.WrappedException: Wrapped java.io.IOException: Cannot run program "setVariables.bat": CreateProcess error=2, The system cannot find the file specified (<Unknown source>#11) in <Unknown source> at line number 11
+2010-12-10 16:14:28,918 - 	at com.sun.script.javascript.RhinoScriptEngine.eval(RhinoScriptEngine.java:110)
+2010-12-10 16:14:28,918 - 	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:232)
+2010-12-10 16:14:28,918 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:272)
+2010-12-10 16:14:28,918 - 	... 21 more
+2010-12-10 17:05:11,008 - Rank is 0
+2010-12-10 17:05:14,419 - Node rmi://192.168.1.17:1100/node added. URL is stored in C:\Windows\TEMP\_PA-AGENT_URL_node-0
+2010-12-10 17:05:14,419 - Connected to the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-10 17:05:22,376 - java.lang.Exception: An exception occured while executing the script 
+2010-12-10 17:05:22,376 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:277)
+2010-12-10 17:05:22,376 - 	at org.ow2.proactive.scripting.ScriptHandler.handle(ScriptHandler.java:70)
+2010-12-10 17:05:22,376 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.executeEnvScript(ForkedJavaExecutable.java:306)
+2010-12-10 17:05:22,376 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.createProcessAndPrepareCommand(ForkedJavaExecutable.java:242)
+2010-12-10 17:05:22,376 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.execute(ForkedJavaExecutable.java:167)
+2010-12-10 17:05:22,376 - 	at org.ow2.proactive.scheduler.task.launcher.ForkedJavaTaskLauncher.doTask(ForkedJavaTaskLauncher.java:135)
+2010-12-10 17:05:22,376 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2010-12-10 17:05:22,376 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2010-12-10 17:05:22,376 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2010-12-10 17:05:22,376 - 	at java.lang.reflect.Method.invoke(Method.java:597)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:253)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:197)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:616)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:577)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:944)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:313)
+2010-12-10 17:05:22,376 - 	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+2010-12-10 17:05:22,376 - 	at java.lang.Thread.run(Thread.java:619)
+2010-12-10 17:05:22,376 - Caused by: javax.script.ScriptException: sun.org.mozilla.javascript.internal.EvaluatorException: Can't find method com.activeeon.scheduler.scripts.tools.BatchExecutor.executeScriptAndUpdateForkEnv(string,string,org.ow2.proactive.scheduler.task.launcher.InternalForkEnvironment). (<Unknown source>#12) in <Unknown source> at line number 12
+2010-12-10 17:05:22,376 - 	at com.sun.script.javascript.RhinoScriptEngine.eval(RhinoScriptEngine.java:110)
+2010-12-10 17:05:22,376 - 	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:232)
+2010-12-10 17:05:22,376 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:272)
+2010-12-10 17:05:22,376 - 	... 21 more
+2010-12-10 17:06:33,120 - java.lang.Exception: An exception occured while executing the script 
+2010-12-10 17:06:33,120 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:277)
+2010-12-10 17:06:33,120 - 	at org.ow2.proactive.scripting.ScriptHandler.handle(ScriptHandler.java:70)
+2010-12-10 17:06:33,120 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.executeEnvScript(ForkedJavaExecutable.java:306)
+2010-12-10 17:06:33,120 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.createProcessAndPrepareCommand(ForkedJavaExecutable.java:242)
+2010-12-10 17:06:33,120 - 	at org.ow2.proactive.scheduler.task.ForkedJavaExecutable.execute(ForkedJavaExecutable.java:167)
+2010-12-10 17:06:33,120 - 	at org.ow2.proactive.scheduler.task.launcher.ForkedJavaTaskLauncher.doTask(ForkedJavaTaskLauncher.java:135)
+2010-12-10 17:06:33,120 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2010-12-10 17:06:33,120 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2010-12-10 17:06:33,120 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2010-12-10 17:06:33,120 - 	at java.lang.reflect.Method.invoke(Method.java:597)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:253)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:197)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:616)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:577)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:944)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:313)
+2010-12-10 17:06:33,120 - 	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+2010-12-10 17:06:33,120 - 	at java.lang.Thread.run(Thread.java:619)
+2010-12-10 17:06:33,120 - Caused by: javax.script.ScriptException: sun.org.mozilla.javascript.internal.WrappedException: Wrapped java.io.IOException: Cannot run program "setVariables.bat" (in directory "c:\activeEon\cea\CIVASimul_v1\bin"): CreateProcess error=2, The system cannot find the file specified (<Unknown source>#12) in <Unknown source> at line number 12
+2010-12-10 17:06:33,120 - 	at com.sun.script.javascript.RhinoScriptEngine.eval(RhinoScriptEngine.java:110)
+2010-12-10 17:06:33,120 - 	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:232)
+2010-12-10 17:06:33,120 - 	at org.ow2.proactive.scripting.Script.execute(Script.java:272)
+2010-12-10 17:06:33,120 - 	... 21 more
+2010-12-11 05:39:59,491 - The connection to the Resource Manager has been lost. The application will exit.
+2010-12-11 05:40:01,458 - Rank is 0
+2010-12-11 05:41:10,329 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 05:41:10,329 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 05:41:10,329 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 05:41:10,329 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 05:41:10,329 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 05:41:10,329 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 05:41:10,329 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 05:41:10,329 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 05:41:10,329 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 05:41:10,329 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 05:41:10,329 - 	... 2 more
+2010-12-11 05:41:17,066 - Rank is 0
+2010-12-11 05:42:26,004 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 05:42:26,005 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 05:42:26,005 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 05:42:26,005 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 05:42:26,005 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 05:42:26,005 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 05:42:26,005 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 05:42:26,005 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 05:42:26,005 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 05:42:26,005 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 05:42:26,005 - 	... 2 more
+2010-12-11 05:42:37,810 - Rank is 0
+2010-12-11 09:13:19,528 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:13:19,528 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 09:13:19,528 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 09:13:19,529 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 09:13:19,529 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:13:19,529 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 09:13:19,529 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 09:13:19,529 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 09:13:19,529 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 09:13:19,529 - 	... 2 more
+2010-12-11 09:13:19,530 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 09:13:38,672 - Rank is 0
+2010-12-11 09:14:50,571 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:14:50,571 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 09:14:50,571 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 09:14:50,571 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 09:14:50,571 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:14:50,571 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 09:14:50,571 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 09:14:50,571 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 09:14:50,571 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 09:14:50,571 - 	... 2 more
+2010-12-11 09:14:50,571 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 09:15:12,463 - Rank is 0
+2010-12-11 09:16:21,346 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:16:21,347 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 09:16:21,347 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 09:16:21,347 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 09:16:21,347 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:16:21,347 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 09:16:21,347 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 09:16:21,347 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 09:16:21,347 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 09:16:21,347 - 	... 2 more
+2010-12-11 09:16:21,346 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 09:16:48,104 - Rank is 0
+2010-12-11 09:17:56,860 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 09:17:56,860 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:17:56,860 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 09:17:56,860 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 09:17:56,860 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 09:17:56,860 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:17:56,861 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 09:17:56,861 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 09:17:56,861 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 09:17:56,861 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 09:17:56,861 - 	... 2 more
+2010-12-11 09:18:28,583 - Rank is 0
+2010-12-11 09:19:37,406 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 09:19:37,406 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:19:37,406 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 09:19:37,406 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 09:19:37,406 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 09:19:37,406 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:19:37,407 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 09:19:37,407 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 09:19:37,407 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 09:19:37,407 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 09:19:37,407 - 	... 2 more
+2010-12-11 09:20:14,181 - Rank is 0
+2010-12-11 09:21:22,991 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 09:21:22,991 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:21:22,991 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 09:21:22,991 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 09:21:22,991 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 09:21:22,991 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:21:22,992 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 09:21:22,992 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 09:21:22,992 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 09:21:22,992 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 09:21:22,992 - 	... 2 more
+2010-12-11 09:22:04,739 - Rank is 0
+2010-12-11 09:23:13,527 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 09:23:13,527 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:23:13,527 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 09:23:13,527 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 09:23:13,527 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 09:23:13,527 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 09:23:13,527 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 09:23:13,527 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 09:23:13,527 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 09:23:13,527 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 09:23:13,527 - 	... 2 more
+2010-12-11 09:24:00,284 - Rank is 0
+2010-12-11 11:33:52,993 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:33:52,993 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:33:52,993 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:33:52,993 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:33:52,993 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:33:52,993 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:33:52,993 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:33:52,993 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:33:52,993 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:33:52,993 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:33:52,993 - 	... 2 more
+2010-12-11 11:34:44,800 - Rank is 0
+2010-12-11 11:35:53,588 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:35:53,588 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:35:53,588 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:35:53,588 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:35:53,588 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:35:53,588 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:35:53,588 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:35:53,588 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:35:53,588 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:35:53,588 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:35:53,588 - 	... 2 more
+2010-12-11 11:36:50,307 - Rank is 0
+2010-12-11 11:37:59,095 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:37:59,095 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:37:59,095 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:37:59,095 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:37:59,095 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:37:59,095 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:37:59,095 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:37:59,095 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:37:59,095 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:37:59,095 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:37:59,095 - 	... 2 more
+2010-12-11 11:39:00,824 - Rank is 0
+2010-12-11 11:40:09,578 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:40:09,578 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:40:09,578 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:40:09,578 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:40:09,578 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:40:09,578 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:40:09,578 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:40:09,578 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:40:09,578 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:40:09,579 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:40:09,579 - 	... 2 more
+2010-12-11 11:41:16,343 - Rank is 0
+2010-12-11 11:42:25,100 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:42:25,101 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:42:25,101 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:42:25,101 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:42:25,101 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:42:25,101 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:42:25,101 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:42:25,101 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:42:25,101 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:42:25,101 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:42:25,101 - 	... 2 more
+2010-12-11 11:43:36,993 - Rank is 0
+2010-12-11 11:44:45,843 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:44:45,843 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:44:45,843 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:44:45,843 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:44:45,843 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:44:45,843 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:44:45,843 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:44:45,843 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:44:45,844 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:44:45,844 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:44:45,844 - 	... 2 more
+2010-12-11 11:46:02,583 - Rank is 0
+2010-12-11 11:47:11,359 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:47:11,359 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:47:11,359 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:47:11,359 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:47:11,359 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:47:11,359 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:47:11,359 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:47:11,360 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:47:11,360 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:47:11,360 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:47:11,360 - 	... 2 more
+2010-12-11 11:48:33,103 - Rank is 0
+2010-12-11 11:49:41,870 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:49:41,870 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:49:41,870 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:49:41,870 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:49:41,870 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:49:41,870 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:49:41,870 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:49:41,870 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:49:41,871 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:49:41,871 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:49:41,871 - 	... 2 more
+2010-12-11 11:51:08,637 - Rank is 0
+2010-12-11 11:52:17,398 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:52:17,398 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:52:17,398 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:52:17,398 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:52:17,398 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:52:17,398 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:52:17,398 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:52:17,398 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:52:17,398 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:52:17,398 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:52:17,398 - 	... 2 more
+2010-12-11 11:53:49,163 - Rank is 0
+2010-12-11 11:54:57,927 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:54:57,927 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:54:57,927 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:54:57,927 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:54:57,927 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:54:57,927 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:54:57,927 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:54:57,927 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:54:57,927 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:54:57,927 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:54:57,928 - 	... 2 more
+2010-12-11 11:56:34,675 - Rank is 0
+2010-12-11 11:57:43,439 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 11:57:43,439 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:57:43,439 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 11:57:43,439 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 11:57:43,439 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 11:57:43,439 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 11:57:43,439 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 11:57:43,439 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 11:57:43,440 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 11:57:43,440 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 11:57:43,440 - 	... 2 more
+2010-12-11 11:59:25,200 - Rank is 0
+2010-12-11 12:00:33,966 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:00:33,966 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:00:33,966 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:00:33,966 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:00:33,966 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:00:33,966 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:00:33,966 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:00:33,966 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:00:33,966 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:00:33,966 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:00:33,967 - 	... 2 more
+2010-12-11 12:02:20,732 - Rank is 0
+2010-12-11 12:03:29,635 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:03:29,635 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:03:29,635 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:03:29,635 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:03:29,635 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:03:29,635 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:03:29,635 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:03:29,636 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:03:29,636 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:03:29,636 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:03:29,636 - 	... 2 more
+2010-12-11 12:05:21,513 - Rank is 0
+2010-12-11 12:06:30,497 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:06:30,497 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:06:30,497 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:06:30,497 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:06:30,497 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:06:30,497 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:06:30,497 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:06:30,497 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:06:30,497 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:06:30,497 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:06:30,497 - 	... 2 more
+2010-12-11 12:08:27,278 - Rank is 0
+2010-12-11 12:09:36,177 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:09:36,177 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:09:36,177 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:09:36,177 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:09:36,177 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:09:36,177 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:09:36,177 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:09:36,177 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:09:36,177 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:09:36,177 - 	... 2 more
+2010-12-11 12:09:36,178 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:11:37,997 - Rank is 0
+2010-12-11 12:12:46,979 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:12:46,979 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:12:46,979 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:12:46,979 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:12:46,979 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:12:46,979 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:12:46,979 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:12:46,979 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:12:46,979 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:12:46,979 - 	... 2 more
+2010-12-11 12:12:46,980 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:14:53,951 - Rank is 0
+2010-12-11 12:16:02,784 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:16:02,784 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:16:02,784 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:16:02,784 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:16:02,785 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:16:02,785 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:16:02,785 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:16:02,785 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:16:02,785 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:16:02,785 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:16:02,785 - 	... 2 more
+2010-12-11 12:18:14,497 - Rank is 0
+2010-12-11 12:19:23,271 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:19:23,271 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:19:23,271 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:19:23,271 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:19:23,271 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:19:23,271 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:19:23,271 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:19:23,271 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:19:23,271 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:19:23,271 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:19:23,271 - 	... 2 more
+2010-12-11 12:21:40,042 - Rank is 0
+2010-12-11 12:22:48,828 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:22:48,828 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:22:48,828 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:22:48,828 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:22:48,828 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:22:48,828 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:22:48,828 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:22:48,828 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:22:48,828 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:22:48,828 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:22:48,828 - 	... 2 more
+2010-12-11 12:25:10,548 - Rank is 0
+2010-12-11 12:26:19,330 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:26:19,330 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:26:19,330 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:26:19,330 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:26:19,330 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:26:19,330 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:26:19,330 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:26:19,330 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:26:19,330 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:26:19,330 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:26:19,330 - 	... 2 more
+2010-12-11 12:28:46,061 - Rank is 0
+2010-12-11 12:29:54,808 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:29:54,808 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:29:54,808 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:29:54,808 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:29:54,808 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:29:54,808 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:29:54,808 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:29:54,808 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:29:54,808 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:29:54,808 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:29:54,808 - 	... 2 more
+2010-12-11 12:32:26,545 - Rank is 0
+2010-12-11 12:33:35,287 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:33:35,287 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:33:35,287 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:33:35,287 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:33:35,287 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:33:35,287 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:33:35,287 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:33:35,287 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:33:35,287 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:33:35,288 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:33:35,288 - 	... 2 more
+2010-12-11 12:36:11,997 - Rank is 0
+2010-12-11 12:37:20,747 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:37:20,747 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:37:20,747 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:37:20,747 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:37:20,747 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:37:20,747 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:37:20,748 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:37:20,748 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:37:20,748 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:37:20,748 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:37:20,748 - 	... 2 more
+2010-12-11 12:40:02,469 - Rank is 0
+2010-12-11 12:41:11,225 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:41:11,225 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:41:11,225 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:41:11,225 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:41:11,225 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:41:11,225 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:41:11,225 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:41:11,225 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:41:11,225 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:41:11,226 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:41:11,226 - 	... 2 more
+2010-12-11 12:43:57,928 - Rank is 0
+2010-12-11 12:45:06,676 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:45:06,676 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:45:06,676 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:45:06,676 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:45:06,676 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:45:06,676 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:45:06,676 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:45:06,676 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:45:06,677 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:45:06,677 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:45:06,677 - 	... 2 more
+2010-12-11 12:47:58,391 - Rank is 0
+2010-12-11 12:49:07,161 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:49:07,161 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:49:07,161 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:49:07,161 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:49:07,161 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:49:07,161 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:49:07,161 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:49:07,161 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:49:07,161 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:49:07,161 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:49:07,161 - 	... 2 more
+2010-12-11 12:52:03,900 - Rank is 0
+2010-12-11 12:53:12,652 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 12:53:12,652 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:53:12,652 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 12:53:12,652 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 12:53:12,652 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 12:53:12,652 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 12:53:12,652 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 12:53:12,652 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 12:53:12,652 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 12:53:12,652 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 12:53:12,652 - 	... 2 more
+2010-12-11 20:10:22,507 - Rank is 0
+2010-12-11 20:11:34,401 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:11:34,401 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:11:34,402 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:11:34,402 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:11:34,402 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:11:34,402 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:11:34,402 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:11:34,402 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:11:34,402 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:11:34,402 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:11:34,402 - 	... 2 more
+2010-12-11 20:14:36,341 - Rank is 0
+2010-12-11 20:15:45,309 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:15:45,310 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:15:45,310 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:15:45,310 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:15:45,310 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:15:45,310 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:15:45,310 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:15:45,310 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:15:45,310 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:15:45,310 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:15:45,310 - 	... 2 more
+2010-12-11 20:18:47,100 - Rank is 0
+2010-12-11 20:19:55,921 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:19:55,921 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:19:55,921 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:19:55,921 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:19:55,922 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:19:55,922 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:19:55,922 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:19:55,922 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:19:55,922 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:19:55,922 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:19:55,922 - 	... 2 more
+2010-12-11 20:22:57,803 - Rank is 0
+2010-12-11 20:24:06,614 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:24:06,614 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:24:06,615 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:24:06,615 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:24:06,615 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:24:06,615 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:24:06,615 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:24:06,615 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:24:06,615 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:24:06,615 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:24:06,615 - 	... 2 more
+2010-12-11 20:27:08,370 - Rank is 0
+2010-12-11 20:28:17,237 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:28:17,237 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:28:17,237 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:28:17,237 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:28:17,238 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:28:17,238 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:28:17,238 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:28:17,238 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:28:17,238 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:28:17,238 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:28:17,238 - 	... 2 more
+2010-12-11 20:31:19,036 - Rank is 0
+2010-12-11 20:32:27,833 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:32:27,834 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:32:27,834 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:32:27,834 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:32:27,834 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:32:27,834 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:32:27,834 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:32:27,834 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:32:27,834 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:32:27,834 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:32:27,834 - 	... 2 more
+2010-12-11 20:35:29,656 - Rank is 0
+2010-12-11 20:36:38,487 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:36:38,488 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:36:38,488 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:36:38,488 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:36:38,488 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:36:38,488 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:36:38,488 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:36:38,488 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:36:38,488 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:36:38,488 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:36:38,488 - 	... 2 more
+2010-12-11 20:39:40,248 - Rank is 0
+2010-12-11 20:40:49,175 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:40:49,175 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:40:49,176 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:40:49,176 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:40:49,176 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:40:49,176 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:40:49,176 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:40:49,176 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:40:49,176 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:40:49,176 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:40:49,176 - 	... 2 more
+2010-12-11 20:43:51,018 - Rank is 0
+2010-12-11 20:45:00,047 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:45:00,047 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:45:00,048 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:45:00,048 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:45:00,048 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:45:00,048 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:45:00,048 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:45:00,048 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:45:00,048 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:45:00,048 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:45:00,048 - 	... 2 more
+2010-12-11 20:48:01,869 - Rank is 0
+2010-12-11 20:49:10,957 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:49:10,957 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:49:10,957 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:49:10,957 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:49:10,957 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:49:10,957 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:49:10,957 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:49:10,957 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:49:10,957 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:49:10,957 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:49:10,957 - 	... 2 more
+2010-12-11 20:52:12,783 - Rank is 0
+2010-12-11 20:53:21,652 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:53:21,653 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:53:21,653 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:53:21,653 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:53:21,653 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:53:21,653 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:53:21,653 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:53:21,653 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:53:21,653 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:53:21,653 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:53:21,653 - 	... 2 more
+2010-12-11 20:56:23,462 - Rank is 0
+2010-12-11 20:57:32,258 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 20:57:32,258 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:57:32,259 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 20:57:32,259 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 20:57:32,259 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 20:57:32,259 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 20:57:32,259 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 20:57:32,259 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 20:57:32,259 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 20:57:32,259 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 20:57:32,259 - 	... 2 more
+2010-12-11 21:00:34,054 - Rank is 0
+2010-12-11 21:01:42,823 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 21:01:42,823 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:01:42,824 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 21:01:42,824 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 21:01:42,824 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 21:01:42,824 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:01:42,824 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 21:01:42,824 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 21:01:42,824 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 21:01:42,824 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 21:01:42,824 - 	... 2 more
+2010-12-11 21:04:44,593 - Rank is 0
+2010-12-11 21:05:53,373 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 21:05:53,374 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:05:53,374 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 21:05:53,374 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 21:05:53,374 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 21:05:53,374 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:05:53,374 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 21:05:53,374 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 21:05:53,374 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 21:05:53,374 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 21:05:53,374 - 	... 2 more
+2010-12-11 21:08:55,193 - Rank is 0
+2010-12-11 21:48:11,541 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 21:48:11,544 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:48:11,544 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 21:48:11,544 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 21:48:11,544 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 21:48:11,544 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:48:11,544 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 21:48:11,544 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 21:48:11,544 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 21:48:11,544 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 21:48:11,544 - 	... 2 more
+2010-12-11 21:51:13,850 - Rank is 0
+2010-12-11 21:52:22,664 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 21:52:22,664 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:52:22,664 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 21:52:22,664 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 21:52:22,664 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 21:52:22,664 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:52:22,664 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 21:52:22,665 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 21:52:22,665 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 21:52:22,665 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 21:52:22,665 - 	... 2 more
+2010-12-11 21:55:24,494 - Rank is 0
+2010-12-11 21:56:33,390 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 21:56:33,391 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:56:33,391 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 21:56:33,391 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 21:56:33,391 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 21:56:33,391 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 21:56:33,391 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 21:56:33,391 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 21:56:33,391 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 21:56:33,391 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 21:56:33,391 - 	... 2 more
+2010-12-11 21:59:35,173 - Rank is 0
+2010-12-11 22:00:43,933 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:00:43,933 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:00:43,933 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:00:43,934 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:00:43,934 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:00:43,934 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:00:43,934 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:00:43,934 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:00:43,934 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:00:43,934 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:00:43,934 - 	... 2 more
+2010-12-11 22:03:45,698 - Rank is 0
+2010-12-11 22:04:54,558 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:04:54,558 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:04:54,558 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:04:54,558 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:04:54,559 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:04:54,559 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:04:54,559 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:04:54,559 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:04:54,559 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:04:54,559 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:04:54,559 - 	... 2 more
+2010-12-11 22:07:56,450 - Rank is 0
+2010-12-11 22:09:05,216 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:09:05,217 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:09:05,217 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:09:05,217 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:09:05,217 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:09:05,217 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:09:05,217 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:09:05,217 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:09:05,217 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:09:05,217 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:09:05,217 - 	... 2 more
+2010-12-11 22:12:06,991 - Rank is 0
+2010-12-11 22:13:15,749 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:13:15,750 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:13:15,750 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:13:15,750 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:13:15,750 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:13:15,750 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:13:15,750 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:13:15,750 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:13:15,750 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:13:15,750 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:13:15,750 - 	... 2 more
+2010-12-11 22:16:17,561 - Rank is 0
+2010-12-11 22:17:26,469 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:17:26,469 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:17:26,469 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:17:26,469 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:17:26,470 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:17:26,470 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:17:26,470 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:17:26,470 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:17:26,470 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:17:26,470 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:17:26,470 - 	... 2 more
+2010-12-11 22:20:28,244 - Rank is 0
+2010-12-11 22:21:37,185 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:21:37,185 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:21:37,185 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:21:37,185 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:21:37,185 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:21:37,185 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:21:37,185 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:21:37,185 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:21:37,186 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:21:37,186 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:21:37,186 - 	... 2 more
+2010-12-11 22:24:39,036 - Rank is 0
+2010-12-11 22:25:47,836 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:25:47,836 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:25:47,836 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:25:47,836 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:25:47,836 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:25:47,836 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:25:47,836 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:25:47,836 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:25:47,836 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:25:47,836 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:25:47,836 - 	... 2 more
+2010-12-11 22:28:49,708 - Rank is 0
+2010-12-11 22:30:00,442 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:30:00,443 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:30:00,443 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:30:00,443 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:30:00,443 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:30:00,443 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:30:00,443 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:30:00,443 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:30:00,443 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:30:00,443 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:30:00,443 - 	... 2 more
+2010-12-11 22:33:02,293 - Rank is 0
+2010-12-11 22:34:11,149 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:34:11,149 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:34:11,149 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:34:11,149 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:34:11,149 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:34:11,149 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:34:11,149 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:34:11,149 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:34:11,149 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:34:11,149 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:34:11,149 - 	... 2 more
+2010-12-11 22:37:13,036 - Rank is 0
+2010-12-11 22:38:22,041 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:38:22,041 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:38:22,041 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:38:22,041 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:38:22,041 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:38:22,041 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:38:22,041 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:38:22,041 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:38:22,041 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:38:22,041 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:38:22,041 - 	... 2 more
+2010-12-11 22:41:23,868 - Rank is 0
+2010-12-11 22:42:33,039 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:42:33,040 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:42:33,040 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:42:33,040 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:42:33,040 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:42:33,040 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:42:33,040 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:42:33,040 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:42:33,040 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:42:33,040 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:42:33,040 - 	... 2 more
+2010-12-11 22:45:34,811 - Rank is 0
+2010-12-11 22:46:43,646 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:46:43,646 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:46:43,646 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:46:43,646 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:46:43,646 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:46:43,646 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:46:43,646 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:46:43,646 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:46:43,646 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:46:43,646 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:46:43,646 - 	... 2 more
+2010-12-11 22:49:45,413 - Rank is 0
+2010-12-11 22:50:54,206 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:50:54,206 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:50:54,206 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:50:54,206 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:50:54,206 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:50:54,206 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:50:54,206 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:50:54,206 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:50:54,206 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:50:54,206 - 	... 2 more
+2010-12-11 22:50:54,207 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:53:55,986 - Rank is 0
+2010-12-11 22:55:04,801 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:55:04,802 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:55:04,802 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:55:04,802 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:55:04,802 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:55:04,802 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:55:04,802 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:55:04,802 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:55:04,802 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:55:04,802 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:55:04,802 - 	... 2 more
+2010-12-11 22:58:06,604 - Rank is 0
+2010-12-11 22:59:15,367 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 22:59:15,367 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:59:15,367 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 22:59:15,367 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 22:59:15,367 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 22:59:15,367 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 22:59:15,367 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 22:59:15,367 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 22:59:15,367 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 22:59:15,367 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 22:59:15,367 - 	... 2 more
+2010-12-11 23:02:17,187 - Rank is 0
+2010-12-11 23:03:25,951 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:03:25,952 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:03:25,952 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:03:25,952 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:03:25,952 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:03:25,952 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:03:25,952 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:03:25,952 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:03:25,953 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:03:25,953 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:03:25,953 - 	... 2 more
+2010-12-11 23:06:27,715 - Rank is 0
+2010-12-11 23:07:36,482 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:07:36,482 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:07:36,483 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:07:36,483 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:07:36,483 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:07:36,483 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:07:36,483 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:07:36,483 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:07:36,483 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:07:36,483 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:07:36,483 - 	... 2 more
+2010-12-11 23:10:38,295 - Rank is 0
+2010-12-11 23:11:47,121 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:11:47,121 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:11:47,121 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:11:47,121 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:11:47,121 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:11:47,122 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:11:47,122 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:11:47,122 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:11:47,122 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:11:47,122 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:11:47,122 - 	... 2 more
+2010-12-11 23:14:49,007 - Rank is 0
+2010-12-11 23:15:57,824 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:15:57,825 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:15:57,825 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:15:57,825 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:15:57,825 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:15:57,825 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:15:57,825 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:15:57,825 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:15:57,825 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:15:57,825 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:15:57,825 - 	... 2 more
+2010-12-11 23:18:59,683 - Rank is 0
+2010-12-11 23:20:08,489 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:20:08,489 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:20:08,490 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:20:08,490 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:20:08,490 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:20:08,490 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:20:08,490 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:20:08,490 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:20:08,490 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:20:08,490 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:20:08,490 - 	... 2 more
+2010-12-11 23:23:10,240 - Rank is 0
+2010-12-11 23:24:19,030 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:24:19,031 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:24:19,031 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:24:19,031 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:24:19,031 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:24:19,031 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:24:19,031 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:24:19,031 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:24:19,031 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:24:19,031 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:24:19,031 - 	... 2 more
+2010-12-11 23:27:20,866 - Rank is 0
+2010-12-11 23:28:29,644 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:28:29,644 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:28:29,644 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:28:29,645 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:28:29,645 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:28:29,645 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:28:29,645 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:28:29,645 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:28:29,645 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:28:29,645 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:28:29,645 - 	... 2 more
+2010-12-11 23:31:31,487 - Rank is 0
+2010-12-11 23:32:40,307 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:32:40,308 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:32:40,308 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:32:40,308 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:32:40,308 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:32:40,308 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:32:40,308 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:32:40,308 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:32:40,308 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:32:40,308 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:32:40,308 - 	... 2 more
+2010-12-11 23:35:42,151 - Rank is 0
+2010-12-11 23:36:51,040 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:36:51,040 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:36:51,040 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:36:51,040 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:36:51,040 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:36:51,040 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:36:51,040 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:36:51,040 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:36:51,040 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:36:51,040 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:36:51,040 - 	... 2 more
+2010-12-11 23:39:52,772 - Rank is 0
+2010-12-11 23:41:01,602 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:41:01,602 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:41:01,602 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:41:01,602 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:41:01,602 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:41:01,602 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:41:01,602 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:41:01,602 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:41:01,603 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:41:01,603 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:41:01,603 - 	... 2 more
+2010-12-11 23:44:03,336 - Rank is 0
+2010-12-11 23:45:12,102 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:45:12,102 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:45:12,102 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:45:12,102 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:45:12,102 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:45:12,102 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:45:12,102 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:45:12,102 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:45:12,102 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:45:12,102 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:45:12,102 - 	... 2 more
+2010-12-11 23:48:13,850 - Rank is 0
+2010-12-11 23:49:22,620 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:49:22,620 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:49:22,620 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:49:22,620 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:49:22,620 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:49:22,620 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:49:22,620 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:49:22,621 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:49:22,621 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:49:22,621 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:49:22,621 - 	... 2 more
+2010-12-11 23:52:24,386 - Rank is 0
+2010-12-11 23:53:33,142 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:53:33,142 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:53:33,142 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:53:33,142 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:53:33,142 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:53:33,142 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:53:33,142 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:53:33,143 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:53:33,143 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:53:33,143 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:53:33,143 - 	... 2 more
+2010-12-11 23:56:34,851 - Rank is 0
+2010-12-11 23:57:43,621 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-11 23:57:43,621 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:57:43,621 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-11 23:57:43,621 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-11 23:57:43,621 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-11 23:57:43,621 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-11 23:57:43,621 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-11 23:57:43,621 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-11 23:57:43,621 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-11 23:57:43,621 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-11 23:57:43,621 - 	... 2 more
+2010-12-11 23:59:58,799 - Rank is 0
+2010-12-12 00:01:07,560 - Unable to join the Resource Manager at rmi://192.168.1.17:1099/
+2010-12-12 00:01:07,560 - org.ow2.proactive.resourcemanager.exception.RMException: Cannot join the Resource Manager at rmi://192.168.1.17:1099/RMAUTHENTICATION due to Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-12 00:01:07,560 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:113)
+2010-12-12 00:01:07,560 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.registerInRM(PAAgentServiceRMStarter.java:416)
+2010-12-12 00:01:07,560 - 	at org.ow2.proactive.resourcemanager.utils.PAAgentServiceRMStarter.main(PAAgentServiceRMStarter.java:341)
+2010-12-12 00:01:07,560 - Caused by: java.io.IOException: Registry could not be contacted, rmi://192.168.1.17:1099/RMAUTHENTICATION
+2010-12-12 00:01:07,561 - 	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1558)
+2010-12-12 00:01:07,561 - 	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:94)
+2010-12-12 00:01:07,561 - 	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:144)
+2010-12-12 00:01:07,561 - 	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+2010-12-12 00:01:07,561 - 	... 2 more

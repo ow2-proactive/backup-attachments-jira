@@ -1,0 +1,113 @@
+From a7eee63a2d92a12d501fcbea21afc62fc838527b Mon Sep 17 00:00:00 2001
+From: acontes <arnaud.contes@activeeon.com>
+Date: Thu, 4 Nov 2010 12:07:25 +0100
+Subject: [PATCH 1/2] resolve PROACTIVE-927 (add a method to terminate a runtime on a jvm that does not terminate the jvm)
+
+---
+ .../proactive/core/runtime/LocalNode.java          |    1 +
+ .../core/runtime/ProActiveRuntimeImpl.java         |   29 +++++++++++++++-----
+ .../core/runtime/broadcast/RTBroadcaster.java      |    3 +-
+ 3 files changed, 25 insertions(+), 8 deletions(-)
+
+diff --git a/src/Core/org/objectweb/proactive/core/runtime/LocalNode.java b/src/Core/org/objectweb/proactive/core/runtime/LocalNode.java
+index 41e7037..66a7056 100644
+--- a/src/Core/org/objectweb/proactive/core/runtime/LocalNode.java
++++ b/src/Core/org/objectweb/proactive/core/runtime/LocalNode.java
+@@ -291,6 +291,7 @@ public class LocalNode implements SecurityEntity {
+ 
+         try {
+             this.runtimeRoe.unregisterAll();
++            this.runtimeRoe.unexportAll();
+         } catch (Exception e) {
+             logger.info(e.toString());
+         }
+diff --git a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java
+index 7ac692d..aa61c98 100644
+--- a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java
++++ b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java
+@@ -148,10 +148,6 @@ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ public class ProActiveRuntimeImpl extends RuntimeRegistrationEventProducerImpl implements ProActiveRuntime,
+         LocalProActiveRuntime {
+ 
+-    /**
+-     * 
+-     */
+-
+     //
+     // -- STATIC MEMBERS
+     // -----------------------------------------------------------
+@@ -698,12 +694,21 @@ public class ProActiveRuntimeImpl extends RuntimeRegistrationEventProducerImpl i
+      */
+     public void killRT(boolean softly) {
+ 
++        cleanJvmFromPA();
++
++        // END JMX unregistration
++        System.exit(0);
++
++    }
++
++    public void cleanJvmFromPA() {
+         // JMX Notification
+         if (getMBean() != null) {
+             getMBean().sendNotification(NotificationType.runtimeDestroyed);
+         }
+-
+         // END JMX Notification
++
++        //terminates the nodes and their active objects
+         killAllNodes();
+ 
+         logger.info("terminating Runtime " + vmInformation.getName());
+@@ -725,8 +730,18 @@ public class ProActiveRuntimeImpl extends RuntimeRegistrationEventProducerImpl i
+             mbean = null;
+         }
+ 
+-        // END JMX unregistration
+-        System.exit(0);
++        //  terminate the broadcast thread
++        RTBroadcaster.getInstance().kill();
++
++        // unexport the runtime
++        try {
++            this.roe.unexportAll();
++        } catch (ProActiveException e) {
++            logger.warn("unable to unexport the runtime", e);
++        }
++        this.roe = null;
++
++        proActiveRuntime = null;
+ 
+     }
+ 
+diff --git a/src/Core/org/objectweb/proactive/core/runtime/broadcast/RTBroadcaster.java b/src/Core/org/objectweb/proactive/core/runtime/broadcast/RTBroadcaster.java
+index 7e4e84c..56d53e8 100644
+--- a/src/Core/org/objectweb/proactive/core/runtime/broadcast/RTBroadcaster.java
++++ b/src/Core/org/objectweb/proactive/core/runtime/broadcast/RTBroadcaster.java
+@@ -167,6 +167,7 @@ public class RTBroadcaster implements Runnable, RTBroadcasterAction, RTBroadcast
+     public void run() {
+ 
+         // --Initialize
++
+         try {
+ 
+             MulticastSocket socket = new MulticastSocket(
+@@ -177,6 +178,7 @@ public class RTBroadcaster implements Runnable, RTBroadcasterAction, RTBroadcast
+ 
+             while (getIsAlive()) // add a isAlive variable (kill() must be synchronized !!)
+             {
++
+                 try {
+                     /***************************************************************
+                      * Receive *
+@@ -225,7 +227,6 @@ public class RTBroadcaster implements Runnable, RTBroadcasterAction, RTBroadcast
+             // --Close connection
+             socket.leaveGroup(address);
+             socket.close();
+-
+         } catch (IOException e) {
+             e.printStackTrace();
+         }
+-- 
+1.7.3.1
+

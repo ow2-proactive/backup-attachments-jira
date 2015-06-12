@@ -1,0 +1,243 @@
+[INFO 2009-07-28 11:41:36,076] Starting Scheduler, Please wait...
+[INFO 2009-07-28 11:41:36,737] Resource Manager doesn't exist on the local host
+[INFO 2009-07-28 11:41:36,738] Trying to start a local Resource Manager
+[INFO 2009-07-28 11:41:38,063] Resource Manager created on rmi://pataud:1099/
+[INFO 2009-07-28 11:41:38,067] Starting new Scheduler
+[INFO 2009-07-28 11:41:38,068] Creating scheduler frontend...
+[INFO 2009-07-28 11:41:38,153] Scheduler is now ready to be started !
+[INFO 2009-07-28 11:41:38,153] (Once started, press 'e' to shutdown)
+[INFO 2009-07-28 11:41:38,196] Scheduler Core ready !
+[INFO 2009-07-28 11:41:38,226] Starting Hibernate...
+[INFO 2009-07-28 11:41:38,523] Infrastructure Manager Proxy started
+[INFO 2009-07-28 11:41:43,896] Hibernate successfully started !
+[INFO 2009-07-28 11:41:44,151] Scheduler successfully created on rmi://pataud:1099/
+[INFO 2009-07-28 11:41:44,153] Scheduler has just been started !
+[INFO 2009-07-28 11:43:28,392] usr1 is trying to connect as user
+[INFO 2009-07-28 11:43:28,394] Incorrect Username/Password
+[INFO 2009-07-28 11:43:28,399] Incorrect Username/Password
+[INFO 2009-07-28 11:43:37,351] user1 is trying to connect as user
+[INFO 2009-07-28 11:43:37,352] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-07-28 11:43:37,352] Logged successfull as a user : user1
+[INFO 2009-07-28 11:43:37,357] user1 successfully connected !
+[INFO 2009-07-28 11:43:38,058] New job submitted '1' containing 8 tasks (owner is 'user1')
+[INFO 2009-07-28 11:43:38,739] Task '10008' started on pataud
+[INFO 2009-07-28 11:43:38,851] Job '1' started
+[INFO 2009-07-28 11:43:39,117] Task '10005' started on pataud
+[INFO 2009-07-28 11:43:39,427] Task '10004' started on pataud
+[INFO 2009-07-28 11:43:39,746] Task '10007' started on pataud
+[INFO 2009-07-28 11:43:39,982] Task '10006' started on 192.168.1.184
+[INFO 2009-07-28 11:43:40,625] Task '10001' started on jily.activeeon.com
+[INFO 2009-07-28 11:43:41,038] Task '10003' started on jily.activeeon.com
+[INFO 2009-07-28 11:43:42,007] Task '10002' started on dalek.activeeon.com
+[INFO 2009-07-28 11:43:44,021] Task '10006' on job '1' terminated
+[INFO 2009-07-28 11:43:44,936] Task '10008' on job '1' terminated
+[INFO 2009-07-28 11:43:45,377] Task '10005' on job '1' terminated
+[INFO 2009-07-28 11:43:47,672] Task '10004' on job '1' terminated
+[INFO 2009-07-28 11:43:47,720] Task '10003' on job '1' terminated
+[INFO 2009-07-28 11:43:48,001] Task '10007' on job '1' terminated
+[INFO 2009-07-28 11:43:48,077] Task '10002' on job '1' terminated
+[INFO 2009-07-28 11:44:01,701] Task '10001' on job '1' terminated
+[INFO 2009-07-28 11:44:01,735] Job '1' terminated
+[INFO 2009-07-28 11:44:04,636] user1 is trying to connect as user
+[INFO 2009-07-28 11:44:04,637] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-07-28 11:44:04,637] Logged successfull as a user : user1
+[INFO 2009-07-28 11:44:04,639] user1 successfully connected !
+[INFO 2009-07-28 11:44:30,298] New job submitted '2' containing 8 tasks (owner is 'user1')
+[INFO 2009-07-28 11:44:30,924] Task '20008' started on dalek.activeeon.com
+[INFO 2009-07-28 11:44:30,934] Job '2' started
+[INFO 2009-07-28 11:44:31,610] Task '20002' started on abulafia.activeeon.com
+[INFO 2009-07-28 11:44:32,041] Task '20003' started on abulafia.activeeon.com
+[INFO 2009-07-28 11:44:32,107] Task '20001' started on 192.168.1.184
+[INFO 2009-07-28 11:44:32,194] Task '20006' started on pataud
+[INFO 2009-07-28 11:44:32,282] Task '20007' started on pataud
+[INFO 2009-07-28 11:44:32,353] Task '20004' started on pataud
+[INFO 2009-07-28 11:44:32,444] Task '20005' started on jily.activeeon.com
+[INFO 2009-07-28 11:44:35,332] Task '20008' on job '2' terminated
+[INFO 2009-07-28 11:44:36,382] Task '20004' on job '2' terminated
+[INFO 2009-07-28 11:44:38,220] Task '20006' on job '2' terminated
+[INFO 2009-07-28 11:44:38,300] Task '20007' on job '2' terminated
+[INFO 2009-07-28 11:44:38,489] Task '20002' on job '2' terminated
+[INFO 2009-07-28 11:44:40,461] Task '20003' on job '2' terminated
+[INFO 2009-07-28 11:44:40,493] Task '20005' on job '2' terminated
+[INFO 2009-07-28 11:44:52,138] Task '20001' on job '2' terminated
+[INFO 2009-07-28 11:44:52,171] Job '2' terminated
+[INFO 2009-07-28 14:21:01,481] er is trying to connect as user
+[INFO 2009-07-28 14:21:01,481] Incorrect Username/Password
+[INFO 2009-07-28 14:21:01,482] Incorrect Username/Password
+[INFO 2009-07-28 14:21:08,888] user1 is trying to connect as user
+[INFO 2009-07-28 14:21:08,889] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-07-28 14:21:08,889] Logged successfull as a user : user1
+[INFO 2009-07-28 14:21:08,894] user1 successfully connected !
+[INFO 2009-07-28 14:21:09,399] New job submitted '3' containing 8 tasks (owner is 'user1')
+[INFO 2009-07-28 14:21:09,662] Task '30008' started on pataud
+[INFO 2009-07-28 14:21:09,670] Job '3' started
+[INFO 2009-07-28 14:21:09,905] Task '30006' started on dalek.activeeon.com
+[INFO 2009-07-28 14:21:10,188] Task '30007' started on jily.activeeon.com
+[INFO 2009-07-28 14:21:10,443] Task '30004' started on dalek.activeeon.com
+[INFO 2009-07-28 14:21:10,609] Task '30005' started on pataud
+[INFO 2009-07-28 14:21:10,759] Task '30002' started on pataud
+[INFO 2009-07-28 14:21:10,911] Task '30003' started on pataud
+[INFO 2009-07-28 14:21:11,133] Task '30001' started on abulafia.activeeon.com
+[INFO 2009-07-28 14:21:14,465] Task '30004' on job '3' terminated
+[INFO 2009-07-28 14:21:15,151] Task '30001' on job '3' terminated
+[INFO 2009-07-28 14:21:16,202] Task '30007' on job '3' terminated
+[INFO 2009-07-28 14:21:16,773] Task '30002' on job '3' terminated
+[INFO 2009-07-28 14:21:16,925] Task '30003' on job '3' terminated
+[INFO 2009-07-28 14:21:17,674] Task '30008' on job '3' terminated
+[INFO 2009-07-28 14:21:18,622] Task '30005' on job '3' terminated
+[INFO 2009-07-28 14:21:19,653] user1 is trying to connect as user
+[INFO 2009-07-28 14:21:19,653] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-07-28 14:21:19,654] Logged successfull as a user : user1
+[INFO 2009-07-28 14:21:19,657] user1 successfully connected !
+[INFO 2009-07-28 14:21:29,922] Task '30006' on job '3' terminated
+[INFO 2009-07-28 14:21:29,959] Job '3' terminated
+[INFO 2009-07-28 14:21:35,293] New job submitted '4' containing 8 tasks (owner is 'user1')
+[INFO 2009-07-28 14:21:35,572] Task '40005' started on abulafia.activeeon.com
+[INFO 2009-07-28 14:21:35,586] Job '4' started
+[INFO 2009-07-28 14:21:35,834] Task '40004' started on jily.activeeon.com
+[INFO 2009-07-28 14:21:35,927] Task '40007' started on 192.168.1.184
+[INFO 2009-07-28 14:21:36,042] Task '40006' started on dalek.activeeon.com
+[INFO 2009-07-28 14:21:36,109] Task '40001' started on abulafia.activeeon.com
+[INFO 2009-07-28 14:21:36,172] Task '40003' started on jily.activeeon.com
+[INFO 2009-07-28 14:21:36,229] Task '40002' started on pataud
+[INFO 2009-07-28 14:21:36,282] Task '40008' started on pataud
+[INFO 2009-07-28 14:21:40,052] Task '40006' on job '4' terminated
+[INFO 2009-07-28 14:21:40,126] Task '40001' on job '4' terminated
+[INFO 2009-07-28 14:21:41,847] Task '40004' on job '4' terminated
+[INFO 2009-07-28 14:21:41,937] Task '40007' on job '4' terminated
+[INFO 2009-07-28 14:21:42,259] Task '40002' on job '4' terminated
+[INFO 2009-07-28 14:21:43,588] Task '40005' on job '4' terminated
+[INFO 2009-07-28 14:21:44,306] Task '40008' on job '4' terminated
+[INFO 2009-07-28 14:21:56,201] Task '40003' on job '4' terminated
+[INFO 2009-07-28 14:21:56,228] Job '4' terminated
+[INFO 2009-07-28 14:55:03,628] New job submitted '5' containing 8 tasks (owner is 'user1')
+[INFO 2009-07-28 14:55:03,897] Task '50008' started on pataud
+[INFO 2009-07-28 14:55:03,906] Job '5' started
+[INFO 2009-07-28 14:55:04,009] Task '50007' started on pataud
+[INFO 2009-07-28 14:55:04,288] Task '50006' started on dalek.activeeon.com
+[INFO 2009-07-28 14:55:04,424] Task '50005' started on dalek.activeeon.com
+[INFO 2009-07-28 14:55:04,556] Task '50004' started on abulafia.activeeon.com
+[INFO 2009-07-28 14:55:04,781] Task '50003' started on jily.activeeon.com
+[INFO 2009-07-28 14:55:04,929] Task '50002' started on 192.168.1.184
+[INFO 2009-07-28 14:55:05,035] Task '50001' started on pataud
+[INFO 2009-07-28 14:55:08,311] Task '50006' on job '5' terminated
+[INFO 2009-07-28 14:55:08,574] Task '50004' on job '5' terminated
+[INFO 2009-07-28 14:55:09,912] Task '50008' on job '5' terminated
+[INFO 2009-07-28 14:55:10,798] Task '50003' on job '5' terminated
+[INFO 2009-07-28 14:55:10,953] Task '50002' on job '5' terminated
+[INFO 2009-07-28 14:55:12,438] Task '50005' on job '5' terminated
+[INFO 2009-07-28 14:55:13,049] Task '50001' on job '5' terminated
+[INFO 2009-07-28 14:55:24,028] Task '50007' on job '5' terminated
+[INFO 2009-07-28 14:55:24,052] Job '5' terminated
+[INFO 2009-08-03 17:30:40,519] usr1 is trying to connect as user
+[INFO 2009-08-03 17:30:40,539] Incorrect Username/Password
+[INFO 2009-08-03 17:30:40,539] Incorrect Username/Password
+[INFO 2009-08-03 17:30:47,991] user1 is trying to connect as user
+[INFO 2009-08-03 17:30:47,992] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-08-03 17:30:47,992] Logged successfull as a user : user1
+[INFO 2009-08-03 17:30:47,997] user1 successfully connected !
+[INFO 2009-08-03 17:30:48,824] New job submitted '6' containing 8 tasks (owner is 'user1')
+[INFO 2009-08-03 17:30:52,031] Task '60008' started on pataud
+[INFO 2009-08-03 17:30:52,038] Job '6' started
+[INFO 2009-08-03 17:30:52,180] Task '60004' started on pataud
+[INFO 2009-08-03 17:30:52,324] Task '60005' started on pataud
+[INFO 2009-08-03 17:30:52,473] Task '60006' started on pataud
+[INFO 2009-08-03 17:30:58,206] Task '60004' on job '6' terminated
+[INFO 2009-08-03 17:30:58,308] Task '60007' started on pataud
+[INFO 2009-08-03 17:30:58,483] Task '60006' on job '6' terminated
+[INFO 2009-08-03 17:30:58,641] Task '60001' started on pataud
+[INFO 2009-08-03 17:31:00,049] Task '60008' on job '6' terminated
+[INFO 2009-08-03 17:31:00,309] Task '60002' started on pataud
+[INFO 2009-08-03 17:31:00,339] Task '60005' on job '6' terminated
+[INFO 2009-08-03 17:31:00,442] Task '60003' started on pataud
+[INFO 2009-08-03 17:31:02,650] Task '60001' on job '6' terminated
+[INFO 2009-08-03 17:31:04,321] Task '60007' on job '6' terminated
+[INFO 2009-08-03 17:31:04,346] Task '60002' on job '6' terminated
+[INFO 2009-08-03 17:31:17,275] user1 is trying to connect as user
+[INFO 2009-08-03 17:31:17,275] Incorrect Username/Password
+[INFO 2009-08-03 17:31:17,276] Incorrect Username/Password
+[INFO 2009-08-03 17:31:20,461] Task '60003' on job '6' terminated
+[INFO 2009-08-03 17:31:20,487] Job '6' terminated
+[INFO 2009-08-03 17:31:23,501] user1 is trying to connect as user
+[INFO 2009-08-03 17:31:23,501] Incorrect Username/Password
+[INFO 2009-08-03 17:31:23,502] Incorrect Username/Password
+[INFO 2009-08-03 17:31:37,632] user1 is trying to connect as user
+[INFO 2009-08-03 17:31:37,633] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-08-03 17:31:37,633] Logged successfull as a user : user1
+[INFO 2009-08-03 17:31:37,636] user1 successfully connected !
+[INFO 2009-08-03 17:36:41,582] New job submitted '7' containing 8 tasks (owner is 'user1')
+[INFO 2009-08-03 17:36:41,635] Task '70005' started on pataud
+[INFO 2009-08-03 17:36:41,642] Job '7' started
+[INFO 2009-08-03 17:36:41,711] Task '70004' started on pataud
+[INFO 2009-08-03 17:36:41,753] Task '70007' started on pataud
+[INFO 2009-08-03 17:36:41,807] Task '70006' started on pataud
+[INFO 2009-08-03 17:36:45,844] Task '70006' on job '7' terminated
+[INFO 2009-08-03 17:36:46,007] New job submitted '8' containing 8 tasks (owner is 'user1')
+[INFO 2009-08-03 17:36:46,071] Task '70001' started on pataud
+[INFO 2009-08-03 17:36:47,768] Task '70007' on job '7' terminated
+[INFO 2009-08-03 17:36:47,860] Task '70003' started on pataud
+[INFO 2009-08-03 17:36:49,661] Task '70005' on job '7' terminated
+[INFO 2009-08-03 17:36:49,746] Task '70002' started on pataud
+[INFO 2009-08-03 17:36:52,088] Task '70001' on job '7' terminated
+[INFO 2009-08-03 17:36:52,175] Task '70008' started on pataud
+[INFO 2009-08-03 17:36:53,877] Task '70003' on job '7' terminated
+[INFO 2009-08-03 17:36:54,017] Task '80008' started on pataud
+[INFO 2009-08-03 17:36:54,029] Job '8' started
+[INFO 2009-08-03 17:36:56,192] Task '70008' on job '7' terminated
+[INFO 2009-08-03 17:36:56,596] Task '80003' started on pataud
+[INFO 2009-08-03 17:36:57,759] Task '70002' on job '7' terminated
+[INFO 2009-08-03 17:36:57,872] Task '80002' started on pataud
+[INFO 2009-08-03 17:36:59,885] New job submitted '9' containing 8 tasks (owner is 'user1')
+[INFO 2009-08-03 17:37:00,025] Task '80008' on job '8' terminated
+[INFO 2009-08-03 17:37:00,108] Task '80001' started on pataud
+[INFO 2009-08-03 17:37:00,607] Task '80003' on job '8' terminated
+[INFO 2009-08-03 17:37:00,710] Task '80007' started on pataud
+[INFO 2009-08-03 17:37:01,721] Task '70004' on job '7' terminated
+[INFO 2009-08-03 17:37:01,766] Job '7' terminated
+[INFO 2009-08-03 17:37:01,844] Task '80006' started on pataud
+[INFO 2009-08-03 17:37:05,879] Task '80002' on job '8' terminated
+[INFO 2009-08-03 17:37:05,977] Task '80005' started on pataud
+[INFO 2009-08-03 17:37:06,131] Task '80001' on job '8' terminated
+[INFO 2009-08-03 17:37:06,556] Task '80004' started on pataud
+[INFO 2009-08-03 17:37:08,745] Task '80007' on job '8' terminated
+[INFO 2009-08-03 17:37:08,857] Task '90002' started on pataud
+[INFO 2009-08-03 17:37:08,865] Job '9' started
+[INFO 2009-08-03 17:37:09,989] Task '80005' on job '8' terminated
+[INFO 2009-08-03 17:37:10,074] Task '90003' started on pataud
+[INFO 2009-08-03 17:37:12,571] Task '80004' on job '8' terminated
+[INFO 2009-08-03 17:37:12,661] Task '90001' started on pataud
+[INFO 2009-08-03 17:37:16,114] Task '90003' on job '9' terminated
+[INFO 2009-08-03 17:37:16,214] Task '90006' started on pataud
+[INFO 2009-08-03 17:37:16,673] Task '90001' on job '9' terminated
+[INFO 2009-08-03 17:37:16,800] Task '90007' started on pataud
+[INFO 2009-08-03 17:37:20,827] Task '90007' on job '9' terminated
+[INFO 2009-08-03 17:37:20,923] Task '90004' started on pataud
+[INFO 2009-08-03 17:37:21,857] Task '80006' on job '8' terminated
+[INFO 2009-08-03 17:37:21,894] Job '8' terminated
+[INFO 2009-08-03 17:37:21,999] Task '90005' started on pataud
+[INFO 2009-08-03 17:37:24,231] Task '90006' on job '9' terminated
+[INFO 2009-08-03 17:37:24,314] Task '90008' started on pataud
+[INFO 2009-08-03 17:37:26,931] Task '90004' on job '9' terminated
+[INFO 2009-08-03 17:37:28,867] Task '90002' on job '9' terminated
+[INFO 2009-08-03 17:37:30,013] Task '90005' on job '9' terminated
+[INFO 2009-08-03 17:37:30,325] Task '90008' on job '9' terminated
+[INFO 2009-08-03 17:37:30,353] Job '9' terminated
+[INFO 2009-08-03 18:06:35,838] New job submitted '10' containing 8 tasks (owner is 'user1')
+[INFO 2009-08-03 18:09:07,746] Task '100008' started on pataud
+[INFO 2009-08-03 18:09:07,776] Job '10' started
+[INFO 2009-08-03 18:09:07,866] Task '100006' started on pataud
+[INFO 2009-08-03 18:09:07,918] Task '100007' started on pataud
+[INFO 2009-08-03 18:09:07,971] Task '100004' started on pataud
+[INFO 2009-08-03 18:09:08,314] Task '100005' started on 192.168.1.184
+[INFO 2009-08-03 18:09:12,337] Task '100005' on job '10' terminated
+[INFO 2009-08-03 18:09:12,423] Task '100002' started on 192.168.1.184
+[INFO 2009-08-03 18:09:13,941] Task '100007' on job '10' terminated
+[INFO 2009-08-03 18:09:14,024] Task '100003' started on pataud
+[INFO 2009-08-03 18:09:15,752] Task '100008' on job '10' terminated
+[INFO 2009-08-03 18:09:15,835] Task '100001' started on pataud
+[INFO 2009-08-03 18:09:15,984] Task '100004' on job '10' terminated
+[INFO 2009-08-03 18:09:18,039] Task '100003' on job '10' terminated
+[INFO 2009-08-03 18:09:18,439] Task '100002' on job '10' terminated
+[INFO 2009-08-03 18:09:21,855] Task '100001' on job '10' terminated
+[INFO 2009-08-03 18:09:27,874] Task '100006' on job '10' terminated
+[INFO 2009-08-03 18:09:27,899] Job '10' terminated

@@ -1,0 +1,73 @@
+Index: src/Core/org/objectweb/proactive/core/remoteobject/http/message/HttpRemoteObjectLookupMessage.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/http/message/HttpRemoteObjectLookupMessage.java
++++ src/Core/org/objectweb/proactive/core/remoteobject/http/message/HttpRemoteObjectLookupMessage.java
+@@ -42,6 +42,7 @@
+ import org.objectweb.proactive.core.remoteobject.http.HttpRemoteObjectImpl;
+ import org.objectweb.proactive.core.remoteobject.http.util.HTTPRegistry;
+ import org.objectweb.proactive.core.remoteobject.http.util.HttpMessage;
++import org.objectweb.proactive.core.util.URIBuilder;
+ 
+ 
+ /**
+@@ -83,7 +84,7 @@
+     @Override
+     public Object processMessage() {
+         if (this.urn != null) {
+-            InternalRemoteRemoteObject irro = HTTPRegistry.getInstance().lookup(url);
++            InternalRemoteRemoteObject irro = HTTPRegistry.getInstance().lookup(URIBuilder.getNameFromURI(url));
+ 
+             //            System.out.println("HttpRemoteObjectLookupMessage.processMessage() ++ ro at " + url +" : " +ro) ;
+             if (irro != null) {
+Index: src/Core/org/objectweb/proactive/core/remoteobject/http/message/HTTPRemoteObjectRequest.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/http/message/HTTPRemoteObjectRequest.java
++++ src/Core/org/objectweb/proactive/core/remoteobject/http/message/HTTPRemoteObjectRequest.java
+@@ -41,6 +41,7 @@
+ import org.objectweb.proactive.core.remoteobject.http.util.HTTPRegistry;
+ import org.objectweb.proactive.core.remoteobject.http.util.HttpMessage;
+ import org.objectweb.proactive.core.util.Sleeper;
++import org.objectweb.proactive.core.util.URIBuilder;
+ 
+ 
+ public class HTTPRemoteObjectRequest extends HttpMessage implements Serializable {
+@@ -66,7 +67,7 @@
+     @Override
+     public Object processMessage() {
+         try {
+-            InternalRemoteRemoteObject ro = HTTPRegistry.getInstance().lookup(url);
++            InternalRemoteRemoteObject ro = HTTPRegistry.getInstance().lookup(URIBuilder.getNameFromURI(url));
+             int max_retry = 5;
+ 
+             if (ro == null) {
+@@ -76,7 +77,7 @@
+                 Sleeper sleeper = new Sleeper(1000);
+                 while ((ro == null) && (max_retry > 0)) {
+                     sleeper.sleep();
+-                    ro = HTTPRegistry.getInstance().lookup(url);
++                    ro = HTTPRegistry.getInstance().lookup(URIBuilder.getNameFromURI(url));
+                     max_retry--;
+                 }
+             }
+Index: src/Core/org/objectweb/proactive/core/remoteobject/http/HTTPRemoteObjectFactory.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/http/HTTPRemoteObjectFactory.java
++++ src/Core/org/objectweb/proactive/core/remoteobject/http/HTTPRemoteObjectFactory.java
+@@ -113,7 +113,7 @@
+             url = URI.create(HTTPTransportServlet.get().getURL() + url.toString());
+         }
+ 
+-        HTTPRegistry.getInstance().bind(url.toString(), ro, replacePrevious); // Can throw a ProActiveException
++        HTTPRegistry.getInstance().bind(URIBuilder.getNameFromURI(url), ro, replacePrevious); // Can throw a ProActiveException
+ 
+         HttpRemoteObjectImpl rro = new HttpRemoteObjectImpl(ro, url);
+ 
+@@ -129,7 +129,7 @@
+      *            the urn under which the active object has been registered
+      */
+     public void unregister(URI urn) throws ProActiveException {
+-        HTTPRegistry.getInstance().unbind(urn.toString());
++        HTTPRegistry.getInstance().unbind(URIBuilder.getNameFromURI(urn));
+     }
+ 
+     /**

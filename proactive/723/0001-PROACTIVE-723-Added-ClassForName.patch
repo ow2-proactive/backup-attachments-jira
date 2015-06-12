@@ -1,0 +1,1213 @@
+From 5afdcdbf62563437bf9c6ce4ea22d70d2686a1e3 Mon Sep 17 00:00:00 2001
+From: cmathieu <clement.mathieu@activeeon.com>
+Date: Fri, 7 Aug 2009 17:27:20 +0200
+Subject: [PATCH] PROACTIVE-723: Added ClassForName
+
+Class.forName() must not be used in ProActive. See the bug report for
+more details.
+---
+ .../objectweb/proactive/api/PAActiveObject.java    |    5 +-
+ .../proactive/core/component/Fractive.java         |   12 ++-
+ .../collectiveitfs/GatherRequestsQueues.java       |   11 ++-
+ .../controller/MembraneControllerImpl.java         |    5 +-
+ .../controller/MulticastControllerImpl.java        |   12 ++-
+ .../controller/ProActiveBindingControllerImpl.java |    7 +-
+ .../ProActiveLifeCycleControllerImpl.java          |    4 +-
+ .../component/gen/GatherInterfaceGenerator.java    |    3 +-
+ .../gen/RepresentativeInterfaceClassGenerator.java |    6 +-
+ .../proactive/core/component/gen/Utils.java        |    3 +-
+ .../group/ProxyForComponentInterfaceGroup.java     |    3 +-
+ .../component/identity/ProActiveComponentImpl.java |   12 ++--
+ .../ProActiveComponentRepresentativeImpl.java      |   19 +++--
+ .../component/type/ProActiveInterfaceTypeImpl.java |    9 ++-
+ .../descriptor/data/ProActiveDescriptorImpl.java   |    3 +-
+ .../legacyparser/TechnicalServicesHandler.java     |    3 +-
+ .../descriptor/parser/JaxpDescriptorParser.java    |    3 +-
+ .../core/exceptions/ExceptionThrower.java          |    4 +-
+ .../proactive/core/httpserver/HTTPServer.java      |    3 +-
+ .../core/mop/JavassistByteCodeStubBuilder.java     |   21 ++++--
+ src/Core/org/objectweb/proactive/core/mop/MOP.java |   11 ++--
+ .../proactive/core/mop/MOPClassLoader.java         |   10 ++-
+ .../objectweb/proactive/core/mop/MethodCall.java   |    3 +-
+ .../objectweb/proactive/core/node/StartNode.java   |    3 +-
+ .../core/remoteobject/RemoteObjectImpl.java        |    7 +-
+ .../core/runtime/ProActiveRuntimeImpl.java         |    5 +-
+ .../proactive/core/util/ClassForName.java          |   70 ++++++++++++++++++++
+ .../proactive/core/util/NonFunctionalServices.java |    6 +-
+ .../core/util/converter/ByteToObjectConverter.java |    7 +-
+ .../core/util/converter/ObjectToByteConverter.java |    7 +-
+ .../jmx/remote/management/mbean/BundleInfo.java    |    3 +-
+ .../management/utils/MethodRepresentation.java     |    4 +-
+ .../proactive/examples/nbody/common/Start.java     |    6 +-
+ .../GCMApplication/TechnicalServicesFactory.java   |    3 +-
+ .../proactive/extensions/timitspmd/TimIt.java      |    3 +-
+ .../timitspmd/util/charts/Utilities.java           |    7 +-
+ 36 files changed, 215 insertions(+), 88 deletions(-)
+ create mode 100644 src/Core/org/objectweb/proactive/core/util/ClassForName.java
+
+diff --git a/src/Core/org/objectweb/proactive/api/PAActiveObject.java b/src/Core/org/objectweb/proactive/api/PAActiveObject.java
+index f81f962..1a2ee5f 100644
+--- a/src/Core/org/objectweb/proactive/api/PAActiveObject.java
++++ b/src/Core/org/objectweb/proactive/api/PAActiveObject.java
+@@ -72,6 +72,7 @@ import org.objectweb.proactive.core.remoteobject.RemoteObjectHelper;
+ import org.objectweb.proactive.core.remoteobject.exception.UnknownProtocolException;
+ import org.objectweb.proactive.core.security.ProActiveSecurityManager;
+ import org.objectweb.proactive.core.security.SecurityConstants.EntityType;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.NonFunctionalServices;
+ import org.objectweb.proactive.core.util.ProcessForAoCreation;
+ import org.objectweb.proactive.core.util.log.Loggers;
+@@ -336,7 +337,7 @@ public class PAActiveObject {
+ 
+         try {
+             // PROACTIVE-277
+-            Class activatedClass = Class.forName(classname);
++            Class activatedClass = ClassForName.loadFromCurrentThenCtx(classname);
+             if (activatedClass.isMemberClass() && !Modifier.isStatic(activatedClass.getModifiers())) {
+                 // the activated class is an internal member class (not static, i.e. not nested top level).
+                 throw new ActiveObjectCreationException(
+@@ -445,7 +446,7 @@ public class PAActiveObject {
+             e1.printStackTrace();
+         }
+ 
+-        Class<?> classForResult = Class.forName(className);
++        Class<?> classForResult = ClassForName.loadFromCurrentThenCtx(className);
+         return result.toArray((Object[]) Array.newInstance(classForResult, result.size()));
+     }
+ 
+diff --git a/src/Core/org/objectweb/proactive/core/component/Fractive.java b/src/Core/org/objectweb/proactive/core/component/Fractive.java
+index 6c04d2d..9fbfed0 100644
+--- a/src/Core/org/objectweb/proactive/core/component/Fractive.java
++++ b/src/Core/org/objectweb/proactive/core/component/Fractive.java
+@@ -88,6 +88,7 @@ import org.objectweb.proactive.core.node.Node;
+ import org.objectweb.proactive.core.node.NodeException;
+ import org.objectweb.proactive.core.remoteobject.RemoteObject;
+ import org.objectweb.proactive.core.remoteobject.RemoteObjectHelper;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -326,7 +327,8 @@ public class Fractive implements ProActiveGenericFactory, Component, Factory {
+                     if (contentDesc == null) {
+                         return newFcInstance(type, new ControllerDescription(null, Constants.COMPOSITE), null);
+                     } else if ((contentDesc instanceof String) &&
+-                        (AttributeController.class.isAssignableFrom(Class.forName((String) contentDesc)))) {
++                        (AttributeController.class.isAssignableFrom(ClassForName
++                                .loadFromCurrentThenCtx((String) contentDesc)))) {
+                         return newFcInstance(type, new ControllerDescription(null, Constants.COMPOSITE),
+                                 new ContentDescription((String) contentDesc));
+                     }
+@@ -380,7 +382,8 @@ public class Fractive implements ProActiveGenericFactory, Component, Factory {
+                     if (contentDesc == null) {
+                         return newFcInstance(type, new ControllerDescription(null, Constants.COMPOSITE), null);
+                     } else if ((contentDesc instanceof String) &&
+-                        (AttributeController.class.isAssignableFrom(Class.forName((String) contentDesc)))) {
++                        (AttributeController.class.isAssignableFrom(ClassForName
++                                .loadFromCurrentThenCtx((String) contentDesc)))) {
+                         return newFcInstance(type, new ControllerDescription(null, Constants.COMPOSITE),
+                                 new ContentDescription((String) contentDesc));
+                     }
+@@ -865,7 +868,7 @@ public class Fractive implements ProActiveGenericFactory, Component, Factory {
+         } else {
+             Class<?> contentClass;
+             try {
+-                contentClass = Class.forName(contentDesc.getClassName());
++                contentClass = ClassForName.loadFromCurrentThenCtx(contentDesc.getClassName());
+             } catch (ClassNotFoundException e) {
+                 InstantiationException ie = new InstantiationException(
+                     "Cannot find interface defined in component content : " + e.getMessage());
+@@ -885,7 +888,8 @@ public class Fractive implements ProActiveGenericFactory, Component, Factory {
+                     if (!itfType.isFcClientItf() && !itfType.isFcOptionalItf() &&
+                         !Utils.isControllerInterfaceName(itfType.getFcItfName())) {
+                         try {
+-                            if (!Class.forName(itfType.getFcItfSignature()).isAssignableFrom(contentClass)) {
++                            if (!ClassForName.loadFromCurrentThenCtx(itfType.getFcItfSignature())
++                                    .isAssignableFrom(contentClass)) {
+                                 throw new InstantiationException(
+                                     "The provided content class does not implement the " +
+                                         itfType.getFcItfName() + " (" + itfType.getFcItfSignature() +
+diff --git a/src/Core/org/objectweb/proactive/core/component/collectiveitfs/GatherRequestsQueues.java b/src/Core/org/objectweb/proactive/core/component/collectiveitfs/GatherRequestsQueues.java
+index 11f0b6b..3e3a953 100644
+--- a/src/Core/org/objectweb/proactive/core/component/collectiveitfs/GatherRequestsQueues.java
++++ b/src/Core/org/objectweb/proactive/core/component/collectiveitfs/GatherRequestsQueues.java
+@@ -60,6 +60,7 @@ import org.objectweb.proactive.core.component.type.ProActiveInterfaceType;
+ import org.objectweb.proactive.core.component.type.ProActiveTypeFactory;
+ import org.objectweb.proactive.core.mop.MethodCall;
+ import org.objectweb.proactive.core.node.Node;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.SerializableMethod;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+@@ -140,8 +141,9 @@ public class GatherRequestsQueues implements Serializable {
+         Method reifiedMethod = r.getMethodCall().getReifiedMethod();
+         Method itfTypeMethod;
+         try {
+-            itfTypeMethod = GatherBindingChecker.searchMatchingMethod(reifiedMethod, Class.forName(
+-                    getItfType(serverItfName).getFcItfSignature()).getMethods(), false);
++            itfTypeMethod = GatherBindingChecker.searchMatchingMethod(reifiedMethod, ClassForName
++                    .loadFromCurrentThenCtx(getItfType(serverItfName).getFcItfSignature()).getMethods(),
++                    false);
+         } catch (Exception e1) {
+             e1.printStackTrace();
+             throw new ServeException("problem when analysing gather request", e1);
+@@ -238,8 +240,9 @@ public class GatherRequestsQueues implements Serializable {
+                     gatherMethodParamTypes[i] = List.class;
+                 }
+ 
+-                Class<?> gatherItfClass = Class.forName(((ProActiveInterfaceType) ((ProActiveInterface) owner
+-                        .getFcInterface(serverItfName)).getFcItfType()).getFcItfSignature());
++                Class<?> gatherItfClass = ClassForName
++                        .loadFromCurrentThenCtx(((ProActiveInterfaceType) ((ProActiveInterface) owner
++                                .getFcInterface(serverItfName)).getFcItfType()).getFcItfSignature());
+ 
+                 Method gatherMethod = gatherItfClass
+                         .getMethod(clientMethod.getName(), gatherMethodParamTypes);
+diff --git a/src/Core/org/objectweb/proactive/core/component/controller/MembraneControllerImpl.java b/src/Core/org/objectweb/proactive/core/component/controller/MembraneControllerImpl.java
+index 61ff110..5492c84 100644
+--- a/src/Core/org/objectweb/proactive/core/component/controller/MembraneControllerImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/controller/MembraneControllerImpl.java
+@@ -65,6 +65,7 @@ import org.objectweb.proactive.core.component.representative.ProActiveComponentR
+ import org.objectweb.proactive.core.component.representative.ProActiveNFComponentRepresentative;
+ import org.objectweb.proactive.core.component.type.ProActiveInterfaceType;
+ import org.objectweb.proactive.core.component.type.ProActiveTypeFactoryImpl;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -103,8 +104,8 @@ public class MembraneControllerImpl extends AbstractProActiveController implemen
+     private void checkCompatibility(ProActiveInterfaceType client, ProActiveInterfaceType server)
+             throws IllegalBindingException {
+         try {
+-            Class<?> cl = Class.forName(client.getFcItfSignature());
+-            Class<?> sr = Class.forName(server.getFcItfSignature());
++            Class<?> cl = ClassForName.loadFromCurrentThenCtx(client.getFcItfSignature());
++            Class<?> sr = ClassForName.loadFromCurrentThenCtx(server.getFcItfSignature());
+             if (!cl.isAssignableFrom(sr)) {
+                 throw new IllegalBindingException("Signatures of interfaces don't correspond (" +
+                     client.getFcItfSignature() + " and " + server.getFcItfSignature() + ")");
+diff --git a/src/Core/org/objectweb/proactive/core/component/controller/MulticastControllerImpl.java b/src/Core/org/objectweb/proactive/core/component/controller/MulticastControllerImpl.java
+index bacf402..3aa5647 100644
+--- a/src/Core/org/objectweb/proactive/core/component/controller/MulticastControllerImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/controller/MulticastControllerImpl.java
+@@ -69,6 +69,7 @@ import org.objectweb.proactive.core.mop.ClassNotReifiableException;
+ import org.objectweb.proactive.core.mop.MethodCall;
+ import org.objectweb.proactive.core.mop.Proxy;
+ import org.objectweb.proactive.core.mop.StubObject;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.SerializableMethod;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+@@ -134,8 +135,10 @@ public class MulticastControllerImpl extends AbstractCollectiveInterfaceControll
+             if (!matchingMethodsForThisClientItf.containsKey(serverSideItfType.getFcItfSignature())) {
+ 
+                 Class<?> clientSideItfClass;
+-                clientSideItfClass = Class.forName(clientSideItfType.getFcItfSignature());
+-                Class<?> serverSideItfClass = Class.forName(serverSideItfType.getFcItfSignature());
++                clientSideItfClass = ClassForName.loadFromCurrentThenCtx(clientSideItfType
++                        .getFcItfSignature());
++                Class<?> serverSideItfClass = ClassForName.loadFromCurrentThenCtx(serverSideItfType
++                        .getFcItfSignature());
+ 
+                 Method[] clientSideItfMethods = clientSideItfClass.getMethods();
+                 Method[] serverSideItfMethods = serverSideItfClass.getMethods();
+@@ -297,8 +300,9 @@ public class MulticastControllerImpl extends AbstractCollectiveInterfaceControll
+         Method matchingMethodInClientInterface; // client itf as well as parent interfaces
+ 
+         try {
+-            matchingMethodInClientInterface = Class.forName(itfType.getFcItfSignature()).getMethod(
+-                    mc.getReifiedMethod().getName(), mc.getReifiedMethod().getParameterTypes());
++            matchingMethodInClientInterface = ClassForName
++                    .loadFromCurrentThenCtx(itfType.getFcItfSignature()).getMethod(
++                            mc.getReifiedMethod().getName(), mc.getReifiedMethod().getParameterTypes());
+         } catch (Exception e) {
+             e.printStackTrace();
+             throw new ParameterDispatchException(e.fillInStackTrace());
+diff --git a/src/Core/org/objectweb/proactive/core/component/controller/ProActiveBindingControllerImpl.java b/src/Core/org/objectweb/proactive/core/component/controller/ProActiveBindingControllerImpl.java
+index 9c28c75..a93f4e0 100644
+--- a/src/Core/org/objectweb/proactive/core/component/controller/ProActiveBindingControllerImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/controller/ProActiveBindingControllerImpl.java
+@@ -68,6 +68,7 @@ import org.objectweb.proactive.core.component.representative.ItfID;
+ import org.objectweb.proactive.core.component.type.ProActiveInterfaceType;
+ import org.objectweb.proactive.core.component.type.ProActiveInterfaceTypeImpl;
+ import org.objectweb.proactive.core.component.type.ProActiveTypeFactoryImpl;
++import org.objectweb.proactive.core.util.ClassForName;
+ 
+ 
+ /**
+@@ -163,8 +164,8 @@ public class ProActiveBindingControllerImpl extends AbstractProActiveController
+             InterfaceType cType = ((ComponentType) owner.getFcType()).getFcInterfaceType(clientItfName);
+ 
+             try {
+-                Class<?> s = Class.forName(sType.getFcItfSignature());
+-                Class<?> c = Class.forName(cType.getFcItfSignature());
++                Class<?> s = ClassForName.loadFromCurrentThenCtx(sType.getFcItfSignature());
++                Class<?> c = ClassForName.loadFromCurrentThenCtx(cType.getFcItfSignature());
+                 if (!c.isAssignableFrom(s)) {
+                     throw new IllegalBindingException("The server interface type " + s.getName() +
+                         " is not a subtype of the client interface type " + c.getName());
+@@ -407,7 +408,7 @@ public class ProActiveBindingControllerImpl extends AbstractProActiveController
+                 if (clientItfName.equals(cItfTypes[i].getFcItfName()) ||
+                     (cItfTypes[i].isFcCollectionItf() && clientItfName
+                             .startsWith(cItfTypes[i].getFcItfName()))) {
+-                    clientItfClass = Class.forName(cItfTypes[i].getFcItfSignature());
++                    clientItfClass = ClassForName.loadFromCurrentThenCtx(cItfTypes[i].getFcItfSignature());
+                 }
+             }
+             if (clientItfClass == null) {
+diff --git a/src/Core/org/objectweb/proactive/core/component/controller/ProActiveLifeCycleControllerImpl.java b/src/Core/org/objectweb/proactive/core/component/controller/ProActiveLifeCycleControllerImpl.java
+index 247c723..d8ea884 100644
+--- a/src/Core/org/objectweb/proactive/core/component/controller/ProActiveLifeCycleControllerImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/controller/ProActiveLifeCycleControllerImpl.java
+@@ -52,6 +52,7 @@ import org.objectweb.proactive.core.component.group.ProxyForComponentInterfaceGr
+ import org.objectweb.proactive.core.component.type.ProActiveInterfaceType;
+ import org.objectweb.proactive.core.component.type.ProActiveTypeFactory;
+ import org.objectweb.proactive.core.component.type.ProActiveTypeFactoryImpl;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -103,7 +104,8 @@ public class ProActiveLifeCycleControllerImpl extends AbstractProActiveControlle
+             for (int i = 0; i < itfTypes.length; i++) {
+                 if ((itfTypes[i].isFcClientItf() && !itfTypes[i].isFcOptionalItf()) ||
+                     (isComposite() && !itfTypes[i].isFcClientItf() && !itfTypes[i].isFcOptionalItf() && !AttributeController.class
+-                            .isAssignableFrom(Class.forName(itfTypes[i].getFcItfSignature())))) {
++                            .isAssignableFrom(ClassForName.loadFromCurrentThenCtx(itfTypes[i]
++                                    .getFcItfSignature())))) {
+                     if (itfTypes[i].isFcCollectionItf()) {
+                         // look for collection members
+                         Object[] itfs = owner.getFcInterfaces();
+diff --git a/src/Core/org/objectweb/proactive/core/component/gen/GatherInterfaceGenerator.java b/src/Core/org/objectweb/proactive/core/component/gen/GatherInterfaceGenerator.java
+index 16f8fd6..80cd3ab 100644
+--- a/src/Core/org/objectweb/proactive/core/component/gen/GatherInterfaceGenerator.java
++++ b/src/Core/org/objectweb/proactive/core/component/gen/GatherInterfaceGenerator.java
+@@ -44,6 +44,7 @@ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException;
+ import org.objectweb.proactive.core.component.type.ProActiveInterfaceType;
+ import org.objectweb.proactive.core.util.ClassDataCache;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -86,7 +87,7 @@ public class GatherInterfaceGenerator {
+             return ClassDataCache.instance().getClassData(gatherProxyItfName);
+         }
+         try {
+-            Class<?> serverItfClass = Class.forName(Utils
++            Class<?> serverItfClass = ClassForName.loadFromCurrentThenCtx(Utils
+                     .getInterfaceSignatureFromGathercastProxyClassName(gatherProxyItfName));
+             CtClass repGatherItfClass = null;
+             try {
+diff --git a/src/Core/org/objectweb/proactive/core/component/gen/RepresentativeInterfaceClassGenerator.java b/src/Core/org/objectweb/proactive/core/component/gen/RepresentativeInterfaceClassGenerator.java
+index e82a6e8..dfd537b 100644
+--- a/src/Core/org/objectweb/proactive/core/component/gen/RepresentativeInterfaceClassGenerator.java
++++ b/src/Core/org/objectweb/proactive/core/component/gen/RepresentativeInterfaceClassGenerator.java
+@@ -64,6 +64,7 @@ import org.objectweb.proactive.core.component.type.annotations.multicast.Reduce;
+ import org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder;
+ import org.objectweb.proactive.core.mop.StubObject;
+ import org.objectweb.proactive.core.util.ClassDataCache;
++import org.objectweb.proactive.core.util.ClassForName;
+ 
+ 
+ /**
+@@ -315,7 +316,7 @@ public class RepresentativeInterfaceClassGenerator extends AbstractInterfaceClas
+             ProActiveInterfaceType itfType) throws NotFoundException, CannotCompileException,
+             ClassNotFoundException, SecurityException, NoSuchMethodException {
+ 
+-        Class<?> itfClass = Class.forName(itfType.getFcItfSignature());
++        Class<?> itfClass = ClassForName.loadFromCurrentThenCtx(itfType.getFcItfSignature());
+ 
+         for (int i = 0; i < reifiedMethods.length; i++) {
+             CtClass[] paramTypes = reifiedMethods[i].getParameterTypes();
+@@ -343,7 +344,8 @@ public class RepresentativeInterfaceClassGenerator extends AbstractInterfaceClas
+                     CtClass[] parametersCtTypes = reifiedMethods[i].getParameterTypes();
+                     Class<?>[] parametersTypes = new Class[parametersCtTypes.length];
+                     for (int j = 0; j < parametersCtTypes.length; j++) {
+-                        parametersTypes[j] = Class.forName(parametersCtTypes[j].getName());
++                        parametersTypes[j] = ClassForName.loadFromCurrentThenCtx(parametersCtTypes[j]
++                                .getName());
+                     }
+                     Method itfMethod = itfClass.getMethod(reifiedMethods[i].getName(), parametersTypes);
+                     Reduce reduceAnnotation = itfMethod.getAnnotation(Reduce.class);
+diff --git a/src/Core/org/objectweb/proactive/core/component/gen/Utils.java b/src/Core/org/objectweb/proactive/core/component/gen/Utils.java
+index 067f451..954baf0 100644
+--- a/src/Core/org/objectweb/proactive/core/component/gen/Utils.java
++++ b/src/Core/org/objectweb/proactive/core/component/gen/Utils.java
+@@ -47,6 +47,7 @@ import org.objectweb.proactive.core.ProActiveRuntimeException;
+ import org.objectweb.proactive.core.component.representative.ItfID;
+ import org.objectweb.proactive.core.component.type.ProActiveInterfaceType;
+ import org.objectweb.proactive.core.util.ClassDataCache;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -177,7 +178,7 @@ public class Utils {
+             throws ClassNotFoundException, SecurityException, NoSuchMethodException,
+             IllegalArgumentException, IllegalAccessException, InvocationTargetException {
+         // The following code invokes defineClass on the current thread classloader by reflection
+-        Class<?> clc = Class.forName("java.lang.ClassLoader");
++        Class<?> clc = ClassForName.loadFromCurrentThenCtx("java.lang.ClassLoader");
+         Class<?>[] argumentTypes = new Class<?>[4];
+         argumentTypes[0] = className.getClass();
+         argumentTypes[1] = bytes.getClass();
+diff --git a/src/Core/org/objectweb/proactive/core/component/group/ProxyForComponentInterfaceGroup.java b/src/Core/org/objectweb/proactive/core/component/group/ProxyForComponentInterfaceGroup.java
+index 8d8e99b..e8f85cc 100644
+--- a/src/Core/org/objectweb/proactive/core/component/group/ProxyForComponentInterfaceGroup.java
++++ b/src/Core/org/objectweb/proactive/core/component/group/ProxyForComponentInterfaceGroup.java
+@@ -61,6 +61,7 @@ import org.objectweb.proactive.core.mop.ConstructionOfReifiedObjectFailedExcepti
+ import org.objectweb.proactive.core.mop.ConstructorCall;
+ import org.objectweb.proactive.core.mop.MethodCall;
+ import org.objectweb.proactive.core.mop.StubObject;
++import org.objectweb.proactive.core.util.ClassForName;
+ 
+ 
+ /**
+@@ -307,7 +308,7 @@ public class ProxyForComponentInterfaceGroup<E> extends ProxyForGroup<E> {
+     public void setInterfaceType(ProActiveInterfaceType interfaceType) {
+         this.interfaceType = interfaceType;
+         try {
+-            itfSignatureClass = Class.forName(interfaceType.getFcItfSignature());
++            itfSignatureClass = ClassForName.loadFromCurrentThenCtx(interfaceType.getFcItfSignature());
+         } catch (ClassNotFoundException e) {
+             throw new ProActiveRuntimeException("cannot find Java interface " +
+                 interfaceType.getFcItfSignature() + " defined in interface named " +
+diff --git a/src/Core/org/objectweb/proactive/core/component/identity/ProActiveComponentImpl.java b/src/Core/org/objectweb/proactive/core/component/identity/ProActiveComponentImpl.java
+index b47422f..8418aa3 100644
+--- a/src/Core/org/objectweb/proactive/core/component/identity/ProActiveComponentImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/identity/ProActiveComponentImpl.java
+@@ -82,6 +82,7 @@ import org.objectweb.proactive.core.component.group.ProActiveComponentGroup;
+ import org.objectweb.proactive.core.mop.MOP;
+ import org.objectweb.proactive.core.mop.StubObject;
+ import org.objectweb.proactive.core.node.Node;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -203,7 +204,7 @@ public class ProActiveComponentImpl implements ProActiveComponent, Serializable
+             addMandatoryControllers(nftype);
+             for (int i = 0; i < interface_types.length; i++) {
+                 /*Component parameters and name controller have to be managed when the controller is actually added*/
+-                controllerItf = Class.forName(interface_types[i].getFcItfSignature());
++                controllerItf = ClassForName.loadFromCurrentThenCtx(interface_types[i].getFcItfSignature());
+ 
+                 if (!specialCasesForNfType(controllerItf, isPrimitive, interface_types[i],
+                         this.componentParameters, nftype)) {
+@@ -394,14 +395,15 @@ public class ProActiveComponentImpl implements ProActiveComponent, Serializable
+                 if (null == controllerItfName) {
+                     throw new Exception("You must specify the java interface of a controller.");
+                 }
+-                Class<?> controllerItf = Class.forName(controllerItfName);
++                Class<?> controllerItf = ClassForName.loadFromCurrentThenCtx(controllerItfName);
+                 if (null == controllers.get(controllerItf.getName())) {
+                     throw new Exception(
+                         "You must specify the java implementation for the controller describe by the interface " +
+                             controllerItfName + ".");
+                 }
+ 
+-                controllerClass = Class.forName((String) controllers.get(controllerItf.getName()));
++                controllerClass = ClassForName.loadFromCurrentThenCtx((String) controllers.get(controllerItf
++                        .getName()));
+ 
+                 //create Binding and Content controllers only if necessary
+                 if (BindingController.class.isAssignableFrom(controllerClass) &&
+@@ -672,10 +674,10 @@ public class ProActiveComponentImpl implements ProActiveComponent, Serializable
+         if (itf_ref == null) {
+             throw new NoSuchInterfaceException("The requested interface :" + itfName + " doesn't exist");
+         } else {
+-            Class<?> controllerClass = Class.forName((String) classToCreate);
++            Class<?> controllerClass = ClassForName.loadFromCurrentThenCtx((String) classToCreate);
+ 
+             ProActiveInterfaceType itf_type = (ProActiveInterfaceType) itf_ref.getFcItfType();
+-            Class<?> interfaceClass = Class.forName(itf_type.getFcItfSignature());
++            Class<?> interfaceClass = ClassForName.loadFromCurrentThenCtx(itf_type.getFcItfSignature());
+             if (interfaceClass.isAssignableFrom(controllerClass)) { //Check that the class implements the specified interface
+                 ProActiveInterface controller = createController(itf_type, controllerClass);
+ 
+diff --git a/src/Core/org/objectweb/proactive/core/component/representative/ProActiveComponentRepresentativeImpl.java b/src/Core/org/objectweb/proactive/core/component/representative/ProActiveComponentRepresentativeImpl.java
+index 3f765d9..fb9ce79 100644
+--- a/src/Core/org/objectweb/proactive/core/component/representative/ProActiveComponentRepresentativeImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/representative/ProActiveComponentRepresentativeImpl.java
+@@ -72,6 +72,7 @@ import org.objectweb.proactive.core.group.ProxyForGroup;
+ import org.objectweb.proactive.core.mop.MethodCall;
+ import org.objectweb.proactive.core.mop.Proxy;
+ import org.objectweb.proactive.core.mop.StubObject;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -218,7 +219,7 @@ public class ProActiveComponentRepresentativeImpl implements ProActiveComponentR
+         try {
+             addMandatoryControllers();
+             for (int j = 0; j < interface_types.length; j++) {
+-                controllerItf = Class.forName(interface_types[j].getFcItfSignature());
++                controllerItf = ClassForName.loadFromCurrentThenCtx(interface_types[j].getFcItfSignature());
+                 if (!specialCasesForNfType(controllerItf, params.getHierarchicalType().equals(
+                         Constants.PRIMITIVE), interface_types[j], params)) {
+                     if (!interface_types[j].isFcCollectionItf()) {
+@@ -300,8 +301,9 @@ public class ProActiveComponentRepresentativeImpl implements ProActiveComponentR
+         while (iteratorOnControllers.hasNext()) {
+             String controllerItfName = iteratorOnControllers.next();
+             try {
+-                controllerItf = Class.forName(controllerItfName);
+-                controllerClass = Class.forName(controllersConfiguration.get(controllerItf.getName()));
++                controllerItf = ClassForName.loadFromCurrentThenCtx(controllerItfName);
++                controllerClass = ClassForName.loadFromCurrentThenCtx(controllersConfiguration
++                        .get(controllerItf.getName()));
+                 Constructor<?> controllerClassConstructor = controllerClass
+                         .getConstructor(new Class<?>[] { Component.class });
+                 currentController = (AbstractProActiveController) controllerClassConstructor
+@@ -355,8 +357,9 @@ public class ProActiveComponentRepresentativeImpl implements ProActiveComponentR
+     protected Object reifyCall(String className, String methodName, Class<?>[] parameterTypes,
+             Object[] effectiveParameters, short priority) {
+         try {
+-            return proxy.reify(MethodCall.getComponentMethodCall(Class.forName(className).getDeclaredMethod(
+-                    methodName, parameterTypes), effectiveParameters, null, (String) null, null, priority));
++            return proxy.reify(MethodCall.getComponentMethodCall(ClassForName.loadFromCurrentThenCtx(
++                    className).getDeclaredMethod(methodName, parameterTypes), effectiveParameters, null,
++                    (String) null, null, priority));
+ 
+             // functional interface name is null
+         } catch (NoSuchMethodException e) {
+@@ -489,9 +492,9 @@ public class ProActiveComponentRepresentativeImpl implements ProActiveComponentR
+         // reified as a standard invocation (not a component one)
+         Object result;
+         try {
+-            result = proxy.reify(MethodCall.getMethodCall(Class.forName(Object.class.getName())
+-                    .getDeclaredMethod("hashCode", new Class<?>[] {}), new Object[] {},
+-                    (Map<TypeVariable<?>, Class<?>>) null));
++            result = proxy.reify(MethodCall.getMethodCall(ClassForName.loadFromCurrentThenCtx(
++                    Object.class.getName()).getDeclaredMethod("hashCode", new Class<?>[] {}),
++                    new Object[] {}, (Map<TypeVariable<?>, Class<?>>) null));
+             return ((Integer) result).intValue();
+         } catch (SecurityException e) {
+             throw new ProActiveRuntimeException(e.toString());
+diff --git a/src/Core/org/objectweb/proactive/core/component/type/ProActiveInterfaceTypeImpl.java b/src/Core/org/objectweb/proactive/core/component/type/ProActiveInterfaceTypeImpl.java
+index 1c8c4ea..202e9eb 100644
+--- a/src/Core/org/objectweb/proactive/core/component/type/ProActiveInterfaceTypeImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/type/ProActiveInterfaceTypeImpl.java
+@@ -41,6 +41,7 @@ import org.objectweb.fractal.api.factory.InstantiationException;
+ import org.objectweb.proactive.core.component.StreamInterface;
+ import org.objectweb.proactive.core.component.type.annotations.gathercast.MethodSynchro;
+ import org.objectweb.proactive.core.component.type.annotations.multicast.Reduce;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -115,7 +116,7 @@ public class ProActiveInterfaceTypeImpl implements ProActiveInterfaceType, Seria
+ 
+     private boolean checkIsStream(String signature) throws InstantiationException {
+         try {
+-            Class<?> c = Class.forName(signature);
++            Class<?> c = ClassForName.loadFromCurrentThenCtx(signature);
+             return StreamInterface.class.isAssignableFrom(c);
+         } catch (ClassNotFoundException e) {
+             InstantiationException ie = new InstantiationException(
+@@ -133,7 +134,7 @@ public class ProActiveInterfaceTypeImpl implements ProActiveInterfaceType, Seria
+     private void checkMethodsStream(String signature) throws InstantiationException {
+         try {
+             if (isStream) {
+-                Class<?> c = Class.forName(signature);
++                Class<?> c = ClassForName.loadFromCurrentThenCtx(signature);
+                 Method[] methods = c.getMethods();
+                 for (Method m : methods) {
+                     if (!(Void.TYPE.equals(m.getReturnType()))) {
+@@ -153,7 +154,7 @@ public class ProActiveInterfaceTypeImpl implements ProActiveInterfaceType, Seria
+     private void checkMethodsCardinality(String signature, String cardinality) throws InstantiationException {
+         try {
+             if (ProActiveTypeFactory.GATHER_CARDINALITY.equals(cardinality)) {
+-                Class<?> c = Class.forName(signature);
++                Class<?> c = ClassForName.loadFromCurrentThenCtx(signature);
+                 Method[] methods = c.getMethods();
+                 for (Method m : methods) {
+                     MethodSynchro sc = m.getAnnotation(MethodSynchro.class);
+@@ -168,7 +169,7 @@ public class ProActiveInterfaceTypeImpl implements ProActiveInterfaceType, Seria
+                     }
+                 }
+             } else if (ProActiveTypeFactory.MULTICAST_CARDINALITY.equals(cardinality)) {
+-                Class<?> c = Class.forName(signature);
++                Class<?> c = ClassForName.loadFromCurrentThenCtx(signature);
+                 Method[] methods = c.getMethods();
+                 for (Method m : methods) {
+                     if (m.getAnnotation(Reduce.class) == null) {
+diff --git a/src/Core/org/objectweb/proactive/core/descriptor/data/ProActiveDescriptorImpl.java b/src/Core/org/objectweb/proactive/core/descriptor/data/ProActiveDescriptorImpl.java
+index 81bbfa6..30d5747 100644
+--- a/src/Core/org/objectweb/proactive/core/descriptor/data/ProActiveDescriptorImpl.java
++++ b/src/Core/org/objectweb/proactive/core/descriptor/data/ProActiveDescriptorImpl.java
+@@ -58,6 +58,7 @@ import org.objectweb.proactive.core.security.ProActiveSecurityDescriptorHandler;
+ import org.objectweb.proactive.core.security.ProActiveSecurityManager;
+ import org.objectweb.proactive.core.security.SecurityConstants.EntityType;
+ import org.objectweb.proactive.core.security.exceptions.InvalidPolicyFile;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.core.xml.VariableContractImpl;
+@@ -405,7 +406,7 @@ public class ProActiveDescriptorImpl implements ProActiveDescriptorInternal {
+ 
+     public ExternalProcess createProcess(String processClassName) throws ProActiveException {
+         try {
+-            Class<?> processClass = Class.forName(processClassName);
++            Class<?> processClass = ClassForName.loadFromCurrent(processClassName);
+             ExternalProcess process = (ExternalProcess) processClass.newInstance();
+ 
+             return process;
+diff --git a/src/Core/org/objectweb/proactive/core/descriptor/legacyparser/TechnicalServicesHandler.java b/src/Core/org/objectweb/proactive/core/descriptor/legacyparser/TechnicalServicesHandler.java
+index 42cf687..343b189 100644
+--- a/src/Core/org/objectweb/proactive/core/descriptor/legacyparser/TechnicalServicesHandler.java
++++ b/src/Core/org/objectweb/proactive/core/descriptor/legacyparser/TechnicalServicesHandler.java
+@@ -37,6 +37,7 @@ import java.util.Map;
+ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.descriptor.data.ProActiveDescriptorInternal;
+ import org.objectweb.proactive.core.descriptor.services.TechnicalServiceXmlType;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.core.xml.handler.BasicUnmarshaller;
+@@ -89,7 +90,7 @@ public class TechnicalServicesHandler extends PassiveCompositeUnmarshaller imple
+         public void startContextElement(String name, Attributes attributes) throws SAXException {
+             this.technicalService.setId(attributes.getValue("id"));
+             try {
+-                this.technicalService.setType(Class.forName(attributes.getValue("class")));
++                this.technicalService.setType(ClassForName.loadFromCurrent(attributes.getValue("class")));
+             } catch (ClassNotFoundException e) {
+                 throw new SAXException("Technical Service not found", e);
+             }
+diff --git a/src/Core/org/objectweb/proactive/core/descriptor/parser/JaxpDescriptorParser.java b/src/Core/org/objectweb/proactive/core/descriptor/parser/JaxpDescriptorParser.java
+index e3863a2..5073f4e 100644
+--- a/src/Core/org/objectweb/proactive/core/descriptor/parser/JaxpDescriptorParser.java
++++ b/src/Core/org/objectweb/proactive/core/descriptor/parser/JaxpDescriptorParser.java
+@@ -88,6 +88,7 @@ import org.objectweb.proactive.core.process.oar.OARSubProcess;
+ import org.objectweb.proactive.core.process.pbs.PBSSubProcess;
+ import org.objectweb.proactive.core.process.prun.PrunSubProcess;
+ import org.objectweb.proactive.core.process.rsh.maprsh.MapRshProcess;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.OperatingSystem;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+@@ -323,7 +324,7 @@ public class JaxpDescriptorParser implements ProActiveDescriptorConstants {
+             TechnicalServiceXmlType technicalService = new TechnicalServiceXmlType();
+             technicalService.setId(serviceId);
+             try {
+-                technicalService.setType(Class.forName(serviceClass));
++                technicalService.setType(ClassForName.loadFromCurrent(serviceClass));
+             } catch (ClassNotFoundException e) {
+                 throw new SAXException("Technical Service not found", e);
+             }
+diff --git a/src/Core/org/objectweb/proactive/core/exceptions/ExceptionThrower.java b/src/Core/org/objectweb/proactive/core/exceptions/ExceptionThrower.java
+index 7a4d991..bdbd3df 100644
+--- a/src/Core/org/objectweb/proactive/core/exceptions/ExceptionThrower.java
++++ b/src/Core/org/objectweb/proactive/core/exceptions/ExceptionThrower.java
+@@ -31,6 +31,8 @@
+  */
+ package org.objectweb.proactive.core.exceptions;
+ 
++import org.objectweb.proactive.core.util.ClassForName;
++
+ import javassist.ClassPool;
+ import javassist.CtClass;
+ import javassist.CtMethod;
+@@ -76,7 +78,7 @@ public class ExceptionThrower {
+     private static Class<?> loadClass(String className, byte[] b) throws Exception {
+         Class<?> clazz = null;
+         ClassLoader loader = ClassLoader.getSystemClassLoader();
+-        Class<?> cls = Class.forName("java.lang.ClassLoader");
++        Class<?> cls = ClassForName.loadFromCurrent("java.lang.ClassLoader");
+         java.lang.reflect.Method method = cls.getDeclaredMethod("defineClass", new Class<?>[] { String.class,
+                 byte[].class, int.class, int.class });
+ 
+diff --git a/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java b/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java
+index c2ad78b..f770b34 100644
+--- a/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java
++++ b/src/Core/org/objectweb/proactive/core/httpserver/HTTPServer.java
+@@ -42,6 +42,7 @@ import org.mortbay.jetty.servlet.Context;
+ import org.mortbay.jetty.servlet.ServletHolder;
+ import org.mortbay.xml.XmlConfiguration;
+ import org.objectweb.proactive.core.config.PAProperties;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -87,7 +88,7 @@ public class HTTPServer {
+         if (PAProperties.PA_HTTP_JETTY_CONNECTOR.isSet()) {
+             String clName = PAProperties.PA_HTTP_JETTY_CONNECTOR.getValue();
+             try {
+-                final Class<?> cl = Class.forName(clName);
++                final Class<?> cl = ClassForName.loadFromCurrentThenCtx(clName);
+                 final Class<? extends Connector> clConnector = cl.asSubclass(Connector.class);
+                 connector = clConnector.newInstance();
+             } catch (ClassNotFoundException e) {
+diff --git a/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java b/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
+index 60b777d..6c01b4b 100644
+--- a/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
++++ b/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
+@@ -54,6 +54,7 @@ import javassist.NotFoundException;
+ import org.objectweb.proactive.annotation.Cache;
+ import org.objectweb.proactive.annotation.NoReify;
+ import org.objectweb.proactive.annotation.Self;
++import org.objectweb.proactive.core.util.ClassForName;
+ 
+ 
+ /**
+@@ -96,7 +97,7 @@ public class JavassistByteCodeStubBuilder {
+                 // may happen in environments with multiple classloaders: className is not available
+                 // in the initial classpath of javassist's class pool
+                 // ==> try to append classpath of the class corresponding to className
+-                pool.appendClassPath(new ClassClassPath(Class.forName(className)));
++                pool.appendClassPath(new ClassClassPath(ClassForName.loadFromCurrentThenCtx(className)));
+                 superCtClass = pool.get(className);
+             }
+ 
+@@ -126,7 +127,8 @@ public class JavassistByteCodeStubBuilder {
+                 // may happen in environments with multiple classloaders: StubObject is not available
+                 // in the initial classpath of javassist's class pool
+                 // ==> try to append classpath of the class corresponding to StubObject
+-                pool.appendClassPath(new ClassClassPath(Class.forName(StubObject.class.getName())));
++                pool.appendClassPath(new ClassClassPath(ClassForName.loadFromCurrentThenCtx(StubObject.class
++                        .getName())));
+                 ctStubO = pool.get(StubObject.class.getName());
+             }
+             if (!generatedCtClass.subtypeOf(ctStubO)) {
+@@ -273,7 +275,7 @@ public class JavassistByteCodeStubBuilder {
+             // Installs the list of valid reifiedMethods as an instance variable of this object
+             reifiedMethodsWithoutGenerics = validMethods;
+ 
+-            Class realSuperClass = Class.forName(className);
++            Class realSuperClass = ClassForName.loadFromCurrentThenCtx(className);
+             TypeVariable<GenericDeclaration>[] tv = realSuperClass.getTypeParameters();
+             Map<TypeVariable, Class<?>> genericTypesMapping = new HashMap<TypeVariable, Class<?>>();
+             if (genericParameters.length != 0) {
+@@ -484,10 +486,13 @@ public class JavassistByteCodeStubBuilder {
+         classInitializerBody.append("Class[] genericParameters = new Class[" + genericParameters.length +
+             "];\n");
+         for (int i = 0; i < genericParameters.length; i++) {
+-            classInitializerBody.append("genericParameters[" + i + "] = Class.forName(\"" +
++            classInitializerBody.append("genericParameters[" + i +
++                "] = org.objectweb.proactive.core.util.ClassForName.load(\"" +
+                 genericParameters[i].getName() + "\");\n");
+         }
+-        classInitializerBody.append("Class realSuperClass = Class.forName(\"" + superClassName + "\");\n");
++        classInitializerBody
++                .append("Class realSuperClass = org.objectweb.proactive.core.util.ClassForName.load(\"" +
++                    superClassName + "\");\n");
+         classInitializerBody
+                 .append("java.lang.reflect.TypeVariable[] tv = realSuperClass.getTypeParameters();\n");
+         classInitializerBody.append("genericTypesMapping = new java.util.HashMap();\n");
+@@ -508,7 +513,8 @@ public class JavassistByteCodeStubBuilder {
+         Iterator<String> it = classesIndexer.iterator();
+         int index = 0;
+         while (it.hasNext()) {
+-            classInitializerBody.append("classes[" + index + "] = Class.forName(\"" + it.next() + "\");\n");
++            classInitializerBody.append("classes[" + index +
++                "] = org.objectweb.proactive.core.util.ClassForName.load(\"" + it.next() + "\");\n");
+             index++;
+         }
+         for (int i = 0; i < reifiedMethods.length; i++) {
+@@ -519,7 +525,8 @@ public class JavassistByteCodeStubBuilder {
+                     classInitializerBody.append("temp[" + n + "] = " +
+                         getClassTypeInitializer(paramTypes[n], false) + ";\n");
+                 } else {
+-                    classInitializerBody.append("temp[" + n + "] = Class.forName(\"" +
++                    classInitializerBody.append("temp[" + n +
++                        "] = org.objectweb.proactive.core.util.ClassForName.load(\"" +
+                         getClassTypeInitializer(paramTypes[n], false) + "\");\n");
+                 }
+             }
+diff --git a/src/Core/org/objectweb/proactive/core/mop/MOP.java b/src/Core/org/objectweb/proactive/core/mop/MOP.java
+index 507b494..5566108 100644
+--- a/src/Core/org/objectweb/proactive/core/mop/MOP.java
++++ b/src/Core/org/objectweb/proactive/core/mop/MOP.java
+@@ -57,6 +57,7 @@ import org.objectweb.proactive.core.body.UniversalBody;
+ import org.objectweb.proactive.core.body.future.FutureProxy;
+ import org.objectweb.proactive.core.mop.proxy.PAProxy;
+ import org.objectweb.proactive.core.node.Node;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -141,7 +142,7 @@ public abstract class MOP {
+      */
+     public static Class<?> forName(String s) throws java.lang.ClassNotFoundException {
+         try {
+-            return Class.forName(s);
++            return ClassForName.loadFromCurrentThenCtx(s);
+         } catch (ClassNotFoundException e) {
+             //                System.out.println(
+             //                   "MOP forName failed for class " + s + ", looking in table");
+@@ -497,7 +498,7 @@ public abstract class MOP {
+     private static Class<?> createStubClass(String nameOfBaseClass, Class<?>[] genericParameters) {
+         try {
+             // return
+-            // Class.forName(Utils.convertClassNameToStubClassName(nameOfClass),
++            // ClassForName.load(Utils.convertClassNameToStubClassName(nameOfClass),
+             // true, singleton);
+             return singleton.loadClass(Utils.convertClassNameToStubClassName(nameOfBaseClass,
+                     genericParameters));
+@@ -510,7 +511,7 @@ public abstract class MOP {
+ 
+     private static Class<?> createStubClass(String nameOfClass, Class<?>[] genericParameters, ClassLoader cl) {
+         try {
+-            // return Class.forName(Utils.convertClassNameToStubClassName(nameOfClass), true, singleton);
++            // return ClassForName.load(Utils.convertClassNameToStubClassName(nameOfClass), true, singleton);
+             return singleton.loadClass(Utils.convertClassNameToStubClassName(nameOfClass, genericParameters),
+                     genericParameters, cl);
+         } catch (ClassNotFoundException e) {
+@@ -607,8 +608,8 @@ public abstract class MOP {
+             if (stubConstructor.getParameterTypes().length != 0) {
+                 // member class constructor
+                 // add the implicit param : an instance of the enclosing class
+-                Class<?> realClass = Class.forName(Utils.convertStubClassNameToClassName(stubConstructor
+-                        .getDeclaringClass().getName()));
++                Class<?> realClass = ClassForName.loadFromCurrentThenCtx(Utils
++                        .convertStubClassNameToClassName(stubConstructor.getDeclaringClass().getName()));
+                 try {
+                     // a stub on a member class has a null reference to enclosing instance
+                     o = stubConstructor.newInstance((Object) null);
+diff --git a/src/Core/org/objectweb/proactive/core/mop/MOPClassLoader.java b/src/Core/org/objectweb/proactive/core/mop/MOPClassLoader.java
+index 42f9186..403b7ab 100644
+--- a/src/Core/org/objectweb/proactive/core/mop/MOPClassLoader.java
++++ b/src/Core/org/objectweb/proactive/core/mop/MOPClassLoader.java
+@@ -38,6 +38,7 @@ import java.net.URLClassLoader;
+ import java.util.Hashtable;
+ 
+ import org.apache.log4j.Logger;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -124,7 +125,8 @@ public class MOPClassLoader extends URLClassLoader {
+         ClassLoader currentClassLoader = null;
+ 
+         try {
+-            Class<?> c = Class.forName("org.objectweb.proactive.core.mop.MOPClassLoader");
++            Class<?> c = ClassForName
++                    .loadFromCurrentThenCtx("org.objectweb.proactive.core.mop.MOPClassLoader");
+             currentClassLoader = c.getClassLoader();
+         } catch (ClassNotFoundException e) {
+             e.printStackTrace();
+@@ -185,7 +187,7 @@ public class MOPClassLoader extends URLClassLoader {
+             if (cl != null) {
+                 return cl.loadClass(name);
+             } else {
+-                return Class.forName(name);
++                return ClassForName.loadFromCurrentThenCtx(name);
+             }
+         } catch (ClassNotFoundException e) {
+             // Test if the name of the class is actually a request for
+@@ -204,13 +206,13 @@ public class MOPClassLoader extends URLClassLoader {
+                 // class Access checking. This method is supposed to be protected which means 
+                 // we should not be accessing it but the access policy file allows us to access it freely.
+                 try {
+-                    Class<?> clc = Class.forName("java.lang.ClassLoader");
++                    Class<?> clc = ClassForName.loadFromCurrentThenCtx("java.lang.ClassLoader");
+                     Class<?>[] argumentTypes = new Class<?>[5];
+                     argumentTypes[0] = name.getClass();
+                     argumentTypes[1] = data.getClass();
+                     argumentTypes[2] = Integer.TYPE;
+                     argumentTypes[3] = Integer.TYPE;
+-                    argumentTypes[4] = Class.forName("java.security.ProtectionDomain");
++                    argumentTypes[4] = ClassForName.loadFromCurrentThenCtx("java.security.ProtectionDomain");
+ 
+                     Method m = clc.getDeclaredMethod("defineClass", argumentTypes);
+                     m.setAccessible(true);
+diff --git a/src/Core/org/objectweb/proactive/core/mop/MethodCall.java b/src/Core/org/objectweb/proactive/core/mop/MethodCall.java
+index 4bbc587..b8fc236 100644
+--- a/src/Core/org/objectweb/proactive/core/mop/MethodCall.java
++++ b/src/Core/org/objectweb/proactive/core/mop/MethodCall.java
+@@ -49,6 +49,7 @@ import org.objectweb.proactive.core.component.representative.ItfID;
+ import org.objectweb.proactive.core.component.request.ComponentRequest;
+ import org.objectweb.proactive.core.exceptions.ExceptionHandler;
+ import org.objectweb.proactive.core.mop.MethodCallInfo.SynchronousReason;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.converter.ByteToObjectConverter;
+ import org.objectweb.proactive.core.util.converter.ObjectToByteConverter;
+ import org.objectweb.proactive.core.util.log.Loggers;
+@@ -721,7 +722,7 @@ public class MethodCall implements java.io.Serializable, Cloneable {
+     public boolean isAnnotedSterile() {
+         String classname = "org.objectweb.proactive.extensions.annotation.Sterile";
+         try {
+-            Class sterile = Class.forName(classname);
++            Class sterile = ClassForName.loadFromCurrentThenCtx(classname);
+             return getReifiedMethod().isAnnotationPresent(sterile);
+ 
+         } catch (ClassNotFoundException e) {
+diff --git a/src/Core/org/objectweb/proactive/core/node/StartNode.java b/src/Core/org/objectweb/proactive/core/node/StartNode.java
+index 4239c28..a2445c3 100644
+--- a/src/Core/org/objectweb/proactive/core/node/StartNode.java
++++ b/src/Core/org/objectweb/proactive/core/node/StartNode.java
+@@ -39,6 +39,7 @@ import org.objectweb.proactive.core.Constants;
+ import org.objectweb.proactive.core.UniqueID;
+ import org.objectweb.proactive.core.config.PAProperties;
+ import org.objectweb.proactive.core.config.ProActiveConfiguration;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.ProActiveInet;
+ import org.objectweb.proactive.core.util.URIBuilder;
+ import org.objectweb.proactive.core.util.log.Loggers;
+@@ -87,7 +88,7 @@ public class StartNode {
+         }
+ 
+         try {
+-            Class.forName("org.objectweb.proactive.api.PAActiveObject");
++            ClassForName.loadFromCurrent("org.objectweb.proactive.api.PAActiveObject");
+         } catch (ClassNotFoundException e) {
+             if (logger.isDebugEnabled()) {
+                 logger.fatal("Loading of ProActive class FAILED");
+diff --git a/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectImpl.java b/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectImpl.java
+index 09c046e..735507c 100644
+--- a/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectImpl.java
++++ b/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectImpl.java
+@@ -57,6 +57,7 @@ import org.objectweb.proactive.core.security.exceptions.RenegotiateSessionExcept
+ import org.objectweb.proactive.core.security.exceptions.SecurityNotAvailableException;
+ import org.objectweb.proactive.core.security.securityentity.Entities;
+ import org.objectweb.proactive.core.security.securityentity.Entity;
++import org.objectweb.proactive.core.util.ClassForName;
+ 
+ 
+ /**
+@@ -263,7 +264,7 @@ public class RemoteObjectImpl<T> implements RemoteObject<T>, Serializable {
+             ((StubObject) reifiedObjectStub).setProxy(new SynchronousProxy(null, new Object[] { rro }));
+             if (adapterClass != null) {
+ 
+-                Class<?>[] classArray = new Class[] { Class.forName(this.className) };
++                Class<?>[] classArray = new Class[] { ClassForName.loadFromCurrentThenCtx(this.className) };
+                 Constructor<Adapter<T>> myConstructor = adapterClass.getConstructor(classArray);
+                 Adapter<T> ad = myConstructor.newInstance(reifiedObjectStub);
+                 return ad.getAs();
+@@ -325,7 +326,7 @@ public class RemoteObjectImpl<T> implements RemoteObject<T>, Serializable {
+      */
+     public Class<?> getTargetClass() {
+         try {
+-            return Class.forName(className);
++            return ClassForName.loadFromCurrentThenCtx(className);
+         } catch (ClassNotFoundException e) {
+             // TODO Auto-generated catch block
+             e.printStackTrace();
+@@ -375,7 +376,7 @@ public class RemoteObjectImpl<T> implements RemoteObject<T>, Serializable {
+                 T reifiedObjectStub = (T) MOP.createStubObject(this.className, target.getClass(),
+                         new Class[] {});
+                 myConstructor = adapterClass.getClass().getConstructor(
+-                        new Class[] { Class.forName(this.className) });
++                        new Class[] { ClassForName.loadFromCurrentThenCtx(this.className) });
+                 Adapter<T> ad = (Adapter<T>) myConstructor.newInstance(reifiedObjectStub);
+                 //            adapter.setAdapterAndCallConstruct(reifiedObjectStub);
+                 return ad;
+diff --git a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java
+index 4f16900..b3f4ebf 100644
+--- a/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java
++++ b/src/Core/org/objectweb/proactive/core/runtime/ProActiveRuntimeImpl.java
+@@ -119,6 +119,7 @@ import org.objectweb.proactive.core.security.exceptions.SecurityNotAvailableExce
+ import org.objectweb.proactive.core.security.securityentity.Entities;
+ import org.objectweb.proactive.core.security.securityentity.Entity;
+ import org.objectweb.proactive.core.util.ClassDataCache;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.ProActiveInet;
+ import org.objectweb.proactive.core.util.ProActiveRandom;
+ import org.objectweb.proactive.core.util.URIBuilder;
+@@ -1146,13 +1147,13 @@ public class ProActiveRuntimeImpl extends RuntimeRegistrationEventProducerImpl i
+             NoSuchMethodException, ProActiveException {
+         System.out.println("ProActiveRuntimeImpl.launchMain() -" + className + "-");
+ 
+-        Class<?> mainClass = Class.forName(className);
++        Class<?> mainClass = ClassForName.loadFromCurrentThenCtx(className);
+         Method mainMethod = mainClass.getMethod("main", new Class[] { String[].class });
+         new LauncherThread(mainMethod, parameters).start();
+     }
+ 
+     public void newRemote(String className) throws ClassNotFoundException, ProActiveException {
+-        Class<?> remoteClass = Class.forName(className);
++        Class<?> remoteClass = ClassForName.loadFromCurrentThenCtx(className);
+         new LauncherThread(remoteClass).start();
+     }
+ 
+diff --git a/src/Core/org/objectweb/proactive/core/util/ClassForName.java b/src/Core/org/objectweb/proactive/core/util/ClassForName.java
+new file mode 100644
+index 0000000..80a9ed4
+--- /dev/null
++++ b/src/Core/org/objectweb/proactive/core/util/ClassForName.java
+@@ -0,0 +1,70 @@
++package org.objectweb.proactive.core.util;
++
++/** A {@link Class#forName(String)} replacement.
++ * 
++ * {@link Class#forName(String)} <b>must not</b> be used inside ProActive.
++ * The two helper methods provided by this class <b>must</b> be used 
++ * in replacement. 
++ *
++ *  {@link #loadFromCurrentThenCtx(String)} must be used to load a class that can be provided
++ *  by the user. In this case, the context class loader can be used to load  
++ *  the class. 
++ *  
++ *  {@link #loadFromCurrent(String)} must be used to load a class which belongs to
++ *  the ProActive distribution (ProActive and its dependencies).
++ */
++public class ClassForName {
++
++    /** 
++     * Returns the {@code Class} object associated with the class or
++     * interface with the given string name. The class loader who loaded 
++     * the {@link ClassForName} class is tried first. If the class is not 
++     * found by this class loader, then the context class loader is used. 
++     * 
++     * @param      className   the fully qualified name of the desired class.
++     * @return     the {@code Class} object for the class with the
++     *             specified name.
++     * @exception LinkageError if the linkage fails
++     * @exception ExceptionInInitializerError if the initialization provoked
++     *            by this method fails
++     * @exception ClassNotFoundException if the class cannot be located
++     */
++    static public Class<?> loadFromCurrentThenCtx(String classname) throws ClassNotFoundException {
++        Class<?> cl = null;
++        try {
++            cl = Class.forName(classname);
++        } catch (Throwable t1) {
++            ClassLoader ctxCl = Thread.currentThread().getContextClassLoader();
++            try {
++                cl = Class.forName(classname, true, ctxCl);
++            } catch (Throwable t2) {
++                throw new ClassNotFoundException("Unable to find the class " + classname +
++                    " nor in the caller, nor in the context classloader");
++            }
++        }
++
++        return cl;
++    }
++
++    /** 
++     * Returns the {@code Class} object associated with the class or
++     * interface with the given string name. Invoking this method is
++     * equivalent to:
++     * 
++     * <blockquote>
++     *  {@code Class.forName(className, true, ClassForName.class.getClassLoader())}
++     * </blockquote>
++     * 
++     * 
++     * @param      className   the fully qualified name of the desired class.
++     * @return     the {@code Class} object for the class with the
++     *             specified name.
++     * @exception LinkageError if the linkage fails
++     * @exception ExceptionInInitializerError if the initialization provoked
++     *            by this method fails
++     * @exception ClassNotFoundException if the class cannot be located
++     */
++    static public Class<?> loadFromCurrent(String classname) throws ClassNotFoundException {
++        return Class.forName(classname);
++    }
++}
+diff --git a/src/Core/org/objectweb/proactive/core/util/NonFunctionalServices.java b/src/Core/org/objectweb/proactive/core/util/NonFunctionalServices.java
+index 5c47f88..89c8c78 100644
+--- a/src/Core/org/objectweb/proactive/core/util/NonFunctionalServices.java
++++ b/src/Core/org/objectweb/proactive/core/util/NonFunctionalServices.java
+@@ -55,10 +55,10 @@ public class NonFunctionalServices {
+ 
+     static {
+         try {
+-            nonFunctionalServicesClass = java.lang.Class
+-                    .forName("org.objectweb.proactive.core.util.NonFunctionalServices");
++            nonFunctionalServicesClass = ClassForName
++                    .loadFromCurrent("org.objectweb.proactive.core.util.NonFunctionalServices");
+             paramTypes = new Class<?>[1];
+-            paramTypes[0] = java.lang.Class.forName("org.objectweb.proactive.core.mop.Proxy");
++            paramTypes[0] = ClassForName.loadFromCurrent("org.objectweb.proactive.core.mop.Proxy");
+             terminateAOMethod = nonFunctionalServicesClass.getMethod("_terminateAO", paramTypes);
+             terminateAOImmediatelyMethod = nonFunctionalServicesClass.getMethod("_terminateAOImmediately",
+                     paramTypes);
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/ByteToObjectConverter.java b/src/Core/org/objectweb/proactive/core/util/converter/ByteToObjectConverter.java
+index 246e04e..28d472e 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/ByteToObjectConverter.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/ByteToObjectConverter.java
+@@ -44,6 +44,7 @@ import org.objectweb.proactive.core.Constants;
+ import org.objectweb.proactive.core.config.PAProperties;
+ import org.objectweb.proactive.core.mop.PAObjectInputStream;
+ import org.objectweb.proactive.core.mop.SunMarshalInputStream;
++import org.objectweb.proactive.core.util.ClassForName;
+ 
+ 
+ /**
+@@ -165,9 +166,9 @@ public class ByteToObjectConverter {
+     @SuppressWarnings("unchecked")
+     private static Object ibisConvert(byte[] b) throws IOException, ClassNotFoundException {
+         try {
+-            final Class cl_bais = Class.forName(BYTE_ARRAY_INPUT_STREAM);
+-            final Class cl_buais = Class.forName(BUFFERED_ARRAY_INPUT_STREAM);
+-            final Class cl_isis = Class.forName(IBIS_SERIALIZATION_INPUT_STREAM);
++            final Class cl_bais = ClassForName.loadFromCurrent(BYTE_ARRAY_INPUT_STREAM);
++            final Class cl_buais = ClassForName.loadFromCurrent(BUFFERED_ARRAY_INPUT_STREAM);
++            final Class cl_isis = ClassForName.loadFromCurrent(IBIS_SERIALIZATION_INPUT_STREAM);
+             final Constructor c_bais = cl_bais.getConstructor(Array.newInstance(byte.class, 0).getClass());
+ 
+             final Constructor c_buais = cl_buais.getConstructor(new Class[] { java.io.InputStream.class });
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java b/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java
+index 7d3b861..3a0ba54 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java
+@@ -42,6 +42,7 @@ import org.objectweb.proactive.core.Constants;
+ import org.objectweb.proactive.core.config.PAProperties;
+ import org.objectweb.proactive.core.mop.PAObjectOutputStream;
+ import org.objectweb.proactive.core.mop.SunMarshalOutputStream;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.converter.MakeDeepCopy.ConversionMode;
+ 
+ 
+@@ -149,9 +150,9 @@ public class ObjectToByteConverter {
+     @SuppressWarnings("unchecked")
+     private static byte[] ibisConvert(Object o) throws IOException {
+         try {
+-            final Class cl_baos = Class.forName(BYTE_ARRAY_OUTPUT_STREAM);
+-            final Class cl_buaos = Class.forName(BUFFERED_ARRAY_OUTPUT_STREAM);
+-            final Class cl_isos = Class.forName(IBIS_SERIALIZATION_OUTPUT_STREAM);
++            final Class cl_baos = ClassForName.loadFromCurrent(BYTE_ARRAY_OUTPUT_STREAM);
++            final Class cl_buaos = ClassForName.loadFromCurrent(BUFFERED_ARRAY_OUTPUT_STREAM);
++            final Class cl_isos = ClassForName.loadFromCurrent(IBIS_SERIALIZATION_OUTPUT_STREAM);
+             final Constructor c_baos = cl_baos.getConstructor();
+             final Constructor c_buaos = cl_buaos.getConstructor(new Class[] { java.io.OutputStream.class });
+             final Constructor c_isos = cl_isos.getConstructor(new Class[] { Class
+diff --git a/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/mbean/BundleInfo.java b/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/mbean/BundleInfo.java
+index b62513f..eba2b1f 100644
+--- a/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/mbean/BundleInfo.java
++++ b/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/mbean/BundleInfo.java
+@@ -61,6 +61,7 @@ import javax.management.NotificationBroadcasterSupport;
+ import javax.management.ObjectName;
+ import javax.management.ReflectionException;
+ 
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.examples.jmx.remote.management.command.CommandMBean;
+ import org.objectweb.proactive.examples.jmx.remote.management.command.osgi.OSGiCommand;
+ import org.objectweb.proactive.examples.jmx.remote.management.command.osgi.StartCommand;
+@@ -309,7 +310,7 @@ public class BundleInfo extends NotificationBroadcasterSupport implements Bundle
+         try {
+             Class<?>[] paramTypes = new Class[signature.length];
+             for (int i = 0; i < signature.length; i++) {
+-                paramTypes[i] = Class.forName(signature[i]);
++                paramTypes[i] = ClassForName.loadFromCurrent(signature[i]);
+             }
+             Method m = this.getClass().getMethod(actionName, paramTypes);
+             return m.invoke(this, params);
+diff --git a/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/utils/MethodRepresentation.java b/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/utils/MethodRepresentation.java
+index a931e2b..682671d 100644
+--- a/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/utils/MethodRepresentation.java
++++ b/src/Examples/org/objectweb/proactive/examples/jmx/remote/management/utils/MethodRepresentation.java
+@@ -33,6 +33,8 @@ package org.objectweb.proactive.examples.jmx.remote.management.utils;
+ 
+ import java.io.Serializable;
+ 
++import org.objectweb.proactive.core.util.ClassForName;
++
+ 
+ public class MethodRepresentation implements Serializable {
+ 
+@@ -95,7 +97,7 @@ public class MethodRepresentation implements Serializable {
+         Class<?>[] classes = new Class[sig.length];
+         for (int i = 0; i < sig.length; i++) {
+             try {
+-                classes[i] = Class.forName(sig[i]);
++                classes[i] = ClassForName.loadFromCurrent(sig[i]);
+             } catch (ClassNotFoundException e) {
+                 e.printStackTrace();
+             }
+diff --git a/src/Examples/org/objectweb/proactive/examples/nbody/common/Start.java b/src/Examples/org/objectweb/proactive/examples/nbody/common/Start.java
+index bf3e2c4..ab9017d 100644
+--- a/src/Examples/org/objectweb/proactive/examples/nbody/common/Start.java
++++ b/src/Examples/org/objectweb/proactive/examples/nbody/common/Start.java
+@@ -38,6 +38,7 @@ import java.io.Serializable;
+ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.api.PAActiveObject;
+ import org.objectweb.proactive.core.ProActiveException;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.core.util.wrapper.BooleanWrapper;
+@@ -146,8 +147,9 @@ public class Start implements Serializable {
+         // testing java3d installation
+         if (ddd) {
+             try {
+-                Class.forName("com.sun.j3d.utils.behaviors.mouse.MouseRotate");
+-                Class.forName("org.objectweb.proactive.examples.nbody.common.NBody3DFrame");
++                ClassForName.loadFromCurrentThenCtx("com.sun.j3d.utils.behaviors.mouse.MouseRotate");
++                ClassForName
++                        .loadFromCurrentThenCtx("org.objectweb.proactive.examples.nbody.common.NBody3DFrame");
+             } catch (Exception e) {
+                 ddd = false;
+                 logger.warn("Java 3D not installed, switching to 2D");
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/gcmdeployment/GCMApplication/TechnicalServicesFactory.java b/src/Extensions/org/objectweb/proactive/extensions/gcmdeployment/GCMApplication/TechnicalServicesFactory.java
+index dc96764..5f30dbd 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/gcmdeployment/GCMApplication/TechnicalServicesFactory.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/gcmdeployment/GCMApplication/TechnicalServicesFactory.java
+@@ -34,6 +34,7 @@ package org.objectweb.proactive.extensions.gcmdeployment.GCMApplication;
+ import java.util.Map;
+ 
+ import org.objectweb.proactive.core.descriptor.services.TechnicalService;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.extensions.gcmdeployment.GCMDeploymentLoggers;
+ 
+ 
+@@ -43,7 +44,7 @@ public class TechnicalServicesFactory {
+ 
+         try {
+             Class<?> tc;
+-            tc = Class.forName(className);
++            tc = ClassForName.loadFromCurrent(className);
+             TechnicalService ts = (TechnicalService) tc.newInstance();
+             (ts).init(args);
+ 
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java b/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java
+index 02ad4c4..4ee8bea 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java
+@@ -46,6 +46,7 @@ import org.objectweb.proactive.ActiveObjectCreationException;
+ import org.objectweb.proactive.api.PAActiveObject;
+ import org.objectweb.proactive.api.PAFuture;
+ import org.objectweb.proactive.core.node.NodeException;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.extensions.timitspmd.config.Benchmark;
+ import org.objectweb.proactive.extensions.timitspmd.config.ConfigChart;
+ import org.objectweb.proactive.extensions.timitspmd.config.ConfigReader;
+@@ -221,7 +222,7 @@ public class TimIt {
+                 //
+                 ConfigChart[] chart = element.getCharts();
+                 Benchmark[] bench = element.getBenchmarks();
+-                Class<?> runClass = Class.forName(element.get("class"));
++                Class<?> runClass = ClassForName.loadFromCurrentThenCtx(element.get("class"));
+                 Startable startable = (Startable) runClass.newInstance();
+                 message(1, "RUN SERIES " + runClass.getSimpleName() + " [" + element.get("result") + "]");
+ 
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/timitspmd/util/charts/Utilities.java b/src/Extensions/org/objectweb/proactive/extensions/timitspmd/util/charts/Utilities.java
+index ded61a1..72235ea 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/timitspmd/util/charts/Utilities.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/timitspmd/util/charts/Utilities.java
+@@ -44,6 +44,7 @@ import java.lang.reflect.Method;
+ 
+ import org.jdom.Element;
+ import org.jfree.chart.JFreeChart;
++import org.objectweb.proactive.core.util.ClassForName;
+ import org.objectweb.proactive.extensions.timitspmd.TimIt;
+ import org.objectweb.proactive.extensions.timitspmd.config.ConfigChart;
+ import org.objectweb.proactive.extensions.timitspmd.util.BenchmarkStatistics;
+@@ -80,7 +81,7 @@ public class Utilities {
+                 "...");
+             try {
+                 className = Utilities.class.getPackage().getName() + "." + cChart.get("type");
+-                Class<?> chartClass = Class.forName(className);
++                Class<?> chartClass = ClassForName.loadFromCurrent(className);
+                 Chart chart = (Chart) chartClass.newInstance();
+                 chart.generateChart(eTimitResult, bstats, cChart);
+             } catch (ClassNotFoundException e) {
+@@ -107,7 +108,7 @@ public class Utilities {
+      */
+     public static void saveChartAsSVG(JFreeChart chart, Rectangle bounds, File svgFile) throws IOException {
+         try {
+-            Class<?> GDI = Class.forName("org.apache.batik.dom.GenericDOMImplementation");
++            Class<?> GDI = ClassForName.loadFromCurrent("org.apache.batik.dom.GenericDOMImplementation");
+ 
+             // Get a DOMImplementation and create an XML document
+             Method getDOMImplementation = GDI.getMethod("getDOMImplementation", new Class<?>[0]);
+@@ -116,7 +117,7 @@ public class Utilities {
+             org.w3c.dom.Document document = domImpl.createDocument(null, "svg", null);
+ 
+             // Create an instance of the SVG Generator
+-            Class<?> SG2D = Class.forName("org.apache.batik.svggen.SVGGraphics2D");
++            Class<?> SG2D = ClassForName.loadFromCurrent("org.apache.batik.svggen.SVGGraphics2D");
+             Method streamMethod = SG2D.getMethod("stream", new Class<?>[] { Writer.class, boolean.class });
+             Constructor<?> SG2DConstr = SG2D.getConstructor(new Class<?>[] { org.w3c.dom.Document.class });
+             Object svgGenerator = SG2DConstr.newInstance(document);
+-- 
+1.6.0.6
+

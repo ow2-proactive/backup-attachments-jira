@@ -1,0 +1,49 @@
+From dd6582fe018fa8ad0d0883e98d6c7c06724df5b9 Mon Sep 17 00:00:00 2001
+From: cmathieu <clement.mathieu@activeeon.com>
+Date: Mon, 10 Aug 2009 10:50:09 +0200
+Subject: [PATCH] PROACTIVE-723: Fixed broken code: updated javassist strings
+
+---
+ .../core/mop/JavassistByteCodeStubBuilder.java     |    9 +++++----
+ 1 files changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java b/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
+index 6c01b4b..9aca496 100644
+--- a/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
++++ b/src/Core/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
+@@ -487,11 +487,11 @@ public class JavassistByteCodeStubBuilder {
+             "];\n");
+         for (int i = 0; i < genericParameters.length; i++) {
+             classInitializerBody.append("genericParameters[" + i +
+-                "] = org.objectweb.proactive.core.util.ClassForName.load(\"" +
++                "] = org.objectweb.proactive.core.util.ClassForName.loadFromCurrentThenCtx(\"" +
+                 genericParameters[i].getName() + "\");\n");
+         }
+         classInitializerBody
+-                .append("Class realSuperClass = org.objectweb.proactive.core.util.ClassForName.load(\"" +
++                .append("Class realSuperClass = org.objectweb.proactive.core.util.ClassForName.loadFromCurrentThenCtx(\"" +
+                     superClassName + "\");\n");
+         classInitializerBody
+                 .append("java.lang.reflect.TypeVariable[] tv = realSuperClass.getTypeParameters();\n");
+@@ -514,7 +514,8 @@ public class JavassistByteCodeStubBuilder {
+         int index = 0;
+         while (it.hasNext()) {
+             classInitializerBody.append("classes[" + index +
+-                "] = org.objectweb.proactive.core.util.ClassForName.load(\"" + it.next() + "\");\n");
++                "] = org.objectweb.proactive.core.util.ClassForName.loadFromCurrentThenCtx(\"" + it.next() +
++                "\");\n");
+             index++;
+         }
+         for (int i = 0; i < reifiedMethods.length; i++) {
+@@ -526,7 +527,7 @@ public class JavassistByteCodeStubBuilder {
+                         getClassTypeInitializer(paramTypes[n], false) + ";\n");
+                 } else {
+                     classInitializerBody.append("temp[" + n +
+-                        "] = org.objectweb.proactive.core.util.ClassForName.load(\"" +
++                        "] = org.objectweb.proactive.core.util.ClassForName.loadFromCurrentThenCtx(\"" +
+                         getClassTypeInitializer(paramTypes[n], false) + "\");\n");
+                 }
+             }
+-- 
+1.6.0.6
+

@@ -1,0 +1,820 @@
+[INFO 2012-08-17 18:51:30,831] [SCHED.SchedulerStarter.main] RM URL : pnp://localhost:64738
+[INFO 2012-08-17 18:51:30,831] [SCHED.SchedulerStarter.main] Starting Scheduler, Please wait...
+[INFO 2012-08-17 18:51:30,831] [SCHED.SchedulerStarter.main] Trying to connect to Resource Manager on pnp://localhost:64738
+[INFO 2012-08-17 18:51:36,149] [SCHED.Slf4jLog.info] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2012-08-17 18:51:36,219] [SCHED.Slf4jLog.info] jetty-6.1.x
+[INFO 2012-08-17 18:51:36,272] [SCHED.Slf4jLog.info] Started SelectChannelConnector@0.0.0.0:60554
+[INFO 2012-08-17 18:51:36,294] [SCHED.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <pamr, class org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObjectFactory> found
+[INFO 2012-08-17 18:51:36,296] [SCHED.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <pnp, class org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactory> found
+[INFO 2012-08-17 18:51:36,297] [SCHED.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <pnps, class org.objectweb.proactive.extensions.pnpssl.PNPSslRemoteObjectFactory> found
+[INFO 2012-08-17 18:51:36,299] [SCHED.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <pamrd, class org.objectweb.proactive.extensions.pamrd.PAMRDRemoteObjectFactorySPI$PAMRDRemoteObjectFactory> found
+[INFO 2012-08-17 18:51:36,300] [SCHED.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <amqp, class org.objectweb.proactive.extensions.amqp.remoteobject.AMQPRemoteObjectFactory> found
+[INFO 2012-08-17 18:51:36,301] [SCHED.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <rmissl, class org.objectweb.proactive.extra.rmissl.RmiSslRemoteObjectFactory> found
+[INFO 2012-08-17 18:51:37,145] [SCHED.SchedulerFactory.createScheduler] Starting new Scheduler
+[INFO 2012-08-17 18:51:37,146] [SCHED.SchedulerFactory.createScheduler] Creating scheduler frontend...
+[INFO 2012-08-17 18:51:37,324] [SCHED_HIB.Version.<clinit>] Hibernate Annotations 3.4.0.GA
+[INFO 2012-08-17 18:51:37,336] [SCHED_HIB.Environment.<clinit>] Hibernate 3.3.0.SP1
+[INFO 2012-08-17 18:51:37,339] [SCHED_HIB.Environment.<clinit>] hibernate.properties not found
+[INFO 2012-08-17 18:51:37,342] [SCHED_HIB.Environment.buildBytecodeProvider] Bytecode provider name : javassist
+[INFO 2012-08-17 18:51:37,347] [SCHED_HIB.Environment.<clinit>] using JDK 1.4 java.sql.Timestamp handling
+[INFO 2012-08-17 18:51:37,418] [SCHED_HIB.Version.<clinit>] Hibernate Commons Annotations 3.1.0.GA
+[INFO 2012-08-17 18:51:37,419] [SCHED_HIB.Configuration.configure] configuring from file: hibernate.cfg.xml
+[INFO 2012-08-17 18:51:37,494] [SCHED_HIB.Configuration.doConfigure] Configured SessionFactory: null
+[INFO 2012-08-17 18:51:37,499] [SCHED.SchedulerFrontend.<init>] Creating scheduler Front-end...
+[INFO 2012-08-17 18:51:37,604] [SCHED.SchedulerFrontend.initActivity] Setting up scheduler security policy
+[INFO 2012-08-17 18:51:37,604] [SCHED.SchedulerFactory.createScheduler] Scheduler is now ready to be started !
+[INFO 2012-08-17 18:51:37,609] [SCHED.SchedulerFrontend.initActivity] Creating scheduler authentication interface...
+[INFO 2012-08-17 18:51:37,614] [SCHED.PNPROMessageLookup.processMessage] Someone performed a lookup on pnp://10.10.0.1:52845/SCHEDULER but this remote object is not known
+[INFO 2012-08-17 18:51:37,720] [SCHED.SchedulerFrontend.initActivity] Creating scheduler core...
+[INFO 2012-08-17 18:51:38,618] [SCHED.PNPROMessageLookup.processMessage] Someone performed a lookup on pnp://10.10.0.1:52845/SCHEDULER but this remote object is not known
+[INFO 2012-08-17 18:51:38,820] [SCHED.SchedulerCore.<init>] Initialized log forwarding service at pnp://10.10.0.1:52845/PA_JVM1420426415proactive_lfs_collector1
+[INFO 2012-08-17 18:51:38,820] [SCHED.SchedulerCore.<init>] Instanciated policy : org.ow2.proactive.scheduler.policy.DefaultPolicy
+[INFO 2012-08-17 18:51:38,820] [SCHED.SchedulerCore.<init>] Scheduler Core ready !
+[INFO 2012-08-17 18:51:38,914] [SCHED.SchedulerFrontend.initActivity] Registering scheduler...
+[INFO 2012-08-17 18:51:38,935] [SCHED.PAActiveObject.registerByName] Success at binding url pnp://10.10.0.1:52845/SCHEDULER
+[INFO 2012-08-17 18:51:38,935] [SCHED.SchedulerFrontend.initActivity] Booting jmx...
+[INFO 2012-08-17 18:51:38,945] [SCHED.RRDDataStore.<init>] Using existing RRD database: D:\ProActiveScheduling-3.2.0_server\scheduler_statistics.rrd
+[INFO 2012-08-17 18:51:39,111] [SCHED.SchedulerCore.recover] Starting Hibernate...
+[INFO 2012-08-17 18:51:39,111] [SCHED.SchedulerCore.recover] Drop DB : false
+[INFO 2012-08-17 18:51:39,112] [SCHED.SchedulerCore.recover] Hibernate successfully started !
+[INFO 2012-08-17 18:51:39,114] [SCHED.SchedulerHibernateDatabaseManager.recoverAllJobs] Recovering all jobs using the removeTime condition
+[INFO 2012-08-17 18:51:39,114] [SCHED.HibernateDatabaseManager.build] Building Hibernate session Factory (configuration File : D:\ProActiveScheduling-3.2.0_server\config/scheduler/database/hibernate/hibernate.cfg.xml )
+[INFO 2012-08-17 18:51:39,117] [SCHED_HIB.HibernateSearchEventListenerRegister.enableHibernateSearch] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[INFO 2012-08-17 18:51:39,128] [SCHED.AbstractJMXHelper.boot] Started JMX RMI connector server at service:jmx:rmi:///jndi/rmi://10.10.0.1:5822/JMXSchedulerAgent
+[INFO 2012-08-17 18:51:39,152] [SCHED.AbstractJMXHelper.boot] Started JMX RO connector server at service:jmx:ro:///jndi/pnp://10.10.0.1:52845/JMXSchedulerAgent
+[INFO 2012-08-17 18:51:39,203] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.job.JobEnvironment
+[INFO 2012-08-17 18:51:39,212] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.job.JobEnvironment on table JOB_ENVIRONMENT
+[INFO 2012-08-17 18:51:39,250] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2012-08-17 18:51:39,251] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.JobInfoImpl on table JOB_INFO
+[INFO 2012-08-17 18:51:39,264] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.JobIdImpl
+[INFO 2012-08-17 18:51:39,265] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.JobIdImpl on table JOB_ID
+[INFO 2012-08-17 18:51:39,268] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.UpdatableProperties
+[INFO 2012-08-17 18:51:39,268] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.UpdatableProperties on table UPDATABLE_PROPERTIES
+[INFO 2012-08-17 18:51:39,314] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.RestartMode
+[INFO 2012-08-17 18:51:39,314] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.RestartMode on table RESTART_MODE
+[INFO 2012-08-17 18:51:39,316] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.ForkEnvironment
+[INFO 2012-08-17 18:51:39,317] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.ForkEnvironment on table FORK_ENVIRONMENT
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.PropertyModifier
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.PropertyModifier on table PROPERTY_MODIFIER
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.Log4JTaskLogs
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.Log4JTaskLogs on table LOG4J_TASK_LOGS
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.SimpleTaskLogs
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.SimpleTaskLogs on table SIMPLE_TASK_LOGS
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.dataspaces.FileSelector
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.dataspaces.FileSelector on table FILE_SELECTOR
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.dataspaces.InputSelector
+[INFO 2012-08-17 18:51:39,350] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.dataspaces.InputSelector on table INPUT_SELECTOR
+[INFO 2012-08-17 18:51:39,351] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.dataspaces.OutputSelector
+[INFO 2012-08-17 18:51:39,351] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.dataspaces.OutputSelector on table OUTPUT_SELECTOR
+[INFO 2012-08-17 18:51:39,353] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.flow.FlowAction
+[INFO 2012-08-17 18:51:39,353] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.flow.FlowAction on table CONTROL_FLOW_ACTION
+[INFO 2012-08-17 18:51:39,355] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.flow.FlowScript
+[INFO 2012-08-17 18:51:39,355] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.flow.FlowScript on table FLOW_SCRIPT
+[INFO 2012-08-17 18:51:39,358] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2012-08-17 18:51:39,358] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.TaskInfoImpl on table TASK_INFO
+[INFO 2012-08-17 18:51:39,362] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.TaskIdImpl
+[INFO 2012-08-17 18:51:39,362] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.TaskIdImpl on table TASK_ID
+[INFO 2012-08-17 18:51:39,364] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.util.BooleanWrapper
+[INFO 2012-08-17 18:51:39,364] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.util.BooleanWrapper on table BOOLEAN_WRAPPER
+[INFO 2012-08-17 18:51:39,365] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.util.IntegerWrapper
+[INFO 2012-08-17 18:51:39,366] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.util.IntegerWrapper on table INTEGER_WRAPPER
+[INFO 2012-08-17 18:51:39,367] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.db.types.BigString
+[INFO 2012-08-17 18:51:39,367] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.db.types.BigString on table BIG_STRING
+[INFO 2012-08-17 18:51:39,368] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.util.ByteArrayWrapper
+[INFO 2012-08-17 18:51:39,368] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.util.ByteArrayWrapper on table BYTEARRAY_WRAPPER
+[INFO 2012-08-17 18:51:39,369] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.util.classloading.JobClasspathManager$JobClasspathEntry
+[INFO 2012-08-17 18:51:39,370] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.util.classloading.JobClasspathManager$JobClasspathEntry on table JOBCP_ENTRIES
+[INFO 2012-08-17 18:51:39,371] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.ParallelEnvironment
+[INFO 2012-08-17 18:51:39,371] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.ParallelEnvironment on table PARALLEL_ENV
+[INFO 2012-08-17 18:51:39,372] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.TopologyDescriptor
+[INFO 2012-08-17 18:51:39,373] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.topology.descriptor.TopologyDescriptor on table TOPOLOGY_DESCRIPTOR
+[INFO 2012-08-17 18:51:39,374] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.ArbitraryTopologyDescriptor
+[INFO 2012-08-17 18:51:39,385] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.BestProximityDescriptor
+[INFO 2012-08-17 18:51:39,386] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.ThresholdProximityDescriptor
+[INFO 2012-08-17 18:51:39,387] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.SingleHostDescriptor
+[INFO 2012-08-17 18:51:39,387] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.SingleHostExclusiveDescriptor
+[INFO 2012-08-17 18:51:39,387] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.MultipleHostsExclusiveDescriptor
+[INFO 2012-08-17 18:51:39,388] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.topology.descriptor.DifferentHostsExclusiveDescriptor
+[INFO 2012-08-17 18:51:39,388] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scripting.GenerationScript
+[INFO 2012-08-17 18:51:39,389] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scripting.GenerationScript on table GENERATION_SCRIPT
+[INFO 2012-08-17 18:51:39,391] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scripting.SelectionScript
+[INFO 2012-08-17 18:51:39,391] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scripting.SelectionScript on table SELECTION_SCRIPT
+[INFO 2012-08-17 18:51:39,393] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scripting.SimpleScript
+[INFO 2012-08-17 18:51:39,394] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scripting.SimpleScript on table SIMPLE_SCRIPT
+[INFO 2012-08-17 18:51:39,396] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2012-08-17 18:51:39,396] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.internal.InternalJavaTask on table I_JAVATASK
+[INFO 2012-08-17 18:51:39,416] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.internal.InternalForkedJavaTask
+[INFO 2012-08-17 18:51:39,417] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.internal.InternalForkedJavaTask on table I_FORKED_TASK
+[INFO 2012-08-17 18:51:39,423] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.internal.InternalNativeTask
+[INFO 2012-08-17 18:51:39,424] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.internal.InternalNativeTask on table I_NTVTASK
+[INFO 2012-08-17 18:51:39,431] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.InternalTaskFlowJob
+[INFO 2012-08-17 18:51:39,431] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.InternalTaskFlowJob on table INTERNAL_TF_JOB
+[INFO 2012-08-17 18:51:39,439] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.InternalParameterSweepingJob
+[INFO 2012-08-17 18:51:39,439] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.InternalParameterSweepingJob on table INTERNAL_PSWP_JOB
+[INFO 2012-08-17 18:51:39,443] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.NativeExecutableContainer
+[INFO 2012-08-17 18:51:39,443] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.NativeExecutableContainer on table NATIVE_EXEC_CONTAINER
+[INFO 2012-08-17 18:51:39,447] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.JavaExecutableContainer
+[INFO 2012-08-17 18:51:39,448] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.JavaExecutableContainer on table JAVA_EXEC_CONTAINER
+[INFO 2012-08-17 18:51:39,451] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.ForkedJavaExecutableContainer
+[INFO 2012-08-17 18:51:39,454] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2012-08-17 18:51:39,454] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.JobResultImpl on table JOB_RESULT_IMPL
+[INFO 2012-08-17 18:51:39,458] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2012-08-17 18:51:39,459] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.TaskResultImpl on table TASK_RESULT_IMPL
+[INFO 2012-08-17 18:51:39,483] [SCHED_HIB.CollectionBinder.bindOneToManySecondPass] Mapping collection: org.ow2.proactive.scheduler.job.JobResultImpl.preciousResults -> TASK_RESULT_IMPL
+[INFO 2012-08-17 18:51:39,484] [SCHED_HIB.CollectionBinder.bindOneToManySecondPass] Mapping collection: org.ow2.proactive.scheduler.job.JobResultImpl.allResults -> TASK_RESULT_IMPL
+[INFO 2012-08-17 18:51:39,488] [SCHED_HIB.CollectionBinder.bindOneToManySecondPass] Mapping collection: org.ow2.proactive.scheduler.common.task.ForkEnvironment.systemEnvironment -> PROPERTY_MODIFIER
+[INFO 2012-08-17 18:51:39,488] [SCHED_HIB.CollectionBinder.bindOneToManySecondPass] Mapping collection: org.ow2.proactive.scheduler.common.task.ForkEnvironment.jvmArguments -> BIG_STRING
+[INFO 2012-08-17 18:51:39,489] [SCHED_HIB.CollectionBinder.bindOneToManySecondPass] Mapping collection: org.ow2.proactive.scheduler.common.task.ForkEnvironment.additionalClasspath -> BIG_STRING
+[INFO 2012-08-17 18:51:39,490] [SCHED_HIB.AnnotationConfiguration.secondPassCompile] Hibernate Validator not found: ignoring
+[INFO 2012-08-17 18:51:39,520] [SCHED_HIB.ConnectionProviderFactory.newConnectionProvider] Initializing connection provider: org.hibernate.connection.C3P0ConnectionProvider
+[INFO 2012-08-17 18:51:39,520] [SCHED_HIB.C3P0ConnectionProvider.configure] C3P0 using driver: org.gjt.mm.mysql.Driver at URL: jdbc:mysql://localhost:3306/SCHEDULER_DB?autoReconnect=true
+[INFO 2012-08-17 18:51:39,520] [SCHED_HIB.C3P0ConnectionProvider.configure] Connection properties: {user=scheduler, password=****}
+[INFO 2012-08-17 18:51:39,520] [SCHED_HIB.C3P0ConnectionProvider.configure] autocommit mode: false
+[WARN 2012-08-17 18:51:39,520] [SCHED_HIB.C3P0ConnectionProvider.warnPropertyConflict] Both hibernate-style property 'hibernate.c3p0.max_size' and c3p0-style property 'c3p0.max_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.max_size' will be used and c3p0-style property 'c3p0.max_size' will be ignored!
+[WARN 2012-08-17 18:51:39,520] [SCHED_HIB.C3P0ConnectionProvider.warnPropertyConflict] Both hibernate-style property 'hibernate.c3p0.min_size' and c3p0-style property 'c3p0.min_size' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.min_size' will be used and c3p0-style property 'c3p0.min_size' will be ignored!
+[WARN 2012-08-17 18:51:39,520] [SCHED_HIB.C3P0ConnectionProvider.warnPropertyConflict] Both hibernate-style property 'hibernate.c3p0.timeout' and c3p0-style property 'c3p0.timeout' have been set in hibernate.properties. Hibernate-style property 'hibernate.c3p0.timeout' will be used and c3p0-style property 'c3p0.timeout' will be ignored!
+[INFO 2012-08-17 18:51:39,909] [SCHED_HIB.SettingsFactory.buildSettings] RDBMS: MySQL, version: 5.5.27
+[INFO 2012-08-17 18:51:39,909] [SCHED_HIB.SettingsFactory.buildSettings] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.16 ( Revision: ${bzr.revision-id} )
+[INFO 2012-08-17 18:51:39,924] [SCHED_HIB.Dialect.<init>] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO 2012-08-17 18:51:39,928] [SCHED_HIB.TransactionFactoryFactory.buildTransactionFactory] Using default transaction strategy (direct JDBC transactions)
+[INFO 2012-08-17 18:51:39,929] [SCHED_HIB.TransactionManagerLookupFactory.getTransactionManagerLookup] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO 2012-08-17 18:51:39,930] [SCHED_HIB.SettingsFactory.buildSettings] Automatic flush during beforeCompletion(): disabled
+[INFO 2012-08-17 18:51:39,930] [SCHED_HIB.SettingsFactory.buildSettings] Automatic session close at end of transaction: disabled
+[INFO 2012-08-17 18:51:39,930] [SCHED_HIB.SettingsFactory.buildSettings] JDBC batch size: 15
+[INFO 2012-08-17 18:51:39,930] [SCHED_HIB.SettingsFactory.buildSettings] JDBC batch updates for versioned data: disabled
+[INFO 2012-08-17 18:51:39,931] [SCHED_HIB.SettingsFactory.buildSettings] Scrollable result sets: enabled
+[INFO 2012-08-17 18:51:39,931] [SCHED_HIB.SettingsFactory.buildSettings] JDBC3 getGeneratedKeys(): enabled
+[INFO 2012-08-17 18:51:39,931] [SCHED_HIB.SettingsFactory.buildSettings] Connection release mode: auto
+[INFO 2012-08-17 18:51:39,932] [SCHED_HIB.SettingsFactory.buildSettings] Maximum outer join fetch depth: 2
+[INFO 2012-08-17 18:51:39,932] [SCHED_HIB.SettingsFactory.buildSettings] Default batch fetch size: 1
+[INFO 2012-08-17 18:51:39,933] [SCHED_HIB.SettingsFactory.buildSettings] Generate SQL with comments: disabled
+[INFO 2012-08-17 18:51:39,933] [SCHED_HIB.SettingsFactory.buildSettings] Order SQL updates by primary key: disabled
+[INFO 2012-08-17 18:51:39,933] [SCHED_HIB.SettingsFactory.buildSettings] Order SQL inserts for batching: disabled
+[INFO 2012-08-17 18:51:39,933] [SCHED_HIB.SettingsFactory.createQueryTranslatorFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO 2012-08-17 18:51:39,935] [SCHED_HIB.ASTQueryTranslatorFactory.<init>] Using ASTQueryTranslatorFactory
+[INFO 2012-08-17 18:51:39,935] [SCHED_HIB.SettingsFactory.buildSettings] Query language substitutions: {}
+[INFO 2012-08-17 18:51:39,936] [SCHED_HIB.SettingsFactory.buildSettings] JPA-QL strict compliance: disabled
+[INFO 2012-08-17 18:51:39,936] [SCHED_HIB.SettingsFactory.buildSettings] Second-level cache: enabled
+[INFO 2012-08-17 18:51:39,936] [SCHED_HIB.SettingsFactory.buildSettings] Query cache: disabled
+[INFO 2012-08-17 18:51:39,941] [SCHED_HIB.SettingsFactory.createRegionFactory] Cache region factory : org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge
+[INFO 2012-08-17 18:51:39,941] [SCHED_HIB.RegionFactoryCacheProviderBridge.<init>] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO 2012-08-17 18:51:39,942] [SCHED_HIB.SettingsFactory.buildSettings] Optimize cache for minimal puts: disabled
+[INFO 2012-08-17 18:51:39,942] [SCHED_HIB.SettingsFactory.buildSettings] Structured second-level cache entries: disabled
+[INFO 2012-08-17 18:51:39,946] [SCHED_HIB.SettingsFactory.buildSettings] Statistics: disabled
+[INFO 2012-08-17 18:51:39,946] [SCHED_HIB.SettingsFactory.buildSettings] Deleted entity synthetic identifier rollback: disabled
+[INFO 2012-08-17 18:51:39,948] [SCHED_HIB.SettingsFactory.buildSettings] Default entity-mode: pojo
+[INFO 2012-08-17 18:51:39,948] [SCHED_HIB.SettingsFactory.buildSettings] Named query checking : enabled
+[INFO 2012-08-17 18:51:39,984] [SCHED_HIB.SessionFactoryImpl.<init>] building session factory
+[INFO 2012-08-17 18:51:40,086] [SCHED_HIB.PojoInstantiator.<init>] no default (no-argument) constructor for class: org.ow2.proactive.topology.descriptor.TopologyDescriptor (class must be instantiated by Interceptor)
+[INFO 2012-08-17 18:51:40,302] [SCHED_HIB.SessionFactoryObjectFactory.addInstance] Not binding factory to JNDI, no JNDI name configured
+[INFO 2012-08-17 18:51:40,303] [SCHED_HIB.SchemaUpdate.execute] Running hbm2ddl schema update
+[INFO 2012-08-17 18:51:40,303] [SCHED_HIB.SchemaUpdate.execute] fetching database metadata
+[INFO 2012-08-17 18:51:40,303] [SCHED_HIB.SchemaUpdate.execute] updating schema
+[INFO 2012-08-17 18:51:40,324] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.big_string
+[INFO 2012-08-17 18:51:40,324] [SCHED_HIB.TableMetadata.<init>] columns: [id, value, classpath, jvm_arguments]
+[INFO 2012-08-17 18:51:40,324] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk45be9450674a520c, fk45be945049423ba7]
+[INFO 2012-08-17 18:51:40,324] [SCHED_HIB.TableMetadata.<init>] indexes: [fk45be9450674a520c, fk45be945049423ba7, primary]
+[INFO 2012-08-17 18:51:40,331] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.boolean_wrapper
+[INFO 2012-08-17 18:51:40,332] [SCHED_HIB.TableMetadata.<init>] columns: [id, value]
+[INFO 2012-08-17 18:51:40,332] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,332] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,339] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.bytearray_wrapper
+[INFO 2012-08-17 18:51:40,339] [SCHED_HIB.TableMetadata.<init>] columns: [id, value]
+[INFO 2012-08-17 18:51:40,339] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,339] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,347] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.control_flow_action
+[INFO 2012-08-17 18:51:40,347] [SCHED_HIB.TableMetadata.<init>] columns: [target_cont, hid, dup_number, target, type, target_else]
+[INFO 2012-08-17 18:51:40,347] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,348] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.file_selector
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] columns: [hid, excludes, case_sensitive, includes]
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.flow_script
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] columns: [target_cont, scriptengine, hid, target, actiontype, parameters, script_id, script, target_else]
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,373] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.fork_environment
+[INFO 2012-08-17 18:51:40,374] [SCHED_HIB.TableMetadata.<init>] columns: [java_home, script_hid, hid, working_dir]
+[INFO 2012-08-17 18:51:40,374] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkf82715f6dac6ffec]
+[INFO 2012-08-17 18:51:40,374] [SCHED_HIB.TableMetadata.<init>] indexes: [fkf82715f6dac6ffec, primary]
+[INFO 2012-08-17 18:51:40,381] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.generation_script
+[INFO 2012-08-17 18:51:40,382] [SCHED_HIB.TableMetadata.<init>] columns: [scriptengine, hid, parameters, script_id, script]
+[INFO 2012-08-17 18:51:40,382] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,382] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.input_selector
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] columns: [hid, inputfiles_hid, input_mode]
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk8ec7b4d4bc47fda1]
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] indexes: [fk8ec7b4d4bc47fda1, primary]
+[INFO 2012-08-17 18:51:40,395] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.integer_wrapper
+[INFO 2012-08-17 18:51:40,396] [SCHED_HIB.TableMetadata.<init>] columns: [id, value]
+[INFO 2012-08-17 18:51:40,396] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,396] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,407] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_pswp_job
+[INFO 2012-08-17 18:51:40,408] [SCHED_HIB.TableMetadata.<init>] columns: [project_name, hid, input_space, restart_timer, canceljobonerror_hid, jobresult_hid, environment_hid, output_space, maxnumberofexecution_hid, description, priority, name, owner, credentials, restarttaskonerror_hid, jobinfo_hid]
+[INFO 2012-08-17 18:51:40,408] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk6511403cf82025df, fk6511403c4cb16e0d, fk6511403c841c2cb1, fk6511403cf5367700, fk6511403cefdeab, fk6511403c968ff4a5]
+[INFO 2012-08-17 18:51:40,408] [SCHED_HIB.TableMetadata.<init>] indexes: [primary, fk6511403c4cb16e0d, fk6511403cf82025df, fk6511403c841c2cb1, fk6511403cf5367700, fk6511403cefdeab, fk6511403c968ff4a5]
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_pswp_job_big_string
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] columns: [genericinformations_id, mapkey, internal_pswp_job_hid]
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk33e66c335a02b911, fk33e66c331ee8cac8]
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] indexes: [fk33e66c335a02b911, fk33e66c331ee8cac8, genericinformations_id, primary]
+[INFO 2012-08-17 18:51:40,424] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_pswp_job_tasks
+[INFO 2012-08-17 18:51:40,424] [SCHED_HIB.TableMetadata.<init>] columns: [mapkey_hid, itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,425] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk31c401cbce0edd94, fk31c401cb598bdb34]
+[INFO 2012-08-17 18:51:40,425] [SCHED_HIB.TableMetadata.<init>] indexes: [fk31c401cbce0edd94, primary, fk31c401cb598bdb34]
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_tf_job
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] columns: [project_name, hid, input_space, restart_timer, canceljobonerror_hid, jobresult_hid, environment_hid, output_space, maxnumberofexecution_hid, description, priority, name, owner, credentials, restarttaskonerror_hid, jobinfo_hid]
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk97ad7812841c2cb1, fk97ad78124cb16e0d, fk97ad7812968ff4a5, fk97ad7812f82025df, fk97ad7812efdeab, fk97ad7812f5367700]
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] indexes: [fk97ad7812841c2cb1, fk97ad78124cb16e0d, primary, fk97ad7812968ff4a5, fk97ad7812f82025df, fk97ad7812efdeab, fk97ad7812f5367700]
+[INFO 2012-08-17 18:51:40,445] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_tf_job_big_string
+[INFO 2012-08-17 18:51:40,445] [SCHED_HIB.TableMetadata.<init>] columns: [genericinformations_id, internal_tf_job_hid, mapkey]
+[INFO 2012-08-17 18:51:40,446] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk20d2129d5a02b911, fk20d2129d1219ce76]
+[INFO 2012-08-17 18:51:40,446] [SCHED_HIB.TableMetadata.<init>] indexes: [fk20d2129d5a02b911, genericinformations_id, primary, fk20d2129d1219ce76]
+[INFO 2012-08-17 18:51:40,453] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_tf_job_tasks
+[INFO 2012-08-17 18:51:40,454] [SCHED_HIB.TableMetadata.<init>] columns: [mapkey_hid, itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,454] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkae908121ce0edd94, fkae9081218db860c]
+[INFO 2012-08-17 18:51:40,454] [SCHED_HIB.TableMetadata.<init>] indexes: [fkae908121ce0edd94, primary, fkae9081218db860c]
+[INFO 2012-08-17 18:51:40,486] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_forked_task
+[INFO 2012-08-17 18:51:40,486] [SCHED_HIB.TableMetadata.<init>] columns: [resultpreview, match_block, hid, exec_container_type, run_as_me, itask_id, postscript_hid, max_exec_on_failure, canceljobonerror_hid, iteration, flowscript_hid, skipidepsinserialization, exec_container_id, replication, maxnumberofexecution_hid, precious_logs, description, name, itask_type, walltime, flow_block, prescript_hid, precious_result, parallelenvironment_hid, cscript_hid, taskinfo_hid, restarttaskonerror_hid]
+[INFO 2012-08-17 18:51:40,486] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk9fd91f2dc97bf97a, fk9fd91f2df82025df, fk9fd91f2d30d508c, fk9fd91f2d841c2cb1, fk9fd91f2d5f7002cf, fk9fd91f2df5367700, fk9fd91f2d40fb4b57, fk9fd91f2d76f632d4, fk9fd91f2d6f38208f]
+[INFO 2012-08-17 18:51:40,486] [SCHED_HIB.TableMetadata.<init>] indexes: [fk9fd91f2dc97bf97a, fk9fd91f2df82025df, fk9fd91f2d30d508c, fk9fd91f2d841c2cb1, fk9fd91f2d5f7002cf, primary, fk9fd91f2df5367700, fk9fd91f2d40fb4b57, fk9fd91f2d6f38208f, fk9fd91f2d76f632d4]
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_forked_task_big_string
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] columns: [genericinformations_id, i_forked_task_hid, mapkey]
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk92647ca25a02b911, fk92647ca22398061a]
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] indexes: [fk92647ca25a02b911, genericinformations_id, primary, fk92647ca22398061a]
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_forked_task_input_selector
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] columns: [inputfiles_hid, i_forked_task_hid]
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkcabd24262398061a, fkcabd2426cfbea2a5]
+[INFO 2012-08-17 18:51:40,502] [SCHED_HIB.TableMetadata.<init>] indexes: [fkcabd24262398061a, inputfiles_hid, fkcabd2426cfbea2a5]
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_forked_task_output_selector
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] columns: [outputfiles_hid, i_forked_task_hid]
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkb9ad944bbfec8f8f, fkb9ad944b2398061a]
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] indexes: [fkb9ad944bbfec8f8f, outputfiles_hid, fkb9ad944b2398061a]
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_forked_task_selection_script
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] columns: [ss_id, depend_id]
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fke80af1d01d428de3, fke80af1d01e932885]
+[INFO 2012-08-17 18:51:40,503] [SCHED_HIB.TableMetadata.<init>] indexes: [fke80af1d01d428de3, fke80af1d01e932885]
+[INFO 2012-08-17 18:51:40,507] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_forked_task_ideps
+[INFO 2012-08-17 18:51:40,507] [SCHED_HIB.TableMetadata.<init>] columns: [itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,507] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk6ed14e9b56734015]
+[INFO 2012-08-17 18:51:40,507] [SCHED_HIB.TableMetadata.<init>] indexes: [fk6ed14e9b56734015]
+[INFO 2012-08-17 18:51:40,514] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_forked_task_joinedbranches
+[INFO 2012-08-17 18:51:40,514] [SCHED_HIB.TableMetadata.<init>] columns: [itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,514] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk9cc8138b56734015]
+[INFO 2012-08-17 18:51:40,515] [SCHED_HIB.TableMetadata.<init>] indexes: [fk9cc8138b56734015]
+[INFO 2012-08-17 18:51:40,529] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_javatask
+[INFO 2012-08-17 18:51:40,529] [SCHED_HIB.TableMetadata.<init>] columns: [resultpreview, match_block, hid, exec_container_type, run_as_me, itask_id, postscript_hid, max_exec_on_failure, canceljobonerror_hid, iteration, flowscript_hid, skipidepsinserialization, exec_container_id, replication, maxnumberofexecution_hid, precious_logs, description, name, itask_type, walltime, flow_block, prescript_hid, precious_result, parallelenvironment_hid, cscript_hid, taskinfo_hid, restarttaskonerror_hid]
+[INFO 2012-08-17 18:51:40,530] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkba5e61dd76f632d4, fkba5e61ddc97bf97a, fkba5e61ddf82025df, fkba5e61dd30d508c, fkba5e61ddf5367700, fkba5e61dd5f7002cf, fkba5e61dd6f38208f, fkba5e61dd841c2cb1, fkba5e61dd40fb4b57]
+[INFO 2012-08-17 18:51:40,530] [SCHED_HIB.TableMetadata.<init>] indexes: [fkba5e61dd76f632d4, fkba5e61ddc97bf97a, fkba5e61ddf82025df, fkba5e61ddf5367700, fkba5e61dd30d508c, primary, fkba5e61dd5f7002cf, fkba5e61dd6f38208f, fkba5e61dd841c2cb1, fkba5e61dd40fb4b57]
+[INFO 2012-08-17 18:51:40,537] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_javatask_big_string
+[INFO 2012-08-17 18:51:40,537] [SCHED_HIB.TableMetadata.<init>] columns: [genericinformations_id, i_javatask_hid, mapkey]
+[INFO 2012-08-17 18:51:40,537] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk3983abf23ccbb949, fk3983abf25a02b911]
+[INFO 2012-08-17 18:51:40,538] [SCHED_HIB.TableMetadata.<init>] indexes: [fk3983abf23ccbb949, genericinformations_id, primary, fk3983abf25a02b911]
+[INFO 2012-08-17 18:51:40,544] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_javatask_input_selector
+[INFO 2012-08-17 18:51:40,544] [SCHED_HIB.TableMetadata.<init>] columns: [inputfiles_hid, i_javatask_hid]
+[INFO 2012-08-17 18:51:40,545] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk65142b763ccbb949, fk65142b76cfbea2a5]
+[INFO 2012-08-17 18:51:40,545] [SCHED_HIB.TableMetadata.<init>] indexes: [fk65142b763ccbb949, inputfiles_hid, fk65142b76cfbea2a5]
+[INFO 2012-08-17 18:51:40,551] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_javatask_output_selector
+[INFO 2012-08-17 18:51:40,552] [SCHED_HIB.TableMetadata.<init>] columns: [outputfiles_hid, i_javatask_hid]
+[INFO 2012-08-17 18:51:40,552] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk6a3776fbbfec8f8f, fk6a3776fb3ccbb949]
+[INFO 2012-08-17 18:51:40,552] [SCHED_HIB.TableMetadata.<init>] indexes: [outputfiles_hid, fk6a3776fbbfec8f8f, fk6a3776fb3ccbb949]
+[INFO 2012-08-17 18:51:40,558] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_javatask_selection_script
+[INFO 2012-08-17 18:51:40,559] [SCHED_HIB.TableMetadata.<init>] columns: [ss_id, depend_id]
+[INFO 2012-08-17 18:51:40,559] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk48bd65201e932885, fk48bd6520d32dcea2]
+[INFO 2012-08-17 18:51:40,559] [SCHED_HIB.TableMetadata.<init>] indexes: [fk48bd65201e932885, fk48bd6520d32dcea2]
+[INFO 2012-08-17 18:51:40,565] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_javatask_ideps
+[INFO 2012-08-17 18:51:40,566] [SCHED_HIB.TableMetadata.<init>] columns: [itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,566] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk8b25cd4bc5e80d4]
+[INFO 2012-08-17 18:51:40,566] [SCHED_HIB.TableMetadata.<init>] indexes: [fk8b25cd4bc5e80d4]
+[INFO 2012-08-17 18:51:40,573] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_javatask_joinedbranches
+[INFO 2012-08-17 18:51:40,573] [SCHED_HIB.TableMetadata.<init>] columns: [itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,573] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk371f1adbc5e80d4]
+[INFO 2012-08-17 18:51:40,573] [SCHED_HIB.TableMetadata.<init>] indexes: [fk371f1adbc5e80d4]
+[INFO 2012-08-17 18:51:40,587] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_ntvtask
+[INFO 2012-08-17 18:51:40,587] [SCHED_HIB.TableMetadata.<init>] columns: [resultpreview, match_block, hid, exec_container_type, run_as_me, itask_id, postscript_hid, max_exec_on_failure, canceljobonerror_hid, iteration, flowscript_hid, skipidepsinserialization, exec_container_id, replication, maxnumberofexecution_hid, precious_logs, description, name, itask_type, walltime, flow_block, prescript_hid, precious_result, parallelenvironment_hid, cscript_hid, taskinfo_hid, restarttaskonerror_hid]
+[INFO 2012-08-17 18:51:40,587] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk867382dfc97bf97a, fk867382df40fb4b57, fk867382dff82025df, fk867382df76f632d4, fk867382df30d508c, fk867382df6f38208f, fk867382dff5367700, fk867382df841c2cb1, fk867382df5f7002cf]
+[INFO 2012-08-17 18:51:40,587] [SCHED_HIB.TableMetadata.<init>] indexes: [fk867382dfc97bf97a, fk867382df40fb4b57, primary, fk867382dff82025df, fk867382df76f632d4, fk867382df30d508c, fk867382dff5367700, fk867382df6f38208f, fk867382df5f7002cf, fk867382df841c2cb1]
+[INFO 2012-08-17 18:51:40,595] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_ntvtask_big_string
+[INFO 2012-08-17 18:51:40,595] [SCHED_HIB.TableMetadata.<init>] columns: [genericinformations_id, i_ntvtask_hid, mapkey]
+[INFO 2012-08-17 18:51:40,595] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk740335b05a02b911, fk740335b0adf700e0]
+[INFO 2012-08-17 18:51:40,595] [SCHED_HIB.TableMetadata.<init>] indexes: [genericinformations_id, primary, fk740335b05a02b911, fk740335b0adf700e0]
+[INFO 2012-08-17 18:51:40,602] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_ntvtask_input_selector
+[INFO 2012-08-17 18:51:40,602] [SCHED_HIB.TableMetadata.<init>] columns: [inputfiles_hid, i_ntvtask_hid]
+[INFO 2012-08-17 18:51:40,602] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkdd1ca634adf700e0, fkdd1ca634cfbea2a5]
+[INFO 2012-08-17 18:51:40,602] [SCHED_HIB.TableMetadata.<init>] indexes: [fkdd1ca634adf700e0, inputfiles_hid, fkdd1ca634cfbea2a5]
+[INFO 2012-08-17 18:51:40,609] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_ntvtask_output_selector
+[INFO 2012-08-17 18:51:40,609] [SCHED_HIB.TableMetadata.<init>] columns: [outputfiles_hid, i_ntvtask_hid]
+[INFO 2012-08-17 18:51:40,609] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkf33e53fdbfec8f8f, fkf33e53fdadf700e0]
+[INFO 2012-08-17 18:51:40,609] [SCHED_HIB.TableMetadata.<init>] indexes: [fkf33e53fdbfec8f8f, fkf33e53fdadf700e0, outputfiles_hid]
+[INFO 2012-08-17 18:51:40,616] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_ntvtask_selection_script
+[INFO 2012-08-17 18:51:40,616] [SCHED_HIB.TableMetadata.<init>] columns: [ss_id, depend_id]
+[INFO 2012-08-17 18:51:40,616] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fke092285e1b2d55d7, fke092285e1e932885]
+[INFO 2012-08-17 18:51:40,616] [SCHED_HIB.TableMetadata.<init>] indexes: [fke092285e1b2d55d7, fke092285e1e932885]
+[INFO 2012-08-17 18:51:40,622] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_ntvtask_ideps
+[INFO 2012-08-17 18:51:40,623] [SCHED_HIB.TableMetadata.<init>] columns: [itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,623] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk4aeaa4cd545e0809]
+[INFO 2012-08-17 18:51:40,623] [SCHED_HIB.TableMetadata.<init>] indexes: [fk4aeaa4cd545e0809]
+[INFO 2012-08-17 18:51:40,630] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.i_ntvtask_joinedbranches
+[INFO 2012-08-17 18:51:40,630] [SCHED_HIB.TableMetadata.<init>] columns: [itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,630] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkaf279599545e0809]
+[INFO 2012-08-17 18:51:40,630] [SCHED_HIB.TableMetadata.<init>] indexes: [fkaf279599545e0809]
+[INFO 2012-08-17 18:51:40,637] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.java_execcontainer_arguments
+[INFO 2012-08-17 18:51:40,638] [SCHED_HIB.TableMetadata.<init>] columns: [serializedarguments_id, mapkey, j_exec_container_id]
+[INFO 2012-08-17 18:51:40,638] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkb10a378af1a2ffda, fkb10a378af55723f4]
+[INFO 2012-08-17 18:51:40,638] [SCHED_HIB.TableMetadata.<init>] indexes: [serializedarguments_id, primary, fkb10a378af1a2ffda, fkb10a378af55723f4]
+[INFO 2012-08-17 18:51:40,644] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.java_exec_container
+[INFO 2012-08-17 18:51:40,645] [SCHED_HIB.TableMetadata.<init>] columns: [executable_class, hid, exec_container_type, forkenvironment_hid]
+[INFO 2012-08-17 18:51:40,645] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk313949f02cc30ac4]
+[INFO 2012-08-17 18:51:40,645] [SCHED_HIB.TableMetadata.<init>] indexes: [primary, fk313949f02cc30ac4]
+[INFO 2012-08-17 18:51:40,651] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.jobcp_entries
+[INFO 2012-08-17 18:51:40,652] [SCHED_HIB.TableMetadata.<init>] columns: [id, crc, contains_jar, cp_content]
+[INFO 2012-08-17 18:51:40,652] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,652] [SCHED_HIB.TableMetadata.<init>] indexes: [crc, primary]
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.job_environment
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] columns: [crc, contains_jar, hid, classpath]
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.job_id
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] columns: [id, hid, readable_name]
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,686] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.job_info
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] columns: [hid, to_remove, nb_running_tasks, status, finished_time, removed_time, jobid_hid, nb_pending_tasks, nb_tasks, priority, start_time, nb_finished_tasks, submit_time]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkd0203010628b4927]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] indexes: [fkd0203010628b4927, primary]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.job_result_impl
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] columns: [id_hid, hid]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk67a05b60b3702f2a]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] indexes: [fk67a05b60b3702f2a, primary]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.log4j_task_logs
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] columns: [hid, logger_name, serialized_log_events]
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,702] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.native_exec_container
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] columns: [native_command, hid, generated_hid, working_dir]
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk8b69df5b9a863996]
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] indexes: [fk8b69df5b9a863996, primary]
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.output_selector
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] columns: [hid, outputfiles_hid, output_mode]
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk76f5195ddfe2aa4a]
+[INFO 2012-08-17 18:51:40,703] [SCHED_HIB.TableMetadata.<init>] indexes: [fk76f5195ddfe2aa4a, primary]
+[INFO 2012-08-17 18:51:40,707] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.parallel_env
+[INFO 2012-08-17 18:51:40,708] [SCHED_HIB.TableMetadata.<init>] columns: [hid, topologydescriptor_hibernateid, nodes_number]
+[INFO 2012-08-17 18:51:40,708] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk1fc7fe95e5589393]
+[INFO 2012-08-17 18:51:40,708] [SCHED_HIB.TableMetadata.<init>] indexes: [fk1fc7fe95e5589393, primary]
+[INFO 2012-08-17 18:51:40,715] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.property_modifier
+[INFO 2012-08-17 18:51:40,715] [SCHED_HIB.TableMetadata.<init>] columns: [append, appendchar, hid, name, value, sysenv]
+[INFO 2012-08-17 18:51:40,716] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk5df9160132edfb6f]
+[INFO 2012-08-17 18:51:40,716] [SCHED_HIB.TableMetadata.<init>] indexes: [fk5df9160132edfb6f, primary]
+[INFO 2012-08-17 18:51:40,723] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.restart_mode
+[INFO 2012-08-17 18:51:40,723] [SCHED_HIB.TableMetadata.<init>] columns: [index_, hid, description]
+[INFO 2012-08-17 18:51:40,723] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,723] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,731] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.selection_script
+[INFO 2012-08-17 18:51:40,731] [SCHED_HIB.TableMetadata.<init>] columns: [dynamic, scriptengine, parameters, script_id, hibernateid, script, s_script_id]
+[INFO 2012-08-17 18:51:40,731] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,731] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,738] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.simple_script
+[INFO 2012-08-17 18:51:40,738] [SCHED_HIB.TableMetadata.<init>] columns: [scriptengine, hid, parameters, script_id, script]
+[INFO 2012-08-17 18:51:40,738] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,738] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,744] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.simple_task_logs
+[INFO 2012-08-17 18:51:40,744] [SCHED_HIB.TableMetadata.<init>] columns: [error_logs, hid, standard_logs]
+[INFO 2012-08-17 18:51:40,744] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,745] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,751] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.task_id
+[INFO 2012-08-17 18:51:40,751] [SCHED_HIB.TableMetadata.<init>] columns: [jobid_hid, id, hid, readable_name]
+[INFO 2012-08-17 18:51:40,751] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkcf2b9615628b4927]
+[INFO 2012-08-17 18:51:40,752] [SCHED_HIB.TableMetadata.<init>] indexes: [primary, fkcf2b9615628b4927]
+[INFO 2012-08-17 18:51:40,760] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.task_info
+[INFO 2012-08-17 18:51:40,760] [SCHED_HIB.TableMetadata.<init>] columns: [progress, nb_exec_on_failure_left, task_state, hid, exec_hostname, nb_exec_left, taskid_hid, start_time, finished_time, exec_duration, jobinfo_hid]
+[INFO 2012-08-17 18:51:40,760] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkb29e9328b95ff0f1, fkb29e93284cb16e0d]
+[INFO 2012-08-17 18:51:40,760] [SCHED_HIB.TableMetadata.<init>] indexes: [fkb29e9328b95ff0f1, fkb29e93284cb16e0d, primary]
+[INFO 2012-08-17 18:51:40,770] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.task_result_impl
+[INFO 2012-08-17 18:51:40,770] [SCHED_HIB.TableMetadata.<init>] columns: [output_id, serialized_value, id_hid, hid, previewer_classname, flowaction_hid, previousresult_hid, all_results, job_classpath, precious_results, output_type, mapkey, serialized_exception]
+[INFO 2012-08-17 18:51:40,771] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk2cd8cd486c8a7067, fk2cd8cd4813c8b32c, fk2cd8cd48f8cee02a, fk2cd8cd48dfaa0225, fk2cd8cd48dd2f11e8]
+[INFO 2012-08-17 18:51:40,771] [SCHED_HIB.TableMetadata.<init>] indexes: [fk2cd8cd4813c8b32c, fk2cd8cd486c8a7067, fk2cd8cd48f8cee02a, fk2cd8cd48dfaa0225, primary, fk2cd8cd48dd2f11e8]
+[INFO 2012-08-17 18:51:40,778] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.task_result_impl_big_string
+[INFO 2012-08-17 18:51:40,778] [SCHED_HIB.TableMetadata.<init>] columns: [propagatedproperties_id, task_result_impl_hid, mapkey]
+[INFO 2012-08-17 18:51:40,778] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkce287fa7b9e68561, fkce287fa79757b9db]
+[INFO 2012-08-17 18:51:40,778] [SCHED_HIB.TableMetadata.<init>] indexes: [propagatedproperties_id, primary, fkce287fa7b9e68561, fkce287fa79757b9db]
+[INFO 2012-08-17 18:51:40,784] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.topology_descriptor
+[INFO 2012-08-17 18:51:40,785] [SCHED_HIB.TableMetadata.<init>] columns: [dtype, hibernateid, topology_based, threshold]
+[INFO 2012-08-17 18:51:40,785] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,785] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,792] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.updatable_properties
+[INFO 2012-08-17 18:51:40,793] [SCHED_HIB.TableMetadata.<init>] columns: [value_type, set_, hid, value_id]
+[INFO 2012-08-17 18:51:40,793] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,793] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,794] [SCHED_HIB.SchemaUpdate.execute] schema update complete
+[INFO 2012-08-17 18:51:41,001] [SCHED.SchedulerHibernateDatabaseManager.recoverAllJobs] Created query to find IDs : SELECT c.jobInfo.jobId from org.ow2.proactive.scheduler.job.InternalJob c WHERE c.jobInfo.removedTime <= :C0
+[INFO 2012-08-17 18:51:41,002] [SCHED.SchedulerHibernateDatabaseManager.recoverAllJobs] Found 0 jobs to retrieve
+[INFO 2012-08-17 18:51:41,002] [SCHED.SchedulerHibernateDatabaseManager.recoverAllJobs] Creating queries for each job to recover
+[INFO 2012-08-17 18:51:41,002] [SCHED.SchedulerCore.recover] No Job to recover.
+[INFO 2012-08-17 18:51:41,006] [SCHED.SchedulerFrontend.recover] #Pending jobs list : 0
+[INFO 2012-08-17 18:51:41,007] [SCHED.SchedulerFrontend.recover] #Running jobs list : 0
+[INFO 2012-08-17 18:51:41,007] [SCHED.SchedulerFrontend.recover] #Finished jobs list : 0
+[INFO 2012-08-17 18:51:41,007] [SCHED.MainLoopRequestFilter.<init>] terminate is filtered with id = internal
+[INFO 2012-08-17 18:51:41,008] [SCHED.MainLoopRequestFilter.<init>] submit is filtered with id = external
+[INFO 2012-08-17 18:51:41,008] [SCHED.MainLoopRequestFilter.<init>] killTask is filtered with id = external
+[INFO 2012-08-17 18:51:41,009] [SCHED.MainLoopRequestFilter.<init>] restartTask is filtered with id = external
+[INFO 2012-08-17 18:51:41,009] [SCHED.MainLoopRequestFilter.<init>] preemptTask is filtered with id = external
+[INFO 2012-08-17 18:51:41,009] [SCHED.MainLoopRequestFilter.<init>] listenJobLogs is filtered with id = external
+[INFO 2012-08-17 18:51:41,010] [SCHED.SchedulerCore.createPingThread] Starting nodes pinging thread (ping frequency is : 20000ms )
+[INFO 2012-08-17 18:51:41,053] [SCHED.SchedulerCore.start] Scheduler has just been started !
+[INFO 2012-08-17 18:51:41,657] [SCHED.SchedulerStarter.main] Scheduler successfully created on pnp://10.10.0.1:52845/
+[INFO 2012-08-17 18:51:58,510] [SCHED.AuthenticationImpl.authenticate] watcher is trying to connect
+[INFO 2012-08-17 18:51:58,522] [SCHED.LDAP2LoginModule.<init>] Using Login file for fall back authentication at : D:\ProActiveScheduling-3.2.0_server\config/authentication/login.cfg
+[INFO 2012-08-17 18:51:58,522] [SCHED.LDAP2LoginModule.<init>] Using Group file for fall back group membership at : D:\ProActiveScheduling-3.2.0_server\config/authentication/group.cfg
+[INFO 2012-08-17 18:51:58,545] [SCHED.LDAP2LoginModule.logUser] user entry not found in subtree dc=mgps,dc=inra,dc=fr for user watcher
+[INFO 2012-08-17 18:51:58,546] [SCHED.LDAP2LoginModule.logUser] fall back to file authentication for user : watcher
+[INFO 2012-08-17 18:51:58,549] [SCHED.AuthenticationImpl.authenticate] User watcher logged successfully
+[INFO 2012-08-17 18:51:58,549] [SCHED.SchedulerAuthentication.login] user : watcher
+[INFO 2012-08-17 18:51:58,677] [SCHED.SchedulerFrontend.connect] watcher successfully connected !
+[INFO 2012-08-17 18:53:16,046] [SCHED.AuthenticationImpl.authenticate] demo is trying to connect
+[INFO 2012-08-17 18:53:16,047] [SCHED.LDAP2LoginModule.<init>] Using Login file for fall back authentication at : D:\ProActiveScheduling-3.2.0_server\config/authentication/login.cfg
+[INFO 2012-08-17 18:53:16,047] [SCHED.LDAP2LoginModule.<init>] Using Group file for fall back group membership at : D:\ProActiveScheduling-3.2.0_server\config/authentication/group.cfg
+[INFO 2012-08-17 18:53:16,052] [SCHED.LDAP2LoginModule.logUser] user entry not found in subtree dc=mgps,dc=inra,dc=fr for user demo
+[INFO 2012-08-17 18:53:16,052] [SCHED.LDAP2LoginModule.logUser] fall back to file authentication for user : demo
+[INFO 2012-08-17 18:53:16,053] [SCHED.AuthenticationImpl.authenticate] User demo logged successfully
+[INFO 2012-08-17 18:53:16,053] [SCHED.SchedulerAuthentication.login] user : demo
+[INFO 2012-08-17 18:53:16,058] [SCHED.SchedulerFrontend.connect] demo successfully connected !
+[INFO 2012-08-17 18:53:20,452] [SCHED.AuthenticationImpl.authenticate] demo is trying to connect
+[INFO 2012-08-17 18:53:20,453] [SCHED.LDAP2LoginModule.<init>] Using Login file for fall back authentication at : D:\ProActiveScheduling-3.2.0_server\config/authentication/login.cfg
+[INFO 2012-08-17 18:53:20,453] [SCHED.LDAP2LoginModule.<init>] Using Group file for fall back group membership at : D:\ProActiveScheduling-3.2.0_server\config/authentication/group.cfg
+[INFO 2012-08-17 18:53:20,458] [SCHED.LDAP2LoginModule.logUser] user entry not found in subtree dc=mgps,dc=inra,dc=fr for user demo
+[INFO 2012-08-17 18:53:20,458] [SCHED.LDAP2LoginModule.logUser] fall back to file authentication for user : demo
+[INFO 2012-08-17 18:53:20,459] [SCHED.AuthenticationImpl.authenticate] User demo logged successfully
+[INFO 2012-08-17 18:53:35,210] [SCHED.SchedulerFrontend.submit] New job submission requested : job_PI
+[INFO 2012-08-17 18:53:35,218] [SCHED.InternalJobFactory.createJob] Create job 'job_PI' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[INFO 2012-08-17 18:53:35,232] [SCHED.InternalJobFactory.setJobCommonProperties] Setting job common properties
+[INFO 2012-08-17 18:53:35,233] [SCHED.SchedulerFrontend.submit] Preparing and settings job submission
+[INFO 2012-08-17 18:53:35,237] [SCHED.SchedulerCore.submit] Trying to submit new Job '1'
+[INFO 2012-08-17 18:53:35,362] [SCHED.SchedulerCore.submit] New job added to Scheduler lists : '1'
+[INFO 2012-08-17 18:53:35,427] [SCHED.SchedulerCore.submit] JobEnvironment and internalTask unloaded for job '1'
+[INFO 2012-08-17 18:53:35,444] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:35,444] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 6
+[INFO 2012-08-17 18:53:35,444] [SCHED.SchedulerFrontend.submit] New job submitted '1' containing 9 tasks (owner is 'demo')
+[INFO 2012-08-17 18:53:35,458] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 5
+[INFO 2012-08-17 18:53:37,061] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:37,250] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Computation3' for job '1'
+[INFO 2012-08-17 18:53:37,250] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10001' started on 10.10.0.102(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:37,250] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '1' (event='Job pending to running')
+[INFO 2012-08-17 18:53:37,362] [SCHED.SchedulingMethodImpl.finalizeStarting] Job '1' started
+[INFO 2012-08-17 18:53:37,377] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:37,572] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Computation6' for job '1'
+[INFO 2012-08-17 18:53:37,572] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10004' started on 10.10.0.111(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:37,587] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:37,721] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Computation1' for job '1'
+[INFO 2012-08-17 18:53:37,721] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10006' started on 10.10.0.106(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:37,735] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:37,882] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Computation2' for job '1'
+[INFO 2012-08-17 18:53:37,882] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10002' started on 10.10.0.107(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:37,895] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:38,068] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Computation5' for job '1'
+[INFO 2012-08-17 18:53:38,069] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10005' started on 10.10.0.109(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:38,076] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 0
+[INFO 2012-08-17 18:53:38,078] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:38,078] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 18:53:38,083] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 0
+[INFO 2012-08-17 18:53:40,084] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:40,084] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 18:53:40,090] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 0
+[INFO 2012-08-17 18:53:41,026] [SCHED.SchedulerCore$2.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2012-08-17 18:53:41,026] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2012-08-17 18:53:42,104] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:42,104] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 18:53:42,111] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 0
+[INFO 2012-08-17 18:53:43,586] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10004' - job '1'
+[INFO 2012-08-17 18:53:43,596] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10004
+[INFO 2012-08-17 18:53:43,596] [SCHED.SchedulerCore.terminate] Task '10004' on job '1' terminated
+[INFO 2012-08-17 18:53:43,596] [SCHED.SchedulerCore.terminate] Task '10004' terminated without error
+[INFO 2012-08-17 18:53:43,596] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Computation6'
+[INFO 2012-08-17 18:53:43,621] [SCHED.SchedulerCore.terminate] Number of finished tasks : 1 - Number of tasks : 9
+[INFO 2012-08-17 18:53:43,630] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:43,631] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 18:53:43,665] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 1
+[INFO 2012-08-17 18:53:43,686] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:43,766] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Computation4' for job '1'
+[INFO 2012-08-17 18:53:43,766] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10003' started on 10.10.0.111(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:43,769] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:44,469] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10005' - job '1'
+[INFO 2012-08-17 18:53:44,475] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10005
+[INFO 2012-08-17 18:53:44,475] [SCHED.SchedulerCore.terminate] Task '10005' on job '1' terminated
+[INFO 2012-08-17 18:53:44,475] [SCHED.SchedulerCore.terminate] Task '10005' terminated without error
+[INFO 2012-08-17 18:53:44,476] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Computation5'
+[INFO 2012-08-17 18:53:44,498] [SCHED.SchedulerCore.terminate] Number of finished tasks : 2 - Number of tasks : 9
+[INFO 2012-08-17 18:53:44,503] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:45,531] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10001' - job '1'
+[INFO 2012-08-17 18:53:45,538] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10001
+[INFO 2012-08-17 18:53:45,538] [SCHED.SchedulerCore.terminate] Task '10001' on job '1' terminated
+[INFO 2012-08-17 18:53:45,538] [SCHED.SchedulerCore.terminate] Task '10001' terminated without error
+[INFO 2012-08-17 18:53:45,539] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Computation3'
+[INFO 2012-08-17 18:53:45,567] [SCHED.SchedulerCore.terminate] Number of finished tasks : 3 - Number of tasks : 9
+[INFO 2012-08-17 18:53:45,573] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:45,763] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10006' - job '1'
+[INFO 2012-08-17 18:53:45,769] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10006
+[INFO 2012-08-17 18:53:45,769] [SCHED.SchedulerCore.terminate] Task '10006' on job '1' terminated
+[INFO 2012-08-17 18:53:45,769] [SCHED.SchedulerCore.terminate] Task '10006' terminated without error
+[INFO 2012-08-17 18:53:45,769] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Computation1'
+[INFO 2012-08-17 18:53:45,798] [SCHED.SchedulerCore.terminate] Number of finished tasks : 4 - Number of tasks : 9
+[INFO 2012-08-17 18:53:45,804] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:45,804] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10002' - job '1'
+[INFO 2012-08-17 18:53:45,810] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10002
+[INFO 2012-08-17 18:53:45,811] [SCHED.SchedulerCore.terminate] Task '10002' on job '1' terminated
+[INFO 2012-08-17 18:53:45,811] [SCHED.SchedulerCore.terminate] Task '10002' terminated without error
+[INFO 2012-08-17 18:53:45,811] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Computation2'
+[INFO 2012-08-17 18:53:45,837] [SCHED.SchedulerCore.terminate] Number of finished tasks : 5 - Number of tasks : 9
+[INFO 2012-08-17 18:53:47,844] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:47,844] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 18:53:47,851] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 4
+[INFO 2012-08-17 18:53:47,893] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:47,982] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Average1' for job '1'
+[INFO 2012-08-17 18:53:47,982] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10008' started on 10.10.0.109(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:47,983] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:48,197] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10008' - job '1'
+[INFO 2012-08-17 18:53:48,203] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10008
+[INFO 2012-08-17 18:53:48,203] [SCHED.SchedulerCore.terminate] Task '10008' on job '1' terminated
+[INFO 2012-08-17 18:53:48,203] [SCHED.SchedulerCore.terminate] Task '10008' terminated without error
+[INFO 2012-08-17 18:53:48,203] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Average1'
+[INFO 2012-08-17 18:53:48,233] [SCHED.SchedulerCore.terminate] Number of finished tasks : 6 - Number of tasks : 9
+[INFO 2012-08-17 18:53:48,238] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:49,627] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10003' - job '1'
+[INFO 2012-08-17 18:53:49,633] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10003
+[INFO 2012-08-17 18:53:49,633] [SCHED.SchedulerCore.terminate] Task '10003' on job '1' terminated
+[INFO 2012-08-17 18:53:49,633] [SCHED.SchedulerCore.terminate] Task '10003' terminated without error
+[INFO 2012-08-17 18:53:49,633] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Computation4'
+[INFO 2012-08-17 18:53:49,657] [SCHED.SchedulerCore.terminate] Number of finished tasks : 7 - Number of tasks : 9
+[INFO 2012-08-17 18:53:49,662] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:49,663] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 18:53:49,675] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 5
+[INFO 2012-08-17 18:53:49,721] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:49,798] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'Average2' for job '1'
+[INFO 2012-08-17 18:53:49,799] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10007' started on 10.10.0.107(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:49,802] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:49,967] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10007' - job '1'
+[INFO 2012-08-17 18:53:49,973] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10007
+[INFO 2012-08-17 18:53:49,973] [SCHED.SchedulerCore.terminate] Task '10007' on job '1' terminated
+[INFO 2012-08-17 18:53:49,973] [SCHED.SchedulerCore.terminate] Task '10007' terminated without error
+[INFO 2012-08-17 18:53:49,973] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'Average2'
+[INFO 2012-08-17 18:53:50,002] [SCHED.SchedulerCore.terminate] Number of finished tasks : 8 - Number of tasks : 9
+[INFO 2012-08-17 18:53:50,007] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:50,008] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 18:53:50,020] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 5
+[INFO 2012-08-17 18:53:50,061] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2012-08-17 18:53:50,128] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'LastAverage' for job '1'
+[INFO 2012-08-17 18:53:50,128] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '10000' started on 10.10.0.106(node: PA-AGENT_NODE)
+[INFO 2012-08-17 18:53:50,131] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 18:53:50,288] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10000' - job '1'
+[INFO 2012-08-17 18:53:50,293] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10000
+[INFO 2012-08-17 18:53:50,293] [SCHED.SchedulerCore.terminate] Task '10000' on job '1' terminated
+[INFO 2012-08-17 18:53:50,293] [SCHED.SchedulerCore.terminate] Task '10000' terminated without error
+[INFO 2012-08-17 18:53:50,294] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'LastAverage'
+[INFO 2012-08-17 18:53:50,297] [SCHED.SchedulerCore.terminate] Job '1' terminated
+[INFO 2012-08-17 18:53:50,297] [SCHED.SchedulerCore.terminateJobHandling] Cleaning loggers for Job '1'
+[INFO 2012-08-17 18:53:50,298] [SCHED.SchedulerCore.removeTaskClassServer] Removing TaskClassServer for Job '1'
+[INFO 2012-08-17 18:53:50,348] [SCHED.SchedulerCore.terminate] Number of finished tasks : 9 - Number of tasks : 9
+[INFO 2012-08-17 19:05:06,520] [SCHED.AuthenticationImpl.authenticate] demo is trying to connect
+[INFO 2012-08-17 19:05:06,521] [SCHED.LDAP2LoginModule.<init>] Using Login file for fall back authentication at : D:\ProActiveScheduling-3.2.0_server\config/authentication/login.cfg
+[INFO 2012-08-17 19:05:06,521] [SCHED.LDAP2LoginModule.<init>] Using Group file for fall back group membership at : D:\ProActiveScheduling-3.2.0_server\config/authentication/group.cfg
+[INFO 2012-08-17 19:05:06,526] [SCHED.LDAP2LoginModule.logUser] user entry not found in subtree dc=mgps,dc=inra,dc=fr for user demo
+[INFO 2012-08-17 19:05:06,526] [SCHED.LDAP2LoginModule.logUser] fall back to file authentication for user : demo
+[INFO 2012-08-17 19:05:06,528] [SCHED.AuthenticationImpl.authenticate] User demo logged successfully
+[INFO 2012-08-17 19:05:06,528] [SCHED.SchedulerAuthentication.login] user : demo
+[INFO 2012-08-17 19:05:06,532] [SCHED.SchedulerFrontend.connect] demo successfully connected !
+[INFO 2012-08-17 19:05:06,646] [SCHED.SchedulerFrontend.submit] New job submission requested : BranchingExample
+[INFO 2012-08-17 19:05:06,648] [SCHED.InternalJobFactory.createJob] Create job 'BranchingExample' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[INFO 2012-08-17 19:05:06,650] [SCHED.InternalJobFactory.setJobCommonProperties] Setting job common properties
+[INFO 2012-08-17 19:05:06,651] [SCHED.SchedulerFrontend.submit] Preparing and settings job submission
+[INFO 2012-08-17 19:05:06,652] [SCHED.SchedulerCore.submit] Trying to submit new Job '2'
+[INFO 2012-08-17 19:05:06,690] [SCHED.SchedulerCore.submit] New job added to Scheduler lists : '2'
+[INFO 2012-08-17 19:05:06,708] [SCHED.SchedulerCore.submit] JobEnvironment and internalTask unloaded for job '2'
+[INFO 2012-08-17 19:05:06,710] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 19:05:06,710] [SCHED.SchedulingMethodImpl.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2012-08-17 19:05:06,710] [SCHED.SchedulerFrontend.submit] New job submitted '2' containing 5 tasks (owner is 'demo')
+[INFO 2012-08-17 19:05:06,718] [SCHED.SchedulingMethodImpl.schedule] Number of free resources : 13
+[INFO 2012-08-17 19:05:06,746] [SCHED.SchedulerFrontend.disconnect] User 'demo' has disconnect the scheduler !
+[INFO 2012-08-17 19:05:06,844] [SCHED.InternalNativeTask.createLauncher] Create native task launcher
+[INFO 2012-08-17 19:05:07,041] [SCHED.SchedulingMethodImpl.createExecution] Starting deployment of task 'A' for job '2'
+[INFO 2012-08-17 19:05:07,041] [SCHED.SchedulingMethodImpl.finalizeStarting] Task '20002' started on 10.10.0.104(node: PA-AGENT_NODE)
+[INFO 2012-08-17 19:05:07,041] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '2' (event='Job pending to running')
+[INFO 2012-08-17 19:05:07,049] [SCHED.SchedulingMethodImpl.finalizeStarting] Job '2' started
+[INFO 2012-08-17 19:05:07,052] [SCHED.SchedulingMethodImpl.createJobDescriptorList] Number of jobs containing tasks to be scheduled : 1
+[INFO 2012-08-17 19:05:07,858] [SCHED.SchedulerCore.terminate] Received terminate task request for task '20002' - job '2'
+[INFO 2012-08-17 19:05:07,862] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 20002
+[INFO 2012-08-17 19:05:07,862] [SCHED.SchedulerCore.terminate] Task '20002' on job '2' terminated
+[ERROR 2012-08-17 19:05:07,869] [SCHED.SchedulerCore.terminate] error occured '20002'
+org.ow2.proactive.scheduler.exception.StartProcessException: Cannot run program "/home/esalagea/ActiveEon/workflow_editor/workspace/SchedulerTrunk/samples/jobs_descriptors/Workflow/branching/getline.sh": CreateProcess error=2, The system cannot find the file specified
+	at org.ow2.proactive.scheduler.task.NativeExecutable.execute(NativeExecutable.java:313)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.doTask(NativeTaskLauncher.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:620)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:581)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:314)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:196)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: java.io.IOException: Cannot run program "/home/esalagea/ActiveEon/workflow_editor/workspace/SchedulerTrunk/samples/jobs_descriptors/Workflow/branching/getline.sh": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:460)
+	at org.objectweb.proactive.extensions.processbuilder.BasicProcessBuilder.start(BasicProcessBuilder.java:117)
+	at org.ow2.proactive.scheduler.task.NativeExecutable.createProcessAndStart(NativeExecutable.java:378)
+	at org.ow2.proactive.scheduler.task.NativeExecutable.execute(NativeExecutable.java:307)
+	... 17 more
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:81)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:30)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:453)
+	... 20 more
+[INFO 2012-08-17 19:05:07,870] [SCHED.SchedulerCore.terminate] Task '20002' terminated with error
+[INFO 2012-08-17 19:05:07,870] [SCHED.SchedulerCore.endJob] Job ending request for job '2' - cause by task '20002' - status : Canceled
+[INFO 2012-08-17 19:05:07,871] [SCHED.SchedulerCore.endJob] Force terminating task '20002'
+[INFO 2012-08-17 19:05:07,890] [SCHED.SchedulerCore.terminateJobHandling] Cleaning loggers for Job '2'
+[INFO 2012-08-17 19:05:07,891] [SCHED.SchedulerCore.removeTaskClassServer] Removing TaskClassServer for Job '2'
+[INFO 2012-08-17 19:05:07,891] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '2' (event='Job running to finished')
+[INFO 2012-08-17 19:05:07,921] [SCHED.SchedulerCore.endJob] Job '2' terminated (Canceled)
+[INFO 2012-08-17 19:32:04,439] [SCHED.SchedulerCore.removeJob] Request to remove job '2'
+[INFO 2012-08-17 19:32:04,447] [SCHED.SchedulerCore.removeJob] Remove job '2' also from  dataBase : true
+[INFO 2012-08-17 19:32:04,498] [SCHED.HibernateDatabaseManager.delete] Deleting Object : org.ow2.proactive.scheduler.job.InternalTaskFlowJob
+[WARN 2012-08-17 19:32:04,559] [SCHED_HIB.JDBCExceptionReporter.logExceptions] SQL Error: 1451, SQLState: 23000
+[ERROR 2012-08-17 19:32:04,559] [SCHED_HIB.JDBCExceptionReporter.logExceptions] Cannot delete or update a parent row: a foreign key constraint fails (`scheduler_db`.`task_result_impl`, CONSTRAINT `FK2CD8CD486C8A7067` FOREIGN KEY (`previousResult_hId`) REFERENCES `task_result_impl` (`hId`))
+[ERROR 2012-08-17 19:32:04,560] [SCHED_HIB.AbstractFlushingEventListener.performExecutions] Could not synchronize database state with session
+org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:94)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:114)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:109)
+	at org.hibernate.jdbc.AbstractBatcher.prepareBatchStatement(AbstractBatcher.java:244)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2507)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2725)
+	at org.hibernate.action.EntityDeleteAction.execute(EntityDeleteAction.java:97)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:279)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:263)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at org.ow2.proactive.db.HibernateDatabaseManager.commitTransaction(HibernateDatabaseManager.java:316)
+	at org.ow2.proactive.db.HibernateDatabaseManager.delete(HibernateDatabaseManager.java:373)
+	at org.ow2.proactive.scheduler.core.db.SchedulerDatabaseManagerSelector.delete(SchedulerDatabaseManagerSelector.java:143)
+	at org.ow2.proactive.scheduler.core.SchedulerCore.removeJob(SchedulerCore.java:1758)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:620)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:581)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:166)
+	at org.ow2.proactive.scheduler.core.SchedulerCore.runActivity(SchedulerCore.java:644)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:196)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: java.sql.BatchUpdateException: Cannot delete or update a parent row: a foreign key constraint fails (`scheduler_db`.`task_result_impl`, CONSTRAINT `FK2CD8CD486C8A7067` FOREIGN KEY (`previousResult_hId`) REFERENCES `task_result_impl` (`hId`))
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2024)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1449)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeBatch(NewProxyPreparedStatement.java:1723)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 33 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`scheduler_db`.`task_result_impl`, CONSTRAINT `FK2CD8CD486C8A7067` FOREIGN KEY (`previousResult_hId`) REFERENCES `task_result_impl` (`hId`))
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3597)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3529)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1990)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2151)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2625)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2119)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2415)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1976)
+	... 37 more
+[ERROR 2012-08-17 19:32:04,563] [SCHED.HibernateDatabaseManager.delete] 
+org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:94)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:114)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:109)
+	at org.hibernate.jdbc.AbstractBatcher.prepareBatchStatement(AbstractBatcher.java:244)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2507)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2725)
+	at org.hibernate.action.EntityDeleteAction.execute(EntityDeleteAction.java:97)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:279)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:263)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at org.ow2.proactive.db.HibernateDatabaseManager.commitTransaction(HibernateDatabaseManager.java:316)
+	at org.ow2.proactive.db.HibernateDatabaseManager.delete(HibernateDatabaseManager.java:373)
+	at org.ow2.proactive.scheduler.core.db.SchedulerDatabaseManagerSelector.delete(SchedulerDatabaseManagerSelector.java:143)
+	at org.ow2.proactive.scheduler.core.SchedulerCore.removeJob(SchedulerCore.java:1758)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:620)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:581)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:166)
+	at org.ow2.proactive.scheduler.core.SchedulerCore.runActivity(SchedulerCore.java:644)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:196)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: java.sql.BatchUpdateException: Cannot delete or update a parent row: a foreign key constraint fails (`scheduler_db`.`task_result_impl`, CONSTRAINT `FK2CD8CD486C8A7067` FOREIGN KEY (`previousResult_hId`) REFERENCES `task_result_impl` (`hId`))
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2024)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1449)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeBatch(NewProxyPreparedStatement.java:1723)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 33 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`scheduler_db`.`task_result_impl`, CONSTRAINT `FK2CD8CD486C8A7067` FOREIGN KEY (`previousResult_hId`) REFERENCES `task_result_impl` (`hId`))
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3597)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3529)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1990)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2151)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2625)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2119)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2415)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1976)
+	... 37 more
+[INFO 2012-08-17 19:32:14,893] [SCHED.SchedulerCore.removeJob] Request to remove job '2'
+[INFO 2012-08-17 19:32:14,893] [SCHED.SchedulerCore.removeJob] Job '2' has already been removed or is not finished !
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.file_selector
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] columns: [hid, excludes, case_sensitive, includes]
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,356] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.flow_script
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] columns: [target_cont, scriptengine, hid, target, actiontype, parameters, script_id, script, target_else]
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,365] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,373] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.fork_environment
+[INFO 2012-08-17 18:51:40,374] [SCHED_HIB.TableMetadata.<init>] columns: [java_home, script_hid, hid, working_dir]
+[INFO 2012-08-17 18:51:40,374] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fkf82715f6dac6ffec]
+[INFO 2012-08-17 18:51:40,374] [SCHED_HIB.TableMetadata.<init>] indexes: [fkf82715f6dac6ffec, primary]
+[INFO 2012-08-17 18:51:40,381] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.generation_script
+[INFO 2012-08-17 18:51:40,382] [SCHED_HIB.TableMetadata.<init>] columns: [scriptengine, hid, parameters, script_id, script]
+[INFO 2012-08-17 18:51:40,382] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,382] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.input_selector
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] columns: [hid, inputfiles_hid, input_mode]
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk8ec7b4d4bc47fda1]
+[INFO 2012-08-17 18:51:40,389] [SCHED_HIB.TableMetadata.<init>] indexes: [fk8ec7b4d4bc47fda1, primary]
+[INFO 2012-08-17 18:51:40,395] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.integer_wrapper
+[INFO 2012-08-17 18:51:40,396] [SCHED_HIB.TableMetadata.<init>] columns: [id, value]
+[INFO 2012-08-17 18:51:40,396] [SCHED_HIB.TableMetadata.<init>] foreign keys: []
+[INFO 2012-08-17 18:51:40,396] [SCHED_HIB.TableMetadata.<init>] indexes: [primary]
+[INFO 2012-08-17 18:51:40,407] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_pswp_job
+[INFO 2012-08-17 18:51:40,408] [SCHED_HIB.TableMetadata.<init>] columns: [project_name, hid, input_space, restart_timer, canceljobonerror_hid, jobresult_hid, environment_hid, output_space, maxnumberofexecution_hid, description, priority, name, owner, credentials, restarttaskonerror_hid, jobinfo_hid]
+[INFO 2012-08-17 18:51:40,408] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk6511403cf82025df, fk6511403c4cb16e0d, fk6511403c841c2cb1, fk6511403cf5367700, fk6511403cefdeab, fk6511403c968ff4a5]
+[INFO 2012-08-17 18:51:40,408] [SCHED_HIB.TableMetadata.<init>] indexes: [primary, fk6511403c4cb16e0d, fk6511403cf82025df, fk6511403c841c2cb1, fk6511403cf5367700, fk6511403cefdeab, fk6511403c968ff4a5]
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_pswp_job_big_string
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] columns: [genericinformations_id, mapkey, internal_pswp_job_hid]
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk33e66c335a02b911, fk33e66c331ee8cac8]
+[INFO 2012-08-17 18:51:40,416] [SCHED_HIB.TableMetadata.<init>] indexes: [fk33e66c335a02b911, fk33e66c331ee8cac8, genericinformations_id, primary]
+[INFO 2012-08-17 18:51:40,424] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_pswp_job_tasks
+[INFO 2012-08-17 18:51:40,424] [SCHED_HIB.TableMetadata.<init>] columns: [mapkey_hid, itask_id, depend_id, itask_type]
+[INFO 2012-08-17 18:51:40,425] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk31c401cbce0edd94, fk31c401cb598bdb34]
+[INFO 2012-08-17 18:51:40,425] [SCHED_HIB.TableMetadata.<init>] indexes: [fk31c401cbce0edd94, primary, fk31c401cb598bdb34]
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_tf_job
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] columns: [project_name, hid, input_space, restart_timer, canceljobonerror_hid, jobresult_hid, environment_hid, output_space, maxnumberofexecution_hid, description, priority, name, owner, credentials, restarttaskonerror_hid, jobinfo_hid]
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk97ad7812841c2cb1, fk97ad78124cb16e0d, fk97ad7812968ff4a5, fk97ad7812f82025df, fk97ad7812efdeab, fk97ad7812f5367700]
+[INFO 2012-08-17 18:51:40,437] [SCHED_HIB.TableMetadata.<init>] indexes: [fk97ad7812841c2cb1, fk97ad78124cb16e0d, primary, fk97ad7812968ff4a5, fk97ad7812f82025df, fk97ad7812efdeab, fk97ad7812f5367700]
+[INFO 2012-08-17 18:51:40,445] [SCHED_HIB.TableMetadata.<init>] table found: SCHEDULER_DB.internal_tf_job_big_string
+[INFO 2012-08-17 18:51:40,445] [SCHED_HIB.TableMetadata.<init>] columns: [genericinformations_id, internal_tf_job_hid, mapkey]
+[INFO 2012-08-17 18:51:40,446] [SCHED_HIB.TableMetadata.<init>] foreign keys: [fk20d2129d5a02b911, fk20d2129d1219ce76]
+[INFO 2012-08-17 18:51:40,446] [SCHED_HIB.TableMetadata.<init>] indexes: [fk20d2129d5a02b911, genericinformations_id, primary, fk20d2129d1219ce76]
+[INFO 2012-08-17 18:

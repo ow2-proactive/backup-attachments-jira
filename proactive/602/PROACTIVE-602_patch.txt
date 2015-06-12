@@ -1,0 +1,14 @@
+Index: compile/build.xml
+===================================================================
+--- compile/build.xml	(revision 11270)
++++ compile/build.xml	(working copy)
+@@ -384,9 +384,6 @@
+ 			<fileset dir="${cl.extra.dir}" includes="**" />
+ 			<fileset dir="${config.dir}" includes="ProActiveConfiguration.xml" />
+ 			<fileset dir="${osgi.res.dir}" includes="metadata.xml" />
+-			<!-- annotations info -->
+-            <fileset dir="${compile.dir}" includes="META-INF/services/com.sun.mirror.apt.AnnotationProcessorFactory" />
+-			<fileset dir="${compile.dir}" includes="META-INF/services/javax.annotation.processing.Processor"/>
+ 			<indexjars>
+ 				<fileset dir="${lib.dir}">
+ 					<include name="*.jar" />

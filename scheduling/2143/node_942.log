@@ -1,0 +1,55 @@
+[2014-09-02 18:35:51,952 INFO ] [43130008] [NODE.TaskLauncher.terminate] TaskLauncher terminated
+[2014-09-02 18:36:13,813 INFO ] [43130002] [NODE.TaskLauncher.initDataSpaces] SCRATCH space is file:///tmp/PA_JVM848324075/youriblog_942/4313/1841546177
+[2014-09-02 18:36:13,814 INFO ] [43130002] [NODE.TaskLauncher.initDataSpaces] logfile is enabled for task 43130002
+[2014-09-02 18:36:13,845 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] INPUT space is pappnp://192.168.1.19:64738/DefaultInputSpace?proactive_vfs_provider_path=/admin
+[2014-09-02 18:36:13,846 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] (other available urls for INPUT space are [file:/home/ybonnaffe/src/build/dist/scheduling/data/defaultinput/admin, pappnp://192.168.1.19:64738/DefaultInputSpace?proactive_vfs_provider_path=/admin] )
+[2014-09-02 18:36:13,892 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] OUTPUT space is pappnp://192.168.1.19:64738/DefaultOutputSpace?proactive_vfs_provider_path=/admin
+[2014-09-02 18:36:13,893 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] (other available urls for OUTPUT space are [file:/home/ybonnaffe/src/build/dist/scheduling/data/defaultoutput/admin, pappnp://192.168.1.19:64738/DefaultOutputSpace?proactive_vfs_provider_path=/admin] )
+[2014-09-02 18:36:13,939 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] GLOBAL space is pappnp://192.168.1.19:64738/GlobalSpace?proactive_vfs_provider_path=/
+[2014-09-02 18:36:14,614 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] (other available urls for GLOBAL space are [file:/home/ybonnaffe/src/build/dist/scheduling/data/defaultglobal/, pappnp://192.168.1.19:64738/GlobalSpace?proactive_vfs_provider_path=/] )
+[2014-09-02 18:36:14,652 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] USER space is pappnp://192.168.1.19:64738/UserSpaces?proactive_vfs_provider_path=/admin
+[2014-09-02 18:36:14,652 INFO ] [43130002] [NODE.TaskLauncher.resolveToExisting] (other available urls for USER space are [file:/home/ybonnaffe/src/build/dist/scheduling/data/defaultuser/admin, pappnp://192.168.1.19:64738/UserSpaces?proactive_vfs_provider_path=/admin] )
+[2014-09-02 18:36:14,654 INFO ] [43130002] [NODE.NativeTaskLauncher.doTask] Time spent copying INPUT datas to SCRATCH : 784 ms
+[2014-09-02 18:36:14,654 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,655 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,655 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,655 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,655 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,656 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,656 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,656 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,656 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,657 INFO ] [43130002] [NODE.TaskLauncher.setPropagatedProperties] No Incoming properties for task 43130002
+[2014-09-02 18:36:14,676 INFO ] [43130002] [NODE.NativeExecutable.createProcessAndStart] Running command : [hostname]
+[2014-09-02 18:36:14,676 INFO ] [43130002] [NODE.NativeExecutable.createProcessAndStart] in directory : /tmp/PA_JVM848324075/youriblog_942/4313/1841546177
+[2014-09-02 18:36:14,981 INFO ] [43130002] [NODE.TaskLauncher.terminate] Kill message received for task 43130002
+[2014-09-02 18:36:14,982 INFO ] [43130002] [NODE.Guard.kill] Kill message received...
+[2014-09-02 18:36:15,130 ERROR] [43130002] [NODE.NativeExecutable.execute] 
+java.lang.InterruptedException
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Thread.join(Unknown Source)
+        at java.lang.Thread.join(Unknown Source)
+        at org.ow2.proactive.scheduler.task.nativ.NativeExecutable.execute(NativeExecutable.java:352)
+        at org.ow2.proactive.scheduler.task.TaskLauncher$ExecutableGuard$9.call(TaskLauncher.java:1891)
+        at org.ow2.proactive.scheduler.task.TaskLauncher$ExecutableGuard$9.call(TaskLauncher.java:1886)
+        at org.ow2.proactive.scheduler.task.utils.Guard$ActiveObjectExecutor.call(Guard.java:400)
+        at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:353)
+        at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:214)
+        at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:160)
+        at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:549)
+        at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:482)
+        at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:426)
+        at org.objectweb.proactive.Service.blockingServeOldest(Service.java:206)
+        at org.objectweb.proactive.Service.blockingServeOldest(Service.java:181)
+        at org.objectweb.proactive.Service.fifoServing(Service.java:146)
+        at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:269)
+        at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:164)
+        at java.lang.Thread.run(Unknown Source)
+[2014-09-02 18:36:16,354 INFO ] [43130002] [NODE.TaskLauncher.finalizeLoggers] Terminating loggers for task 43130002 (Merge)...
+[2014-09-02 18:36:17,068 INFO ] [43130002] [NODE.TaskLauncher.finalizeLoggers] Terminated loggers for task 43130002
+[2014-09-02 18:36:17,071 INFO ] [43130002] [NODE.TaskLauncher.terminate] TaskLauncher terminated
+[2014-09-02 18:36:17,073 INFO ] [43130002] [NODE.TaskLauncher.finalizeTask] Finalizing task 43130002
+[2014-09-02 18:36:17,073 INFO ] [43130002] [NODE.TaskLauncher.finalizeTask] Task 43130002 finalized

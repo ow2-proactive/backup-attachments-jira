@@ -1,0 +1,124 @@
+diff --git a/programming-core/src/main/java/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java b/programming-core/src/main/java/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
+index 131b73f..e16e864 100644
+--- a/programming-core/src/main/java/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
++++ b/programming-core/src/main/java/org/objectweb/proactive/core/mop/JavassistByteCodeStubBuilder.java
+@@ -550,63 +550,66 @@ public class JavassistByteCodeStubBuilder {
+     public static void createStaticInitializer(CtClass generatedClass, CtMethod[] reifiedMethods,
+             List<String> classesIndexer, String superClassName, Class<?>[] genericParameters)
+             throws CannotCompileException, NotFoundException {
+-        if (genericParameters == null) {
+-            genericParameters = new Class<?>[0];
+-        }
+-        CtConstructor classInitializer = generatedClass.makeClassInitializer();
+-
+-        StringBuilder classInitializerBody = new StringBuilder("{\n");
+-        classInitializerBody.append("Class[] genericParameters = new Class[" + genericParameters.length +
+-            "];\n");
+-        for (int i = 0; i < genericParameters.length; i++) {
+-            classInitializerBody.append("genericParameters[" + i + "] = Class.forName(\"" +
+-                genericParameters[i].getName() + "\");\n");
+-        }
+-        classInitializerBody.append("Class realSuperClass = Class.forName(\"" + superClassName + "\");\n");
+-        classInitializerBody
+-                .append("java.lang.reflect.TypeVariable[] tv = realSuperClass.getTypeParameters();\n");
+-        classInitializerBody.append("genericTypesMapping = new java.util.HashMap();\n");
+-
+-        // generic types mapping only occurs when parameters are specified
+-        if (genericParameters.length != 0) {
+-            classInitializerBody.append("for (int i = 0; i < tv.length; i++) {\n");
+-            classInitializerBody.append("     genericTypesMapping.put(tv[i], genericParameters[i]);\n");
+-            classInitializerBody.append("}\n");
+-        }
++        synchronized (MOPClassLoader.getMOPClassLoader()) {
+ 
+-        classInitializerBody.append("overridenMethods = new java.lang.reflect.Method[" +
+-            reifiedMethods.length + "];\n");
+-        classInitializerBody.append("Class classes[] = new Class[" + (classesIndexer.size()) + "];\n");
+-        classInitializerBody.append("Class[] temp;\n");
+-
+-        int methodsIndex = 0;
+-        Iterator<String> it = classesIndexer.iterator();
+-        int index = 0;
+-        while (it.hasNext()) {
+-            classInitializerBody.append("classes[" + index + "] = Class.forName(\"" + it.next() + "\");\n");
+-            index++;
+-        }
+-        for (int i = 0; i < reifiedMethods.length; i++) {
+-            CtClass[] paramTypes = reifiedMethods[i].getParameterTypes();
+-            classInitializerBody.append("temp = new Class[" + paramTypes.length + "];\n");
+-            for (int n = 0; n < paramTypes.length; n++) {
+-                if (paramTypes[n].isPrimitive()) {
+-                    classInitializerBody.append("temp[" + n + "] = " +
+-                        getClassTypeInitializer(paramTypes[n], false) + ";\n");
+-                } else {
+-                    classInitializerBody.append("temp[" + n + "] = Class.forName(\"" +
+-                        getClassTypeInitializer(paramTypes[n], false) + "\");\n");
++            if (genericParameters == null) {
++                genericParameters = new Class<?>[0];
++            }
++            CtConstructor classInitializer = generatedClass.makeClassInitializer();
++
++            StringBuilder classInitializerBody = new StringBuilder("{\n");
++            classInitializerBody.append("Class[] genericParameters = new Class[" + genericParameters.length +
++                    "];\n");
++            for (int i = 0; i < genericParameters.length; i++) {
++                classInitializerBody.append("genericParameters[" + i + "] = Class.forName(\"" +
++                        genericParameters[i].getName() + "\");\n");
++            }
++            classInitializerBody.append("Class realSuperClass = Class.forName(\"" + superClassName + "\");\n");
++            classInitializerBody
++                    .append("java.lang.reflect.TypeVariable[] tv = realSuperClass.getTypeParameters();\n");
++            classInitializerBody.append("genericTypesMapping = new java.util.HashMap();\n");
++
++            // generic types mapping only occurs when parameters are specified
++            if (genericParameters.length != 0) {
++                classInitializerBody.append("for (int i = 0; i < tv.length; i++) {\n");
++                classInitializerBody.append("     genericTypesMapping.put(tv[i], genericParameters[i]);\n");
++                classInitializerBody.append("}\n");
++            }
++
++            classInitializerBody.append("overridenMethods = new java.lang.reflect.Method[" +
++                    reifiedMethods.length + "];\n");
++            classInitializerBody.append("Class classes[] = new Class[" + (classesIndexer.size()) + "];\n");
++            classInitializerBody.append("Class[] temp;\n");
++
++            int methodsIndex = 0;
++            Iterator<String> it = classesIndexer.iterator();
++            int index = 0;
++            while (it.hasNext()) {
++                classInitializerBody.append("classes[" + index + "] = Class.forName(\"" + it.next() + "\");\n");
++                index++;
++            }
++            for (int i = 0; i < reifiedMethods.length; i++) {
++                CtClass[] paramTypes = reifiedMethods[i].getParameterTypes();
++                classInitializerBody.append("temp = new Class[" + paramTypes.length + "];\n");
++                for (int n = 0; n < paramTypes.length; n++) {
++                    if (paramTypes[n].isPrimitive()) {
++                        classInitializerBody.append("temp[" + n + "] = " +
++                                getClassTypeInitializer(paramTypes[n], false) + ";\n");
++                    } else {
++                        classInitializerBody.append("temp[" + n + "] = Class.forName(\"" +
++                                getClassTypeInitializer(paramTypes[n], false) + "\");\n");
++                    }
+                 }
++                classInitializerBody.append("overridenMethods[" + (methodsIndex) + "] = classes[" +
++                        classesIndexer.indexOf(reifiedMethods[i].getDeclaringClass().getName()) +
++                        "].getDeclaredMethod(\"" + reifiedMethods[i].getName() + "\", temp);\n");
++                methodsIndex++;
+             }
+-            classInitializerBody.append("overridenMethods[" + (methodsIndex) + "] = classes[" +
+-                classesIndexer.indexOf(reifiedMethods[i].getDeclaringClass().getName()) +
+-                "].getDeclaredMethod(\"" + reifiedMethods[i].getName() + "\", temp);\n");
+-            methodsIndex++;
+-        }
+ 
+-        classInitializerBody.append("\n}");
+-        //        System.out.println(classInitializerBody);
+-        classInitializer.setBody(classInitializerBody.toString());
++            classInitializerBody.append("\n}");
++            //        System.out.println(classInitializerBody);
++            classInitializer.setBody(classInitializerBody.toString());
++        }
+     }
+ 
+     /**

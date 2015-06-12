@@ -1,0 +1,1599 @@
+[2013-07-17 14:03:37,854 INFO ] Setting up the resource manager security policy
+[2013-07-17 14:03:37,862 INFO ] New RM core localy started
+[2013-07-17 14:03:37,862 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:56331/RMAUTHENTICATION'
+[2013-07-17 14:03:37,868 INFO ] Someone performed a lookup on pnp://192.168.1.151:56331/RMAUTHENTICATION but this remote object is not known
+[2013-07-17 14:03:37,876 DEBUG] 
+org.objectweb.proactive.core.exceptions.IOException6: Lookup of org.ow2.proactive.resourcemanager.authentication.RMAuthentication at pnp://192.168.1.151:56331/RMAUTHENTICATION failed
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1529)
+	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:103)
+	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:153)
+	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:101)
+	at org.ow2.proactive.resourcemanager.RMFactory.startLocal(RMFactory.java:113)
+	at org.ow2.proactive.resourcemanager.RMFactory.startLocal(RMFactory.java:182)
+	at org.ow2.proactive.scheduler.util.SchedulerStarter.main(SchedulerStarter.java:175)
+Caused by: org.objectweb.proactive.core.ProActiveException: The uri pnp://192.168.1.151:56331/RMAUTHENTICATION is not bound to any known object
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryBackend.lookup(PNPRemoteObjectFactoryBackend.java:176)
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryAbstract.lookup(PNPRemoteObjectFactoryAbstract.java:116)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectHelper.lookup(RemoteObjectHelper.java:166)
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1518)
+	... 7 more
+[2013-07-17 14:03:37,911 INFO ] Success at binding url pnp://192.168.1.151:56331/RMCORE
+[2013-07-17 14:03:37,911 DEBUG] Creating RMAuthentication active object
+[2013-07-17 14:03:38,064 DEBUG] Creating RMMonitoring active object
+[2013-07-17 14:03:38,080 INFO ] Using existing RRD database: C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\rm_statistics.rrd
+[2013-07-17 14:03:38,359 INFO ] Success at binding url pnp://192.168.1.151:56331/RMAUTHENTICATION
+[2013-07-17 14:03:38,426 INFO ] Started JMX RMI connector server at service:jmx:rmi:///jndi/rmi://192.168.1.151:5822/JMXRMAgent
+[2013-07-17 14:03:38,464 INFO ] Started JMX RO connector server at service:jmx:ro:///jndi/pnp://192.168.1.151:56331/JMXRMAgent
+[2013-07-17 14:03:38,572 DEBUG] Creating SelectionManager active object
+[2013-07-17 14:03:38,647 INFO ] Success at binding url pnp://192.168.1.151:56331/RMMONITORING
+[2013-07-17 14:03:38,723 DEBUG] Creating ClientPinger active object
+[2013-07-17 14:03:38,970 DEBUG] Creating NodeCleaner active object
+[2013-07-17 14:03:39,276 DEBUG] STARTED[null] event
+[2013-07-17 14:03:39,342 INFO ] Number of node sources to restore 2
+[2013-07-17 14:03:39,342 INFO ] Creating a node source : Default
+[2013-07-17 14:03:42,626 INFO ] [Default] Activating the policy Static Policy user access type [ALL], provider access type [ME]
+[2013-07-17 14:03:42,652 INFO ] [Default] Acquiring all nodes
+[2013-07-17 14:03:42,665 INFO ] acquireAllNodes() implementation is emtpy for DefaultInfrastructureManager
+[2013-07-17 14:03:42,964 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:56331/RMAUTHENTICATION'
+[2013-07-17 14:04:29,956 INFO ] Starting the scheduler...
+[2013-07-17 14:04:30,534 WARN ] Skipped unknown ProActive Java property: proactive.net.hostname
+[2013-07-17 14:04:30,534 WARN ] All supported ProActive Java properties are declared inside org.objectweb.proactive.core.config.PAProperties. Please check your ProActive Configuration file: file:C:/Users/Administrator/Desktop/ProActiveScheduling-3.4.0_bin_full/ProActiveScheduling-3.4.0_bin_full/bin/windows/../../config/proactive/ProActiveConfiguration.xml
+[2013-07-17 14:04:30,643 INFO ] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[2013-07-17 14:04:30,737 INFO ] jetty-6.1.x
+[2013-07-17 14:04:30,831 INFO ] Started SelectChannelConnector@0.0.0.0:56358
+[2013-07-17 14:04:30,956 INFO ] Remote Object Factory provider <pamr, class org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObjectFactory> found
+[2013-07-17 14:04:30,956 INFO ] Remote Object Factory provider <pnp, class org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactory> found
+[2013-07-17 14:04:30,956 INFO ] Remote Object Factory provider <pnps, class org.objectweb.proactive.extensions.pnpssl.PNPSslRemoteObjectFactory> found
+[2013-07-17 14:04:30,956 INFO ] Remote Object Factory provider <pamrd, class org.objectweb.proactive.extensions.pamrd.PAMRDRemoteObjectFactorySPI$PAMRDRemoteObjectFactory> found
+[2013-07-17 14:04:30,971 INFO ] Remote Object Factory provider <amqp, class org.objectweb.proactive.extensions.amqp.remoteobject.AMQPRemoteObjectFactory> found
+[2013-07-17 14:04:30,971 INFO ] Remote Object Factory provider <amqp-federation, class org.objectweb.proactive.extensions.amqp.federation.AMQPFederationRemoteObjectFactory> found
+[2013-07-17 14:04:30,971 INFO ] Remote Object Factory provider <rmissl, class org.objectweb.proactive.extra.rmissl.RmiSslRemoteObjectFactory> found
+[2013-07-17 14:04:31,237 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/RMAUTHENTICATION'
+[2013-07-17 14:04:32,081 INFO ] Someone performed a lookup on pnp://192.168.1.151:10099/RMAUTHENTICATION but this remote object is not known
+[2013-07-17 14:04:32,096 INFO ] Starting the resource manager...
+[2013-07-17 14:04:32,114 INFO ] Retrieved layout from log4j configuration
+[2013-07-17 14:04:32,277 WARN ] You don't seem to be running the latest released version of ProActive
+[2013-07-17 14:04:32,287 WARN ] Version you are using: 5.4.0, latest version: 5.3.2
+[2013-07-17 14:04:32,287 WARN ] To download the latest release, please visit http://www.activeeon.com/community-downloads
+[2013-07-17 14:04:32,287 WARN ] To disable this check, set the proactive.runtime.ping property to false
+[2013-07-17 14:04:33,119 INFO ] Initializing Scheduler DB using Hibernate config C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config\rm\database\hibernate\hibernate.cfg.xml
+[2013-07-17 14:04:33,647 INFO ] HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[2013-07-17 14:04:33,686 INFO ] HHH000412: Hibernate Core {4.1.3.Final}
+[2013-07-17 14:04:33,700 INFO ] HHH000206: hibernate.properties not found
+[2013-07-17 14:04:33,702 INFO ] HHH000021: Bytecode provider name : javassist
+[2013-07-17 14:04:33,785 INFO ] HHH000042: Configuring from file: hibernate.cfg.xml
+[2013-07-17 14:04:33,997 INFO ] HHH000041: Configured SessionFactory: null
+[2013-07-17 14:04:33,997 INFO ] Starting Hibernate...
+[2013-07-17 14:04:33,997 INFO ] Drop DB : false
+[2013-07-17 14:04:33,997 INFO ] Drop Nodesources : false
+[2013-07-17 14:04:34,655 INFO ] HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+[2013-07-17 14:04:34,697 INFO ] HHH010002: C3P0 using driver: org.gjt.mm.mysql.Driver at URL: jdbc:mysql://localhost:3306/rm
+[2013-07-17 14:04:34,697 INFO ] HHH000046: Connection properties: {user=proactive, password=****}
+[2013-07-17 14:04:34,697 INFO ] HHH000006: Autocommit mode: false
+[2013-07-17 14:04:35,894 INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2013-07-17 14:04:35,934 INFO ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[2013-07-17 14:04:35,977 INFO ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+[2013-07-17 14:04:35,997 INFO ] HHH000397: Using ASTQueryTranslatorFactory
+[2013-07-17 14:04:36,790 INFO ] HHH000228: Running hbm2ddl schema update
+[2013-07-17 14:04:36,790 INFO ] HHH000102: Fetching database metadata
+[2013-07-17 14:04:36,807 INFO ] HHH000396: Updating schema
+[2013-07-17 14:04:36,851 INFO ] HHH000261: Table found: rm.alive
+[2013-07-17 14:04:36,851 INFO ] HHH000037: Columns: [id, time]
+[2013-07-17 14:04:36,851 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:36,851 INFO ] HHH000126: Indexes: [primary]
+[2013-07-17 14:04:36,868 INFO ] HHH000261: Table found: rm.nodehistory
+[2013-07-17 14:04:36,868 INFO ] HHH000037: Columns: [nodestate, endtime, id, nodesource, username, starttime, nodeurl, host, providername]
+[2013-07-17 14:04:36,868 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:36,868 INFO ] HHH000126: Indexes: [userindex, endtimeindex, primary, urlindex]
+[2013-07-17 14:04:36,878 INFO ] HHH000261: Table found: rm.nodesourcedata
+[2013-07-17 14:04:36,878 INFO ] HHH000037: Columns: [providersubject, policyparameters, policytype, name, infrastructureparameters, infrastructuretype]
+[2013-07-17 14:04:36,878 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:36,878 INFO ] HHH000126: Indexes: [primary]
+[2013-07-17 14:04:36,892 INFO ] HHH000261: Table found: rm.userhistory
+[2013-07-17 14:04:36,893 INFO ] HHH000037: Columns: [endtime, id, username, starttime]
+[2013-07-17 14:04:36,893 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:36,893 INFO ] HHH000126: Indexes: [usernameindex, primary]
+[2013-07-17 14:04:36,902 INFO ] HHH000261: Table found: rm.hibernate_sequence
+[2013-07-17 14:04:36,902 INFO ] HHH000037: Columns: [next_val]
+[2013-07-17 14:04:36,902 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:36,902 INFO ] HHH000126: Indexes: []
+[2013-07-17 14:04:36,903 INFO ] HHH000232: Schema update complete
+[2013-07-17 14:04:38,520 DEBUG] RMCore start : initActivity
+[2013-07-17 14:04:38,520 INFO ] Setting up the resource manager security policy
+[2013-07-17 14:04:38,529 INFO ] New RM core localy started
+[2013-07-17 14:04:38,529 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/RMAUTHENTICATION'
+[2013-07-17 14:04:38,536 INFO ] Someone performed a lookup on pnp://192.168.1.151:10099/RMAUTHENTICATION but this remote object is not known
+[2013-07-17 14:04:38,544 DEBUG] 
+org.objectweb.proactive.core.exceptions.IOException6: Lookup of org.ow2.proactive.resourcemanager.authentication.RMAuthentication at pnp://192.168.1.151:10099/RMAUTHENTICATION failed
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1529)
+	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:103)
+	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:153)
+	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:111)
+	at org.ow2.proactive.resourcemanager.frontend.RMConnection.waitAndJoin(RMConnection.java:101)
+	at org.ow2.proactive.resourcemanager.RMFactory.startLocal(RMFactory.java:113)
+	at org.ow2.proactive.resourcemanager.RMFactory.startLocal(RMFactory.java:182)
+	at org.ow2.proactive.scheduler.util.SchedulerStarter.main(SchedulerStarter.java:175)
+Caused by: org.objectweb.proactive.core.ProActiveException: The uri pnp://192.168.1.151:10099/RMAUTHENTICATION is not bound to any known object
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryBackend.lookup(PNPRemoteObjectFactoryBackend.java:176)
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryAbstract.lookup(PNPRemoteObjectFactoryAbstract.java:116)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectHelper.lookup(RemoteObjectHelper.java:166)
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1518)
+	... 7 more
+[2013-07-17 14:04:38,575 INFO ] Success at binding url pnp://192.168.1.151:10099/RMCORE
+[2013-07-17 14:04:38,575 DEBUG] Creating RMAuthentication active object
+[2013-07-17 14:04:38,728 DEBUG] Creating RMMonitoring active object
+[2013-07-17 14:04:38,745 INFO ] Using existing RRD database: C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\rm_statistics.rrd
+[2013-07-17 14:04:39,020 INFO ] Success at binding url pnp://192.168.1.151:10099/RMAUTHENTICATION
+[2013-07-17 14:04:39,931 INFO ] Started JMX RMI connector server at service:jmx:rmi:///jndi/rmi://192.168.1.151:5822/JMXRMAgent
+[2013-07-17 14:04:39,970 INFO ] Started JMX RO connector server at service:jmx:ro:///jndi/pnp://192.168.1.151:10099/JMXRMAgent
+[2013-07-17 14:04:40,142 DEBUG] Creating SelectionManager active object
+[2013-07-17 14:04:40,236 INFO ] Success at binding url pnp://192.168.1.151:10099/RMMONITORING
+[2013-07-17 14:04:40,374 DEBUG] Creating ClientPinger active object
+[2013-07-17 14:04:40,642 DEBUG] Creating NodeCleaner active object
+[2013-07-17 14:04:41,083 INFO ] Number of node sources to restore 2
+[2013-07-17 14:04:41,083 INFO ] Creating a node source : Default
+[2013-07-17 14:04:41,218 DEBUG] STARTED[null] event
+[2013-07-17 14:04:43,668 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/RMAUTHENTICATION'
+[2013-07-17 14:04:44,552 INFO ] rm is trying to connect
+[2013-07-17 14:04:44,576 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:04:44,576 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:04:44,579 DEBUG] adding group principal 'admin' for user 'rm'
+[2013-07-17 14:04:44,579 DEBUG] adding group principal 'nsadmins' for user 'rm'
+[2013-07-17 14:04:44,579 DEBUG] authentication succeeded for user 'rm'
+[2013-07-17 14:04:44,579 INFO ] User rm logged successfully
+[2013-07-17 14:04:44,877 INFO ] "rm" connected from HalfBody_org.ow2.proactive.resourcemanager.RMFactory#startLocal_2462
+[2013-07-17 14:04:44,893 INFO ] The resource manager with 4 local nodes created on pnp://192.168.1.151:10099/
+[2013-07-17 14:04:44,893 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/RMAUTHENTICATION'
+[2013-07-17 14:04:44,983 INFO ] [Default] Activating the policy Static Policy user access type [ALL], provider access type [ME]
+[2013-07-17 14:04:44,991 INFO ] [Default] Acquiring all nodes
+[2013-07-17 14:04:44,992 INFO ] acquireAllNodes() implementation is emtpy for DefaultInfrastructureManager
+[2013-07-17 14:04:45,320 INFO ] Starting new Scheduler
+[2013-07-17 14:04:45,320 INFO ] Creating scheduler frontend...
+[2013-07-17 14:04:45,456 INFO ] Initializing Scheduler DB using Hibernate config C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config\scheduler\database\hibernate\hibernate.cfg.xml
+[2013-07-17 14:04:45,459 INFO ] HHH000042: Configuring from file: dbconfig9206801780909961883tmp
+[2013-07-17 14:04:45,466 INFO ] HHH000041: Configured SessionFactory: null
+[2013-07-17 14:04:45,466 INFO ] Starting Hibernate...
+[2013-07-17 14:04:45,467 INFO ] Drop DB : false
+[2013-07-17 14:04:45,960 WARN ] HHH000208: org.hibernate.connection.C3P0ConnectionProvider has been deprecated in favor of org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider; that provider will be used instead.
+[2013-07-17 14:04:45,960 INFO ] HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+[2013-07-17 14:04:45,960 INFO ] HHH010002: C3P0 using driver: org.gjt.mm.mysql.Driver at URL: jdbc:mysql://localhost:3306/scheduler?autoReconnect=true
+[2013-07-17 14:04:45,961 INFO ] HHH000046: Connection properties: {user=proactive, password=****}
+[2013-07-17 14:04:45,961 INFO ] HHH000006: Autocommit mode: false
+[2013-07-17 14:04:46,034 INFO ] HHH000149: JDBC isolation level: READ_COMMITTED
+[2013-07-17 14:04:46,589 INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2013-07-17 14:04:46,590 INFO ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[2013-07-17 14:04:46,591 INFO ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+[2013-07-17 14:04:46,591 INFO ] HHH000397: Using ASTQueryTranslatorFactory
+[2013-07-17 14:04:46,916 INFO ] HHH000228: Running hbm2ddl schema update
+[2013-07-17 14:04:46,917 INFO ] HHH000102: Fetching database metadata
+[2013-07-17 14:04:47,156 INFO ] Node source Default has been successfully created by "rm"
+[2013-07-17 14:04:47,157 INFO ] Creating a node source : LocalNodes
+[2013-07-17 14:04:47,160 DEBUG] NODESOURCE_CREATED[Default] event
+[2013-07-17 14:04:47,228 INFO ] HHH000396: Updating schema
+[2013-07-17 14:04:47,559 INFO ] HHH000261: Table found: scheduler.ds_selector_data
+[2013-07-17 14:04:47,559 INFO ] HHH000037: Columns: [id, excludes, task_id, case_sensitive, type, includes, job_id, access_mode]
+[2013-07-17 14:04:47,559 INFO ] HHH000108: Foreign keys: [fk195d845ae09cf51e]
+[2013-07-17 14:04:47,560 INFO ] HHH000126: Indexes: [fk195d845ae09cf51e, primary]
+[2013-07-17 14:04:47,569 INFO ] HHH000261: Table found: scheduler.environment_modifier_data
+[2013-07-17 14:04:47,569 INFO ] HHH000037: Columns: [id, append, append_char, task_data_id, name, value]
+[2013-07-17 14:04:47,569 INFO ] HHH000108: Foreign keys: [fk15b98ec67a1b6ac5]
+[2013-07-17 14:04:47,569 INFO ] HHH000126: Indexes: [fk15b98ec67a1b6ac5, primary]
+[2013-07-17 14:04:47,578 INFO ] HHH000261: Table found: scheduler.forked_java_task_data
+[2013-07-17 14:04:47,578 INFO ] HHH000037: Columns: [id, java_home, arguments, env_script_id, task_id, class_name, work_dir, jvm_arguments, classpath, job_id]
+[2013-07-17 14:04:47,578 INFO ] HHH000108: Foreign keys: [fkfc060365f0ee8f6f, fkfc060365e09cf51e]
+[2013-07-17 14:04:47,578 INFO ] HHH000126: Indexes: [primary, fkfc060365f0ee8f6f, fkfc060365e09cf51e, job_id]
+[2013-07-17 14:04:47,586 INFO ] HHH000261: Table found: scheduler.java_task_data
+[2013-07-17 14:04:47,586 INFO ] HHH000037: Columns: [id, arguments, task_id, class_name, job_id]
+[2013-07-17 14:04:47,586 INFO ] HHH000108: Foreign keys: [fk96fcf847e09cf51e]
+[2013-07-17 14:04:47,586 INFO ] HHH000126: Indexes: [fk96fcf847e09cf51e, primary, job_id]
+[2013-07-17 14:04:47,592 INFO ] HHH000261: Table found: scheduler.job_classpath_content
+[2013-07-17 14:04:47,592 INFO ] HHH000037: Columns: [content, crc, contains_jar]
+[2013-07-17 14:04:47,592 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:47,593 INFO ] HHH000126: Indexes: [primary]
+[2013-07-17 14:04:47,604 INFO ] HHH000261: Table found: scheduler.job_data
+[2013-07-17 14:04:47,604 INFO ] HHH000037: Columns: [user_space, project_name, status, input_space, to_be_removed, finish_time, finished_tasks, generic_info, pending_tasks, max_number_of_exec, cancel_on_error, running_tasks, id, total_tasks, job_classpath, job_name, priority, description, global_space, owner, out_space, start_time, credentials, submit_time, remove_time, classpath_crc]
+[2013-07-17 14:04:47,604 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:47,604 INFO ] HHH000126: Indexes: [job_owner_index, primary, job_status]
+[2013-07-17 14:04:47,620 INFO ] HHH000261: Table found: scheduler.native_task_data
+[2013-07-17 14:04:47,620 INFO ] HHH000037: Columns: [gen_script_id, id, task_id, command, work_dir, job_id]
+[2013-07-17 14:04:47,620 INFO ] HHH000108: Foreign keys: [fkbc796bfce1903612, fkbc796bfce09cf51e]
+[2013-07-17 14:04:47,620 INFO ] HHH000126: Indexes: [fkbc796bfce1903612, primary, fkbc796bfce09cf51e, job_id]
+[2013-07-17 14:04:47,655 INFO ] HHH000261: Table found: scheduler.script_data
+[2013-07-17 14:04:47,655 INFO ] HHH000037: Columns: [id, engine, flow_target, flow_action_type, task_id, flow_target_else, is_dynamic, parameters, flow_target_continue, script, job_id]
+[2013-07-17 14:04:47,656 INFO ] HHH000108: Foreign keys: [fk6f24229ee09cf51e]
+[2013-07-17 14:04:47,656 INFO ] HHH000126: Indexes: [primary, fk6f24229ee09cf51e]
+[2013-07-17 14:04:47,664 INFO ] HHH000261: Table found: scheduler.script_task_data
+[2013-07-17 14:04:47,664 INFO ] HHH000037: Columns: [id, task_script_id, task_id, job_id]
+[2013-07-17 14:04:47,664 INFO ] HHH000108: Foreign keys: [fk9f8a9bb050065e07, fk9f8a9bb0e09cf51e]
+[2013-07-17 14:04:47,664 INFO ] HHH000126: Indexes: [primary, fk9f8a9bb050065e07, fk9f8a9bb0e09cf51e, job_id]
+[2013-07-17 14:04:47,688 INFO ] HHH000261: Table found: scheduler.task_data
+[2013-07-17 14:04:47,688 INFO ] HHH000037: Columns: [clean_script_id, match_block, number_of_exec_left, run_as_me, number_of_exec_on_fail_left, post_script_id, flow_script_id, type, res_preview, iteration, task_id_task, precious_log, ifbranch_task_id_job, replication, description, exec_host_name, topology, restart_mode, walltime, pre_script_id, cancel_job_on_error, task_id_job, ifbranch_task_id_task, status, topology_desc_threshold, finish_time, task_name, generic_info, max_number_of_exec, flow_block, exec_duration, nodes_number, precious_res, start_time, job_id]
+[2013-07-17 14:04:47,688 INFO ] HHH000108: Foreign keys: [fkb29c1e24fbbf462e, fkb29c1e24a43226e7]
+[2013-07-17 14:04:47,688 INFO ] HHH000126: Indexes: [task_status_index, fkb29c1e24fbbf462e, fkb29c1e24a43226e7, primary, task_pre_script, task_clean_script, task_post_script, task_flow_script]
+[2013-07-17 14:04:47,696 INFO ] HHH000261: Table found: scheduler.task_data_dependencies
+[2013-07-17 14:04:47,696 INFO ] HHH000037: Columns: [task_id_job, task_id_task, task_id, job_id]
+[2013-07-17 14:04:47,696 INFO ] HHH000108: Foreign keys: [fk567a4b64e09cf51e]
+[2013-07-17 14:04:47,696 INFO ] HHH000126: Indexes: [fk567a4b64e09cf51e]
+[2013-07-17 14:04:47,704 INFO ] HHH000261: Table found: scheduler.task_data_joined_branches
+[2013-07-17 14:04:47,704 INFO ] HHH000037: Columns: [task_id_job, task_id_task, task_id, job_id]
+[2013-07-17 14:04:47,704 INFO ] HHH000108: Foreign keys: [fk2fad85ebe09cf51e]
+[2013-07-17 14:04:47,704 INFO ] HHH000126: Indexes: [fk2fad85ebe09cf51e]
+[2013-07-17 14:04:47,724 INFO ] HHH000261: Table found: scheduler.task_result_data
+[2013-07-17 14:04:47,724 INFO ] HHH000037: Columns: [result_exception, fa_type, logs, propagated_properties, task_id, fa_dup_number, fa_target_continue, fa_target, id, fa_target_else, result_value, result_time, previewer_class, job_id]
+[2013-07-17 14:04:47,724 INFO ] HHH000108: Foreign keys: [fk2cd65ad2e09cf51e]
+[2013-07-17 14:04:47,724 INFO ] HHH000126: Indexes: [primary, fk2cd65ad2e09cf51e]
+[2013-07-17 14:04:47,736 INFO ] HHH000261: Table found: scheduler.jobid_sequence
+[2013-07-17 14:04:47,736 INFO ] HHH000037: Columns: [next_val]
+[2013-07-17 14:04:47,736 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:47,736 INFO ] HHH000126: Indexes: []
+[2013-07-17 14:04:47,742 INFO ] HHH000261: Table found: scheduler.hibernate_sequence
+[2013-07-17 14:04:47,742 INFO ] HHH000037: Columns: [next_val]
+[2013-07-17 14:04:47,742 INFO ] HHH000108: Foreign keys: []
+[2013-07-17 14:04:47,742 INFO ] HHH000126: Indexes: []
+[2013-07-17 14:04:47,742 INFO ] HHH000232: Schema update complete
+[2013-07-17 14:04:47,750 INFO ] Creating scheduler Front-end...
+[2013-07-17 14:04:47,750 DEBUG] Policy used is org.ow2.proactive.scheduler.policy.DefaultPolicy
+[2013-07-17 14:04:48,315 INFO ] Setting up scheduler security policy
+[2013-07-17 14:04:48,315 INFO ] Creating scheduler authentication interface...
+[2013-07-17 14:04:48,315 INFO ] Scheduler is now ready to be started !
+[2013-07-17 14:04:48,315 INFO ] Retrieved layout from log4j configuration
+[2013-07-17 14:04:48,315 INFO ] Retrieved layout from log4j configuration
+[2013-07-17 14:04:48,315 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/SCHEDULER'
+[2013-07-17 14:04:48,315 INFO ] Someone performed a lookup on pnp://192.168.1.151:10099/SCHEDULER but this remote object is not known
+[2013-07-17 14:04:48,315 DEBUG] 
+org.objectweb.proactive.core.exceptions.IOException6: Lookup of org.ow2.proactive.scheduler.common.SchedulerAuthenticationInterface at pnp://192.168.1.151:10099/SCHEDULER failed
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1529)
+	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:103)
+	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:153)
+	at org.ow2.proactive.scheduler.common.SchedulerConnection.waitAndJoin(SchedulerConnection.java:134)
+	at org.ow2.proactive.scheduler.common.SchedulerConnection.waitAndJoin(SchedulerConnection.java:117)
+	at org.ow2.proactive.scheduler.SchedulerFactory.startLocal(SchedulerFactory.java:159)
+	at org.ow2.proactive.scheduler.SchedulerFactory.startLocal(SchedulerFactory.java:245)
+	at org.ow2.proactive.scheduler.util.SchedulerStarter.main(SchedulerStarter.java:206)
+Caused by: org.objectweb.proactive.core.ProActiveException: The uri pnp://192.168.1.151:10099/SCHEDULER is not bound to any known object
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryBackend.lookup(PNPRemoteObjectFactoryBackend.java:176)
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryAbstract.lookup(PNPRemoteObjectFactoryAbstract.java:116)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectHelper.lookup(RemoteObjectHelper.java:166)
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1518)
+	... 7 more
+[2013-07-17 14:04:49,126 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/RMAUTHENTICATION'
+[2013-07-17 14:04:51,862 INFO ] [LocalNodes] Activating the policy Restart Down Nodes Policy user access type [ALL], provider access type [ALL]
+[2013-07-17 14:04:51,862 INFO ] [LocalNodes] Acquiring all nodes
+[2013-07-17 14:04:51,904 INFO ] Cannot acquire more nodes
+[2013-07-17 14:04:51,919 INFO ] Node source LocalNodes has been successfully created by "rm"
+[2013-07-17 14:04:51,919 DEBUG] RMCore end : initActivity
+[2013-07-17 14:04:52,107 INFO ] Adding a new node source LocalNodes to the data base
+[2013-07-17 14:04:52,129 WARN ] SQL Error: 1062, SQLState: 23000
+[2013-07-17 14:04:52,129 ERROR] Duplicate entry 'LocalNodes' for key 'PRIMARY'
+[2013-07-17 14:04:52,130 WARN ] DB operation failed
+org.hibernate.exception.ConstraintViolationException: Duplicate entry 'LocalNodes' for key 'PRIMARY'
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:74)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:129)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractProxyHandler.invoke(AbstractProxyHandler.java:81)
+	at com.sun.proxy.$Proxy18.executeUpdate(Unknown Source)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:56)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2859)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3300)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:88)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:362)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:354)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:275)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:326)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:52)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1214)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:403)
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.beforeTransactionCommit(JdbcTransaction.java:101)
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.commit(AbstractTransactionImpl.java:175)
+	at org.ow2.proactive.resourcemanager.db.RMDBManager.runWithTransaction(RMDBManager.java:219)
+	at org.ow2.proactive.resourcemanager.db.RMDBManager.runWithTransaction(RMDBManager.java:206)
+	at org.ow2.proactive.resourcemanager.db.RMDBManager.addNodeSource(RMDBManager.java:276)
+	at org.ow2.proactive.resourcemanager.core.RMCore.createNodeSource(RMCore.java:834)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:665)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:579)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.serve(Service.java:121)
+	at org.ow2.proactive.resourcemanager.core.RMCore.runActivity(RMCore.java:410)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'LocalNodes' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3597)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3529)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1990)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2151)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2625)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2119)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2415)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2333)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2318)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:477)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
+	... 33 more
+[2013-07-17 14:04:52,131 INFO ] HHH000010: On release of batch it still contained JDBC statements
+[2013-07-17 14:04:52,161 DEBUG] Cannot set default pa configuration file for CommandLineBuilder
+java.io.IOException: The supplied file is not a regular file: C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\file:C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config\proactive\ProActiveConfiguration.xml
+	at org.ow2.proactive.resourcemanager.utils.RMNodeStarter$CommandLineBuilder.setPaProperties(RMNodeStarter.java:1118)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.InfrastructureManager.getDefaultCommandLineBuilder(InfrastructureManager.java:393)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.acquireNodeImpl(LocalInfrastructure.java:96)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.access$000(LocalInfrastructure.java:24)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure$1.run(LocalInfrastructure.java:61)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:04:52,170 DEBUG] Cannot set default pa configuration file for CommandLineBuilder
+java.io.IOException: The supplied file is not a regular file: C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\file:C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config\proactive\ProActiveConfiguration.xml
+	at org.ow2.proactive.resourcemanager.utils.RMNodeStarter$CommandLineBuilder.setPaProperties(RMNodeStarter.java:1118)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.InfrastructureManager.getDefaultCommandLineBuilder(InfrastructureManager.java:393)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.acquireNodeImpl(LocalInfrastructure.java:96)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.access$000(LocalInfrastructure.java:24)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure$1.run(LocalInfrastructure.java:61)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:04:52,249 DEBUG] Cannot set default pa configuration file for CommandLineBuilder
+java.io.IOException: The supplied file is not a regular file: C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\file:C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config\proactive\ProActiveConfiguration.xml
+	at org.ow2.proactive.resourcemanager.utils.RMNodeStarter$CommandLineBuilder.setPaProperties(RMNodeStarter.java:1118)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.InfrastructureManager.getDefaultCommandLineBuilder(InfrastructureManager.java:393)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.acquireNodeImpl(LocalInfrastructure.java:96)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.access$000(LocalInfrastructure.java:24)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure$1.run(LocalInfrastructure.java:61)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:04:52,256 DEBUG] Cannot set default pa configuration file for CommandLineBuilder
+java.io.IOException: The supplied file is not a regular file: C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\file:C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config\proactive\ProActiveConfiguration.xml
+	at org.ow2.proactive.resourcemanager.utils.RMNodeStarter$CommandLineBuilder.setPaProperties(RMNodeStarter.java:1118)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.InfrastructureManager.getDefaultCommandLineBuilder(InfrastructureManager.java:393)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.acquireNodeImpl(LocalInfrastructure.java:96)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure.access$000(LocalInfrastructure.java:24)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.LocalInfrastructure$1.run(LocalInfrastructure.java:61)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:04:52,266 DEBUG] NODESOURCE_CREATED[LocalNodes] event
+[2013-07-17 14:04:52,419 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:04:52,518 DEBUG] deploying://LocalNodes/local-LocalNodes-0 : NODE_ADDED[Deploying] event
+[2013-07-17 14:04:52,641 INFO ] scheduler is trying to connect
+[2013-07-17 14:04:52,641 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:04:52,641 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:04:52,641 DEBUG] adding group principal 'user' for user 'scheduler'
+[2013-07-17 14:04:52,641 DEBUG] authentication succeeded for user 'scheduler'
+[2013-07-17 14:04:52,641 INFO ] User scheduler logged successfully
+[2013-07-17 14:04:52,641 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:04:52,827 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:04:52,915 DEBUG] deploying://LocalNodes/local-LocalNodes-3 : NODE_ADDED[Deploying] event
+[2013-07-17 14:04:52,930 DEBUG] deploying://LocalNodes/local-LocalNodes-2 : NODE_ADDED[Deploying] event
+[2013-07-17 14:04:52,930 INFO ] "scheduler" connected from ActiveObject_org.ow2.proactive.scheduler.core.rmproxies.RMProxyActiveObject_79003
+[2013-07-17 14:04:53,043 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:04:53,072 DEBUG] deploying://LocalNodes/local-LocalNodes-1 : NODE_ADDED[Deploying] event
+[2013-07-17 14:04:53,438 INFO ] Starting default INPUT space server...
+[2013-07-17 14:04:53,469 INFO ] Started default INPUT space server at pappnp://192.168.1.151:10099/DefaultInputSpace?proactive_vfs_provider_path=/
+[2013-07-17 14:04:53,469 INFO ] default INPUT space server local path is C:\Users\ADMINI~1\AppData\Local\Temp\\scheduling\defaultinput
+[2013-07-17 14:04:53,469 INFO ] Starting default OUTPUT space server...
+[2013-07-17 14:04:53,469 INFO ] Started default OUTPUT space server at pappnp://192.168.1.151:10099/DefaultOutputSpace?proactive_vfs_provider_path=/
+[2013-07-17 14:04:53,469 INFO ] default OUTPUT space server local path is C:\Users\ADMINI~1\AppData\Local\Temp\\scheduling\defaultoutput
+[2013-07-17 14:04:53,469 INFO ] Starting shared GLOBAL space server...
+[2013-07-17 14:04:53,469 INFO ] Using property-defined path at c:\shared
+[2013-07-17 14:04:53,469 INFO ] Started shared GLOBAL space server at pappnp://192.168.1.151:10099/GlobalSpace?proactive_vfs_provider_path=/
+[2013-07-17 14:04:53,469 INFO ] shared GLOBAL space server local path is c:\shared
+[2013-07-17 14:04:53,657 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:04:53,657 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/SCHEDULER'
+[2013-07-17 14:04:53,672 INFO ] Someone performed a lookup on pnp://192.168.1.151:10099/SCHEDULER but this remote object is not known
+[2013-07-17 14:04:53,672 DEBUG] 
+org.objectweb.proactive.core.exceptions.IOException6: Lookup of org.ow2.proactive.scheduler.common.SchedulerAuthenticationInterface at pnp://192.168.1.151:10099/SCHEDULER failed
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1529)
+	at org.ow2.proactive.authentication.Connection.lookupAuthentication(Connection.java:103)
+	at org.ow2.proactive.authentication.Connection.waitAndConnect(Connection.java:153)
+	at org.ow2.proactive.scheduler.common.SchedulerConnection.waitAndJoin(SchedulerConnection.java:134)
+	at org.ow2.proactive.scheduler.common.SchedulerConnection.waitAndJoin(SchedulerConnection.java:117)
+	at org.ow2.proactive.scheduler.SchedulerFactory.startLocal(SchedulerFactory.java:159)
+	at org.ow2.proactive.scheduler.SchedulerFactory.startLocal(SchedulerFactory.java:245)
+	at org.ow2.proactive.scheduler.util.SchedulerStarter.main(SchedulerStarter.java:206)
+Caused by: org.objectweb.proactive.core.ProActiveException: The uri pnp://192.168.1.151:10099/SCHEDULER is not bound to any known object
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryBackend.lookup(PNPRemoteObjectFactoryBackend.java:176)
+	at org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactoryAbstract.lookup(PNPRemoteObjectFactoryAbstract.java:116)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectHelper.lookup(RemoteObjectHelper.java:166)
+	at org.objectweb.proactive.api.PAActiveObject.lookupActive(PAActiveObject.java:1518)
+	... 7 more
+[2013-07-17 14:04:53,722 INFO ] Node pnp://192.168.1.151:10099/Node652598823 configured for appid = 0
+[2013-07-17 14:04:53,726 INFO ] Space GLOBALSPACE for appid = 0 with urls = [file:/c:/shared/, pappnp://192.168.1.151:10099/GlobalSpace?proactive_vfs_provider_path=/] registered
+[2013-07-17 14:04:53,729 INFO ] Booting jmx...
+[2013-07-17 14:04:53,733 INFO ] Using existing RRD database: C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\scheduler_statistics.rrd
+[2013-07-17 14:04:53,898 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:04:53,898 INFO ] Started JMX RMI connector server at service:jmx:rmi:///jndi/rmi://192.168.1.151:5822/JMXSchedulerAgent
+[2013-07-17 14:04:53,923 INFO ] Started JMX RO connector server at service:jmx:ro:///jndi/pnp://192.168.1.151:10099/JMXSchedulerAgent
+[2013-07-17 14:04:54,709 INFO ] #Pending jobs list : 0
+[2013-07-17 14:04:54,709 INFO ] #Running jobs list : 0
+[2013-07-17 14:04:54,709 INFO ] #Finished jobs list : 7
+[2013-07-17 14:04:54,726 INFO ] Initialized log forwarding service at pnp://192.168.1.151:10099/PA_JVM1687902893proactive_lfs_collector1
+[2013-07-17 14:04:54,728 INFO ] Instantiated policy : org.ow2.proactive.scheduler.policy.DefaultPolicy
+[2013-07-17 14:04:54,737 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:04:55,540 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:04:55,558 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:04:55,616 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:04:56,764 INFO ] Scheduler has just been started !
+[2013-07-17 14:04:56,765 DEBUG] event [Started]
+[2013-07-17 14:04:56,769 INFO ] Registering scheduler...
+[2013-07-17 14:04:56,786 INFO ] Success at binding url pnp://192.168.1.151:10099/SCHEDULER
+[2013-07-17 14:04:56,826 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:04:56,826 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:04:56,826 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:04:56,826 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:04:58,045 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:04:58,046 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:04:58,046 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:04:58,046 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:04:58,983 DEBUG] Looking up authentication interface 'pnp://192.168.1.151:10099/SCHEDULER'
+[2013-07-17 14:04:59,018 INFO ] The scheduler created on pnp://192.168.1.151:10099/
+[2013-07-17 14:05:01,221 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:01,221 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:01,221 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:01,221 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:03,675 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:03,677 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:03,677 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:03,677 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:04,689 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:04,689 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:04,689 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:04,689 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:05,832 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:05,832 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:05,832 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:05,832 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:07,044 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:07,044 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:07,044 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:07,044 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:08,244 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:08,244 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:08,245 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:08,245 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:09,442 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:09,443 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:09,443 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:09,443 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:09,723 INFO ] Number of deploying nodes 0
+[2013-07-17 14:05:10,742 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:10,743 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:10,744 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:10,744 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:12,400 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:12,401 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:12,401 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:12,401 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:13,596 INFO ] Number of deploying nodes 0
+[2013-07-17 14:05:13,918 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:13,918 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:13,919 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:13,919 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:16,210 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:16,211 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:16,211 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:16,211 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:19,067 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:19,068 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:19,069 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:19,069 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:21,271 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:21,271 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:21,272 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:21,272 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:23,236 DEBUG] Waiting for node local-LocalNodes-3 acquisition
+[2013-07-17 14:05:23,237 DEBUG] Waiting for node local-LocalNodes-1 acquisition
+[2013-07-17 14:05:23,237 DEBUG] Waiting for node local-LocalNodes-0 acquisition
+[2013-07-17 14:05:23,237 DEBUG] Waiting for node local-LocalNodes-2 acquisition
+[2013-07-17 14:05:23,245 WARN ] Declaring node as lost: deploying://LocalNodes/local-LocalNodes-0, Timeout occurred after 30000 ms.
+[2013-07-17 14:05:23,297 WARN ] Declaring node as lost: deploying://LocalNodes/local-LocalNodes-3, Timeout occurred after 30000 ms.
+[2013-07-17 14:05:23,299 WARN ] Declaring node as lost: deploying://LocalNodes/local-LocalNodes-2, Timeout occurred after 30000 ms.
+[2013-07-17 14:05:23,300 WARN ] Declaring node as lost: deploying://LocalNodes/local-LocalNodes-1, Timeout occurred after 30000 ms.
+[2013-07-17 14:05:23,400 DEBUG] deploying://LocalNodes/local-LocalNodes-0 : NODE_STATE_CHANGED[Lost] event
+[2013-07-17 14:05:23,431 DEBUG] deploying://LocalNodes/local-LocalNodes-3 : NODE_STATE_CHANGED[Lost] event
+[2013-07-17 14:05:23,449 DEBUG] deploying://LocalNodes/local-LocalNodes-2 : NODE_STATE_CHANGED[Lost] event
+[2013-07-17 14:05:23,574 DEBUG] deploying://LocalNodes/local-LocalNodes-1 : NODE_STATE_CHANGED[Lost] event
+[2013-07-17 14:05:24,166 INFO ] Number of deploying nodes 0
+[2013-07-17 14:05:24,173 INFO ] Removing lost node deploying://LocalNodes/local-LocalNodes-2
+[2013-07-17 14:05:24,287 DEBUG] Creating new line in the data base for deploying://LocalNodes/local-LocalNodes-2 : NODE_REMOVED[Lost]
+[2013-07-17 14:05:24,299 INFO ] Lost node removed deploying://LocalNodes/local-LocalNodes-2
+[2013-07-17 14:05:24,299 INFO ] Removing lost node deploying://LocalNodes/local-LocalNodes-0
+[2013-07-17 14:05:24,314 DEBUG] deploying://LocalNodes/local-LocalNodes-2 : NODE_REMOVED[Lost] event
+[2013-07-17 14:05:24,314 DEBUG] Creating new line in the data base for deploying://LocalNodes/local-LocalNodes-0 : NODE_REMOVED[Lost]
+[2013-07-17 14:05:24,318 INFO ] Lost node removed deploying://LocalNodes/local-LocalNodes-0
+[2013-07-17 14:05:24,318 INFO ] Removing lost node deploying://LocalNodes/local-LocalNodes-1
+[2013-07-17 14:05:24,324 INFO ] Lost node removed deploying://LocalNodes/local-LocalNodes-1
+[2013-07-17 14:05:24,324 INFO ] Removing lost node deploying://LocalNodes/local-LocalNodes-3
+[2013-07-17 14:05:24,335 INFO ] Lost node removed deploying://LocalNodes/local-LocalNodes-3
+[2013-07-17 14:05:24,335 INFO ] Acquiring 4 nodes
+[2013-07-17 14:05:24,335 INFO ] [LocalNodes] Acquiring 4 nodes
+[2013-07-17 14:05:24,335 WARN ] Cannot acquire a new node
+[2013-07-17 14:05:24,335 WARN ] Cannot acquire a new node
+[2013-07-17 14:05:24,336 WARN ] Cannot acquire a new node
+[2013-07-17 14:05:24,336 WARN ] Cannot acquire a new node
+[2013-07-17 14:05:24,361 DEBUG] deploying://LocalNodes/local-LocalNodes-0 : NODE_REMOVED[Lost] event
+[2013-07-17 14:05:24,361 DEBUG] Creating new line in the data base for deploying://LocalNodes/local-LocalNodes-1 : NODE_REMOVED[Lost]
+[2013-07-17 14:05:24,372 DEBUG] deploying://LocalNodes/local-LocalNodes-1 : NODE_REMOVED[Lost] event
+[2013-07-17 14:05:24,372 DEBUG] Creating new line in the data base for deploying://LocalNodes/local-LocalNodes-3 : NODE_REMOVED[Lost]
+[2013-07-17 14:05:24,403 DEBUG] deploying://LocalNodes/local-LocalNodes-3 : NODE_REMOVED[Lost] event
+[2013-07-17 14:05:25,153 DEBUG] Local Infrastructure manager exits watching loop for node local-LocalNodes-3
+[2013-07-17 14:05:25,160 DEBUG] Local Infrastructure manager exits watching loop for node local-LocalNodes-1
+[2013-07-17 14:05:25,163 DEBUG] Local Infrastructure manager exits watching loop for node local-LocalNodes-0
+[2013-07-17 14:05:25,167 DEBUG] Local Infrastructure manager exits watching loop for node local-LocalNodes-2
+[2013-07-17 14:05:26,428 DEBUG] Number of registered clients 6
+[2013-07-17 14:05:26,439 WARN ] Client "rm" is down.
+[2013-07-17 14:05:26,477 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:05:26,477 DEBUG] Number of pinged clients 2
+[2013-07-17 14:05:27,772 INFO ] "rm" disconnected from HalfBody_org.ow2.proactive.resourcemanager.RMFactory#startLocal_2462
+[2013-07-17 14:05:30,295 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:05:34,276 INFO ] Number of deploying nodes 0
+[2013-07-17 14:05:44,360 INFO ] Number of deploying nodes 0
+[2013-07-17 14:05:54,431 INFO ] Number of deploying nodes 0
+[2013-07-17 14:06:05,453 INFO ] Number of deploying nodes 0
+[2013-07-17 14:06:09,396 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:06:11,173 DEBUG] Number of registered clients 5
+[2013-07-17 14:06:11,179 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:06:11,179 DEBUG] Number of pinged clients 1
+[2013-07-17 14:06:15,499 INFO ] Number of deploying nodes 0
+[2013-07-17 14:06:25,769 INFO ] Number of deploying nodes 0
+[2013-07-17 14:06:36,109 INFO ] watcher is trying to connect
+[2013-07-17 14:06:36,113 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:06:36,113 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:06:36,114 DEBUG] adding group principal 'watchers' for user 'watcher'
+[2013-07-17 14:06:36,114 DEBUG] authentication succeeded for user 'watcher'
+[2013-07-17 14:06:36,114 INFO ] User watcher logged successfully
+[2013-07-17 14:06:36,114 INFO ] user : watcher
+[2013-07-17 14:06:36,132 INFO ] watcher successfully connected !
+[2013-07-17 14:06:36,133 DEBUG] event [Users updated]
+[2013-07-17 14:06:36,133 WARN ] Malformed URI : pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/\watcher
+java.net.URISyntaxException: Illegal character in query at index 82: pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/\watcher
+	at java.net.URI$Parser.fail(URI.java:2829)
+	at java.net.URI$Parser.checkChars(URI.java:3002)
+	at java.net.URI$Parser.parseHierarchical(URI.java:3092)
+	at java.net.URI$Parser.parse(URI.java:3034)
+	at java.net.URI.<init>(URI.java:595)
+	at org.objectweb.proactive.extensions.dataspaces.core.SpaceConfiguration.<init>(SpaceConfiguration.java:131)
+	at org.objectweb.proactive.extensions.dataspaces.core.InputOutputSpaceConfiguration.<init>(InputOutputSpaceConfiguration.java:176)
+	at org.objectweb.proactive.extensions.dataspaces.core.InputOutputSpaceConfiguration.<init>(InputOutputSpaceConfiguration.java:171)
+	at org.objectweb.proactive.extensions.dataspaces.core.InputOutputSpaceConfiguration.createOutputSpaceConfiguration(InputOutputSpaceConfiguration.java:123)
+	at org.ow2.proactive.scheduler.core.DataSpaceServiceStarter.createSpace(DataSpaceServiceStarter.java:258)
+	at org.ow2.proactive.scheduler.core.SchedulerFrontend.registerUserSpace(SchedulerFrontend.java:348)
+	at org.ow2.proactive.scheduler.core.SchedulerFrontend.connect(SchedulerFrontend.java:314)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:665)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:579)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.serve(Service.java:121)
+	at org.ow2.proactive.scheduler.core.SchedulerFrontend.runActivity(SchedulerFrontend.java:934)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:06:36,139 INFO ] Space USERSPACE_watcher for appid = 0 with urls = [pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/\watcher] registered
+[2013-07-17 14:06:36,297 INFO ] watcher is trying to connect
+[2013-07-17 14:06:36,300 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:06:36,300 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:06:36,300 DEBUG] adding group principal 'watchers' for user 'watcher'
+[2013-07-17 14:06:36,300 DEBUG] authentication succeeded for user 'watcher'
+[2013-07-17 14:06:36,300 INFO ] User watcher logged successfully
+[2013-07-17 14:06:36,326 INFO ] Number of deploying nodes 0
+[2013-07-17 14:06:36,607 INFO ] "watcher" connected from ActiveObject_org.ow2.proactive.resourcemanager.common.util.RMCachingProxyUserInterface_27246
+[2013-07-17 14:06:36,748 DEBUG] Adding the RM listner for ActiveObject_org.ow2.proactive.resourcemanager.common.util.RMCachingProxyUserInterface_27246
+[2013-07-17 14:06:37,754 INFO ] USER space for user watcher is at pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/watcher
+[2013-07-17 14:06:37,780 INFO ] watcher is trying to connect
+[2013-07-17 14:06:37,780 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:06:37,780 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:06:37,781 DEBUG] adding group principal 'watchers' for user 'watcher'
+[2013-07-17 14:06:37,781 DEBUG] authentication succeeded for user 'watcher'
+[2013-07-17 14:06:37,781 INFO ] User watcher logged successfully
+[2013-07-17 14:06:46,332 INFO ] Number of deploying nodes 0
+[2013-07-17 14:06:56,096 DEBUG] Number of registered clients 6
+[2013-07-17 14:06:56,103 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:06:56,107 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:06:56,107 DEBUG] Number of pinged clients 2
+[2013-07-17 14:06:56,327 INFO ] Number of deploying nodes 0
+[2013-07-17 14:07:00,282 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:07:06,465 INFO ] Number of deploying nodes 0
+[2013-07-17 14:07:16,459 INFO ] Number of deploying nodes 0
+[2013-07-17 14:07:26,460 INFO ] Number of deploying nodes 0
+[2013-07-17 14:07:36,460 INFO ] Number of deploying nodes 0
+[2013-07-17 14:07:39,331 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:07:41,107 DEBUG] Number of registered clients 6
+[2013-07-17 14:07:41,114 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:07:41,116 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:07:41,116 DEBUG] Number of pinged clients 2
+[2013-07-17 14:07:45,318 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:07:46,459 INFO ] Number of deploying nodes 0
+[2013-07-17 14:07:56,459 INFO ] Number of deploying nodes 0
+[2013-07-17 14:08:06,489 INFO ] Number of deploying nodes 0
+[2013-07-17 14:08:16,489 INFO ] Number of deploying nodes 0
+[2013-07-17 14:08:24,363 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:08:26,116 DEBUG] Number of registered clients 6
+[2013-07-17 14:08:26,126 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:08:26,138 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:08:26,138 DEBUG] Number of pinged clients 2
+[2013-07-17 14:08:26,490 INFO ] Number of deploying nodes 0
+[2013-07-17 14:08:30,350 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:08:36,549 INFO ] Number of deploying nodes 0
+[2013-07-17 14:08:46,549 INFO ] Number of deploying nodes 0
+[2013-07-17 14:08:56,549 INFO ] Number of deploying nodes 0
+[2013-07-17 14:09:06,549 INFO ] Number of deploying nodes 0
+[2013-07-17 14:09:09,366 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:09:11,138 DEBUG] Number of registered clients 6
+[2013-07-17 14:09:11,147 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:09:11,150 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:09:11,150 DEBUG] Number of pinged clients 2
+[2013-07-17 14:09:15,353 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:09:16,549 INFO ] Number of deploying nodes 0
+[2013-07-17 14:09:26,547 INFO ] Number of deploying nodes 0
+[2013-07-17 14:09:36,550 INFO ] Number of deploying nodes 0
+[2013-07-17 14:09:45,048 INFO ] admin is trying to connect
+[2013-07-17 14:09:45,050 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:09:45,050 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:09:45,050 DEBUG] adding group principal 'admin' for user 'admin'
+[2013-07-17 14:09:45,050 DEBUG] adding group principal 'nsadmins' for user 'admin'
+[2013-07-17 14:09:45,051 DEBUG] authentication succeeded for user 'admin'
+[2013-07-17 14:09:45,051 INFO ] User admin logged successfully
+[2013-07-17 14:09:45,110 INFO ] "admin" connected from ActiveObject_org.ow2.proactive.resourcemanager.common.util.RMCachingProxyUserInterface_40670
+[2013-07-17 14:09:45,158 DEBUG] Adding the RM listner for ActiveObject_org.ow2.proactive.resourcemanager.common.util.RMCachingProxyUserInterface_40670
+[2013-07-17 14:09:45,322 INFO ] admin is trying to connect
+[2013-07-17 14:09:45,322 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:09:45,322 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:09:45,322 DEBUG] adding group principal 'admin' for user 'admin'
+[2013-07-17 14:09:45,322 DEBUG] adding group principal 'nsadmins' for user 'admin'
+[2013-07-17 14:09:45,322 DEBUG] authentication succeeded for user 'admin'
+[2013-07-17 14:09:45,322 INFO ] User admin logged successfully
+[2013-07-17 14:09:46,663 INFO ] Number of deploying nodes 0
+[2013-07-17 14:09:47,155 INFO ] admin is trying to connect
+[2013-07-17 14:09:47,155 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:09:47,155 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:09:47,155 DEBUG] adding group principal 'admin' for user 'admin'
+[2013-07-17 14:09:47,155 DEBUG] adding group principal 'nsadmins' for user 'admin'
+[2013-07-17 14:09:47,156 DEBUG] authentication succeeded for user 'admin'
+[2013-07-17 14:09:47,156 INFO ] User admin logged successfully
+[2013-07-17 14:09:47,156 INFO ] user : admin
+[2013-07-17 14:09:47,166 INFO ] admin successfully connected !
+[2013-07-17 14:09:47,166 DEBUG] event [Users updated]
+[2013-07-17 14:09:47,171 WARN ] Malformed URI : pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/\admin
+java.net.URISyntaxException: Illegal character in query at index 82: pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/\admin
+	at java.net.URI$Parser.fail(URI.java:2829)
+	at java.net.URI$Parser.checkChars(URI.java:3002)
+	at java.net.URI$Parser.parseHierarchical(URI.java:3092)
+	at java.net.URI$Parser.parse(URI.java:3034)
+	at java.net.URI.<init>(URI.java:595)
+	at org.objectweb.proactive.extensions.dataspaces.core.SpaceConfiguration.<init>(SpaceConfiguration.java:131)
+	at org.objectweb.proactive.extensions.dataspaces.core.InputOutputSpaceConfiguration.<init>(InputOutputSpaceConfiguration.java:176)
+	at org.objectweb.proactive.extensions.dataspaces.core.InputOutputSpaceConfiguration.<init>(InputOutputSpaceConfiguration.java:171)
+	at org.objectweb.proactive.extensions.dataspaces.core.InputOutputSpaceConfiguration.createOutputSpaceConfiguration(InputOutputSpaceConfiguration.java:123)
+	at org.ow2.proactive.scheduler.core.DataSpaceServiceStarter.createSpace(DataSpaceServiceStarter.java:258)
+	at org.ow2.proactive.scheduler.core.SchedulerFrontend.registerUserSpace(SchedulerFrontend.java:348)
+	at org.ow2.proactive.scheduler.core.SchedulerFrontend.connect(SchedulerFrontend.java:314)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:665)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:579)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.serve(Service.java:121)
+	at org.ow2.proactive.scheduler.core.SchedulerFrontend.runActivity(SchedulerFrontend.java:934)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:09:47,180 INFO ] Space USERSPACE_admin for appid = 0 with urls = [pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/\admin] registered
+[2013-07-17 14:09:47,205 INFO ] USER space for user admin is at pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/admin
+[2013-07-17 14:09:49,540 INFO ] rm is trying to connect
+[2013-07-17 14:09:49,541 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:09:49,541 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:09:49,542 DEBUG] adding group principal 'admin' for user 'rm'
+[2013-07-17 14:09:49,543 DEBUG] adding group principal 'nsadmins' for user 'rm'
+[2013-07-17 14:09:49,543 DEBUG] authentication succeeded for user 'rm'
+[2013-07-17 14:09:49,543 INFO ] User rm logged successfully
+[2013-07-17 14:09:49,791 INFO ] "rm" connected from HalfBody_org.ow2.proactive.resourcemanager.utils.RMNodeStarter#configureForDataSpace_36726
+[2013-07-17 14:09:50,575 INFO ] Looking up the node pnp://192.168.1.157:1099/youri with 30000 ms timeout
+[2013-07-17 14:09:50,663 INFO ] The node pnp://192.168.1.157:1099/youri has been successfully looked up
+[2013-07-17 14:09:50,663 INFO ] [Default] new node available : pnp://192.168.1.157:1099/youri
+[2013-07-17 14:09:50,690 DEBUG] Configuring node pnp://192.168.1.157:1099/youri
+[2013-07-17 14:09:50,708 DEBUG] Data spaces is already configured for node pnp://192.168.1.157:1099/youri
+[2013-07-17 14:09:50,721 DEBUG] pnp://192.168.1.157:1099/youri : NODE_ADDED[Configuring] event
+[2013-07-17 14:09:50,726 DEBUG] Initializing Thread[pool-3-thread-1,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:09:50,727 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:09:50,727 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_ADDED[Configuring]' to client "watcher"
+[2013-07-17 14:09:50,731 DEBUG] Initializing Thread[pool-3-thread-2,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:09:50,731 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:09:50,731 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_ADDED[Configuring]' to client "admin"
+[2013-07-17 14:09:50,762 DEBUG] Launching ping process on node pnp://192.168.1.157:1099/youri
+[2013-07-17 14:09:50,888 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_ADDED[Configuring]' has been delivered to client "watcher" in 161 ms
+[2013-07-17 14:09:50,888 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:09:50,888 DEBUG] Finnishing delivery in Thread[pool-3-thread-1,5,main] to client '"watcher"'. 1 events were delivered in 162 ms
+[2013-07-17 14:09:50,920 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_ADDED[Configuring]' has been delivered to client "admin" in 189 ms
+[2013-07-17 14:09:50,920 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:09:50,920 DEBUG] Finnishing delivery in Thread[pool-3-thread-2,5,main] to client '"admin"'. 1 events were delivered in 189 ms
+[2013-07-17 14:09:54,615 INFO ] admin is trying to connect
+[2013-07-17 14:09:54,616 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:09:54,616 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:09:54,617 DEBUG] adding group principal 'admin' for user 'admin'
+[2013-07-17 14:09:54,617 DEBUG] adding group principal 'nsadmins' for user 'admin'
+[2013-07-17 14:09:54,617 DEBUG] authentication succeeded for user 'admin'
+[2013-07-17 14:09:54,617 INFO ] User admin logged successfully
+[2013-07-17 14:09:54,890 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:09:55,714 DEBUG] 0 hosts were pinged from pnp://192.168.1.157:1099/youri in 4952 ms
+[2013-07-17 14:09:55,714 DEBUG] Distances are:
+[2013-07-17 14:09:56,365 DEBUG] Number of registered clients 8
+[2013-07-17 14:09:56,369 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:09:56,373 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Free] event
+[2013-07-17 14:09:56,376 DEBUG] Initializing Thread[pool-3-thread-3,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:09:56,376 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:09:56,377 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 1 [Free]' to client "watcher"
+[2013-07-17 14:09:56,380 DEBUG] Client "rm" is alive.
+[2013-07-17 14:09:56,384 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:09:56,388 DEBUG] Client "admin" is alive.
+[2013-07-17 14:09:56,388 DEBUG] Number of pinged clients 4
+[2013-07-17 14:09:56,432 DEBUG] Initializing Thread[pool-3-thread-4,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:09:56,432 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:09:56,432 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 1 [Free]' to client "admin"
+[2013-07-17 14:09:56,572 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 1 [Free]' has been delivered to client "watcher" in 196 ms
+[2013-07-17 14:09:56,572 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:09:56,572 DEBUG] Finnishing delivery in Thread[pool-3-thread-3,5,main] to client '"watcher"'. 1 events were delivered in 196 ms
+[2013-07-17 14:09:56,611 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 1 [Free]' has been delivered to client "admin" in 179 ms
+[2013-07-17 14:09:56,611 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:09:56,611 DEBUG] Finnishing delivery in Thread[pool-3-thread-4,5,main] to client '"admin"'. 1 events were delivered in 179 ms
+[2013-07-17 14:09:56,660 INFO ] Number of deploying nodes 0
+[2013-07-17 14:10:06,662 INFO ] Number of deploying nodes 0
+[2013-07-17 14:10:16,661 INFO ] Number of deploying nodes 0
+[2013-07-17 14:10:26,662 INFO ] Number of deploying nodes 0
+[2013-07-17 14:10:35,723 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:10:35,745 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:10:36,662 INFO ] Number of deploying nodes 0
+[2013-07-17 14:10:39,918 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:10:41,496 DEBUG] Number of registered clients 8
+[2013-07-17 14:10:41,502 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:10:41,512 DEBUG] Client "rm" is alive.
+[2013-07-17 14:10:41,516 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:10:41,520 DEBUG] Client "admin" is alive.
+[2013-07-17 14:10:41,520 DEBUG] Number of pinged clients 4
+[2013-07-17 14:10:46,847 INFO ] Number of deploying nodes 0
+[2013-07-17 14:10:56,852 INFO ] Number of deploying nodes 0
+[2013-07-17 14:11:06,849 INFO ] Number of deploying nodes 0
+[2013-07-17 14:11:16,850 INFO ] Number of deploying nodes 0
+[2013-07-17 14:11:20,950 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:11:20,990 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:11:24,931 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:11:26,520 DEBUG] Number of registered clients 8
+[2013-07-17 14:11:26,526 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:11:26,533 DEBUG] Client "rm" is alive.
+[2013-07-17 14:11:26,536 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:11:26,539 DEBUG] Client "admin" is alive.
+[2013-07-17 14:11:26,539 DEBUG] Number of pinged clients 4
+[2013-07-17 14:11:26,871 INFO ] Number of deploying nodes 0
+[2013-07-17 14:11:36,872 INFO ] Number of deploying nodes 0
+[2013-07-17 14:11:46,872 INFO ] Number of deploying nodes 0
+[2013-07-17 14:11:56,874 INFO ] Number of deploying nodes 0
+[2013-07-17 14:11:58,360 INFO ] New job submission requested : ProactiveJob
+[2013-07-17 14:11:58,368 INFO ] Create job 'ProactiveJob' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[2013-07-17 14:11:58,388 INFO ] Submitting a new job 'ProactiveJob'
+[2013-07-17 14:11:59,197 DEBUG] job 151  event [Job submitted]
+[2013-07-17 14:11:59,208 DEBUG] event [Users updated]
+[2013-07-17 14:11:59,208 INFO ] job 151 submitted: name 'ProactiveJob', tasks '1', owner 'admin'
+[2013-07-17 14:12:00,165 INFO ] eligible tasks : 1
+[2013-07-17 14:12:00,275 INFO ] eligible nodes : 1
+[2013-07-17 14:12:00,276 INFO ] task 1510000 scheduling
+[2013-07-17 14:12:00,277 DEBUG] required number of nodes : 1
+[2013-07-17 14:12:00,534 INFO ] scheduler is trying to connect
+[2013-07-17 14:12:00,535 DEBUG] Using Login file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/login.cfg
+[2013-07-17 14:12:00,535 DEBUG] Using Group file at : C:\Users\Administrator\Desktop\ProActiveScheduling-3.4.0_bin_full\ProActiveScheduling-3.4.0_bin_full\bin\windows\..\..\config/authentication/group.cfg
+[2013-07-17 14:12:00,535 DEBUG] adding group principal 'user' for user 'scheduler'
+[2013-07-17 14:12:00,536 DEBUG] authentication succeeded for user 'scheduler'
+[2013-07-17 14:12:00,536 INFO ] User scheduler logged successfully
+[2013-07-17 14:12:00,641 INFO ] "scheduler" connected from ActiveObject_org.ow2.proactive.scheduler.core.rmproxies.RMProxyActiveObject_54128
+[2013-07-17 14:12:00,665 INFO ] "scheduler" requested 1 nodes with ArbitraryTopologyDescriptor
+[2013-07-17 14:12:04,719 DEBUG] Shuffling nodes before selection
+[2013-07-17 14:12:04,727 DEBUG] pnp://192.168.1.157:1099/youri : cleaning
+[2013-07-17 14:12:04,739 INFO ] "scheduler" will get 1 nodes 
+[2013-07-17 14:12:04,739 DEBUG] pnp://192.168.1.157:1099/youri
+[2013-07-17 14:12:04,757 DEBUG] provided nodes 1
+[2013-07-17 14:12:04,757 DEBUG] task 1510000 initializing the executable container
+[2013-07-17 14:12:04,780 INFO ] Space default for appid = 151 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultinput/admin, pappnp://192.168.1.151:10099/DefaultInputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:12:04,784 INFO ] Space default for appid = 151 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultoutput/admin, pappnp://192.168.1.151:10099/DefaultOutputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:12:04,786 INFO ] Space GLOBALSPACE for appid = 151 with urls = [file:/c:/shared/, pappnp://192.168.1.151:10099/GlobalSpace?proactive_vfs_provider_path=/] registered
+[2013-07-17 14:12:04,789 INFO ] Space USERSPACE for appid = 151 with urls = [pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:12:04,789 INFO ] task 1510000 creating native task launcher
+[2013-07-17 14:12:04,862 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Busy] event
+[2013-07-17 14:12:04,864 DEBUG] Initializing Thread[pool-3-thread-1,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:12:04,864 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:12:04,864 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 2 [Busy]' to client "admin"
+[2013-07-17 14:12:04,873 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 2 [Busy]' has been delivered to client "admin" in 9 ms
+[2013-07-17 14:12:04,873 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:12:04,873 DEBUG] Finnishing delivery in Thread[pool-3-thread-1,5,main] to client '"admin"'. 1 events were delivered in 9 ms
+[2013-07-17 14:12:04,878 DEBUG] Initializing Thread[pool-3-thread-5,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:12:04,878 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:12:04,878 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 2 [Busy]' to client "watcher"
+[2013-07-17 14:12:04,915 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 2 [Busy]' has been delivered to client "watcher" in 37 ms
+[2013-07-17 14:12:04,915 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:12:04,915 DEBUG] Finnishing delivery in Thread[pool-3-thread-5,5,main] to client '"watcher"'. 1 events were delivered in 37 ms
+[2013-07-17 14:12:05,205 INFO ] task 1510000 deploying
+[2013-07-17 14:12:05,205 INFO ] task 1510000 started on 192.168.1.157(node: youri)
+[2013-07-17 14:12:05,208 DEBUG] job 151  event [Job pending to running]
+[2013-07-17 14:12:05,465 INFO ] job 151 started
+[2013-07-17 14:12:05,903 DEBUG] task 1510000 event [Task pending to running]
+[2013-07-17 14:12:05,983 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:12:06,195 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:12:06,873 INFO ] Number of deploying nodes 0
+[2013-07-17 14:12:07,901 DEBUG] task 1510000 is a native task
+[2013-07-17 14:12:07,907 ERROR] task 1510000 error
+java.lang.IllegalArgumentException: URI scheme is not "file"
+	at java.io.File.<init>(File.java:395)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTag(NativeTaskLauncher.java:380)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTags(NativeTaskLauncher.java:372)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.doTask(NativeTaskLauncher.java:192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:665)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:579)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:190)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:165)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:141)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:315)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:12:07,907 ERROR] task 1510000 error
+java.lang.IllegalArgumentException: URI scheme is not "file"
+	at java.io.File.<init>(File.java:395)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTag(NativeTaskLauncher.java:380)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTags(NativeTaskLauncher.java:372)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.doTask(NativeTaskLauncher.java:192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:665)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:579)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:190)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:165)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:141)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:315)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:12:07,908 INFO ] task 1510000 finished with errors
+[2013-07-17 14:12:07,908 INFO ] task 1510000 result added to job 151
+[2013-07-17 14:12:07,909 INFO ] job 151 terminated
+[2013-07-17 14:12:08,585 DEBUG] task 1510000 event [Task running to finished]
+[2013-07-17 14:12:08,586 INFO ] job 151 finished tasks 1, total tasks 1, finished true
+[2013-07-17 14:12:08,586 DEBUG] job 151  event [Job running to finished]
+[2013-07-17 14:12:08,586 DEBUG] Notification emails disabled, doing nothing
+[2013-07-17 14:12:08,635 INFO ] job 151 cleaning loggers
+[2013-07-17 14:12:08,635 INFO ] job 151 removing TaskClassServer
+[2013-07-17 14:12:08,915 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Free] event
+[2013-07-17 14:12:08,916 DEBUG] Initializing Thread[pool-3-thread-2,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:12:08,916 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:12:08,916 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 3 [Free]' to client "watcher"
+[2013-07-17 14:12:08,919 DEBUG] Initializing Thread[pool-3-thread-3,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:12:08,919 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:12:08,919 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 3 [Free]' to client "admin"
+[2013-07-17 14:12:08,928 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 3 [Free]' has been delivered to client "watcher" in 12 ms
+[2013-07-17 14:12:08,928 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:12:08,928 DEBUG] Finnishing delivery in Thread[pool-3-thread-2,5,main] to client '"watcher"'. 1 events were delivered in 12 ms
+[2013-07-17 14:12:08,932 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 3 [Free]' has been delivered to client "admin" in 13 ms
+[2013-07-17 14:12:08,932 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:12:08,932 DEBUG] Finnishing delivery in Thread[pool-3-thread-3,5,main] to client '"admin"'. 1 events were delivered in 13 ms
+[2013-07-17 14:12:09,944 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:12:11,539 DEBUG] Number of registered clients 9
+[2013-07-17 14:12:11,543 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:12:11,552 DEBUG] Client "rm" is alive.
+[2013-07-17 14:12:11,555 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:12:11,557 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:12:11,559 DEBUG] Client "admin" is alive.
+[2013-07-17 14:12:11,559 DEBUG] Number of pinged clients 5
+[2013-07-17 14:12:16,587 INFO ] job 151 trying to get the task result, incarnation 0
+[2013-07-17 14:12:16,888 INFO ] Number of deploying nodes 0
+[2013-07-17 14:12:19,188 INFO ] job 151 trying to get the task result, incarnation 0
+[2013-07-17 14:12:26,890 INFO ] Number of deploying nodes 0
+[2013-07-17 14:12:36,890 INFO ] Number of deploying nodes 0
+[2013-07-17 14:12:46,891 INFO ] Number of deploying nodes 0
+[2013-07-17 14:12:51,060 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:12:51,094 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:12:54,954 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:12:56,559 DEBUG] Number of registered clients 9
+[2013-07-17 14:12:56,566 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:12:56,572 DEBUG] Client "rm" is alive.
+[2013-07-17 14:12:56,573 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:12:56,578 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:12:56,580 DEBUG] Client "admin" is alive.
+[2013-07-17 14:12:56,580 DEBUG] Number of pinged clients 5
+[2013-07-17 14:12:56,892 INFO ] Number of deploying nodes 0
+[2013-07-17 14:13:07,100 INFO ] Number of deploying nodes 0
+[2013-07-17 14:13:17,100 INFO ] Number of deploying nodes 0
+[2013-07-17 14:13:27,101 INFO ] Number of deploying nodes 0
+[2013-07-17 14:13:36,094 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:13:36,121 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:13:37,273 INFO ] Number of deploying nodes 0
+[2013-07-17 14:13:39,970 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:13:41,580 DEBUG] Number of registered clients 9
+[2013-07-17 14:13:41,585 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:13:41,592 DEBUG] Client "rm" is alive.
+[2013-07-17 14:13:41,595 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:13:41,597 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:13:41,601 DEBUG] Client "admin" is alive.
+[2013-07-17 14:13:41,601 DEBUG] Number of pinged clients 5
+[2013-07-17 14:13:47,275 INFO ] Number of deploying nodes 0
+[2013-07-17 14:13:57,275 INFO ] Number of deploying nodes 0
+[2013-07-17 14:14:07,485 INFO ] Number of deploying nodes 0
+[2013-07-17 14:14:17,484 INFO ] Number of deploying nodes 0
+[2013-07-17 14:14:21,125 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:14:21,135 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:14:25,007 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:14:26,601 DEBUG] Number of registered clients 9
+[2013-07-17 14:14:26,606 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:14:26,613 DEBUG] Client "rm" is alive.
+[2013-07-17 14:14:26,615 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:14:26,618 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:14:26,620 DEBUG] Client "admin" is alive.
+[2013-07-17 14:14:26,620 DEBUG] Number of pinged clients 5
+[2013-07-17 14:14:27,485 INFO ] Number of deploying nodes 0
+[2013-07-17 14:14:37,722 INFO ] Number of deploying nodes 0
+[2013-07-17 14:14:47,722 INFO ] Number of deploying nodes 0
+[2013-07-17 14:14:57,722 INFO ] Number of deploying nodes 0
+[2013-07-17 14:15:06,152 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:15:06,162 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:15:07,724 INFO ] Number of deploying nodes 0
+[2013-07-17 14:15:10,020 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:15:11,620 DEBUG] Number of registered clients 9
+[2013-07-17 14:15:11,628 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:15:11,636 DEBUG] Client "rm" is alive.
+[2013-07-17 14:15:11,915 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:15:11,921 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:15:11,945 DEBUG] Client "admin" is alive.
+[2013-07-17 14:15:11,945 DEBUG] Number of pinged clients 5
+[2013-07-17 14:15:17,722 INFO ] Number of deploying nodes 0
+[2013-07-17 14:15:27,723 INFO ] Number of deploying nodes 0
+[2013-07-17 14:15:37,723 INFO ] Number of deploying nodes 0
+[2013-07-17 14:15:47,722 INFO ] Number of deploying nodes 0
+[2013-07-17 14:15:51,166 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:15:51,185 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:15:55,032 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:15:56,945 DEBUG] Number of registered clients 9
+[2013-07-17 14:15:56,948 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:15:56,954 DEBUG] Client "rm" is alive.
+[2013-07-17 14:15:56,957 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:15:56,959 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:15:56,962 DEBUG] Client "admin" is alive.
+[2013-07-17 14:15:56,962 DEBUG] Number of pinged clients 5
+[2013-07-17 14:15:57,722 INFO ] Number of deploying nodes 0
+[2013-07-17 14:16:07,724 INFO ] Number of deploying nodes 0
+[2013-07-17 14:16:17,723 INFO ] Number of deploying nodes 0
+[2013-07-17 14:16:27,723 INFO ] Number of deploying nodes 0
+[2013-07-17 14:16:36,187 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:16:36,197 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:16:37,723 INFO ] Number of deploying nodes 0
+[2013-07-17 14:16:40,052 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:16:41,962 DEBUG] Number of registered clients 9
+[2013-07-17 14:16:41,966 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:16:41,975 DEBUG] Client "rm" is alive.
+[2013-07-17 14:16:41,977 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:16:41,981 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:16:41,983 DEBUG] Client "admin" is alive.
+[2013-07-17 14:16:41,984 DEBUG] Number of pinged clients 5
+[2013-07-17 14:16:47,723 INFO ] Number of deploying nodes 0
+[2013-07-17 14:16:57,728 INFO ] Number of deploying nodes 0
+[2013-07-17 14:17:07,728 INFO ] Number of deploying nodes 0
+[2013-07-17 14:17:17,727 INFO ] Number of deploying nodes 0
+[2013-07-17 14:17:21,199 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:17:21,212 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:17:25,063 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:17:26,984 DEBUG] Number of registered clients 9
+[2013-07-17 14:17:26,989 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:17:26,996 DEBUG] Client "rm" is alive.
+[2013-07-17 14:17:26,999 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:17:27,001 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:17:27,005 DEBUG] Client "admin" is alive.
+[2013-07-17 14:17:27,005 DEBUG] Number of pinged clients 5
+[2013-07-17 14:17:27,729 INFO ] Number of deploying nodes 0
+[2013-07-17 14:17:37,727 INFO ] Number of deploying nodes 0
+[2013-07-17 14:17:47,728 INFO ] Number of deploying nodes 0
+[2013-07-17 14:17:57,728 INFO ] Number of deploying nodes 0
+[2013-07-17 14:18:06,209 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:18:06,220 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:18:07,727 INFO ] Number of deploying nodes 0
+[2013-07-17 14:18:10,072 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:18:12,005 DEBUG] Number of registered clients 9
+[2013-07-17 14:18:12,012 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:18:12,019 DEBUG] Client "rm" is alive.
+[2013-07-17 14:18:12,022 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:18:12,023 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:18:12,026 DEBUG] Client "admin" is alive.
+[2013-07-17 14:18:12,026 DEBUG] Number of pinged clients 5
+[2013-07-17 14:18:17,726 INFO ] Number of deploying nodes 0
+[2013-07-17 14:18:27,728 INFO ] Number of deploying nodes 0
+[2013-07-17 14:18:37,727 INFO ] Number of deploying nodes 0
+[2013-07-17 14:18:47,946 INFO ] Number of deploying nodes 0
+[2013-07-17 14:18:51,224 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:18:51,234 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:18:55,084 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:18:57,026 DEBUG] Number of registered clients 9
+[2013-07-17 14:18:57,030 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:18:57,037 DEBUG] Client "rm" is alive.
+[2013-07-17 14:18:57,057 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:18:57,059 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:18:57,062 DEBUG] Client "admin" is alive.
+[2013-07-17 14:18:57,062 DEBUG] Number of pinged clients 5
+[2013-07-17 14:18:57,947 INFO ] Number of deploying nodes 0
+[2013-07-17 14:19:07,948 INFO ] Number of deploying nodes 0
+[2013-07-17 14:19:18,126 INFO ] Number of deploying nodes 0
+[2013-07-17 14:19:28,125 INFO ] Number of deploying nodes 0
+[2013-07-17 14:19:36,234 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:19:36,247 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:19:38,125 INFO ] Number of deploying nodes 0
+[2013-07-17 14:19:40,093 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:19:42,062 DEBUG] Number of registered clients 9
+[2013-07-17 14:19:42,066 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:19:42,074 DEBUG] Client "rm" is alive.
+[2013-07-17 14:19:42,077 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:19:42,078 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:19:42,336 DEBUG] Client "admin" is alive.
+[2013-07-17 14:19:42,336 DEBUG] Number of pinged clients 5
+[2013-07-17 14:19:48,283 INFO ] Number of deploying nodes 0
+[2013-07-17 14:19:58,292 INFO ] Number of deploying nodes 0
+[2013-07-17 14:20:08,292 INFO ] Number of deploying nodes 0
+[2013-07-17 14:20:18,480 INFO ] Number of deploying nodes 0
+[2013-07-17 14:20:21,244 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:20:21,255 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:20:25,103 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:20:27,336 DEBUG] Number of registered clients 9
+[2013-07-17 14:20:27,345 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:20:27,353 DEBUG] Client "rm" is alive.
+[2013-07-17 14:20:27,356 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:20:27,357 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:20:27,360 DEBUG] Client "admin" is alive.
+[2013-07-17 14:20:27,360 DEBUG] Number of pinged clients 5
+[2013-07-17 14:20:28,479 INFO ] Number of deploying nodes 0
+[2013-07-17 14:20:38,480 INFO ] Number of deploying nodes 0
+[2013-07-17 14:20:48,479 INFO ] Number of deploying nodes 0
+[2013-07-17 14:20:58,479 INFO ] Number of deploying nodes 0
+[2013-07-17 14:21:06,265 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:21:06,282 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:21:08,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:21:10,121 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:21:12,360 DEBUG] Number of registered clients 9
+[2013-07-17 14:21:12,365 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:21:12,373 DEBUG] Client "rm" is alive.
+[2013-07-17 14:21:12,376 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:21:12,379 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:21:12,381 DEBUG] Client "admin" is alive.
+[2013-07-17 14:21:12,381 DEBUG] Number of pinged clients 5
+[2013-07-17 14:21:18,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:21:28,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:21:38,514 INFO ] Number of deploying nodes 0
+[2013-07-17 14:21:43,229 INFO ] New job submission requested : ProactiveJob
+[2013-07-17 14:21:43,230 INFO ] Create job 'ProactiveJob' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[2013-07-17 14:21:43,271 INFO ] Submitting a new job 'ProactiveJob'
+[2013-07-17 14:21:43,474 DEBUG] job 152  event [Job submitted]
+[2013-07-17 14:21:43,478 DEBUG] event [Users updated]
+[2013-07-17 14:21:43,478 INFO ] job 152 submitted: name 'ProactiveJob', tasks '1', owner 'admin'
+[2013-07-17 14:21:44,578 INFO ] eligible tasks : 1
+[2013-07-17 14:21:44,582 INFO ] eligible nodes : 1
+[2013-07-17 14:21:44,582 INFO ] task 1520000 scheduling
+[2013-07-17 14:21:44,584 DEBUG] required number of nodes : 1
+[2013-07-17 14:21:44,590 INFO ] "scheduler" requested 1 nodes with ArbitraryTopologyDescriptor
+[2013-07-17 14:21:44,597 DEBUG] Shuffling nodes before selection
+[2013-07-17 14:21:44,621 DEBUG] pnp://192.168.1.157:1099/youri : cleaning
+[2013-07-17 14:21:44,632 INFO ] "scheduler" will get 1 nodes 
+[2013-07-17 14:21:44,633 DEBUG] pnp://192.168.1.157:1099/youri
+[2013-07-17 14:21:44,702 DEBUG] provided nodes 1
+[2013-07-17 14:21:44,702 DEBUG] task 1520000 initializing the executable container
+[2013-07-17 14:21:44,710 INFO ] Space default for appid = 152 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultinput/admin, pappnp://192.168.1.151:10099/DefaultInputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:21:44,713 INFO ] Space default for appid = 152 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultoutput/admin, pappnp://192.168.1.151:10099/DefaultOutputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:21:44,715 INFO ] Space GLOBALSPACE for appid = 152 with urls = [file:/c:/shared/, pappnp://192.168.1.151:10099/GlobalSpace?proactive_vfs_provider_path=/] registered
+[2013-07-17 14:21:44,716 INFO ] Space USERSPACE for appid = 152 with urls = [pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:21:44,716 INFO ] task 1520000 creating native task launcher
+[2013-07-17 14:21:44,814 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Busy] event
+[2013-07-17 14:21:44,815 DEBUG] Initializing Thread[pool-3-thread-4,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:21:44,815 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:21:44,815 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 4 [Busy]' to client "watcher"
+[2013-07-17 14:21:44,816 DEBUG] Initializing Thread[pool-3-thread-1,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:21:44,816 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:21:44,816 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 4 [Busy]' to client "admin"
+[2013-07-17 14:21:44,824 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 4 [Busy]' has been delivered to client "watcher" in 9 ms
+[2013-07-17 14:21:44,824 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:21:44,824 DEBUG] Finnishing delivery in Thread[pool-3-thread-4,5,main] to client '"watcher"'. 1 events were delivered in 9 ms
+[2013-07-17 14:21:44,824 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 4 [Busy]' has been delivered to client "admin" in 8 ms
+[2013-07-17 14:21:44,824 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:21:44,824 DEBUG] Finnishing delivery in Thread[pool-3-thread-1,5,main] to client '"admin"'. 1 events were delivered in 8 ms
+[2013-07-17 14:21:44,828 INFO ] task 1520000 deploying
+[2013-07-17 14:21:44,828 INFO ] task 1520000 started on 192.168.1.157(node: youri)
+[2013-07-17 14:21:44,828 DEBUG] job 152  event [Job pending to running]
+[2013-07-17 14:21:44,831 INFO ] job 152 started
+[2013-07-17 14:21:44,881 DEBUG] task 1520000 event [Task pending to running]
+[2013-07-17 14:21:46,790 DEBUG] task 1520000 is a native task
+[2013-07-17 14:21:46,790 INFO ] task 1520000 finished with errors
+[2013-07-17 14:21:46,791 INFO ] task 1520000 result added to job 152
+[2013-07-17 14:21:46,791 INFO ] job 152 terminated
+[2013-07-17 14:21:47,109 DEBUG] task 1520000 event [Task running to finished]
+[2013-07-17 14:21:47,110 INFO ] job 152 finished tasks 1, total tasks 1, finished true
+[2013-07-17 14:21:47,110 DEBUG] job 152  event [Job running to finished]
+[2013-07-17 14:21:47,110 DEBUG] Notification emails disabled, doing nothing
+[2013-07-17 14:21:47,161 INFO ] job 152 cleaning loggers
+[2013-07-17 14:21:47,161 INFO ] job 152 removing TaskClassServer
+[2013-07-17 14:21:47,227 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Free] event
+[2013-07-17 14:21:47,228 DEBUG] Initializing Thread[pool-3-thread-5,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:21:47,228 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:21:47,228 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 5 [Free]' to client "watcher"
+[2013-07-17 14:21:47,230 DEBUG] Initializing Thread[pool-3-thread-2,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:21:47,230 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:21:47,230 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 5 [Free]' to client "admin"
+[2013-07-17 14:21:47,237 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 5 [Free]' has been delivered to client "watcher" in 9 ms
+[2013-07-17 14:21:47,237 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:21:47,237 DEBUG] Finnishing delivery in Thread[pool-3-thread-5,5,main] to client '"watcher"'. 1 events were delivered in 9 ms
+[2013-07-17 14:21:47,238 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 5 [Free]' has been delivered to client "admin" in 8 ms
+[2013-07-17 14:21:47,238 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:21:47,238 DEBUG] Finnishing delivery in Thread[pool-3-thread-2,5,main] to client '"admin"'. 1 events were delivered in 8 ms
+[2013-07-17 14:21:48,514 INFO ] Number of deploying nodes 0
+[2013-07-17 14:21:51,278 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:21:51,303 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:21:55,133 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:21:57,381 DEBUG] Number of registered clients 9
+[2013-07-17 14:21:57,386 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:21:57,394 DEBUG] Client "rm" is alive.
+[2013-07-17 14:21:57,397 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:21:57,399 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:21:57,402 DEBUG] Client "admin" is alive.
+[2013-07-17 14:21:57,402 DEBUG] Number of pinged clients 5
+[2013-07-17 14:21:58,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:22:08,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:22:18,515 INFO ] Number of deploying nodes 0
+[2013-07-17 14:22:28,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:22:36,298 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:22:36,309 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:22:38,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:22:40,144 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:22:42,402 DEBUG] Number of registered clients 9
+[2013-07-17 14:22:42,409 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:22:42,416 DEBUG] Client "rm" is alive.
+[2013-07-17 14:22:42,418 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:22:42,421 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:22:42,425 DEBUG] Client "admin" is alive.
+[2013-07-17 14:22:42,425 DEBUG] Number of pinged clients 5
+[2013-07-17 14:22:48,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:22:56,181 INFO ] New job submission requested : ProactiveJob
+[2013-07-17 14:22:56,183 INFO ] Create job 'ProactiveJob' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[2013-07-17 14:22:56,192 INFO ] Submitting a new job 'ProactiveJob'
+[2013-07-17 14:22:56,552 DEBUG] job 153  event [Job submitted]
+[2013-07-17 14:22:56,557 DEBUG] event [Users updated]
+[2013-07-17 14:22:56,557 INFO ] job 153 submitted: name 'ProactiveJob', tasks '1', owner 'admin'
+[2013-07-17 14:22:56,992 INFO ] eligible tasks : 1
+[2013-07-17 14:22:56,997 INFO ] eligible nodes : 1
+[2013-07-17 14:22:56,997 INFO ] task 1530000 scheduling
+[2013-07-17 14:22:56,998 DEBUG] required number of nodes : 1
+[2013-07-17 14:22:57,005 INFO ] "scheduler" requested 1 nodes with ArbitraryTopologyDescriptor
+[2013-07-17 14:22:57,010 DEBUG] Shuffling nodes before selection
+[2013-07-17 14:22:57,016 DEBUG] pnp://192.168.1.157:1099/youri : cleaning
+[2013-07-17 14:22:57,032 INFO ] "scheduler" will get 1 nodes 
+[2013-07-17 14:22:57,032 DEBUG] pnp://192.168.1.157:1099/youri
+[2013-07-17 14:22:57,043 DEBUG] provided nodes 1
+[2013-07-17 14:22:57,043 DEBUG] task 1530000 initializing the executable container
+[2013-07-17 14:22:57,052 INFO ] Space default for appid = 153 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultinput/admin, pappnp://192.168.1.151:10099/DefaultInputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:22:57,056 INFO ] Space default for appid = 153 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultoutput/admin, pappnp://192.168.1.151:10099/DefaultOutputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:22:57,059 INFO ] Space GLOBALSPACE for appid = 153 with urls = [file:/c:/shared/, pappnp://192.168.1.151:10099/GlobalSpace?proactive_vfs_provider_path=/] registered
+[2013-07-17 14:22:57,061 INFO ] Space USERSPACE for appid = 153 with urls = [pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:22:57,061 INFO ] task 1530000 creating native task launcher
+[2013-07-17 14:22:57,133 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Busy] event
+[2013-07-17 14:22:57,133 DEBUG] Initializing Thread[pool-3-thread-3,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:22:57,133 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:22:57,133 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 6 [Busy]' to client "watcher"
+[2013-07-17 14:22:57,135 DEBUG] Initializing Thread[pool-3-thread-4,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:22:57,135 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:22:57,135 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 6 [Busy]' to client "admin"
+[2013-07-17 14:22:57,143 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 6 [Busy]' has been delivered to client "watcher" in 10 ms
+[2013-07-17 14:22:57,143 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:22:57,143 DEBUG] Finnishing delivery in Thread[pool-3-thread-3,5,main] to client '"watcher"'. 1 events were delivered in 10 ms
+[2013-07-17 14:22:57,144 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 6 [Busy]' has been delivered to client "admin" in 9 ms
+[2013-07-17 14:22:57,144 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:22:57,144 DEBUG] Finnishing delivery in Thread[pool-3-thread-4,5,main] to client '"admin"'. 1 events were delivered in 9 ms
+[2013-07-17 14:22:57,156 INFO ] task 1530000 deploying
+[2013-07-17 14:22:57,157 INFO ] task 1530000 started on 192.168.1.157(node: youri)
+[2013-07-17 14:22:57,157 DEBUG] job 153  event [Job pending to running]
+[2013-07-17 14:22:57,160 INFO ] job 153 started
+[2013-07-17 14:22:57,172 DEBUG] task 1530000 event [Task pending to running]
+[2013-07-17 14:22:57,950 DEBUG] task 1530000 is a native task
+[2013-07-17 14:22:57,952 ERROR] task 1530000 error
+java.lang.IllegalArgumentException: URI scheme is not "file"
+	at java.io.File.<init>(File.java:395)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTag(NativeTaskLauncher.java:380)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTags(NativeTaskLauncher.java:372)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.doTask(NativeTaskLauncher.java:192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:665)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:579)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:190)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:165)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:141)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:315)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:22:57,953 ERROR] task 1530000 error
+java.lang.IllegalArgumentException: URI scheme is not "file"
+	at java.io.File.<init>(File.java:395)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTag(NativeTaskLauncher.java:380)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.replaceCommandDSTags(NativeTaskLauncher.java:372)
+	at org.ow2.proactive.scheduler.task.launcher.NativeTaskLauncher.doTask(NativeTaskLauncher.java:192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:397)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:255)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:199)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:665)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:579)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:946)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:190)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:165)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:141)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:315)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:198)
+	at java.lang.Thread.run(Thread.java:724)
+[2013-07-17 14:22:57,953 INFO ] task 1530000 finished with errors
+[2013-07-17 14:22:57,955 INFO ] task 1530000 result added to job 153
+[2013-07-17 14:22:57,955 INFO ] job 153 terminated
+[2013-07-17 14:22:58,135 DEBUG] task 1530000 event [Task running to finished]
+[2013-07-17 14:22:58,137 INFO ] job 153 finished tasks 1, total tasks 1, finished true
+[2013-07-17 14:22:58,137 DEBUG] job 153  event [Job running to finished]
+[2013-07-17 14:22:58,137 DEBUG] Notification emails disabled, doing nothing
+[2013-07-17 14:22:58,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:22:58,671 INFO ] job 153 cleaning loggers
+[2013-07-17 14:22:58,672 INFO ] job 153 removing TaskClassServer
+[2013-07-17 14:22:59,370 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Free] event
+[2013-07-17 14:22:59,370 DEBUG] Initializing Thread[pool-3-thread-1,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:22:59,370 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:22:59,370 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 7 [Free]' to client "watcher"
+[2013-07-17 14:22:59,371 DEBUG] Initializing Thread[pool-3-thread-5,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:22:59,371 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:22:59,371 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 7 [Free]' to client "admin"
+[2013-07-17 14:22:59,391 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 7 [Free]' has been delivered to client "watcher" in 21 ms
+[2013-07-17 14:22:59,391 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:22:59,391 DEBUG] Finnishing delivery in Thread[pool-3-thread-1,5,main] to client '"watcher"'. 1 events were delivered in 21 ms
+[2013-07-17 14:22:59,406 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 7 [Free]' has been delivered to client "admin" in 35 ms
+[2013-07-17 14:22:59,406 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:22:59,406 DEBUG] Finnishing delivery in Thread[pool-3-thread-5,5,main] to client '"admin"'. 1 events were delivered in 35 ms
+[2013-07-17 14:23:08,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:23:18,515 INFO ] Number of deploying nodes 0
+[2013-07-17 14:23:21,313 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:23:21,326 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:23:25,155 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:23:27,425 DEBUG] Number of registered clients 9
+[2013-07-17 14:23:27,428 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:23:27,434 DEBUG] Client "rm" is alive.
+[2013-07-17 14:23:27,436 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:23:27,439 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:23:27,442 DEBUG] Client "admin" is alive.
+[2013-07-17 14:23:27,442 DEBUG] Number of pinged clients 5
+[2013-07-17 14:23:28,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:23:38,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:23:48,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:23:58,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:24:06,324 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:24:06,332 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:24:08,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:24:10,166 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:24:12,442 DEBUG] Number of registered clients 9
+[2013-07-17 14:24:12,446 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:24:12,452 DEBUG] Client "rm" is alive.
+[2013-07-17 14:24:12,456 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:24:12,458 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:24:12,462 DEBUG] Client "admin" is alive.
+[2013-07-17 14:24:12,462 DEBUG] Number of pinged clients 5
+[2013-07-17 14:24:18,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:24:28,514 INFO ] Number of deploying nodes 0
+[2013-07-17 14:24:38,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:24:48,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:24:51,338 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:24:51,373 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:24:55,178 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:24:57,462 DEBUG] Number of registered clients 9
+[2013-07-17 14:24:57,466 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:24:57,473 DEBUG] Client "rm" is alive.
+[2013-07-17 14:24:57,476 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:24:57,477 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:24:57,479 DEBUG] Client "admin" is alive.
+[2013-07-17 14:24:57,479 DEBUG] Number of pinged clients 5
+[2013-07-17 14:24:58,511 INFO ] Number of deploying nodes 0
+[2013-07-17 14:25:08,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:25:18,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:25:28,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:25:36,350 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:25:36,358 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:25:38,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:25:40,189 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:25:42,479 DEBUG] Number of registered clients 9
+[2013-07-17 14:25:42,482 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:25:42,489 DEBUG] Client "rm" is alive.
+[2013-07-17 14:25:42,492 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:25:42,493 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:25:42,495 DEBUG] Client "admin" is alive.
+[2013-07-17 14:25:42,495 DEBUG] Number of pinged clients 5
+[2013-07-17 14:25:48,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:25:58,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:26:08,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:26:18,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:26:21,364 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:26:21,370 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:26:25,200 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:26:27,495 DEBUG] Number of registered clients 9
+[2013-07-17 14:26:27,498 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:26:27,504 DEBUG] Client "rm" is alive.
+[2013-07-17 14:26:27,505 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:26:27,508 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:26:27,510 DEBUG] Client "admin" is alive.
+[2013-07-17 14:26:27,510 DEBUG] Number of pinged clients 5
+[2013-07-17 14:26:28,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:26:38,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:26:48,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:26:58,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:27:06,386 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:27:06,391 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:27:08,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:27:10,223 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:27:12,510 DEBUG] Number of registered clients 9
+[2013-07-17 14:27:12,513 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:27:12,519 DEBUG] Client "rm" is alive.
+[2013-07-17 14:27:12,522 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:27:12,523 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:27:12,526 DEBUG] Client "admin" is alive.
+[2013-07-17 14:27:12,526 DEBUG] Number of pinged clients 5
+[2013-07-17 14:27:18,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:27:28,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:27:38,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:27:48,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:27:51,395 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:27:51,402 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:27:55,233 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:27:57,526 DEBUG] Number of registered clients 9
+[2013-07-17 14:27:57,598 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:27:57,604 DEBUG] Client "rm" is alive.
+[2013-07-17 14:27:57,607 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:27:57,609 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:27:57,611 DEBUG] Client "admin" is alive.
+[2013-07-17 14:27:57,611 DEBUG] Number of pinged clients 5
+[2013-07-17 14:27:58,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:28:08,511 INFO ] Number of deploying nodes 0
+[2013-07-17 14:28:18,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:28:28,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:28:36,408 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:28:36,416 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:28:38,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:28:40,245 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:28:42,611 DEBUG] Number of registered clients 9
+[2013-07-17 14:28:42,616 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:28:42,624 DEBUG] Client "rm" is alive.
+[2013-07-17 14:28:42,626 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:28:42,627 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:28:42,630 DEBUG] Client "admin" is alive.
+[2013-07-17 14:28:42,630 DEBUG] Number of pinged clients 5
+[2013-07-17 14:28:48,514 INFO ] Number of deploying nodes 0
+[2013-07-17 14:28:58,511 INFO ] Number of deploying nodes 0
+[2013-07-17 14:29:08,522 INFO ] Number of deploying nodes 0
+[2013-07-17 14:29:18,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:29:21,422 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:29:21,445 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:29:25,259 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:29:27,630 DEBUG] Number of registered clients 9
+[2013-07-17 14:29:27,637 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:29:27,643 DEBUG] Client "rm" is alive.
+[2013-07-17 14:29:27,646 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:29:27,648 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:29:27,651 DEBUG] Client "admin" is alive.
+[2013-07-17 14:29:27,651 DEBUG] Number of pinged clients 5
+[2013-07-17 14:29:28,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:29:38,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:29:44,621 INFO ] New job submission requested : ProactiveJob
+[2013-07-17 14:29:44,623 INFO ] Create job 'ProactiveJob' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[2013-07-17 14:29:44,632 INFO ] Submitting a new job 'ProactiveJob'
+[2013-07-17 14:29:44,880 DEBUG] job 154  event [Job submitted]
+[2013-07-17 14:29:44,885 DEBUG] event [Users updated]
+[2013-07-17 14:29:44,885 INFO ] job 154 submitted: name 'ProactiveJob', tasks '1', owner 'admin'
+[2013-07-17 14:29:45,200 INFO ] eligible tasks : 1
+[2013-07-17 14:29:45,225 INFO ] eligible nodes : 1
+[2013-07-17 14:29:45,225 INFO ] task 1540000 scheduling
+[2013-07-17 14:29:45,226 DEBUG] required number of nodes : 1
+[2013-07-17 14:29:45,234 INFO ] "scheduler" requested 1 nodes with ArbitraryTopologyDescriptor
+[2013-07-17 14:29:45,243 DEBUG] Shuffling nodes before selection
+[2013-07-17 14:29:45,249 DEBUG] pnp://192.168.1.157:1099/youri : cleaning
+[2013-07-17 14:29:45,265 INFO ] "scheduler" will get 1 nodes 
+[2013-07-17 14:29:45,266 DEBUG] pnp://192.168.1.157:1099/youri
+[2013-07-17 14:29:45,272 DEBUG] provided nodes 1
+[2013-07-17 14:29:45,272 DEBUG] task 1540000 initializing the executable container
+[2013-07-17 14:29:45,282 INFO ] Space default for appid = 154 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultinput/admin, pappnp://192.168.1.151:10099/DefaultInputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:29:45,285 INFO ] Space default for appid = 154 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultoutput/admin, pappnp://192.168.1.151:10099/DefaultOutputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:29:45,286 INFO ] Space GLOBALSPACE for appid = 154 with urls = [file:/c:/shared/, pappnp://192.168.1.151:10099/GlobalSpace?proactive_vfs_provider_path=/] registered
+[2013-07-17 14:29:45,288 INFO ] Space USERSPACE for appid = 154 with urls = [pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:29:45,288 INFO ] task 1540000 creating native task launcher
+[2013-07-17 14:29:45,370 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Busy] event
+[2013-07-17 14:29:45,370 DEBUG] Initializing Thread[pool-3-thread-2,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:29:45,370 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:29:45,370 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 8 [Busy]' to client "watcher"
+[2013-07-17 14:29:45,371 DEBUG] Initializing Thread[pool-3-thread-3,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:29:45,371 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:29:45,371 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 8 [Busy]' to client "admin"
+[2013-07-17 14:29:45,378 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 8 [Busy]' has been delivered to client "watcher" in 8 ms
+[2013-07-17 14:29:45,378 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:29:45,378 DEBUG] Finnishing delivery in Thread[pool-3-thread-2,5,main] to client '"watcher"'. 1 events were delivered in 8 ms
+[2013-07-17 14:29:45,382 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 8 [Busy]' has been delivered to client "admin" in 11 ms
+[2013-07-17 14:29:45,382 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:29:45,382 DEBUG] Finnishing delivery in Thread[pool-3-thread-3,5,main] to client '"admin"'. 1 events were delivered in 11 ms
+[2013-07-17 14:29:45,407 INFO ] task 1540000 deploying
+[2013-07-17 14:29:45,409 INFO ] task 1540000 started on 192.168.1.157(node: youri)
+[2013-07-17 14:29:45,409 DEBUG] job 154  event [Job pending to running]
+[2013-07-17 14:29:45,410 INFO ] job 154 started
+[2013-07-17 14:29:45,458 DEBUG] task 1540000 event [Task pending to running]
+[2013-07-17 14:29:47,272 DEBUG] task 1540000 is a native task
+[2013-07-17 14:29:47,274 INFO ] task 1540000 finished with errors
+[2013-07-17 14:29:47,274 INFO ] task 1540000 result added to job 154
+[2013-07-17 14:29:47,274 INFO ] job 154 terminated
+[2013-07-17 14:29:47,733 DEBUG] task 1540000 event [Task running to finished]
+[2013-07-17 14:29:47,736 INFO ] job 154 finished tasks 1, total tasks 1, finished true
+[2013-07-17 14:29:47,736 DEBUG] job 154  event [Job running to finished]
+[2013-07-17 14:29:47,737 DEBUG] Notification emails disabled, doing nothing
+[2013-07-17 14:29:48,114 INFO ] job 154 cleaning loggers
+[2013-07-17 14:29:48,114 INFO ] job 154 removing TaskClassServer
+[2013-07-17 14:29:48,512 INFO ] Number of deploying nodes 0
+[2013-07-17 14:29:48,780 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Free] event
+[2013-07-17 14:29:48,781 DEBUG] Initializing Thread[pool-3-thread-4,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:29:48,781 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:29:48,781 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 9 [Free]' to client "watcher"
+[2013-07-17 14:29:48,783 DEBUG] Initializing Thread[pool-3-thread-1,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:29:48,783 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:29:48,783 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 9 [Free]' to client "admin"
+[2013-07-17 14:29:48,790 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 9 [Free]' has been delivered to client "watcher" in 9 ms
+[2013-07-17 14:29:48,790 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:29:48,790 DEBUG] Finnishing delivery in Thread[pool-3-thread-4,5,main] to client '"watcher"'. 1 events were delivered in 9 ms
+[2013-07-17 14:29:48,793 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 9 [Free]' has been delivered to client "admin" in 10 ms
+[2013-07-17 14:29:48,793 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:29:48,793 DEBUG] Finnishing delivery in Thread[pool-3-thread-1,5,main] to client '"admin"'. 1 events were delivered in 10 ms
+[2013-07-17 14:29:54,048 INFO ] job 154 trying to get the task result, incarnation 0
+[2013-07-17 14:29:58,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:30:06,433 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:30:06,439 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:30:08,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:30:10,270 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:30:12,651 DEBUG] Number of registered clients 9
+[2013-07-17 14:30:12,656 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:30:12,662 DEBUG] Client "rm" is alive.
+[2013-07-17 14:30:12,665 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:30:12,667 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:30:12,670 DEBUG] Client "admin" is alive.
+[2013-07-17 14:30:12,670 DEBUG] Number of pinged clients 5
+[2013-07-17 14:30:18,514 INFO ] Number of deploying nodes 0
+[2013-07-17 14:30:28,511 INFO ] Number of deploying nodes 0
+[2013-07-17 14:30:38,514 INFO ] Number of deploying nodes 0
+[2013-07-17 14:30:48,513 INFO ] Number of deploying nodes 0
+[2013-07-17 14:30:51,446 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:30:51,451 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:30:55,280 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:30:57,670 DEBUG] Number of registered clients 9
+[2013-07-17 14:30:57,676 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:30:57,683 DEBUG] Client "rm" is alive.
+[2013-07-17 14:30:57,686 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:30:57,688 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:30:57,691 DEBUG] Client "admin" is alive.
+[2013-07-17 14:30:57,691 DEBUG] Number of pinged clients 5
+[2013-07-17 14:30:58,523 INFO ] Number of deploying nodes 0
+[2013-07-17 14:31:08,522 INFO ] Number of deploying nodes 0
+[2013-07-17 14:31:18,524 INFO ] Number of deploying nodes 0
+[2013-07-17 14:31:28,522 INFO ] Number of deploying nodes 0
+[2013-07-17 14:31:36,476 INFO ] [Default] Pinging alive nodes
+[2013-07-17 14:31:36,485 DEBUG] Node pnp://192.168.1.157:1099/youri is alive
+[2013-07-17 14:31:38,523 INFO ] Number of deploying nodes 0
+[2013-07-17 14:31:40,309 INFO ] [LocalNodes] Pinging alive nodes
+[2013-07-17 14:31:42,691 DEBUG] Number of registered clients 9
+[2013-07-17 14:31:42,695 DEBUG] Client "watcher" is alive.
+[2013-07-17 14:31:42,701 DEBUG] Client "rm" is alive.
+[2013-07-17 14:31:42,783 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:31:42,786 DEBUG] Client "scheduler" is alive.
+[2013-07-17 14:31:42,789 DEBUG] Client "admin" is alive.
+[2013-07-17 14:31:42,789 DEBUG] Number of pinged clients 5
+[2013-07-17 14:31:47,237 INFO ] New job submission requested : ProactiveJob
+[2013-07-17 14:31:47,239 INFO ] Create job 'ProactiveJob' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[2013-07-17 14:31:47,246 INFO ] Submitting a new job 'ProactiveJob'
+[2013-07-17 14:31:47,395 DEBUG] job 155  event [Job submitted]
+[2013-07-17 14:31:47,399 DEBUG] event [Users updated]
+[2013-07-17 14:31:47,399 INFO ] job 155 submitted: name 'ProactiveJob', tasks '1', owner 'admin'
+[2013-07-17 14:31:47,947 INFO ] eligible tasks : 1
+[2013-07-17 14:31:47,950 INFO ] eligible nodes : 1
+[2013-07-17 14:31:47,950 INFO ] task 1550000 scheduling
+[2013-07-17 14:31:47,953 DEBUG] required number of nodes : 1
+[2013-07-17 14:31:47,962 INFO ] "scheduler" requested 1 nodes with ArbitraryTopologyDescriptor
+[2013-07-17 14:31:47,969 DEBUG] Shuffling nodes before selection
+[2013-07-17 14:31:47,977 DEBUG] pnp://192.168.1.157:1099/youri : cleaning
+[2013-07-17 14:31:48,002 INFO ] "scheduler" will get 1 nodes 
+[2013-07-17 14:31:48,003 DEBUG] pnp://192.168.1.157:1099/youri
+[2013-07-17 14:31:48,014 DEBUG] provided nodes 1
+[2013-07-17 14:31:48,014 DEBUG] task 1550000 initializing the executable container
+[2013-07-17 14:31:48,024 INFO ] Space default for appid = 155 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultinput/admin, pappnp://192.168.1.151:10099/DefaultInputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:31:48,027 INFO ] Space default for appid = 155 with urls = [file:/C:/Users/ADMINI~1/AppData/Local/Temp/scheduling/defaultoutput/admin, pappnp://192.168.1.151:10099/DefaultOutputSpace?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:31:48,029 INFO ] Space GLOBALSPACE for appid = 155 with urls = [file:/c:/shared/, pappnp://192.168.1.151:10099/GlobalSpace?proactive_vfs_provider_path=/] registered
+[2013-07-17 14:31:48,036 INFO ] Space USERSPACE for appid = 155 with urls = [pappnp://192.168.1.151:56279/defaultFileSystemServer?proactive_vfs_provider_path=/admin] registered
+[2013-07-17 14:31:48,036 INFO ] task 1550000 creating native task launcher
+[2013-07-17 14:31:48,044 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Busy] event
+[2013-07-17 14:31:48,046 DEBUG] Initializing Thread[pool-3-thread-5,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:31:48,046 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:31:48,046 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 10 [Busy]' to client "watcher"
+[2013-07-17 14:31:48,046 DEBUG] Initializing Thread[pool-3-thread-2,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:31:48,046 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:31:48,046 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 10 [Busy]' to client "admin"
+[2013-07-17 14:31:48,056 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 10 [Busy]' has been delivered to client "watcher" in 10 ms
+[2013-07-17 14:31:48,056 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:31:48,056 DEBUG] Finnishing delivery in Thread[pool-3-thread-5,5,main] to client '"watcher"'. 1 events were delivered in 10 ms
+[2013-07-17 14:31:48,058 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 10 [Busy]' has been delivered to client "admin" in 12 ms
+[2013-07-17 14:31:48,058 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:31:48,058 DEBUG] Finnishing delivery in Thread[pool-3-thread-2,5,main] to client '"admin"'. 1 events were delivered in 12 ms
+[2013-07-17 14:31:48,343 INFO ] task 1550000 deploying
+[2013-07-17 14:31:48,343 INFO ] task 1550000 started on 192.168.1.157(node: youri)
+[2013-07-17 14:31:48,343 DEBUG] job 155  event [Job pending to running]
+[2013-07-17 14:31:48,346 INFO ] job 155 started
+[2013-07-17 14:31:48,364 DEBUG] task 1550000 event [Task pending to running]
+[2013-07-17 14:31:48,528 INFO ] Number of deploying nodes 0
+[2013-07-17 14:31:50,344 DEBUG] task 1550000 is a native task
+[2013-07-17 14:31:50,346 INFO ] task 1550000 finished without errors
+[2013-07-17 14:31:50,346 INFO ] task 1550000 result added to job 155
+[2013-07-17 14:31:50,347 INFO ] job 155 terminated
+[2013-07-17 14:31:50,510 DEBUG] task 1550000 event [Task running to finished]
+[2013-07-17 14:31:50,513 INFO ] job 155 finished tasks 1, total tasks 1, finished true
+[2013-07-17 14:31:50,513 DEBUG] job 155  event [Job running to finished]
+[2013-07-17 14:31:50,521 DEBUG] Notification emails disabled, doing nothing
+[2013-07-17 14:31:50,575 INFO ] job 155 cleaning loggers
+[2013-07-17 14:31:50,576 INFO ] job 155 removing TaskClassServer
+[2013-07-17 14:31:50,940 DEBUG] pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED[Free] event
+[2013-07-17 14:31:50,941 DEBUG] Initializing Thread[pool-3-thread-3,5,main] for events delivery to client '"watcher"'
+[2013-07-17 14:31:50,941 DEBUG] 1 pending events for the client '"watcher"'
+[2013-07-17 14:31:50,941 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 11 [Free]' to client "watcher"
+[2013-07-17 14:31:50,942 DEBUG] Initializing Thread[pool-3-thread-4,5,main] for events delivery to client '"admin"'
+[2013-07-17 14:31:50,942 DEBUG] 1 pending events for the client '"admin"'
+[2013-07-17 14:31:50,942 DEBUG] Dispatching event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 11 [Free]' to client "admin"
+[2013-07-17 14:31:50,947 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 11 [Free]' has been delivered to client "watcher" in 6 ms
+[2013-07-17 14:31:50,947 DEBUG] 0 pending events for the client '"watcher"'
+[2013-07-17 14:31:50,947 DEBUG] Finnishing delivery in Thread[pool-3-thread-3,5,main] to client '"watcher"'. 1 events were delivered in 6 ms
+[2013-07-17 14:31:50,949 DEBUG] Event 'pnp://192.168.1.157:1099/youri : NODE_STATE_CHANGED counter: 11 [Free]' has been delivered to client "admin" in 7 ms
+[2013-07-17 14:31:50,949 DEBUG] 0 pending events for the client '"admin"'
+[2013-07-17 14:31:50,949 DEBUG] Finnishing delivery in Thread[pool-3-thread-4,5,main] to client '"admin"'. 1 events were delivered in 7 ms
+[2013-07-17 14:31:53,639 INFO ] job 155 trying to get the task result, incarnation 0

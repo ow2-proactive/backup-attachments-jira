@@ -1,0 +1,294 @@
+From cd835986cfb9872e16c82791907f8bf480ce76f1 Mon Sep 17 00:00:00 2001
+From: Sergei Dolgov <Sergei.Dolgov@inria.fr>
+Date: Thu, 18 Aug 2011 16:47:20 +0200
+Subject: [PATCH] Add TestJobCanceledWithReplication
+
+---
+ .../scheduler/examples/FailTaskConditionally.java  |   87 ++++++++++++++
+ .../TestJobCanceledWithReplication.java            |  124 ++++++++++++++++++++
+ .../descriptors/Job_Aborted_With_Replication.xml   |   48 ++++++++
+ 3 files changed, 259 insertions(+), 0 deletions(-)
+ create mode 100644 src/scheduler/src/org/ow2/proactive/scheduler/examples/FailTaskConditionally.java
+ create mode 100644 src/scheduler/tests/functionaltests/TestJobCanceledWithReplication.java
+ create mode 100644 src/scheduler/tests/functionaltests/descriptors/Job_Aborted_With_Replication.xml
+
+diff --git a/src/scheduler/src/org/ow2/proactive/scheduler/examples/FailTaskConditionally.java b/src/scheduler/src/org/ow2/proactive/scheduler/examples/FailTaskConditionally.java
+new file mode 100644
+index 0000000..869568e
+--- /dev/null
++++ b/src/scheduler/src/org/ow2/proactive/scheduler/examples/FailTaskConditionally.java
+@@ -0,0 +1,87 @@
++/*
++ * ################################################################
++ *
++ * ProActive Parallel Suite(TM): The Java(TM) library for
++ *    Parallel, Distributed, Multi-Core Computing for
++ *    Enterprise Grids & Clouds
++ *
++ * Copyright (C) 1997-2011 INRIA/University of
++ *                 Nice-Sophia Antipolis/ActiveEon
++ * Contact: proactive@ow2.org or contact@activeeon.com
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Affero General Public License
++ * as published by the Free Software Foundation; version 3 of
++ * the License.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Affero General Public License for more details.
++ *
++ * You should have received a copy of the GNU Affero General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ * If needed, contact us to obtain a release under GPL Version 2 or 3
++ * or a different license than the AGPL.
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ * $$PROACTIVE_INITIAL_DEV$$
++ */
++package org.ow2.proactive.scheduler.examples;
++
++import java.io.Serializable;
++import java.util.Map;
++import org.ow2.proactive.scheduler.common.task.TaskResult;
++import org.ow2.proactive.scheduler.common.task.executable.JavaExecutable;
++
++
++/**
++ * Throw RuntimeException if replicationId argument is 1, otherwise sleep for 30
++ * seconds and exit normally.
++ * 
++ * @author The ProActive Team
++ * @since ProActive Scheduling 3.1
++ * 
++ *        $Id$
++ */
++public class FailTaskConditionally extends JavaExecutable {
++
++    public static final String EXCEPTION_MESSAGE = "Faulty task exception";
++    
++    private int replicationId = 0;
++    
++    @Override
++    public void init(Map<String, Serializable> args) {
++        if (args.containsKey("replicationId")) {
++            try {
++                replicationId = Integer.parseInt(args.get("replicationId").toString());
++            } catch (NumberFormatException e) {
++            }
++        }
++    }
++    
++    @Override
++    public Serializable execute(TaskResult... results) throws Throwable {
++        if (replicationId == 1) {
++            try {
++                System.out.println("I will throw a runtime exception in 3 sec");
++                Thread.sleep(3000);
++            } catch (Exception e) {
++            }
++
++            throw new RuntimeException(EXCEPTION_MESSAGE);
++
++        } else {
++            System.out.println("I will sleep for 30 seconds");
++            Thread.sleep(30000);
++            return "Nothing";
++        }
++    }
++}
+diff --git a/src/scheduler/tests/functionaltests/TestJobCanceledWithReplication.java b/src/scheduler/tests/functionaltests/TestJobCanceledWithReplication.java
+new file mode 100644
+index 0000000..2f971fc
+--- /dev/null
++++ b/src/scheduler/tests/functionaltests/TestJobCanceledWithReplication.java
+@@ -0,0 +1,124 @@
++/*
++ * ################################################################
++ *
++ * ProActive Parallel Suite(TM): The Java(TM) library for
++ *    Parallel, Distributed, Multi-Core Computing for
++ *    Enterprise Grids & Clouds
++ *
++ * Copyright (C) 1997-2011 INRIA/University of
++ *                 Nice-Sophia Antipolis/ActiveEon
++ * Contact: proactive@ow2.org or contact@activeeon.com
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Affero General Public License
++ * as published by the Free Software Foundation; version 3 of
++ * the License.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Affero General Public License for more details.
++ *
++ * You should have received a copy of the GNU Affero General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ * If needed, contact us to obtain a release under GPL Version 2 or 3
++ * or a different license than the AGPL.
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s): ActiveEon Team - http://www.activeeon.com
++ *
++ * ################################################################
++ * $$ACTIVEEON_CONTRIBUTOR$$
++ */
++package functionaltests;
++
++import java.io.File;
++import java.net.URL;
++import java.util.Map;
++
++import org.junit.Assert;
++import org.ow2.proactive.scheduler.common.job.Job;
++import org.ow2.proactive.scheduler.common.job.JobId;
++import org.ow2.proactive.scheduler.common.job.JobInfo;
++import org.ow2.proactive.scheduler.common.job.JobResult;
++import org.ow2.proactive.scheduler.common.job.JobStatus;
++import org.ow2.proactive.scheduler.common.task.TaskResult;
++import org.ow2.proactive.scheduler.examples.FailTaskConditionally;
++import org.ow2.tests.FunctionalTest;
++
++/**
++ * This class tests the cancelJobOnError feature of a task together with task
++ * replication. It will start task1, which is an ordinary task, and task2, which
++ * has "cancelJobOnError" attribute set to true and is also replicated with
++ * factor 3 (tesk2replicate and task2merge are necessary because for replication
++ * to work). Tasks task1, task2 and task2*2 will sleep for 30 seconds, task2*1
++ * will throw an exception after 3 seconds. We check that the job is canceled
++ * and that it is possible to retrieve the result of the faulty task (the
++ * exception which caused the failure).
++ * 
++ * @author The ProActive Team
++ * @date 18 08 2011
++ * @since ProActive Scheduling 3.1
++ */
++public class TestJobCanceledWithReplication extends FunctionalTest {
++
++    private static URL jobDescriptor = TestJobCanceledWithReplication.class
++            .getResource("/functionaltests/descriptors/Job_Aborted_With_Replication.xml");
++
++    /**
++     * Tests start here.
++     *
++     * @throws Throwable any exception that can be thrown during the test.
++     */
++    @org.junit.Test
++    public void run() throws Throwable {
++
++        String faultyTaskName = "task2*1";
++        String abortedTaskName = "task2*2";
++
++        SchedulerTHelper.log("Submitting job...");
++
++        //job submission
++        JobId id = SchedulerTHelper.submitJob(new File(jobDescriptor.toURI()).getAbsolutePath());
++
++        //check events reception
++        SchedulerTHelper.log("Job submitted, id " + id.toString());
++
++        SchedulerTHelper.log("Waiting for jobSubmitted");
++
++        Job receivedJob = SchedulerTHelper.waitForEventJobSubmitted(id);
++        Assert.assertEquals(receivedJob.getId(), id);
++
++        SchedulerTHelper.log("Waiting for job running");
++        JobInfo jInfo = SchedulerTHelper.waitForEventJobRunning(id);
++        Assert.assertEquals(jInfo.getJobId(), id);
++
++        SchedulerTHelper.log("Waiting for job finished");
++        jInfo = SchedulerTHelper.waitForEventJobFinished(id);
++        Assert.assertEquals("Job status should be CANCELED", JobStatus.CANCELED, jInfo.getStatus());
++
++        SchedulerTHelper.log("Getting job result...");
++        JobResult res = SchedulerTHelper.getJobResult(id);
++
++        Map<String, TaskResult> results = res.getAllResults();
++
++        Assert.assertEquals("The number of results should be 2 (task2replicate and task2*1)", 2, results.size());
++        Assert.assertNotNull("Faulty task result should be an exception", results.get(faultyTaskName).getException());
++
++        Assert.assertEquals(
++                "The exception message extracted from the result should match the exception thrown by the task",
++                FailTaskConditionally.EXCEPTION_MESSAGE, results.get(faultyTaskName).getException()
++                        .getMessage());
++
++        //remove jobs and check its event
++        SchedulerTHelper.removeJob(id);
++        SchedulerTHelper.log("Waiting for job removed");
++        jInfo = SchedulerTHelper.waitForEventJobRemoved(id);
++        Assert.assertEquals(JobStatus.CANCELED, jInfo.getStatus());
++        Assert.assertEquals(jInfo.getJobId(), id);
++    }
++}
+diff --git a/src/scheduler/tests/functionaltests/descriptors/Job_Aborted_With_Replication.xml b/src/scheduler/tests/functionaltests/descriptors/Job_Aborted_With_Replication.xml
+new file mode 100644
+index 0000000..7c0112b
+--- /dev/null
++++ b/src/scheduler/tests/functionaltests/descriptors/Job_Aborted_With_Replication.xml
+@@ -0,0 +1,48 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<job xmlns="urn:proactive:jobdescriptor:dev" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++	xsi:schemaLocation="urn:proactive:jobdescriptor:dev ../../../src/org/ow2/proactive/scheduler/common/xml/schemas/jobdescriptor/dev/schedulerjob.xsd"
++	name="job_aborted_with_replication" priority="normal" cancelJobOnError="false">
++	<description>The second task of this job will throw an exception and so the job will be canceled</description>
++	<taskFlow>
++		<task name="task1">
++			<description>task WaitAndPrint - will sleep for 30s</description>
++			<javaExecutable class="org.ow2.proactive.scheduler.examples.WaitAndPrint">
++				<parameters>
++					<parameter name="sleepTime" value="30"/>
++					<parameter name="number" value="1"/>
++				</parameters>
++			</javaExecutable>
++		</task>
++        <task name="task2replicate" preciousResult="true" cancelJobOnError="true">
++            <description>replicate task2</description>
++            <javaExecutable class="org.ow2.proactive.scheduler.examples.EmptyTask">
++            </javaExecutable>
++            <controlFlow>
++                <replicate>
++                    <script>
++                        <code language="javascript">
++// <![CDATA[
++runs=3;
++// ]]>
++                        </code>
++                    </script>
++                </replicate>
++            </controlFlow>
++        </task>
++		<task name="task2" preciousResult="true" cancelJobOnError="true">
++			<description>task with replication id = 1 will throw an exception</description>
++			<depends><task ref="task2replicate" /></depends>
++			<javaExecutable class="org.ow2.proactive.scheduler.examples.FailTaskConditionally">
++                <parameters>
++                    <parameter name="replicationId" value="$REP" />  
++                </parameters>
++			</javaExecutable>
++		</task>
++        <task name="task2merge" preciousResult="true" cancelJobOnError="true">
++            <description>merge task</description>
++            <depends><task ref="task2" /></depends>
++            <javaExecutable class="org.ow2.proactive.scheduler.examples.EmptyTask">
++            </javaExecutable>
++        </task>
++	</taskFlow>
++</job>
+-- 
+1.7.2.3
+

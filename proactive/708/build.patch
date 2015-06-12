@@ -1,0 +1,27 @@
+diff --git a/compile/common.xml b/compile/common.xml
+index ac17733..23c0bff 100644
+--- a/compile/common.xml
++++ b/compile/common.xml
+@@ -135,7 +135,11 @@
+ 				module="@{module}" 
+ 				sourcepath="${src.extensions.dir}"
+ 				package="${extensions.path}"
+-				dest="${cl.extensions.dir}"/>
++				dest="${cl.extensions.dir}">
++				<appendclasspath>
++					<pathelement location="${cl.extra.dir}"/>
++				</appendclasspath>
++			</compile_module>
+ 		</sequential>
+ 	</macrodef>
+ 
+@@ -163,8 +167,8 @@
+ 			<echo>  [i] cp:   ${proactive.jar}</echo>
+ 
+ 			<javac 
+-			 srcdir="@{sourcepath}" 
+ 			 destdir="@{dest}" 
++			 srcdir="${src.extensions.dir}:${src.extra.dir}"
+ 			 deprecation="on" 
+ 			 source="${source}" 
+ 			 debug="${debug}"

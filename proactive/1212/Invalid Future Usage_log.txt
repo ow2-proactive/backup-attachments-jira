@@ -1,0 +1,109 @@
+2012-05-14 03:01:43.656::INFO:  Logging to STDERR via org.mortbay.log.StdErrLog
+2012-05-14 03:01:43.918::INFO:  jetty-6.1.x
+2012-05-14 03:01:44.067::INFO:  Started SelectChannelConnector@0.0.0.0:10000
+39976@client - [INFO oactive.remoteobject] Remote Object Factory provider <pamr, class org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObjectFactory> found
+39976@client - [INFO oactive.remoteobject] Remote Object Factory provider <pnp, class org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactory> found
+39976@client - [INFO oactive.remoteobject] Remote Object Factory provider <pnps, class org.objectweb.proactive.extensions.pnpssl.PNPSslRemoteObjectFactory> found
+39976@client - [INFO oactive.remoteobject] Remote Object Factory provider <pamrd, class org.objectweb.proactive.extensions.pamrd.PAMRDRemoteObjectFactorySPI$PAMRDRemoteObjectFactory> found
+39976@client - [INFO oactive.remoteobject] Remote Object Factory provider <rmissl, class org.objectweb.proactive.extra.rmissl.RmiSslRemoteObjectFactory> found
+39976@client - [INFO    communication.rmi] Created a new registry on port 1099
+trying to add protocol RMI for myActiveServerObject
+All Possible Local Factories Protocols: pnp
+All Possible Local Factories Protocols: rmi
+All Possible Local Factories Protocols: rmissl
+All Possible Local Factories Protocols: ibis
+All Possible Local Factories Protocols: rmissh
+All Possible Local Factories Protocols: pamrd
+All Possible Local Factories Protocols: pnps
+All Possible Local Factories Protocols: http
+All Possible Local Factories Protocols: pamr
+LocalJVMActualProtocol: rmi
+LocalJVMActualProtocol: pnp
+LocalJVMActualProtocol: http
+Workable protocols on server object: pnp
+Workable protocols on server object: rmi
+Workable protocols on server object: http
+trying to add protocol RMI for myActiveServerObject
+trying to add protocol PNP for myActiveServerObject
+trying to add protocol HTTP for myActiveServerObject
+
+###### Iterative test: RMI case
+
+Protocol to unexport : RMI
+Connecting.... RMI case
+Connected via default protocol - RMI case
+
+Protocol to unexport : PNP
+Connecting.... RMI case
+Connected - RMI case
+URL to unexport: pnp://localhost:12000/myActiveServerObject
+trying to remove pnp://localhost:12000/myActiveServerObject
+Connecting.... RMI case
+Connected - RMI case
+
+Protocol to unexport : HTTP
+Connecting.... RMI case
+Connected - RMI case
+URL to unexport: http://localhost:10000/myActiveServerObject
+trying to remove http://localhost:10000/myActiveServerObject
+Connecting.... RMI case
+Connected - RMI case
+
+###### Unexported all Protocols on Server Object!!!!!!!!...RMI case
+rmi rmi
+Restoring protocol RMI
+trying to add protocol PNP for myActiveServerObject
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectRequest.execute(InternalRemoteRemoteObjectRequest.java:62)
+	at org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl.receiveMessage(InternalRemoteRemoteObjectImpl.java:139)
+	at org.objectweb.proactive.extensions.pnp.PNPROMessageRequest.processMessage(PNPROMessageRequest.java:102)
+	at org.objectweb.proactive.extensions.pnp.PNPServerHandler$RequestExecutor.run(PNPServerHandler.java:280)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: java.lang.IllegalStateException: Invalid Future Usage
+	at org.objectweb.proactive.core.exceptions.ExceptionHandler.throwException(ExceptionHandler.java:137)
+	at org.objectweb.proactive.core.body.future.MethodCallResult.getResult(MethodCallResult.java:91)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.getURI(RemoteObjectSet.java:244)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.add(RemoteObjectSet.java:218)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectSet.<init>(RemoteObjectSet.java:102)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectExposer.getRemoteObjectSet(RemoteObjectExposer.java:288)
+	at org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl.getRemoteObjectSet(InternalRemoteRemoteObjectImpl.java:282)
+	... 12 more
+Caused by: java.io.IOException: remote object http://localhost:10000/myActiveServerObjectnot found
+	at org.objectweb.proactive.core.remoteobject.http.message.HTTPRemoteObjectRequest.processMessage(HTTPRemoteObjectRequest.java:99)
+	at org.objectweb.proactive.core.remoteobject.http.HTTPTransportServlet.doGet(HTTPTransportServlet.java:136)
+	at org.objectweb.proactive.core.remoteobject.http.HTTPTransportServlet.doPost(HTTPTransportServlet.java:105)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:390)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:536)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:930)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:747)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:405)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	... 3 more
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectImpl.receiveMessage(RemoteObjectImpl.java:118)
+	at org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl.receiveMessage(InternalRemoteRemoteObjectImpl.java:150)
+	at org.objectweb.proactive.extensions.pnp.PNPROMessageRequest.processMessage(PNPROMessageRequest.java:102)
+	at org.objectweb.proactive.extensions.pnp.PNPServerHandler$RequestExecutor.run(PNPServerHandler.java:280)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)

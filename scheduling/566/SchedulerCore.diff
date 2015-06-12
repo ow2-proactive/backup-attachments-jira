@@ -1,0 +1,114 @@
+--- /tmp/SchedulerCore.java	2010-02-16 17:08:02.000000000 +0100
++++ /home/acansado/ProActiveScheduling-2.0.0_core/src/scheduler/src/org/ow2/proactive/scheduler/core/SchedulerCore.java	2009-12-23 11:18:26.000000000 +0100
+@@ -967,9 +965,24 @@
+         // create a running task table for this job
+         this.currentlyRunningTasks.put(job.getId(), new Hashtable<TaskId, TaskLauncher>());
+ 
+-        // create appender for this job if required
+-        createAppenderForJob(job, false);
+-        
++        //create appender for this job if required 
++        if (job.getLogFile() != null) {
++            logger_dev.info("Create logger for job '" + job.getId() + "'");
++            Logger l = Logger.getLogger(Log4JTaskLogs.JOB_LOGGER_PREFIX + job.getId());
++            l.setAdditivity(false);
++            if (l.getAppender(Log4JTaskLogs.JOB_APPENDER_NAME + FILEAPPENDER_SUFFIX) == null) {
++                try {
++                    FileAppender fa = new FileAppender(Log4JTaskLogs.getTaskLogLayout(), job.getLogFile(),
++                        false);
++                    fa.setName(Log4JTaskLogs.JOB_APPENDER_NAME + FILEAPPENDER_SUFFIX);
++                    l.addAppender(fa);
++                    this.jobsToBeLoggedinAFile.put(job.getId(), fa);
++                } catch (IOException e) {
++                    logger.warn("Cannot open log file " + job.getLogFile() + " : " + e.getMessage());
++                }
++            }
++        }
++
+         //unload job environment that potentially contains classpath as byte[]
+         DatabaseManager.getInstance().unload(job.getEnvironment());
+         //unload heavy object
+@@ -981,33 +994,6 @@
+     }
+ 
+     /**
+-     * This method creates an appender for a job if required.
+-     * This code was previously on the submit() method, but now it is also called from recover(),
+-     * in order to keep logging tasks after a Scheduler failure and restart.
+-     *      
+-     * @param job the job to create the appender for.
+-     * @param append whether to append or truncate the job's log file
+-     */
+-    private void createAppenderForJob(InternalJob job, boolean append) {
+-	    if (job.getLogFile() != null) {
+-	        logger_dev.info("Create logger for job '" + job.getId() + "'");
+-	        Logger l = Logger.getLogger(Log4JTaskLogs.JOB_LOGGER_PREFIX + job.getId());
+-	        l.setAdditivity(false);
+-	        if (l.getAppender(Log4JTaskLogs.JOB_APPENDER_NAME + FILEAPPENDER_SUFFIX) == null) {
+-	            try {
+-	                FileAppender fa = new FileAppender(Log4JTaskLogs.getTaskLogLayout(), job.getLogFile(),
+-	                    append);
+-	                fa.setName(Log4JTaskLogs.JOB_APPENDER_NAME + FILEAPPENDER_SUFFIX);
+-	                l.addAppender(fa);
+-	                this.jobsToBeLoggedinAFile.put(job.getId(), fa);
+-	            } catch (IOException e) {
+-	                logger.warn("Cannot open log file " + job.getLogFile() + " : " + e.getMessage());
+-	            }
+-	        }
+-	    }
+-    }
+-    
+-    /**
+      * End the given job due to the given task failure.
+      *
+      * @param job the job to end.
+@@ -1184,7 +1170,7 @@
+                     DatabaseManager.getInstance().commitTransaction();
+                     //free execution node even if it is dead
+                     try {
+-                    	resourceManager.freeNodes(descriptor.getExecuterInformations().getNodes());
++                        resourceManager.freeNodes(descriptor.getExecuterInformations().getNodes());
+                         hasBeenReleased = true;
+                     } catch (Exception e) {
+                         //save the return
+@@ -1779,7 +1765,7 @@
+ 
+         return new BooleanWrapper(true);
+     }
+-    
++
+     /**
+      * @see org.ow2.proactive.scheduler.common.AdminMethodsInterface#kill()
+      */
+@@ -2069,10 +2055,6 @@
+                 case PENDING:
+                     pendingJobs.add(job);
+                     currentlyRunningTasks.put(job.getId(), new Hashtable<TaskId, TaskLauncher>());
+-
+-                    // create appender for this job if required 
+-                    createAppenderForJob(job, true);
+-                    
+                     // restart classserver if needed
+                     if (job.getEnvironment().getJobClasspath() != null) {
+                         try {
+@@ -2106,9 +2088,6 @@
+                         }
+                     }
+ 
+-                    // create appender for this job if required 
+-                    createAppenderForJob(job, true);
+-                    
+                     // restart classServer if needed
+                     if (job.getEnvironment().getJobClasspath() != null) {
+                         try {
+@@ -2141,10 +2120,6 @@
+                             job.update(task.getTaskInfo());
+                         }
+                     }
+-                    
+-                    // create appender for this job if required 
+-                    createAppenderForJob(job, true);
+-                    
+                     // restart classserver if needed
+                     if (job.getEnvironment().getJobClasspath() != null) {
+                         try {

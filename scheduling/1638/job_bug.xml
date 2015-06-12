@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:proactive:jobdescriptor:dev" xsi:schemaLocation="urn:proactive:jobdescriptor:dev http://www.activeeon.com/public_content/schemas/proactive/jobdescriptor/dev/schedulerjob.xsd" name="ProactiveJob">
+  <taskFlow>
+    <task name="begin">
+      <javaExecutable class="org.ow2.proactive.scheduler.examples.WaitAndPrint"/>
+      <controlFlow>
+        <replicate>
+          <script>
+            <code language="javascript"><![CDATA[runs=2;]]></code>
+          </script>
+        </replicate>
+      </controlFlow>
+    </task>
+
+    <task name="block_start">
+      <depends>
+        <task ref="begin"/>
+      </depends>
+      <javaExecutable class="org.ow2.proactive.scheduler.examples.WaitAndPrint">
+      </javaExecutable>
+      <controlFlow block="start">
+        <replicate>
+          <script>
+            <code language="javascript"><![CDATA[runs=3;]]></code>
+          </script>
+        </replicate>
+      </controlFlow>
+    </task>
+
+    <task name="task">
+      <depends>
+        <task ref="block_start"/>
+      </depends>
+      <javaExecutable class="org.ow2.proactive.scheduler.examples.WaitAndPrint">
+        <parameters>
+          <parameter name="number" value="$REP"/>
+          <parameter name="sleepTime" value="1"/>
+        </parameters>
+      </javaExecutable>
+    </task>
+
+    <task name="block_end">
+      <depends>
+        <task ref="task"/>
+      </depends>
+      <javaExecutable class="org.ow2.proactive.scheduler.examples.WaitAndPrint">
+      </javaExecutable>
+      <controlFlow block="end"/>
+    </task>
+    
+    <task name="end">
+      <depends>
+        <task ref="block_end"/>
+      </depends>
+      <javaExecutable class="org.ow2.proactive.scheduler.examples.WaitAndPrint"/>
+    </task>
+  </taskFlow>
+</job>

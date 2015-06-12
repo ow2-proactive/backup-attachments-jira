@@ -1,0 +1,476 @@
+Index: src/Core/org/objectweb/proactive/core/component/gen/Utils.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/component/gen/Utils.java	(revision 12773)
++++ src/Core/org/objectweb/proactive/core/component/gen/Utils.java	(working copy)
+@@ -4,7 +4,7 @@
+  * ProActive: The Java(TM) library for Parallel, Distributed,
+  *            Concurrent computing with Security and Mobility
+  *
+- * Copyright (C) 1997-2008 INRIA/University of Nice-Sophia Antipolis
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
+  * Contact: proactive@ow2.org
+  *
+  * This library is free software; you can redistribute it and/or
+@@ -47,6 +47,8 @@
+ import org.objectweb.proactive.core.component.representative.ItfID;
+ import org.objectweb.proactive.core.component.type.ProActiveInterfaceType;
+ import org.objectweb.proactive.core.util.ClassDataCache;
++import org.objectweb.proactive.core.util.log.Loggers;
++import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+ 
+ /**
+@@ -96,6 +98,13 @@
+                 .endsWith(REPRESENTATIVE_DEFAULT_SUFFIX));
+     }
+ 
++    public static boolean isGathercastProxyRepresentativeClassName(String classname) {
++        return (classname.startsWith(GENERATED_DEFAULT_PREFIX + GEN_ESCAPE_CHAR + GENERATED_DEFAULT_PREFIX) &&
++        // the GATHERCAST_ITF_PROXY_DEFAULT_SUFFIX has to be escaped since it's its representative
++            classname.contains(GEN_ESCAPE_CHAR + GATHERCAST_ITF_PROXY_DEFAULT_SUFFIX) && classname
++                .endsWith(REPRESENTATIVE_DEFAULT_SUFFIX));
++    }
++
+     public static boolean isMetaObjectClassName(String classname) {
+         throw new ProActiveRuntimeException("not implemented yet");
+     }
+@@ -181,8 +190,8 @@
+         Object[] effectiveArguments = new Object[4];
+         effectiveArguments[0] = className;
+         effectiveArguments[1] = bytes;
+-        effectiveArguments[2] = new Integer(0);
+-        effectiveArguments[3] = new Integer(bytes.length);
++        effectiveArguments[2] = Integer.valueOf(0);
++        effectiveArguments[3] = Integer.valueOf(bytes.length);
+ 
+         return (Class<?>) method.invoke(Thread.currentThread().getContextClassLoader(), effectiveArguments);
+     }
+@@ -209,8 +218,29 @@
+             return bytecode;
+         }
+         if (Utils.isRepresentativeClassName(classname)) {
++            // special case for GathercastProxy representative, we have to generate the proxy 
++            // before generating its representative
++            if (Utils.isGathercastProxyRepresentativeClassName(classname)) {
++                String proxyClassname = Utils.getInterfaceSignatureFromRepresentativeClassName(classname);
++                try {
++                    // try to fetch the class from the default class loader
++                    Thread.currentThread().getContextClassLoader().loadClass(proxyClassname);
++                } catch (ClassNotFoundException cnfe) {
++                    try {
++                        Utils.defineClass(proxyClassname, GatherInterfaceGenerator
++                                .generateInterfaceByteCode(proxyClassname)); //load the class
++                    } catch (Exception e) {
++                        ProActiveLogger
++                                .getLogger(Loggers.COMPONENTS_GEN_ITFS)
++                                .error(
++                                        "GathercastProxy class '" + proxyClassname +
++                                            "' generation failed. Try to continue with the generation of its representative",
++                                        e);
++                    }
++                }
++            }
++
+             // try to generate a representative
+-            //            logger.info("Trying to generate representative class : " + classname);
+             bytecode = RepresentativeInterfaceClassGenerator.generateInterfaceByteCode(classname, null);
+ 
+             if (bytecode != null) {
+@@ -219,8 +249,6 @@
+         }
+ 
+         if (Utils.isGathercastProxyClassName(classname)) {
+-            // try to generate a representative
+-            //            logger.info("Trying to generate representative class : " + classname);
+             bytecode = GatherInterfaceGenerator.generateInterfaceByteCode(classname);
+ 
+             if (bytecode != null) {
+Index: src/Tests/functionalTests/component/collectiveitf/gathercast_remote/ClientItf.java
+===================================================================
+--- src/Tests/functionalTests/component/collectiveitf/gathercast_remote/ClientItf.java	(revision 0)
++++ src/Tests/functionalTests/component/collectiveitf/gathercast_remote/ClientItf.java	(revision 0)
+@@ -0,0 +1,39 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@ow2.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ActiveEon Team
++ *                        http://www.activeeon.com/
++ *  Contributor(s):
++ *
++ *
++ * ################################################################
++ * $$ACTIVEEON_INITIAL_DEV$$
++ */
++package functionalTests.component.collectiveitf.gathercast_remote;
++
++public interface ClientItf {
++
++    public void receiveData(Object arg);
++
++}
+Index: src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherCmp.fractal
+===================================================================
+--- src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherCmp.fractal	(revision 0)
++++ src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherCmp.fractal	(revision 0)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="ISO-8859-1" ?>
++<!DOCTYPE definition PUBLIC "-//objectweb.org//DTD Fractal ADL 2.0//EN" "classpath://org/objectweb/proactive/core/component/adl/xml/proactive.dtd">
++
++<definition name="functionalTests.component.collectiveitf.gathercast_remote.GatherCmp" >
++    <interface name="main" role="server" signature="java.lang.Runnable" />
++    <interface name="sender" role="client" signature="functionalTests.component.collectiveitf.gathercast_remote.ClientItf" contingency="optional"/>
++    <interface name="receiver" role="server" signature="functionalTests.component.collectiveitf.gathercast_remote.GatherItf" cardinality="gathercast"/>
++    
++    <content class="functionalTests.component.collectiveitf.gathercast_remote.GatherCmp"/>
++
++    <controller desc="primitive"/>
++    
++	<virtual-node name="VN3"/>
++</definition>
+Index: src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherCmp.java
+===================================================================
+--- src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherCmp.java	(revision 0)
++++ src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherCmp.java	(revision 0)
+@@ -0,0 +1,84 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@ow2.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ActiveEon Team
++ *                        http://www.activeeon.com/
++ *  Contributor(s):
++ *
++ *
++ * ################################################################
++ * $$ACTIVEEON_INITIAL_DEV$$
++ */
++package functionalTests.component.collectiveitf.gathercast_remote;
++
++import java.util.List;
++
++import org.objectweb.fractal.api.NoSuchInterfaceException;
++import org.objectweb.fractal.api.control.BindingController;
++import org.objectweb.fractal.api.control.IllegalBindingException;
++import org.objectweb.fractal.api.control.IllegalLifeCycleException;
++
++
++public class GatherCmp implements GatherItf, Runnable, BindingController {
++    ClientItf clientItf;
++
++    public void receiveData(List<Object> args) {
++        System.out.println("GatherCmp.receiveData()" + args.get(0));
++    }
++
++    public void run() {
++        System.out.println("GatherCmp.run()");
++        clientItf.receiveData("arg");
++    }
++
++    public void bindFc(String clientItfName, Object serverItf) throws NoSuchInterfaceException,
++            IllegalBindingException, IllegalLifeCycleException {
++        if ("sender".equals(clientItfName)) {
++            clientItf = (ClientItf) serverItf;
++        } else {
++            throw new NoSuchInterfaceException(clientItfName);
++        }
++    }
++
++    public String[] listFc() {
++        return new String[] { "sender" };
++    }
++
++    public Object lookupFc(String clientItfName) throws NoSuchInterfaceException {
++        if ("sender".equals(clientItfName)) {
++            return clientItf;
++        } else {
++            throw new NoSuchInterfaceException(clientItfName);
++        }
++    }
++
++    public void unbindFc(String clientItfName) throws NoSuchInterfaceException, IllegalBindingException,
++            IllegalLifeCycleException {
++        if ("sender".equals(clientItfName)) {
++            clientItf = null;
++        } else {
++            throw new NoSuchInterfaceException(clientItfName);
++        }
++    }
++}
+Index: src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherItf.java
+===================================================================
+--- src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherItf.java	(revision 0)
++++ src/Tests/functionalTests/component/collectiveitf/gathercast_remote/GatherItf.java	(revision 0)
+@@ -0,0 +1,42 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@ow2.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ActiveEon Team
++ *                        http://www.activeeon.com/
++ *  Contributor(s):
++ *
++ *
++ * ################################################################
++ * $$ACTIVEEON_INITIAL_DEV$$
++ */
++package functionalTests.component.collectiveitf.gathercast_remote;
++
++import java.util.List;
++
++
++public interface GatherItf {
++
++    public void receiveData(List<Object> arg);
++
++}
+Index: src/Tests/functionalTests/component/collectiveitf/gathercast_remote/TestGather_GCMdep.java
+===================================================================
+--- src/Tests/functionalTests/component/collectiveitf/gathercast_remote/TestGather_GCMdep.java	(revision 0)
++++ src/Tests/functionalTests/component/collectiveitf/gathercast_remote/TestGather_GCMdep.java	(revision 0)
+@@ -0,0 +1,128 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@ow2.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ * $$PROACTIVE_INITIAL_DEV$$
++ */
++package functionalTests.component.collectiveitf.gathercast_remote;
++
++import java.net.URL;
++import java.util.HashMap;
++import java.util.Map;
++
++import org.junit.After;
++import org.objectweb.fractal.adl.Factory;
++import org.objectweb.fractal.api.Component;
++import org.objectweb.fractal.api.control.BindingController;
++import org.objectweb.fractal.util.Fractal;
++import org.objectweb.proactive.core.component.adl.Registry;
++import org.objectweb.proactive.core.descriptor.data.ProActiveDescriptor;
++import org.objectweb.proactive.core.util.OperatingSystem;
++import org.objectweb.proactive.core.xml.VariableContractImpl;
++import org.objectweb.proactive.core.xml.VariableContractType;
++import org.objectweb.proactive.extensions.gcmdeployment.PAGCMDeployment;
++import org.objectweb.proactive.gcmdeployment.GCMApplication;
++
++import functionalTests.ComponentTest;
++import functionalTests.GCMFunctionalTest;
++import functionalTests.GCMFunctionalTestDefaultNodes;
++
++
++public class TestGather_GCMdep extends ComponentTest {
++
++    protected GCMApplication newDeploymentDescriptor = null;
++    protected ProActiveDescriptor oldDeploymentDescriptor = null;
++    protected VariableContractImpl vContract = new VariableContractImpl();
++
++    @org.junit.Test
++    public void testRemoteGathercast() throws Exception {
++
++        URL descriptorPath = TestGather_GCMdep.class
++                .getResource("/functionalTests/component/descriptor/applicationDescriptor.xml");
++
++        vContract.setVariableFromProgram(GCMFunctionalTest.VAR_OS, OperatingSystem.getOperatingSystem()
++                .name(), VariableContractType.DescriptorDefaultVariable);
++        vContract.setVariableFromProgram(GCMFunctionalTestDefaultNodes.VAR_HOSTCAPACITY, Integer.valueOf(4)
++                .toString(), VariableContractType.DescriptorDefaultVariable);
++        vContract.setVariableFromProgram(GCMFunctionalTestDefaultNodes.VAR_VMCAPACITY, Integer.valueOf(1)
++                .toString(), VariableContractType.DescriptorDefaultVariable);
++
++        newDeploymentDescriptor = PAGCMDeployment.loadApplicationDescriptor(descriptorPath,
++                (VariableContractImpl) vContract);
++
++        newDeploymentDescriptor.startDeployment();
++
++        useRemoteGathercastItf(newDeploymentDescriptor);
++    }
++
++    protected void useRemoteGathercastItf(Object deploymentDesc) throws Exception {
++        Factory f = org.objectweb.proactive.core.component.adl.FactoryFactory.getFactory();
++        Map<String, Object> context = new HashMap<String, Object>();
++
++        context.put("deployment-descriptor", deploymentDesc);
++        Component gatherCmpServer, gatherCmpClient;
++
++        // instantiate components
++        System.out.println("\nInstantiate components...");
++        gatherCmpClient = (Component) f.newComponent(
++                "functionalTests.component.collectiveitf.gathercast_remote.GatherCmp", context);
++        gatherCmpServer = (Component) f.newComponent(
++                "functionalTests.component.collectiveitf.gathercast_remote.GatherCmp", context);
++
++        // bind components
++        System.out.println("\nBind components...");
++
++        // CgeneratedCCgeneratedfunctionalTestsCCPcomponentCCPcollectiveitfCCPgathercast_remoteCCPGatherItfCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative
++        //     TestRemoteGathercast.class.getClassLoader().loadClass("CgeneratedCCgeneratedorgCCPobjectwebCCPproactiveCCPexamplesCCPcomponentsCCPjacobiCCPGathercastDataReceiverCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative");
++        BindingController bc = Fractal.getBindingController(gatherCmpClient);
++
++        // binding
++        bc.bindFc("sender", gatherCmpServer.getFcInterface("receiver"));
++
++        // start and launch components
++        System.out.println("\nLaunch components...");
++        ((Runnable) gatherCmpClient.getFcInterface("main")).run();
++
++        System.out.println("\nStart components...");
++        Fractal.getLifeCycleController(gatherCmpClient).startFc();
++        Fractal.getLifeCycleController(gatherCmpServer).startFc();
++    }
++
++    @After
++    public void endTest() throws Exception {
++        Registry.instance().clear();
++        if (newDeploymentDescriptor != null) {
++            newDeploymentDescriptor.kill();
++        }
++
++        if (oldDeploymentDescriptor != null) {
++            oldDeploymentDescriptor.killall(false);
++        }
++    }
++
++}
+Index: src/Tests/functionalTests/component/collectiveitf/gathercast_remote/TestGather_PAdep.java
+===================================================================
+--- src/Tests/functionalTests/component/collectiveitf/gathercast_remote/TestGather_PAdep.java	(revision 0)
++++ src/Tests/functionalTests/component/collectiveitf/gathercast_remote/TestGather_PAdep.java	(revision 0)
+@@ -0,0 +1,52 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@ow2.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ * $$PROACTIVE_INITIAL_DEV$$
++ */
++package functionalTests.component.collectiveitf.gathercast_remote;
++
++import org.objectweb.proactive.api.PADeployment;
++import org.objectweb.proactive.core.xml.VariableContractImpl;
++
++
++/*
++ * Define a separate test suite with the GCM deployment one since side effect (class loading) may 
++ * product false success.
++ */
++public class TestGather_PAdep extends TestGather_GCMdep {
++    @org.junit.Test
++    @Override
++    public void testRemoteGathercast() throws Exception {
++        oldDeploymentDescriptor = PADeployment.getProactiveDescriptor(TestGather_PAdep.class.getResource(
++                "/functionalTests/component/descriptor/deploymentDescriptor.xml").getPath(),
++                (VariableContractImpl) vContract);
++
++        useRemoteGathercastItf(oldDeploymentDescriptor);
++    }
++}

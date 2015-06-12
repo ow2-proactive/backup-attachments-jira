@@ -1,0 +1,13 @@
+Index: src/Core/org/objectweb/proactive/core/remoteobject/rmi/AbstractRmiRemoteObjectFactory.java
+===================================================================
+--- src/Core/org/objectweb/proactive/core/remoteobject/rmi/AbstractRmiRemoteObjectFactory.java	(révision 14642)
++++ src/Core/org/objectweb/proactive/core/remoteobject/rmi/AbstractRmiRemoteObjectFactory.java	(copie de travail)
+@@ -204,7 +204,7 @@
+         if (uri.getPort() == -1) {
+             LOGGER_RO.debug("No port specified, using the default one");
+             modifiedURI = URIBuilder.buildURI(URIBuilder.getHostNameFromUrl(uri), URIBuilder
+-                    .getNameFromURI(uri));
++                    .getNameFromURI(uri),this.protocolIdentifier);
+             modifiedURI = RemoteObjectHelper.expandURI(modifiedURI);
+         }
+ 

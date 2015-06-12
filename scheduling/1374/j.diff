@@ -1,0 +1,138 @@
+Index: src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/ConfigurableAdapter.java
+===================================================================
+--- src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/ConfigurableAdapter.java	(revision 0)
++++ src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/ConfigurableAdapter.java	(revision 0)
+@@ -0,0 +1,83 @@
++/*
++ * ################################################################
++ *
++ * ProActive Parallel Suite(TM): The Java(TM) library for
++ *    Parallel, Distributed, Multi-Core Computing for
++ *    Enterprise Grids & Clouds
++ *
++ * Copyright (C) 1997-2011 INRIA/University of
++ *                 Nice-Sophia Antipolis/ActiveEon
++ * Contact: proactive@ow2.org or contact@activeeon.com
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Affero General Public License
++ * as published by the Free Software Foundation; version 3 of
++ * the License.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Affero General Public License for more details.
++ *
++ * You should have received a copy of the GNU Affero General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ * If needed, contact us to obtain a release under GPL Version 2 or 3
++ * or a different license than the AGPL.
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ * $$PROACTIVE_INITIAL_DEV$$
++ */
++package org.ow2.proactive.resourcemanager.nodesource.common;
++
++import javax.xml.bind.annotation.adapters.XmlAdapter;
++
++
++/**
++ * Converts the @Configurable annotation into a String,
++ * else JAXB / JACKSON won't serialize it 
++ * 
++ * 
++ * @author mschnoor
++ *
++ */
++public class ConfigurableAdapter extends XmlAdapter<String, Configurable> {
++
++    private static String CREDENTIAL = "credential";
++    private static String PASSWORD = "password";
++    private static String FILEBROWSER = "fileBrowser";
++    private static String NONE = "none";
++
++    @Override
++    public String marshal(Configurable arg0) throws Exception {
++        if (arg0.credential())
++            return CREDENTIAL;
++        else if (arg0.password())
++            return PASSWORD;
++        else if (arg0.fileBrowser())
++            return FILEBROWSER;
++        else
++            return NONE;
++
++    }
++
++    @Override
++    public Configurable unmarshal(String arg0) throws Exception {
++
++        if (arg0.equalsIgnoreCase(CREDENTIAL))
++            return (Configurable) Configurable.class.getMethod(CREDENTIAL).getDefaultValue();
++        else if (arg0.equalsIgnoreCase(PASSWORD))
++            return (Configurable) Configurable.class.getMethod(PASSWORD).getDefaultValue();
++        else if (arg0.equalsIgnoreCase(FILEBROWSER))
++            return (Configurable) Configurable.class.getMethod(FILEBROWSER).getDefaultValue();
++        else
++            return null;
++    }
++
++}
+Index: src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/ConfigurableField.java
+===================================================================
+--- src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/ConfigurableField.java	(revision 20407)
++++ src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/ConfigurableField.java	(working copy)
+@@ -38,15 +38,21 @@
+ 
+ import java.io.Serializable;
+ 
++import javax.xml.bind.annotation.XmlAccessType;
++import javax.xml.bind.annotation.XmlAccessorType;
++import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+ 
++
+ /**
+  *
+  * Encapsulation of field name, value and its meta data.
+  *
+  */
++@XmlAccessorType(XmlAccessType.FIELD)
+ public class ConfigurableField implements Serializable {
+     private String name;
+     private String value;
++    @XmlJavaTypeAdapter(ConfigurableAdapter.class)
+     private Configurable meta;
+ 
+     public ConfigurableField(String name, String value, Configurable configurable) {
+Index: src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/PluginDescriptor.java
+===================================================================
+--- src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/PluginDescriptor.java	(revision 20407)
++++ src/resource-manager/src/org/ow2/proactive/resourcemanager/nodesource/common/PluginDescriptor.java	(working copy)
+@@ -47,6 +47,10 @@
+ import java.util.List;
+ import java.util.Map;
+ 
++import javax.xml.bind.annotation.XmlAccessType;
++import javax.xml.bind.annotation.XmlAccessorType;
++import javax.xml.bind.annotation.XmlRootElement;
++
+ import org.objectweb.proactive.annotation.PublicAPI;
+ import org.ow2.proactive.resourcemanager.exception.RMException;
+ import org.ow2.proactive.utils.FileToBytesConverter;
+@@ -60,6 +64,8 @@
+  *
+  */
+ @PublicAPI
++@XmlAccessorType(XmlAccessType.FIELD)
++@XmlRootElement(name="pluginDescriptor")
+ public class PluginDescriptor implements Serializable {
+ 
+     private String pluginName;

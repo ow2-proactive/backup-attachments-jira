@@ -1,0 +1,292 @@
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# A fatal error has been detected by the Java Runtime Environment:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#  Internal Error (0xe06d7363), pid=2152, tid=672
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# JRE version: 6.0_17-b04
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# Java VM: Java HotSpot(TM) Client VM (14.3-b01 mixed mode windows-x86 )
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# Problematic frame:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# C  [kernel32.dll+0x12aeb]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# Can not save log file, dump to screen..
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# A fatal error has been detected by the Java Runtime Environment:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#  Internal Error (0xe06d7363), pid=2152, tid=672
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# JRE version: 6.0_17-b04
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# Java VM: Java HotSpot(TM) Client VM (14.3-b01 mixed mode windows-x86 )
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# Problematic frame:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# C  [kernel32.dll+0x12aeb]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# If you would like to submit a bug report, please visit:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#   http://[2011-07-22 18:03:040 optimusVirt1] Closing MATLAB...
+18:02:43 CEST 2011 ][MATLAB]# The crash happened outside the Java Virtual Machine in native code.
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# See problematic frame for where to report the bug.
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]---------------  T H R E A D  ---------------
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Current thread (0x02aaec00):  JavaThread "main" [_thread_in_native, id=672, stack(0x00430000,0x00c30000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]siginfo: ExceptionCode=0xe06d7363, ExceptionInformation=0x19930520 0x00c28474 0x7bd1f698 
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Registers:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]EAX=0x00c283dc, EBX=0x00c2e5e2, ECX=0x00000000, EDX=0x00000000
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]ESP=0x00c283d8, EBP=0x00c2842c, ESI=0x00c28464, EDI=0xffffffff
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]EIP=0x7c812aeb, EFLAGS=0x00000206
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Top of Stack: (sp=0x00c283d8)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c283d8:   7beb9758 e06d7363 00000001 00000000
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c283e8:   7c812aeb 00000003 19930520 00c28474
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c283f8:   7bd1f698 02626308 000000ef 02626210
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c28408:   000000ec 00c28430 7c42394d 02626308
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c28418:   000000ef 7c423958 000000ec 00c2e4f0
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c28428:   00c2849c 00c28464 78158e89 e06d7363
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c28438:   00000001 00000003 00c28458 e06d7363
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c28448:   00000001 00000000 00000000 00000003 
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Instructions: (pc=0x7c812aeb)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c812adb:   8d 7d c4 f3 a5 5f 8d 45 b0 50 ff 15 10 15 80 7c
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c812aeb:   5e c9 c2 10 00 85 ff 0f 8e 36 93 ff ff 8b 55 fc 
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Stack: [0x00430000,0x00c30000],  sp=0x00c283d8,  free space=8160k
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [kernel32.dll+0x12aeb]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [MSVCR80.dll+0x28e89]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [libmx.dll+0x19306]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [libmx.dll+0x1945b]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [libmx.dll+0x194ba]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [libmwservices.dll+0xa114e]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [libmwservices.dll+0xaecd]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [nativeservices.dll+0x106d]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.nativeGetPreferencesDirectory()Ljava/lang/String;+0
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.getPropertyDirectory()Ljava/lang/String;+0
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.load()V+15
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.<clinit>()V+64
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]v  ~StubRoutines::call_stub
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xecf9c]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0x1741d1]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xed01d]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xdd64c]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xdd88b]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xddb52]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xddc92]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0x113482]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0x11b850]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0x11b989]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [java.dll+0x13bc]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  java.lang.Class.forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;+0
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  java.lang.Class.forName(Ljava/lang/String;)Ljava/lang/Class;+5
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.util.PostVMInit$StartupClass.init(ZZ)V+28
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.util.PostVMInit.perform(ZZ)V+26
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]v  ~StubRoutines::call_stub
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xecf9c]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0x1741d1]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xed01d]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xf5be5]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]V  [jvm.dll+0xfd932]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [jmi.dll+0x1e65d]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [jmi.dll+0x1f76f]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [jmi.dll+0x157f0]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [mcr.dll+0x1eaa4]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [mcr.dll+0x14fcd]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [mcr.dll+0x1531c]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [mcr.dll+0x15a4c]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [matlab.exe+0x6202]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [matlab.exe+0x62c5]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [matlab.exe+0x638d]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [matlab.exe+0x6834]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]C  [kernel32.dll+0x17067]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.nativeGetPreferencesDirectory()Ljava/lang/String;+0
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.getPropertyDirectory()Ljava/lang/String;+0
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.load()V+15
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.services.Prefs.<clinit>()V+64
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]v  ~StubRoutines::call_stub
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  java.lang.Class.forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;+0
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  java.lang.Class.forName(Ljava/lang/String;)Ljava/lang/Class;+5
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.util.PostVMInit$StartupClass.init(ZZ)V+28
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]j  com.mathworks.util.PostVMInit.perform(ZZ)V+26
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]v  ~StubRoutines::call_stub
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]---------------  P R O C E S S  ---------------
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Java Threads: ( => current thread )
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x09955400 JavaThread "Timer-0" [_thread_blocked, id=2604, stack(0x09c00000,0x09c80000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x098d2400 JavaThread "AWT-Windows" daemon [_thread_in_native, id=3384, stack(0x09b70000,0x09bf0000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x098fb400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3236, stack(0x09a70000,0x09af0000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x09894800 JavaThread "JMI Unnamed Thread" [_thread_in_native, id=1760, stack(0x05770000,0x05f70000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x02c88000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=980, stack(0x08ff0000,0x09070000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x02c82400 JavaThread "CompilerThread0" daemon [_thread_blocked, id=1964, stack(0x087f0000,0x08ff0000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x02c81000 JavaThread "Attach Listener" daemon [_thread_blocked, id=3860, stack(0x08770000,0x087f0000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x02c6c800 JavaThread "Finalizer" daemon [_thread_blocked, id=4024, stack(0x02ed0000,0x02f50000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x02c6b000 JavaThread "Reference Handler" daemon [_thread_blocked, id=4056, stack(0x02e50000,0x02ed0000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]=>0x02aaec00 JavaThread "main" [_thread_in_native, id=672, stack(0x00430000,0x00c30000)]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Other Threads:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x02c68000 VMThread [stack: 0x07f70000,0x08770000] [id=2920]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  0x02c93000 WatcherThread [stack: 0x09070000,0x09870000] [id=3960]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]VM state:not at safepoint (normal execution)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]VM Mutex/Monitor currently owned by a thread: None
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Heap
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB] def new generation   total 14784K, used 6086K [0x10050000, 0x11050000, 0x12050000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  eden space 13184K,  46% used [0x10050000, 0x10641ae8, 0x10d30000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  from space 1600K,   0% used [0x10d30000, 0x10d30000, 0x10ec0000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]  to   space 1600K,   0% used [0x10ec0000, 0x10ec0000, 0x11050000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB] tenured generation   total 49152K, used 0K [0x12050000, 0x15050000, 0x18050000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]   the space 49152K,   0% used [0x12050000, 0x12050000, 0x12050200, 0x15050000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB] compacting perm gen  total 32768K, used 3826K [0x18050000, 0x1a050000, 0x1c050000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]   the space 32768K,  11% used [0x18050000, 0x1840c818, 0x1840ca00, 0x1a050000)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]No shared spaces configured.
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Dynamic libraries:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00400000 - 0x00424000 	C:\Program Files\MATLAB\R2010b\bin\win32\matlab.exe
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c910000 - 0x7c9c6000 	C:\WINDOWS\system32\ntdll.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c800000 - 0x7c906000 	C:\WINDOWS\system32\kernel32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7bc20000 - 0x7bcd1000 	C:\Program Files\MATLAB\R2010b\bin\win32\libut.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x10000000 - 0x10045000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwi18n.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00260000 - 0x0026e000 	C:\Program Files\MATLAB\R2010b\bin\win32\boost_date_time-vc80-mt-1_40.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c420000 - 0x7c4a7000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.4053_x-ww_e6967989\MSVCP80.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78130000 - 0x781cb000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.4053_x-ww_e6967989\MSVCR80.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77be0000 - 0x77c38000 	C:\WINDOWS\system32\msvcrt.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00280000 - 0x00293000 	C:\Program Files\MATLAB\R2010b\bin\win32\boost_filesystem-vc80-mt-1_40.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x002b0000 - 0x002b7000 	C:\Program Files\MATLAB\R2010b\bin\win32\boost_system-vc80-mt-1_40.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x002d0000 - 0x002de000 	C:\Program Files\MATLAB\R2010b\bin\win32\boost_thread-vc80-mt-1_40.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c2e0000 - 0x7c2ff000 	C:\Program Files\MATLAB\R2010b\bin\win32\LIBEXPAT.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b930000 - 0x7ba44000 	C:\Program Files\MATLAB\R2010b\bin\win32\icuin42.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c070000 - 0x7c163000 	C:\Program Files\MATLAB\R2010b\bin\win32\icuuc42.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77da0000 - 0x77e4c000 	C:\WINDOWS\system32\ADVAPI32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77e50000 - 0x77ee2000 	C:\WINDOWS\system32\RPCRT4.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77fc0000 - 0x77fd1000 	C:\WINDOWS\system32\Secur32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00c30000 - 0x01b78000 	C:\Program Files\MATLAB\R2010b\bin\win32\icudt42.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x787e0000 - 0x78898000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwfl.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76c40000 - 0x76c68000 	C:\WINDOWS\system32\imagehlp.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76ba0000 - 0x76bab000 	C:\WINDOWS\system32\PSAPI.DLL
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x00330000 - 0x003cb000 	C:\Program Files\MATLAB\R2010b\bin\win32\boost_regex-vc80-mt-1_40.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7e390000 - 0x7e421000 	C:\WINDOWS\system32\USER32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77ef0000 - 0x77f39000 	C:\WINDOWS\system32\GDI32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x003e0000 - 0x003ef000 	C:\Program Files\MATLAB\R2010b\bin\win32\boost_signals-vc80-mt-1_40.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b7a0000 - 0x7b7ac000 	C:\Program Files\MATLAB\R2010b\bin\win32\icuio42.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7bd40000 - 0x7bf5c000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwservices.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7bce0000 - 0x7bd31000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmx.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78cf0000 - 0x78d03000 	C:\Program Files\MATLAB\R2010b\bin\win32\zlib1.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7bf60000 - 0x7c065000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwmathutil.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a110000 - 0x7a14b000 	C:\Program Files\MATLAB\R2010b\bin\win32\mpath.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x01bd0000 - 0x01d32000 	C:\Program Files\MATLAB\R2010b\bin\win32\mlutil.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7d300000 - 0x7d35d000 	C:\Program Files\MATLAB\R2010b\bin\win32\xmlcore.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x799d0000 - 0x79b92000 	C:\Program Files\MATLAB\R2010b\bin\win32\xerces-c_2_7.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x719f0000 - 0x71a07000 	C:\WINDOWS\system32\WS2_32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x719e0000 - 0x719e8000 	C:\WINDOWS\system32\WS2HELP.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c9d0000 - 0x7d1f5000 	C:\WINDOWS\system32\SHELL32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77f40000 - 0x77fb6000 	C:\WINDOWS\system32\SHLWAPI.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x58b50000 - 0x58bea000 	C:\WINDOWS\system32\COMCTL32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76340000 - 0x7638a000 	C:\WINDOWS\system32\comdlg32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x6fee0000 - 0x6ff35000 	C:\WINDOWS\system32\NETAPI32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x01d70000 - 0x01d9e000 	C:\Program Files\MATLAB\R2010b\bin\win32\tbb.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a3c0000 - 0x7a435000 	C:\Program Files\MATLAB\R2010b\bin\win32\mcr.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b7b0000 - 0x7b81a000 	C:\Program Files\MATLAB\R2010b\bin\win32\iqm.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a9c0000 - 0x7ae71000 	C:\Program Files\MATLAB\R2010b\bin\win32\m_interpreter.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b830000 - 0x7b83c000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmex.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a290000 - 0x7a2f9000 	C:\Program Files\MATLAB\R2010b\bin\win32\m_dispatcher.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a1a0000 - 0x7a1f7000 	C:\Program Files\MATLAB\R2010b\bin\win32\profiler.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b890000 - 0x7b8b2000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwmathrng.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78c60000 - 0x78c72000 	C:\Program Files\MATLAB\R2010b\bin\win32\m_pcodeio.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a0d0000 - 0x7a107000 	C:\Program Files\MATLAB\R2010b\bin\win32\m_ir.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a4c0000 - 0x7a9c0000 	C:\Program Files\MATLAB\R2010b\bin\win32\m_parser.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b820000 - 0x7b82e000 	C:\Program Files\MATLAB\R2010b\bin\win32\ir_xfmr.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x788a0000 - 0x78a0f000 	C:\Program Files\MATLAB\R2010b\bin\win32\mcos.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b8d0000 - 0x7b8da000 	C:\Program Files\MATLAB\R2010b\bin\win32\mtok.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78c40000 - 0x78c56000 	C:\Program Files\MATLAB\R2010b\bin\win32\m_pcodegen.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78300000 - 0x78337000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwspmatrix.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78340000 - 0x78360000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwbridge.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b480000 - 0x7b504000 	C:\Program Files\MATLAB\R2010b\bin\win32\udd.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c170000 - 0x7c273000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwgui.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78d50000 - 0x79222000 	C:\Program Files\MATLAB\R2010b\bin\win32\hg.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78bc0000 - 0x78bf6000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmat.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7ba50000 - 0x7bc19000 	C:\Program Files\MATLAB\R2010b\bin\win32\libhdf5.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a020000 - 0x7a075000 	C:\Program Files\MATLAB\R2010b\bin\win32\jmi.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x79cf0000 - 0x79d1a000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwhardcopy.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a080000 - 0x7a0c1000 	C:\Program Files\MATLAB\R2010b\bin\win32\libuij.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x786a0000 - 0x787d0000 	C:\Program Files\MATLAB\R2010b\bin\win32\hgdatatypes.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78630000 - 0x7869b000 	C:\Program Files\MATLAB\R2010b\bin\win32\hgutils.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78c00000 - 0x78c34000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwlapack.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b850000 - 0x7b85e000 	C:\Program Files\MATLAB\R2010b\bin\win32\libmwbinder.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b510000 - 0x7b796000 	C:\Program Files\MATLAB\R2010b\bin\win32\uiw.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b920000 - 0x7b929000 	C:\Program Files\MATLAB\R2010b\bin\win32\uinone.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x781d0000 - 0x782e0000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC80.MFC_1fc8b3b9a1e18e3b_8.0.50727.4053_x-ww_b77cec8e\MFC80.DLL
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x72f50000 - 0x72f76000 	C:\WINDOWS\system32\WINSPOOL.DRV
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x774a0000 - 0x775dd000 	C:\WINDOWS\system32\ole32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x770e0000 - 0x7716b000 	C:\WINDOWS\system32\OLEAUT32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a440000 - 0x7a4b7000 	C:\Program Files\MATLAB\R2010b\bin\win32\udd_mi.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78c80000 - 0x78c93000 	C:\Program Files\MATLAB\R2010b\bin\win32\mwoles05.DLL
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a150000 - 0x7a19a000 	C:\Program Files\MATLAB\R2010b\bin\win32\comcli.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c630000 - 0x7c64b000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC80.ATL_1fc8b3b9a1e18e3b_8.0.50727.4053_x-ww_473666fd\ATL80.DLL
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b8c0000 - 0x7b8cb000 	C:\Program Files\MATLAB\R2010b\bin\win32\mlautoregister.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77390000 - 0x77493000 	C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x5d360000 - 0x5d36f000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC80.MFCLOC_1fc8b3b9a1e18e3b_8.0.50727.4053_x-ww_0ccc058c\MFC80FRA.DLL
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76960000 - 0x76a16000 	C:\WINDOWS\system32\USERENV.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x741e0000 - 0x741e4000 	C:\WINDOWS\system32\icmp.Dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76d10000 - 0x76d29000 	C:\WINDOWS\system32\iphlpapi.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x71990000 - 0x719d0000 	C:\WINDOWS\System32\mswsock.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76ed0000 - 0x76ef7000 	C:\WINDOWS\system32\DNSAPI.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76f60000 - 0x76f68000 	C:\WINDOWS\System32\winrnr.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76f10000 - 0x76f3d000 	C:\WINDOWS\system32\WLDAP32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x5b090000 - 0x5b0c8000 	C:\WINDOWS\system32\uxtheme.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76f70000 - 0x76f76000 	C:\WINDOWS\system32\rasadhlp.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x62e40000 - 0x62e99000 	C:\WINDOWS\system32\hnetcfg.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x719d0000 - 0x719d8000 	C:\WINDOWS\System32\wshtcpip.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x79d90000 - 0x7a01b000 	C:\Program Files\MATLAB\R2010b\sys\java\jre\win32\jre\bin\client\jvm.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76ae0000 - 0x76b0f000 	C:\WINDOWS\system32\WINMM.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7c300000 - 0x7c356000 	C:\Program Files\MATLAB\R2010b\bin\win32\MSVCR71.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x5d3f0000 - 0x5d491000 	C:\WINDOWS\system32\DBGHELP.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x77bd0000 - 0x77bd8000 	C:\WINDOWS\system32\VERSION.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a270000 - 0x7a27c000 	C:\Program Files\MATLAB\R2010b\sys\java\jre\win32\jre\bin\verify.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78d10000 - 0x78d2f000 	C:\Program Files\MATLAB\R2010b\sys\java\jre\win32\jre\bin\java.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a250000 - 0x7a258000 	C:\Program Files\MATLAB\R2010b\sys\java\jre\win32\jre\bin\hpi.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7a280000 - 0x7a28f000 	C:\Program Files\MATLAB\R2010b\sys\java\jre\win32\jre\bin\zip.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x79ba0000 - 0x79cea000 	C:\Program Files\MATLAB\R2010b\sys\java\jre\win32\jre\bin\awt.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x76320000 - 0x7633d000 	C:\WINDOWS\system32\IMM32.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78ca0000 - 0x78cba000 	C:\Program Files\MATLAB\R2010b\bin\win32\nativejava.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x71a60000 - 0x71a72000 	C:\WINDOWS\system32\MPR.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x78cc0000 - 0x78ce8000 	C:\Program Files\MATLAB\R2010b\bin\win32\nativejmi.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]0x7b910000 - 0x7b916000 	C:\Program Files\MATLAB\R2010b\bin\win32\nativeservices.dll
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]VM Arguments:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]jvm_args: -Xss512k -XX:PermSize=32m -Xms64m -XX:NewRatio=3 -XX:MaxPermSize=64m -Xmx128m -XX:MaxDirectMemorySize=1200000000 -Dsun.java2d.noddraw=true -Dsun.awt.nopixfmt=true -Xshare:off -Xrs -Dsun.awt.disableMixing=true -Djava.security.manager -Djava.security.policy=C:\Program Files\MATLAB\R2010b\bin\win32\matlab.java.policy -Dproactive.net.interface=eth0 -Dproactive.communication.protocol=pnp -Dproactive.useIPaddress=true -Djava.library.path=C:\Program Files\MATLAB\R2010b\bin\win32 vfprintf abort 
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]java_command: <unknown>
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Launcher Type: generic
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Environment Variables:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]JAVA_HOME=C:\Program Files\Java\jdk1.6.0_26
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\MATLAB\R2010b\runtime\win32;C:\Program Files\MATLAB\R2010b\bin
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]OS=Windows_NT
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 11, GenuineIntel
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]---------------  S Y S T E M  ---------------
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]OS: Windows XP Build 2600 Service Pack 3
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]CPU:total 2 (1 cores per cpu, 1 threads per core) family 6 model 15 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Memory: 4k page, physical 523752k(4332k free), swap 1276508k(533856k free)
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]vm_info: Java HotSpot(TM) Client VM (14.3-b01) for windows-x86 JRE (1.6.0_17-b04), built on Oct 11 2009 00:52:06 by "java_re" with MS VC++ 7.1
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]time: Fri Jul 22 18:02:43 2011
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]elapsed time: 5 seconds
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# If you would like to submit a bug report, please visit:
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#   http://java.sun.com/webapps/bugreport/crash.jsp
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# The crash happened outside the Java Virtual Machine in native code.
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]# See problematic frame for where to report the bug.
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]#
+[ Fri Jul 22 18:02:43 CEST 2011 ][MATLAB]Unable to open file for Java VM logging

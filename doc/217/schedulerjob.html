@@ -1,0 +1,1136 @@
+
+<!-- saved from url=(0091)http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <style type="text/css">
+/* encoding="UTF-8"
+
+&lt;h1&gt;Xrem, croiser les remarques (documenteur)&lt;/h1&gt;
+
+
+[FG] Frédéric Glorieux &lt;frederic.glorieux@diple.net&gt;
+
+10 ans de CSS pour présenter des sources XML.
+*/
+
+/* HTML5 */
+
+section,
+nav,
+article,
+aside,
+hgroup,
+header,
+footer,
+figure,
+figcaption {
+  display:block;
+}
+
+/* Différentes dispositions */
+
+
+body.rng {
+  padding:0;
+  margin:0;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size:13px;
+}
+body.rng h1 {
+  text-align:center;
+}
+body.rng h3 {
+  /*
+  background-ccolor:#DADADA;
+  background-image: -webkit-gradient(linear, left top, right top,from(#DADADA),to(#FFFFFF));
+  background-image: -webkit-linear-gradient(left, #DADADA, #FFFFFF);
+  background-image:    -moz-linear-gradient(left, #DADADA, #FFFFFF);
+  background-image:     -ms-linear-gradient(left, #DADADA, #FFFFFF);
+  background-image:      -o-linear-gradient(left, #DADADA, #FFFFFF);
+  background-image:         linear-gradient(left, #DADADA, #FFFFFF);
+  */
+  border-bottom:1px solid #336699;
+  padding-left: 1em;
+  margin-top:2em;
+  margin-bottom:1em;
+}
+.tree ul {
+  padding:0;
+  margin:0;
+  padding-left:1em;
+}
+body.rng a {
+  color:#369;
+  text-decoration:none;
+}
+
+body.rng a:hover {
+  text-decoration:underline;
+}
+
+
+body.rng ul.tree ul {
+  padding-left:1ex;
+  margin-left:1em;
+}
+body.rng p {
+  text-align:justify;
+}
+
+body.rng #nav {
+  top:0;
+  position:fixed;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding:0 3px 2em 11px;
+  height:100%;
+  overflow:auto;
+  width:27%;
+  color:black;
+  margin:0 0 0 0;
+  font-family:Arial, sans-serif;
+  font-size:13px;
+  border-right:solid 1px #b3b3b3;
+}
+body.rng #nav header {
+  padding:1ex 0;
+  font-style:normal;
+  font-weight:bold;
+}
+/* corps du document */
+body.rng #article {
+  padding:0;
+  margin:3ex 5em 5em 30%;
+  min-height:500px;
+}
+.transform a {
+  border:none;
+}
+.match p,
+.result p {
+  text-indent:1em;
+  line-height:110%;
+  margin:0 0 0.5ex 0;
+}
+
+/*
+ &lt;h2&gt;XML par &lt;a href="./xml_html.xsl"&gt;xml_html.xsl&lt;/a&gt;&lt;/h2&gt;
+*/
+.example {
+  background-color: #FFFFFF;
+  background-image: -webkit-gradient(linear, left top, right top,from(#FFFFFF),to(#DADADA));
+  background-image: -webkit-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:    -moz-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:     -ms-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:      -o-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:         linear-gradient(left, #FFFFFF, #DADADA);
+  border-left:1px dotted #808080;
+  padding:1ex 1em;
+  margin:0;
+}
+.xml {
+  font-size:14px;
+  line-height:105%;
+  text-align:left;
+}
+
+
+  /* element names */
+.xml .tag a,
+.xml .tag a:visited,
+.xml .open a,
+.xml .open a:visited,
+.xml .close a,
+.xml .close a:visited {
+  text-decoration:none;
+  border-bottom:none;
+  border:none;
+  padding:0;
+}
+.xml a.val {
+  color:#0000FF;
+}
+.xml a.val:hover {
+  text-decoration:underline;
+  border:none;
+}
+
+  /* classes are provided for namespace prefix */
+a.xsl,
+a:visited.xsl {
+  font-family: Arial, sans-serif;
+  color:#669966;
+  font-weight:100;
+  text-decoration:none;
+  border:none;
+}
+a:hover.xsl,
+a:hover.rdf {
+  background:#0000FF;
+  color:white;
+}
+
+a.html,
+a:visited.html,
+a.dc,
+a:visited.dc {
+  color:#FF0000;
+  font-weight:bold;
+  text-decoration:none;
+  border:none;
+}
+a:hover.html,
+a:hover.dc,
+a:hover.template,
+a:focus.template  {
+  background:red;
+  color:white;
+}
+
+a.template,
+a:visited.template {
+  font-family: Verdana, arial, sans-serif;
+  font-weight:bold;
+}
+  /* element names */
+.xml .el,
+.xml  a.el {
+  font-weight:bold;
+  font-family: "Lucida Console", Courier, "MS Courier New", monospace;
+  text-decoration:none;
+  color:#961716;
+  border:none;
+}
+.xml a:hover.el,
+.xml a:hover.att {
+  background:#8080FF;
+  color:#FFFFFF;
+}
+
+  /* attribute names */
+.xml .att {
+  font-family:Arial, sans-serif;
+  font-weight:100;
+}
+.xml a .att {
+  font-family:Arial, sans-serif;
+  color:#444;
+}
+/* tag is what is between brackets */
+.xml .open,
+.xml .close,
+.xml .tag {
+  margin:0;
+  font-family:monospace, sans-serif;
+  /* font-size:80%; */
+  color:#669966;
+}
+.xml .fold {
+  color:#666666;
+}
+
+/* processing instructions */
+.xml .pi {
+  color:#008000;
+  font-weight: bold;
+}
+
+/* textual contents */
+.xml .val,
+.xml .cdata {
+  font-weight:normal;
+  color:#000;
+  margin:0;
+  padding:0;
+}
+
+  /* xml comment */
+
+.xml .comment,
+.xml .comment code {
+  font-size:12px;
+  line-height:125%;
+  background:#FFE;
+  color:#666;
+  /*
+  border:solid #CCCCCC 1px;
+  padding:1px 1em;
+  margin:0;
+  color:#000000;
+  font-weight: 100;
+  width:auto;
+  margin-right:3em;
+  */
+}
+
+.xml  pre.comment {
+  margin:0;
+  padding:0;
+}
+
+  /* button for +/- and margins */
+
+/*
+  a.click {
+  border:1px dotted #808080;
+  color:#000000;
+  font-weight:900;
+  text-decoration:none;
+  border:none;
+  }
+*/
+
+dd.code {
+  /* line-height:105%; */
+  margin:0 !important;
+  padding:0 !important;
+  padding-left:1em !important;
+  border-left: 1px dotted #808080;
+}
+
+.pre .text {
+  background:#EEF;
+  font-family:serif;
+  color:#000;
+}
+
+.xml span.text {
+  color:#000;
+}
+
+.xml .cdata {
+  color:red
+}
+
+.xml .ns {
+  color:#000080;
+  font-weight:100;
+}
+
+/* properties  */
+
+dt {
+  font-weight:bold;
+}
+dl.xml {
+  margin:0;
+  padding:0;
+}
+dl.xml dt {
+  font-weight:normal;
+}
+details.source {
+  margin-left:1em;
+  float:right;
+  max-width:60%;
+  background:#FFFFFF;
+}
+details.source summary {
+  float:right;
+  display:inline;
+  text-align:right;
+}
+details &gt; * {
+  display:none;
+}
+details.minus &gt; * {
+  display:block;
+}
+
+fieldset {
+  margin:1em 0 1ex 0;
+  padding:0 1ex 0 1ex;
+  border:1px dotted #363;
+  -moz-border-radius:1ex;
+  -webkit-border-radius:1ex;
+  white-space:normal;
+}
+.xsl-var {
+  margin-top:1ex;
+}
+.output {
+  color:#961716;
+  font-family: "Lucida Console", Courier, "MS Courier New", monospace;
+  font-size:13px;
+  line-height:110%;
+  text-indent:0;
+  text-align:left;
+}
+.template {
+  margin: 1em 0 0 0;
+  clear:both;
+}
+.template header {
+  border:none;
+  padding:0;
+  border-bottom:#888 1px solid;
+}
+/*
+.template ul,
+.template p {
+  margin-top:0;
+  margin-bottom:0;
+}
+*/
+
+/*
+ &lt;h2&gt;Relax-NG par &lt;a href="./rng_html.xsl"&gt;rng_html.xsl&lt;/a&gt;&lt;/h2&gt;
+*/
+
+section.element,
+section.define {
+  margin-top:2em;
+}
+section.attribute {
+  margin-top:1em;
+}
+
+
+
+.documentation {
+  margin: 1ex 0 1em 0;
+}
+a.define,
+a.ref,
+a:link.define,
+a:link.ref,
+header.define {
+  color:#363;
+  font-style:italic;
+}
+span.less span.refin .toggle {
+  display:none;
+}
+span.more .toggle {
+  background-image:url('http://subversion.cru.fr/diple/trunk/modules/xrem/more.png');
+}
+span.less .toggle {
+  background-image:url('http://subversion.cru.fr/diple/trunk/modules/xrem/less.png');
+}
+a.toggle {
+  background-position:1px center;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  padding-left:7px;
+  padding-right:7px;
+  border:1px solid transparent;
+  padding-top:1px;
+  padding-bottom:1px;
+  margin-left:2px;
+}
+a.toggle:hover {
+  border:1px inset #DDDDDD;
+  text-decoration:none;
+  border:none;
+}
+/* cacher/montrer l'expansion d'une classe */
+span.more span.refin {
+  display:none;
+}
+span.less span.refin {
+  display:block;
+}
+
+/* indentation de la notation compacte des entités */
+span.less span.refin {
+  display:block;
+  margin-left:0.5ex;
+  border-left:1px dotted #888;
+  padding-left:3ex;
+  /* text-indent:-3ex; */
+}
+
+/* indentation des groupes d'usage */
+ul.values {
+  color:#000;
+  margin-top:0;
+  margin-bottom:0;
+  padding-top:0;
+  margin-bottom:0;
+}
+section.rng {
+  margin:2em 0 0 0;
+}
+header.rng {
+  font-weight:bold;
+  font-size:110%;
+  margin-bottom:1ex;
+  padding:0;
+  border:none;
+}
+header.rng a {
+  color:#77A;
+}
+section.rng section.rng header {
+  padding-left:2em;
+}
+section.rng section.rng section.rng header {
+  padding-left:4em;
+}
+section.rng section.rng section.rng section.rng header {
+  padding-left:6em;
+}
+/*
+ * Tableau technique Relax-NG
+ */
+table.grammar {
+  background-color:#FFFFFF;
+  background-image: -webkit-gradient(linear, left top, right top,from(#FFFFFF),to(#DADADA));
+  background-image: -webkit-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:    -moz-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:     -ms-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:      -o-linear-gradient(left, #FFFFFF, #DADADA);
+  background-image:         linear-gradient(left, #FFFFFF, #DADADA);
+  border-collapse:collapse;
+  width:100%;
+  line-height:105%;
+  border-left:1px dotted #808080;
+}
+/* ?? */
+table.grammar tt {
+  color:#000;
+}
+header.attribute {
+  color:#666;
+}
+
+table.grammar td {
+  color:red;
+  padding:0 1ex;
+  line-height:1.1em;
+}
+
+table.grammar th {
+  font-family:Helvetica, Arial, "DejaVu Sans Light ", sans-serif;
+  font-size:12px;
+  width:10ex;
+  vertical-align:top;
+  padding:0 1ex;
+  background:#DADADA;
+  border-bottom:1px solid #FFFFFF;
+  font-weight:normal;
+}
+.grammar a {
+  font-family:Helvetica, Arial, "DejaVu Sans Light ", sans-serif;
+  color:#315BA7;
+  border:none;
+}
+
+em.value {
+  color:#000;
+}
+
+/*
+ &lt;h2&gt;PHP&lt;/h2&gt;
+*/
+
+pre.php {
+  white-space: pre-wrap;
+  font-size:14px;
+  color:red;
+}
+.pre {
+  white-space: pre-wrap;
+}
+code.function {
+  color:#A82C37;
+}
+span.function {
+  font-family:Frutiger,"Deja Vu Sans",Helvetica,sans-serif;
+  color:#000;
+}
+a.function {
+  font-family:Frutiger,"Deja Vu Sans",Helvetica,sans-serif;
+}
+a.function:hover {
+  text-decoration:underline;
+}
+
+pre.php b.construct {
+  font-family:Frutiger,"Deja Vu Sans",Helvetica,sans-serif;
+  color:#000;
+}
+
+pre.php var {
+  font-family:Frutiger,"Deja Vu Sans",Helvetica,sans-serif;
+  color:#000000;
+  font-style:normal;
+}
+
+code.string {
+  color:#060;
+}
+/* comments */
+.comment {
+  font-family:sans-serif;
+  color:#000;
+}
+/* line comments, choice si make them readable the pore as possible */
+span.comment {
+  color:#888;
+  font-style:normal;
+}
+/* sample code in a comment */
+fieldset.comment pre {
+  color:#008;
+}
+div.comment {
+  white-space: normal;
+}
+
+code.integer {
+  color:#FF0000;
+  font-weight:bold;
+}
+code.php-tag {
+  color:#FF0000;
+}
+code.numeric {
+  color:#FF0000;
+  font-weight:bold;
+}
+code.constant {
+  color:#000000;
+}
+tt.op {
+  background:none repeat scroll 0 0 #EEEEEE;
+  color:#000000;
+}
+code.defined {
+  color:red;
+}
+code.whitespace {
+  white-space:pre;
+}
+code.curly {
+  background:none repeat scroll 0 0 #FFAAAA;
+}
+code.parenthese {
+  background:none repeat scroll 0 0 #AAFFAA;
+}
+code.square {
+  background:none repeat scroll 0 0 #AAAAFF;
+}
+code.error-control {
+  background:none repeat scroll 0 0 #FF0000;
+  font-weight:bold;
+}
+</style>
+    <script type="text/javascript" src="./schedulerjob_files/Tree.js">//</script>
+  </head>
+  <body class="rng">
+    <nav id="nav"><div id="toc"> </div>
+  <section id="els" class="index"><header>Elements (61)</header><b>J&nbsp;: </b><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-SystemEnvironment_0" title="a list of sysProp">jd:SystemEnvironment</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-additionalClasspath_0" title="classpath entries to add to the new java process">jd:additionalClasspath</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arbitrary_0" title="arbitrary topology">jd:arbitrary</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0" title="An argument of this script">jd:argument</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0">jd:argument</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arguments_0" title="A list of arguments of this script">jd:arguments</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arguments_0" title="List of arguments to the native command (they will be appended at the end of the command)">jd:arguments</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-bestProximity_0" title="best nodes proximity">jd:bestProximity</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-cleaning_0" title="A script launched by the Resource Manager after the task or post script">jd:cleaning</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-code_0" title="Definition of a script by writing directly the code inside the descriptor">jd:code</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-controlFlow_0" title="Flow control : block declaration, flow action">jd:controlFlow</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-depends_0" title="A list of dependencies for this task">jd:depends</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-description_0" title="Textual description of this job">jd:description</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-description_0" title="Textual description of this task">jd:description</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-differentHostsExclusive_0" title="nodes on single host exclusively">jd:differentHostsExclusive</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-dynamicCommand_0" title="A command generated dynamically">jd:dynamicCommand</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-envScript_0" title="environment script to execute for setting forked process environment">jd:envScript</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-generation_0" title="A command generated by a script">jd:generation</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-genericInformation_0" title="Definition of any information you would like to get in the policy">jd:genericInformation</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-globalSpace_0" title="GLOBAL space for the job, this setting overrides the default global space provided by the scheduler.">jd:globalSpace</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-if_0" title="branching Control flow action">jd:if</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-info_0" title="Information that you can get in the policy through the job content">jd:info</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-inputFiles_0" title="selection of input files that will be accessible for the application and copied from INPUT/OUTPUT to">jd:inputFiles</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-inputSpace_0" title="INPUT space for the job, this setting overrides the default input space provided by the scheduler. I">jd:inputSpace</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jobClasspath_0" title="The classPath where to find the dependences of your job. It must contain path element">jd:jobClasspath</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jvmArg_0" title="A list of java properties or options">jd:jvmArg</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jvmArgs_0" title="A list of java properties or options">jd:jvmArgs</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-loop_0" title="looping control flow action">jd:loop</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-multipleHostsExclusive_0" title="nodes on multiple hosts exclusively">jd:multipleHostsExclusive</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-nativeExecutable_0" title="A native command call, it can be statically described or generated by a script">jd:nativeExecutable</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-outputFiles_0" title="selection of output files that will be copied from LOCALSPACE to OUTPUT">jd:outputFiles</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-outputSpace_0" title="OUTPUT space for the job, this setting overrides the default output space provided by the scheduler.">jd:outputSpace</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parallel_0" title="An information related parallel task including nodes number and topology">jd:parallel</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameter_0" title="A parameter in the form of key/value pair">jd:parameter</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameters_0" title="A list of parameters that will be given to the Java task through the init method">jd:parameters</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pathElement_0" title="Path element (one pathElement for each classpath entry)">jd:pathElement</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-post_0" title="A script launched after the task execution in the task node">jd:post</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pre_0" title="A script launched before the task execution in the task node">jd:pre</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-replicate_0" title="replicate control flow action">jd:replicate</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a specific script which is used for resource selection">jd:script</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-scriptExecutable_0" title="A script to be executed as a task">jd:scriptExecutable</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-selection_0" title="A script used to select resources that can handle the task">jd:selection</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-singleHost_0" title="nodes on single host">jd:singleHost</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-singleHostExclusive_0" title="nodes on single host exclusively">jd:singleHostExclusive</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-staticCommand_0" title="A native command statically defined in the descriptor">jd:staticCommand</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task from which this task depends">jd:task</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-taskFlow_0" title="A job composed of a flow of tasks with or without dependencies">jd:taskFlow</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-thresholdProximity_0" title="threshold nodes proximity">jd:thresholdProximity</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-userSpace_0" title="USER space for the job, this setting overrides the default user space provided by the scheduler. It ">jd:userSpace</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="Definition of one variable, the variable can be reused (even in another following variable definitio">jd:variable</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="A parameter in the form of key/value pair">jd:variable</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variables_0" title="Definition of variables which can be reused throughout this descriptor">jd:variables</a></section><section id="atts" class="index"><header>Attributes (49)</header><b>J&nbsp;: </b><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-accessMode_0" title=" (1)">jd:accessMode</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-accessMode_0" title=" (1)">jd:accessMode</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-append_0" title=" (1)">jd:append</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-appendChar_0" title=" (1)">jd:appendChar</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-block_0" title=" (1)">jd:block</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-cancelJobOnError_0" title=" (1)">jd:cancelJobOnError</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-cancelJobOnError_0" title=" (1)">jd:cancelJobOnError</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-class_0" title=" (1)">jd:class</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-continuation_0" title=" (1)">jd:continuation</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-else_0" title=" (1)">jd:else</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-excludes_0" title=" (2)">jd:excludes</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-includes_0" title=" (2)">jd:includes</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-javaHome_0" title=" (1)">jd:javaHome</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-code_0" title="&lt;jd:code&gt;">jd:language</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-maxNumberOfExecution_0" title=" (1)">jd:maxNumberOfExecution</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-maxNumberOfExecution_0" title=" (1)">jd:maxNumberOfExecution</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title=" (1)">jd:name</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title=" (1)">jd:name</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title=" (1)">jd:name</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title=" (1)">jd:name</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="&lt;jd:variable&gt;">jd:name</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameter_0" title="&lt;jd:parameter&gt;">jd:name</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-numberOfNodes_0" title=" (2)">jd:numberOfNodes</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pathElement_0" title="&lt;jd:pathElement&gt;">jd:path</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-path_0" title=" (1)">jd:path</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-preciousLogs_0" title=" (1)">jd:preciousLogs</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-preciousResult_0" title=" (1)">jd:preciousResult</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-priority_0" title=" (1)">jd:priority</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-projectName_0" title=" (1)">jd:projectName</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="&lt;jd:task&gt;">jd:ref</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-restartTaskOnError_0" title=" (1)">jd:restartTaskOnError</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-restartTaskOnError_0" title=" (1)">jd:restartTaskOnError</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-resultPreviewClass_0" title=" (1)">jd:resultPreviewClass</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-runAsMe_0" title=" (1)">jd:runAsMe</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-target_0" title=" (2)">jd:target</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-threshold_0" title=" (1)">jd:threshold</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-type_0" title=" (1)">jd:type</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-url_0" title=" (5)">jd:url</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-value_0" title=" (1)">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-value_0" title=" (1)">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0" title="&lt;jd:argument&gt;">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-staticCommand_0" title="&lt;jd:staticCommand&gt;">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0" title="&lt;jd:argument&gt;">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="&lt;jd:variable&gt;">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jvmArg_0" title="&lt;jd:jvmArg&gt;">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameter_0" title="&lt;jd:parameter&gt;">jd:value</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-walltime_0" title=" (1)">jd:walltime</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-workingDir_0" title=" (3)">jd:workingDir</a>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="&lt;jd:job&gt;">jd:xsi:schemaLocation</a></section><section id="macros" class="index"><header>Macros (13)</header><b>B&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_blockAttr">blockAttr</a>.
+<br><b>C&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_classPattern">classPattern</a>, <a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_controlFlowAction">controlFlowAction</a>.
+<br><b>E&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_executable" title="The task executable is the actual code that will be run on the selected resource. It can be a native">executable</a>.
+<br><b>I&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_inaccessModeType">inaccessModeType</a>, <a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_inexcludePattern">inexcludePattern</a>.
+<br><b>J&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_jobPriority">jobPriority</a>.
+<br><b>O&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_outaccessModeType">outaccessModeType</a>.
+<br><b>P&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_propertyAppendChar">propertyAppendChar</a>.
+<br><b>R&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_restartTaskType">restartTaskType</a>.
+<br><b>S&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_scriptTypeT">scriptTypeT</a>.
+<br><b>V&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_variableRefType">variableRefType</a>.
+<br><b>W&nbsp;: </b><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_walltimePattern">walltimePattern</a></section></nav>
+    <article id="article">
+  
+    
+  
+  <section class="element rng" id="el_jd-job_0"><header class="element rng">&lt;<a>jd:job</a>&gt;</header><div class="documentation">Definition of a job for the scheduler </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title="Identification of this job">@jd:name</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-priority_0" title="Priority of the job">@jd:priority</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-cancelJobOnError_0" title="For each task, does the job cancel right away if a single task had an error (by opposition to a netw">@jd:cancelJobOnError</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-restartTaskOnError_0" title="For each task, where does the task restart if an error occurred ? (default=anywhere)">@jd:restartTaskOnError</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-maxNumberOfExecution_0" title="Maximum number of execution for each task (default=1)">@jd:maxNumberOfExecution</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-projectName_0" title="Name of the project related to this job. It is also used in the policy to group some jobs together">@jd:projectName</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0">@jd:xsi:schemaLocation</a>?</td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variables_0" title="Definition of variables which can be reused throughout this descriptor">jd:variables</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-description_0" title="Textual description of this job">jd:description</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jobClasspath_0" title="The classPath where to find the dependences of your job. It must contain path element">jd:jobClasspath</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-genericInformation_0" title="Definition of any information you would like to get in the policy">jd:genericInformation</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-inputSpace_0" title="INPUT space for the job, this setting overrides the default input space provided by the scheduler. I">jd:inputSpace</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-outputSpace_0" title="OUTPUT space for the job, this setting overrides the default output space provided by the scheduler.">jd:outputSpace</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-globalSpace_0" title="GLOBAL space for the job, this setting overrides the default global space provided by the scheduler.">jd:globalSpace</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-userSpace_0" title="USER space for the job, this setting overrides the default user space provided by the scheduler. It ">jd:userSpace</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-taskFlow_0" title="A job composed of a flow of tasks with or without dependencies">jd:taskFlow</a></td></tr><tr><th>Usage</th><td>Elément racine</td></tr></tbody></table><div class="documentation">Definition of a job for the scheduler </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      </section>
+  <section class="attribute rng" id="att_jd-name_0"><header class="attribute rng">@jd:name</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table>
+      <div class="documentation">Identification of this job</div>
+      
+    </section>
+  <section class="element rng" id="el_jd-variables_0"><header class="element rng">&lt;<a>jd:variables</a>&gt;</header><div class="documentation">Definition of variables which can be reused throughout this descriptor</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="Definition of one variable, the variable can be reused (even in another following variable definitio">jd:variable</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">Definition of variables which can be reused throughout this descriptor</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-variable_0"><header class="element rng">&lt;<a>jd:variable</a>&gt;</header><div class="documentation">Definition of one variable, the variable can be reused (even in another following variable definition) by using the syntax ${name_of_variable}</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title="Name of a variable">@jd:name</a><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-value_0" title="The patterns ${variable_name} will be replaced by this value">@jd:value</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variables_0" title="Definition of variables which can be reused throughout this descriptor">jd:variables</a> </td></tr></tbody></table><div class="documentation">Definition of one variable, the variable can be reused (even in another following variable definition) by using the syntax ${name_of_variable}</div></section>
+  <section class="attribute rng" id="att_jd-name_0"><header class="attribute rng">@jd:name</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="Definition of one variable, the variable can be reused (even in another following variable definitio">jd:variable</a> </td></tr></tbody></table>
+      <div class="documentation">Name of a variable</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-value_0"><header class="attribute rng">@jd:value</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="Definition of one variable, the variable can be reused (even in another following variable definitio">jd:variable</a> </td></tr></tbody></table>
+      <div class="documentation">The patterns ${variable_name} will be replaced by this value</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-priority_0"><header class="attribute rng">@jd:priority</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( [&nbsp;<em class="value">"highest"</em> |<em class="value">"high"</em> |<em class="value">"normal"</em> |<em class="value">"low"</em> |<em class="value">"lowest"</em> |&nbsp;]&nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table>
+      <div class="documentation">Priority of the job</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-cancelJobOnError_0"><header class="attribute rng">@jd:cancelJobOnError</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{boolean}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table>
+      <div class="documentation">For each task, does the job cancel right away if a single task had an error (by opposition to a network failure, memory error, etc...) (default=false)</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-restartTaskOnError_0"><header class="attribute rng">@jd:restartTaskOnError</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( [&nbsp;<em class="value">"anywhere"</em> |<em class="value">"elsewhere"</em> |&nbsp;]&nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table>
+      <div class="documentation">For each task, where does the task restart if an error occurred ? (default=anywhere)</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-maxNumberOfExecution_0"><header class="attribute rng">@jd:maxNumberOfExecution</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{nonNegativeInteger}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table>
+      <div class="documentation">Maximum number of execution for each task (default=1)</div>
+      
+        
+        
+      
+    </section>
+  <section class="element rng" id="el_jd-jobClasspath_0"><header class="element rng">&lt;<a>jd:jobClasspath</a>&gt;</header><div class="documentation">The classPath where to find the dependences of your job. It must contain path element</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pathElement_0" title="Path element (one pathElement for each classpath entry)">jd:pathElement</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">The classPath where to find the dependences of your job. It must contain path element</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-pathElement_0"><header class="element rng">&lt;<a>jd:pathElement</a>&gt;</header><div class="documentation">Path element (one pathElement for each classpath entry)</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pathElement_0">@jd:path</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jobClasspath_0" title="The classPath where to find the dependences of your job. It must contain path element">jd:jobClasspath</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-additionalClasspath_0" title="classpath entries to add to the new java process">jd:additionalClasspath</a> </td></tr></tbody></table><div class="documentation">Path element (one pathElement for each classpath entry)</div></section>
+  <section class="element rng" id="el_jd-genericInformation_0"><header class="element rng">&lt;<a>jd:genericInformation</a>&gt;</header><div class="documentation">Definition of any information you would like to get in the policy</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-info_0" title="Information that you can get in the policy through the job content">jd:info</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">Definition of any information you would like to get in the policy</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-info_0"><header class="element rng">&lt;<a>jd:info</a>&gt;</header><div class="documentation">Information that you can get in the policy through the job content</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title="Name of the information variable">@jd:name</a><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-value_0" title="Value of the information variable">@jd:value</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-genericInformation_0" title="Definition of any information you would like to get in the policy">jd:genericInformation</a> </td></tr></tbody></table><div class="documentation">Information that you can get in the policy through the job content</div></section>
+  <section class="attribute rng" id="att_jd-name_0"><header class="attribute rng">@jd:name</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-info_0" title="Information that you can get in the policy through the job content">jd:info</a> </td></tr></tbody></table>
+      <div class="documentation">Name of the information variable</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-value_0"><header class="attribute rng">@jd:value</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-info_0" title="Information that you can get in the policy through the job content">jd:info</a> </td></tr></tbody></table>
+      <div class="documentation">Value of the information variable</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-projectName_0"><header class="attribute rng">@jd:projectName</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table>
+      <div class="documentation">Name of the project related to this job. It is also used in the policy to group some jobs together</div>
+      
+    </section>
+  <section class="element rng" id="el_jd-description_0"><header class="element rng">&lt;<a>jd:description</a>&gt;</header><div class="documentation">Textual description of this job </div><table class="grammar"><tbody><tr><th>Contenu</th><td><i> text() </i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">Textual description of this job </div></section>
+  <section class="element rng" id="el_jd-taskFlow_0"><header class="element rng">&lt;<a>jd:taskFlow</a>&gt;</header><div class="documentation">A job composed of a flow of tasks with or without dependencies </div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">A job composed of a flow of tasks with or without dependencies </div>
+        
+      </section>
+  
+  <section class="element rng" id="el_jd-task_0"><header class="element rng">&lt;<a>jd:task</a>&gt;</header><div class="documentation">A task is the smallest computation unit for the scheduler </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-name_0" title="Identification of this task (identifier)">@jd:name</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-numberOfNodes_0" title="number of cores needed for the task (identifier)">@jd:numberOfNodes</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-cancelJobOnError_0" title="Does the job cancel right away if a single task had an error (by opposition to a network failure, me">@jd:cancelJobOnError</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-restartTaskOnError_0" title="Where does the task restart if an error occurred ?">@jd:restartTaskOnError</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-maxNumberOfExecution_0" title="Maximum number of execution for this task">@jd:maxNumberOfExecution</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-runAsMe_0" title="Do we run this task under the job owner user identity">@jd:runAsMe</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-walltime_0" title="Defines walltime - maximum execution time of the task. (patterns are &#39;ss&#39; OR &#39;mm:ss&#39; OR &#39;hh:mm:ss&#39;)">@jd:walltime</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-preciousResult_0" title="Do we keep the result among the job results">@jd:preciousResult</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-preciousLogs_0" title="Do we keep the logs as file on LOCALSPACE">@jd:preciousLogs</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-resultPreviewClass_0" title="A class implementing the ResultPreview interface which can be used to display the result of this tas">@jd:resultPreviewClass</a>?</td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-description_0" title="Textual description of this task">jd:description</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-genericInformation_0" title="Definition of any information you would like to get in the policy">jd:genericInformation</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-depends_0" title="A list of dependencies for this task">jd:depends</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-inputFiles_0" title="selection of input files that will be accessible for the application and copied from INPUT/OUTPUT to">jd:inputFiles</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parallel_0" title="An information related parallel task including nodes number and topology">jd:parallel</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-selection_0" title="A script used to select resources that can handle the task">jd:selection</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pre_0" title="A script launched before the task execution in the task node">jd:pre</a>?, <span class="more"><a class="ref" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_executable">executable</a><a class="toggle" onclick="o=this.parentNode;o.className=(o.className==&#39;more&#39;)?&#39;less&#39;:&#39;more&#39;">&nbsp;</a><span class="refin"> ( <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-nativeExecutable_0" title="A native command call, it can be statically described or generated by a script">jd:nativeExecutable</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-scriptExecutable_0" title="A script to be executed as a task">jd:scriptExecutable</a> )</span></span>, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-controlFlow_0" title="Flow control : block declaration, flow action">jd:controlFlow</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-post_0" title="A script launched after the task execution in the task node">jd:post</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-cleaning_0" title="A script launched by the Resource Manager after the task or post script">jd:cleaning</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-outputFiles_0" title="selection of output files that will be copied from LOCALSPACE to OUTPUT">jd:outputFiles</a>?</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-taskFlow_0" title="A job composed of a flow of tasks with or without dependencies">jd:taskFlow</a> </td></tr></tbody></table><div class="documentation">A task is the smallest computation unit for the scheduler </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      </section>
+  <section class="attribute rng" id="att_jd-name_0"><header class="attribute rng">@jd:name</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{ID}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Identification of this task (identifier) </div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-numberOfNodes_0"><header class="attribute rng">@jd:numberOfNodes</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{positiveInteger}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_nodesNumber_t" title="number of cores needed for the task (identifier)">nodesNumber_t</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parallel_0" title="An information related parallel task including nodes number and topology">jd:parallel</a>  &lt;</span></span></td></tr></tbody></table>
+      <div class="documentation">number of cores needed for the task (identifier)</div>
+      
+        
+        
+      
+    </section>
+  <section class="element rng" id="el_jd-description_0"><header class="element rng">&lt;<a>jd:description</a>&gt;</header><div class="documentation">Textual description of this task</div><table class="grammar"><tbody><tr><th>Contenu</th><td><i> text() </i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">Textual description of this task</div></section>
+  <section class="attribute rng" id="att_jd-walltime_0"><header class="attribute rng">@jd:walltime</header><table class="grammar"><tbody><tr><th>Valeur</th><td>(  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Defines walltime - maximum execution time of the task. (patterns are 'ss' OR 'mm:ss' OR 'hh:mm:ss')</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-cancelJobOnError_0"><header class="attribute rng">@jd:cancelJobOnError</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{boolean}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Does the job cancel right away if a single task had an error (by opposition to a network failure, memory error, etc...)</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-restartTaskOnError_0"><header class="attribute rng">@jd:restartTaskOnError</header><table class="grammar"><tbody><tr><th>Valeur</th><td>[&nbsp;<em class="value">"anywhere"</em> |<em class="value">"elsewhere"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Where does the task restart if an error occurred ?</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-maxNumberOfExecution_0"><header class="attribute rng">@jd:maxNumberOfExecution</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{nonNegativeInteger}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Maximum number of execution for this task</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-preciousResult_0"><header class="attribute rng">@jd:preciousResult</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{boolean}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Do we keep the result among the job results  </div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-preciousLogs_0"><header class="attribute rng">@jd:preciousLogs</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{boolean}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Do we keep the logs as file on LOCALSPACE</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-resultPreviewClass_0"><header class="attribute rng">@jd:resultPreviewClass</header><table class="grammar"><tbody><tr><th>Valeur</th><td>(  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">A class implementing the ResultPreview interface which can be used to display the result of this task</div>
+      
+        
+        
+      
+    </section>
+  <section class="element rng" id="el_jd-depends_0"><header class="element rng">&lt;<a>jd:depends</a>&gt;</header><div class="documentation">A list of dependencies for this task </div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task from which this task depends">jd:task</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A list of dependencies for this task </div>
+        
+      </section>
+  <section class="element rng" id="el_jd-task_0"><header class="element rng">&lt;<a>jd:task</a>&gt;</header><div class="documentation">A task from which this task depends </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0">@jd:ref</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-depends_0" title="A list of dependencies for this task">jd:depends</a> </td></tr></tbody></table><div class="documentation">A task from which this task depends </div></section>
+  <section class="element rng" id="el_jd-parallel_0"><header class="element rng">&lt;<a>jd:parallel</a>&gt;</header><div class="documentation">An information related parallel task including nodes number and topology</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-numberOfNodes_0" title="number of cores needed for the task (identifier)">@jd:numberOfNodes</a></td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a>?</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">An information related parallel task including nodes number and topology</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-topology_0"><header class="element rng">&lt;<a>jd:topology</a>&gt;</header><div class="documentation">A topology descriptor of the parallel task</div><table class="grammar"><tbody><tr><th>Contenu</th><td>( <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arbitrary_0" title="arbitrary topology">jd:arbitrary</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-bestProximity_0" title="best nodes proximity">jd:bestProximity</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-thresholdProximity_0" title="threshold nodes proximity">jd:thresholdProximity</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-singleHost_0" title="nodes on single host">jd:singleHost</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-singleHostExclusive_0" title="nodes on single host exclusively">jd:singleHostExclusive</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-multipleHostsExclusive_0" title="nodes on multiple hosts exclusively">jd:multipleHostsExclusive</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-differentHostsExclusive_0" title="nodes on single host exclusively">jd:differentHostsExclusive</a> )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parallel_0" title="An information related parallel task including nodes number and topology">jd:parallel</a> </td></tr></tbody></table><div class="documentation">A topology descriptor of the parallel task</div>
+        
+        
+        
+        
+        
+        
+        
+      </section>
+  <section class="element rng" id="el_jd-selection_0"><header class="element rng">&lt;<a>jd:selection</a>&gt;</header><div class="documentation">A script used to select resources that can handle the task </div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a specific script which is used for resource selection">jd:script</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A script used to select resources that can handle the task </div>
+        
+      </section>
+  <section class="element rng" id="el_jd-controlFlow_0"><header class="element rng">&lt;<a>jd:controlFlow</a>&gt;</header><div class="documentation">Flow control : block declaration, flow action</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-block_0" title="block declaration">@jd:block</a>?</td></tr><tr><th>Contenu</th><td>( <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-if_0" title="branching Control flow action">jd:if</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-replicate_0" title="replicate control flow action">jd:replicate</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-loop_0" title="looping control flow action">jd:loop</a> )?</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">Flow control : block declaration, flow action</div>
+        
+      
+        
+          
+          
+          
+        
+      </section>
+  <section class="attribute rng" id="att_jd-block_0"><header class="attribute rng">@jd:block</header><table class="grammar"><tbody><tr><th>Valeur</th><td>[&nbsp;<em class="value">"start"</em> |<em class="value">"end"</em> |<em class="value">"none"</em>&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-controlFlow_0" title="Flow control : block declaration, flow action">jd:controlFlow</a> </td></tr></tbody></table>
+      <div class="documentation">block declaration</div>
+      
+    </section>
+  <section class="element rng" id="el_jd-pre_0"><header class="element rng">&lt;<a>jd:pre</a>&gt;</header><div class="documentation">A script launched before the task execution in the task node</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A script launched before the task execution in the task node</div></section>
+  <section class="element rng" id="el_jd-post_0"><header class="element rng">&lt;<a>jd:post</a>&gt;</header><div class="documentation">A script launched after the task execution in the task node</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A script launched after the task execution in the task node</div></section>
+  <section class="element rng" id="el_jd-cleaning_0"><header class="element rng">&lt;<a>jd:cleaning</a>&gt;</header><div class="documentation">A script launched by the Resource Manager after the task or post script</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A script launched by the Resource Manager after the task or post script</div></section>
+  <section class="attribute rng" id="att_jd-runAsMe_0"><header class="attribute rng">@jd:runAsMe</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{boolean}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">Do we run this task under the job owner user identity</div>
+      
+        
+        
+      
+    </section>
+  
+  <section class="element rng" id="el_jd-script_0"><header class="element rng">&lt;<a>jd:script</a>&gt;</header><div class="documentation">Definition of a standard script</div><table class="grammar"><tbody><tr><th>Contenu</th><td>( <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-code_0" title="Definition of a script by writing directly the code inside the descriptor">jd:code</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a> )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pre_0" title="A script launched before the task execution in the task node">jd:pre</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-post_0" title="A script launched after the task execution in the task node">jd:post</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-cleaning_0" title="A script launched by the Resource Manager after the task or post script">jd:cleaning</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-generation_0" title="A command generated by a script">jd:generation</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-envScript_0" title="environment script to execute for setting forked process environment">jd:envScript</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-scriptExecutable_0" title="A script to be executed as a task">jd:scriptExecutable</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-if_0" title="branching Control flow action">jd:if</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-loop_0" title="looping control flow action">jd:loop</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-replicate_0" title="replicate control flow action">jd:replicate</a> </td></tr></tbody></table><div class="documentation">Definition of a standard script</div>
+        
+        
+      </section>
+  <section class="element rng" id="el_jd-script_0"><header class="element rng">&lt;<a>jd:script</a>&gt;</header><div class="documentation">Definition of a specific script which is used for resource selection </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-type_0" title="Type of script for the infrastructure manager (default to dynamic)">@jd:type</a>?</td></tr><tr><th>Contenu</th><td>( <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-code_0" title="Definition of a script by writing directly the code inside the descriptor">jd:code</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a> )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-selection_0" title="A script used to select resources that can handle the task">jd:selection</a> </td></tr></tbody></table><div class="documentation">Definition of a specific script which is used for resource selection </div>
+        
+      
+        
+        
+      </section>
+  <section class="attribute rng" id="att_jd-type_0"><header class="attribute rng">@jd:type</header><table class="grammar"><tbody><tr><th>Valeur</th><td>[&nbsp;<em class="value">"dynamic"</em> |<em class="value">"static"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a specific script which is used for resource selection">jd:script</a> </td></tr></tbody></table>
+      <div class="documentation">Type of script for the infrastructure manager (default to dynamic)  </div>
+      
+    </section>
+  <section class="element rng" id="el_jd-code_0"><header class="element rng">&lt;<a>jd:code</a>&gt;</header><div class="documentation">Definition of a script by writing directly the code inside the descriptor </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-code_0">@jd:language</a></td></tr><tr><th>Contenu</th><td><i> text() </i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a specific script which is used for resource selection">jd:script</a> </td></tr></tbody></table><div class="documentation">Definition of a script by writing directly the code inside the descriptor </div></section>
+  <section class="element rng" id="el_jd-file_0"><header class="element rng">&lt;<a>jd:file</a>&gt;</header><div class="documentation">Definition of a script by loading a file </div><table class="grammar"><tbody><tr><th>Attributs</th><td> (<a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-path_0" title="File path to script definition">@jd:path</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-url_0" title="Remote script definition, reachable at the given url">@jd:url</a>)</td></tr><tr><th>Contenu</th><td>(  )<a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arguments_0" title="A list of arguments of this script">jd:arguments</a>?</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a specific script which is used for resource selection">jd:script</a> </td></tr></tbody></table><div class="documentation">Definition of a script by loading a file </div>
+        
+        
+      
+        
+      </section>
+  <section class="attribute rng" id="att_jd-path_0"><header class="attribute rng">@jd:path</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{anyURI}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a> </td></tr></tbody></table>
+      <div class="documentation">File path to script definition  </div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-url_0"><header class="attribute rng">@jd:url</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{anyURI}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_url" title="Remote script definition, reachable at the given url">url</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-inputSpace_0" title="INPUT space for the job, this setting overrides the default input space provided by the scheduler. I">jd:inputSpace</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-outputSpace_0" title="OUTPUT space for the job, this setting overrides the default output space provided by the scheduler.">jd:outputSpace</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-globalSpace_0" title="GLOBAL space for the job, this setting overrides the default global space provided by the scheduler.">jd:globalSpace</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-userSpace_0" title="USER space for the job, this setting overrides the default user space provided by the scheduler. It ">jd:userSpace</a>  &lt;</span></span></td></tr></tbody></table>
+      <div class="documentation">Remote script definition, reachable at the given url </div>
+      
+        
+        
+      
+    </section>
+  <section class="element rng" id="el_jd-arguments_0"><header class="element rng">&lt;<a>jd:arguments</a>&gt;</header><div class="documentation">A list of arguments of this script </div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0" title="An argument of this script">jd:argument</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a> </td></tr></tbody></table><div class="documentation">A list of arguments of this script </div>
+        
+      </section>
+  <section class="element rng" id="el_jd-argument_0"><header class="element rng">&lt;<a>jd:argument</a>&gt;</header><div class="documentation">An argument of this script  </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0">@jd:value</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arguments_0" title="A list of arguments of this script">jd:arguments</a> </td></tr></tbody></table><div class="documentation">An argument of this script  </div></section>
+  
+  <section class="element rng" id="el_jd-arbitrary_0"><header class="element rng">&lt;<a>jd:arbitrary</a>&gt;</header><div class="documentation">arbitrary topology</div><table class="grammar"><tbody><tr><th>Contenu</th><td><i>empty()</i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a> </td></tr></tbody></table><div class="documentation">arbitrary topology</div></section>
+  <section class="element rng" id="el_jd-bestProximity_0"><header class="element rng">&lt;<a>jd:bestProximity</a>&gt;</header><div class="documentation">best nodes proximity</div><table class="grammar"><tbody><tr><th>Contenu</th><td><i>empty()</i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a> </td></tr></tbody></table><div class="documentation">best nodes proximity</div></section>
+  <section class="element rng" id="el_jd-thresholdProximity_0"><header class="element rng">&lt;<a>jd:thresholdProximity</a>&gt;</header><div class="documentation">threshold nodes proximity</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-threshold_0" title="threshold value">@jd:threshold</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a> </td></tr></tbody></table><div class="documentation">threshold nodes proximity</div></section>
+  <section class="element rng" id="el_jd-singleHost_0"><header class="element rng">&lt;<a>jd:singleHost</a>&gt;</header><div class="documentation">nodes on single host</div><table class="grammar"><tbody><tr><th>Contenu</th><td><i>empty()</i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a> </td></tr></tbody></table><div class="documentation">nodes on single host</div></section>
+  <section class="element rng" id="el_jd-singleHostExclusive_0"><header class="element rng">&lt;<a>jd:singleHostExclusive</a>&gt;</header><div class="documentation">nodes on single host exclusively</div><table class="grammar"><tbody><tr><th>Contenu</th><td><i>empty()</i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a> </td></tr></tbody></table><div class="documentation">nodes on single host exclusively</div></section>
+  <section class="element rng" id="el_jd-multipleHostsExclusive_0"><header class="element rng">&lt;<a>jd:multipleHostsExclusive</a>&gt;</header><div class="documentation">nodes on multiple hosts exclusively</div><table class="grammar"><tbody><tr><th>Contenu</th><td><i>empty()</i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a> </td></tr></tbody></table><div class="documentation">nodes on multiple hosts exclusively</div></section>
+  <section class="element rng" id="el_jd-differentHostsExclusive_0"><header class="element rng">&lt;<a>jd:differentHostsExclusive</a>&gt;</header><div class="documentation">nodes on single host exclusively</div><table class="grammar"><tbody><tr><th>Contenu</th><td><i>empty()</i></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-topology_0" title="A topology descriptor of the parallel task">jd:topology</a> </td></tr></tbody></table><div class="documentation">nodes on single host exclusively</div></section>
+  <section class="attribute rng" id="att_jd-threshold_0"><header class="attribute rng">@jd:threshold</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{nonNegativeInteger}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-thresholdProximity_0" title="threshold nodes proximity">jd:thresholdProximity</a> </td></tr></tbody></table>
+      <div class="documentation">threshold value</div>
+      
+    </section>
+  
+  <section class="define rng" id="def_executable"><header class="define rng">executable</header><table class="grammar"><tbody><tr><th>Contenu</th><td>( <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-nativeExecutable_0" title="A native command call, it can be statically described or generated by a script">jd:nativeExecutable</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-scriptExecutable_0" title="A script to be executed as a task">jd:scriptExecutable</a> )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table>
+      <div class="documentation">The task executable is the actual code that will be run on the selected resource. It can be a native command or a Java class </div>
+      
+      
+      
+    </section>
+  <section class="element rng" id="el_jd-nativeExecutable_0"><header class="element rng">&lt;<a>jd:nativeExecutable</a>&gt;</header><div class="documentation">A native command call, it can be statically described or generated by a script </div><table class="grammar"><tbody><tr><th>Contenu</th><td>( <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-staticCommand_0" title="A native command statically defined in the descriptor">jd:staticCommand</a>&nbsp;| <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-dynamicCommand_0" title="A command generated dynamically">jd:dynamicCommand</a> )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A native command call, it can be statically described or generated by a script </div>
+        
+        
+      </section>
+  <section class="element rng" id="el_jd-staticCommand_0"><header class="element rng">&lt;<a>jd:staticCommand</a>&gt;</header><div class="documentation">A native command statically defined in the descriptor </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-staticCommand_0">@jd:value</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-workingDir_0" title="working dir for native command to execute (ie launching dir, pwd...)">@jd:workingDir</a>?</td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arguments_0" title="List of arguments to the native command (they will be appended at the end of the command)">jd:arguments</a>?</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-nativeExecutable_0" title="A native command call, it can be statically described or generated by a script">jd:nativeExecutable</a> </td></tr></tbody></table><div class="documentation">A native command statically defined in the descriptor </div>
+        
+      
+        
+      </section>
+  <section class="attribute rng" id="att_jd-workingDir_0"><header class="attribute rng">@jd:workingDir</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_workingDir_t" title="working dir for native command to execute (ie launching dir, pwd...)">workingDir_t</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-staticCommand_0" title="A native command statically defined in the descriptor">jd:staticCommand</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-dynamicCommand_0" title="A command generated dynamically">jd:dynamicCommand</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a>  &lt;</span></span></td></tr></tbody></table>
+      <div class="documentation">working dir for native command to execute (ie launching dir, pwd...)</div>
+      
+    </section>
+  <section class="element rng" id="el_jd-arguments_0"><header class="element rng">&lt;<a>jd:arguments</a>&gt;</header><div class="documentation">List of arguments to the native command (they will be appended at the end of the command) </div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0">jd:argument</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-staticCommand_0" title="A native command statically defined in the descriptor">jd:staticCommand</a> </td></tr></tbody></table><div class="documentation">List of arguments to the native command (they will be appended at the end of the command) </div>
+        
+      </section>
+  <section class="element rng" id="el_jd-argument_0"><header class="element rng">&lt;<a>jd:argument</a>&gt;</header><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-argument_0">@jd:value</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-arguments_0" title="List of arguments to the native command (they will be appended at the end of the command)">jd:arguments</a> </td></tr></tbody></table></section>
+  <section class="element rng" id="el_jd-dynamicCommand_0"><header class="element rng">&lt;<a>jd:dynamicCommand</a>&gt;</header><div class="documentation">A command generated dynamically </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-workingDir_0" title="working dir for native command to execute (ie launching dir, pwd...)">@jd:workingDir</a>?</td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-generation_0" title="A command generated by a script">jd:generation</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-nativeExecutable_0" title="A native command call, it can be statically described or generated by a script">jd:nativeExecutable</a> </td></tr></tbody></table><div class="documentation">A command generated dynamically </div>
+        
+      </section>
+  <section class="element rng" id="el_jd-generation_0"><header class="element rng">&lt;<a>jd:generation</a>&gt;</header><div class="documentation">A command generated by a script </div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-dynamicCommand_0" title="A command generated dynamically">jd:dynamicCommand</a> </td></tr></tbody></table><div class="documentation">A command generated by a script </div></section>
+  <section class="element rng" id="el_jd-javaExecutable_0"><header class="element rng">&lt;<a>jd:javaExecutable</a>&gt;</header><div class="documentation">A Java class implementing the Executable interface </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-class_0" title="The fully qualified class name">@jd:class</a></td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameters_0" title="A list of parameters that will be given to the Java task through the init method">jd:parameters</a>?</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A Java class implementing the Executable interface </div>
+        
+      
+        
+      </section>
+  <section class="attribute rng" id="att_jd-class_0"><header class="attribute rng">@jd:class</header><table class="grammar"><tbody><tr><th>Valeur</th><td>(  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a> </td></tr></tbody></table>
+      <div class="documentation">The fully qualified class name </div>
+      
+        
+        
+      
+    </section>
+  <section class="element rng" id="el_jd-forkEnvironment_0"><header class="element rng">&lt;<a>jd:forkEnvironment</a>&gt;</header><div class="documentation">Fork environment if needed</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-workingDir_0" title="working dir for native command to execute (ie launching dir, pwd...)">@jd:workingDir</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-javaHome_0" title="Path to installed java directory, to this path &#39;/bin/java&#39; will be added, if attribute does not exis">@jd:javaHome</a>?</td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-SystemEnvironment_0" title="a list of sysProp">jd:SystemEnvironment</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jvmArgs_0" title="A list of java properties or options">jd:jvmArgs</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-additionalClasspath_0" title="classpath entries to add to the new java process">jd:additionalClasspath</a>?, <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-envScript_0" title="environment script to execute for setting forked process environment">jd:envScript</a>?</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a> </td></tr></tbody></table><div class="documentation">Fork environment if needed</div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      </section>
+  <section class="attribute rng" id="att_jd-javaHome_0"><header class="attribute rng">@jd:javaHome</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{anyURI}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a> </td></tr></tbody></table>
+      <div class="documentation">Path to installed java directory, to this path '/bin/java' will be added, if attribute does not exist only 'java' command will be called</div>
+      
+        
+        
+      
+    </section>
+  <section class="element rng" id="el_jd-SystemEnvironment_0"><header class="element rng">&lt;<a>jd:SystemEnvironment</a>&gt;</header><div class="documentation">a list of sysProp</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="A parameter in the form of key/value pair">jd:variable</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a> </td></tr></tbody></table><div class="documentation">a list of sysProp</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-variable_0"><header class="element rng">&lt;<a>jd:variable</a>&gt;</header><div class="documentation">A parameter in the form of key/value pair</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0">@jd:name</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0">@jd:value</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-append_0" title="append or not this property to a previous declared or to the system one">@jd:append</a>? <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-appendChar_0" title="append character, if set, append mode is ON">@jd:appendChar</a>?</td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-SystemEnvironment_0" title="a list of sysProp">jd:SystemEnvironment</a> </td></tr></tbody></table><div class="documentation">A parameter in the form of key/value pair</div>
+        
+      
+        
+      </section>
+  <section class="attribute rng" id="att_jd-append_0"><header class="attribute rng">@jd:append</header><table class="grammar"><tbody><tr><th>Valeur</th><td>( <em class="data">{boolean}</em> &nbsp;|  )</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="A parameter in the form of key/value pair">jd:variable</a> </td></tr></tbody></table>
+      <div class="documentation">append or not this property to a previous declared or to the system one</div>
+      
+        
+        
+      
+    </section>
+  <section class="attribute rng" id="att_jd-appendChar_0"><header class="attribute rng">@jd:appendChar</header><table class="grammar"><tbody><tr><th>Valeur</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="A parameter in the form of key/value pair">jd:variable</a> </td></tr></tbody></table>
+      <div class="documentation">append character, if set, append mode is ON</div>
+      
+    </section>
+  <section class="element rng" id="el_jd-jvmArgs_0"><header class="element rng">&lt;<a>jd:jvmArgs</a>&gt;</header><div class="documentation">A list of java properties or options</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jvmArg_0" title="A list of java properties or options">jd:jvmArg</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a> </td></tr></tbody></table><div class="documentation">A list of java properties or options</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-jvmArg_0"><header class="element rng">&lt;<a>jd:jvmArg</a>&gt;</header><div class="documentation">A list of java properties or options</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jvmArg_0">@jd:value</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-jvmArgs_0" title="A list of java properties or options">jd:jvmArgs</a> </td></tr></tbody></table><div class="documentation">A list of java properties or options</div></section>
+  <section class="element rng" id="el_jd-additionalClasspath_0"><header class="element rng">&lt;<a>jd:additionalClasspath</a>&gt;</header><div class="documentation">classpath entries to add to the new java process</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-pathElement_0" title="Path element (one pathElement for each classpath entry)">jd:pathElement</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a> </td></tr></tbody></table><div class="documentation">classpath entries to add to the new java process</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-envScript_0"><header class="element rng">&lt;<a>jd:envScript</a>&gt;</header><div class="documentation">environment script to execute for setting forked process environment</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a> </td></tr></tbody></table><div class="documentation">environment script to execute for setting forked process environment</div></section>
+  <section class="element rng" id="el_jd-parameters_0"><header class="element rng">&lt;<a>jd:parameters</a>&gt;</header><div class="documentation">A list of parameters that will be given to the Java task through the init method </div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameter_0" title="A parameter in the form of key/value pair">jd:parameter</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a> </td></tr></tbody></table><div class="documentation">A list of parameters that will be given to the Java task through the init method </div>
+        
+      </section>
+  <section class="element rng" id="el_jd-parameter_0"><header class="element rng">&lt;<a>jd:parameter</a>&gt;</header><div class="documentation">A parameter in the form of key/value pair </div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameter_0">@jd:name</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameter_0">@jd:value</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parameters_0" title="A list of parameters that will be given to the Java task through the init method">jd:parameters</a> </td></tr></tbody></table><div class="documentation">A parameter in the form of key/value pair </div></section>
+  <section class="element rng" id="el_jd-scriptExecutable_0"><header class="element rng">&lt;<a>jd:scriptExecutable</a>&gt;</header><div class="documentation">A script to be executed as a task</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">A script to be executed as a task</div></section>
+  
+  <section class="element rng" id="el_jd-inputSpace_0"><header class="element rng">&lt;<a>jd:inputSpace</a>&gt;</header><div class="documentation">INPUT space for the job, this setting overrides the default input space provided by the scheduler. It is typically used to store input files for a single job.</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-url_0" title="Remote script definition, reachable at the given url">@jd:url</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">INPUT space for the job, this setting overrides the default input space provided by the scheduler. It is typically used to store input files for a single job.</div></section>
+  <section class="element rng" id="el_jd-outputSpace_0"><header class="element rng">&lt;<a>jd:outputSpace</a>&gt;</header><div class="documentation">OUTPUT space for the job, this setting overrides the default output space provided by the scheduler. It is typically used to store output files for a single job.</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-url_0" title="Remote script definition, reachable at the given url">@jd:url</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">OUTPUT space for the job, this setting overrides the default output space provided by the scheduler. It is typically used to store output files for a single job.</div></section>
+  <section class="element rng" id="el_jd-globalSpace_0"><header class="element rng">&lt;<a>jd:globalSpace</a>&gt;</header><div class="documentation">GLOBAL space for the job, this setting overrides the default global space provided by the scheduler. It is typically used to store files shared by all users.</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-url_0" title="Remote script definition, reachable at the given url">@jd:url</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">GLOBAL space for the job, this setting overrides the default global space provided by the scheduler. It is typically used to store files shared by all users.</div></section>
+  <section class="element rng" id="el_jd-userSpace_0"><header class="element rng">&lt;<a>jd:userSpace</a>&gt;</header><div class="documentation">USER space for the job, this setting overrides the default user space provided by the scheduler. It is typically used to store files that a user needs across multiple jobs.</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-url_0" title="Remote script definition, reachable at the given url">@jd:url</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table><div class="documentation">USER space for the job, this setting overrides the default user space provided by the scheduler. It is typically used to store files that a user needs across multiple jobs.</div></section>
+  <section class="element rng" id="el_jd-inputFiles_0"><header class="element rng">&lt;<a>jd:inputFiles</a>&gt;</header><div class="documentation">selection of input files that will be accessible for the application and copied from INPUT/OUTPUT to local system</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">selection of input files that will be accessible for the application and copied from INPUT/OUTPUT to local system</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-files_0"><header class="element rng">&lt;<a>jd:files</a>&gt;</header><div class="documentation">description of input files with include, exclude and an access mode</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-includes_0" title="Pattern of the files to include, relative to INPUT or OUTPUT spaces">@jd:includes</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-excludes_0" title="Pattern of the files to exclude among the included one, relative to INPUT or OUTPUT spaces">@jd:excludes</a>?<a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-accessMode_0" title="type of access on the selected files">@jd:accessMode</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-inputFiles_0" title="selection of input files that will be accessible for the application and copied from INPUT/OUTPUT to">jd:inputFiles</a> </td></tr></tbody></table><div class="documentation">description of input files with include, exclude and an access mode</div>
+        
+      </section>
+  <section class="attribute rng" id="att_jd-accessMode_0"><header class="attribute rng">@jd:accessMode</header><table class="grammar"><tbody><tr><th>Valeur</th><td>[&nbsp;<em class="value">"transferFromInputSpace"</em> |<em class="value">"transferFromOutputSpace"</em> |<em class="value">"transferFromGlobalSpace"</em> |<em class="value">"transferFromUserSpace"</em> |<em class="value">"none"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a> </td></tr></tbody></table>
+      <div class="documentation">type of access on the selected files</div>
+      
+    </section>
+  <section class="element rng" id="el_jd-outputFiles_0"><header class="element rng">&lt;<a>jd:outputFiles</a>&gt;</header><div class="documentation">selection of output files that will be copied from LOCALSPACE to OUTPUT</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a>+</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table><div class="documentation">selection of output files that will be copied from LOCALSPACE to OUTPUT</div>
+        
+      </section>
+  <section class="element rng" id="el_jd-files_0"><header class="element rng">&lt;<a>jd:files</a>&gt;</header><div class="documentation">description of output files with include, exclude and an access mode</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-includes_0" title="Pattern of the files to include, relative to INPUT or OUTPUT spaces">@jd:includes</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-excludes_0" title="Pattern of the files to exclude among the included one, relative to INPUT or OUTPUT spaces">@jd:excludes</a>?<a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-accessMode_0" title="type of access on the selected files">@jd:accessMode</a></td></tr><tr><th>Contenu</th><td></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-outputFiles_0" title="selection of output files that will be copied from LOCALSPACE to OUTPUT">jd:outputFiles</a> </td></tr></tbody></table><div class="documentation">description of output files with include, exclude and an access mode</div>
+        
+      </section>
+  <section class="attribute rng" id="att_jd-accessMode_0"><header class="attribute rng">@jd:accessMode</header><table class="grammar"><tbody><tr><th>Valeur</th><td>[&nbsp;<em class="value">"transferToOutputSpace"</em> |<em class="value">"transferToGlobalSpace"</em> |<em class="value">"transferToUserSpace"</em> |<em class="value">"none"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a> </td></tr></tbody></table>
+      <div class="documentation">type of access on the selected files</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-includes_0"><header class="attribute rng">@jd:includes</header><table class="grammar"><tbody><tr><th>Valeur</th><td></td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_includes_" title="Pattern of the files to include, relative to INPUT or OUTPUT spaces">includes_</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a>  &lt;</span></span></td></tr></tbody></table>
+      <div class="documentation">Pattern of the files to include, relative to INPUT or OUTPUT spaces</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-excludes_0"><header class="attribute rng">@jd:excludes</header><table class="grammar"><tbody><tr><th>Valeur</th><td></td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_excludes_" title="Pattern of the files to exclude among the included one, relative to INPUT or OUTPUT spaces">excludes_</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a>  &lt;</span></span></td></tr></tbody></table>
+      <div class="documentation">Pattern of the files to exclude among the included one, relative to INPUT or OUTPUT spaces</div>
+      
+    </section>
+  
+  <section class="element rng" id="el_jd-if_0"><header class="element rng">&lt;<a>jd:if</a>&gt;</header><div class="documentation">branching Control flow action</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-target_0" title="branching if target">@jd:target</a><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-else_0" title="branching else target">@jd:else</a> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-continuation_0" title="branching else target">@jd:continuation</a>?</td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-controlFlow_0" title="Flow control : block declaration, flow action">jd:controlFlow</a> </td></tr></tbody></table><div class="documentation">branching Control flow action</div>
+        
+      </section>
+  <section class="attribute rng" id="att_jd-target_0"><header class="attribute rng">@jd:target</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_target" title="branching if target">target</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-if_0" title="branching Control flow action">jd:if</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-loop_0" title="looping control flow action">jd:loop</a>  &lt;</span></span></td></tr></tbody></table>
+      <div class="documentation">branching if target</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-else_0"><header class="attribute rng">@jd:else</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-if_0" title="branching Control flow action">jd:if</a> </td></tr></tbody></table>
+      <div class="documentation">branching else target</div>
+      
+    </section>
+  <section class="attribute rng" id="att_jd-continuation_0"><header class="attribute rng">@jd:continuation</header><table class="grammar"><tbody><tr><th>Valeur</th><td><em class="data">{string}</em> </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-if_0" title="branching Control flow action">jd:if</a> </td></tr></tbody></table>
+      <div class="documentation">branching else target</div>
+      
+    </section>
+  <section class="element rng" id="el_jd-loop_0"><header class="element rng">&lt;<a>jd:loop</a>&gt;</header><div class="documentation">looping control flow action</div><table class="grammar"><tbody><tr><th>Attributs</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#att_jd-target_0" title="branching if target">@jd:target</a></td></tr><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-controlFlow_0" title="Flow control : block declaration, flow action">jd:controlFlow</a> </td></tr></tbody></table><div class="documentation">looping control flow action</div></section>
+  <section class="element rng" id="el_jd-replicate_0"><header class="element rng">&lt;<a>jd:replicate</a>&gt;</header><div class="documentation">replicate control flow action</div><table class="grammar"><tbody><tr><th>Contenu</th><td><a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a standard script">jd:script</a></td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-controlFlow_0" title="Flow control : block declaration, flow action">jd:controlFlow</a> </td></tr></tbody></table><div class="documentation">replicate control flow action</div></section>
+  
+  <section class="define rng" id="def_jobPriority"><header class="define rng">jobPriority</header><table class="grammar"><tbody><tr><th>Contenu</th><td>[&nbsp;<em class="value">"highest"</em> |<em class="value">"high"</em> |<em class="value">"normal"</em> |<em class="value">"low"</em> |<em class="value">"lowest"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a> </td></tr></tbody></table>
+      
+      
+      
+      
+      
+      
+    </section>
+  <section class="define rng" id="def_restartTaskType"><header class="define rng">restartTaskType</header><table class="grammar"><tbody><tr><th>Contenu</th><td>[&nbsp;<em class="value">"anywhere"</em> |<em class="value">"elsewhere"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_restartTaskType">restartTaskType</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  &lt;</span></span></td></tr></tbody></table>
+      
+      
+      
+    </section>
+  <section class="define rng" id="def_inaccessModeType"><header class="define rng">inaccessModeType</header><table class="grammar"><tbody><tr><th>Contenu</th><td>[&nbsp;<em class="value">"transferFromInputSpace"</em> |<em class="value">"transferFromOutputSpace"</em> |<em class="value">"transferFromGlobalSpace"</em> |<em class="value">"transferFromUserSpace"</em> |<em class="value">"none"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a> </td></tr></tbody></table>
+      
+      
+      
+      
+      
+      
+    </section>
+  <section class="define rng" id="def_outaccessModeType"><header class="define rng">outaccessModeType</header><table class="grammar"><tbody><tr><th>Contenu</th><td>[&nbsp;<em class="value">"transferToOutputSpace"</em> |<em class="value">"transferToGlobalSpace"</em> |<em class="value">"transferToUserSpace"</em> |<em class="value">"none"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a> </td></tr></tbody></table>
+      
+      
+      
+      
+      
+    </section>
+  <section class="define rng" id="def_classPattern"><header class="define rng">classPattern</header><table class="grammar"><tbody><tr><th>Contenu</th><td><em class="data">{string}</em> 
+      <tt>([A-Za-z_$][A-Za-z_0-9$]*\.)*[A-Za-z_$][A-Za-z_0-9$]*</tt>
+    </td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_classPattern">classPattern</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a>  &lt;</span></span></td></tr></tbody></table></section>
+  <section class="define rng" id="def_walltimePattern"><header class="define rng">walltimePattern</header><table class="grammar"><tbody><tr><th>Contenu</th><td><em class="data">{string}</em> 
+      <tt>[0-9]*[1-9][0-9]*(:[0-5][0-9]){0,2}</tt>
+    </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a> </td></tr></tbody></table></section>
+  <section class="define rng" id="def_variableRefType"><header class="define rng">variableRefType</header><table class="grammar"><tbody><tr><th>Contenu</th><td><em class="data">{string}</em> 
+      <tt>$\{[A-Za-z0-9._]+\}</tt>
+    </td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_variableRefType">variableRefType</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_nodesNumber_t" title="number of cores needed for the task (identifier)">nodesNumber_t</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-parallel_0" title="An information related parallel task including nodes number and topology">jd:parallel</a>  &lt;</span></span> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a>  <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_url" title="Remote script definition, reachable at the given url">url</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-file_0" title="Definition of a script by loading a file">jd:file</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-inputSpace_0" title="INPUT space for the job, this setting overrides the default input space provided by the scheduler. I">jd:inputSpace</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-outputSpace_0" title="OUTPUT space for the job, this setting overrides the default output space provided by the scheduler.">jd:outputSpace</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-globalSpace_0" title="GLOBAL space for the job, this setting overrides the default global space provided by the scheduler.">jd:globalSpace</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-userSpace_0" title="USER space for the job, this setting overrides the default user space provided by the scheduler. It ">jd:userSpace</a>  &lt;</span></span> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-javaExecutable_0" title="A Java class implementing the Executable interface">jd:javaExecutable</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-forkEnvironment_0" title="Fork environment if needed">jd:forkEnvironment</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="A parameter in the form of key/value pair">jd:variable</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_restartTaskType">restartTaskType</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-job_0" title="Definition of a job for the scheduler">jd:job</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-task_0" title="A task is the smallest computation unit for the scheduler">jd:task</a>  &lt;</span></span> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a specific script which is used for resource selection">jd:script</a>  &lt;</span></span></td></tr></tbody></table></section>
+  <section class="define rng" id="def_inexcludePattern"><header class="define rng">inexcludePattern</header><table class="grammar"><tbody><tr><th>Contenu</th><td><em class="data">{string}</em> 
+      <tt>.+(,.+)*</tt>
+    </td></tr><tr><th>Usage</th><td> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_inexcludePattern">inexcludePattern</a><span class="defin"> &gt;  <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_includes_" title="Pattern of the files to include, relative to INPUT or OUTPUT spaces">includes_</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a>  &lt;</span></span> <span class="defex"><a class="define" href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#def_excludes_" title="Pattern of the files to exclude among the included one, relative to INPUT or OUTPUT spaces">excludes_</a><span class="defin"> &gt;  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of input files with include, exclude and an access mode">jd:files</a>  <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-files_0" title="description of output files with include, exclude and an access mode">jd:files</a>  &lt;</span></span> &lt;</span></span></td></tr></tbody></table></section>
+  <section class="define rng" id="def_controlFlowAction"><header class="define rng">controlFlowAction</header><table class="grammar"><tbody><tr><th>Contenu</th><td>[&nbsp;<em class="value">"goto"</em> |<em class="value">"replicate"</em> |<em class="value">"continue"</em>&nbsp;]</td></tr><tr><th>Usage</th><td>Cette définition n'est pas encore utilisée.</td></tr></tbody></table>
+      
+      
+      
+    </section>
+  <section class="define rng" id="def_blockAttr"><header class="define rng">blockAttr</header><table class="grammar"><tbody><tr><th>Contenu</th><td>[&nbsp;<em class="value">"start"</em> |<em class="value">"end"</em> |<em class="value">"none"</em>&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-controlFlow_0" title="Flow control : block declaration, flow action">jd:controlFlow</a> </td></tr></tbody></table>
+      
+      
+      
+    </section>
+  <section class="define rng" id="def_scriptTypeT"><header class="define rng">scriptTypeT</header><table class="grammar"><tbody><tr><th>Contenu</th><td>[&nbsp;<em class="value">"dynamic"</em> |<em class="value">"static"</em> |&nbsp;]</td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-script_0" title="Definition of a specific script which is used for resource selection">jd:script</a> </td></tr></tbody></table>
+      
+      
+      
+    </section>
+  <section class="define rng" id="def_propertyAppendChar"><header class="define rng">propertyAppendChar</header><table class="grammar"><tbody><tr><th>Contenu</th><td><em class="data">{string}</em> 
+      <tt>.</tt>
+    </td></tr><tr><th>Usage</th><td> <a href="http://developpements.enc.sorbonne.fr/diple/demo/rng_html.php/C:/fakepath/schedulerjob.html#el_jd-variable_0" title="A parameter in the form of key/value pair">jd:variable</a> </td></tr></tbody></table></section>
+</article>
+  
+
+</body></html>

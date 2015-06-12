@@ -1,0 +1,758 @@
+2009-01-21 18:00:38,389 DEBUG [ProActiveConfiguration]: Default Config File is: jar:file:/auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive.jar!/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
+2009-01-21 18:00:38,839 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.stack_trace --> value:false
+2009-01-21 18:00:38,865 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.protocol.handler.pkgs is not a ProActive property
+2009-01-21 18:00:38,866 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <java.protocol.handler.pkgs, org.objectweb.proactive.core.ssh> as System property
+2009-01-21 18:00:38,866 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.protocol.handler.pkgs --> value:org.objectweb.proactive.core.ssh
+2009-01-21 18:00:38,873 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.maxMigrationNb --> value:-1
+2009-01-21 18:00:38,873 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.blocks_number --> value:8
+2009-01-21 18:00:38,874 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.ttu --> value:60000
+2009-01-21 18:00:38,874 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.serialization is not a ProActive property
+2009-01-21 18:00:38,874 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.serialization, ibis> as System property
+2009-01-21 18:00:38,875 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.serialization --> value:ibis
+2009-01-21 18:00:38,876 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <fractal.provider, org.objectweb.proactive.core.component.Fractive> as System property
+2009-01-21 18:00:38,876 DEBUG [ProActiveConfiguration$CustomProperties]: key:fractal.provider --> value:org.objectweb.proactive.core.component.Fractive
+2009-01-21 18:00:38,876 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.io.serialization.classloader is not a ProActive property
+2009-01-21 18:00:38,877 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.io.serialization.classloader, org.objectweb.proactive.core.mop.MOPClassLoader> as System property
+2009-01-21 18:00:38,881 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.io.serialization.classloader --> value:org.objectweb.proactive.core.mop.MOPClassLoader
+2009-01-21 18:00:38,881 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.host is not a ProActive property
+2009-01-21 18:00:38,881 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.name_server.host, localhost> as System property
+2009-01-21 18:00:38,882 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.host --> value:localhost
+2009-01-21 18:00:38,886 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.net.nolocal --> value:false
+2009-01-21 18:00:38,887 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.ttl --> value:5
+2009-01-21 18:00:38,888 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.lookup_freq --> value:30000
+2009-01-21 18:00:38,888 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.nodes_acq_to --> value:180000
+2009-01-21 18:00:38,889 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.blocks_size_kb --> value:512
+2009-01-21 18:00:38,889 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.services_number --> value:16
+2009-01-21 18:00:38,890 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.locationserver --> value:org.objectweb.proactive.ext.locationserver.LocationServer
+2009-01-21 18:00:38,890 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.key is not a ProActive property
+2009-01-21 18:00:38,890 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.name_server.key, 1> as System property
+2009-01-21 18:00:38,902 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.key --> value:1
+2009-01-21 18:00:38,902 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.securitymanager --> value:true
+2009-01-21 18:00:38,925 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.ttl --> value:-1
+2009-01-21 18:00:38,926 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.buffer_size_kb --> value:256
+2009-01-21 18:00:38,926 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.http.servlet --> value:false
+2009-01-21 18:00:38,926 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <schema.validation, true> as System property
+2009-01-21 18:00:38,927 DEBUG [ProActiveConfiguration$CustomProperties]: key:schema.validation --> value:true
+2009-01-21 18:00:38,927 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.tunneling.use_gc --> value:true
+2009-01-21 18:00:38,927 DEBUG [ProActiveConfiguration$CustomProperties]: key:components.creation.timeout --> value:10000
+2009-01-21 18:00:38,928 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.rmi.port --> value:1099
+2009-01-21 18:00:38,928 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.msg_capacity --> value:1000
+2009-01-21 18:00:38,928 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.classloader --> value:false
+2009-01-21 18:00:38,929 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.expl_msg --> value:66
+2009-01-21 18:00:38,929 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.noa --> value:3
+2009-01-21 18:00:38,930 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.multi_proc_nodes --> value:false
+2009-01-21 18:00:38,930 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.maxTimeOnSite --> value:-1
+2009-01-21 18:00:38,930 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.future.ac --> value:true
+2009-01-21 18:00:38,931 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.tunneling.try_normal_first --> value:true
+2009-01-21 18:00:38,931 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.communication.protocol --> value:rmi
+2009-01-21 18:00:38,931 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.unicore.forkclient --> value:true
+2009-01-21 18:00:38,932 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.exit_on_empty --> value:false
+2009-01-21 18:00:38,932 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.http.port --> value:2026
+2009-01-21 18:00:38,934 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.useIPaddress --> value:true
+2009-01-21 18:00:38,935 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.masterworker.compresstasks --> value:false
+2009-01-21 18:00:38,935 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.locationserver.rmi --> value://localhost/LocationServer
+2009-01-21 18:00:38,935 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.tunneling.gc_period --> value:10000
+2009-01-21 18:00:38,936 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.port --> value:6444
+2009-01-21 18:00:38,936 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.runtime.stayalive --> value:true
+2009-01-21 18:00:38,936 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.net.noprivate --> value:false
+2009-01-21 18:00:38,937 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.acq --> value:rmi
+2009-01-21 18:00:38,937 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.masterworker.pingperiod --> value:10000
+2009-01-21 18:00:38,937 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.dgc --> value:false
+2009-01-21 18:00:38,937 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.updatingForwarder --> value:false
+2009-01-21 18:00:38,942 DEBUG [ProActiveConfiguration]: User Config File is: /user/fabratu/home/.proactive/ProActiveConfiguration.xml
+2009-01-21 18:00:38,985  WARN [ProActiveConfigurationParser]: Skiped unknown ProActive Java property: proactive.jmx.mbean
+2009-01-21 18:00:38,986  WARN [ProActiveConfigurationParser]: Skiped unknown ProActive Java property: com.sun.management.jmxremote
+2009-01-21 18:00:39,009  WARN [ProActiveConfigurationParser]: All supported ProActive Java properties are declared inside org.objectweb.proactive.core.config.PAProperties. Please check your ProActive Configuration file: /user/fabratu/home/.proactive/ProActiveConfiguration.xml
+2009-01-21 18:00:39,014 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.useIPaddress --> value:false (OVERRIDE)
+2009-01-21 18:00:39,014 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.acq --> value:rmi (OVERRIDE)
+2009-01-21 18:00:39,014 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.rmi.port --> value:6635 (OVERRIDE)
+2009-01-21 18:00:39,015 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.test.timeout --> value:0
+2009-01-21 18:00:39,015 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.communication.protocol --> value:rmi (OVERRIDE)
+2009-01-21 18:00:39,015 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.runtime.name is not a ProActive property
+2009-01-21 18:00:39,016 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.runtime.name --> value:Java(TM) SE Runtime Environment
+2009-01-21 18:00:39,016 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.protocol.handler.pkgs is not a ProActive property
+2009-01-21 18:00:39,016 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.protocol.handler.pkgs --> value:org.objectweb.proactive.core.ssh (OVERRIDE)
+2009-01-21 18:00:39,017 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.boot.library.path is not a ProActive property
+2009-01-21 18:00:39,017 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.boot.library.path --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/i386
+2009-01-21 18:00:39,017 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.version is not a ProActive property
+2009-01-21 18:00:39,018 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.version --> value:1.6.0_02-b05
+2009-01-21 18:00:39,023 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.vendor is not a ProActive property
+2009-01-21 18:00:39,026 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.vendor --> value:Sun Microsystems Inc.
+2009-01-21 18:00:39,033 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vendor.url is not a ProActive property
+2009-01-21 18:00:39,033 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vendor.url --> value:http://java.sun.com/
+2009-01-21 18:00:39,033 DEBUG [ProActiveConfiguration$CustomProperties]: System property path.separator is not a ProActive property
+2009-01-21 18:00:39,034 DEBUG [ProActiveConfiguration$CustomProperties]: key:path.separator --> value::
+2009-01-21 18:00:39,038 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.name is not a ProActive property
+2009-01-21 18:00:39,038 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.name --> value:Java HotSpot(TM) Client VM
+2009-01-21 18:00:39,038 DEBUG [ProActiveConfiguration$CustomProperties]: System property file.encoding.pkg is not a ProActive property
+2009-01-21 18:00:39,039 DEBUG [ProActiveConfiguration$CustomProperties]: key:file.encoding.pkg --> value:sun.io
+2009-01-21 18:00:39,039 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.java.launcher is not a ProActive property
+2009-01-21 18:00:39,039 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.java.launcher --> value:SUN_STANDARD
+2009-01-21 18:00:39,039 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.country is not a ProActive property
+2009-01-21 18:00:39,039 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.country --> value:US
+2009-01-21 18:00:39,040 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.os.patch.level is not a ProActive property
+2009-01-21 18:00:39,040 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.os.patch.level --> value:unknown
+2009-01-21 18:00:39,040 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <fractal.provider, org.objectweb.proactive.core.component.Fractive> as System property
+2009-01-21 18:00:39,069 DEBUG [ProActiveConfiguration$CustomProperties]: key:fractal.provider --> value:org.objectweb.proactive.core.component.Fractive (OVERRIDE)
+2009-01-21 18:00:39,069 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.serialization is not a ProActive property
+2009-01-21 18:00:39,069 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.serialization --> value:ibis (OVERRIDE)
+2009-01-21 18:00:39,069 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.io.serialization.classloader is not a ProActive property
+2009-01-21 18:00:39,069 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.io.serialization.classloader --> value:org.objectweb.proactive.core.mop.MOPClassLoader (OVERRIDE)
+2009-01-21 18:00:39,070 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.specification.name is not a ProActive property
+2009-01-21 18:00:39,070 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.specification.name --> value:Java Virtual Machine Specification
+2009-01-21 18:00:39,070 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.dir is not a ProActive property
+2009-01-21 18:00:39,070 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.dir --> value:/auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/examples/nbody
+2009-01-21 18:00:39,070 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.host is not a ProActive property
+2009-01-21 18:00:39,071 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.host --> value:localhost (OVERRIDE)
+2009-01-21 18:00:39,071 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.runtime.version is not a ProActive property
+2009-01-21 18:00:39,071 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.runtime.version --> value:1.6.0_02-b05
+2009-01-21 18:00:39,071 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.awt.graphicsenv is not a ProActive property
+2009-01-21 18:00:39,072 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.awt.graphicsenv --> value:sun.awt.X11GraphicsEnvironment
+2009-01-21 18:00:39,072 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.endorsed.dirs is not a ProActive property
+2009-01-21 18:00:39,073 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.endorsed.dirs --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/endorsed
+2009-01-21 18:00:39,073 DEBUG [ProActiveConfiguration$CustomProperties]: System property os.arch is not a ProActive property
+2009-01-21 18:00:39,073 DEBUG [ProActiveConfiguration$CustomProperties]: key:os.arch --> value:i386
+2009-01-21 18:00:39,073 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.io.tmpdir is not a ProActive property
+2009-01-21 18:00:39,073 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.io.tmpdir --> value:/tmp
+2009-01-21 18:00:39,074 DEBUG [ProActiveConfiguration$CustomProperties]: System property line.separator is not a ProActive property
+2009-01-21 18:00:39,075 DEBUG [ProActiveConfiguration$CustomProperties]: key:line.separator --> value:
+
+2009-01-21 18:00:39,075 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.specification.vendor is not a ProActive property
+2009-01-21 18:00:39,075 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.specification.vendor --> value:Sun Microsystems Inc.
+2009-01-21 18:00:39,075 DEBUG [ProActiveConfiguration$CustomProperties]: System property os.name is not a ProActive property
+2009-01-21 18:00:39,075 DEBUG [ProActiveConfiguration$CustomProperties]: key:os.name --> value:Linux
+2009-01-21 18:00:39,076 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.key is not a ProActive property
+2009-01-21 18:00:39,076 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.key --> value:1 (OVERRIDE)
+2009-01-21 18:00:39,076 DEBUG [ProActiveConfiguration$CustomProperties]: key:log4j.configuration --> value:file:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/examples/proactive-log4j
+2009-01-21 18:00:39,112 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.jnu.encoding is not a ProActive property
+2009-01-21 18:00:39,112 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.jnu.encoding --> value:UTF-8
+2009-01-21 18:00:39,113 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.library.path is not a ProActive property
+2009-01-21 18:00:39,113 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.library.path --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/i386/client:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/i386:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/../lib/i386:/usr/java/packages/lib/i386:/lib:/usr/lib
+2009-01-21 18:00:39,113 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.specification.name is not a ProActive property
+2009-01-21 18:00:39,113 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.specification.name --> value:Java Platform API Specification
+2009-01-21 18:00:39,113 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.class.version is not a ProActive property
+2009-01-21 18:00:39,114 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.class.version --> value:50.0
+2009-01-21 18:00:39,114 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <schema.validation, true> as System property
+2009-01-21 18:00:39,114 DEBUG [ProActiveConfiguration$CustomProperties]: key:schema.validation --> value:true (OVERRIDE)
+2009-01-21 18:00:39,114 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.management.compiler is not a ProActive property
+2009-01-21 18:00:39,114 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.management.compiler --> value:HotSpot Client Compiler
+2009-01-21 18:00:39,115 DEBUG [ProActiveConfiguration$CustomProperties]: System property os.version is not a ProActive property
+2009-01-21 18:00:39,115 DEBUG [ProActiveConfiguration$CustomProperties]: key:os.version --> value:2.6.23.17-88.fc7
+2009-01-21 18:00:39,115 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.home is not a ProActive property
+2009-01-21 18:00:39,115 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.home --> value:/user/fabratu/home
+2009-01-21 18:00:39,116 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <java.security.policy, /user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/examples/proactive.java.policy> as System property
+2009-01-21 18:00:39,116 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.security.policy --> value:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/examples/proactive.java.policy
+2009-01-21 18:00:39,116 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.timezone is not a ProActive property
+2009-01-21 18:00:39,116 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.timezone --> value:Europe/Paris
+2009-01-21 18:00:39,117 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.awt.printerjob is not a ProActive property
+2009-01-21 18:00:39,117 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.awt.printerjob --> value:sun.print.PSPrinterJob
+2009-01-21 18:00:39,117 DEBUG [ProActiveConfiguration$CustomProperties]: System property file.encoding is not a ProActive property
+2009-01-21 18:00:39,117 DEBUG [ProActiveConfiguration$CustomProperties]: key:file.encoding --> value:UTF-8
+2009-01-21 18:00:39,117 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.specification.version is not a ProActive property
+2009-01-21 18:00:39,118 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.specification.version --> value:1.6
+2009-01-21 18:00:39,118 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.class.path is not a ProActive property
+2009-01-21 18:00:39,118 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.class.path --> value:/auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/examples/nbody/.:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive.jar:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive_examples.jar
+2009-01-21 18:00:39,146 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.name is not a ProActive property
+2009-01-21 18:00:39,146 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.name --> value:fabratu
+2009-01-21 18:00:39,147 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.specification.version is not a ProActive property
+2009-01-21 18:00:39,147 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.specification.version --> value:1.0
+2009-01-21 18:00:39,147 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.home is not a ProActive property
+2009-01-21 18:00:39,147 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.home --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre
+2009-01-21 18:00:39,155 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.arch.data.model is not a ProActive property
+2009-01-21 18:00:39,155 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.arch.data.model --> value:32
+2009-01-21 18:00:39,155 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.language is not a ProActive property
+2009-01-21 18:00:39,156 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.language --> value:en
+2009-01-21 18:00:39,156 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.specification.vendor is not a ProActive property
+2009-01-21 18:00:39,156 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.specification.vendor --> value:Sun Microsystems Inc.
+2009-01-21 18:00:39,156 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.info is not a ProActive property
+2009-01-21 18:00:39,157 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.info --> value:mixed mode, sharing
+2009-01-21 18:00:39,158 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.version is not a ProActive property
+2009-01-21 18:00:39,161 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.version --> value:1.6.0_02
+2009-01-21 18:00:39,161 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.ext.dirs is not a ProActive property
+2009-01-21 18:00:39,161 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.ext.dirs --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/ext:/usr/java/packages/lib/ext
+2009-01-21 18:00:39,162 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.boot.class.path is not a ProActive property
+2009-01-21 18:00:39,162 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.boot.class.path --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/resources.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/rt.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/sunrsasign.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jsse.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jce.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/charsets.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/classes
+2009-01-21 18:00:39,162 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vendor is not a ProActive property
+2009-01-21 18:00:39,162 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vendor --> value:Sun Microsystems Inc.
+2009-01-21 18:00:39,163 DEBUG [ProActiveConfiguration$CustomProperties]: System property file.separator is not a ProActive property
+2009-01-21 18:00:39,163 DEBUG [ProActiveConfiguration$CustomProperties]: key:file.separator --> value:/
+2009-01-21 18:00:39,163 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vendor.url.bug is not a ProActive property
+2009-01-21 18:00:39,163 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vendor.url.bug --> value:http://java.sun.com/cgi-bin/bugreport.cgi
+2009-01-21 18:00:39,194 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.io.unicode.encoding is not a ProActive property
+2009-01-21 18:00:39,194 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.io.unicode.encoding --> value:UnicodeLittle
+2009-01-21 18:00:39,195 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.cpu.endian is not a ProActive property
+2009-01-21 18:00:39,195 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.cpu.endian --> value:little
+2009-01-21 18:00:39,195 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.desktop is not a ProActive property
+2009-01-21 18:00:39,195 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.desktop --> value:gnome
+2009-01-21 18:00:39,195 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.cpu.isalist is not a ProActive property
+2009-01-21 18:00:39,196 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.cpu.isalist --> value:
+2009-01-21 18:00:39,199 DEBUG [ProActiveInet]: Suitable Network Interfaces are: eth0 lo 
+2009-01-21 18:00:39,202  INFO [StartRuntime]: **** Starting jvm on orchidee.inria.fr
+2009-01-21 18:00:39,202 DEBUG [StartRuntime]: **** Starting jvm with classpath /auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/examples/nbody/.:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive.jar:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive_examples.jar
+2009-01-21 18:00:39,203 DEBUG [StartRuntime]: ****              with bootclasspath /auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/resources.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/rt.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/sunrsasign.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jsse.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jce.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/charsets.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/classes
+2009-01-21 18:00:39,754 DEBUG [ProActiveRuntimeImpl]: ProActive Security Policy (proactive.runtime.security) not set. Runtime Security disabled 
+2009-01-21 18:00:39,821 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.http.port --> value:2037 (OVERRIDE)
+2009-01-21 18:00:39,822  INFO [ClassServer]: To use this ClassFileServer set the property java.rmi.server.codebase to http://orchidee.inria.fr:2037/
+2009-01-21 18:00:39,824  INFO [ClassServer]:  --> This ClassFileServer is listening on port 2037
+2009-01-21 18:00:39,827 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <java.rmi.server.codebase, http://orchidee.inria.fr:2037/> as System property
+2009-01-21 18:00:39,827 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.rmi.server.codebase --> value:http://orchidee.inria.fr:2037/
+2009-01-21 18:00:39,890  INFO [RegistryHelper]: Detected an existing RMI Registry on port 6635
+2009-01-21 18:00:40,024 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/PA_JVM1934341838
+2009-01-21 18:00:40,163 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/PA_JVM512750314
+2009-01-21 18:00:40,175 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/PA_JVM512750314 looked up successfully22009-01-21 18:00:40,433 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/as778829939
+2009-01-21 18:00:41,366 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/89381
+2009-01-21 18:00:41,395 DEBUG [UniversalBodyRemoteObjectAdapter]: class pa.stub.org.objectweb.proactive.core.body._StubUniversalBody
+2009-01-21 18:00:41,397 DEBUG [AbstractBody]: Active Object security Off
+2009-01-21 18:00:41,400 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/as778829939
+2009-01-21 18:00:41,400 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/as778829939
+2009-01-21 18:00:41,405 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as778829939 looked up successfully
+2009-01-21 18:00:41,488 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/as778829939
+2009-01-21 18:00:41,489 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/as778829939
+2009-01-21 18:00:41,491 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as778829939 looked up successfully
+2009-01-21 18:00:41,527 DEBUG [ActiveBody]: Starting Body
+2009-01-21 18:00:41,533 DEBUG [ProActiveRuntimeWrapper]: [bodyCreated]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM1934341838, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@d90453
+2009-01-21 18:00:41,533 DEBUG [MigratableBody]: Body run on node rmi://orchidee.inria.fr:6635/as778829939 migration=false
+2009-01-21 18:00:41,533 DEBUG [MigratableBody]: Body run on node rmi://orchidee.inria.fr:6635/as778829939 migration=false
+2009-01-21 18:00:41,534 DEBUG [ProActiveRuntimeImpl]: nodeName as778829939
+2009-01-21 18:00:41,543 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=null
+2009-01-2009-01-21 18:00:41,688 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-21 18:00:41,718 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@da89a7
+2009-01-21 18:00:41,754 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-21 18:00:41,793 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@c1c428
+2009-01-21 18:00:41,832 DEBUG [UniversalBodyProxy]: Local body is Body for org.objectweb.proactive.examples.nbody.groupoospmd.Domain node=rmi://orchidee.inria.fr:6635/as1806813758 id=69469
+2009-01-21 18:00:41,868 DEBUG [UniversalBodyProxy]: universalBody is Body for org.objectweb.proactive.examples.nbody.groupoospmd.Domain node=rmi://orchidee.inria.fr:6635/as1806813758 id=69469
+2009-01-21 18:00:41,904 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-21 18:00:41,939 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@17a1767
+2009-01-21 18:00:41,979 DEBUG [RuntimeFactory]: default runtime = rmi://orchidee.inria.fr:6635/PA_JVM734991762
+2009-01-21 18:00:42,021 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1395893819
+2009-01-21 18:00:42,056 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/58635
+2009-01-21 18:00:42,090 DEBUG [UniversalBodyRemoteObjectAdapter]: class pa.stub.org.objectweb.proactive.core.body._StubUniversalBody
+2009-01-21 18:00:42,138 DEBUG [AbstractBody]: Active Object security Off
+2009-01-21 18:00:42,188 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1395893819
+2009-01-21 18:00:42,189 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1395893819
+2009-01-21 18:00:42,194 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1395893819 looked up succ2009-01-22009-01-21 18:00:42,252 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallSetSPMDGroup
+2009-01-21 18:00:42,278 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=0
+2009-01-21 18:00:42,278 DEBUG [RequestImpl]: Serving MethodCallSetSPMDGroup
+2009-01-21 18:00:42,278 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:42,279 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=0
+2009-01-21 18:00:42,279 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userD2009-01-21 18:00:42,356 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-21 18:00:42,413 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@1a034d
+2009-01-21 18:00:42,469 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-21 18:00:42,507 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@17cfd38
+2009-01-21 18:00:42,547 DEBUG [BlockingRequestQueueImpl]: Adding request init
+2009-01-21 18:00:42,586 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=0
+2009-01-21 18:00:42,622 DEBUG [RequestImpl]: Serving init
+2009-01-21 18:00:42,626 DEBUG [PAActiveObject]: ProActive: getStubOnThis() returns Body for org.objectweb.proactive.examples.nbody.groupoospmd.Domain node=rmi://orchidee.inria.fr:6635/as778829939 id=89381
+2009-01-21 18:00:42,631  INFO [MOPClassLoader]: Generating class : pa.stub.org.objectweb.proactive.examples.nbody.groupoospmd._StubDomain
+2009-01-212009-01-21 18:00:42,864 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 26024, destination: 69469, methodName: MethodCallBarrier, destination request queue length: 1
+2009-01-21 18:00:42,885 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:42,865 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 1396, destination: 69469, methodName: MethodCallBarrier, destination request queue length: 1
+2009-01-21 18:00:42,958 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCa2009-01-21 18:00:43,160 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 3
+2009-01-21 18:00:43,180 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:43,189 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:43,190 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:43,189 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:43,189 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:43,257 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 4
+2009-01-21 18:00:43,239 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: setValue, destination request queue length: 4
+2009-01-21 18:00:43,390 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:43,359 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: setValue, destination request queue length: 4
+2009-01-21 18:00:43,498 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:43,594 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:43,619 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:43,650 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 7
+2009-01-21 18:00:43,643 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 7
+2009-01-21 18:00:43,690 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:43,720 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:43,768 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: sendValueToNeighbours, destination request queue length: 9
+2009-01-21 18:00:43,822 DEBUG [BlockingRequestQueueImpl]: Adding request sendValueToNeighbours
+2009-01-21 18:00:43,871 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:43,918 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:43,966 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:44,015 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:44,061 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,102 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:44,138 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:44,179 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:44,202 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: setValue, destination request queue length: 8
+2009-01-21 18:00:44,252 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:44,216 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,293 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:44,296 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:44,296 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:44,297 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,297 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:44,297 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:44,297 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:44,300 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,300 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:44,302 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:44,303 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:44,303 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,303 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:44,304 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:44,305 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:44,305 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,305 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:44,305 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=3
+2009-01-21 18:00:44,306 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 4
+2009-01-21 18:00:44,306 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:44,335 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,335 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:44,336 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:44,337 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=3
+2009-01-21 18:00:44,337 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:44,337 DEBUG [RequestImpl]: r2009-01-21 18:2009-01-21 18:00:44,337 DEBUG [BodyWrapper]: [vo2009-01-21 18:00:44,360 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proac2009-01-21 18:00:44,384 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoI2009-01-21 18:00:44,2009-01-21 18:00:44,432 DEBUG [RequestImpl]: Serving sendValue2009-01-21 182009-01-21 18:00:44,480 DEBUG [AbstractBody]: sec2009-01-21 182009-01-21 18:00:44,494 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,481 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,481 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,572 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: setValue, destination request queue length: 3
+2009-01-21 18:00:44,706 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:44,707 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,708 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,708 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,711 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,712 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 4
+2009-01-21 18:00:44,712 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:44,717 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,717 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: moveBody, destination request queue length: 5
+2009-01-21 18:00:44,731 DEBUG [BlockingRequestQueueImpl]: Adding request moveBody
+2009-01-21 18:00:44,732 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,732 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: sendValueToNeighbours, destination request queue length: 6
+2009-01-21 18:00:44,733 DEBUG [BlockingRequestQueueImpl]: Adding request sendValueToNeighbours
+2009-01-21 18:00:44,733 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:44,725 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: setValue, destination request queue length: 5
+2009-01-21 18:00:44,737 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:44,726 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: setValue, destination request queue length: 5
+2009-01-21 18:00:44,740 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:44,743 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 9
+2009-01-21 18:00:44,764 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:44,793 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: setValue, destination request queue length: 10
+2009-01-21 18:00:44,823 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:44,749 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 9
+2009-01-21 18:00:44,768 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:44,878 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:45,046 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:45,125 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:45,126 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,126 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,129 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:45,130 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:45,130 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:45,134 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 10
+2009-01-21 18:00:45,141 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:45,142 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,142 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:45,159 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:45,159 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,159 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,159 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:45,160 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:45,160 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:45,160 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,160 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:45,161 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:45,161 DEBUG [RequestImpl]: Serving moveBody
+2009-01-21 18:00:45,161 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,161 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:45,162 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:45,179 DEBUG [RequestImpl]: Serving sendValueToNeighbours
+2009-01-21 18:00:45,180 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,181 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,181 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,181 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,280 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: setValue, destination request queue length: 7
+2009-01-21 18:00:45,366 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:45,415 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,415 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,415 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,415 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,499 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 8
+2009-01-21 18:00:45,499 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:45,506 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,507 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: moveBody, destination request queue length: 9
+2009-01-21 18:00:45,507 DEBUG [BlockingRequestQueueImpl]: Adding request moveBody
+2009-01-21 18:00:45,508 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,508 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: sendValueToNeighbours, destination request queue length: 10
+2009-01-21 18:00:45,516 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: setValue, destination request queue length: 10
+2009-01-21 18:00:45,517 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:45,515 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: setValue, destination request queue length: 10
+2009-01-21 18:00:45,520 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:45,521 DEBUG [BlockingRequestQueueImpl]: Adding request sendValueToNeighbours
+2009-01-21 18:00:45,522 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,533 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 13
+2009-01-21 18:00:45,533 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:45,538 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 14
+2009-01-21 18:00:45,538 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:45,546 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,576 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=14
+2009-01-21 18:00:45,577 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=13
+2009-01-21 18:00:45,577 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,577 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,599 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=13
+2009-01-21 18:00:45,581 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: setValue, destination request queue length: 14
+2009-01-21 18:00:45,602 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=12
+2009-01-21 18:00:45,603 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:45,603 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,603 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,604 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=13
+2009-01-21 18:00:45,604 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=12
+2009-01-21 18:00:45,604 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:45,604 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,604 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=12
+2009-01-21 18:00:45,605 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:45,605 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,605 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,606 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:45,606 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:45,606 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:45,606 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,607 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:45,607 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:45,607 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:45,607 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,608 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:45,608 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:45,608 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,608 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,609 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:45,610 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:45,610 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:45,610 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,611 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:45,611 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:45,611 DEBUG [RequestImpl]: Serving moveBody
+2009-01-21 18:00:45,611 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,612 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:45,636 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:45,676 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,677 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,677 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:45,677 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:45,677 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:45,724 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:45,724 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotif2009-01-21 18:00:45,610 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,778 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 69469, destination: 69469, methodName: MethodCallBarrier, destination request queue length: 6
+2009-01-21 18:00:45,814 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:45,872 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:45,892 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 69469, destination: 69469, methodName: moveBody, destination request queue length: 7
+2009-01-21 18:00:45,915 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 2009-01-21 18:00:45,959 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotif2009-01-21 18:00:45,935 DEBUG [BlockingRequestQueueImpl]: Adding request moveBody
+2009-01-21 18:00:46,031 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:46,031 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:46,080 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] sour2009-01-21 18:00:46,081 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:46,081 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:46,081 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:46,194 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 6
+2009-01-21 18:00:46,117 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: setVa2009-01-21 18:00:46,253 DEBUG [BodyWrappe2009-01-21 18:00:46,277 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:46,243 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: setValue, destination request queue length: 6
+2009-01-21 18:00:46,362 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:46,403 DEBUG [BlockingRequestQueueImpl]: Addi2009-01-21 18:00:46,2009-01-21 18:00:46,415 DEBUG [BodyWrapp2009-01-21 18:00:46,345 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:46,463 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:46,463 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=11
+2009-01-21 18:00:46,463 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 26024, destination: 69469, methodName: MethodCallBarrier, destination request queue length: 12
+2009-01-21 18:00:46,536 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=11
+2009-01-21 18:00:46,505 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 1396, destination: 69469, methodName: MethodCallBarrier2009-01-21 18:00:46,704 DEBUG [Blocking2009-01-21 18:00:46,685 DEBUG [RequestImpl]2009-01-21 18:00:462009-01-21 18:00:46,636 DEBUG [BlockingRequ2009-01-21 18:00:46,774 DEBUG [BodyWrapper]: [re2009-01-21 18:00:46,758 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:46,793 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:46,866 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=13
+2009-01-21 18:00:46,896 DEBUG [BodyWrapper]: [servingStarted]#[BodyW2009-01-21 18:00:46,900 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:46,914 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=12
+2009-01-21 18:00:46,950 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:46,990 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:47,026 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,063 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:47,109 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:47,157 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:47,226 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,262 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:47,303 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:47,334 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:47,371 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,412 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:47,449 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:47,497 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:47,535 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,571 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:47,649 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:47,649 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:47,649 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,650 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:47,650 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:47,650 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:47,650 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,651 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:47,674 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:47,722 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:47,764 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,800 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:47,801 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:47,786 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: setValue, destination request queue length: 6
+2009-01-21 18:00:47,842 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:47,878 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:47,920 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,920 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:47,920 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:47,921 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:47,921 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:47,921 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:47,921 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=3
+2009-01-21 18:00:47,962 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:47,989 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body2009-01-21 18:00:47,921 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:48,033 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:typ2009-01-21 18:00:48,057 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:48,154 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body2009-01-21 18:00:48,190 DEBUG [A2009-01-21 18:00:48,225 DEBUG 2009-01-21 18:00:48,261 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:2009-01-21 18:00:48,309 DEBUG [RequestImpl]: Serving moveBody
+2009-01-21 18:00:48,398 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:48,470 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=892009-01-21 18:002009-01-21 18:00:48,519 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=2
+2009-01-21 18:00:48,566 DEBUG [RequestImpl]: Serving sendValueToNeighbours
+2009-01-21 18:00:48,616 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:48,616 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:48,616 DEBUG [AbstractBody]: security 2009-01-21 18:00:48,656 DEBUG [RequestImpl]: result: [null]
+2009-01-22009-01-21 18:00:48,656 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: setValue, destination request queue length: 3
+2009-01-21 18:00:48,729 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:48,730 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:48,731 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:48,733 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:48,733 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 4
+2009-01-21 18:00:48,747 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: setValue, destination request queue length: 4
+2009-01-21 18:00:48,747 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: setValue, destination request queue length: 4
+2009-01-21 18:00:48,734 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:48,747 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:48,891 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:48,927 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:48,964 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 7
+2009-01-21 18:00:48,970 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 7
+2009-01-21 18:00:49,003 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:49,099 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:49,157 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,208 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: moveBody, destination request queue length: 9
+2009-01-21 18:00:49,208 DEBUG [BlockingRequestQueueImpl]: Adding request moveBody
+2009-01-21 18:00:49,209 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,209 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: sendValueToNeighbours, destination request queue length: 10
+2009-01-21 18:00:49,210 DEBUG [BlockingRequestQueueImpl]: Adding request sendValueToNeighbours
+2009-01-21 18:00:49,210 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,227 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: setValue, destination request queue length: 11
+2009-01-21 18:00:49,228 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:49,230 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,230 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:49,230 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:49,230 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:49,231 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,231 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:49,231 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:49,231 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:49,232 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,232 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:49,250 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:49,286 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:49,323 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,323 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:49,323 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:49,324 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:49,324 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,344 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 8
+2009-01-21 18:00:49,359 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:49,395 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:49,474 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:49,474 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:49,474 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,475 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:49,475 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:49,475 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:49,475 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,475 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:49,476 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:49,476 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:49,476 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,476 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:49,477 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:49,477 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:49,477 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,477 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:49,477 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=3
+2009-01-21 18:00:49,478 DEBUG [RequestImpl]: Serving moveBody
+2009-01-21 18:00:49,478 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:49,478 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core2009-01-21 18:00:49,480 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,497 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=Request source: 69469, destination: 69469, methodName: moveBody, destination request queue length: 5
+2009-01-21 18:00:49,524 DEBUG [BlockingRequestQueueImpl]: Adding request moveBody
+2009-01-21 18:00:49,597 DEBUG [AbstractBody]: security2009-01-2009-01-21 18:00:49,623 DEBUG [BodyWrapper]: [requestR2009-01-21 18:00:49,579 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: setValue, destination request queue length: 3
+2009-01-21 18:00:49,700 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:49,701 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,702 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,702 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,702 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,755 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 4
+2009-01-21 18:00:49,756 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:49,723 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: setValue, destination request queue length: 4
+2009-01-21 18:00:49,721 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: setValue, destination request queue length: 4
+2009-01-21 18:00:49,803 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:49,880 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:49,905 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:50,001 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: moveBody, destination request queue length: 7
+2009-01-21 18:00:50,008 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 26024, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 7
+2009-01-21 18:00:50,001 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 83820, destination: 89381, methodName: _terminateAO, destination request queue length: 7
+2009-01-21 18:00:50,001 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 1396, destination: 89381, methodName: MethodCallBarrier, destination request queue length: 7
+2009-01-21 18:00:50,049 DEBUG [BlockingRequestQueueImpl]: Adding request moveBody
+2009-01-21 18:00:50,241 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:50,241 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:50,308 DEBUG [BlockingRequestQueueImpl]: Adding request _terminateAO
+2009-01-21 18:00:50,308 DEBUG [BlockingRequestQueueImpl]: Adding request MethodCallBarrier
+2009-01-21 18:00:50,309 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 89381, destination: 89381, methodName: sendValueToNeighbours, destination request queue length: 11
+2009-01-21 18:00:50,311 DEBUG [BlockingRequestQueueImpl]: Adding request sendValueToNeighbours
+2009-01-21 18:00:50,312 DEBUG [AbstractBody]: security is off
+2009-01-21 18:00:50,324 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=Request source: 69469, destination: 89381, methodName: setValue, destination request queue length: 12
+2009-01-21 18:00:50,325 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-21 18:00:50,326 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,352 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=12
+2009-01-21 18:00:50,391 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:50,391 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:50,391 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,392 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=11
+2009-01-21 18:00:50,392 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:50,392 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:50,392 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,439 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=10
+2009-01-21 18:00:50,439 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:50,439 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:50,440 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,440 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=9
+2009-01-21 18:00:50,440 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:50,510 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:50,534 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,537 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=8
+2009-01-21 18:00:50,537 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:50,537 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:50,538 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,539 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=7
+2009-01-21 18:00:50,539 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:50,539 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:50,540 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,540 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=6
+2009-01-21 18:00:50,540 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:50,540 DEBUG [RequestImpl]: Serving moveBody
+2009-01-21 18:00:50,541 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,541 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=5
+2009-01-21 18:00:50,541 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:50,541 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:50,542 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,542 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=4
+2009-01-21 18:00:50,542 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=89381, userData=3
+2009-01-21 18:00:50,542 DEBUG [AbstractBody]: Calling terminate for active object org.objectweb.proactive.examples.nbody.groupoospmd.Domain
+2009-01-21 18:00:50,567 DEBUG [ProActiveRuntimeWrapper]: [bodyDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM1934341838, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@1c4ff2c
+2009-01-21 18:00:50,574 DEBUG [ProActiveRuntimeWrapper]: [runtimeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM1934341838, userData=null
+2009-01-21 18:00:50,577 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1610842303 unbound in registry
+2009-01-21 18:00:50,579 DEBUG [ProActiveRuntimeWrapper]: [nodeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM1934341838, userData=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1610842303
+2009-01-21 18:00:50,580 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as778829939 unbound in registry
+2009-01-21 18:00:50,580 DEBUG [ProActiveRuntimeWrapper]: [nodeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM1934341838, userData=rmi://orchidee.inria.fr:6635/as778829939
+2009-01-21 18:00:50,580  INFO [ProActiveRuntimeImpl]: terminating Runtime //orchidee.inria.fr/PA_JVM1934341838
+2009-01-21 18:00:50,581 DEBUG [ProActiveRuntimeWrapper]: [runtimeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM1934341838, userData=null
+ java.lang.Thread.run(Thread.java:619)
+Caused by: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+	... 5 more
+
+Exception number 1
+
+org.objectweb.proactive.core.group.ExceptionInGroup: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+	at org.objectweb.proactive.core.group.ProcessForOneWayCall.run(ProcessForOneWayCall.java:87)
+	at org.objectweb.proactive.core.group.BufferedTaskContainer.run(BufferedTaskContainer.java:68)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+	... 5 more
+2009-01-21 18:00:50,486 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=6
+2009-01-21 18:00:50,507 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=5
+2009-01-21 18:00:50,507 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:50,508 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,508 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=5
+2009-01-21 18:00:50,509 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=4
+2009-01-21 18:00:50,509 DEBUG [RequestImpl]: Serving setValue
+2009-01-21 18:00:50,509 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,510 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=4
+2009-01-21 18:00:50,510 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=3
+2009-01-21 18:00:50,531 DEBUG [RequestImpl]: Serving MethodCallBarrier
+2009-01-21 18:00:50,531 DEBUG [RequestImpl]: result: [null]
+2009-01-21 18:00:50,532 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=3
+2009-01-21 18:00:50,532 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=69469, userData=2
+2009-01-21 18:00:50,532 DEBUG [AbstractBody]: Calling terminate for active object org.objectweb.proactive.examples.nbody.groupoospmd.Domain
+2009-01-21 18:00:50,533 DEBUG [ProActiveRuntimeWrapper]: [bodyDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM734991762, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@1de8aa8
+2009-01-21 18:00:50,418 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1395893819 unbound in registry
+2009-01-21 18:00:50,567 DEBUG [ProActiveRuntimeWrapper]: [nodeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM734991762, userData=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1395893819
+2009-01-21 18:00:50,569 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as1806813758 unbound in registry
+2009-01-21 18:00:50,569 DEBUG [ProActiveRuntimeWrapper]: [nodeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM734991762, userData=rmi://orchidee.inria.fr:6635/as1806813758
+2009-01-21 18:00:50,570  INFO [ProActiveRuntimeImpl]: terminating Runtime //orchidee.inria.fr/PA_JVM734991762
+2009-01-21 18:00:50,570 DEBUG [ProActiveRuntimeWrapper]: [runtimeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM734991762, userData=null
+.invoke(NativeMethodAccessorImpl.java:39)
+2009-01-21 18:00:50,487 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2009-01-21 18:00:50,487  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2009-01-21 18:00:50,487 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.lang.reflect.Method.invoke(Method.java:597)
+2009-01-21 18:00:50,487  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.lang.reflect.Method.invoke(Method.java:597)
+2009-01-21 18:00:50,507 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:389)
+2009-01-21 18:00:50,507  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:389)
+2009-01-21 18:00:50,507 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:226)
+2009-01-21 18:00:50,507  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:226)
+2009-01-21 18:00:50,508 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:170)
+2009-01-21 18:00:50,508  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:170)
+2009-01-21 18:00:50,508 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:538)
+2009-01-21 18:00:50,508  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:538)
+2009-01-21 18:00:50,508 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:510)
+2009-01-21 18:00:50,508  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:510)
+2009-01-21 18:00:50,509 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:909)
+2009-01-21 18:00:50,509  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:909)
+2009-01-21 18:00:50,509 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+2009-01-21 18:00:50,509  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+2009-01-21 18:00:50,509 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+2009-01-21 18:00:50,509  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+2009-01-21 18:00:50,510 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+2009-01-21 18:00:50,510  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+2009-01-21 18:00:50,510 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:307)
+2009-01-21 18:00:50,510  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:307)
+2009-01-21 18:00:50,531 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:192)
+2009-01-21 18:00:50,531  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:192)
+2009-01-21 18:00:50,531 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.lang.Thread.run(Thread.java:619)
+2009-01-21 18:00:50,532  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.lang.Thread.run(Thread.java:619)
+2009-01-21 18:00:50,532 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 
+2009-01-21 18:00:50,532  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 
+2009-01-21 18:00:50,532 DEBUG [AbstractExternalProcess$ProcessInputHandler]: Exception number 0
+2009-01-21 18:00:50,532  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: Exception number 0
+2009-01-21 18:00:50,532 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 
+2009-01-21 18:00:50,533  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 
+2009-01-21 18:00:50,533 DEBUG [AbstractExternalProcess$ProcessInputHandler]: org.objectweb.proactive.core.group.ExceptionInGroup: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,533  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: org.objectweb.proactive.core.group.ExceptionInGroup: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,533 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.group.ProcessForOneWayCall.run(ProcessForOneWayCall.java:87)
+2009-01-21 18:00:50,533  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.group.ProcessForOneWayCall.run(ProcessForOneWayCall.java:87)
+2009-01-21 18:00:50,533 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.group.BufferedTaskContainer.run(BufferedTaskContainer.java:68)
+2009-01-21 18:00:50,534  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.group.BufferedTaskContainer.run(BufferedTaskContainer.java:68)
+2009-01-21 18:00:50,534 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+2009-01-21 18:00:50,534  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+2009-01-21 18:00:50,534 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+2009-01-21 18:00:50,534  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+2009-01-21 18:00:50,537 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.lang.Thread.run(Thread.java:619)
+2009-01-21 18:00:50,537  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.lang.Thread.run(Thread.java:619)
+2009-01-21 18:00:50,537 DEBUG [AbstractExternalProcess$ProcessInputHandler]: Caused by: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,537  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: Caused by: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,538 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	... 5 more
+2009-01-21 18:00:50,538  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	... 5 more
+2009-01-21 18:00:50,538 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 
+2009-01-21 18:00:50,538  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 
+2009-01-21 18:00:50,538 DEBUG [AbstractExternalProcess$ProcessInputHandler]: Exception number 1
+2009-01-21 18:00:50,538  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: Exception number 1
+2009-01-21 18:00:50,539 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 
+2009-01-21 18:00:50,539  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 
+2009-01-21 18:00:50,539 DEBUG [AbstractExternalProcess$ProcessInputHandler]: org.objectweb.proactive.core.group.ExceptionInGroup: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,539  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: org.objectweb.proactive.core.group.ExceptionInGroup: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,539 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.group.ProcessForOneWayCall.run(ProcessForOneWayCall.java:87)
+2009-01-21 18:00:50,539  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.group.ProcessForOneWayCall.run(ProcessForOneWayCall.java:87)
+2009-01-21 18:00:50,540 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at org.objectweb.proactive.core.group.BufferedTaskContainer.run(BufferedTaskContainer.java:68)
+2009-01-21 18:00:50,540  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at org.objectweb.proactive.core.group.BufferedTaskContainer.run(BufferedTaskContainer.java:68)
+2009-01-21 18:00:50,540 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+2009-01-21 18:00:50,540  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+2009-01-21 18:00:50,540 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+2009-01-21 18:00:50,540  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+2009-01-21 18:00:50,541 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	at java.lang.Thread.run(Thread.java:619)
+2009-01-21 18:00:50,541  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	at java.lang.Thread.run(Thread.java:619)
+2009-01-21 18:00:50,541 DEBUG [AbstractExternalProcess$ProcessInputHandler]: Caused by: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,541  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: Caused by: org.objectweb.proactive.core.body.exceptions.BodyTerminatedRequestException: org.objectweb.proactive.examples.nbody.groupoospmd.Domain : The body has been Terminated  while receiving request setValue
+2009-01-21 18:00:50,541 DEBUG [AbstractExternalProcess$ProcessInputHandler]: 	... 5 more
+2009-01-21 18:00:50,541  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: 	... 5 more
+2009-01-21 18:00:50,570 DEBUG [AbstractExternalProcess$ProcessInputHandler]: terminating Runtime //orchidee.inria.fr/PA_JVM734991762 
+2009-01-21 18:00:50,570  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: terminating Runtime //orchidee.inria.fr/PA_JVM734991762 
+2009-01-21 18:00:50,580 DEBUG [AbstractExternalProcess$ProcessInputHandler]: terminating Runtime //orchidee.inria.fr/PA_JVM1934341838 
+2009-01-21 18:00:50,581  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: terminating Runtime //orchidee.inria.fr/PA_JVM1934341838 
+2009-01-21 18:00:50,582  WARN [JMXNotificationManager]: The unsubscribe action has failed : The objectName=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM512750314 has been already unsubscribe

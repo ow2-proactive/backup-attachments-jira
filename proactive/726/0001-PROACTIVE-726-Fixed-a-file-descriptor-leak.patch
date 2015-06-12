@@ -1,0 +1,48 @@
+From 2a7fe4326818db2ae3bc132a29243acd9d736867 Mon Sep 17 00:00:00 2001
+From: cmathieu <clement.mathieu@activeeon.com>
+Date: Wed, 12 Aug 2009 14:52:50 +0200
+Subject: [PATCH] PROACTIVE-726: Fixed a file descriptor leak
+
+When a "zoombie client" reconnect, the file descriptor is never
+freeed. Added a finalize method to Attachment to close the
+socket and the socketChannel.
+---
+ .../extra/messagerouting/router/Attachment.java    |   15 +++++++++++++++
+ 1 files changed, 15 insertions(+), 0 deletions(-)
+
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/Attachment.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/Attachment.java
+index 52d4fdf..3c51904 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/Attachment.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/Attachment.java
+@@ -60,6 +60,7 @@ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+  * @since ProActive 4.1.0
+  */
+ public class Attachment {
++
+     public static final Logger logger = ProActiveLogger.getLogger(Loggers.FORWARDING_ROUTER);
+ 
+     /** The id of this attachment
+@@ -87,6 +88,20 @@ public class Attachment {
+         this.client = null;
+     }
+ 
++    @Override
++    protected void finalize() throws Throwable {
++        try {
++            try {
++                this.socketChannel.socket().close();
++            } finally {
++                this.socketChannel.close();
++            }
++        } finally {
++            super.finalize();
++
++        }
++    }
++
+     public MessageAssembler getAssembler() {
+         return assembler;
+     }
+-- 
+1.6.0.6
+

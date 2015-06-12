@@ -1,0 +1,1344 @@
+2009-01-22 14:44:18,028 DEBUG [ProActiveConfiguration]: Default Config File is: jar:file:/auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive.jar!/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
+2009-01-22 14:44:18,224 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.stack_trace --> value:false
+2009-01-22 14:44:18,224 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.protocol.handler.pkgs is not a ProActive property
+2009-01-22 14:44:18,225 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <java.protocol.handler.pkgs, org.objectweb.proactive.core.ssh> as System property
+2009-01-22 14:44:18,225 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.protocol.handler.pkgs --> value:org.objectweb.proactive.core.ssh
+2009-01-22 14:44:18,226 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.maxMigrationNb --> value:-1
+2009-01-22 14:44:18,226 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.blocks_number --> value:8
+2009-01-22 14:44:18,227 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.ttu --> value:60000
+2009-01-22 14:44:18,227 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.serialization is not a ProActive property
+2009-01-22 14:44:18,227 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.serialization, ibis> as System property
+2009-01-22 14:44:18,228 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.serialization --> value:ibis
+2009-01-22 14:44:18,228 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <fractal.provider, org.objectweb.proactive.core.component.Fractive> as System property
+2009-01-22 14:44:18,228 DEBUG [ProActiveConfiguration$CustomProperties]: key:fractal.provider --> value:org.objectweb.proactive.core.component.Fractive
+2009-01-22 14:44:18,229 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.io.serialization.classloader is not a ProActive property
+2009-01-22 14:44:18,229 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.io.serialization.classloader, org.objectweb.proactive.core.mop.MOPClassLoader> as System property
+2009-01-22 14:44:18,230 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.io.serialization.classloader --> value:org.objectweb.proactive.core.mop.MOPClassLoader
+2009-01-22 14:44:18,230 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.host is not a ProActive property
+2009-01-22 14:44:18,231 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.name_server.host, localhost> as System property
+2009-01-22 14:44:18,231 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.host --> value:localhost
+2009-01-22 14:44:18,233 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.net.nolocal --> value:false
+2009-01-22 14:44:18,234 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.ttl --> value:5
+2009-01-22 14:44:18,235 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.lookup_freq --> value:30000
+2009-01-22 14:44:18,235 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.nodes_acq_to --> value:180000
+2009-01-22 14:44:18,236 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.blocks_size_kb --> value:512
+2009-01-22 14:44:18,236 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.services_number --> value:16
+2009-01-22 14:44:18,236 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.locationserver --> value:org.objectweb.proactive.ext.locationserver.LocationServer
+2009-01-22 14:44:18,237 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.key is not a ProActive property
+2009-01-22 14:44:18,237 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <ibis.name_server.key, 1> as System property
+2009-01-22 14:44:18,238 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.key --> value:1
+2009-01-22 14:44:18,238 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.securitymanager --> value:true
+2009-01-22 14:44:18,239 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.ttl --> value:-1
+2009-01-22 14:44:18,239 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.filetransfer.buffer_size_kb --> value:256
+2009-01-22 14:44:18,239 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.http.servlet --> value:false
+2009-01-22 14:44:18,240 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <schema.validation, true> as System property
+2009-01-22 14:44:18,240 DEBUG [ProActiveConfiguration$CustomProperties]: key:schema.validation --> value:true
+2009-01-22 14:44:18,240 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.tunneling.use_gc --> value:true
+2009-01-22 14:44:18,241 DEBUG [ProActiveConfiguration$CustomProperties]: key:components.creation.timeout --> value:10000
+2009-01-22 14:44:18,241 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.rmi.port --> value:1099
+2009-01-22 14:44:18,241 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.msg_capacity --> value:1000
+2009-01-22 14:44:18,242 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.classloader --> value:false
+2009-01-22 14:44:18,242 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.expl_msg --> value:66
+2009-01-22 14:44:18,242 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.noa --> value:3
+2009-01-22 14:44:18,243 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.multi_proc_nodes --> value:false
+2009-01-22 14:44:18,243 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.maxTimeOnSite --> value:-1
+2009-01-22 14:44:18,243 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.future.ac --> value:true
+2009-01-22 14:44:18,244 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.tunneling.try_normal_first --> value:true
+2009-01-22 14:44:18,244 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.communication.protocol --> value:rmi
+2009-01-22 14:44:18,244 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.unicore.forkclient --> value:true
+2009-01-22 14:44:18,244 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.exit_on_empty --> value:false
+2009-01-22 14:44:18,245 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.http.port --> value:2026
+2009-01-22 14:44:18,247 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.useIPaddress --> value:true
+2009-01-22 14:44:18,247 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.masterworker.compresstasks --> value:false
+2009-01-22 14:44:18,248 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.locationserver.rmi --> value://localhost/LocationServer
+2009-01-22 14:44:18,248 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.tunneling.gc_period --> value:10000
+2009-01-22 14:44:18,248 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.port --> value:6444
+2009-01-22 14:44:18,249 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.runtime.stayalive --> value:true
+2009-01-22 14:44:18,249 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.net.noprivate --> value:false
+2009-01-22 14:44:18,249 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.acq --> value:rmi
+2009-01-22 14:44:18,250 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.masterworker.pingperiod --> value:10000
+2009-01-22 14:44:18,250 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.dgc --> value:false
+2009-01-22 14:44:18,250 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.mixedlocation.updatingForwarder --> value:false
+2009-01-22 14:44:18,251 DEBUG [ProActiveConfiguration]: User Config File is: /user/fabratu/home/.proactive/ProActiveConfiguration.xml
+2009-01-22 14:44:18,273  WARN [ProActiveConfigurationParser]: Skiped unknown ProActive Java property: proactive.jmx.mbean
+2009-01-22 14:44:18,274  WARN [ProActiveConfigurationParser]: Skiped unknown ProActive Java property: com.sun.management.jmxremote
+2009-01-22 14:44:18,275  WARN [ProActiveConfigurationParser]: All supported ProActive Java properties are declared inside org.objectweb.proactive.core.config.PAProperties. Please check your ProActive Configuration file: /user/fabratu/home/.proactive/ProActiveConfiguration.xml
+2009-01-22 14:44:18,278 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.useIPaddress --> value:false (OVERRIDE)
+2009-01-22 14:44:18,279 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.p2p.acq --> value:rmi (OVERRIDE)
+2009-01-22 14:44:18,279 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.rmi.port --> value:6635 (OVERRIDE)
+2009-01-22 14:44:18,279 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.test.timeout --> value:0
+2009-01-22 14:44:18,280 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.communication.protocol --> value:rmi (OVERRIDE)
+2009-01-22 14:44:18,280 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.runtime.name is not a ProActive property
+2009-01-22 14:44:18,280 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.runtime.name --> value:Java(TM) SE Runtime Environment
+2009-01-22 14:44:18,281 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.protocol.handler.pkgs is not a ProActive property
+2009-01-22 14:44:18,281 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.protocol.handler.pkgs --> value:org.objectweb.proactive.core.ssh (OVERRIDE)
+2009-01-22 14:44:18,281 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.boot.library.path is not a ProActive property
+2009-01-22 14:44:18,281 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.boot.library.path --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/i386
+2009-01-22 14:44:18,282 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.version is not a ProActive property
+2009-01-22 14:44:18,282 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.version --> value:1.6.0_02-b05
+2009-01-22 14:44:18,284 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.vendor is not a ProActive property
+2009-01-22 14:44:18,285 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.vendor --> value:Sun Microsystems Inc.
+2009-01-22 14:44:18,290 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vendor.url is not a ProActive property
+2009-01-22 14:44:18,291 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vendor.url --> value:http://java.sun.com/
+2009-01-22 14:44:18,291 DEBUG [ProActiveConfiguration$CustomProperties]: System property path.separator is not a ProActive property
+2009-01-22 14:44:18,291 DEBUG [ProActiveConfiguration$CustomProperties]: key:path.separator --> value::
+2009-01-22 14:44:18,294 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.name is not a ProActive property
+2009-01-22 14:44:18,294 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.name --> value:Java HotSpot(TM) Client VM
+2009-01-22 14:44:18,294 DEBUG [ProActiveConfiguration$CustomProperties]: System property file.encoding.pkg is not a ProActive property
+2009-01-22 14:44:18,294 DEBUG [ProActiveConfiguration$CustomProperties]: key:file.encoding.pkg --> value:sun.io
+2009-01-22 14:44:18,294 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.java.launcher is not a ProActive property
+2009-01-22 14:44:18,295 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.java.launcher --> value:SUN_STANDARD
+2009-01-22 14:44:18,295 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.country is not a ProActive property
+2009-01-22 14:44:18,295 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.country --> value:US
+2009-01-22 14:44:18,295 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.os.patch.level is not a ProActive property
+2009-01-22 14:44:18,295 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.os.patch.level --> value:unknown
+2009-01-22 14:44:18,295 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <fractal.provider, org.objectweb.proactive.core.component.Fractive> as System property
+2009-01-22 14:44:18,296 DEBUG [ProActiveConfiguration$CustomProperties]: key:fractal.provider --> value:org.objectweb.proactive.core.component.Fractive (OVERRIDE)
+2009-01-22 14:44:18,296 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.serialization is not a ProActive property
+2009-01-22 14:44:18,296 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.serialization --> value:ibis (OVERRIDE)
+2009-01-22 14:44:18,296 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.io.serialization.classloader is not a ProActive property
+2009-01-22 14:44:18,296 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.io.serialization.classloader --> value:org.objectweb.proactive.core.mop.MOPClassLoader (OVERRIDE)
+2009-01-22 14:44:18,297 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.specification.name is not a ProActive property
+2009-01-22 14:44:18,297 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.specification.name --> value:Java Virtual Machine Specification
+2009-01-22 14:44:18,297 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.dir is not a ProActive property
+2009-01-22 14:44:18,297 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.dir --> value:/auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/examples/nbody
+2009-01-22 14:44:18,298 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.host is not a ProActive property
+2009-01-22 14:44:18,298 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.host --> value:localhost (OVERRIDE)
+2009-01-22 14:44:18,298 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.runtime.version is not a ProActive property
+2009-01-22 14:44:18,298 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.runtime.version --> value:1.6.0_02-b05
+2009-01-22 14:44:18,298 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.awt.graphicsenv is not a ProActive property
+2009-01-22 14:44:18,299 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.awt.graphicsenv --> value:sun.awt.X11GraphicsEnvironment
+2009-01-22 14:44:18,299 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.endorsed.dirs is not a ProActive property
+2009-01-22 14:44:18,300 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.endorsed.dirs --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/endorsed
+2009-01-22 14:44:18,300 DEBUG [ProActiveConfiguration$CustomProperties]: System property os.arch is not a ProActive property
+2009-01-22 14:44:18,300 DEBUG [ProActiveConfiguration$CustomProperties]: key:os.arch --> value:i386
+2009-01-22 14:44:18,300 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.io.tmpdir is not a ProActive property
+2009-01-22 14:44:18,300 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.io.tmpdir --> value:/tmp
+2009-01-22 14:44:18,301 DEBUG [ProActiveConfiguration$CustomProperties]: System property line.separator is not a ProActive property
+2009-01-22 14:44:18,301 DEBUG [ProActiveConfiguration$CustomProperties]: key:line.separator --> value:
+
+2009-01-22 14:44:18,301 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.specification.vendor is not a ProActive property
+2009-01-22 14:44:18,301 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.specification.vendor --> value:Sun Microsystems Inc.
+2009-01-22 14:44:18,301 DEBUG [ProActiveConfiguration$CustomProperties]: System property os.name is not a ProActive property
+2009-01-22 14:44:18,302 DEBUG [ProActiveConfiguration$CustomProperties]: key:os.name --> value:Linux
+2009-01-22 14:44:18,302 DEBUG [ProActiveConfiguration$CustomProperties]: System property ibis.name_server.key is not a ProActive property
+2009-01-22 14:44:18,302 DEBUG [ProActiveConfiguration$CustomProperties]: key:ibis.name_server.key --> value:1 (OVERRIDE)
+2009-01-22 14:44:18,302 DEBUG [ProActiveConfiguration$CustomProperties]: key:log4j.configuration --> value:file:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/examples/proactive-log4j
+2009-01-22 14:44:18,303 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.jnu.encoding is not a ProActive property
+2009-01-22 14:44:18,303 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.jnu.encoding --> value:UTF-8
+2009-01-22 14:44:18,303 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.library.path is not a ProActive property
+2009-01-22 14:44:18,303 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.library.path --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/i386/client:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/i386:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/../lib/i386:/usr/java/packages/lib/i386:/lib:/usr/lib
+2009-01-22 14:44:18,303 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.specification.name is not a ProActive property
+2009-01-22 14:44:18,304 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.specification.name --> value:Java Platform API Specification
+2009-01-22 14:44:18,304 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.class.version is not a ProActive property
+2009-01-22 14:44:18,304 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.class.version --> value:50.0
+2009-01-22 14:44:18,304 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <schema.validation, true> as System property
+2009-01-22 14:44:18,305 DEBUG [ProActiveConfiguration$CustomProperties]: key:schema.validation --> value:true (OVERRIDE)
+2009-01-22 14:44:18,305 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.management.compiler is not a ProActive property
+2009-01-22 14:44:18,305 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.management.compiler --> value:HotSpot Client Compiler
+2009-01-22 14:44:18,305 DEBUG [ProActiveConfiguration$CustomProperties]: System property os.version is not a ProActive property
+2009-01-22 14:44:18,306 DEBUG [ProActiveConfiguration$CustomProperties]: key:os.version --> value:2.6.23.17-88.fc7
+2009-01-22 14:44:18,306 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.home is not a ProActive property
+2009-01-22 14:44:18,306 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.home --> value:/user/fabratu/home
+2009-01-22 14:44:18,307 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <java.security.policy, /user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/examples/proactive.java.policy> as System property
+2009-01-22 14:44:18,307 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.security.policy --> value:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/examples/proactive.java.policy
+2009-01-22 14:44:18,307 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.timezone is not a ProActive property
+2009-01-22 14:44:18,307 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.timezone --> value:Europe/Paris
+2009-01-22 14:44:18,307 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.awt.printerjob is not a ProActive property
+2009-01-22 14:44:18,308 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.awt.printerjob --> value:sun.print.PSPrinterJob
+2009-01-22 14:44:18,308 DEBUG [ProActiveConfiguration$CustomProperties]: System property file.encoding is not a ProActive property
+2009-01-22 14:44:18,308 DEBUG [ProActiveConfiguration$CustomProperties]: key:file.encoding --> value:UTF-8
+2009-01-22 14:44:18,308 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.specification.version is not a ProActive property
+2009-01-22 14:44:18,308 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.specification.version --> value:1.6
+2009-01-22 14:44:18,309 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.class.path is not a ProActive property
+2009-01-22 14:44:18,309 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.class.path --> value:/auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/examples/nbody/.:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive.jar:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive_examples.jar
+2009-01-22 14:44:18,309 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.name is not a ProActive property
+2009-01-22 14:44:18,309 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.name --> value:fabratu
+2009-01-22 14:44:18,309 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.specification.version is not a ProActive property
+2009-01-22 14:44:18,309 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.specification.version --> value:1.0
+2009-01-22 14:44:18,310 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.home is not a ProActive property
+2009-01-22 14:44:18,310 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.home --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre
+2009-01-22 14:44:18,310 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.arch.data.model is not a ProActive property
+2009-01-22 14:44:18,310 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.arch.data.model --> value:32
+2009-01-22 14:44:18,310 DEBUG [ProActiveConfiguration$CustomProperties]: System property user.language is not a ProActive property
+2009-01-22 14:44:18,311 DEBUG [ProActiveConfiguration$CustomProperties]: key:user.language --> value:en
+2009-01-22 14:44:18,311 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.specification.vendor is not a ProActive property
+2009-01-22 14:44:18,311 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.specification.vendor --> value:Sun Microsystems Inc.
+2009-01-22 14:44:18,311 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vm.info is not a ProActive property
+2009-01-22 14:44:18,311 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vm.info --> value:mixed mode, sharing
+2009-01-22 14:44:18,313 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.version is not a ProActive property
+2009-01-22 14:44:18,313 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.version --> value:1.6.0_02
+2009-01-22 14:44:18,314 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.ext.dirs is not a ProActive property
+2009-01-22 14:44:18,314 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.ext.dirs --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/ext:/usr/java/packages/lib/ext
+2009-01-22 14:44:18,315 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.boot.class.path is not a ProActive property
+2009-01-22 14:44:18,315 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.boot.class.path --> value:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/resources.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/rt.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/sunrsasign.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jsse.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jce.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/charsets.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/classes
+2009-01-22 14:44:18,315 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vendor is not a ProActive property
+2009-01-22 14:44:18,316 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vendor --> value:Sun Microsystems Inc.
+2009-01-22 14:44:18,316 DEBUG [ProActiveConfiguration$CustomProperties]: System property file.separator is not a ProActive property
+2009-01-22 14:44:18,316 DEBUG [ProActiveConfiguration$CustomProperties]: key:file.separator --> value:/
+2009-01-22 14:44:18,316 DEBUG [ProActiveConfiguration$CustomProperties]: System property java.vendor.url.bug is not a ProActive property
+2009-01-22 14:44:18,316 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.vendor.url.bug --> value:http://java.sun.com/cgi-bin/bugreport.cgi
+2009-01-22 14:44:18,317 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.io.unicode.encoding is not a ProActive property
+2009-01-22 14:44:18,317 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.io.unicode.encoding --> value:UnicodeLittle
+2009-01-22 14:44:18,317 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.cpu.endian is not a ProActive property
+2009-01-22 14:44:18,318 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.cpu.endian --> value:little
+2009-01-22 14:44:18,318 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.desktop is not a ProActive property
+2009-01-22 14:44:18,318 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.desktop --> value:gnome
+2009-01-22 14:44:18,318 DEBUG [ProActiveConfiguration$CustomProperties]: System property sun.cpu.isalist is not a ProActive property
+2009-01-22 14:44:18,318 DEBUG [ProActiveConfiguration$CustomProperties]: key:sun.cpu.isalist --> value:
+2009-01-22 14:44:18,322 DEBUG [ProActiveInet]: Suitable Network Interfaces are: eth0 lo 
+2009-01-22 14:44:18,325  INFO [StartRuntime]: **** Starting jvm on orchidee.inria.fr
+2009-01-22 14:44:18,326 DEBUG [StartRuntime]: **** Starting jvm with classpath /auto/sea/u/sea/0/user/fabratu/work/proactive_work/ProActiveIntegrationAS/examples/nbody/.:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive.jar:/user/fabratu/home/work/proactive_work/ProActiveIntegrationAS/dist/lib/ProActive_examples.jar
+2009-01-22 14:44:18,326 DEBUG [StartRuntime]: ****              with bootclasspath /auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/resources.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/rt.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/sunrsasign.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jsse.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/jce.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/lib/charsets.jar:/auto/sea/u/sea/0/user/fabratu/tools/jdk1.6.0_02/jre/classes
+2009-01-22 14:44:18,806 DEBUG [ProActiveRuntimeImpl]: ProActive Security Policy (proactive.runtime.security) not set. Runtime Security disabled 
+2009-01-22 14:44:18,884 DEBUG [ProActiveConfiguration$CustomProperties]: key:proactive.http.port --> value:2028 (OVERRIDE)
+2009-01-22 14:44:18,885  INFO [ClassServer]: To use this ClassFileServer set the property java.rmi.server.codebase to http://orchidee.inria.fr:2028/
+2009-01-22 14:44:18,886  INFO [ClassServer]:  --> This ClassFileServer is listening on port 2028
+2009-01-22 14:44:18,888 DEBUG [ProActiveConfiguration$CustomProperties]: Exported <java.rmi.server.codebase, http://orchidee.inria.fr:2028/> as System property
+2009-01-22 14:44:18,889 DEBUG [ProActiveConfiguration$CustomProperties]: key:java.rmi.server.codebase --> value:http://orchidee.inria.fr:2028/
+2009-01-22 14:44:18,957  INFO [RegistryHelper]: Detected an existing RMI Registry on port 6635
+2009-01-22 14:44:19,054 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/PA_JVM347895442
+2009-01-22 14:44:19,121 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/PA_JVM831846380
+2009-01-22 14:44:19,129 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/PA_JVM831846380 looked up successfully
+2009-01-22 14:44:19,265 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:19,266 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:19,266 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:19,266 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@c623af
+2009-01-22 14:44:19,266 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,271 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:19,271 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:19,271 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:19,271 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:19,271 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,271 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:19,272 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:19,272 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:19,272 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:19,272 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,272 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:19,272 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:19,273 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:19,273 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:19,273 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,273 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:19,273 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:19,273 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:19,274 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:19,274 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,274 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:19,274 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:19,276 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:19,276 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:19,276 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,299 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:19,299 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:19,300 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:19,300 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@c623af
+2009-01-22 14:44:19,300 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,303 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:19,305 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:19,305 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:19,305 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:19,305 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,308 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:19,308 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:19,308 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:19,308 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:19,309 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,311 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:19,311 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:19,312 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:19,312 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:19,312 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,314 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:19,315 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:19,315 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:19,315 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:19,317 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,320 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:19,320 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:19,320 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:19,321 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:19,321 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:19,332 DEBUG [MethodCall]: MethodCall.execute() name = createLocalNode
+2009-01-22 14:44:19,333 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.createLocalNode(java.lang.String,boolean,org.objectweb.proactive.core.security.ProActiveSecurityManager,java.lang.String,java.lang.String) throws org.objectweb.proactive.core.node.NodeException,java.rmi.AlreadyBoundException
+2009-01-22 14:44:19,333 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:19,333 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:19,333 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:19,334 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/as585697212;class java.lang.String
+2009-01-22 14:44:19,335 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=false;class java.lang.Boolean
+2009-01-22 14:44:19,335 DEBUG [MethodCall]: MethodCall.execute() formal argument #2=null;null
+2009-01-22 14:44:19,335 DEBUG [MethodCall]: MethodCall.execute() formal argument #3=as;class java.lang.String
+2009-01-22 14:44:19,335 DEBUG [MethodCall]: MethodCall.execute() formal argument #4=Undefined_JOBID;class java.lang.String
+2009-01-22 14:44:19,336 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:19,336 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=boolean
+2009-01-22 14:44:19,336 DEBUG [MethodCall]: MethodCall.execute() actual argument #2=class org.objectweb.proactive.core.security.ProActiveSecurityManager
+2009-01-22 14:44:19,336 DEBUG [MethodCall]: MethodCall.execute() actual argument #3=class java.lang.String
+2009-01-22 14:44:19,336 DEBUG [MethodCall]: MethodCall.execute() actual argument #4=class java.lang.String
+2009-01-22 14:44:19,349 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:19,899 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-22 14:44:19,900 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@425743
+2009-01-22 14:44:19,996 DEBUG [MethodCall]: MethodCall.execute() name = createBody
+2009-01-22 14:44:19,996 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.body.UniversalBody org.objectweb.proactive.core.runtime.ProActiveRuntime.createBody(java.lang.String,org.objectweb.proactive.core.mop.ConstructorCall,boolean) throws org.objectweb.proactive.core.ProActiveException,org.objectweb.proactive.core.mop.ConstructorCallExecutionFailedException,java.lang.reflect.InvocationTargetException
+2009-01-22 14:44:19,996 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:19,997 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:19,997 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:19,997 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=as585697212;class java.lang.String
+2009-01-22 14:44:20,003 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,004 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,004 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,004 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@c623af
+2009-01-22 14:44:20,005 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,005 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:20,007 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:20,007 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,007 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:20,008 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,008 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:20,008 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:20,009 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,009 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:20,009 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,010 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:20,011 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:20,011 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,011 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1478a43
+2009-01-22 14:44:20,012 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,012 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:20,012 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:20,013 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,013 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,013 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,013 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:20,014 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:20,015 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,015 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,015 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,016 DEBUG [RuntimeFactory]: default runtime = rmi://orchidee.inria.fr:6635/PA_JVM347895442
+2009-01-22 14:44:20,016 DEBUG [MethodCall]: MethodCall.execute() name = createLocalNode
+2009-01-22 14:44:20,016 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.createLocalNode(java.lang.String,boolean,org.objectweb.proactive.core.security.ProActiveSecurityManager,java.lang.String,java.lang.String) throws org.objectweb.proactive.core.node.NodeException,java.rmi.AlreadyBoundException
+2009-01-22 14:44:20,017 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,017 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,017 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,018 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=//orchidee.inria.fr/__PA__HalfbodiesNode1463477695;class java.lang.String
+2009-01-22 14:44:20,019 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=false;class java.lang.Boolean
+2009-01-22 14:44:20,019 DEBUG [MethodCall]: MethodCall.execute() formal argument #2=null;null
+2009-01-22 14:44:20,019 DEBUG [MethodCall]: MethodCall.execute() formal argument #3=DefaultVN;class java.lang.String
+2009-01-22 14:44:20,020 DEBUG [MethodCall]: MethodCall.execute() formal argument #4=Undefined_JOBID;class java.lang.String
+2009-01-22 14:44:20,020 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,020 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=boolean
+2009-01-22 14:44:20,020 DEBUG [MethodCall]: MethodCall.execute() actual argument #2=class org.objectweb.proactive.core.security.ProActiveSecurityManager
+2009-01-22 14:44:20,021 DEBUG [MethodCall]: MethodCall.execute() actual argument #3=class java.lang.String
+2009-01-22 14:44:20,021 DEBUG [MethodCall]: MethodCall.execute() actual argument #4=class java.lang.String
+2009-01-22 14:44:20,028 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695
+2009-01-22 14:44:20,035 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/53953
+2009-01-22 14:44:20,036 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,036 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,036 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,037 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@2b7db1
+2009-01-22 14:44:20,037 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,037 DEBUG [MethodCall]: MethodCall.execute() name = getObjectProxy
+2009-01-22 14:44:20,038 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getObjectProxy()
+2009-01-22 14:44:20,038 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,039 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@2b7db1
+2009-01-22 14:44:20,039 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,040 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,040 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,041 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,041 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@2b7db1
+2009-01-22 14:44:20,041 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,042 DEBUG [MethodCall]: MethodCall.execute() name = getID
+2009-01-22 14:44:20,042 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.UniqueID org.objectweb.proactive.core.body.UniversalBody.getID()
+2009-01-22 14:44:20,043 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,044 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,044 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,045 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,045 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.Job.getJobID()
+2009-01-22 14:44:20,045 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.Job
+2009-01-22 14:44:20,046 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,046 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,047 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,048 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,048 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,048 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,049 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,049 DEBUG [UniversalBodyRemoteObjectAdapter]: class pa.stub.org.objectweb.proactive.core.body._StubUniversalBody
+2009-01-22 14:44:20,051 DEBUG [AbstractBody]: Active Object security Off
+2009-01-22 14:44:20,061 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695
+2009-01-22 14:44:20,061 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695
+2009-01-22 14:44:20,066 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695 looked up successfully
+2009-01-22 14:44:20,069 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,069 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,069 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,069 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1f54c5f
+2009-01-22 14:44:20,070 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,072 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:20,073 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:20,073 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,073 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@d4d66b
+2009-01-22 14:44:20,074 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,077 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:20,078 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:20,078 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,078 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@d4d66b
+2009-01-22 14:44:20,079 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,081 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:20,081 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:20,082 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,082 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@d4d66b
+2009-01-22 14:44:20,082 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,084 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:20,084 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:20,085 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,085 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,085 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,088 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:20,089 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:20,089 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,089 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,089 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,092 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,092 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getJobID(java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,092 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,093 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,093 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,093 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695;class java.lang.String
+2009-01-22 14:44:20,093 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,097 DEBUG [MethodCall]: MethodCall.execute() name = getLocalNodeProperty
+2009-01-22 14:44:20,098 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,098 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,098 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,098 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,099 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=__PA__HalfbodiesNode1463477695;class java.lang.String
+2009-01-22 14:44:20,099 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=ftenabled;class java.lang.String
+2009-01-22 14:44:20,100 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,100 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class java.lang.String
+2009-01-22 14:44:20,104 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,127 DEBUG [MethodCall]: MethodCall.execute() name = receiveReply
+2009-01-22 14:44:20,127 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveReply(org.objectweb.proactive.core.body.reply.Reply) throws java.io.IOException
+2009-01-22 14:44:20,127 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,127 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for Other thread node=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695 id=53953
+2009-01-22 14:44:20,128 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,128 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=toString, sender=80286, sequenceNumber=50522426
+;class org.objectweb.proactive.core.body.reply.ReplyImpl
+2009-01-22 14:44:20,129 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.reply.Reply
+2009-01-22 14:44:20,135 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=ConstructorCallImpl
+reifiedConstructor=public org.objectweb.proactive.core.body.ActiveBody(org.objectweb.proactive.core.mop.ConstructorCall,java.lang.String,org.objectweb.proactive.Active,org.objectweb.proactive.core.body.MetaObjectFactory,java.lang.String) throws java.lang.reflect.InvocationTargetException,org.objectweb.proactive.core.mop.ConstructorCallExecutionFailedException,org.objectweb.proactive.ActiveObjectCreationException
+effectiveArguments=
+   effectiveArguments[0]=ConstructorCallImpl
+reifiedConstructor=public org.objectweb.proactive.examples.nbody.groupcom.Domain(java.lang.Integer,org.objectweb.proactive.examples.nbody.common.Planet,org.objectweb.proactive.examples.nbody.common.Deployer)
+effectiveArguments=
+   effectiveArguments[0]=1
+   effectiveArguments[1]=org.objectweb.proactive.examples.nbody.common.Planet@1c9e67a
+   effectiveArguments[2]=org.objectweb.proactive.examples.nbody.common.Deployer@1f68272
+
+
+   effectiveArguments[1]=rmi://orchidee.inria.fr:6635/as585697212
+   effectiveArguments[2]=null
+   effectiveArguments[3]=org.objectweb.proactive.core.body.ProActiveMetaObjectFactory@27982
+   effectiveArguments[4]=Undefined_JOBID
+
+;class org.objectweb.proactive.core.mop.ConstructorCallImpl
+2009-01-22 14:44:20,135 DEBUG [MethodCall]: MethodCall.execute() formal argument #2=false;class java.lang.Boolean
+2009-01-22 14:44:20,135 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,135 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=interface org.objectweb.proactive.core.mop.ConstructorCall
+2009-01-22 14:44:20,136 DEBUG [MethodCall]: MethodCall.execute() actual argument #2=boolean
+2009-01-22 14:44:20,140 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/20708
+2009-01-22 14:44:20,141 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,141 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,141 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,142 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@18488ef
+2009-01-22 14:44:20,142 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,144 DEBUG [MethodCall]: MethodCall.execute() name = getObjectProxy
+2009-01-22 14:44:20,144 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getObjectProxy()
+2009-01-22 14:44:20,145 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,145 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@18488ef
+2009-01-22 14:44:20,145 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,145 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,146 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,146 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,146 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@18488ef
+2009-01-22 14:44:20,147 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,148 DEBUG [MethodCall]: MethodCall.execute() name = getID
+2009-01-22 14:44:20,148 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.UniqueID org.objectweb.proactive.core.body.UniversalBody.getID()
+2009-01-22 14:44:20,148 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,149 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,149 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,150 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,150 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.Job.getJobID()
+2009-01-22 14:44:20,150 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.Job
+2009-01-22 14:44:20,151 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,151 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,152 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,152 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,153 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,153 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,153 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,154 DEBUG [UniversalBodyRemoteObjectAdapter]: class pa.stub.org.objectweb.proactive.core.body._StubUniversalBody
+2009-01-22 14:44:20,155 DEBUG [AbstractBody]: Active Object security Off
+2009-01-22 14:44:20,158 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,158 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,162 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as585697212 looked up successfully
+2009-01-22 14:44:20,164 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,164 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,165 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,165 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1b4c1d7
+2009-01-22 14:44:20,165 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,167 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:20,167 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:20,168 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,168 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,168 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,171 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:20,171 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:20,172 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,172 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,172 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,174 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:20,174 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:20,175 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,175 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,175 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,177 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:20,177 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:20,178 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,178 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,178 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,181 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:20,181 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:20,182 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,182 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,182 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,185 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,185 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getJobID(java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,185 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,185 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,185 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,186 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/as585697212;class java.lang.String
+2009-01-22 14:44:20,186 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,189 DEBUG [MethodCall]: MethodCall.execute() name = getLocalNodeProperty
+2009-01-22 14:44:20,189 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,189 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,190 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,190 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,190 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=as585697212;class java.lang.String
+2009-01-22 14:44:20,190 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=timitActivation;class java.lang.String
+2009-01-22 14:44:20,191 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,192 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class java.lang.String
+2009-01-22 14:44:20,209 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,209 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,211 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as585697212 looked up successfully
+2009-01-22 14:44:20,213 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,213 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,213 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,213 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1b4c1d7
+2009-01-22 14:44:20,213 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,215 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:20,217 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:20,217 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,217 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,217 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,219 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:20,219 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:20,219 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,219 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,220 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,222 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:20,222 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:20,222 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,222 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,223 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,225 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:20,225 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:20,225 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,226 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,226 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,229 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:20,229 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:20,230 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,230 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,230 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,233 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,233 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getJobID(java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,234 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,234 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,234 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,234 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/as585697212;class java.lang.String
+2009-01-22 14:44:20,234 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,237 DEBUG [MethodCall]: MethodCall.execute() name = getLocalNodeProperty
+2009-01-22 14:44:20,237 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,237 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,238 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,238 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,238 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=as585697212;class java.lang.String
+2009-01-22 14:44:20,239 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=ftenabled;class java.lang.String
+2009-01-22 14:44:20,239 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,239 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class java.lang.String
+2009-01-22 14:44:20,250 DEBUG [ActiveBody]: Starting Body
+2009-01-22 14:44:20,252 DEBUG [ProActiveRuntimeWrapper]: [bodyCreated]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@16eb6bc
+2009-01-22 14:44:20,252 DEBUG [MigratableBody]: Body run on node rmi://orchidee.inria.fr:6635/as585697212 migration=false
+2009-01-22 14:44:20,252 DEBUG [MigratableBody]: Body run on node rmi://orchidee.inria.fr:6635/as585697212 migration=false
+2009-01-22 14:44:20,253 DEBUG [ProActiveRuntimeImpl]: nodeName as585697212
+2009-01-22 14:44:20,257 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=null
+2009-01-22 14:44:20,306 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:20,309 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:20,310 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,310 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,310 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,310 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=hashCode, sender=80286, sequenceNumber=53196986
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:20,311 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:20,317 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=Request source: 80286, destination: 20708, methodName: hashCode, destination request queue length: 1
+2009-01-22 14:44:20,318 DEBUG [RequestReceiverImpl]: immediately serving hashCode
+2009-01-22 14:44:20,318 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:20,319 DEBUG [RequestImpl]: Serving hashCode
+2009-01-22 14:44:20,319 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,319 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,320 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,336 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Domain@366573
+2009-01-22 14:44:20,336 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,336 DEBUG [RequestImpl]: result: [java.lang.Integer]
+2009-01-22 14:44:20,337 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:20,346 DEBUG [RequestReceiverImpl]: end of service for hashCode
+2009-01-22 14:44:20,355 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-22 14:44:20,356 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@cc8a48
+2009-01-22 14:44:20,357 DEBUG [UniversalBodyProxy]: Local body is Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,357 DEBUG [UniversalBodyProxy]: universalBody is Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,361 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/19563
+2009-01-22 14:44:20,362 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,363 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,364 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,364 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@3cb075
+2009-01-22 14:44:20,364 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,365 DEBUG [MethodCall]: MethodCall.execute() name = getObjectProxy
+2009-01-22 14:44:20,365 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getObjectProxy()
+2009-01-22 14:44:20,367 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,367 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@3cb075
+2009-01-22 14:44:20,367 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,368 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,368 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,369 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,370 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@3cb075
+2009-01-22 14:44:20,370 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,371 DEBUG [MethodCall]: MethodCall.execute() name = getID
+2009-01-22 14:44:20,371 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.UniqueID org.objectweb.proactive.core.body.UniversalBody.getID()
+2009-01-22 14:44:20,372 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,372 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,373 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,374 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,374 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.Job.getJobID()
+2009-01-22 14:44:20,375 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.Job
+2009-01-22 14:44:20,375 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,376 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,377 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,378 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,378 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,379 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,380 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,381 DEBUG [UniversalBodyRemoteObjectAdapter]: class pa.stub.org.objectweb.proactive.core.body._StubUniversalBody
+2009-01-22 14:44:20,381 DEBUG [AbstractBody]: Active Object security Off
+2009-01-22 14:44:20,382 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695
+2009-01-22 14:44:20,383 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695
+2009-01-22 14:44:20,384 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695 looked up successfully
+2009-01-22 14:44:20,387 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,387 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,387 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,387 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1f54c5f
+2009-01-22 14:44:20,388 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,390 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:20,390 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:20,390 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,391 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@d4d66b
+2009-01-22 14:44:20,391 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,393 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:20,394 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:20,394 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,394 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@d4d66b
+2009-01-22 14:44:20,394 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,397 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:20,397 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:20,398 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,398 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@d4d66b
+2009-01-22 14:44:20,399 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,400 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:20,401 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:20,401 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,401 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,401 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,403 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:20,404 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:20,404 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,404 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,404 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,406 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,406 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getJobID(java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,406 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,406 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,407 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,407 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695;class java.lang.String
+2009-01-22 14:44:20,408 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,409 DEBUG [MethodCall]: MethodCall.execute() name = getLocalNodeProperty
+2009-01-22 14:44:20,410 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,410 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,410 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,410 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,410 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=__PA__HalfbodiesNode1463477695;class java.lang.String
+2009-01-22 14:44:20,411 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=ftenabled;class java.lang.String
+2009-01-22 14:44:20,411 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,411 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class java.lang.String
+2009-01-22 14:44:20,419 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-22 14:44:20,419 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@425743
+2009-01-22 14:44:20,432 DEBUG [MethodCall]: MethodCall.execute() name = createBody
+2009-01-22 14:44:20,432 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.body.UniversalBody org.objectweb.proactive.core.runtime.ProActiveRuntime.createBody(java.lang.String,org.objectweb.proactive.core.mop.ConstructorCall,boolean) throws org.objectweb.proactive.core.ProActiveException,org.objectweb.proactive.core.mop.ConstructorCallExecutionFailedException,java.lang.reflect.InvocationTargetException
+2009-01-22 14:44:20,432 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,432 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,433 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,433 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=as585697212;class java.lang.String
+2009-01-22 14:44:20,433 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,447 DEBUG [MethodCall]: MethodCall.execute() name = receiveReply
+2009-01-22 14:44:20,447 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveReply(org.objectweb.proactive.core.body.reply.Reply) throws java.io.IOException
+2009-01-22 14:44:20,495 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,497 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for Other thread node=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695 id=19563
+2009-01-22 14:44:20,497 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,497 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=hashCode, sender=32902, sequenceNumber=47003275
+;class org.objectweb.proactive.core.body.reply.ReplyImpl
+2009-01-22 14:44:20,497 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.reply.Reply
+2009-01-22 14:44:20,499 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,500 DEBUG [RequestReceiverImpl]: immediately serving hashCode
+2009-01-22 14:44:20,500 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:20,500 DEBUG [RequestImpl]: Serving hashCode
+2009-01-22 14:44:20,501 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,501 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,502 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,502 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Domain@366573
+2009-01-22 14:44:20,503 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,504 DEBUG [RequestImpl]: result: [java.lang.Integer]
+2009-01-22 14:44:20,504 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:20,519 DEBUG [RequestReceiverImpl]: end of service for hashCode
+2009-01-22 14:44:20,519 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,533 DEBUG [MethodCall]: MethodCall.execute() name = receiveReply
+2009-01-22 14:44:20,533 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveReply(org.objectweb.proactive.core.body.reply.Reply) throws java.io.IOException
+2009-01-22 14:44:20,534 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,535 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for Other thread node=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695 id=19563
+2009-01-22 14:44:20,535 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,536 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=toString, sender=80286, sequenceNumber=47003277
+;class org.objectweb.proactive.core.body.reply.ReplyImpl
+2009-01-22 14:44:20,536 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.reply.Reply
+2009-01-22 14:44:20,538 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=ConstructorCallImpl
+reifiedConstructor=public org.objectweb.proactive.core.body.ActiveBody(org.objectweb.proactive.core.mop.ConstructorCall,java.lang.String,org.objectweb.proactive.Active,org.objectweb.proactive.core.body.MetaObjectFactory,java.lang.String) throws java.lang.reflect.InvocationTargetException,org.objectweb.proactive.core.mop.ConstructorCallExecutionFailedException,org.objectweb.proactive.ActiveObjectCreationException
+effectiveArguments=
+   effectiveArguments[0]=ConstructorCallImpl
+reifiedConstructor=public org.objectweb.proactive.examples.nbody.groupcom.Maestro(org.objectweb.proactive.examples.nbody.groupcom.Domain,java.lang.Integer,org.objectweb.proactive.examples.nbody.common.Deployer)
+effectiveArguments=
+   effectiveArguments[0]=org.objectweb.proactive.core.group.ProxyForGroup@1893151e
+   effectiveArguments[1]=10000
+   effectiveArguments[2]=org.objectweb.proactive.examples.nbody.common.Deployer@1f68272
+
+
+   effectiveArguments[1]=rmi://orchidee.inria.fr:6635/as585697212
+   effectiveArguments[2]=null
+   effectiveArguments[3]=org.objectweb.proactive.core.body.ProActiveMetaObjectFactory@15f157b
+   effectiveArguments[4]=Undefined_JOBID
+
+;class org.objectweb.proactive.core.mop.ConstructorCallImpl
+2009-01-22 14:44:20,559 DEBUG [MethodCall]: MethodCall.execute() formal argument #2=false;class java.lang.Boolean
+2009-01-22 14:44:20,560 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,560 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=interface org.objectweb.proactive.core.mop.ConstructorCall
+2009-01-22 14:44:20,560 DEBUG [MethodCall]: MethodCall.execute() actual argument #2=boolean
+2009-01-22 14:44:20,566 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/105
+2009-01-22 14:44:20,567 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,567 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,567 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,568 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@3b4b1e
+2009-01-22 14:44:20,569 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,569 DEBUG [MethodCall]: MethodCall.execute() name = getObjectProxy
+2009-01-22 14:44:20,569 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getObjectProxy()
+2009-01-22 14:44:20,570 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,570 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@3b4b1e
+2009-01-22 14:44:20,570 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,571 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,571 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,571 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,572 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@3b4b1e
+2009-01-22 14:44:20,572 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,573 DEBUG [MethodCall]: MethodCall.execute() name = getID
+2009-01-22 14:44:20,573 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.UniqueID org.objectweb.proactive.core.body.UniversalBody.getID()
+2009-01-22 14:44:20,574 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,574 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,574 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,575 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,575 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.Job.getJobID()
+2009-01-22 14:44:20,597 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.Job
+2009-01-22 14:44:20,598 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,599 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,599 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,599 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,600 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,600 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:20,600 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,601 DEBUG [UniversalBodyRemoteObjectAdapter]: class pa.stub.org.objectweb.proactive.core.body._StubUniversalBody
+2009-01-22 14:44:20,602 DEBUG [AbstractBody]: Active Object security Off
+2009-01-22 14:44:20,602 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,602 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,605 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as585697212 looked up successfully
+2009-01-22 14:44:20,606 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,606 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,607 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,607 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1b4c1d7
+2009-01-22 14:44:20,607 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,610 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:20,610 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:20,610 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,610 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,611 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,612 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:20,613 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:20,614 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,614 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,614 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,616 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:20,616 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:20,616 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,645 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,646 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,647 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:20,648 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:20,648 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,648 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,648 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,650 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:20,650 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:20,651 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,651 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,652 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,654 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,654 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getJobID(java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,655 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,655 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,655 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,655 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/as585697212;class java.lang.String
+2009-01-22 14:44:20,655 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,657 DEBUG [MethodCall]: MethodCall.execute() name = getLocalNodeProperty
+2009-01-22 14:44:20,657 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,657 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,658 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,658 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,658 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=as585697212;class java.lang.String
+2009-01-22 14:44:20,658 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=timitActivation;class java.lang.String
+2009-01-22 14:44:20,658 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,658 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class java.lang.String
+2009-01-22 14:44:20,660 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,660 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:20,662 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as585697212 looked up successfully
+2009-01-22 14:44:20,695 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:20,695 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:20,695 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:20,695 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1b4c1d7
+2009-01-22 14:44:20,696 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,697 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:20,698 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:20,698 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,698 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,698 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,700 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:20,700 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:20,700 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,701 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,701 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,702 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:20,703 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:20,703 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:20,703 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1f31652
+2009-01-22 14:44:20,703 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,705 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:20,705 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:20,706 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,706 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,706 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,708 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:20,708 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:20,708 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,708 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,709 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,744 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:20,744 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getJobID(java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,744 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,744 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,744 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,745 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/as585697212;class java.lang.String
+2009-01-22 14:44:20,745 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,747 DEBUG [MethodCall]: MethodCall.execute() name = getLocalNodeProperty
+2009-01-22 14:44:20,747 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:20,747 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:20,747 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:20,747 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,747 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=as585697212;class java.lang.String
+2009-01-22 14:44:20,748 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=ftenabled;class java.lang.String
+2009-01-22 14:44:20,748 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:20,748 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class java.lang.String
+2009-01-22 14:44:20,749 DEBUG [ActiveBody]: Starting Body
+2009-01-22 14:44:20,750 DEBUG [ProActiveRuntimeWrapper]: [bodyCreated]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@5a2eaa
+2009-01-22 14:44:20,751 DEBUG [MigratableBody]: Body run on node rmi://orchidee.inria.fr:6635/as585697212 migration=false
+2009-01-22 14:44:20,751 DEBUG [MigratableBody]: Body run on node rmi://orchidee.inria.fr:6635/as585697212 migration=false
+2009-01-22 14:44:20,751 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=null
+2009-01-22 14:44:20,751 DEBUG [ProActiveRuntimeImpl]: nodeName as585697212
+2009-01-22 14:44:20,766 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:20,766 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:20,766 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,767 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Maestro node=rmi://orchidee.inria.fr:6635/as585697212 id=105
+2009-01-22 14:44:20,767 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,767 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=toString, sender=80286, sequenceNumber=53196987
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:20,813 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:20,814 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=Request source: 80286, destination: 105, methodName: toString, destination request queue length: 1
+2009-01-22 14:44:20,815 DEBUG [RequestReceiverImpl]: immediately serving toString
+2009-01-22 14:44:20,815 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:20,815 DEBUG [RequestImpl]: Serving toString
+2009-01-22 14:44:20,816 DEBUG [MethodCall]: MethodCall.execute() name = toString
+2009-01-22 14:44:20,819 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public java.lang.String java.lang.Object.toString()
+2009-01-22 14:44:20,819 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,820 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Maestro@940f82
+2009-01-22 14:44:20,820 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,821 DEBUG [RequestImpl]: result: [java.lang.String]
+2009-01-22 14:44:20,822 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-22 14:44:20,823 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:20,824 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@cc8a48
+2009-01-22 14:44:20,828 DEBUG [UniversalBodyProxy]: Local body is Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,830 DEBUG [UniversalBodyProxy]: universalBody is Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,842 DEBUG [RequestReceiverImpl]: end of service for toString
+2009-01-22 14:44:20,851 DEBUG [UniversalBodyProxy]: Local body is null
+2009-01-22 14:44:20,852 DEBUG [UniversalBodyProxy]: universalBody is org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter@e496ab
+2009-01-22 14:44:20,861 DEBUG [UniversalBodyProxy]: Local body is Body for org.objectweb.proactive.examples.nbody.groupcom.Maestro node=rmi://orchidee.inria.fr:6635/as585697212 id=105
+2009-01-22 14:44:20,863 DEBUG [UniversalBodyProxy]: universalBody is Body for org.objectweb.proactive.examples.nbody.groupcom.Maestro node=rmi://orchidee.inria.fr:6635/as585697212 id=105
+2009-01-22 14:44:20,868 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:20,868 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:20,868 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,868 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,868 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,869 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=init, sender=36582, sequenceNumber=48761009
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:20,869 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:20,869 DEBUG [BlockingRequestQueueImpl]: Adding request init
+2009-01-22 14:44:20,873 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:20,896 DEBUG [RequestImpl]: Serving init
+2009-01-22 14:44:20,897 DEBUG [MethodCall]: MethodCall.execute() name = init
+2009-01-22 14:44:20,897 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public void org.objectweb.proactive.examples.nbody.groupcom.Domain.init(org.objectweb.proactive.examples.nbody.groupcom.Domain,org.objectweb.proactive.examples.nbody.common.Displayer,org.objectweb.proactive.examples.nbody.groupcom.Maestro)
+2009-01-22 14:44:20,897 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.objectweb.proactive.examples.nbody.groupcom.Domain
+2009-01-22 14:44:20,899 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Domain@366573
+2009-01-22 14:44:20,899 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,900 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,901 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:20,902 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:20,902 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,903 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,903 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,903 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=sendValueToNeighbours, sender=36582, sequenceNumber=48761011
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:20,903 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:20,904 DEBUG [BlockingRequestQueueImpl]: Adding request sendValueToNeighbours
+2009-01-22 14:44:20,910 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:20,911 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:20,911 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,911 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,912 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,913 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=hashCode, sender=32902, sequenceNumber=48645438
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:20,913 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:20,913 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=Request source: 32902, destination: 20708, methodName: hashCode, destination request queue length: 2
+2009-01-22 14:44:20,914 DEBUG [RequestReceiverImpl]: immediately serving hashCode
+2009-01-22 14:44:20,914 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=1
+2009-01-22 14:44:20,914 DEBUG [RequestImpl]: Serving hashCode
+2009-01-22 14:44:20,914 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,917 DEBUG [MethodCall]: MethodCall.execute() name = receiveReply
+2009-01-22 14:44:20,934 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,935 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveReply(org.objectweb.proactive.core.body.reply.Reply) throws java.io.IOException
+2009-01-22 14:44:20,935 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,935 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,935 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Domain@366573
+2009-01-22 14:44:20,936 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,936 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,936 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,937 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=hashCode, sender=32902, sequenceNumber=47660418
+;class org.objectweb.proactive.core.body.reply.ReplyImpl
+2009-01-22 14:44:20,937 DEBUG [RequestImpl]: result: [java.lang.Integer]
+2009-01-22 14:44:20,938 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.reply.Reply
+2009-01-22 14:44:20,938 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=1
+2009-01-22 14:44:20,938 DEBUG [BodyWrapper]: [replyReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=null
+2009-01-22 14:44:20,941 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,941 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=Request source: 20708, destination: 20708, methodName: hashCode, destination request queue length: 2
+2009-01-22 14:44:20,942 DEBUG [RequestReceiverImpl]: immediately serving hashCode
+2009-01-22 14:44:20,942 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=1
+2009-01-22 14:44:20,942 DEBUG [RequestImpl]: Serving hashCode
+2009-01-22 14:44:20,942 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:20,943 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:20,944 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,944 DEBUG [RequestReceiverImpl]: end of service for hashCode
+2009-01-22 14:44:20,944 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Domain@366573
+2009-01-22 14:44:20,945 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,945 DEBUG [RequestImpl]: result: [java.lang.Integer]
+2009-01-22 14:44:20,946 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=1
+2009-01-22 14:44:20,946 DEBUG [BodyWrapper]: [replyReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=null
+2009-01-22 14:44:20,947 DEBUG [RequestReceiverImpl]: end of service for hashCode
+2009-01-22 14:44:20,947 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=org.objectweb.proactive.core.group.ProxyForGroup@1893151e;class pa.stub.org.objectweb.proactive.examples.nbody.groupcom._StubDomain
+2009-01-22 14:44:20,947 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,964 DEBUG [MethodCall]: MethodCall.execute() name = receiveReply
+2009-01-22 14:44:20,964 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveReply(org.objectweb.proactive.core.body.reply.Reply) throws java.io.IOException
+2009-01-22 14:44:20,986 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,986 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:20,986 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,986 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=toString, sender=64409, sequenceNumber=47660420
+;class org.objectweb.proactive.core.body.reply.ReplyImpl
+2009-01-22 14:44:20,987 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.reply.Reply
+2009-01-22 14:44:20,987 DEBUG [BodyWrapper]: [replyReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=null
+2009-01-22 14:44:20,988 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=org.objectweb.proactive.examples.nbody.common.Displayer@5f1ba8;class pa.stub.org.objectweb.proactive.examples.nbody.common._StubDisplayer
+2009-01-22 14:44:20,989 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:20,989 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=Request source: 20708, destination: 105, methodName: toString, destination request queue length: 1
+2009-01-22 14:44:20,990 DEBUG [RequestReceiverImpl]: immediately serving toString
+2009-01-22 14:44:20,991 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:20,992 DEBUG [RequestImpl]: Serving toString
+2009-01-22 14:44:20,992 DEBUG [MethodCall]: MethodCall.execute() name = toString
+2009-01-22 14:44:20,993 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public java.lang.String java.lang.Object.toString()
+2009-01-22 14:44:20,991 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:20,993 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:20,994 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:20,994 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Maestro@940f82
+2009-01-22 14:44:20,995 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:20,995 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,996 DEBUG [RequestImpl]: result: [java.lang.String]
+2009-01-22 14:44:20,995 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Maestro node=rmi://orchidee.inria.fr:6635/as585697212 id=105
+2009-01-22 14:44:20,996 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:20,996 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:20,997 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=toString, sender=32902, sequenceNumber=48645440
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:20,997 DEBUG [BodyWrapper]: [replyReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=null
+2009-01-22 14:44:20,997 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:20,997 DEBUG [RequestReceiverImpl]: end of service for toString
+2009-01-22 14:44:21,022 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=Request source: 32902, destination: 105, methodName: toString, destination request queue length: 1
+2009-01-22 14:44:21,022 DEBUG [MethodCall]: MethodCall.execute() formal argument #2=org.objectweb.proactive.examples.nbody.groupcom.Maestro@940f82;class pa.stub.org.objectweb.proactive.examples.nbody.groupcom._StubMaestro
+2009-01-22 14:44:21,022 DEBUG [RequestReceiverImpl]: immediately serving toString
+2009-01-22 14:44:21,023 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class org.objectweb.proactive.examples.nbody.groupcom.Domain
+2009-01-22 14:44:21,024 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:21,024 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class org.objectweb.proactive.examples.nbody.common.Displayer
+2009-01-22 14:44:21,024 DEBUG [RequestImpl]: Serving toString
+2009-01-22 14:44:21,024 DEBUG [MethodCall]: MethodCall.execute() actual argument #2=class org.objectweb.proactive.examples.nbody.groupcom.Maestro
+2009-01-22 14:44:21,024 DEBUG [MethodCall]: MethodCall.execute() name = toString
+2009-01-22 14:44:21,025 DEBUG [PAActiveObject]: ProActive: getStubOnThis() returns Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:21,025 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public java.lang.String java.lang.Object.toString()
+2009-01-22 14:44:21,025 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:21,026 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Maestro@940f82
+2009-01-22 14:44:21,026 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:21,026  INFO [MOPClassLoader]: Generating class : pa.stub.org.objectweb.proactive.examples.nbody.groupcom._StubDomain
+2009-01-22 14:44:21,026 DEBUG [RequestImpl]: result: [java.lang.String]
+2009-01-22 14:44:21,028 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:21,034 DEBUG [RequestReceiverImpl]: end of service for toString
+2009-01-22 14:44:21,050 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:21,050 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:21,050 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:21,051 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:21,051 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:21,051 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=setValue, sender=32902, sequenceNumber=48645441
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:21,052 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:21,052 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=Request source: 32902, destination: 20708, methodName: setValue, destination request queue length: 2
+2009-01-22 14:44:21,054 DEBUG [BlockingRequestQueueImpl]: Adding request setValue
+2009-01-22 14:44:21,352 DEBUG [RequestImpl]: result: [null]
+2009-01-22 14:44:21,353 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=2
+2009-01-22 14:44:21,353 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=1
+2009-01-22 14:44:21,353 DEBUG [RequestImpl]: Serving sendValueToNeighbours
+2009-01-22 14:44:21,353 DEBUG [MethodCall]: MethodCall.execute() name = sendValueToNeighbours
+2009-01-22 14:44:21,353 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public void org.objectweb.proactive.examples.nbody.groupcom.Domain.sendValueToNeighbours()
+2009-01-22 14:44:21,353 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.objectweb.proactive.examples.nbody.groupcom.Domain
+2009-01-22 14:44:21,353 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Domain@366573
+2009-01-22 14:44:21,354 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:21,359 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:21,372  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Planet successfully
+2009-01-22 14:44:21,373 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46586,localport=2028]
+2009-01-22 14:44:21,376  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Force successfully
+2009-01-22 14:44:21,376 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46587,localport=2028]
+2009-01-22 14:44:21,380  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Cube successfully
+2009-01-22 14:44:21,380 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46588,localport=2028]
+2009-01-22 14:44:21,383  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.PlanetDescription successfully
+2009-01-22 14:44:21,383 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46589,localport=2028]
+2009-01-22 14:44:21,386  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.groupcom.Domain successfully
+2009-01-22 14:44:21,386 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46590,localport=2028]
+2009-01-22 14:44:21,389  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.groupcom.Maestro successfully
+2009-01-22 14:44:21,389 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46591,localport=2028]
+2009-01-22 14:44:21,392  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Displayer successfully
+2009-01-22 14:44:21,392 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46592,localport=2028]
+2009-01-22 14:44:21,394  INFO [HTTPRequestHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Deployer successfully
+2009-01-22 14:44:21,395 DEBUG [HTTPRequestHandler]: Closing socket Socket[addr=/138.96.218.201,port=46593,localport=2028]
+2009-01-22 14:44:21,402 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:21,411 DEBUG [RequestImpl]: result: [null]
+2009-01-22 14:44:21,411 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=1
+2009-01-22 14:44:21,412 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:21,412 DEBUG [RequestImpl]: Serving setValue
+2009-01-22 14:44:21,412 DEBUG [MethodCall]: MethodCall.execute() name = setValue
+2009-01-22 14:44:21,412 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public void org.objectweb.proactive.examples.nbody.groupcom.Domain.setValue(org.objectweb.proactive.examples.nbody.common.Planet,int)
+2009-01-22 14:44:21,431 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.objectweb.proactive.examples.nbody.groupcom.Domain
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Domain@366573
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=org.objectweb.proactive.examples.nbody.common.Planet@1c21ece;class org.objectweb.proactive.examples.nbody.common.Planet
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=0;class java.lang.Integer
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class org.objectweb.proactive.examples.nbody.common.Planet
+2009-01-22 14:44:21,433 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=int
+2009-01-22 14:44:21,433 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:21,434 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=Request source: 20708, destination: 105, methodName: notifyFinished, destination request queue length: 1
+2009-01-22 14:44:21,434 DEBUG [BlockingRequestQueueImpl]: Adding request notifyFinished
+2009-01-22 14:44:21,434 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:21,435 DEBUG [RequestImpl]: Serving notifyFinished
+2009-01-22 14:44:21,435 DEBUG [MethodCall]: MethodCall.execute() name = notifyFinished
+2009-01-22 14:44:21,435 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public void org.objectweb.proactive.examples.nbody.groupcom.Maestro.notifyFinished()
+2009-01-22 14:44:21,438 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.objectweb.proactive.examples.nbody.groupcom.Maestro
+2009-01-22 14:44:21,438 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.groupcom.Maestro@940f82
+2009-01-22 14:44:21,439 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:21,439 DEBUG [RequestImpl]: result: [null]
+2009-01-22 14:44:21,439 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:21,439 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=null
+2009-01-22 14:44:21,440 DEBUG [RequestImpl]: result: [null]
+2009-01-22 14:44:21,441 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:21,441 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=null
+2009-01-22 14:44:27,606 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:27,607 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:27,607 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:27,607 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Domain node=rmi://orchidee.inria.fr:6635/as585697212 id=20708
+2009-01-22 14:44:27,607 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:27,608 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=_terminateAO, sender=80286, sequenceNumber=53196988
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:27,608 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:27,635 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=Request source: 80286, destination: 20708, methodName: _terminateAO, destination request queue length: 1
+2009-01-22 14:44:27,636 DEBUG [BlockingRequestQueueImpl]: Adding request _terminateAO
+2009-01-22 14:44:27,637 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=20708, userData=0
+2009-01-22 14:44:27,639 DEBUG [AbstractBody]: Calling terminate for active object org.objectweb.proactive.examples.nbody.groupcom.Domain
+2009-01-22 14:44:27,639 DEBUG [ProActiveRuntimeWrapper]: [bodyDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@17b1d64
+2009-01-22 14:44:27,660 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:27,660 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:27,660 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:27,660 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.groupcom.Maestro node=rmi://orchidee.inria.fr:6635/as585697212 id=105
+2009-01-22 14:44:27,660 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:27,661 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=_terminateAO, sender=80286, sequenceNumber=53196990
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:27,661 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:27,661 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=Request source: 80286, destination: 105, methodName: _terminateAO, destination request queue length: 1
+2009-01-22 14:44:27,661 DEBUG [BlockingRequestQueueImpl]: Adding request _terminateAO
+2009-01-22 14:44:27,662 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=105, userData=0
+2009-01-22 14:44:27,662 DEBUG [AbstractBody]: Calling terminate for active object org.objectweb.proactive.examples.nbody.groupcom.Maestro
+2009-01-22 14:44:27,662 DEBUG [ProActiveRuntimeWrapper]: [bodyDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@1080876
+2009-01-22 14:44:27,680 DEBUG [MethodCall]: MethodCall.execute() name = killRT
+2009-01-22 14:44:27,681 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract void org.objectweb.proactive.core.runtime.ProActiveRuntime.killRT(boolean) throws java.lang.Exception
+2009-01-22 14:44:27,681 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:27,683 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@1c65216
+2009-01-22 14:44:27,684 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:27,684 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=true;class java.lang.Boolean
+2009-01-22 14:44:27,685 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=boolean
+2009-01-22 14:44:27,709 DEBUG [ProActiveRuntimeWrapper]: [runtimeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=null
+2009-01-22 14:44:27,711 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695 unbound in registry
+2009-01-22 14:44:27,712 DEBUG [ProActiveRuntimeWrapper]: [nodeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1463477695
+2009-01-22 14:44:27,712 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/as585697212 unbound in registry
+2009-01-22 14:44:27,713 DEBUG [ProActiveRuntimeWrapper]: [nodeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=rmi://orchidee.inria.fr:6635/as585697212
+2009-01-22 14:44:27,713  INFO [ProActiveRuntimeImpl]: terminating Runtime //orchidee.inria.fr/PA_JVM347895442
+2009-01-22 14:44:27,713 DEBUG [ProActiveRuntimeWrapper]: [runtimeDestroyed]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM347895442, userData=null
+g.objectweb.proactive.examples.nbody.common.Displayer@5f1ba8
+2009-01-22 14:44:20,961 DEBUG [RequestImpl]: result: [java.lang.String]
+2009-01-22 14:44:20,961 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:20,961 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=0
+2009-01-22 14:44:20,961 DEBUG [RequestImpl]: result: [java.lang.String]
+2009-01-22 14:44:20,962 DEBUG [BodyWrapper]: [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=0
+2009-01-22 14:44:20,966 DEBUG [RequestReceiverImpl]: end of service for toString
+2009-01-22 14:44:20,988 DEBUG [RequestReceiverImpl]: end of service for toString
+2009-01-22 14:44:21,027 DEBUG [AbstractExternalProcess$ProcessInputHandler]: Generating class : pa.stub.org.objectweb.proactive.examples.nbody.groupcom._StubDomain 
+2009-01-22 14:44:21,027  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: Generating class : pa.stub.org.objectweb.proactive.examples.nbody.groupcom._StubDomain 
+2009-01-22 14:44:21,090 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:21,090 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:21,090 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:21,092 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.common.Displayer node=rmi://orchidee.inria.fr:6635/Node737718121 id=64409
+2009-01-22 14:44:21,092 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:21,092 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=drawBody, sender=32902, sequenceNumber=48645442
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:21,093 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:21,093 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=Request source: 32902, destination: 64409, methodName: drawBody, destination request queue length: 1
+2009-01-22 14:44:21,093 DEBUG [BlockingRequestQueueImpl]: Adding request drawBody
+2009-01-22 14:44:21,094 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=0
+2009-01-22 14:44:21,094 DEBUG [RequestImpl]: Serving drawBody
+2009-01-22 14:44:21,095 DEBUG [MethodCall]: MethodCall.execute() name = drawBody
+2009-01-22 14:44:21,095 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public void org.objectweb.proactive.examples.nbody.common.Displayer.drawBody(double,double,double,double,double,double,int,int,int,java.lang.String)
+2009-01-22 14:44:21,095 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.objectweb.proactive.examples.nbody.common.Displayer
+2009-01-22 14:44:21,095 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.common.Displayer@5f1ba8
+2009-01-22 14:44:21,096 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:21,096 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=-1.2057995125891523;class java.lang.Double
+2009-01-22 14:44:21,096 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=73.07590239068927;class java.lang.Double
+2009-01-22 14:44:21,097 DEBUG [MethodCall]: MethodCall.execute() formal argument #2=30.93240531301683;class java.lang.Double
+2009-01-22 14:44:21,097 DEBUG [MethodCall]: MethodCall.execute() formal argument #3=0.0;class java.lang.Double
+2009-01-22 14:44:21,097 DEBUG [MethodCall]: MethodCall.execute() formal argument #4=0.0;class java.lang.Double
+2009-01-22 14:44:21,097 DEBUG [MethodCall]: MethodCall.execute() formal argument #5=0.0;class java.lang.Double
+2009-01-22 14:44:21,098 DEBUG [MethodCall]: MethodCall.execute() formal argument #6=83923;class java.lang.Integer
+2009-01-22 14:44:21,098 DEBUG [MethodCall]: MethodCall.execute() formal argument #7=44;class java.lang.Integer
+2009-01-22 14:44:21,098 DEBUG [MethodCall]: MethodCall.execute() formal argument #8=0;class java.lang.Integer
+2009-01-22 14:44:21,100 DEBUG [MethodCall]: MethodCall.execute() formal argument #9=eon1.inria.fr;class java.lang.String
+2009-01-22 14:44:21,100 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=double
+2009-01-22 14:44:21,100 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=double
+2009-01-22 14:44:21,100 DEBUG [MethodCall]: MethodCall.execute() actual argument #2=double
+2009-01-22 14:44:21,101 DEBUG [MethodCall]: MethodCall.execute() actual argument #3=double
+2009-01-22 14:44:21,101 DEBUG [MethodCall]: MethodCall.execute() actual argument #4=double
+2009-01-22 14:44:21,101 DEBUG [MethodCall]: MethodCall.execute() actual argument #5=double
+2009-01-22 14:44:21,101 DEBUG [MethodCall]: MethodCall.execute() actual argument #6=int
+2009-01-22 14:44:21,101 DEBUG [MethodCall]: MethodCall.execute() actual argument #7=int
+2009-01-22 14:44:21,102 DEBUG [MethodCall]: MethodCall.execute() actual argument #8=int
+2009-01-22 14:44:21,102 DEBUG [MethodCall]: MethodCall.execute() actual argument #9=class java.lang.String
+2009-01-22 14:44:21,105 DEBUG [RequestImpl]: result: [null]
+2009-01-22 14:44:21,105 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=0
+2009-01-22 14:44:21,105 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=null
+2009-01-22 14:44:21,372 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Planet successfully 
+2009-01-22 14:44:21,373  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Planet successfully 
+2009-01-22 14:44:21,376 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Force successfully 
+2009-01-22 14:44:21,376  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Force successfully 
+2009-01-22 14:44:21,380 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Cube successfully 
+2009-01-22 14:44:21,380  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Cube successfully 
+2009-01-22 14:44:21,383 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.PlanetDescription successfully 
+2009-01-22 14:44:21,383  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.PlanetDescription successfully 
+2009-01-22 14:44:21,386 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.groupcom.Domain successfully 
+2009-01-22 14:44:21,388  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.groupcom.Domain successfully 
+2009-01-22 14:44:21,389 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.groupcom.Maestro successfully 
+2009-01-22 14:44:21,389  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.groupcom.Maestro successfully 
+2009-01-22 14:44:21,392 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Displayer successfully 
+2009-01-22 14:44:21,392  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Displayer successfully 
+2009-01-22 14:44:21,395 DEBUG [AbstractExternalProcess$ProcessInputHandler]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Deployer successfully 
+2009-01-22 14:44:21,395  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: ClassServer sent class org.objectweb.proactive.examples.nbody.common.Deployer successfully 
+2009-01-22 14:44:21,407 DEBUG [MethodCall]: MethodCall.execute() name = receiveRequest
+2009-01-22 14:44:21,407 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+2009-01-22 14:44:21,407 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:21,407 DEBUG [MethodCall]: MethodCall.execute() targetObject Body for org.objectweb.proactive.examples.nbody.common.Displayer node=rmi://orchidee.inria.fr:6635/Node737718121 id=64409
+2009-01-22 14:44:21,408 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:21,408 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=method=drawBody, sender=20708, sequenceNumber=47660423
+;class org.objectweb.proactive.core.body.request.RequestImpl
+2009-01-22 14:44:21,408 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=interface org.objectweb.proactive.core.body.request.Request
+2009-01-22 14:44:21,409 DEBUG [BodyWrapper]: [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=Request source: 20708, destination: 64409, methodName: drawBody, destination request queue length: 1
+2009-01-22 14:44:21,409 DEBUG [BlockingRequestQueueImpl]: Adding request drawBody
+2009-01-22 14:44:21,410 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=0
+2009-01-22 14:44:21,410 DEBUG [RequestImpl]: Serving drawBody
+2009-01-22 14:44:21,410 DEBUG [MethodCall]: MethodCall.execute() name = drawBody
+2009-01-22 14:44:21,411 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public void org.objectweb.proactive.examples.nbody.common.Displayer.drawBody(double,double,double,double,double,double,int,int,int,java.lang.String)
+2009-01-22 14:44:21,411 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.objectweb.proactive.examples.nbody.common.Displayer
+2009-01-22 14:44:21,411 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.common.Displayer@5f1ba8
+2009-01-22 14:44:21,431 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=40.99733213667511;class java.lang.Double
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=-51.69946482201306;class java.lang.Double
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() formal argument #2=59.27169552438562;class java.lang.Double
+2009-01-22 14:44:21,432 DEBUG [MethodCall]: MethodCall.execute() formal argument #3=0.0;class java.lang.Double
+2009-01-22 14:44:21,433 DEBUG [MethodCall]: MethodCall.execute() formal argument #4=0.0;class java.lang.Double
+2009-01-22 14:44:21,433 DEBUG [MethodCall]: MethodCall.execute() formal argument #5=0.0;class java.lang.Double
+2009-01-22 14:44:21,433 DEBUG [MethodCall]: MethodCall.execute() formal argument #6=75855;class java.lang.Integer
+2009-01-22 14:44:21,433 DEBUG [MethodCall]: MethodCall.execute() formal argument #7=40;class java.lang.Integer
+2009-01-22 14:44:21,433 DEBUG [MethodCall]: MethodCall.execute() formal argument #8=1;class java.lang.Integer
+2009-01-22 14:44:21,434 DEBUG [MethodCall]: MethodCall.execute() formal argument #9=orchidee.inria.fr;class java.lang.String
+2009-01-22 14:44:21,434 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=double
+2009-01-22 14:44:21,434 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=double
+2009-01-22 14:44:21,434 DEBUG [MethodCall]: MethodCall.execute() actual argument #2=double
+2009-01-22 14:44:21,435 DEBUG [MethodCall]: MethodCall.execute() actual argument #3=double
+2009-01-22 14:44:21,435 DEBUG [MethodCall]: MethodCall.execute() actual argument #4=double
+2009-01-22 14:44:21,435 DEBUG [MethodCall]: MethodCall.execute() actual argument #5=double
+2009-01-22 14:44:21,435 DEBUG [MethodCall]: MethodCall.execute() actual argument #6=int
+2009-01-22 14:44:21,436 DEBUG [MethodCall]: MethodCall.execute() actual argument #7=int
+2009-01-22 14:44:21,436 DEBUG [MethodCall]: MethodCall.execute() actual argument #8=int
+2009-01-22 14:44:21,436 DEBUG [MethodCall]: MethodCall.execute() actual argument #9=class java.lang.String
+2009-01-22 14:44:21,437 DEBUG [RequestImpl]: result: [null]
+2009-01-22 14:44:21,437 DEBUG [BodyWrapper]: [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=0
+2009-01-22 14:44:21,437 DEBUG [BodyWrapper]: [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=64409, userData=null
+2009-01-22 14:44:27,524 DEBUG [RmiRemoteObjectFactory]:  successfully bound in registry at rmi://orchidee.inria.fr:6635/64998
+2009-01-22 14:44:27,525 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:27,525 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:27,525 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:27,525 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1d144a4
+2009-01-22 14:44:27,527 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,527 DEBUG [MethodCall]: MethodCall.execute() name = getObjectProxy
+2009-01-22 14:44:27,528 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getObjectProxy()
+2009-01-22 14:44:27,528 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:27,528 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1d144a4
+2009-01-22 14:44:27,528 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,529 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:27,529 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:27,529 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:27,529 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@1d144a4
+2009-01-22 14:44:27,530 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,530 DEBUG [MethodCall]: MethodCall.execute() name = getID
+2009-01-22 14:44:27,531 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.UniqueID org.objectweb.proactive.core.body.UniversalBody.getID()
+2009-01-22 14:44:27,532 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+2009-01-22 14:44:27,532 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:27,532 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,533 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:27,533 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.Job.getJobID()
+2009-01-22 14:44:27,533 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.Job
+2009-01-22 14:44:27,534 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:27,534 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,535 DEBUG [MethodCall]: MethodCall.execute() name = hashCode
+2009-01-22 14:44:27,536 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public native int java.lang.Object.hashCode()
+2009-01-22 14:44:27,536 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class java.lang.Object
+2009-01-22 14:44:27,536 DEBUG [MethodCall]: MethodCall.execute() targetObject Method call called during Body construction -- the body is not yet initialized 
+2009-01-22 14:44:27,536 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,537 DEBUG [UniversalBodyRemoteObjectAdapter]: class pa.stub.org.objectweb.proactive.core.body._StubUniversalBody
+2009-01-22 14:44:27,537 DEBUG [AbstractBody]: Active Object security Off
+2009-01-22 14:44:27,537 DEBUG [NodeFactory]: NodeFactory: getNode() for rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1368252010
+2009-01-22 14:44:27,538 DEBUG [RuntimeFactory]: proActiveRunTimeURL rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1368252010
+2009-01-22 14:44:27,539 DEBUG [RmiRemoteObjectFactory]: rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1368252010 looked up successfully
+2009-01-22 14:44:27,541 DEBUG [MethodCall]: MethodCall.execute() name = getURI
+2009-01-22 14:44:27,541 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+2009-01-22 14:44:27,542 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+2009-01-22 14:44:27,542 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@15f7107
+2009-01-22 14:44:27,542 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,543 DEBUG [MethodCall]: MethodCall.execute() name = getClassName
+2009-01-22 14:44:27,543 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+2009-01-22 14:44:27,544 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:27,544 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1358f03
+2009-01-22 14:44:27,544 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,545 DEBUG [MethodCall]: MethodCall.execute() name = getTargetClass
+2009-01-22 14:44:27,546 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+2009-01-22 14:44:27,546 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:27,546 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1358f03
+2009-01-22 14:44:27,546 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,547 DEBUG [MethodCall]: MethodCall.execute() name = getAdapterClass
+2009-01-22 14:44:27,548 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+2009-01-22 14:44:27,549 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+2009-01-22 14:44:27,549 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@1358f03
+2009-01-22 14:44:27,550 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,551 DEBUG [MethodCall]: MethodCall.execute() name = getVMInformation
+2009-01-22 14:44:27,551 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+2009-01-22 14:44:27,552 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:27,552 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@3cc262
+2009-01-22 14:44:27,552 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,554 DEBUG [MethodCall]: MethodCall.execute() name = getURL
+2009-01-22 14:44:27,554 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+2009-01-22 14:44:27,554 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:27,554 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@3cc262
+2009-01-22 14:44:27,554 DEBUG [MethodCall]: MethodCall.execute() arguments:none
+2009-01-22 14:44:27,556 DEBUG [MethodCall]: MethodCall.execute() name = getJobID
+2009-01-22 14:44:27,556 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getJobID(java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:27,556 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:27,556 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@3cc262
+2009-01-22 14:44:27,557 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:27,558 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=rmi://orchidee.inria.fr:6635/__PA__HalfbodiesNode1368252010;class java.lang.String
+2009-01-22 14:44:27,558 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:27,559 DEBUG [MethodCall]: MethodCall.execute() name = getLocalNodeProperty
+2009-01-22 14:44:27,559 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+2009-01-22 14:44:27,560 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+2009-01-22 14:44:27,560 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@3cc262
+2009-01-22 14:44:27,560 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:27,560 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=__PA__HalfbodiesNode1368252010;class java.lang.String
+2009-01-22 14:44:27,560 DEBUG [MethodCall]: MethodCall.execute() formal argument #1=ftenabled;class java.lang.String
+2009-01-22 14:44:27,560 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=class java.lang.String
+2009-01-22 14:44:27,561 DEBUG [MethodCall]: MethodCall.execute() actual argument #1=class java.lang.String
+2009-01-22 14:44:27,561 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:27,561 DEBUG [BlockingRequestQueueImpl]: Adding request terminateAllAndShutdown
+2009-01-22 14:44:27,562 DEBUG [BodyWrapper]: [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=80286, userData=0
+2009-01-22 14:44:27,562 DEBUG [RequestImpl]: Serving terminateAllAndShutdown
+2009-01-22 14:44:27,562 DEBUG [MethodCall]: MethodCall.execute() name = terminateAllAndShutdown
+2009-01-22 14:44:27,562 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod = public void org.objectweb.proactive.examples.nbody.common.Deployer.terminateAllAndShutdown(boolean)
+2009-01-22 14:44:27,565 DEBUG [MethodCall]: MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.objectweb.proactive.examples.nbody.common.Deployer
+2009-01-22 14:44:27,565 DEBUG [MethodCall]: MethodCall.execute() targetObject org.objectweb.proactive.examples.nbody.common.Deployer@1f68272
+2009-01-22 14:44:27,565 DEBUG [MethodCall]: MethodCall.execute() arguments:
+2009-01-22 14:44:27,566 DEBUG [MethodCall]: MethodCall.execute() formal argument #0=false;class java.lang.Boolean
+2009-01-22 14:44:27,566 DEBUG [MethodCall]: MethodCall.execute() actual argument #0=boolean
+2009-01-22 14:44:27,596 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:27,609 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:27,657 DEBUG [AbstractBody]: security is off
+2009-01-22 14:44:27,713 DEBUG [AbstractExternalProcess$ProcessInputHandler]: terminating Runtime //orchidee.inria.fr/PA_JVM347895442 
+2009-01-22 14:44:27,713  INFO [AbstractExternalProcess$StandardOutputMessageLogger]: terminating Runtime //orchidee.inria.fr/PA_JVM347895442 
+2009-01-22 14:44:27,714  WARN [JMXNotificationManager]: The unsubscribe action has failed : The objectName=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//orchidee.inria.fr-6635/PA_JVM831846380 has been already unsubscribe

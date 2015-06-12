@@ -1,0 +1,1638 @@
+[INFO 2009-07-23 11:50:32,592] [SCHED.SchedulerStarter.main] Starting Scheduler, Please wait...
+[INFO 2009-07-23 11:50:32,800] [SCHED.NativeMethodAccessorImpl.invoke0] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:50:32,828] [SCHED.NativeMethodAccessorImpl.invoke0] jetty-6.1.11
+[INFO 2009-07-23 11:50:32,879] [SCHED.NativeMethodAccessorImpl.invoke0] Started SelectChannelConnector@0.0.0.0:42629
+[INFO 2009-07-23 11:50:33,126] [SCHED.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:50:33,142] [SCHED.RegistryHelper.getOrCreateRegistry] Created a new registry on port 1099
+[INFO 2009-07-23 11:50:33,287] [SCHED.SchedulerStarter.main] Trying to connect to a started Resource Manager on rmi://pataud:1099/
+[INFO 2009-07-23 11:50:33,300] [SCHED.SchedulerStarter.main] Resource Manager doesn't exist on the local host
+[INFO 2009-07-23 11:50:33,302] [SCHED.SchedulerStarter.main] Trying to start a local Resource Manager
+[INFO 2009-07-23 11:50:33,531] [SCHED.PAActiveObject.registerByName] Success at binding url rmi://pataud:1099/-4b70d2c4-122a704e8be--7fdf--edd36c1b2395e0ab--4b70d2c4-122a704e8be--8000
+[INFO 2009-07-23 11:50:33,546] [SCHED.RMFactory.startLocal] New RM core localy started
+[INFO 2009-07-23 11:50:33,546] [SCHED.SchedulerStarter.main] Trying to join the local Resource Manager
+[INFO 2009-07-23 11:50:33,584] [SCHED.PAActiveObject.registerByName] Success at binding url rmi://pataud:1099/-4b70d2c4-122a704e8be--7fc6--edd36c1b2395e0ab--4b70d2c4-122a704e8be--8000
+[INFO 2009-07-23 11:50:33,622] [SCHED.PAActiveObject.registerByName] Success at binding url rmi://pataud:1099/RMADMIN
+[INFO 2009-07-23 11:50:33,656] [SCHED.PAActiveObject.registerByName] Success at binding url rmi://pataud:1099/-4b70d2c4-122a704e8be--7f93--edd36c1b2395e0ab--4b70d2c4-122a704e8be--8000
+[INFO 2009-07-23 11:50:33,713] [SCHED.PAActiveObject.registerByName] Success at binding url rmi://pataud:1099/-4b70d2c4-122a704e8be--7f77--edd36c1b2395e0ab--4b70d2c4-122a704e8be--8000
+[INFO 2009-07-23 11:50:33,714] [SCHED.RMCore.createNodesource] Creating a Node source : Default
+[INFO 2009-07-23 11:50:33,850] [SCHED.RMCore.createNodesource] Node source : Default has been successfully created
+[INFO 2009-07-23 11:50:33,851] [SCHED.NodeSource.activate] [Default] Activating the policy Static Policy
+[INFO 2009-07-23 11:50:33,856] [SCHED.RMCore.initActivity] Resource Manager successfully created on rmi://pataud:1099/
+[INFO 2009-07-23 11:50:33,866] [SCHED.NodeSourcePolicy.info] [Default] Acquiring all nodes
+[INFO 2009-07-23 11:50:34,544] [SCHED.MOPClassLoader.loadClass] Generating class : pa.stub.org.objectweb.proactive.gcmdeployment._StubGCMVirtualNode
+[INFO 2009-07-23 11:50:34,570] [SCHED.SchedulerStarter.main] Trying to connect the local Resource Manager using Scheduler identity
+[INFO 2009-07-23 11:50:34,609] [SCHED.AuthenticationImpl.loginAs] scheduler is trying to connect as user
+[INFO 2009-07-23 11:50:34,612] [SCHED.SchedulerStarter.main] Resource Manager created on rmi://pataud:1099/
+[INFO 2009-07-23 11:50:34,612] [SCHED.SchedulerStarter.main] Creating scheduler...
+[INFO 2009-07-23 11:50:34,616] [SCHED.AdminScheduler.createScheduler] Starting new Scheduler
+[INFO 2009-07-23 11:50:34,616] [SCHED.AdminScheduler.createScheduler] Creating scheduler frontend...
+[INFO 2009-07-23 11:50:34,625] [SCHED.FileLoginModule.login] authentication succeeded for user 'scheduler' in group 'user'
+[INFO 2009-07-23 11:50:34,626] [SCHED.AuthenticationImpl.loginAs] Logged successfull as a user : scheduler
+[INFO 2009-07-23 11:50:34,648] [SCHED.SchedulerFrontend.<init>] Creating scheduler Front-end...
+[INFO 2009-07-23 11:50:34,688] [SCHED.SchedulerFrontend.initActivity] Creating scheduler authentication interface...
+[INFO 2009-07-23 11:50:34,688] [SCHED.AdminScheduler.createScheduler] Scheduler is now ready to be started !
+[INFO 2009-07-23 11:50:34,689] [SCHED.SchedulerStarter.main] (Once started, press 'e' to shutdown)
+[INFO 2009-07-23 11:50:34,756] [SCHED.SchedulerFrontend.initActivity] Creating scheduler core...
+[INFO 2009-07-23 11:50:34,792] [SCHED.SchedulerCore.<init>] Initialized log forwarding service at rmi://pataud:1099/PA_JVM1389888204proactive_lfs_collector1
+[INFO 2009-07-23 11:50:34,793] [SCHED.SchedulerCore.<init>] Instanciated policy : org.ow2.proactive.scheduler.policy.PriorityPolicy
+[INFO 2009-07-23 11:50:34,793] [SCHED.SchedulerCore.<init>] Scheduler Core ready !
+[INFO 2009-07-23 11:50:34,826] [SCHED.SchedulerCore.recover] Starting Hibernate...
+[INFO 2009-07-23 11:50:34,833] [SCHED.SchedulerFrontend.initActivity] Registering scheduler...
+[INFO 2009-07-23 11:50:34,835] [SCHED.PAActiveObject.registerByName] Success at binding url rmi://pataud:1099/SCHEDULER
+[INFO 2009-07-23 11:50:34,835] [SCHED.SchedulerFrontend.connect]  
+[INFO 2009-07-23 11:50:34,843] [SCHED_HIB.Version.<clinit>] Hibernate Annotations 3.4.0.GA
+[INFO 2009-07-23 11:50:34,855] [SCHED_HIB.Environment.<clinit>] Hibernate 3.3.0.SP1
+[INFO 2009-07-23 11:50:34,858] [SCHED_HIB.Environment.<clinit>] hibernate.properties not found
+[INFO 2009-07-23 11:50:34,861] [SCHED.MOPClassLoader.loadClass] Generating class : pa.stub.org.objectweb.proactive.gcmdeployment._StubGCMApplication
+[INFO 2009-07-23 11:50:34,861] [SCHED_HIB.Environment.buildBytecodeProvider] Bytecode provider name : javassist
+[INFO 2009-07-23 11:50:34,865] [SCHED_HIB.Environment.<clinit>] using JDK 1.4 java.sql.Timestamp handling
+[INFO 2009-07-23 11:50:34,916] [SCHED_HIB.Version.<clinit>] Hibernate Commons Annotations 3.1.0.GA
+[INFO 2009-07-23 11:50:34,918] [SCHED_HIB.Configuration.configure] configuring from file: hibernate.cfg.xml
+[INFO 2009-07-23 11:50:35,013] [SCHED.GCMDeploymentDescriptorImpl.startLocal] Starting a process on localhost
+[INFO 2009-07-23 11:50:35,015] [SCHED_HIB.Configuration.doConfigure] Configured SessionFactory: null
+[INFO 2009-07-23 11:50:35,015] [SCHED.Executor.submit] executing command="java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 1 -d 3951094993088936278 -b http://pataud:42629/classServer/  &"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 1 -d 3951094993088936278 -b http://pataud:42629/classServer/  &"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 1 -d 3951094993088936278 -b http://pataud:42629/classServer/  &"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 1 -d 3951094993088936278 -b http://pataud:42629/classServer/  
+[INFO 2009-07-23 11:50:35,016] [SCHED.DatabaseManager.build] Building Hibernate session Factory (configuration File : /user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/database/hibernate/hibernate.cfg.xml )
+[INFO 2009-07-23 11:50:35,020] [SCHED_HIB.HibernateSearchEventListenerRegister.enableHibernateSearch] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[INFO 2009-07-23 11:50:35,108] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.job.JobEnvironment
+[INFO 2009-07-23 11:50:35,151] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.job.JobEnvironment on table JOB_ENVIRONMENT
+[INFO 2009-07-23 11:50:35,167] [SCHED.ResourceManagerProxy.initActivity] Infrastructure Manager Proxy started
+[INFO 2009-07-23 11:50:35,199] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:50:35,200] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.JobInfoImpl on table JOB_INFO
+[INFO 2009-07-23 11:50:35,223] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.JobIdImpl
+[INFO 2009-07-23 11:50:35,224] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.JobIdImpl on table JOB_ID
+[INFO 2009-07-23 11:50:35,225] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.UpdatableProperties
+[INFO 2009-07-23 11:50:35,226] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.UpdatableProperties on table UPDATABLE_PROPERTIES
+[INFO 2009-07-23 11:50:35,282] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.RestartMode
+[INFO 2009-07-23 11:50:35,282] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.RestartMode on table RESTART_MODE
+[INFO 2009-07-23 11:50:35,286] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.ForkEnvironment
+[INFO 2009-07-23 11:50:35,286] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.ForkEnvironment on table FORK_ENVIRONMENT
+[INFO 2009-07-23 11:50:35,287] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.Log4JTaskLogs
+[INFO 2009-07-23 11:50:35,288] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.Log4JTaskLogs on table LOG4J_TASK_LOGS
+[INFO 2009-07-23 11:50:35,289] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.SimpleTaskLogs
+[INFO 2009-07-23 11:50:35,289] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.SimpleTaskLogs on table SIMPLE_TASK_LOGS
+[INFO 2009-07-23 11:50:35,291] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:50:35,291] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.TaskInfoImpl on table TASK_INFO
+[INFO 2009-07-23 11:50:35,294] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.TaskIdImpl
+[INFO 2009-07-23 11:50:35,295] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.TaskIdImpl on table TASK_ID
+[INFO 2009-07-23 11:50:35,296] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.util.BooleanWrapper
+[INFO 2009-07-23 11:50:35,297] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.util.BooleanWrapper on table BOOLEAN_WRAPPER
+[INFO 2009-07-23 11:50:35,298] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.util.IntegerWrapper
+[INFO 2009-07-23 11:50:35,298] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.util.IntegerWrapper on table INTEGER_WRAPPER
+[INFO 2009-07-23 11:50:35,299] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.common.task.util.BigString
+[INFO 2009-07-23 11:50:35,300] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.common.task.util.BigString on table BIG_STRING
+[INFO 2009-07-23 11:50:35,302] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scripting.GenerationScript
+[INFO 2009-07-23 11:50:35,302] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scripting.GenerationScript on table GENERATION_SCRIPT
+[INFO 2009-07-23 11:50:35,304] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scripting.SelectionScript
+[INFO 2009-07-23 11:50:35,305] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scripting.SelectionScript on table SELECTION_SCRIPT
+[INFO 2009-07-23 11:50:35,307] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scripting.SimpleScript
+[INFO 2009-07-23 11:50:35,307] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scripting.SimpleScript on table SIMPLE_SCRIPT
+[INFO 2009-07-23 11:50:35,309] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:50:35,310] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.internal.InternalJavaTask on table INTERNAL_JAVA_TASK
+[INFO 2009-07-23 11:50:35,354] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.internal.InternalNativeTask
+[INFO 2009-07-23 11:50:35,354] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.internal.InternalNativeTask on table INTERNAL_NATIVE_TASK
+[INFO 2009-07-23 11:50:35,360] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.internal.InternalProActiveTask
+[INFO 2009-07-23 11:50:35,361] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.internal.InternalProActiveTask on table INTERNAL_PA_TASK
+[INFO 2009-07-23 11:50:35,367] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.InternalTaskFlowJob
+[INFO 2009-07-23 11:50:35,367] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.InternalTaskFlowJob on table INTERNAL_TASKFLOW_JOB
+[INFO 2009-07-23 11:50:35,378] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.InternalProActiveJob
+[INFO 2009-07-23 11:50:35,379] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.InternalProActiveJob on table Internal_PA_Job
+[INFO 2009-07-23 11:50:35,382] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.InternalParameterSweepingJob
+[INFO 2009-07-23 11:50:35,383] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.InternalParameterSweepingJob on table INTERNAL_PARAMETERSWEEPING_JOB
+[INFO 2009-07-23 11:50:35,387] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.JavaExecutableContainer
+[INFO 2009-07-23 11:50:35,388] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.JavaExecutableContainer on table JAVA_EXECUTABLE_CONTAINER
+[INFO 2009-07-23 11:50:35,391] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.NativeExecutableContainer
+[INFO 2009-07-23 11:50:35,391] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.NativeExecutableContainer on table NATIVE_EXECUTABLE_CONTAINER
+[INFO 2009-07-23 11:50:35,393] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.ForkedJavaExecutable
+[INFO 2009-07-23 11:50:35,394] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.ForkedJavaExecutable on table FORKED_JAVA_EXECUTABLE
+[INFO 2009-07-23 11:50:35,396] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:50:35,396] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.job.JobResultImpl on table JOB_RESULT_IMPL
+[INFO 2009-07-23 11:50:35,400] [SCHED_HIB.AnnotationBinder.bindClass] Binding entity from annotated class: org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:50:35,400] [SCHED_HIB.EntityBinder.bindTable] Bind entity org.ow2.proactive.scheduler.task.TaskResultImpl on table TASK_RESULT_IMPL
+[INFO 2009-07-23 11:50:35,427] [SCHED_HIB.CollectionBinder.bindOneToManySecondPass] Mapping collection: org.ow2.proactive.scheduler.job.JobResultImpl.preciousResults -> TASK_RESULT_IMPL
+[INFO 2009-07-23 11:50:35,489] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on pataud
+[INFO 2009-07-23 11:50:35,491] [SCHED_HIB.CollectionBinder.bindOneToManySecondPass] Mapping collection: org.ow2.proactive.scheduler.job.JobResultImpl.allResults -> TASK_RESULT_IMPL
+[INFO 2009-07-23 11:50:35,498] [SCHED_HIB.AnnotationConfiguration.secondPassCompile] Hibernate Validator not found: ignoring
+[INFO 2009-07-23 11:50:35,512] [SCHED_HIB.DriverManagerConnectionProvider.configure] Using Hibernate built-in connection pool (not for production use!)
+[INFO 2009-07-23 11:50:35,512] [SCHED_HIB.DriverManagerConnectionProvider.configure] Hibernate connection pool size: 10
+[INFO 2009-07-23 11:50:35,513] [SCHED_HIB.DriverManagerConnectionProvider.configure] autocommit mode: false
+[INFO 2009-07-23 11:50:35,610] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on pataud
+[INFO 2009-07-23 11:50:35,719] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on pataud
+[INFO 2009-07-23 11:50:35,982] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:50:36,032] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:50:36,048] [SCHED_HIB.DriverManagerConnectionProvider.configure] using driver: org.apache.derby.jdbc.EmbeddedDriver at URL: jdbc:derby:../../SCHEDULER_DB;create=true
+[INFO 2009-07-23 11:50:36,050] [SCHED_HIB.DriverManagerConnectionProvider.configure] connection properties: {user=scheduler, password=****}
+[INFO 2009-07-23 11:50:36,110] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on pataud
+[INFO 2009-07-23 11:50:36,118] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:50:36,161] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:50112
+[INFO 2009-07-23 11:50:36,169] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:50:36,198] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:50:36,230] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:55863
+[INFO 2009-07-23 11:50:36,252] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:50:36,275] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:50:36,277] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:50:36,326] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:50:36,330] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:50:36,411] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:43262
+[INFO 2009-07-23 11:50:36,435] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:50:36,488] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:50:36,599] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:50:36,691] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:50:36,747] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://pataud:1099/PA_JVM729940583_GCMNode-0
+[INFO 2009-07-23 11:50:36,760] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://pataud:1099/PA_JVM729940583_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:50:36,760] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:53368
+[INFO 2009-07-23 11:50:36,791] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:50:36,833] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:50:36,835] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://pataud:1099/PA_JVM945865675_GCMNode-0
+[INFO 2009-07-23 11:50:36,848] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://pataud:1099/PA_JVM945865675_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:50:36,915] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://pataud:1099/PA_JVM150816443_GCMNode-0
+[INFO 2009-07-23 11:50:36,924] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://pataud:1099/PA_JVM150816443_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:50:37,119] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://pataud:1099/PA_JVM85227960_GCMNode-0
+[INFO 2009-07-23 11:50:37,127] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://pataud:1099/PA_JVM85227960_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:50:37,307] [SCHED_HIB.SettingsFactory.buildSettings] RDBMS: Apache Derby, version: 10.3.1.4 - (561794)
+[INFO 2009-07-23 11:50:37,307] [SCHED_HIB.SettingsFactory.buildSettings] JDBC driver: Apache Derby Embedded JDBC Driver, version: 10.3.1.4 - (561794)
+[INFO 2009-07-23 11:50:37,321] [SCHED_HIB.Dialect.<init>] Using dialect: org.hibernate.dialect.DerbyDialect
+[INFO 2009-07-23 11:50:37,327] [SCHED_HIB.TransactionFactoryFactory.buildTransactionFactory] Using default transaction strategy (direct JDBC transactions)
+[INFO 2009-07-23 11:50:37,329] [SCHED_HIB.TransactionManagerLookupFactory.getTransactionManagerLookup] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO 2009-07-23 11:50:37,329] [SCHED_HIB.SettingsFactory.buildSettings] Automatic flush during beforeCompletion(): disabled
+[INFO 2009-07-23 11:50:37,330] [SCHED_HIB.SettingsFactory.buildSettings] Automatic session close at end of transaction: disabled
+[INFO 2009-07-23 11:50:37,330] [SCHED_HIB.SettingsFactory.buildSettings] Scrollable result sets: enabled
+[INFO 2009-07-23 11:50:37,331] [SCHED_HIB.SettingsFactory.buildSettings] JDBC3 getGeneratedKeys(): disabled
+[INFO 2009-07-23 11:50:37,331] [SCHED_HIB.SettingsFactory.buildSettings] Connection release mode: auto
+[INFO 2009-07-23 11:50:37,332] [SCHED_HIB.SettingsFactory.buildSettings] Default batch fetch size: 1
+[INFO 2009-07-23 11:50:37,332] [SCHED_HIB.SettingsFactory.buildSettings] Generate SQL with comments: disabled
+[INFO 2009-07-23 11:50:37,332] [SCHED_HIB.SettingsFactory.buildSettings] Order SQL updates by primary key: disabled
+[INFO 2009-07-23 11:50:37,333] [SCHED_HIB.SettingsFactory.buildSettings] Order SQL inserts for batching: disabled
+[INFO 2009-07-23 11:50:37,333] [SCHED_HIB.SettingsFactory.createQueryTranslatorFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO 2009-07-23 11:50:37,335] [SCHED_HIB.ASTQueryTranslatorFactory.<init>] Using ASTQueryTranslatorFactory
+[INFO 2009-07-23 11:50:37,335] [SCHED_HIB.SettingsFactory.buildSettings] Query language substitutions: {}
+[INFO 2009-07-23 11:50:37,336] [SCHED_HIB.SettingsFactory.buildSettings] JPA-QL strict compliance: disabled
+[INFO 2009-07-23 11:50:37,336] [SCHED_HIB.SettingsFactory.buildSettings] Second-level cache: enabled
+[INFO 2009-07-23 11:50:37,336] [SCHED_HIB.SettingsFactory.buildSettings] Query cache: disabled
+[INFO 2009-07-23 11:50:37,340] [SCHED_HIB.SettingsFactory.createRegionFactory] Cache region factory : org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge
+[INFO 2009-07-23 11:50:37,341] [SCHED_HIB.RegionFactoryCacheProviderBridge.<init>] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO 2009-07-23 11:50:37,341] [SCHED_HIB.SettingsFactory.buildSettings] Optimize cache for minimal puts: disabled
+[INFO 2009-07-23 11:50:37,341] [SCHED_HIB.SettingsFactory.buildSettings] Structured second-level cache entries: disabled
+[INFO 2009-07-23 11:50:37,345] [SCHED_HIB.SettingsFactory.buildSettings] Statistics: disabled
+[INFO 2009-07-23 11:50:37,346] [SCHED_HIB.SettingsFactory.buildSettings] Deleted entity synthetic identifier rollback: disabled
+[INFO 2009-07-23 11:50:37,347] [SCHED_HIB.SettingsFactory.buildSettings] Default entity-mode: pojo
+[INFO 2009-07-23 11:50:37,347] [SCHED_HIB.SettingsFactory.buildSettings] Named query checking : enabled
+[INFO 2009-07-23 11:50:37,379] [SCHED_HIB.SessionFactoryImpl.<init>] building session factory
+[INFO 2009-07-23 11:50:37,587] [SCHED_HIB.SessionFactoryObjectFactory.addInstance] Not binding factory to JNDI, no JNDI name configured
+[INFO 2009-07-23 11:50:37,590] [SCHED_HIB.SchemaUpdate.execute] Running hbm2ddl schema update
+[INFO 2009-07-23 11:50:37,590] [SCHED_HIB.SchemaUpdate.execute] fetching database metadata
+[INFO 2009-07-23 11:50:37,593] [SCHED_HIB.SchemaUpdate.execute] updating schema
+[INFO 2009-07-23 11:50:37,918] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: BIG_STRING
+[INFO 2009-07-23 11:50:37,926] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: BOOLEAN_WRAPPER
+[INFO 2009-07-23 11:50:37,927] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: FORKED_JAVA_EXECUTABLE
+[INFO 2009-07-23 11:50:37,928] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: FORK_ENVIRONMENT
+[INFO 2009-07-23 11:50:37,929] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: GENERATION_SCRIPT
+[INFO 2009-07-23 11:50:37,930] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTEGER_WRAPPER
+[INFO 2009-07-23 11:50:37,931] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK
+[INFO 2009-07-23 11:50:37,932] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK_BIG_STRING
+[INFO 2009-07-23 11:50:37,933] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK_dependences
+[INFO 2009-07-23 11:50:37,934] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK_idependences
+[INFO 2009-07-23 11:50:37,935] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK
+[INFO 2009-07-23 11:50:37,936] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK_BIG_STRING
+[INFO 2009-07-23 11:50:37,937] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK_dependences
+[INFO 2009-07-23 11:50:37,938] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK_idependences
+[INFO 2009-07-23 11:50:37,939] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PARAMETERSWEEPING_JOB
+[INFO 2009-07-23 11:50:37,941] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PARAMETERSWEEPING_JOB_BIG_STRING
+[INFO 2009-07-23 11:50:37,942] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PARAMETERSWEEPING_JOB_tasks
+[INFO 2009-07-23 11:50:37,943] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK
+[INFO 2009-07-23 11:50:37,945] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK_BIG_STRING
+[INFO 2009-07-23 11:50:37,946] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK_dependences
+[INFO 2009-07-23 11:50:37,947] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK_idependences
+[INFO 2009-07-23 11:50:37,948] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_TASKFLOW_JOB
+[INFO 2009-07-23 11:50:37,949] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_TASKFLOW_JOB_BIG_STRING
+[INFO 2009-07-23 11:50:37,950] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_TASKFLOW_JOB_tasks
+[INFO 2009-07-23 11:50:37,951] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: Internal_PA_Job
+[INFO 2009-07-23 11:50:37,952] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: Internal_PA_Job_BIG_STRING
+[INFO 2009-07-23 11:50:37,953] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: Internal_PA_Job_tasks
+[INFO 2009-07-23 11:50:37,954] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JAVA_EXECCONTAINER_ARGUMENTS
+[INFO 2009-07-23 11:50:37,955] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JAVA_EXECUTABLE_CONTAINER
+[INFO 2009-07-23 11:50:37,956] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_ENVIRONMENT
+[INFO 2009-07-23 11:50:37,957] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_ID
+[INFO 2009-07-23 11:50:37,958] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_INFO
+[INFO 2009-07-23 11:50:37,959] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_RESULT_IMPL
+[INFO 2009-07-23 11:50:37,960] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: LOG4J_TASK_LOGS
+[INFO 2009-07-23 11:50:37,960] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: NATIVE_EXECUTABLE_CONTAINER
+[INFO 2009-07-23 11:50:37,961] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: RESTART_MODE
+[INFO 2009-07-23 11:50:37,962] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: SELECTION_SCRIPT
+[INFO 2009-07-23 11:50:37,963] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: SIMPLE_SCRIPT
+[INFO 2009-07-23 11:50:37,964] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: SIMPLE_TASK_LOGS
+[INFO 2009-07-23 11:50:37,965] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: TASK_ID
+[INFO 2009-07-23 11:50:37,965] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: TASK_INFO
+[INFO 2009-07-23 11:50:37,966] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: TASK_RESULT_IMPL
+[INFO 2009-07-23 11:50:37,967] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: UPDATABLE_PROPERTIES
+[INFO 2009-07-23 11:50:37,968] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: BIG_STRING
+[INFO 2009-07-23 11:50:37,969] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: BOOLEAN_WRAPPER
+[INFO 2009-07-23 11:50:37,970] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: FORKED_JAVA_EXECUTABLE
+[INFO 2009-07-23 11:50:37,971] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: FORK_ENVIRONMENT
+[INFO 2009-07-23 11:50:37,971] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: GENERATION_SCRIPT
+[INFO 2009-07-23 11:50:37,972] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTEGER_WRAPPER
+[INFO 2009-07-23 11:50:37,973] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK
+[INFO 2009-07-23 11:50:37,974] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK_BIG_STRING
+[INFO 2009-07-23 11:50:37,975] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK_dependences
+[INFO 2009-07-23 11:50:37,976] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_JAVA_TASK_idependences
+[INFO 2009-07-23 11:50:37,976] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK
+[INFO 2009-07-23 11:50:37,977] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK_BIG_STRING
+[INFO 2009-07-23 11:50:37,978] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK_dependences
+[INFO 2009-07-23 11:50:37,979] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_NATIVE_TASK_idependences
+[INFO 2009-07-23 11:50:37,980] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PARAMETERSWEEPING_JOB
+[INFO 2009-07-23 11:50:37,981] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PARAMETERSWEEPING_JOB_BIG_STRING
+[INFO 2009-07-23 11:50:37,981] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PARAMETERSWEEPING_JOB_tasks
+[INFO 2009-07-23 11:50:37,982] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK
+[INFO 2009-07-23 11:50:37,983] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK_BIG_STRING
+[INFO 2009-07-23 11:50:37,984] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK_dependences
+[INFO 2009-07-23 11:50:37,985] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_PA_TASK_idependences
+[INFO 2009-07-23 11:50:37,985] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_TASKFLOW_JOB
+[INFO 2009-07-23 11:50:37,986] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_TASKFLOW_JOB_BIG_STRING
+[INFO 2009-07-23 11:50:37,987] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: INTERNAL_TASKFLOW_JOB_tasks
+[INFO 2009-07-23 11:50:37,988] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: Internal_PA_Job
+[INFO 2009-07-23 11:50:37,989] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: Internal_PA_Job_BIG_STRING
+[INFO 2009-07-23 11:50:37,990] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: Internal_PA_Job_tasks
+[INFO 2009-07-23 11:50:37,990] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JAVA_EXECCONTAINER_ARGUMENTS
+[INFO 2009-07-23 11:50:37,991] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JAVA_EXECUTABLE_CONTAINER
+[INFO 2009-07-23 11:50:37,992] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_ENVIRONMENT
+[INFO 2009-07-23 11:50:37,993] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_ID
+[INFO 2009-07-23 11:50:37,994] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_INFO
+[INFO 2009-07-23 11:50:37,995] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: JOB_RESULT_IMPL
+[INFO 2009-07-23 11:50:37,996] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: LOG4J_TASK_LOGS
+[INFO 2009-07-23 11:50:37,996] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: NATIVE_EXECUTABLE_CONTAINER
+[INFO 2009-07-23 11:50:37,997] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: RESTART_MODE
+[INFO 2009-07-23 11:50:37,998] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: SELECTION_SCRIPT
+[INFO 2009-07-23 11:50:37,999] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: SIMPLE_SCRIPT
+[INFO 2009-07-23 11:50:38,000] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: SIMPLE_TASK_LOGS
+[INFO 2009-07-23 11:50:38,000] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: TASK_ID
+[INFO 2009-07-23 11:50:38,001] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: TASK_INFO
+[INFO 2009-07-23 11:50:38,002] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: TASK_RESULT_IMPL
+[INFO 2009-07-23 11:50:38,003] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: UPDATABLE_PROPERTIES
+[INFO 2009-07-23 11:50:38,005] [SCHED_HIB.DatabaseMetadata.getTableMetadata] table not found: hibernate_unique_key
+[INFO 2009-07-23 11:50:40,477] [SCHED_HIB.SchemaUpdate.execute] schema update complete
+[INFO 2009-07-23 11:50:40,481] [SCHED.SchedulerCore.recover] Hibernate successfully started !
+[INFO 2009-07-23 11:50:40,482] [SCHED.DatabaseManager.recoverAllJobs] Recovering all jobs using the removeTime condition
+[INFO 2009-07-23 11:50:40,622] [SCHED.DatabaseManager.recoverAllJobs] Created query to find IDs : SELECT c.jobInfo.jobId from org.ow2.proactive.scheduler.job.InternalJob c WHERE c.jobInfo.removedTime <= :C0
+[INFO 2009-07-23 11:50:40,703] [SCHED.DatabaseManager.recoverAllJobs] Creating queries for each job to recover
+[INFO 2009-07-23 11:50:40,704] [SCHED.SchedulerCore.recover] Number of job to recover : 0
+[INFO 2009-07-23 11:50:40,704] [SCHED.SchedulerCore.recover] No Job to recover.
+[INFO 2009-07-23 11:50:40,705] [SCHED.SchedulerFrontend.recover] job list empty
+[INFO 2009-07-23 11:50:40,705] [SCHED.SchedulerCore.runActivity] Scheduler successfully created on rmi://pataud:1099/
+[INFO 2009-07-23 11:50:40,707] [SCHED.SchedulerCore.createPingThread] Starting nodes pinging thread (ping frequency is : 20000ms )
+[INFO 2009-07-23 11:50:40,707] [SCHED.SchedulerCore.start] Scheduler has just been started !
+[INFO 2009-07-23 11:51:18,847] [SCHED.MOPClassLoader.loadClass] Generating class : pa.stub.java.util._StubLinkedList
+[INFO 2009-07-23 11:55:31,314] [SCHED.SchedulerAuthentication.logAsUser] user : usr1
+[INFO 2009-07-23 11:55:31,314] [SCHED.AuthenticationImpl.loginAs] usr1 is trying to connect as user
+[INFO 2009-07-23 11:55:31,316] [SCHED.FileLoginModule.login] Incorrect Username/Password
+[INFO 2009-07-23 11:55:31,321] [SCHED.AuthenticationImpl.loginAs] Incorrect Username/Password
+[INFO 2009-07-23 11:55:39,329] [SCHED.SchedulerAuthentication.logAsUser] user : user1
+[INFO 2009-07-23 11:55:39,330] [SCHED.AuthenticationImpl.loginAs] user1 is trying to connect as user
+[INFO 2009-07-23 11:55:39,330] [SCHED.FileLoginModule.login] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-07-23 11:55:39,331] [SCHED.AuthenticationImpl.loginAs] Logged successfull as a user : user1
+[INFO 2009-07-23 11:55:39,337] [SCHED.SchedulerFrontend.connect] user1 successfully connected !
+[INFO 2009-07-23 11:55:39,722] [SCHED.SchedulerFrontend.submit] New job submission requested : job_8_tasks
+[INFO 2009-07-23 11:55:39,725] [SCHED.InternalJobFactory.createJob] Create job 'job_8_tasks' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[INFO 2009-07-23 11:55:39,726] [SCHED.InternalJobFactory.isConsistency] Check if job 'job_8_tasks' is consistency : ie Every task can be accessed
+[INFO 2009-07-23 11:55:39,726] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,726] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,727] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,727] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,727] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,727] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,728] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,728] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 11:55:39,728] [SCHED.InternalJobFactory.setJobCommonProperties] Setting job common properties
+[INFO 2009-07-23 11:55:39,728] [SCHED.SchedulerFrontend.submit] Preparing and settings job submission
+[INFO 2009-07-23 11:55:39,732] [SCHED.SchedulerCore.submit] Trying to submit new Job '1'
+[INFO 2009-07-23 11:55:39,734] [SCHED.DatabaseManager.register] Registering new Object : org.ow2.proactive.scheduler.job.InternalTaskFlowJob
+[WARN 2009-07-23 11:55:39,765] [SCHED_HIB.JDBCExceptionReporter.logWarnings] SQL Warning: 10000, SQLState: 01J01
+[WARN 2009-07-23 11:55:39,765] [SCHED_HIB.JDBCExceptionReporter.logWarnings] Database '../../SCHEDULER_DB' not created, connection made to existing database instead.
+[INFO 2009-07-23 11:55:39,967] [SCHED.SchedulerCore.submit] New job added to Scheduler lists : '1'
+[INFO 2009-07-23 11:55:39,967] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.common.job.JobEnvironment
+[INFO 2009-07-23 11:55:39,968] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:39,972] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:39,978] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:39,982] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:39,986] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:39,990] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:39,995] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:39,999] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:40,005] [SCHED.SchedulerCore.submit] JobEnvironment and internalTask unloaded for job '1'
+[INFO 2009-07-23 11:55:40,024] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:40,024] [SCHED.SchedulerFrontend.submit] New job submitted '1' containing 8 tasks (owner is 'user1')
+[INFO 2009-07-23 11:55:40,025] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 8
+[INFO 2009-07-23 11:55:40,039] [SCHED.SchedulerCore.schedule] Number of free resources : 4
+[INFO 2009-07-23 11:55:40,040] [SCHED.MOPClassLoader.loadClass] Generating class : pa.stub.org.ow2.proactive.utils._StubNodeSet
+[INFO 2009-07-23 11:55:40,196] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 4
+[INFO 2009-07-23 11:55:40,285] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:40,431] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:40,433] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 11:55:40,435] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task4' for job '1'
+[INFO 2009-07-23 11:55:40,628] [SCHED.SchedulerCore.schedule] Task '10008' started on pataud
+[INFO 2009-07-23 11:55:40,628] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '1' (event='Job pending to running')
+[INFO 2009-07-23 11:55:40,631] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:40,707] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 11:55:40,708] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 11:55:40,754] [SCHED.SchedulerCore.schedule] Job '1' started
+[INFO 2009-07-23 11:55:40,769] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:40,915] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:40,916] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 11:55:40,919] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task6' for job '1'
+[INFO 2009-07-23 11:55:41,070] [SCHED.SchedulerCore.schedule] Task '10005' started on pataud
+[INFO 2009-07-23 11:55:41,085] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:41,233] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:41,234] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 11:55:41,235] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task2' for job '1'
+[INFO 2009-07-23 11:55:41,386] [SCHED.SchedulerCore.schedule] Task '10004' started on pataud
+[INFO 2009-07-23 11:55:41,401] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:41,552] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:41,553] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 11:55:41,556] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task8' for job '1'
+[INFO 2009-07-23 11:55:41,676] [SCHED.SchedulerCore.schedule] Task '10007' started on pataud
+[INFO 2009-07-23 11:55:41,693] [SCHED.SchedulerCore.schedule] Number of free resources : 0
+[INFO 2009-07-23 11:55:43,693] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:43,694] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 4
+[INFO 2009-07-23 11:55:43,704] [SCHED.SchedulerCore.schedule] Number of free resources : 0
+[INFO 2009-07-23 11:55:45,249] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10005...
+[INFO 2009-07-23 11:55:45,249] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10005
+[INFO 2009-07-23 11:55:45,255] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10005' - job '1'
+[INFO 2009-07-23 11:55:45,256] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:45,272] [SCHED.SchedulerCore.terminate] Task '10005' futur result unwrapped
+[INFO 2009-07-23 11:55:45,272] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10005
+[INFO 2009-07-23 11:55:45,273] [SCHED.SchedulerCore.terminate] Task '10005' on job '1' terminated
+[INFO 2009-07-23 11:55:45,273] [SCHED.SchedulerCore.terminate] Task '10005' terminate without error
+[INFO 2009-07-23 11:55:45,274] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task6'
+[INFO 2009-07-23 11:55:45,274] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:45,281] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:55:45,331] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:55:45,383] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:55:45,387] [SCHED.SchedulerCore.terminate] Number of finished tasks : 1 - Number of tasks : 8
+[INFO 2009-07-23 11:55:45,388] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:45,389] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:55:45,389] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 4
+[INFO 2009-07-23 11:55:45,396] [SCHED.MOPClassLoader.loadClass] Generating class : pa.stub.java.lang._StubObject
+[INFO 2009-07-23 11:55:45,455] [SCHED.SchedulerCore.schedule] Number of free resources : 1
+[INFO 2009-07-23 11:55:45,457] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 1
+[INFO 2009-07-23 11:55:45,488] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:45,523] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:45,528] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task7' for job '1'
+[INFO 2009-07-23 11:55:45,533] [SCHED.SchedulerCore.schedule] Task '10006' started on pataud
+[INFO 2009-07-23 11:55:45,540] [SCHED.SchedulerCore.schedule] Number of free resources : 0
+[INFO 2009-07-23 11:55:46,749] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10008...
+[INFO 2009-07-23 11:55:46,750] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10008
+[INFO 2009-07-23 11:55:46,755] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10008' - job '1'
+[INFO 2009-07-23 11:55:46,755] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:46,765] [SCHED.SchedulerCore.terminate] Task '10008' futur result unwrapped
+[INFO 2009-07-23 11:55:46,765] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10008
+[INFO 2009-07-23 11:55:46,766] [SCHED.SchedulerCore.terminate] Task '10008' on job '1' terminated
+[INFO 2009-07-23 11:55:46,766] [SCHED.SchedulerCore.terminate] Task '10008' terminate without error
+[INFO 2009-07-23 11:55:46,766] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task4'
+[INFO 2009-07-23 11:55:46,767] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:46,774] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:55:46,779] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:55:46,795] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:55:46,798] [SCHED.SchedulerCore.terminate] Number of finished tasks : 2 - Number of tasks : 8
+[INFO 2009-07-23 11:55:46,799] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:55:46,800] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:46,800] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 3
+[INFO 2009-07-23 11:55:46,813] [SCHED.SchedulerCore.schedule] Number of free resources : 1
+[INFO 2009-07-23 11:55:46,814] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 1
+[INFO 2009-07-23 11:55:46,834] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:46,878] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:46,879] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task3' for job '1'
+[INFO 2009-07-23 11:55:46,885] [SCHED.SchedulerCore.schedule] Task '10001' started on pataud
+[INFO 2009-07-23 11:55:46,895] [SCHED.SchedulerCore.schedule] Number of free resources : 0
+[INFO 2009-07-23 11:55:47,578] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10004...
+[INFO 2009-07-23 11:55:47,579] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10004
+[INFO 2009-07-23 11:55:47,584] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10004' - job '1'
+[INFO 2009-07-23 11:55:47,585] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:47,594] [SCHED.SchedulerCore.terminate] Task '10004' futur result unwrapped
+[INFO 2009-07-23 11:55:47,594] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10004
+[INFO 2009-07-23 11:55:47,595] [SCHED.SchedulerCore.terminate] Task '10004' on job '1' terminated
+[INFO 2009-07-23 11:55:47,606] [SCHED.SchedulerCore.terminate] Task '10004' terminate without error
+[INFO 2009-07-23 11:55:47,606] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task2'
+[INFO 2009-07-23 11:55:47,607] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:47,616] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:55:47,620] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:55:47,629] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:55:47,631] [SCHED.SchedulerCore.terminate] Number of finished tasks : 3 - Number of tasks : 8
+[INFO 2009-07-23 11:55:47,633] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:47,633] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:55:47,642] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 2
+[INFO 2009-07-23 11:55:47,649] [SCHED.SchedulerCore.schedule] Number of free resources : 1
+[INFO 2009-07-23 11:55:47,653] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 1
+[INFO 2009-07-23 11:55:47,673] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:47,715] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:47,718] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task5' for job '1'
+[INFO 2009-07-23 11:55:47,724] [SCHED.SchedulerCore.schedule] Task '10003' started on pataud
+[INFO 2009-07-23 11:55:47,729] [SCHED.SchedulerCore.schedule] Number of free resources : 0
+[INFO 2009-07-23 11:55:49,537] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10006...
+[INFO 2009-07-23 11:55:49,538] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10006
+[INFO 2009-07-23 11:55:49,541] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10006' - job '1'
+[INFO 2009-07-23 11:55:49,542] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:49,546] [SCHED.SchedulerCore.terminate] Task '10006' futur result unwrapped
+[INFO 2009-07-23 11:55:49,546] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10006
+[INFO 2009-07-23 11:55:49,547] [SCHED.SchedulerCore.terminate] Task '10006' on job '1' terminated
+[INFO 2009-07-23 11:55:49,547] [SCHED.SchedulerCore.terminate] Task '10006' terminate without error
+[INFO 2009-07-23 11:55:49,547] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task7'
+[INFO 2009-07-23 11:55:49,547] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:49,555] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:55:49,559] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:55:49,570] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:55:49,573] [SCHED.SchedulerCore.terminate] Number of finished tasks : 4 - Number of tasks : 8
+[INFO 2009-07-23 11:55:49,574] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:55:49,576] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:49,576] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 1
+[INFO 2009-07-23 11:55:49,586] [SCHED.SchedulerCore.schedule] Number of free resources : 1
+[INFO 2009-07-23 11:55:49,588] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 1
+[INFO 2009-07-23 11:55:49,616] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 11:55:49,647] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 11:55:49,657] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task1' for job '1'
+[INFO 2009-07-23 11:55:49,663] [SCHED.SchedulerCore.schedule] Task '10002' started on pataud
+[INFO 2009-07-23 11:55:51,664] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:53,664] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:53,740] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10003...
+[INFO 2009-07-23 11:55:53,741] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10003
+[INFO 2009-07-23 11:55:53,744] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10003' - job '1'
+[INFO 2009-07-23 11:55:53,745] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:53,749] [SCHED.SchedulerCore.terminate] Task '10003' futur result unwrapped
+[INFO 2009-07-23 11:55:53,750] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10003
+[INFO 2009-07-23 11:55:53,750] [SCHED.SchedulerCore.terminate] Task '10003' on job '1' terminated
+[INFO 2009-07-23 11:55:53,750] [SCHED.SchedulerCore.terminate] Task '10003' terminate without error
+[INFO 2009-07-23 11:55:53,750] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task5'
+[INFO 2009-07-23 11:55:53,750] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:53,758] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:55:53,762] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:55:53,774] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:55:53,777] [SCHED.SchedulerCore.terminate] Number of finished tasks : 5 - Number of tasks : 8
+[INFO 2009-07-23 11:55:53,778] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:53,778] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:55:54,896] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10001...
+[INFO 2009-07-23 11:55:54,897] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10001
+[INFO 2009-07-23 11:55:54,901] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10001' - job '1'
+[INFO 2009-07-23 11:55:54,901] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:54,907] [SCHED.SchedulerCore.terminate] Task '10001' futur result unwrapped
+[INFO 2009-07-23 11:55:54,907] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10001
+[INFO 2009-07-23 11:55:54,907] [SCHED.SchedulerCore.terminate] Task '10001' on job '1' terminated
+[INFO 2009-07-23 11:55:54,908] [SCHED.SchedulerCore.terminate] Task '10001' terminate without error
+[INFO 2009-07-23 11:55:54,908] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task3'
+[INFO 2009-07-23 11:55:54,908] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:54,915] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:55:54,919] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:55:54,932] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:55:54,935] [SCHED.SchedulerCore.terminate] Number of finished tasks : 6 - Number of tasks : 8
+[INFO 2009-07-23 11:55:54,936] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:54,936] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:55:56,936] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:57,664] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10002...
+[INFO 2009-07-23 11:55:57,664] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10002
+[INFO 2009-07-23 11:55:57,668] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10002' - job '1'
+[INFO 2009-07-23 11:55:57,670] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:55:57,676] [SCHED.SchedulerCore.terminate] Task '10002' futur result unwrapped
+[INFO 2009-07-23 11:55:57,676] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10002
+[INFO 2009-07-23 11:55:57,677] [SCHED.SchedulerCore.terminate] Task '10002' on job '1' terminated
+[INFO 2009-07-23 11:55:57,677] [SCHED.SchedulerCore.terminate] Task '10002' terminate without error
+[INFO 2009-07-23 11:55:57,677] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task1'
+[INFO 2009-07-23 11:55:57,677] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:55:57,684] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:55:57,688] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:55:57,700] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:55:57,703] [SCHED.SchedulerCore.terminate] Number of finished tasks : 7 - Number of tasks : 8
+[INFO 2009-07-23 11:55:57,704] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:55:57,704] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:55:59,704] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:56:00,708] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 11:56:00,708] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 11:56:01,704] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 11:56:01,903] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 10007...
+[INFO 2009-07-23 11:56:01,904] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 10007
+[INFO 2009-07-23 11:56:01,909] [SCHED.SchedulerCore.terminate] Received terminate task request for task '10007' - job '1'
+[INFO 2009-07-23 11:56:01,909] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 11:56:01,918] [SCHED.SchedulerCore.terminate] Task '10007' futur result unwrapped
+[INFO 2009-07-23 11:56:01,919] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 10007
+[INFO 2009-07-23 11:56:01,919] [SCHED.SchedulerCore.terminate] Task '10007' on job '1' terminated
+[INFO 2009-07-23 11:56:01,919] [SCHED.SchedulerCore.terminate] Task '10007' terminate without error
+[INFO 2009-07-23 11:56:01,919] [SCHED.SchedulerCore.terminate] TaskResult added to job '1' - task name is 'task8'
+[INFO 2009-07-23 11:56:01,919] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:56:01,931] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 11:56:01,935] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 11:56:01,952] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,954] [SCHED.SchedulerCore.terminate] Number of finished tasks : 8 - Number of tasks : 8
+[INFO 2009-07-23 11:56:01,954] [SCHED.SchedulerCore.terminate] Job '1' terminated
+[INFO 2009-07-23 11:56:01,955] [SCHED.SchedulerCore.terminateJobHandling] Cleaning loggers for Job '1'
+[INFO 2009-07-23 11:56:01,955] [SCHED.SchedulerCore.removeTaskClassServer] Removing TaskClassServer for Job '1'
+[INFO 2009-07-23 11:56:01,955] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 11:56:01,962] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,963] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,964] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,965] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,967] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,968] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,969] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,970] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 11:56:01,973] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 11:56:57,168] [SCHED.AuthenticationImpl.loginAs] admin is trying to connect as admin
+[INFO 2009-07-23 11:56:57,169] [SCHED.FileLoginModule.login] authentication succeeded for user 'admin' in group 'admin'
+[INFO 2009-07-23 11:56:57,169] [SCHED.AuthenticationImpl.loginAs] Logged successfull as a admin : admin
+[INFO 2009-07-23 11:57:57,926] [SCHED.NodeSourcePolicy.info] [Default] Acquiring all nodes
+[INFO 2009-07-23 11:57:58,161] [SCHED.GCMDeploymentDescriptorImpl.startGroups] Starting group id=sshLan #commands=3
+[INFO 2009-07-23 11:57:58,162] [SCHED.Executor.submit] executing command=ssh jily '"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 3 -d 2464378154226858688 -b http://pataud:42629/classServer/  &"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 3 -d 2464378154226858688 -b http://pataud:42629/classServer/  '
+[INFO 2009-07-23 11:57:58,183] [SCHED.Executor.submit] executing command=ssh dalek '"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 3 -d 2464378154226858688 -b http://pataud:42629/classServer/  &"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 3 -d 2464378154226858688 -b http://pataud:42629/classServer/  '
+[INFO 2009-07-23 11:57:58,205] [SCHED.Executor.submit] executing command=ssh abulafia '"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 3 -d 2464378154226858688 -b http://pataud:42629/classServer/  &"java" -Dproactive.http.jetty.xml="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/deployment/jetty.xml" -cp "/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/script-js.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jruby-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/jython-engine.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/commons-logging-1.0.4.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_SRM-common.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_ResourceManager.jar:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/dist/lib/ProActive_Scheduler-worker.jar" -Dlog4j.configuration="file:/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/log4j/defaultNode-log4j" -Djava.security.policy="/user/cdalmass/home/Demos/ProActiveScheduling-1.0.1/config/scheduler.java.policy" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://pataud:1099/PA_JVM1389888204 -c 1 -i 3 -d 2464378154226858688 -b http://pataud:42629/classServer/  '
+[INFO 2009-07-23 11:58:01,605] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on jily.activeeon.com
+[INFO 2009-07-23 11:58:01,625] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on jily.activeeon.com
+[INFO 2009-07-23 11:58:02,455] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on abulafia.activeeon.com
+[INFO 2009-07-23 11:58:02,458] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on abulafia.activeeon.com
+[INFO 2009-07-23 11:58:02,498] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:58:02,499] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:58:02,650] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:58:02,650] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:58:02,765] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:52527
+[INFO 2009-07-23 11:58:02,769] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:43720
+[INFO 2009-07-23 11:58:02,827] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:58:02,831] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:58:03,004] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:58:03,009] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:58:03,576] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:58:03,577] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:58:03,698] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://jily.activeeon.com:1099/PA_JVM1898939173_GCMNode-0
+[INFO 2009-07-23 11:58:03,712] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://jily.activeeon.com:1099/PA_JVM1898939173_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:58:03,768] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:58:03,769] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:58:03,776] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://jily.activeeon.com:1099/PA_JVM696326419_GCMNode-0
+[INFO 2009-07-23 11:58:03,784] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://jily.activeeon.com:1099/PA_JVM696326419_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:58:03,912] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:41342
+[INFO 2009-07-23 11:58:03,912] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:57794
+[INFO 2009-07-23 11:58:04,002] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:58:04,002] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:58:04,231] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:58:04,233] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:58:05,030] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://abulafia.activeeon.com:1099/PA_JVM956626400_GCMNode-0
+[INFO 2009-07-23 11:58:05,041] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://abulafia.activeeon.com:1099/PA_JVM956626400_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:58:05,115] [SCHED.NodeSource.internalAddNode] [Default] new node available : rmi://abulafia.activeeon.com:1099/PA_JVM1731800194_GCMNode-0
+[INFO 2009-07-23 11:58:05,125] [SCHED.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://abulafia.activeeon.com:1099/PA_JVM1731800194_GCMNode-0, node Source : Default
+[INFO 2009-07-23 11:58:23,972] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on 192.168.122.1
+[INFO 2009-07-23 11:58:24,126] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [StartPARuntime] Starting a ProActiveRuntime on 192.168.122.1
+[INFO 2009-07-23 11:58:24,440] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:58:24,493] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:58:24,548] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 11:58:24,571] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:40770
+[INFO 2009-07-23 11:58:24,594] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:58:24,612] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] jetty-6.1.11
+[INFO 2009-07-23 11:58:24,643] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 11:58:24,697] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [NativeMethodAccessorImpl] Started SelectChannelConnector@0.0.0.0:41050
+[INFO 2009-07-23 11:58:24,716] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 11:58:24,811] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[INFO 2009-07-23 12:01:21,265] [SCHED.SchedulerAuthentication.logAsUser] user : user1
+[INFO 2009-07-23 12:01:21,265] [SCHED.AuthenticationImpl.loginAs] user1 is trying to connect as user
+[INFO 2009-07-23 12:01:21,266] [SCHED.FileLoginModule.login] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-07-23 12:01:21,267] [SCHED.AuthenticationImpl.loginAs] Logged successfull as a user : user1
+[INFO 2009-07-23 12:01:21,269] [SCHED.SchedulerFrontend.connect] user1 successfully connected !
+[INFO 2009-07-23 12:01:46,747] [SCHED.SchedulerCore.getTaskResult] Trying to get TaskResult of task 'task4' for job '1'
+[INFO 2009-07-23 12:01:46,747] [SCHED.DatabaseManager.recover] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2009-07-23 12:01:46,748] [SCHED.DatabaseManager.recover] Creating query...
+[INFO 2009-07-23 12:01:46,803] [SCHED.SchedulerCore.getTaskResult] Get 'task4' task result for job '1'
+[INFO 2009-07-23 12:02:38,318] [SCHED.SchedulerFrontend.submit] New job submission requested : job_8_tasks
+[INFO 2009-07-23 12:02:38,318] [SCHED.InternalJobFactory.createJob] Create job 'job_8_tasks' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[INFO 2009-07-23 12:02:38,319] [SCHED.InternalJobFactory.isConsistency] Check if job 'job_8_tasks' is consistency : ie Every task can be accessed
+[INFO 2009-07-23 12:02:38,319] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,319] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,319] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,320] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,320] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,320] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,320] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,321] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:02:38,321] [SCHED.InternalJobFactory.setJobCommonProperties] Setting job common properties
+[INFO 2009-07-23 12:02:38,321] [SCHED.SchedulerFrontend.submit] Preparing and settings job submission
+[INFO 2009-07-23 12:02:38,322] [SCHED.SchedulerCore.submit] Trying to submit new Job '2'
+[INFO 2009-07-23 12:02:38,322] [SCHED.DatabaseManager.register] Registering new Object : org.ow2.proactive.scheduler.job.InternalTaskFlowJob
+[INFO 2009-07-23 12:02:38,379] [SCHED.SchedulerCore.submit] New job added to Scheduler lists : '2'
+[INFO 2009-07-23 12:02:38,380] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.common.job.JobEnvironment
+[INFO 2009-07-23 12:02:38,380] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,384] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,387] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,390] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,393] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,396] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,399] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,402] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:02:38,405] [SCHED.SchedulerCore.submit] JobEnvironment and internalTask unloaded for job '2'
+[INFO 2009-07-23 12:02:38,408] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:02:38,408] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 8
+[INFO 2009-07-23 12:02:38,423] [SCHED.SchedulerFrontend.submit] New job submitted '2' containing 8 tasks (owner is 'user1')
+[INFO 2009-07-23 12:04:01,152] [SCHED.SchedulerFrontend.submit] New job submission requested : job_8_tasks
+[INFO 2009-07-23 12:04:01,153] [SCHED.InternalJobFactory.createJob] Create job 'job_8_tasks' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[INFO 2009-07-23 12:04:01,153] [SCHED.InternalJobFactory.isConsistency] Check if job 'job_8_tasks' is consistency : ie Every task can be accessed
+[INFO 2009-07-23 12:04:01,154] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,154] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,154] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,154] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,155] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,155] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,155] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,155] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:04:01,155] [SCHED.InternalJobFactory.setJobCommonProperties] Setting job common properties
+[INFO 2009-07-23 12:04:01,156] [SCHED.SchedulerFrontend.submit] Preparing and settings job submission
+[INFO 2009-07-23 12:04:43,048] [SCHED.SchedulerCore.schedule] Number of free resources : 8
+[INFO 2009-07-23 12:04:43,050] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 8
+[INFO 2009-07-23 12:04:43,144] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:43,184] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:43,188] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task1' for job '2'
+[INFO 2009-07-23 12:04:43,196] [SCHED.SchedulerCore.schedule] Task '20008' started on pataud
+[INFO 2009-07-23 12:04:43,197] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '2' (event='Job pending to running')
+[INFO 2009-07-23 12:04:43,198] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:43,205] [SCHED.SchedulerCore.schedule] Job '2' started
+[INFO 2009-07-23 12:04:43,216] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:43,257] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:43,260] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task3' for job '2'
+[INFO 2009-07-23 12:04:43,269] [SCHED.SchedulerCore.schedule] Task '20002' started on pataud
+[INFO 2009-07-23 12:04:43,286] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:43,327] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:43,330] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task5' for job '2'
+[INFO 2009-07-23 12:04:43,344] [SCHED.SchedulerCore.schedule] Task '20003' started on pataud
+[INFO 2009-07-23 12:04:43,359] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:43,411] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:43,413] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task6' for job '2'
+[INFO 2009-07-23 12:04:43,449] [SCHED.SchedulerCore.schedule] Task '20001' started on pataud
+[INFO 2009-07-23 12:04:43,461] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:43,650] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:43,651] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 12:04:43,653] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task2' for job '2'
+[INFO 2009-07-23 12:04:44,038] [SCHED.SchedulerCore.schedule] Task '20006' started on jily.activeeon.com
+[INFO 2009-07-23 12:04:44,053] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:44,210] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:44,210] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 12:04:44,216] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task8' for job '2'
+[INFO 2009-07-23 12:04:44,437] [SCHED.SchedulerCore.schedule] Task '20007' started on jily.activeeon.com
+[INFO 2009-07-23 12:04:44,453] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:44,764] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:44,765] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 12:04:44,768] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task4' for job '2'
+[INFO 2009-07-23 12:04:45,130] [SCHED.SchedulerCore.schedule] Task '20004' started on abulafia.activeeon.com
+[INFO 2009-07-23 12:04:45,148] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:45,327] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:45,329] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubJavaTaskLauncher
+[INFO 2009-07-23 12:04:45,332] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task7' for job '2'
+[INFO 2009-07-23 12:04:45,546] [SCHED.SchedulerCore.schedule] Task '20005' started on abulafia.activeeon.com
+[INFO 2009-07-23 12:04:45,547] [SCHED.SchedulerCore.kill] Request sent to kill job '2'
+[INFO 2009-07-23 12:04:45,547] [SCHED.SchedulerCore.endJob] Job ending request for job '2' - status : Killed
+[INFO 2009-07-23 12:04:45,547] [SCHED.SchedulerCore.endJob] Force terminating task '20008'
+[INFO 2009-07-23 12:04:45,552] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20008...
+[INFO 2009-07-23 12:04:45,553] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20008
+[INFO 2009-07-23 12:04:45,560] [SCHED.SchedulerCore.endJob] Force terminating task '20002'
+[INFO 2009-07-23 12:04:45,560] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:45,568] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20002...
+[INFO 2009-07-23 12:04:45,569] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20002
+[INFO 2009-07-23 12:04:45,578] [SCHED.SchedulerCore.endJob] Force terminating task '20003'
+[INFO 2009-07-23 12:04:45,578] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:45,584] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20003...
+[INFO 2009-07-23 12:04:45,586] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20003
+[INFO 2009-07-23 12:04:45,593] [SCHED.SchedulerCore.endJob] Force terminating task '20001'
+[INFO 2009-07-23 12:04:45,593] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:45,598] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20001...
+[INFO 2009-07-23 12:04:45,600] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20001
+[INFO 2009-07-23 12:04:45,605] [SCHED.SchedulerCore.endJob] Force terminating task '20006'
+[INFO 2009-07-23 12:04:45,605] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:45,612] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20006...
+[INFO 2009-07-23 12:04:45,613] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20006
+[INFO 2009-07-23 12:04:45,621] [SCHED.SchedulerCore.endJob] Force terminating task '20007'
+[INFO 2009-07-23 12:04:45,621] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:45,633] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20007...
+[INFO 2009-07-23 12:04:45,639] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20007
+[INFO 2009-07-23 12:04:45,643] [SCHED.SchedulerCore.endJob] Force terminating task '20004'
+[INFO 2009-07-23 12:04:45,643] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:45,665] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20004...
+[INFO 2009-07-23 12:04:45,672] [SCHED.Executor$InputStreamMonitor.run] [WARN ] [TaskLauncher] Loggers are not shut down !
+[INFO 2009-07-23 12:04:45,672] [SCHED.Executor$InputStreamMonitor.run] java.lang.NullPointerException
+[INFO 2009-07-23 12:04:45,672] [SCHED.Executor$InputStreamMonitor.run] 	at org.ow2.proactive.scheduler.task.launcher.TaskLauncher.flushStreams(TaskLauncher.java:342)
+[INFO 2009-07-23 12:04:45,672] [SCHED.Executor$InputStreamMonitor.run] 	at org.ow2.proactive.scheduler.task.launcher.TaskLauncher.finalizeLoggers(TaskLauncher.java:330)
+[INFO 2009-07-23 12:04:45,672] [SCHED.Executor$InputStreamMonitor.run] 	at org.ow2.proactive.scheduler.task.launcher.TaskLauncher.terminate(TaskLauncher.java:431)
+[INFO 2009-07-23 12:04:45,672] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[INFO 2009-07-23 12:04:45,672] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[INFO 2009-07-23 12:04:45,673] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[INFO 2009-07-23 12:04:45,673] [SCHED.Executor$InputStreamMonitor.run] 	at java.lang.reflect.Method.invoke(Method.java:597)
+[INFO 2009-07-23 12:04:45,673] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+[INFO 2009-07-23 12:04:45,673] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+[INFO 2009-07-23 12:04:45,673] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+[INFO 2009-07-23 12:04:45,673] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.request.RequestReceiverImpl.receiveRequest(RequestReceiverImpl.java:101)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.BodyImpl.internalReceiveRequest(BodyImpl.java:286)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.AbstractBody.receiveRequest(AbstractBody.java:351)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[INFO 2009-07-23 12:04:45,674] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[INFO 2009-07-23 12:04:45,675] [SCHED.Executor$InputStreamMonitor.run] 	at java.lang.reflect.Method.invoke(Method.java:597)
+[INFO 2009-07-23 12:04:45,675] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+[INFO 2009-07-23 12:04:45,675] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.remoteobject.RemoteObjectImpl.receiveMessage(RemoteObjectImpl.java:111)
+[INFO 2009-07-23 12:04:45,675] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl.receiveMessage(InternalRemoteRemoteObjectImpl.java:150)
+[INFO 2009-07-23 12:04:45,675] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl.receiveMessage(RmiRemoteObjectImpl.java:80)
+[INFO 2009-07-23 12:04:45,675] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at java.lang.reflect.Method.invoke(Method.java:597)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:305)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at java.security.AccessController.doPrivileged(Native Method)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+[INFO 2009-07-23 12:04:45,676] [SCHED.Executor$InputStreamMonitor.run] 	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+[INFO 2009-07-23 12:04:45,677] [SCHED.Executor$InputStreamMonitor.run] 	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+[INFO 2009-07-23 12:04:45,677] [SCHED.Executor$InputStreamMonitor.run] 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+[INFO 2009-07-23 12:04:45,677] [SCHED.Executor$InputStreamMonitor.run] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+[INFO 2009-07-23 12:04:45,677] [SCHED.Executor$InputStreamMonitor.run] 	at java.lang.Thread.run(Thread.java:619)
+[INFO 2009-07-23 12:04:45,958] [SCHED.SchedulerCore.endJob] Force terminating task '20005'
+[INFO 2009-07-23 12:04:45,958] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:45,966] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20005...
+[INFO 2009-07-23 12:04:45,967] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20005
+[INFO 2009-07-23 12:04:45,969] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [JavaTaskLauncher] 
+[INFO 2009-07-23 12:04:45,969] [SCHED.Executor$InputStreamMonitor.run] java.lang.NullPointerException
+[INFO 2009-07-23 12:04:45,969] [SCHED.Executor$InputStreamMonitor.run] 	at org.ow2.proactive.scheduler.task.launcher.JavaTaskLauncher.doTask(JavaTaskLauncher.java:97)
+[INFO 2009-07-23 12:04:45,969] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[INFO 2009-07-23 12:04:45,969] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[INFO 2009-07-23 12:04:45,969] [SCHED.Executor$InputStreamMonitor.run] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[INFO 2009-07-23 12:04:45,969] [SCHED.Executor$InputStreamMonitor.run] 	at java.lang.reflect.Method.invoke(Method.java:597)
+[INFO 2009-07-23 12:04:45,970] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+[INFO 2009-07-23 12:04:45,970] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+[INFO 2009-07-23 12:04:45,970] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+[INFO 2009-07-23 12:04:45,970] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+[INFO 2009-07-23 12:04:45,970] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+[INFO 2009-07-23 12:04:45,970] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+[INFO 2009-07-23 12:04:45,971] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+[INFO 2009-07-23 12:04:45,971] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+[INFO 2009-07-23 12:04:45,971] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+[INFO 2009-07-23 12:04:45,971] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+[INFO 2009-07-23 12:04:45,971] [SCHED.Executor$InputStreamMonitor.run] 	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+[INFO 2009-07-23 12:04:45,971] [SCHED.Executor$InputStreamMonitor.run] 	at java.lang.Thread.run(Thread.java:619)
+[INFO 2009-07-23 12:04:46,010] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20005...
+[INFO 2009-07-23 12:04:46,011] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20005
+[INFO 2009-07-23 12:04:46,014] [SCHED.SchedulerCore.terminateJobHandling] Cleaning loggers for Job '2'
+[INFO 2009-07-23 12:04:46,014] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:46,014] [SCHED.SchedulerCore.removeTaskClassServer] Removing TaskClassServer for Job '2'
+[INFO 2009-07-23 12:04:46,015] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '2' (event='Job running to finished')
+[INFO 2009-07-23 12:04:46,016] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:46,026] [SCHED.SchedulerCore.endJob] Job '2' terminated (Killed)
+[INFO 2009-07-23 12:04:46,027] [SCHED.SchedulerCore.submit] Trying to submit new Job '3'
+[INFO 2009-07-23 12:04:46,028] [SCHED.DatabaseManager.register] Registering new Object : org.ow2.proactive.scheduler.job.InternalTaskFlowJob
+[WARN 2009-07-23 12:04:46,028] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/6640c12-122a70ead4f--7fd2--edd36c1b2395e0ab-6640c12-122a70ead4f--8000 when calling receiveReply
+[ERROR 2009-07-23 12:04:46,030] [SCHED.FuturePool$ACService.doAutomaticContinuation] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveReply(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveReply(UniversalBodyRemoteObjectAdapter.java:173)
+	at org.objectweb.proactive.core.body.reply.ReplyImpl.send(ReplyImpl.java:150)
+	at org.objectweb.proactive.core.body.future.FuturePool$ACService.doAutomaticContinuation(FuturePool.java:665)
+	at org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue.run(FuturePool.java:563)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 11 more
+[INFO 2009-07-23 12:04:46,084] [SCHED.SchedulerCore.submit] New job added to Scheduler lists : '3'
+[INFO 2009-07-23 12:04:46,085] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.common.job.JobEnvironment
+[INFO 2009-07-23 12:04:46,086] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,090] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,095] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,099] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,103] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,107] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,111] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,115] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:46,119] [SCHED.SchedulerCore.submit] JobEnvironment and internalTask unloaded for job '3'
+[INFO 2009-07-23 12:04:46,122] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:46,122] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 8
+[WARN 2009-07-23 12:04:46,122] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/6640c12-122a70ead4f--7fe5--edd36c1b2395e0ab-6640c12-122a70ead4f--8000 when calling receiveRequest
+[WARN 2009-07-23 12:04:46,123] [SCHED.SchedulerFrontend.clearListeners] user1@pataud:1099 has been disconnected from events listener!
+[INFO 2009-07-23 12:04:46,124] [SCHED.SchedulerFrontend.submit] New job submitted '3' containing 8 tasks (owner is 'user1')
+[WARN 2009-07-23 12:04:46,126] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/6640c12-122a70ead4f--7fd2--edd36c1b2395e0ab-6640c12-122a70ead4f--8000 when calling receiveReply
+[WARN 2009-07-23 12:04:46,127] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/6640c12-122a70ead4f--7fd2--edd36c1b2395e0ab-6640c12-122a70ead4f--8000 when calling receiveReply
+[ERROR 2009-07-23 12:04:46,127] [SCHED.BodyImpl$ActiveLocalBodyStrategy.serveInternal] Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveReply(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveReply(UniversalBodyRemoteObjectAdapter.java:173)
+	at org.objectweb.proactive.core.body.reply.ReplyImpl.send(ReplyImpl.java:150)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:621)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 18 more
+[INFO 2009-07-23 12:04:46,133] [SCHED.SchedulerCore.schedule] Number of free resources : 8
+[INFO 2009-07-23 12:04:46,134] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 8
+[INFO 2009-07-23 12:04:46,183] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,228] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task2' for job '3'
+[INFO 2009-07-23 12:04:46,230] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,235] [SCHED.SchedulerCore.schedule] Task '30008' started on pataud
+[INFO 2009-07-23 12:04:46,235] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '3' (event='Job pending to running')
+[INFO 2009-07-23 12:04:46,236] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:46,244] [SCHED.SchedulerCore.schedule] Job '3' started
+[INFO 2009-07-23 12:04:46,260] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,300] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,301] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task1' for job '3'
+[INFO 2009-07-23 12:04:46,307] [SCHED.SchedulerCore.schedule] Task '30006' started on pataud
+[INFO 2009-07-23 12:04:46,321] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,358] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,359] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task7' for job '3'
+[INFO 2009-07-23 12:04:46,365] [SCHED.SchedulerCore.schedule] Task '30007' started on pataud
+[INFO 2009-07-23 12:04:46,376] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,414] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,417] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task8' for job '3'
+[INFO 2009-07-23 12:04:46,424] [SCHED.SchedulerCore.schedule] Task '30004' started on pataud
+[INFO 2009-07-23 12:04:46,439] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,487] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,499] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task5' for job '3'
+[INFO 2009-07-23 12:04:46,511] [SCHED.SchedulerCore.schedule] Task '30005' started on jily.activeeon.com
+[INFO 2009-07-23 12:04:46,526] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,568] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,572] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task4' for job '3'
+[INFO 2009-07-23 12:04:46,578] [SCHED.SchedulerCore.schedule] Task '30002' started on jily.activeeon.com
+[INFO 2009-07-23 12:04:46,593] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,648] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,652] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task6' for job '3'
+[INFO 2009-07-23 12:04:46,662] [SCHED.SchedulerCore.schedule] Task '30003' started on abulafia.activeeon.com
+[INFO 2009-07-23 12:04:46,677] [SCHED.InternalJavaTask.createLauncher] Create java task launcher
+[INFO 2009-07-23 12:04:46,736] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:04:46,741] [SCHED.SchedulerCore.schedule] Starting deployment of task 'task3' for job '3'
+[INFO 2009-07-23 12:04:46,752] [SCHED.SchedulerCore.schedule] Task '30001' started on abulafia.activeeon.com
+[INFO 2009-07-23 12:04:47,451] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20001...
+[INFO 2009-07-23 12:04:47,452] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20001
+[INFO 2009-07-23 12:04:48,753] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:49,353] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20003...
+[INFO 2009-07-23 12:04:49,353] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20003
+[INFO 2009-07-23 12:04:50,373] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30007...
+[INFO 2009-07-23 12:04:50,374] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30007
+[INFO 2009-07-23 12:04:50,377] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30007' - job '3'
+[INFO 2009-07-23 12:04:50,378] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:50,382] [SCHED.SchedulerCore.terminate] Task '30007' futur result unwrapped
+[INFO 2009-07-23 12:04:50,382] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30007
+[INFO 2009-07-23 12:04:50,382] [SCHED.SchedulerCore.terminate] Task '30007' on job '3' terminated
+[INFO 2009-07-23 12:04:50,383] [SCHED.SchedulerCore.terminate] Task '30007' terminate without error
+[INFO 2009-07-23 12:04:50,383] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task7'
+[INFO 2009-07-23 12:04:50,383] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:50,390] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:04:50,395] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:04:50,402] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:04:50,404] [SCHED.SchedulerCore.terminate] Number of finished tasks : 1 - Number of tasks : 8
+[INFO 2009-07-23 12:04:50,406] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:50,406] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:50,683] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30003...
+[INFO 2009-07-23 12:04:50,683] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30003
+[INFO 2009-07-23 12:04:50,690] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30003' - job '3'
+[INFO 2009-07-23 12:04:50,690] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:50,703] [SCHED.SchedulerCore.terminate] Task '30003' futur result unwrapped
+[INFO 2009-07-23 12:04:50,703] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30003
+[INFO 2009-07-23 12:04:50,703] [SCHED.SchedulerCore.terminate] Task '30003' on job '3' terminated
+[INFO 2009-07-23 12:04:50,704] [SCHED.SchedulerCore.terminate] Task '30003' terminate without error
+[INFO 2009-07-23 12:04:50,704] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task6'
+[INFO 2009-07-23 12:04:50,704] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:50,711] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:04:50,715] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:04:50,724] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:04:50,726] [SCHED.SchedulerCore.terminate] Number of finished tasks : 2 - Number of tasks : 8
+[INFO 2009-07-23 12:04:50,728] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:50,728] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:50,782] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20006...
+[INFO 2009-07-23 12:04:50,782] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20006
+[INFO 2009-07-23 12:04:51,204] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20008...
+[INFO 2009-07-23 12:04:51,205] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20008
+[INFO 2009-07-23 12:04:51,279] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20002...
+[INFO 2009-07-23 12:04:51,279] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20002
+[INFO 2009-07-23 12:04:52,256] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30008...
+[INFO 2009-07-23 12:04:52,257] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30008
+[INFO 2009-07-23 12:04:52,260] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30008' - job '3'
+[INFO 2009-07-23 12:04:52,261] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:52,265] [SCHED.SchedulerCore.terminate] Task '30008' futur result unwrapped
+[INFO 2009-07-23 12:04:52,265] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30008
+[INFO 2009-07-23 12:04:52,265] [SCHED.SchedulerCore.terminate] Task '30008' on job '3' terminated
+[INFO 2009-07-23 12:04:52,265] [SCHED.SchedulerCore.terminate] Task '30008' terminate without error
+[INFO 2009-07-23 12:04:52,266] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task2'
+[INFO 2009-07-23 12:04:52,266] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:52,277] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:04:52,281] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:04:52,290] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:04:52,293] [SCHED.SchedulerCore.terminate] Number of finished tasks : 3 - Number of tasks : 8
+[INFO 2009-07-23 12:04:52,294] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:52,294] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:52,512] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30005...
+[INFO 2009-07-23 12:04:52,513] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30005
+[INFO 2009-07-23 12:04:52,518] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30005' - job '3'
+[INFO 2009-07-23 12:04:52,518] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:52,522] [SCHED.SchedulerCore.terminate] Task '30005' futur result unwrapped
+[INFO 2009-07-23 12:04:52,522] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30005
+[INFO 2009-07-23 12:04:52,522] [SCHED.SchedulerCore.terminate] Task '30005' on job '3' terminated
+[INFO 2009-07-23 12:04:52,523] [SCHED.SchedulerCore.terminate] Task '30005' terminate without error
+[INFO 2009-07-23 12:04:52,523] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task5'
+[INFO 2009-07-23 12:04:52,523] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:52,530] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:04:52,534] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:04:52,545] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:04:52,548] [SCHED.SchedulerCore.terminate] Number of finished tasks : 4 - Number of tasks : 8
+[INFO 2009-07-23 12:04:52,549] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:52,549] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:52,591] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30002...
+[INFO 2009-07-23 12:04:52,625] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30002
+[INFO 2009-07-23 12:04:52,630] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30002' - job '3'
+[INFO 2009-07-23 12:04:52,630] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:52,638] [SCHED.SchedulerCore.terminate] Task '30002' futur result unwrapped
+[INFO 2009-07-23 12:04:52,639] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30002
+[INFO 2009-07-23 12:04:52,639] [SCHED.SchedulerCore.terminate] Task '30002' on job '3' terminated
+[INFO 2009-07-23 12:04:52,639] [SCHED.SchedulerCore.terminate] Task '30002' terminate without error
+[INFO 2009-07-23 12:04:52,639] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task4'
+[INFO 2009-07-23 12:04:52,640] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:52,648] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:04:52,654] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:04:52,665] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:04:52,668] [SCHED.SchedulerCore.terminate] Number of finished tasks : 5 - Number of tasks : 8
+[INFO 2009-07-23 12:04:52,669] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:52,673] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:54,319] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30006...
+[INFO 2009-07-23 12:04:54,320] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30006
+[INFO 2009-07-23 12:04:54,334] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30006' - job '3'
+[INFO 2009-07-23 12:04:54,334] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:54,338] [SCHED.SchedulerCore.terminate] Task '30006' futur result unwrapped
+[INFO 2009-07-23 12:04:54,338] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30006
+[INFO 2009-07-23 12:04:54,339] [SCHED.SchedulerCore.terminate] Task '30006' on job '3' terminated
+[INFO 2009-07-23 12:04:54,339] [SCHED.SchedulerCore.terminate] Task '30006' terminate without error
+[INFO 2009-07-23 12:04:54,339] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task1'
+[INFO 2009-07-23 12:04:54,339] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:54,346] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:04:54,350] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:04:54,362] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:04:54,364] [SCHED.SchedulerCore.terminate] Number of finished tasks : 6 - Number of tasks : 8
+[INFO 2009-07-23 12:04:54,365] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:54,365] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:54,762] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30001...
+[INFO 2009-07-23 12:04:54,763] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30001
+[INFO 2009-07-23 12:04:54,769] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30001' - job '3'
+[INFO 2009-07-23 12:04:54,769] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:04:54,775] [SCHED.SchedulerCore.terminate] Task '30001' futur result unwrapped
+[INFO 2009-07-23 12:04:54,776] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30001
+[INFO 2009-07-23 12:04:54,776] [SCHED.SchedulerCore.terminate] Task '30001' on job '3' terminated
+[INFO 2009-07-23 12:04:54,776] [SCHED.SchedulerCore.terminate] Task '30001' terminate without error
+[INFO 2009-07-23 12:04:54,776] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task3'
+[INFO 2009-07-23 12:04:54,776] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:04:54,783] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:04:54,787] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:04:54,799] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:04:54,801] [SCHED.SchedulerCore.terminate] Number of finished tasks : 7 - Number of tasks : 8
+[INFO 2009-07-23 12:04:54,802] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:54,802] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:04:56,802] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:04:58,803] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:05:00,714] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 12:05:00,714] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 12:05:00,803] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:05:02,804] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:05:04,714] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 20007...
+[INFO 2009-07-23 12:05:04,715] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 20007
+[INFO 2009-07-23 12:05:04,804] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:05:06,428] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 30004...
+[INFO 2009-07-23 12:05:06,429] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 30004
+[INFO 2009-07-23 12:05:06,434] [SCHED.SchedulerCore.terminate] Received terminate task request for task '30004' - job '3'
+[INFO 2009-07-23 12:05:06,435] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalJavaTask
+[INFO 2009-07-23 12:05:06,438] [SCHED.SchedulerCore.terminate] Task '30004' futur result unwrapped
+[INFO 2009-07-23 12:05:06,439] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 30004
+[INFO 2009-07-23 12:05:06,439] [SCHED.SchedulerCore.terminate] Task '30004' on job '3' terminated
+[INFO 2009-07-23 12:05:06,439] [SCHED.SchedulerCore.terminate] Task '30004' terminate without error
+[INFO 2009-07-23 12:05:06,439] [SCHED.SchedulerCore.terminate] TaskResult added to job '3' - task name is 'task8'
+[INFO 2009-07-23 12:05:06,440] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:05:06,447] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:05:06,453] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:05:06,468] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,470] [SCHED.SchedulerCore.terminate] Number of finished tasks : 8 - Number of tasks : 8
+[INFO 2009-07-23 12:05:06,470] [SCHED.SchedulerCore.terminate] Job '3' terminated
+[INFO 2009-07-23 12:05:06,470] [SCHED.SchedulerCore.terminateJobHandling] Cleaning loggers for Job '3'
+[INFO 2009-07-23 12:05:06,471] [SCHED.SchedulerCore.removeTaskClassServer] Removing TaskClassServer for Job '3'
+[INFO 2009-07-23 12:05:06,471] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:05:06,477] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,478] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,479] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,482] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,483] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,485] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,486] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,487] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:05:06,489] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:05:10,417] [SCHED.SchedulerAuthentication.logAsUser] user : user1
+[INFO 2009-07-23 12:05:10,417] [SCHED.AuthenticationImpl.loginAs] user1 is trying to connect as user
+[INFO 2009-07-23 12:05:10,418] [SCHED.FileLoginModule.login] authentication succeeded for user 'user1' in group 'user'
+[INFO 2009-07-23 12:05:10,418] [SCHED.AuthenticationImpl.loginAs] Logged successfull as a user : user1
+[INFO 2009-07-23 12:05:10,420] [SCHED.SchedulerFrontend.connect] user1 successfully connected !
+[INFO 2009-07-23 12:06:05,832] [SCHED.SchedulerFrontend.submit] New job submission requested : LigandDocking
+[INFO 2009-07-23 12:06:05,835] [SCHED.InternalJobFactory.createJob] Create job 'LigandDocking' - org.ow2.proactive.scheduler.common.job.TaskFlowJob
+[INFO 2009-07-23 12:06:05,835] [SCHED.InternalJobFactory.isConsistency] Check if job 'LigandDocking' is consistency : ie Every task can be accessed
+[INFO 2009-07-23 12:06:05,835] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:06:05,836] [SCHED.InternalJobFactory.setTaskCommonProperties] Setting task common properties
+[INFO 2009-07-23 12:06:05,836] [SCHED.InternalJobFactory.setJobCommonProperties] Setting job common properties
+[INFO 2009-07-23 12:06:05,836] [SCHED.SchedulerFrontend.submit] Preparing and settings job submission
+[INFO 2009-07-23 12:06:05,836] [SCHED.SchedulerCore.submit] Trying to submit new Job '4'
+[INFO 2009-07-23 12:06:05,837] [SCHED.DatabaseManager.register] Registering new Object : org.ow2.proactive.scheduler.job.InternalTaskFlowJob
+[INFO 2009-07-23 12:06:05,870] [SCHED.SchedulerCore.submit] New job added to Scheduler lists : '4'
+[INFO 2009-07-23 12:06:05,870] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.common.job.JobEnvironment
+[INFO 2009-07-23 12:06:05,871] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalNativeTask
+[INFO 2009-07-23 12:06:05,873] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalNativeTask
+[INFO 2009-07-23 12:06:05,876] [SCHED.SchedulerCore.submit] JobEnvironment and internalTask unloaded for job '4'
+[INFO 2009-07-23 12:06:05,881] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:05,886] [SCHED.SchedulerFrontend.submit] New job submitted '4' containing 2 tasks (owner is 'user1')
+[INFO 2009-07-23 12:06:05,900] [SCHED.SchedulerCore.schedule] Number of tasks ready to be scheduled : 2
+[INFO 2009-07-23 12:06:05,905] [SCHED.SchedulerCore.schedule] Number of free resources : 8
+[INFO 2009-07-23 12:06:05,906] [SCHED.RMCore.getAtMostNodes] Number of requested nodes is 2
+[INFO 2009-07-23 12:06:05,942] [SCHED.InternalNativeTask.createLauncher] Create native task launcher
+[INFO 2009-07-23 12:06:05,995] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:06:05,995] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubNativeTaskLauncher
+[INFO 2009-07-23 12:06:06,006] [SCHED.SchedulerCore.schedule] Starting deployment of task 'Rigid_ligand_docking' for job '4'
+[INFO 2009-07-23 12:06:06,030] [SCHED.SchedulerCore.schedule] Task '40001' started on pataud
+[INFO 2009-07-23 12:06:06,031] [SCHED.SchedulerCore.updateTaskInfosList] Send multiple changes to front-end for job '4' (event='Job pending to running')
+[INFO 2009-07-23 12:06:06,036] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:06:06,080] [SCHED.SchedulerCore.schedule] Job '4' started
+[INFO 2009-07-23 12:06:06,094] [SCHED.InternalNativeTask.createLauncher] Create native task launcher
+[INFO 2009-07-23 12:06:06,150] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Init loggers
+[INFO 2009-07-23 12:06:06,151] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [MOPClassLoader] Generating class : pa.stub.org.ow2.proactive.scheduler.task.launcher._StubNativeTaskLauncher
+[INFO 2009-07-23 12:06:06,155] [SCHED.SchedulerCore.schedule] Starting deployment of task 'Flexible_ligand_docking' for job '4'
+[INFO 2009-07-23 12:06:06,167] [SCHED.SchedulerCore.schedule] Task '40002' started on abulafia.activeeon.com
+[INFO 2009-07-23 12:06:08,173] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:10,173] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:12,174] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:14,174] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:16,174] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:18,175] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:20,175] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:20,716] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 12:06:20,716] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 12:06:22,175] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:24,176] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:24,200] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 40001...
+[INFO 2009-07-23 12:06:24,201] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 40001
+[INFO 2009-07-23 12:06:24,206] [SCHED.SchedulerCore.terminate] Received terminate task request for task '40001' - job '4'
+[INFO 2009-07-23 12:06:24,206] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalNativeTask
+[INFO 2009-07-23 12:06:24,220] [SCHED.SchedulerCore.terminate] Task '40001' futur result unwrapped
+[INFO 2009-07-23 12:06:24,221] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 40001
+[INFO 2009-07-23 12:06:24,221] [SCHED.SchedulerCore.terminate] Task '40001' on job '4' terminated
+[INFO 2009-07-23 12:06:24,222] [SCHED.SchedulerCore.terminate] Task '40001' terminate without error
+[INFO 2009-07-23 12:06:24,223] [SCHED.SchedulerCore.terminate] TaskResult added to job '4' - task name is 'Rigid_ligand_docking'
+[INFO 2009-07-23 12:06:24,223] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:06:24,230] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:06:24,234] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:06:24,261] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:06:24,264] [SCHED.SchedulerCore.terminate] Number of finished tasks : 1 - Number of tasks : 2
+[INFO 2009-07-23 12:06:24,265] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:24,265] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:06:26,265] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:28,266] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:30,266] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:32,267] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:34,267] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:36,267] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:38,268] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:38,839] [SCHED.SchedulerCore.getTaskResult] Trying to get TaskResult of task 'Rigid_ligand_docking' for job '4'
+[INFO 2009-07-23 12:06:38,839] [SCHED.DatabaseManager.recover] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2009-07-23 12:06:38,840] [SCHED.DatabaseManager.recover] Creating query...
+[INFO 2009-07-23 12:06:38,860] [SCHED.SchedulerCore.getTaskResult] Get 'Rigid_ligand_docking' task result for job '4'
+[INFO 2009-07-23 12:06:40,268] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:40,727] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 12:06:40,727] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 12:06:42,269] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:44,269] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:46,269] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:48,270] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:50,270] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:52,271] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:54,271] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:56,272] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:06:58,272] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:00,272] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:00,732] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 12:07:00,732] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 12:07:02,273] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:04,273] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:06,273] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:08,274] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:10,274] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:12,275] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:14,275] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:16,276] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:18,276] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:20,276] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:20,737] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 12:07:20,738] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 12:07:22,277] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:24,277] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:26,278] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:28,278] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:30,278] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:32,279] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:34,279] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:36,280] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:38,280] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:40,280] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:40,742] [SCHED.SchedulerCore$1.run] Ping deployed nodes (Number of running jobs : 1)
+[INFO 2009-07-23 12:07:40,742] [SCHED.SchedulerCore.pingDeployedNodes] Search for down nodes !
+[INFO 2009-07-23 12:07:42,281] [SCHED.SchedulerCore.schedule] Number of jobs containing tasks to be scheduled : 1
+[INFO 2009-07-23 12:07:42,411] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminating loggers for task 40002...
+[INFO 2009-07-23 12:07:42,411] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [TaskLauncher] Terminated loggers for task 40002
+[INFO 2009-07-23 12:07:42,418] [SCHED.SchedulerCore.terminate] Received terminate task request for task '40002' - job '4'
+[INFO 2009-07-23 12:07:42,418] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.internal.InternalNativeTask
+[INFO 2009-07-23 12:07:42,434] [SCHED.SchedulerCore.terminate] Task '40002' futur result unwrapped
+[INFO 2009-07-23 12:07:42,435] [SCHED.SchedulerCore.updateTaskIdReferences] TaskResult : 40002
+[INFO 2009-07-23 12:07:42,435] [SCHED.SchedulerCore.terminate] Task '40002' on job '4' terminated
+[INFO 2009-07-23 12:07:42,435] [SCHED.SchedulerCore.terminate] Task '40002' terminate without error
+[INFO 2009-07-23 12:07:42,435] [SCHED.SchedulerCore.terminate] TaskResult added to job '4' - task name is 'Flexible_ligand_docking'
+[INFO 2009-07-23 12:07:42,436] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:07:42,443] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.task.TaskInfoImpl
+[INFO 2009-07-23 12:07:42,447] [SCHED.DatabaseManager.update] Updating Object : org.ow2.proactive.scheduler.job.JobResultImpl
+[INFO 2009-07-23 12:07:42,471] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:07:42,479] [SCHED.SchedulerCore.terminate] Number of finished tasks : 2 - Number of tasks : 2
+[INFO 2009-07-23 12:07:42,479] [SCHED.SchedulerCore.terminate] Job '4' terminated
+[INFO 2009-07-23 12:07:42,479] [SCHED.SchedulerCore.terminateJobHandling] Cleaning loggers for Job '4'
+[INFO 2009-07-23 12:07:42,479] [SCHED.SchedulerCore.removeTaskClassServer] Removing TaskClassServer for Job '4'
+[INFO 2009-07-23 12:07:42,480] [SCHED.DatabaseManager.synchronize] Synchronizing org.ow2.proactive.scheduler.job.JobInfoImpl
+[INFO 2009-07-23 12:07:42,488] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:07:42,490] [SCHED.DatabaseManager.unload] Unloading object : org.ow2.proactive.scheduler.task.TaskResultImpl
+[INFO 2009-07-23 12:07:42,497] [SCHED.ResourceManagerProxy.freeNodes] Nodes freed : 1 nodes
+[INFO 2009-07-23 12:08:49,165] [SCHED.SchedulerCore.getTaskResult] Trying to get TaskResult of task 'Flexible_ligand_docking' for job '4'
+[INFO 2009-07-23 12:08:49,166] [SCHED.DatabaseManager.recover] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2009-07-23 12:08:49,167] [SCHED.DatabaseManager.recover] Creating query...
+[INFO 2009-07-23 12:08:49,175] [SCHED.SchedulerCore.getTaskResult] Get 'Flexible_ligand_docking' task result for job '4'
+[INFO 2009-07-23 12:09:12,306] [SCHED.SchedulerCore.listenLog] listen logs of job '4'
+[INFO 2009-07-23 12:09:12,354] [SCHED.SchedulerCore.listenLog] listen logs of job '4' : job is already finished
+[INFO 2009-07-23 12:09:12,476] [SCHED.SchedulerCore.listenLog] Cleaning loggers for already finished job '4'
+[INFO 2009-07-23 12:09:58,877] [SCHED.SchedulerCore.getTaskResult] Trying to get TaskResult of task 'Rigid_ligand_docking' for job '4'
+[INFO 2009-07-23 12:09:58,877] [SCHED.DatabaseManager.recover] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2009-07-23 12:09:58,878] [SCHED.DatabaseManager.recover] Creating query...
+[INFO 2009-07-23 12:09:58,883] [SCHED.SchedulerCore.getTaskResult] Get 'Rigid_ligand_docking' task result for job '4'
+[INFO 2009-07-23 13:34:29,340] [SCHED.SchedulerFrontend.disconnect] User 'user1' has left the scheduler !
+[INFO 2009-07-23 13:34:49,444] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://jily.activeeon.com:1099/PA_JVM1898939173_GCMNode-0
+[INFO 2009-07-23 13:34:49,444] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM1898939173_GCMNode-0
+[INFO 2009-07-23 13:34:49,444] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://jily.activeeon.com:1099/PA_JVM1898939173
+[INFO 2009-07-23 13:34:49,450] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [ProActiveRuntimeImpl] terminating Runtime PA_JVM1898939173
+[WARN 2009-07-23 13:34:49,815] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://jily.activeeon.com:1099/PA_JVM1898939173_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:34:49,816] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://jily.activeeon.com:1099/PA_JVM696326419_GCMNode-0
+[INFO 2009-07-23 13:34:49,816] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM696326419_GCMNode-0
+[INFO 2009-07-23 13:34:49,816] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://jily.activeeon.com:1099/PA_JVM696326419
+[INFO 2009-07-23 13:34:49,821] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [ProActiveRuntimeImpl] terminating Runtime PA_JVM696326419
+[WARN 2009-07-23 13:34:50,185] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://jily.activeeon.com:1099/PA_JVM696326419_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:34:53,858] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://abulafia.activeeon.com:1099/PA_JVM956626400_GCMNode-0
+[INFO 2009-07-23 13:34:53,858] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM956626400_GCMNode-0
+[INFO 2009-07-23 13:34:53,859] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://abulafia.activeeon.com:1099/PA_JVM956626400
+[INFO 2009-07-23 13:34:53,867] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [ProActiveRuntimeImpl] terminating Runtime PA_JVM956626400
+[WARN 2009-07-23 13:34:54,190] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://abulafia.activeeon.com:1099/PA_JVM956626400_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:34:54,191] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://abulafia.activeeon.com:1099/PA_JVM1731800194_GCMNode-0
+[INFO 2009-07-23 13:34:54,191] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM1731800194_GCMNode-0
+[INFO 2009-07-23 13:34:54,191] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://abulafia.activeeon.com:1099/PA_JVM1731800194
+[INFO 2009-07-23 13:34:54,197] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [ProActiveRuntimeImpl] terminating Runtime PA_JVM1731800194
+[WARN 2009-07-23 13:34:54,527] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://abulafia.activeeon.com:1099/PA_JVM1731800194_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:37:47,399] [SCHED.RMCore.shutdown] RMCore shutdown request
+[WARN 2009-07-23 13:37:47,400] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/-5facb9bf-122a70a8f6a--7fe2--edd36c1b2395e0ab--5facb9bf-122a70a8f6a--8000 when calling receiveRequest
+[ERROR 2009-07-23 13:37:47,401] [SCHED.RequestImpl.serve] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:177)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:308)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:161)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:697)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:970)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:414)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:393)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:341)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:200)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:142)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:118)
+	at pa.stub.org.ow2.proactive.resourcemanager.gui.data._StubEventsReceiver.rmEvent(_StubEventsReceiver.java)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.rmEvent(RMMonitoringImpl.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 36 more
+[INFO 2009-07-23 13:37:47,402] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://pataud:1099/PA_JVM85227960_GCMNode-0
+[WARN 2009-07-23 13:37:47,402] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/-5facb9bf-122a70a8f6a--7fe2--edd36c1b2395e0ab--5facb9bf-122a70a8f6a--8000 when calling receiveRequest
+[INFO 2009-07-23 13:37:47,402] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM85227960_GCMNode-0
+[ERROR 2009-07-23 13:37:47,403] [SCHED.RequestImpl.serve] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:177)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:308)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:161)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:697)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:970)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:414)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:393)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:341)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:200)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:142)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:118)
+	at pa.stub.org.ow2.proactive.resourcemanager.gui.data._StubEventsReceiver.nodeEvent(_StubEventsReceiver.java)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.nodeEvent(RMMonitoringImpl.java:214)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 35 more
+[INFO 2009-07-23 13:37:47,403] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://pataud:1099/PA_JVM85227960
+[WARN 2009-07-23 13:37:47,409] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/-5facb9bf-122a70a8f6a--7fe2--edd36c1b2395e0ab--5facb9bf-122a70a8f6a--8000 when calling receiveRequest
+[ERROR 2009-07-23 13:37:47,409] [SCHED.RequestImpl.serve] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:177)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:308)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:161)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:697)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:970)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:414)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:393)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:341)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:200)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:142)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:118)
+	at pa.stub.org.ow2.proactive.resourcemanager.gui.data._StubEventsReceiver.nodeEvent(_StubEventsReceiver.java)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.nodeEvent(RMMonitoringImpl.java:214)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 35 more
+[WARN 2009-07-23 13:37:47,410] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/-5facb9bf-122a70a8f6a--7fe2--edd36c1b2395e0ab--5facb9bf-122a70a8f6a--8000 when calling receiveRequest
+[ERROR 2009-07-23 13:37:47,411] [SCHED.RequestImpl.serve] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:177)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:308)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:161)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:697)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:970)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:414)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:393)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:341)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:200)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:142)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:118)
+	at pa.stub.org.ow2.proactive.resourcemanager.gui.data._StubEventsReceiver.nodeEvent(_StubEventsReceiver.java)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.nodeEvent(RMMonitoringImpl.java:214)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 35 more
+[WARN 2009-07-23 13:37:47,412] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/-5facb9bf-122a70a8f6a--7fe2--edd36c1b2395e0ab--5facb9bf-122a70a8f6a--8000 when calling receiveRequest
+[ERROR 2009-07-23 13:37:47,412] [SCHED.RequestImpl.serve] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:177)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:308)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:161)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:697)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:970)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:414)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:393)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:341)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:200)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:142)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:118)
+	at pa.stub.org.ow2.proactive.resourcemanager.gui.data._StubEventsReceiver.nodeEvent(_StubEventsReceiver.java)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.nodeEvent(RMMonitoringImpl.java:214)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 35 more
+[INFO 2009-07-23 13:37:47,418] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [ProActiveRuntimeImpl] terminating Runtime PA_JVM85227960
+[WARN 2009-07-23 13:37:47,746] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/PA_JVM85227960_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:37:47,747] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://pataud:1099/PA_JVM945865675_GCMNode-0
+[INFO 2009-07-23 13:37:47,747] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM945865675_GCMNode-0
+[INFO 2009-07-23 13:37:47,747] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://pataud:1099/PA_JVM945865675
+[INFO 2009-07-23 13:37:47,755] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [ProActiveRuntimeImpl] terminating Runtime PA_JVM945865675
+[WARN 2009-07-23 13:37:48,085] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/PA_JVM945865675_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:37:48,085] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://pataud:1099/PA_JVM729940583_GCMNode-0
+[INFO 2009-07-23 13:37:48,085] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM729940583_GCMNode-0
+[INFO 2009-07-23 13:37:48,085] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://pataud:1099/PA_JVM729940583
+[WARN 2009-07-23 13:37:48,086] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/PA_JVM729940583_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:37:48,086] [SCHED.NodeSource.removeNode] [Default] removing node : rmi://pataud:1099/PA_JVM150816443_GCMNode-0
+[INFO 2009-07-23 13:37:48,087] [SCHED.GCMInfrastructure.removeNode] Terminating the node PA_JVM150816443_GCMNode-0
+[INFO 2009-07-23 13:37:48,087] [SCHED.GCMInfrastructure.removeNode] Terminating the runtime rmi://pataud:1099/PA_JVM150816443
+[INFO 2009-07-23 13:37:48,091] [SCHED.Executor$InputStreamMonitor.run] [INFO ] [ProActiveRuntimeImpl] terminating Runtime PA_JVM150816443
+[WARN 2009-07-23 13:37:48,440] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/PA_JVM150816443_GCMNode-0 when calling killRT
+[INFO 2009-07-23 13:37:48,441] [SCHED.NodeSource.shutdown] [Default] removal request
+[INFO 2009-07-23 13:37:48,441] [SCHED.NodeSource.finishNodeSourceShutdown] [Default] Shutdown finalization
+[INFO 2009-07-23 13:37:48,447] [SCHED.RMCore.nodeSourceUnregister] Node Source removed : Default
+[WARN 2009-07-23 13:37:48,448] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/-5facb9bf-122a70a8f6a--7fe2--edd36c1b2395e0ab--5facb9bf-122a70a8f6a--8000 when calling receiveRequest
+[ERROR 2009-07-23 13:37:48,449] [SCHED.RequestImpl.serve] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:177)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:308)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:161)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:697)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:970)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:414)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:393)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:341)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:200)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:142)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:118)
+	at pa.stub.org.ow2.proactive.resourcemanager.gui.data._StubEventsReceiver.nodeSourceEvent(_StubEventsReceiver.java)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.nodeSourceEvent(RMMonitoringImpl.java:224)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 36 more
+[WARN 2009-07-23 13:37:48,450] [SCHED.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://pataud:1099/-5facb9bf-122a70a8f6a--7fe2--edd36c1b2395e0ab--5facb9bf-122a70a8f6a--8000 when calling receiveRequest
+[ERROR 2009-07-23 13:37:48,450] [SCHED.RequestImpl.serve] java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 192.168.1.11; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:601)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:177)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:308)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:161)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.sendRequest(BodyImpl.java:697)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:970)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:414)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:393)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:341)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsOneWay(AbstractBodyProxy.java:200)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:142)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:118)
+	at pa.stub.org.ow2.proactive.resourcemanager.gui.data._StubEventsReceiver.rmEvent(_StubEventsReceiver.java)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.rmEvent(RMMonitoringImpl.java:235)
+	at org.ow2.proactive.resourcemanager.frontend.RMMonitoringImpl.shutdown(RMMonitoringImpl.java:244)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:230)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:174)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:562)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+	... 37 more

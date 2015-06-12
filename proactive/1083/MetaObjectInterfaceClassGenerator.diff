@@ -1,0 +1,32 @@
+diff --git a/src/Core/org/objectweb/proactive/core/component/gen/MetaObjectInterfaceClassGenerator.java b/src/Core/org/objectweb/proactive/core/component/gen/MetaObjectInterfaceClassGenerator.java
+index 6b62a4b..4f7edf4 100644
+--- a/src/Core/org/objectweb/proactive/core/component/gen/MetaObjectInterfaceClassGenerator.java
++++ b/src/Core/org/objectweb/proactive/core/component/gen/MetaObjectInterfaceClassGenerator.java
+@@ -113,6 +113,18 @@ public class MetaObjectInterfaceClassGenerator extends AbstractInterfaceClassGen
+             try {
+                 generated_class = loadClass(generatedClassFullName);
+             } catch (ClassNotFoundException cnfe) {
++                try {
++                    CtClass generatedCtClass = pool.get(generatedClassFullName);
++                    byte[] bytecode = generatedCtClass.toBytecode();
++                    generated_class = Utils.defineClass(generatedClassFullName, bytecode);
++                    PAInterfaceImpl reference = (PAInterfaceImpl) generated_class.newInstance();
++                    reference.setFcItfName(interfaceName);
++                    reference.setFcItfOwner(owner);
++                    reference.setFcType(interfaceType);
++                    reference.setFcIsInternal(isInternal);
++
++                    return reference;
++                } catch (NotFoundException nfe) {
+                 CtMethod[] reifiedMethods;
+                 CtClass generatedCtClass = pool.makeClass(generatedClassFullName);
+ 
+@@ -232,7 +244,7 @@ public class MetaObjectInterfaceClassGenerator extends AbstractInterfaceClassGen
+                 // convert the bytes into a Class<?>
+                 generated_class = Utils.defineClass(generatedClassFullName, bytecode);
+             }
+-
++            }
+             PAInterfaceImpl reference = (PAInterfaceImpl) generated_class.newInstance();
+             reference.setFcItfName(interfaceName);
+             reference.setFcItfOwner(owner);

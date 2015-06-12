@@ -1,0 +1,898 @@
+
+2010-04-27 09:51:17
+Full thread dump Java HotSpot(TM) Client VM (16.0-b13 mixed mode, sharing):
+
+"RMI TCP Connection(86)-192.168.1.62" daemon prio=6 tid=0x03553400 nid=0x2070 runnable [0x0488f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked <0x22fb20b0> (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x22fbf218> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"RMI TCP Connection(85)-192.168.1.62" daemon prio=6 tid=0x0343cc00 nid=0x2b1c runnable [0x047ef000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked <0x22fb4300> (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x22fc1638> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"RMI TCP Connection(84)-192.168.1.62" daemon prio=6 tid=0x035a6000 nid=0x2b80 runnable [0x046ff000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked <0x22fb6568> (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x22fc3b00> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"JMX server connection timeout 84" daemon prio=6 tid=0x03dad400 nid=0x1c0 in Object.wait() [0x046af000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x285dca10> (a [I)
+    at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:150)
+    - locked <0x285dca10> (a [I)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Accept-0" daemon prio=6 tid=0x034d0c00 nid=0x2fc runnable [0x0377f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketAccept(Native Method)
+    at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:390)
+    - locked <0x285ce9b8> (a java.net.SocksSocketImpl)
+    at java.net.ServerSocket.implAccept(ServerSocket.java:453)
+    at java.net.ServerSocket.accept(ServerSocket.java:421)
+    at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:34)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"pool-5-thread-5" prio=6 tid=0x02aba800 nid=0x25d8 waiting on condition [0x04f1f000]
+   java.lang.Thread.State: WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for <0x2854cfa0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1925)
+    at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:358)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3737]" daemon prio=6 tid=0x02ab9800 nid=0x2c38 in Object.wait() [0x04ecf000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x28602df0> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x28602df0> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3727]" daemon prio=6 tid=0x02abbc00 nid=0x8b4 in Object.wait() [0x04e7f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x28602ed8> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x28602ed8> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3726]" daemon prio=6 tid=0x02b14c00 nid=0x23bc in Object.wait() [0x04e2f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x28602fc0> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x28602fc0> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3725]" daemon prio=6 tid=0x034f9400 nid=0x2460 in Object.wait() [0x04ddf000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x2859d338> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x2859d338> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"Thread for AC" prio=6 tid=0x02b03c00 nid=0x3d30 in Object.wait() [0x04d8f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x28553e88> (a org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue)
+    at java.lang.Object.wait(Object.java:485)
+    at org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue.waitForAC(FuturePool.java:610)
+    - locked <0x28553e88> (a org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue)
+    at org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue.run(FuturePool.java:554)
+
+   Locked ownable synchronizers:
+    - None
+
+"pool-5-thread-4" prio=6 tid=0x02ad8400 nid=0x998 waiting on condition [0x04d3f000]
+   java.lang.Thread.State: WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for <0x2854cfa0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1925)
+    at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:358)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"pool-5-thread-3" prio=6 tid=0x02b17400 nid=0x15b4 waiting on condition [0x04cef000]
+   java.lang.Thread.State: WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for <0x2854cfa0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1925)
+    at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:358)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"pool-5-thread-2" prio=6 tid=0x02b16000 nid=0x26a8 waiting on condition [0x04c9f000]
+   java.lang.Thread.State: WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for <0x2854cfa0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1925)
+    at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:358)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"Thread for AC" prio=6 tid=0x02b02800 nid=0x2c80 in Object.wait() [0x04c4f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x281850f0> (a org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue)
+    at java.lang.Object.wait(Object.java:485)
+    at org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue.waitForAC(FuturePool.java:610)
+    - locked <0x281850f0> (a org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue)
+    at org.objectweb.proactive.core.body.future.FuturePool$ActiveACQueue.run(FuturePool.java:554)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Connection(79)-192.168.1.62" daemon prio=6 tid=0x02b01800 nid=0x2548 runnable [0x04bff000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked <0x285d7f48> (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x285a1498> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"pool-5-thread-1" prio=6 tid=0x02ae2c00 nid=0x3398 waiting on condition [0x04baf000]
+   java.lang.Thread.State: WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for <0x2854cfa0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1925)
+    at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:358)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"NodeSource on rmi://optimus.activeeon.com:1099/RM_NODE" prio=6 tid=0x03517800 nid=0x3cac in Object.wait() [0x04b5f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x286030a8> (a org.objectweb.proactive.core.body.future.FutureProxy)
+    at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:337)
+    - locked <0x286030a8> (a org.objectweb.proactive.core.body.future.FutureProxy)
+    at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:293)
+    - locked <0x286030a8> (a org.objectweb.proactive.core.body.future.FutureProxy)
+    at org.objectweb.proactive.core.body.future.FutureProxy.reify(FutureProxy.java:421)
+    at pa.stub.org.objectweb.proactive.core.util.wrapper._StubBooleanWrapper.booleanValue(_StubBooleanWrapper.java)
+    at org.ow2.proactive.resourcemanager.nodesource.NodeSource.acquireNode(NodeSource.java:264)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:597)
+    at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+    at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:253)
+    at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:197)
+    at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:616)
+    at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:577)
+    at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:944)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:166)
+    at org.ow2.proactive.resourcemanager.nodesource.NodeSource.runActivity(NodeSource.java:178)
+    at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=-7a2beabb-1283e37701d--7edf--f840a650b638fdad--7a2beabb-1283e37701d--8000" daemon prio=6 tid=0x03516c00 nid=0x9b0 waiting on condition [0x04b0f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:245)
+
+   Locked ownable synchronizers:
+    - None
+
+"StaticPolicy on rmi://optimus.activeeon.com:1099/Node1752564679" prio=6 tid=0x02ada800 nid=0x3158 in Object.wait() [0x04abf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x2854d2c0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(BlockingRequestQueueImpl.java:211)
+    - locked <0x2854d2c0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(BlockingRequestQueueImpl.java:298)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(BlockingRequestQueueImpl.java:150)
+    - locked <0x2854d2c0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:178)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+    at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+    at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:312)
+    at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=-7a2beabb-1283e37701d--7ef5--f840a650b638fdad--7a2beabb-1283e37701d--8000" daemon prio=6 tid=0x03a00800 nid=0x3058 waiting on condition [0x04a6f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:245)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3678]" daemon prio=6 tid=0x03563800 nid=0x3954 runnable [0x04a1f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketConnect(Native Method)
+    at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+    - locked <0x22a0c378> (a java.net.SocksSocketImpl)
+    at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+    at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+    at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+    at java.net.Socket.connect(Socket.java:525)
+    at java.net.Socket.connect(Socket.java:475)
+    at java.net.Socket.<init>(Socket.java:372)
+    at java.net.Socket.<init>(Socket.java:186)
+    at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+    at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+    at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+    at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+    at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+    at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:322)
+    at sun.rmi.transport.DGCImpl_Stub.dirty(Unknown Source)
+    at sun.rmi.transport.DGCClient$EndpointEntry.makeDirtyCall(DGCClient.java:342)
+    at sun.rmi.transport.DGCClient$EndpointEntry.access$1600(DGCClient.java:153)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:555)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3676]" daemon prio=6 tid=0x02b1b400 nid=0x1d10 in Object.wait() [0x049cf000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x28549e88> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x28549e88> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3677]" daemon prio=6 tid=0x035a8c00 nid=0x2a80 runnable [0x0497f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketConnect(Native Method)
+    at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+    - locked <0x22a17e60> (a java.net.SocksSocketImpl)
+    at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+    at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+    at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+    at java.net.Socket.connect(Socket.java:525)
+    at java.net.Socket.connect(Socket.java:475)
+    at java.net.Socket.<init>(Socket.java:372)
+    at java.net.Socket.<init>(Socket.java:186)
+    at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+    at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+    at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+    at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+    at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+    at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:322)
+    at sun.rmi.transport.DGCImpl_Stub.clean(Unknown Source)
+    at sun.rmi.transport.DGCClient$EndpointEntry.makeCleanCalls(DGCClient.java:647)
+    at sun.rmi.transport.DGCClient$EndpointEntry.access$1700(DGCClient.java:153)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:559)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Connection(83)-192.168.1.62" daemon prio=6 tid=0x03a1e800 nid=0x2f68 runnable [0x0483f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked <0x22fb8c68> (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x28522580> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"RMI TCP Connection(idle)" daemon prio=6 tid=0x03c91400 nid=0x104c waiting on condition [0x0479f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for <0x280b7450> (a java.util.concurrent.SynchronousQueue$TransferStack)
+    at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:198)
+    at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:424)
+    at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:323)
+    at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:874)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:945)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Connection(82)-192.168.1.62" daemon prio=6 tid=0x0356c400 nid=0xf4c runnable [0x0474f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked <0x22fbae58> (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x28522800> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"RMI RenewClean-[192.168.1.62:3672]" daemon prio=6 tid=0x03094400 nid=0x39ac in Object.wait() [0x0433f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x2851cee8> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x2851cee8> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Connection(80)-192.168.1.62" daemon prio=6 tid=0x03341400 nid=0x18c8 runnable [0x0386f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked <0x285e8628> (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x28522b18> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"RMI RenewClean-[192.168.1.62:3381]" daemon prio=6 tid=0x03499400 nid=0x1720 in Object.wait() [0x0465f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x284e28f8> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x284e28f8> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3374]" daemon prio=6 tid=0x035cac00 nid=0x3a54 in Object.wait() [0x0460f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x284e29e0> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x284e29e0> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3366]" daemon prio=6 tid=0x035d9c00 nid=0x1e4c in Object.wait() [0x045bf000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x284e2ac8> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x284e2ac8> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"DestroyJavaVM" prio=6 tid=0x002aa000 nid=0x3ca0 waiting on condition [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+    - None
+
+"Monitoring the Futures" daemon prio=6 tid=0x034eb400 nid=0x3ba4 waiting on condition [0x0456f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.body.future.FutureMonitoring.monitoringDelay(FutureMonitoring.java:96)
+    at org.objectweb.proactive.core.body.future.FutureMonitoring.run(FutureMonitoring.java:175)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"ClientPinger on rmi://optimus.activeeon.com:1099/RM_NODE" prio=6 tid=0x03d7f800 nid=0x254 runnable [0x0451e000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketConnect(Native Method)
+    at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+    - locked <0x22a07248> (a java.net.SocksSocketImpl)
+    at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+    at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+    at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+    at java.net.Socket.connect(Socket.java:525)
+    at java.net.Socket.connect(Socket.java:475)
+    at java.net.Socket.<init>(Socket.java:372)
+    at java.net.Socket.<init>(Socket.java:186)
+    at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+    at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+    at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:595)
+    at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:198)
+    at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:184)
+    at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:110)
+    at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+    at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:170)
+    at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:78)
+    at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveFTMessage(_StubUniversalBody.java)
+    at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveFTMessage(UniversalBodyRemoteObjectAdapter.java:165)
+    at org.ow2.proactive.resourcemanager.authentication.Client.isAlive(Client.java:133)
+    at org.ow2.proactive.resourcemanager.utils.ClientPinger.ping(ClientPinger.java:97)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:597)
+    at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+    at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:253)
+    at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:197)
+    at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:616)
+    at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:577)
+    at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:944)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+    at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+    at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:312)
+    at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=-7a2beabb-1283e37701d--7f74--f840a650b638fdad--7a2beabb-1283e37701d--8000" daemon prio=6 tid=0x03d85000 nid=0x1a08 waiting on condition [0x044cf000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:245)
+
+   Locked ownable synchronizers:
+    - None
+
+"ProbablisticSelectionManager on rmi://optimus.activeeon.com:1099/RM_NODE" prio=6 tid=0x0319e000 nid=0x26f4 in Object.wait() [0x0447f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x283a4e00> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(BlockingRequestQueueImpl.java:211)
+    - locked <0x283a4e00> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(BlockingRequestQueueImpl.java:298)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(BlockingRequestQueueImpl.java:150)
+    - locked <0x283a4e00> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:178)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+    at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+    at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:312)
+    at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=-7a2beabb-1283e37701d--7f8a--f840a650b638fdad--7a2beabb-1283e37701d--8000" daemon prio=6 tid=0x0344d800 nid=0x3c8c waiting on condition [0x0442f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:245)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMMonitoringImpl on rmi://optimus.activeeon.com:1099/RM_NODE" prio=6 tid=0x02b33400 nid=0x1a38 in Object.wait() [0x043df000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x283a4fc0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(BlockingRequestQueueImpl.java:211)
+    - locked <0x283a4fc0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(BlockingRequestQueueImpl.java:298)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(BlockingRequestQueueImpl.java:150)
+    - locked <0x283a4fc0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:178)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+    at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+    at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:312)
+    at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=-7a2beabb-1283e37701d--7fa3--f840a650b638fdad--7a2beabb-1283e37701d--8000" daemon prio=6 tid=0x03b41400 nid=0x2c30 waiting on condition [0x0438f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:245)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Accept-5822" daemon prio=6 tid=0x03a67800 nid=0x2150 runnable [0x042ef000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketAccept(Native Method)
+    at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:390)
+    - locked <0x283704c8> (a java.net.SocksSocketImpl)
+    at java.net.ServerSocket.implAccept(ServerSocket.java:453)
+    at java.net.ServerSocket.accept(ServerSocket.java:421)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMAuthenticationImpl on rmi://optimus.activeeon.com:1099/RM_NODE" prio=6 tid=0x03453800 nid=0x3c74 in Object.wait() [0x0429f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x283705e0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.internalWait(BlockingRequestQueueImpl.java:211)
+    - locked <0x283705e0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemove(BlockingRequestQueueImpl.java:298)
+    at org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl.blockingRemoveOldest(BlockingRequestQueueImpl.java:150)
+    - locked <0x283705e0> (a org.objectweb.proactive.core.body.request.BlockingRequestQueueImpl)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:178)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+    at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+    at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:312)
+    at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=-7a2beabb-1283e37701d--7fc2--f840a650b638fdad--7a2beabb-1283e37701d--8000" daemon prio=6 tid=0x03586800 nid=0x2d40 waiting on condition [0x0424f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:245)
+
+   Locked ownable synchronizers:
+    - None
+
+"derby.rawStoreDaemon" daemon prio=6 tid=0x0341f800 nid=0x1bd8 in Object.wait() [0x039ff000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x281cec00> (a org.apache.derby.impl.services.daemon.BasicDaemon)
+    at org.apache.derby.impl.services.daemon.BasicDaemon.rest(Unknown Source)
+    - locked <0x281cec00> (a org.apache.derby.impl.services.daemon.BasicDaemon)
+    at org.apache.derby.impl.services.daemon.BasicDaemon.run(Unknown Source)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"Timer-1" daemon prio=6 tid=0x033e9800 nid=0x2e64 in Object.wait() [0x039af000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x281ceca8> (a java.util.TaskQueue)
+    at java.lang.Object.wait(Object.java:485)
+    at java.util.TimerThread.mainLoop(Timer.java:483)
+    - locked <0x281ceca8> (a java.util.TaskQueue)
+    at java.util.TimerThread.run(Timer.java:462)
+
+   Locked ownable synchronizers:
+    - None
+
+"derby.antiGC" daemon prio=2 tid=0x033be400 nid=0x1ec4 in Object.wait() [0x0395f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x281c7ea8> (a org.apache.derby.impl.services.monitor.AntiGC)
+    at java.lang.Object.wait(Object.java:485)
+    at org.apache.derby.impl.services.monitor.AntiGC.run(Unknown Source)
+    - locked <0x281c7ea8> (a org.apache.derby.impl.services.monitor.AntiGC)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMCore on rmi://optimus.activeeon.com:1099/RM_NODE" prio=6 tid=0x03365400 nid=0x30d8 in Object.wait() [0x0390f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x286032f0> (a org.objectweb.proactive.core.body.future.FutureProxy)
+    at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:337)
+    - locked <0x286032f0> (a org.objectweb.proactive.core.body.future.FutureProxy)
+    at org.objectweb.proactive.core.body.future.FutureProxy.waitFor(FutureProxy.java:293)
+    - locked <0x286032f0> (a org.objectweb.proactive.core.body.future.FutureProxy)
+    at org.objectweb.proactive.core.body.future.FutureProxy.reify(FutureProxy.java:421)
+    at pa.stub.org.ow2.proactive.resourcemanager.authentication._StubClient.getName(_StubClient.java)
+    at org.ow2.proactive.resourcemanager.common.event.RMNodeSourceEvent.<init>(RMNodeSourceEvent.java:99)
+    at org.ow2.proactive.resourcemanager.core.RMCore.getRMInitialState(RMCore.java:921)
+    at org.ow2.proactive.resourcemanager.core.RMCore.getNodesList(RMCore.java:1144)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+    at java.lang.reflect.Method.invoke(Method.java:597)
+    at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:395)
+    at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:253)
+    at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:197)
+    at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:616)
+    at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:577)
+    at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:944)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+    at org.objectweb.proactive.Service.blockingServeOldest(Service.java:166)
+    at org.ow2.proactive.resourcemanager.core.RMCore.runActivity(RMCore.java:339)
+    at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=-7a2beabb-1283e37701d--7fe0--f840a650b638fdad--7a2beabb-1283e37701d--8000" daemon prio=6 tid=0x02af2c00 nid=0x2634 waiting on condition [0x038bf000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+    at java.lang.Thread.sleep(Native Method)
+    at org.objectweb.proactive.core.jmx.mbean.BodyWrapper$1.run(BodyWrapper.java:245)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI RenewClean-[192.168.1.62:3356]" daemon prio=6 tid=0x02af4800 nid=0x1f9c in Object.wait() [0x0381f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x280dc160> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x280dc160> (a java.lang.ref.ReferenceQueue$Lock)
+    at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:516)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI Scheduler(0)" daemon prio=6 tid=0x02b83c00 nid=0xdac waiting on condition [0x037cf000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for <0x280ba258> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:198)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1963)
+    at java.util.concurrent.DelayQueue.take(DelayQueue.java:164)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:583)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:576)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"GC Daemon" daemon prio=2 tid=0x0332e400 nid=0x37e4 in Object.wait() [0x0372f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x280bca50> (a sun.misc.GC$LatencyLock)
+    at sun.misc.GC$Daemon.run(GC.java:100)
+    - locked <0x280bca50> (a sun.misc.GC$LatencyLock)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI Reaper" prio=6 tid=0x03329800 nid=0x1c84 in Object.wait() [0x036df000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x280baf80> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x280baf80> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+    at sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:333)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Accept-0" daemon prio=6 tid=0x03328c00 nid=0x918 runnable [0x0368f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketAccept(Native Method)
+    at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:390)
+    - locked <0x280bc4e0> (a java.net.SocksSocketImpl)
+    at java.net.ServerSocket.implAccept(ServerSocket.java:453)
+    at java.net.ServerSocket.accept(ServerSocket.java:421)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"RMI TCP Accept-1099" daemon prio=6 tid=0x03334800 nid=0x12f4 runnable [0x0363f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketAccept(Native Method)
+    at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:390)
+    - locked <0x280bb498> (a java.net.SocksSocketImpl)
+    at java.net.ServerSocket.implAccept(ServerSocket.java:453)
+    at java.net.ServerSocket.accept(ServerSocket.java:421)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - None
+
+"pool-1-thread-1 - Acceptor0 SelectChannelConnector@0.0.0.0:3354" prio=6 tid=0x0331b000 nid=0x2458 runnable [0x02faf000]
+   java.lang.Thread.State: RUNNABLE
+    at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+    at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:273)
+    at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:255)
+    at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:136)
+    at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:69)
+    - locked <0x280b1888> (a sun.nio.ch.Util$1)
+    - locked <0x280b1878> (a java.util.Collections$UnmodifiableSet)
+    - locked <0x280b1638> (a sun.nio.ch.WindowsSelectorImpl)
+    at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:80)
+    at org.mortbay.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:457)
+    at org.mortbay.io.nio.SelectorManager.doSelect(SelectorManager.java:190)
+    at org.mortbay.jetty.nio.SelectChannelConnector.accept(SelectChannelConnector.java:124)
+    at org.mortbay.jetty.AbstractConnector$Acceptor.run(AbstractConnector.java:706)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:619)
+
+   Locked ownable synchronizers:
+    - <0x280b5178> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"Timer-0" daemon prio=6 tid=0x0331d800 nid=0x3bdc in Object.wait() [0x02f5f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x280b0d10> (a java.util.TaskQueue)
+    at java.util.TimerThread.mainLoop(Timer.java:509)
+    - locked <0x280b0d10> (a java.util.TaskQueue)
+    at java.util.TimerThread.run(Timer.java:462)
+
+   Locked ownable synchronizers:
+    - None
+
+"Low Memory Detector" daemon prio=6 tid=0x02ad1000 nid=0x237c runnable [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+    - None
+
+"CompilerThread0" daemon prio=10 tid=0x02acb400 nid=0x1d68 waiting on condition [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+    - None
+
+"Attach Listener" daemon prio=10 tid=0x02ac9800 nid=0x34ec runnable [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+    - None
+
+"Signal Dispatcher" daemon prio=10 tid=0x02ac8400 nid=0x30d0 runnable [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+    - None
+
+"Finalizer" daemon prio=8 tid=0x02ac0400 nid=0x2cfc in Object.wait() [0x02ccf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x27f99d28> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+    - locked <0x27f99d28> (a java.lang.ref.ReferenceQueue$Lock)
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+    at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+   Locked ownable synchronizers:
+    - None
+
+"Reference Handler" daemon prio=10 tid=0x02abec00 nid=0x11fc in Object.wait() [0x02c7f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    - waiting on <0x27f99db0> (a java.lang.ref.Reference$Lock)
+    at java.lang.Object.wait(Object.java:485)
+    at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+    - locked <0x27f99db0> (a java.lang.ref.Reference$Lock)
+
+   Locked ownable synchronizers:
+    - None
+
+"VM Thread" prio=10 tid=0x02abd800 nid=0x153c runnable
+
+"VM Periodic Task Thread" prio=10 tid=0x02adc000 nid=0xfbc waiting on condition
+
+JNI global references: 1246
+
+

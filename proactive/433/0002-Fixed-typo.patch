@@ -1,0 +1,29 @@
+From d82f90a7a43da6e6b65c7c6509c827bc8c2612a2 Mon Sep 17 00:00:00 2001
+From: cmathieu <clement.mathieu@sophia.inria.fr>
+Date: Fri, 11 Jul 2008 13:46:48 +0200
+Subject: [PATCH] Fixed typo
+
+---
+ .../core/config/ProActiveConfiguration.java        |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.java b/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.java
+index dffdc99..ebc6052 100644
+--- a/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.java
++++ b/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.java
+@@ -97,10 +97,10 @@ public class ProActiveConfiguration {
+         this.properties.putAllFromConfigFile(this.getDefaultProperties());
+ 
+         // 2- User config file
+-        this.properties.putAllFromSystem(this.getUserProperties());
++        this.properties.putAllFromConfigFile(this.getUserProperties());
+ 
+         // 3- System java properties
+-        this.properties.putAll(this.getsystemProperties());
++        this.properties.putAllFromSystem(this.getsystemProperties());
+     }
+ 
+     class CustomProperties extends Properties {
+-- 
+1.5.4.1
+

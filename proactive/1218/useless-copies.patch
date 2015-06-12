@@ -1,0 +1,454 @@
+diff --git a/src/Benchmarks/org/objectweb/proactive/benchmarks/NAS/util/ComplexArrayGroup.java b/src/Benchmarks/org/objectweb/proactive/benchmarks/NAS/util/ComplexArrayGroup.java
+index ee1f4bd..02ea12e 100644
+--- a/src/Benchmarks/org/objectweb/proactive/benchmarks/NAS/util/ComplexArrayGroup.java
++++ b/src/Benchmarks/org/objectweb/proactive/benchmarks/NAS/util/ComplexArrayGroup.java
+@@ -36,11 +36,11 @@
+  */
+ package org.objectweb.proactive.benchmarks.NAS.util;
+ 
+-import java.io.ByteArrayOutputStream;
+ import java.io.ObjectOutputStream;
+ import java.io.Serializable;
+ import java.text.DecimalFormat;
+ 
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.api.PAGroup;
+ import org.objectweb.proactive.core.group.Group;
+ import org.objectweb.proactive.core.mop.ClassNotReifiableException;
+@@ -453,10 +453,10 @@ public class ComplexArrayGroup implements Serializable {
+             return -1;
+         }
+         try {
+-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
++            ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+             ObjectOutputStream oos = new ObjectOutputStream(baos);
+             oos.writeObject(object);
+-            byte[] bytes = baos.toByteArray();
++            byte[] bytes = baos.getBuf();
+             oos.close();
+             baos.close();
+             return bytes.length / 1024;
+diff --git a/src/Core/org/objectweb/proactive/core/body/ft/checkpointing/Checkpoint.java b/src/Core/org/objectweb/proactive/core/body/ft/checkpointing/Checkpoint.java
+index a49064a..ae52526 100644
+--- a/src/Core/org/objectweb/proactive/core/body/ft/checkpointing/Checkpoint.java
++++ b/src/Core/org/objectweb/proactive/core/body/ft/checkpointing/Checkpoint.java
+@@ -36,13 +36,13 @@
+  */
+ package org.objectweb.proactive.core.body.ft.checkpointing;
+ 
+-import java.io.ByteArrayOutputStream;
+ import java.io.IOException;
+ import java.io.ObjectOutputStream;
+ import java.io.OutputStream;
+ import java.rmi.server.RemoteObject;
+ import java.rmi.server.RemoteStub;
+ 
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.Body;
+ import org.objectweb.proactive.core.UniqueID;
+ import org.objectweb.proactive.core.config.CentralPAPropertyRepository;
+@@ -95,14 +95,14 @@ public class Checkpoint implements java.io.Serializable {
+                 codebase += " " + additionalCodebase;
+             }
+ 
+-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
++            ByteArrayOutputStream2 byteArrayOutputStream = new ByteArrayOutputStream2();
+             CheckpointingOutputStream objectOutputStream = new CheckpointingOutputStream(
+                 byteArrayOutputStream, codebase + " " + additionalCodebase);
+             objectOutputStream.writeObject(bodyToCheckpoint);
+             objectOutputStream.flush();
+             objectOutputStream.close();
+             byteArrayOutputStream.close();
+-            this.checkpointedBody = byteArrayOutputStream.toByteArray();
++            this.checkpointedBody = byteArrayOutputStream.getBuf();
+             bodyToCheckpoint.getFuturePool().setCopyMode(false);
+         } catch (IOException e) {
+             System.err.println("Error while checkpointing the body " + bodyToCheckpoint);
+diff --git a/src/Core/org/objectweb/proactive/core/body/ft/servers/storage/CheckpointServerImpl.java b/src/Core/org/objectweb/proactive/core/body/ft/servers/storage/CheckpointServerImpl.java
+index 7d11715..550d58e 100644
+--- a/src/Core/org/objectweb/proactive/core/body/ft/servers/storage/CheckpointServerImpl.java
++++ b/src/Core/org/objectweb/proactive/core/body/ft/servers/storage/CheckpointServerImpl.java
+@@ -45,6 +45,7 @@ import java.util.Hashtable;
+ import java.util.List;
+ 
+ import org.apache.log4j.Logger;
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.core.UniqueID;
+ import org.objectweb.proactive.core.body.ft.checkpointing.Checkpoint;
+ import org.objectweb.proactive.core.body.ft.servers.FTServer;
+@@ -112,13 +113,13 @@ public abstract class CheckpointServerImpl implements CheckpointServer {
+     // UTIL METHODS
+     protected long getSize(Serializable c) {
+         try {
+-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
++            ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+             ObjectOutputStream oos = new ObjectOutputStream(baos);
+ 
+             // serialize the body
+             oos.writeObject(c);
+             // store the serialized form
+-            return baos.toByteArray().length;
++            return baos.getBuf().length;
+         } catch (IOException e) {
+             e.printStackTrace();
+             return 0;
+diff --git a/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectSet.java b/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectSet.java
+index b54f880..029eeeb 100644
+--- a/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectSet.java
++++ b/src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectSet.java
+@@ -57,6 +57,7 @@ import java.util.Observable;
+ import java.util.Observer;
+ 
+ import org.apache.log4j.Logger;
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.core.ProActiveException;
+ import org.objectweb.proactive.core.ProActiveRuntimeException;
+ import org.objectweb.proactive.core.body.reply.Reply;
+@@ -414,11 +415,11 @@ public class RemoteObjectSet implements Serializable, Observer {
+             ObjectOutputStream oos = null;
+             try {
+                 RemoteObjectFactory rof = AbstractRemoteObjectFactory.getRemoteObjectFactory(uri.getScheme());
+-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
++                ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+                 oos = rof.getProtocolObjectOutputStream(baos);
+                 oos.writeObject(rros.get(uri));
+                 oos.flush();
+-                buf = baos.toByteArray();
++                buf = baos.getBuf();
+             } catch (UnknownProtocolException e) {
+                 LOGGER_RO.debug("Failed to serialize additional RemoteRemoteObject for " + uri);
+             } finally {
+diff --git a/src/Core/org/objectweb/proactive/core/security/CertTools.java b/src/Core/org/objectweb/proactive/core/security/CertTools.java
+index bde00d5..8c7cc85 100644
+--- a/src/Core/org/objectweb/proactive/core/security/CertTools.java
++++ b/src/Core/org/objectweb/proactive/core/security/CertTools.java
+@@ -94,6 +94,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
+ import org.bouncycastle.util.encoders.Base64;
+ import org.bouncycastle.util.encoders.Hex;
+ import org.bouncycastle.x509.X509V3CertificateGenerator;
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ 
+@@ -450,7 +451,7 @@ public class CertTools {
+         String endKey = "-----END CERTIFICATE-----";
+         BufferedReader bufRdr = new BufferedReader(new InputStreamReader(certstream));
+         while (bufRdr.ready()) {
+-            ByteArrayOutputStream ostr = new ByteArrayOutputStream();
++            ByteArrayOutputStream2 ostr = new ByteArrayOutputStream2();
+             PrintStream opstr = new PrintStream(ostr);
+             String temp;
+             while (((temp = bufRdr.readLine()) != null) && !temp.equals(beginKey)) {
+@@ -469,7 +470,7 @@ public class CertTools {
+             }
+             opstr.close();
+ 
+-            byte[] certbuf = Base64.decode(ostr.toByteArray());
++            byte[] certbuf = Base64.decode(ostr.getBuf());
+             ostr.close();
+             // Phweeew, were done, now decode the cert from file back to X509Certificate object
+             CertificateFactory cf = CertTools.getCertificateFactory();
+diff --git a/src/Core/org/objectweb/proactive/core/security/PolicyServer.java b/src/Core/org/objectweb/proactive/core/security/PolicyServer.java
+index 0fa0da6..9cb1dc7 100644
+--- a/src/Core/org/objectweb/proactive/core/security/PolicyServer.java
++++ b/src/Core/org/objectweb/proactive/core/security/PolicyServer.java
+@@ -37,7 +37,6 @@
+ package org.objectweb.proactive.core.security;
+ 
+ import java.io.ByteArrayInputStream;
+-import java.io.ByteArrayOutputStream;
+ import java.io.IOException;
+ import java.io.ObjectInputStream;
+ import java.io.ObjectOutputStream;
+@@ -52,6 +51,7 @@ import java.util.Iterator;
+ import java.util.List;
+ 
+ import org.apache.log4j.Logger;
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.core.security.SecurityConstants.EntityType;
+ import org.objectweb.proactive.core.security.exceptions.SecurityNotAvailableException;
+ import org.objectweb.proactive.core.security.securityentity.Entities;
+@@ -357,7 +357,7 @@ public class PolicyServer implements Serializable, Cloneable {
+         PolicyServer clone = null;
+ 
+         try {
+-            ByteArrayOutputStream bout = new ByteArrayOutputStream();
++            ByteArrayOutputStream2 bout = new ByteArrayOutputStream2();
+             ObjectOutputStream out = new ObjectOutputStream(bout);
+ 
+             out.writeObject(this);
+@@ -366,7 +366,7 @@ public class PolicyServer implements Serializable, Cloneable {
+ 
+             bout.close();
+ 
+-            ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(bout.toByteArray()));
++            ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(bout.getBuf()));
+ 
+             clone = (PolicyServer) ois.readObject();
+         } catch (IOException e) {
+diff --git a/src/Core/org/objectweb/proactive/core/security/SerializableKeyStore.java b/src/Core/org/objectweb/proactive/core/security/SerializableKeyStore.java
+index f862296..3b57a17 100644
+--- a/src/Core/org/objectweb/proactive/core/security/SerializableKeyStore.java
++++ b/src/Core/org/objectweb/proactive/core/security/SerializableKeyStore.java
+@@ -37,7 +37,6 @@
+ package org.objectweb.proactive.core.security;
+ 
+ import java.io.ByteArrayInputStream;
+-import java.io.ByteArrayOutputStream;
+ import java.io.IOException;
+ import java.io.ObjectInputStream;
+ import java.io.ObjectOutputStream;
+@@ -48,6 +47,8 @@ import java.security.NoSuchAlgorithmException;
+ import java.security.NoSuchProviderException;
+ import java.security.cert.CertificateException;
+ 
++import org.mortbay.util.ByteArrayOutputStream2;
++
+ 
+ /**
+  * @author The ProActive Team
+@@ -70,7 +71,7 @@ public class SerializableKeyStore implements Serializable {
+     }
+ 
+     private void writeObject(ObjectOutputStream out) throws IOException {
+-        ByteArrayOutputStream bout = new ByteArrayOutputStream();
++        ByteArrayOutputStream2 bout = new ByteArrayOutputStream2();
+ 
+         try {
+             this.keyStore.store(bout, "ha".toCharArray());
+@@ -84,7 +85,7 @@ public class SerializableKeyStore implements Serializable {
+             e.printStackTrace();
+         }
+ 
+-        this.encodedKeyStore = bout.toByteArray();
++        this.encodedKeyStore = bout.getBuf();
+         bout.close();
+ 
+         out.defaultWriteObject();
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java b/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java
+index a281086..17b5595 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/ObjectToByteConverter.java
+@@ -43,6 +43,7 @@ import java.lang.reflect.Constructor;
+ import java.lang.reflect.InvocationTargetException;
+ import java.lang.reflect.Method;
+ 
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.core.Constants;
+ import org.objectweb.proactive.core.config.CentralPAPropertyRepository;
+ import org.objectweb.proactive.core.mop.PAObjectOutputStream;
+@@ -133,7 +134,7 @@ public class ObjectToByteConverter {
+     }
+ 
+     private static byte[] standardConvert(Object o, ConversionMode conversionMode) throws IOException {
+-        final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
++        final ByteArrayOutputStream2 byteArrayOutputStream = new ByteArrayOutputStream2();
+         ObjectOutputStream objectOutputStream = null;
+ 
+         try {
+@@ -147,7 +148,7 @@ public class ObjectToByteConverter {
+             }
+ 
+             ObjectToByteConverter.writeToStream(objectOutputStream, o);
+-            return byteArrayOutputStream.toByteArray();
++            return byteArrayOutputStream.getBuf();
+         } finally {
+             // close streams
+             if (objectOutputStream != null) {
+@@ -157,15 +158,14 @@ public class ObjectToByteConverter {
+         }
+     }
+ 
+-    @SuppressWarnings("unchecked")
+     private static byte[] ibisConvert(Object o) throws IOException {
+         try {
+-            final Class cl_baos = Class.forName(BYTE_ARRAY_OUTPUT_STREAM);
+-            final Class cl_buaos = Class.forName(BUFFERED_ARRAY_OUTPUT_STREAM);
+-            final Class cl_isos = Class.forName(IBIS_SERIALIZATION_OUTPUT_STREAM);
+-            final Constructor c_baos = cl_baos.getConstructor();
+-            final Constructor c_buaos = cl_buaos.getConstructor(new Class[] { java.io.OutputStream.class });
+-            final Constructor c_isos = cl_isos.getConstructor(new Class[] { Class
++            final Class<?> cl_baos = Class.forName(BYTE_ARRAY_OUTPUT_STREAM);
++            final Class<?> cl_buaos = Class.forName(BUFFERED_ARRAY_OUTPUT_STREAM);
++            final Class<?> cl_isos = Class.forName(IBIS_SERIALIZATION_OUTPUT_STREAM);
++            final Constructor<?> c_baos = cl_baos.getConstructor();
++            final Constructor<?> c_buaos = cl_buaos.getConstructor(new Class[] { java.io.OutputStream.class });
++            final Constructor<?> c_isos = cl_isos.getConstructor(new Class[] { Class
+                     .forName("ibis.io.DataOutputStream") });
+ 
+             //          final ByteArrayOutputStream bo = new ByteArrayOutputStream();
+diff --git a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java
+index 10bb43f..60b2fbd 100644
+--- a/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java
++++ b/src/Core/org/objectweb/proactive/core/util/converter/remote/ProActiveMarshaller.java
+@@ -37,10 +37,11 @@
+ package org.objectweb.proactive.core.util.converter.remote;
+ 
+ import java.io.ByteArrayInputStream;
+-import java.io.ByteArrayOutputStream;
+ import java.io.IOException;
+ import java.io.InputStream;
+ 
++import org.mortbay.util.ByteArrayOutputStream2;
++
+ 
+ /**
+  * This class is responsible for the serialization/deserialization process
+@@ -58,11 +59,11 @@ public class ProActiveMarshaller {
+     public byte[] marshallObject(Object o) throws IOException {
+         ProActiveMarshalOutputStream serializer = null;
+         try {
+-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
++            ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+             serializer = new ProActiveMarshalOutputStream(baos, this.localRuntimeURL);
+             serializer.writeObject(o);
+             serializer.flush();
+-            return baos.toByteArray();
++            return baos.getBuf();
+         } finally {
+             // cleanup
+             if (serializer != null)
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/calcium/stateness/Stateness.java b/src/Extensions/org/objectweb/proactive/extensions/calcium/stateness/Stateness.java
+index 9a72c13..e0e9086 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/calcium/stateness/Stateness.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/calcium/stateness/Stateness.java
+@@ -37,7 +37,6 @@
+ package org.objectweb.proactive.extensions.calcium.stateness;
+ 
+ import java.io.ByteArrayInputStream;
+-import java.io.ByteArrayOutputStream;
+ import java.io.IOException;
+ import java.io.ObjectInputStream;
+ import java.io.ObjectOutputStream;
+@@ -49,6 +48,7 @@ import java.util.IdentityHashMap;
+ import java.util.List;
+ import java.util.Vector;
+ 
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.extensions.calcium.examples.nqueens.Board;
+ import org.objectweb.proactive.extensions.calcium.examples.nqueens.ConquerBoard;
+ import org.objectweb.proactive.extensions.calcium.examples.nqueens.DivideCondition;
+@@ -259,10 +259,10 @@ public class Stateness {
+     @SuppressWarnings("unchecked")
+     public static <T> Vector<T> deepCopy(T o, int n) throws IOException, ClassNotFoundException {
+         // serialize Object into byte array
+-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
++        ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+         ObjectOutputStream oos = new ObjectOutputStream(baos);
+         oos.writeObject(o);
+-        byte[] buf = baos.toByteArray();
++        byte[] buf = baos.getBuf();
+         oos.close();
+ 
+         // deserialize byte array
+@@ -280,10 +280,10 @@ public class Stateness {
+     @SuppressWarnings("unchecked")
+     static public <T> T deepCopy(T o) throws IOException, ClassNotFoundException {
+         // serialize Object into byte array
+-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
++        ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+         ObjectOutputStream oos = new ObjectOutputStream(baos);
+         oos.writeObject(o);
+-        byte[] buf = baos.toByteArray();
++        byte[] buf = baos.getBuf();
+         oos.close();
+ 
+         // deserialize byte array
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/masterworker/core/AOTaskRepository.java b/src/Extensions/org/objectweb/proactive/extensions/masterworker/core/AOTaskRepository.java
+index fea80f9..1de337e 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/masterworker/core/AOTaskRepository.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/masterworker/core/AOTaskRepository.java
+@@ -49,6 +49,7 @@ import java.util.zip.Deflater;
+ import java.util.zip.Inflater;
+ 
+ import org.apache.log4j.Logger;
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.api.PAActiveObject;
+ import org.objectweb.proactive.core.config.CentralPAPropertyRepository;
+ import org.objectweb.proactive.core.util.log.Loggers;
+@@ -161,7 +162,7 @@ public class AOTaskRepository implements TaskRepository, Serializable {
+         // You cannot use an array that's the same size as the orginal because
+         // there is no guarantee that the compressed data will be smaller than
+         // the uncompressed data.
+-        ByteArrayOutputStream bos = new ByteArrayOutputStream(input.length);
++        ByteArrayOutputStream2 bos = new ByteArrayOutputStream2(input.length);
+ 
+         // Compress the data
+         byte[] buf = new byte[COMPRESSION_BUFFER_SIZE];
+@@ -177,7 +178,7 @@ public class AOTaskRepository implements TaskRepository, Serializable {
+         }
+ 
+         // Get the compressed data
+-        return bos.toByteArray();
++        return bos.getBuf();
+     }
+ 
+     private byte[] decompress(byte[] input) {
+@@ -185,7 +186,7 @@ public class AOTaskRepository implements TaskRepository, Serializable {
+         decompressor.setInput(input);
+ 
+         // Create an expandable byte array to hold the decompressed data
+-        ByteArrayOutputStream bos = new ByteArrayOutputStream(input.length);
++        ByteArrayOutputStream2 bos = new ByteArrayOutputStream2(input.length);
+ 
+         // Decompress the data
+         byte[] buf = new byte[COMPRESSION_BUFFER_SIZE];
+@@ -205,7 +206,7 @@ public class AOTaskRepository implements TaskRepository, Serializable {
+         }
+ 
+         // Get the decompressed data
+-        return bos.toByteArray();
++        return bos.getBuf();
+     }
+ 
+     /**
+@@ -253,12 +254,12 @@ public class AOTaskRepository implements TaskRepository, Serializable {
+         TaskIntern<Serializable> ti = idToTaskIntern.remove(id);
+ 
+         // Serialize the task
+-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
++        ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+         try {
+             ObjectOutputStream oos = new ObjectOutputStream(baos);
+             oos.writeObject(ti);
+-            oos.flush();
+-            byte[] input = baos.toByteArray();
++            oos.close();
++            byte[] input = baos.getBuf();
+             byte[] compressedData;
+             if (compression) {
+                 compressedData = compress(input);
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java b/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java
+index c5db473..b3daffb 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/timitspmd/TimIt.java
+@@ -36,7 +36,6 @@
+  */
+ package org.objectweb.proactive.extensions.timitspmd;
+ 
+-import java.io.ByteArrayOutputStream;
+ import java.io.ObjectOutputStream;
+ import java.text.DecimalFormat;
+ import java.text.DecimalFormatSymbols;
+@@ -47,6 +46,7 @@ import org.apache.commons.cli.HelpFormatter;
+ import org.apache.commons.cli.Options;
+ import org.apache.commons.cli.ParseException;
+ import org.jdom.Element;
++import org.mortbay.util.ByteArrayOutputStream2;
+ import org.objectweb.proactive.ActiveObjectCreationException;
+ import org.objectweb.proactive.api.PAActiveObject;
+ import org.objectweb.proactive.api.PAFuture;
+@@ -420,11 +420,11 @@ public class TimIt {
+         }
+ 
+         try {
+-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
++            ByteArrayOutputStream2 baos = new ByteArrayOutputStream2();
+             ObjectOutputStream oos = new ObjectOutputStream(baos);
+             oos.writeObject(object);
+ 
+-            byte[] bytes = baos.toByteArray();
++            byte[] bytes = baos.getBuf();
+             oos.close();
+             baos.close();
+ 

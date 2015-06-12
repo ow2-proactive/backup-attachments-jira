@@ -1,0 +1,15 @@
+--- src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectHelper.java	2010-03-18 09:58:30.000000000 +0100
++++ src/Core/org/objectweb/proactive/core/remoteobject/RemoteObjectHelper.java	2010-03-18 11:58:48.000000000 +0100
+@@ -145,8 +145,11 @@
+      */
+     public static RemoteRemoteObject register(RemoteObject<?> target, URI url, boolean replacePreviousBinding)
+             throws ProActiveException {
+-        return getFactoryFromURL(url).register(new InternalRemoteRemoteObjectImpl(target), expandURI(url),
++        InternalRemoteRemoteObject irro = new InternalRemoteRemoteObjectImpl(target, expandURI(url));
++        RemoteRemoteObject rro = getFactoryFromURL(url).register(irro, expandURI(url),
+                 replacePreviousBinding);
++        irro.setRemoteRemoteObject(rro);
++        return rro;
+     }
+ 
+     /**

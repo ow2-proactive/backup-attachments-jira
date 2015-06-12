@@ -1,0 +1,766 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x0000003766d33f63, pid=12939, tid=139957686748928
+#
+# JRE version: 6.0_20-b02
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (16.3-b01 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x133f63]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f4a24011800):  JavaThread "SchedulerCore on rmi://dalek.activeeon.com:1099/Node1314176126" [_thread_in_native, id=13064, stack(0x00007f4a7023c000,0x00007f4a7033d000)]
+
+siginfo:si_signo=SIGBUS: si_errno=0, si_code=2 (BUS_ADRERR), si_addr=0x00007f4a7301cff0
+
+Registers:
+RAX=0x00007f4a380bb860, RBX=0x000000000000f931, RCX=0x0000000000004000, RDX=0x0000000000003b70
+RSP=0x00007f4a70338ba8, RBP=0x00007f4a72ffdb46, RSI=0x00007f4a7301d021, RDI=0x00007f4a380bf450
+R8 =0x00007f4a380cb181, R9 =0x0000003766d33f50, R10=0x000000000000f932, R11=0x0000003766d685d0
+R12=0x00007f4a38040450, R13=0x000000000000d63d, R14=0x000000000000e280, R15=0x000000000000f931
+RIP=0x0000003766d33f63, EFL=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f4a70338ba8)
+0x00007f4a70338ba8:   00007f4b011c70e5 00007f4a70338bd0
+0x00007f4a70338bb8:   0000000000000798 00007f4afc509640
+0x00007f4a70338bc8:   00007f4a24011800 0000000000000798
+0x00007f4a70338bd8:   00007f4a70338c50 00007f4a24011800
+0x00007f4a70338be8:   00007f4b011c7351 0000000000000001
+0x00007f4a70338bf8:   0000000000000001 00007f4a70338c60
+0x00007f4a70338c08:   00007f4b011bf7ce 00007f4a73d93878
+0x00007f4a70338c18:   00007f4af906d816 00007f4aceab00b8
+0x00007f4a70338c28:   00007f4adbd59ff0 00007f4a79020028
+0x00007f4a70338c38:   00000002fc0bbc89 0000000000000000
+0x00007f4a70338c48:   0000000000000000 00007f4a73ea27f0
+0x00007f4a70338c58:   00007f4a70338d30 0000000000000b7d
+0x00007f4a70338c68:   00007f4af9179aec ffffffff00000001
+0x00007f4a70338c78:   0000000000000000 00007f4a790d3488
+0x00007f4a70338c88:   00007f4addd7df3c dab95d8200000000
+0x00007f4a70338c98:   00007f4addd7df08 00007f4addd7df08
+0x00007f4a70338ca8:   00007f4addd7df38 00007f4addd7df20
+0x00007f4a70338cb8:   00007f4addd7df30 0000000100000001
+0x00007f4a70338cc8:   0000002b00000000 00007f4addd7df48
+0x00007f4a70338cd8:   00007f4addd7df68 00007f4a790d3488
+0x00007f4a70338ce8:   00007f4a790d3608 00007f4aceab0040
+0x00007f4a70338cf8:   00007f4addd7df88 00007f4addd7dfa8
+0x00007f4a70338d08:   0000000000000007 0000000000000011
+0x00007f4a70338d18:   00007f4a00000057 00007f4adbd59fd8
+0x00007f4a70338d28:   00007f4af909e054 00007f4adbd59ff0
+0x00007f4a70338d38:   00007f4a7906bbb8 00007f4addd7df20
+0x00007f4a70338d48:   00007f4a00000000 00007f4a790d3488
+0x00007f4a70338d58:   0000000000000000 00007f4adbd58e28
+0x00007f4a70338d68:   00007f4adbd59340 00000057f90003eb
+0x00007f4a70338d78:   00007f4adbd52d50 00007f4a00001fa0
+0x00007f4a70338d88:   00007f4a70338e20 00007f4adbd53728
+0x00007f4a70338d98:   00007f4af9355bf0 00007f4addd7de98 
+
+Instructions: (pc=0x0000003766d33f63)
+0x0000003766d33f53:   40 fe ff ff 0f 28 56 ef 48 83 ea 40 0f 28 5e df
+0x0000003766d33f63:   0f 28 66 cf 0f 28 6e bf 48 8d 76 c0 66 0f 3a 0f 
+
+Stack: [0x00007f4a7023c000,0x00007f4a7033d000],  sp=0x00007f4a70338ba8,  free space=3f20000000000000018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x133f63]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J  java.util.zip.ZipFile.getNextEntry(JI)J
+J  sun.misc.URLClassPath$JarLoader.getResource(Ljava/lang/String;ZLjava/util/Set;)Lsun/misc/Resource;
+J  sun.misc.URLClassPath.getResource(Ljava/lang/String;Z)Lsun/misc/Resource;
+J  java.net.URLClassLoader$1.run()Ljava/lang/Object;
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+J  java.net.URLClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class;
+J  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+41
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+j  org.ow2.proactive.scheduler.core.db.schedulerType.BinaryLargeOBject.serialize(Ljava/lang/Object;)Ljava/sql/Blob;+5
+j  org.ow2.proactive.scheduler.core.db.schedulerType.BinaryLargeOBject.nullSafeSet(Ljava/sql/PreparedStatement;Ljava/lang/Object;I)V+4
+j  org.hibernate.type.CustomType.nullSafeSet(Ljava/sql/PreparedStatement;Ljava/lang/Object;I[ZLorg/hibernate/engine/SessionImplementor;)V+14
+j  org.hibernate.persister.entity.AbstractEntityPersister.dehydrate(Ljava/io/Serializable;[Ljava/lang/Object;Ljava/lang/Object;[Z[[ZILjava/sql/PreparedStatement;Lorg/hibernate/engine/SessionImplementor;I)I+103
+j  org.hibernate.persister.entity.AbstractEntityPersister.insert(Ljava/io/Serializable;[Ljava/lang/Object;[ZILjava/lang/String;Ljava/lang/Object;Lorg/hibernate/engine/SessionImplementor;)V+285
+j  org.hibernate.persister.entity.AbstractEntityPersister.insert(Ljava/io/Serializable;[Ljava/lang/Object;Ljava/lang/Object;Lorg/hibernate/engine/SessionImplementor;)V+92
+j  org.hibernate.action.EntityInsertAction.execute()V+41
+j  org.hibernate.engine.ActionQueue.execute(Lorg/hibernate/action/Executable;)V+68
+j  org.hibernate.engine.ActionQueue.executeActions(Ljava/util/List;)V+25
+j  org.hibernate.engine.ActionQueue.executeActions()V+5
+j  org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(Lorg/hibernate/event/EventSource;)V+37
+j  org.hibernate.event.def.DefaultFlushEventListener.onFlush(Lorg/hibernate/event/FlushEvent;)V+26
+j  org.hibernate.impl.SessionImpl.flush()V+55
+j  org.hibernate.impl.SessionImpl.managedFlush()V+29
+j  org.hibernate.transaction.JDBCTransaction.commit()V+50
+j  org.ow2.proactive.db.HibernateDatabaseManager.commitTransaction(Lorg/hibernate/classic/Session;)V+17
+j  org.ow2.proactive.db.HibernateDatabaseManager.register(Ljava/lang/Object;)V+53
+j  org.ow2.proactive.scheduler.core.SchedulerCore.submit()Z+120
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+J  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+j  org.objectweb.proactive.core.mop.MethodCall.execute(Ljava/lang/Object;)Ljava/lang/Object;+206
+j  org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(Lorg/objectweb/proactive/Body;)Lorg/objectweb/proactive/core/body/future/MethodCallResult;+14
+j  org.objectweb.proactive.core.body.request.RequestImpl.serve(Lorg/objectweb/proactive/Body;)Lorg/objectweb/proactive/core/body/reply/Reply;+39
+j  org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(Lorg/objectweb/proactive/core/body/request/Request;)V+187
+j  org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(Lorg/objectweb/proactive/core/body/request/Request;)V+45
+j  org.objectweb.proactive.core.body.AbstractBody.serve(Lorg/objectweb/proactive/core/body/request/Request;)V+84
+J  org.ow2.proactive.scheduler.core.SchedulerCore.runActivity(Lorg/objectweb/proactive/Body;)V
+j  org.objectweb.proactive.core.body.ActiveBody.run()V+55
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f4a04012800 JavaThread "RMI RenewClean-[192.168.1.6:60680]" daemon [_thread_blocked, id=25135, stack(0x00007f4a4d563000,0x00007f4a4d664000)]
+  0x00007f4a2c00f000 JavaThread "RMI TCP Connection(1289)-127.0.0.1" daemon [_thread_in_native, id=25018, stack(0x00007f4a4d15f000,0x00007f4a4d260000)]
+  0x00007f4a2c00c000 JavaThread "RMI TCP Connection(1290)-192.168.1.6" daemon [_thread_in_native, id=25014, stack(0x00007f4a715ca000,0x00007f4a716cb000)]
+  0x00007f4a2c008000 JavaThread "RMI TCP Connection(1291)-192.168.1.6" daemon [_thread_in_native, id=25012, stack(0x00007f4a4cc5a000,0x00007f4a4cd5b000)]
+  0x00007f4a2c001000 JavaThread "RMI TCP Connection(idle)" daemon [_thread_blocked, id=24980, stack(0x00007f4a4d361000,0x00007f4a4d462000)]
+  0x00007f4a2401b000 JavaThread "pool-9-thread-4" [_thread_blocked, id=19795, stack(0x00007f4a724ea000,0x00007f4a725eb000)]
+  0x00007f4a24017000 JavaThread "pool-9-thread-3" [_thread_blocked, id=19750, stack(0x00007f4a71cd1000,0x00007f4a71dd2000)]
+  0x00007f4a04008000 JavaThread "RMI RenewClean-[192.168.1.6:33118]" daemon [_thread_blocked, id=19722, stack(0x00007f4a7043e000,0x00007f4a7053f000)]
+  0x00007f4a24015800 JavaThread "pool-9-thread-2" [_thread_blocked, id=16264, stack(0x00007f4a4d462000,0x00007f4a4d563000)]
+  0x00007f4a24015000 JavaThread "pool-9-thread-1" [_thread_blocked, id=15906, stack(0x00007f4a4d260000,0x00007f4a4d361000)]
+  0x00007f4a00002000 JavaThread "RMI RenewClean-[192.168.1.6:58245]" daemon [_thread_blocked, id=14539, stack(0x00007f4a4d05e000,0x00007f4a4d15f000)]
+  0x00007f4a58067800 JavaThread "pool-7-thread-5" [_thread_blocked, id=13385, stack(0x00007f4a4cb59000,0x00007f4a4cc5a000)]
+  0x00007f4a58065800 JavaThread "pool-7-thread-4" [_thread_blocked, id=13313, stack(0x00007f4a4c04e000,0x00007f4a4c14f000)]
+  0x00007f4a58063800 JavaThread "pool-7-thread-3" [_thread_blocked, id=13312, stack(0x00007f4a4c14f000,0x00007f4a4c250000)]
+  0x00007f4a5806f800 JavaThread "pool-7-thread-2" [_thread_blocked, id=13311, stack(0x00007f4a4c250000,0x00007f4a4c351000)]
+  0x00007f4a5806d000 JavaThread "pool-7-thread-1" [_thread_blocked, id=13310, stack(0x00007f4a4c351000,0x00007f4a4c452000)]
+  0x00007f4a5806d800 JavaThread "pool-6-thread-4" [_thread_blocked, id=13267, stack(0x00007f4a4c452000,0x00007f4a4c553000)]
+  0x00007f4a58071800 JavaThread "pool-6-thread-3" [_thread_blocked, id=13262, stack(0x00007f4a4c553000,0x00007f4a4c654000)]
+  0x00007f4a0c0b8000 JavaThread "Thread for AC" [_thread_blocked, id=13257, stack(0x00007f4a4c654000,0x00007f4a4c755000)]
+  0x00007f4a58072800 JavaThread "pool-6-thread-2" [_thread_blocked, id=13256, stack(0x00007f4a4c755000,0x00007f4a4c856000)]
+  0x00007f4afc00e000 JavaThread "DestroyJavaVM" [_thread_blocked, id=12940, stack(0x00007f4b01830000,0x00007f4b01931000)]
+  0x00007f4a3806f000 JavaThread "Thread-29" [_thread_blocked, id=13253, stack(0x00007f4a4c856000,0x00007f4a4c957000)]
+  0x00007f4a24014000 JavaThread "Scheduler Accounts Manager Refresher" daemon [_thread_blocked, id=13251, stack(0x00007f4a4d664000,0x00007f4a4d765000)]
+  0x00007f4a5806b000 JavaThread "pool-6-thread-1" [_thread_blocked, id=13239, stack(0x00007f4a4c957000,0x00007f4a4ca58000)]
+  0x00007f4a1800b800 JavaThread "RMI RenewClean-[192.168.1.6:56000]" daemon [_thread_blocked, id=13237, stack(0x00007f4a4ca58000,0x00007f4a4cb59000)]
+  0x00007f4a0c0b5800 JavaThread "RMI RenewClean-[192.168.1.6:57309]" daemon [_thread_blocked, id=13227, stack(0x00007f4a4cd5b000,0x00007f4a4ce5c000)]
+  0x00007f49f8008000 JavaThread "RMI RenewClean-[192.168.1.6:42312]" daemon [_thread_blocked, id=13226, stack(0x00007f4a4ce5c000,0x00007f4a4cf5d000)]
+  0x00007f4a04008800 JavaThread "RMI RenewClean-[192.168.1.6:33742]" daemon [_thread_blocked, id=13220, stack(0x00007f4a4cf5d000,0x00007f4a4d05e000)]
+  0x00007f4a58061000 JavaThread "GCM DeploymentSTDOUT Monitor for "java" -Dproactive.http.jetty.xml="/home/acontes/ws_git/scheduling.git/config/rm/deployment/jetty.xm" daemon [_thread_in_native, id=13100, stack(0x00007f4a4d765000,0x00007f4a4d866000)]
+  0x00007f4a5805f800 JavaThread "GCM DeploymentSTDERR Monitor for "java" -Dproactive.http.jetty.xml="/home/acontes/ws_git/scheduling.git/config/rm/deployment/jetty.xm" daemon [_thread_in_native, id=13092, stack(0x00007f4a4d866000,0x00007f4a4d967000)]
+  0x00007f4a5805e000 JavaThread "process reaper" daemon [_thread_in_native, id=13084, stack(0x00007f4a4d967000,0x00007f4a4da68000)]
+  0x00007f4a5800a000 JavaThread "GCM Deployment Stage 2 and 3 dispatcher" daemon [_thread_blocked, id=13076, stack(0x00007f4a4da68000,0x00007f4a4db69000)]
+  0x00007f4a58017800 JavaThread "JMXNotificationListener on rmi://dalek.activeeon.com:1099/Node1314176126" [_thread_blocked, id=13075, stack(0x00007f4a4db69000,0x00007f4a4dc6a000)]
+  0x00007f4a38014000 JavaThread "derby.rawStoreDaemon" daemon [_thread_blocked, id=13074, stack(0x00007f4a4dc6a000,0x00007f4a4dd6b000)]
+  0x00007f4a38004000 JavaThread "Thread-21" [_thread_blocked, id=13070, stack(0x00007f4a4dd6b000,0x00007f4a4de6c000)]
+  0x00007f4a38002000 JavaThread "Thread-20" [_thread_blocked, id=13069, stack(0x00007f4a4de6c000,0x00007f4a4df6d000)]
+  0x00007f4a0c68d800 JavaThread "Node Source "GCMLocalNodes"" [_thread_blocked, id=13068, stack(0x00007f4a4df6d000,0x00007f4a4e06e000)]
+  0x00007f4a0c68c800 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7ed5--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13067, stack(0x00007f4a4e06e000,0x00007f4a4e16f000)]
+  0x00007f4a0c327800 JavaThread "Node Source Policy "GCMLocalNodes"" [_thread_blocked, id=13066, stack(0x00007f4a7003a000,0x00007f4a7013b000)]
+  0x00007f4a0c4d7800 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f06--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13065, stack(0x00007f4a7013b000,0x00007f4a7023c000)]
+=>0x00007f4a24011800 JavaThread "SchedulerCore on rmi://dalek.activeeon.com:1099/Node1314176126" [_thread_in_native, id=13064, stack(0x00007f4a7023c000,0x00007f4a7033d000)]
+  0x00007f4a2400e000 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f0b--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13063, stack(0x00007f4a7033d000,0x00007f4a7043e000)]
+  0x00007f4a2400c000 JavaThread "RestartTaskTimer" [_thread_blocked, id=13061, stack(0x00007f4a7053f000,0x00007f4a70640000)]
+  0x00007f4a2400a800 JavaThread "RemoveJobTimer" [_thread_blocked, id=13060, stack(0x00007f4a70640000,0x00007f4a70741000)]
+  0x00007f4a24009000 JavaThread "SchedulerAuthentication on rmi://dalek.activeeon.com:1099/Node1314176126" [_thread_blocked, id=13059, stack(0x00007f4a70741000,0x00007f4a70842000)]
+  0x00007f4a24008000 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f22--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13058, stack(0x00007f4a70842000,0x00007f4a70943000)]
+  0x00007f4afc0d5800 JavaThread "SchedulerFrontend on rmi://dalek.activeeon.com:1099/Node1314176126" [_thread_blocked, id=13057, stack(0x00007f4a70943000,0x00007f4a70a44000)]
+  0x00007f4afc7a8000 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f37--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13056, stack(0x00007f4a70a44000,0x00007f4a70b45000)]
+  0x00007f4afc0eb000 JavaThread "SessionTimer" [_thread_blocked, id=13055, stack(0x00007f4a70b45000,0x00007f4a70c46000)]
+  0x00007f4afc744000 JavaThread "ResourceManagerProxy on rmi://dalek.activeeon.com:1099/Node1314176126" [_thread_blocked, id=13054, stack(0x00007f4a70c46000,0x00007f4a70d47000)]
+  0x00007f4afc745000 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f4b--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13053, stack(0x00007f4a70d47000,0x00007f4a70e48000)]
+  0x00007f4a0c323800 JavaThread "ClientPinger on rmi://dalek.activeeon.com:1099/RM_NODE" [_thread_blocked, id=13038, stack(0x00007f4a70e4c000,0x00007f4a70f4d000)]
+  0x00007f4a0c31e000 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f6c--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13037, stack(0x00007f4a70f4d000,0x00007f4a7104e000)]
+  0x00007f4afc521000 JavaThread "Monitoring the Futures" daemon [_thread_blocked, id=13036, stack(0x00007f4a7104e000,0x00007f4a7114f000)]
+  0x00007f4a0c0f0800 JavaThread "ProbablisticSelectionManager on rmi://dalek.activeeon.com:1099/RM_NODE" [_thread_blocked, id=13035, stack(0x00007f4a711c6000,0x00007f4a712c7000)]
+  0x00007f4a0c07e800 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f87--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13034, stack(0x00007f4a712c7000,0x00007f4a713c8000)]
+  0x00007f4a0c045800 JavaThread "RMMonitoringImpl on rmi://dalek.activeeon.com:1099/RM_NODE" [_thread_blocked, id=13033, stack(0x00007f4a713c8000,0x00007f4a714c9000)]
+  0x00007f4a0c107800 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7f9e--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13032, stack(0x00007f4a714c9000,0x00007f4a715ca000)]
+  0x00007f4a0c023000 JavaThread "RMI TCP Accept-5822" daemon [_thread_in_native, id=13030, stack(0x00007f4a716cb000,0x00007f4a717cc000)]
+  0x00007f4a0c14d000 JavaThread "RMAuthenticationImpl on rmi://dalek.activeeon.com:1099/RM_NODE" [_thread_blocked, id=13029, stack(0x00007f4a717cc000,0x00007f4a718cd000)]
+  0x00007f4a0c0d7800 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7fbb--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13028, stack(0x00007f4a718cd000,0x00007f4a719ce000)]
+  0x00007f4a0c06b000 JavaThread "derby.rawStoreDaemon" daemon [_thread_blocked, id=13026, stack(0x00007f4a719ce000,0x00007f4a71acf000)]
+  0x00007f4a0c074000 JavaThread "Timer-1" daemon [_thread_blocked, id=13025, stack(0x00007f4a71acf000,0x00007f4a71bd0000)]
+  0x00007f4a0c003800 JavaThread "derby.antiGC" daemon [_thread_blocked, id=13024, stack(0x00007f4a71bd0000,0x00007f4a71cd1000)]
+  0x00007f4afc7a5000 JavaThread "RMCore on rmi://dalek.activeeon.com:1099/RM_NODE" [_thread_blocked, id=13022, stack(0x00007f4a71dd2000,0x00007f4a71ed3000)]
+  0x00007f4afc0fa000 JavaThread "JMXNotificationThread for org.objectweb.proactive.core.body:type=AO,aoID=2fb30faa-12bf3857233--7fd9--177cad6cdfdab63c-2fb30faa-12bf3857233--8000" daemon [_thread_blocked, id=13021, stack(0x00007f4a71ed3000,0x00007f4a71fd4000)]
+  0x00007f4a18004000 JavaThread "RMI RenewClean-[192.168.1.6:35400]" daemon [_thread_blocked, id=13019, stack(0x00007f4a721e7000,0x00007f4a722e8000)]
+  0x00007f4afc87e800 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=13018, stack(0x00007f4a723e9000,0x00007f4a724ea000)]
+  0x00007f4afc7ff800 JavaThread "GC Daemon" daemon [_thread_blocked, id=13016, stack(0x00007f4a725eb000,0x00007f4a726ec000)]
+  0x00007f4afc845800 JavaThread "RMI Reaper" [_thread_blocked, id=13015, stack(0x00007f4a726ec000,0x00007f4a727ed000)]
+  0x00007f4afc190000 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=13014, stack(0x00007f4a727ed000,0x00007f4a728ee000)]
+  0x00007f4afc88d800 JavaThread "RMI TCP Accept-1099" daemon [_thread_in_native, id=13013, stack(0x00007f4a728ee000,0x00007f4a729ef000)]
+  0x00007f4afc67e800 JavaThread "pool-1-thread-1 - Acceptor0 SelectChannelConnector@0.0.0.0:57491" [_thread_in_native, id=13012, stack(0x00007f4a729f5000,0x00007f4a72af6000)]
+  0x00007f4afc83c000 JavaThread "Timer-0" daemon [_thread_blocked, id=13011, stack(0x00007f4a72bfe000,0x00007f4a72cff000)]
+  0x00007f4afc098800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=12951, stack(0x00007f4a733f8000,0x00007f4a734f9000)]
+  0x00007f4afc096000 JavaThread "CompilerThread1" daemon [_thread_blocked, id=12950, stack(0x00007f4a734f9000,0x00007f4a735fa000)]
+  0x00007f4afc093800 JavaThread "CompilerThread0" daemon [_thread_blocked, id=12949, stack(0x00007f4a735fa000,0x00007f4a736fb000)]
+  0x00007f4afc091000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=12948, stack(0x00007f4a736fb000,0x00007f4a737fc000)]
+  0x00007f4afc070000 JavaThread "Finalizer" daemon [_thread_blocked, id=12947, stack(0x00007f4a737fc000,0x00007f4a738fd000)]
+  0x00007f4afc06e000 JavaThread "Reference Handler" daemon [_thread_blocked, id=12946, stack(0x00007f4a738fd000,0x00007f4a739fe000)]
+
+Other Threads:
+  0x00007f4afc069800 VMThread [stack: 0x00007f4a739fe000,0x00007f4a73aff000] [id=12945]
+  0x00007f4afc0a3000 WatcherThread [stack: 0x00007f4a732f7000,0x00007f4a733f8000] [id=12952]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 245248K, used 8910K [0x00007f4ace560000, 0x00007f4ade0b0000, 0x00007f4af9000000)
+  eden space 241856K, 2% used [0x00007f4ace560000,0x00007f4aceac85e0,0x00007f4add190000)
+  from space 3392K, 99% used [0x00007f4addc70000,0x00007f4addfbb3f0,0x00007f4addfc0000)
+  to   space 960K, 0% used [0x00007f4addfc0000,0x00007f4addfc0000,0x00007f4ade0b0000)
+ PSOldGen        total 87424K, used 25221K [0x00007f4a79000000, 0x00007f4a7e560000, 0x00007f4ace560000)
+  object space 87424K, 28% used [0x00007f4a79000000,0x00007f4a7a8a1560,0x00007f4a7e560000)
+ PSPermGen       total 54144K, used 50599K [0x00007f4a73c00000, 0x00007f4a770e0000, 0x00007f4a79000000)
+  object space 54144K, 93% used [0x00007f4a73c00000,0x00007f4a76d69f98,0x00007f4a770e0000)
+
+Dynamic libraries:
+40000000-40009000 r-xp 00000000 08:02 2526582                            /home/acontes/Softs/Java/jdk1.6.0_20/bin/java
+40108000-4010a000 rwxp 00008000 08:02 2526582                            /home/acontes/Softs/Java/jdk1.6.0_20/bin/java
+40aba000-40adb000 rwxp 00000000 00:00 0                                  [heap]
+3766800000-3766820000 r-xp 00000000 08:01 4406464                        /lib64/ld-2.12.90.so
+3766a1f000-3766a20000 r-xp 0001f000 08:01 4406464                        /lib64/ld-2.12.90.so
+3766a20000-3766a21000 rwxp 00020000 08:01 4406464                        /lib64/ld-2.12.90.so
+3766a21000-3766a22000 rwxp 00000000 00:00 0 
+3766c00000-3766d99000 r-xp 00000000 08:01 4406533                        /lib64/libc-2.12.90.so
+3766d99000-3766f99000 ---p 00199000 08:01 4406533                        /lib64/libc-2.12.90.so
+3766f99000-3766f9d000 r-xp 00199000 08:01 4406533                        /lib64/libc-2.12.90.so
+3766f9d000-3766f9e000 rwxp 0019d000 08:01 4406533                        /lib64/libc-2.12.90.so
+3766f9e000-3766fa4000 rwxp 00000000 00:00 0 
+3767000000-3767002000 r-xp 00000000 08:01 4406996                        /lib64/libdl-2.12.90.so
+3767002000-3767202000 ---p 00002000 08:01 4406996                        /lib64/libdl-2.12.90.so
+3767202000-3767203000 r-xp 00002000 08:01 4406996                        /lib64/libdl-2.12.90.so
+3767203000-3767204000 rwxp 00003000 08:01 4406996                        /lib64/libdl-2.12.90.so
+3767400000-3767418000 r-xp 00000000 08:01 4407010                        /lib64/libpthread-2.12.90.so
+3767418000-3767617000 ---p 00018000 08:01 4407010                        /lib64/libpthread-2.12.90.so
+3767617000-3767618000 r-xp 00017000 08:01 4407010                        /lib64/libpthread-2.12.90.so
+3767618000-3767619000 rwxp 00018000 08:01 4407010                        /lib64/libpthread-2.12.90.so
+3767619000-376761d000 rwxp 00000000 00:00 0 
+3767800000-3767884000 r-xp 00000000 08:01 4407001                        /lib64/libm-2.12.90.so
+3767884000-3767a83000 ---p 00084000 08:01 4407001                        /lib64/libm-2.12.90.so
+3767a83000-3767a84000 r-xp 00083000 08:01 4407001                        /lib64/libm-2.12.90.so
+3767a84000-3767a85000 rwxp 00084000 08:01 4407001                        /lib64/libm-2.12.90.so
+3768400000-3768407000 r-xp 00000000 08:01 4407049                        /lib64/librt-2.12.90.so
+3768407000-3768607000 ---p 00007000 08:01 4407049                        /lib64/librt-2.12.90.so
+3768607000-3768608000 r-xp 00007000 08:01 4407049                        /lib64/librt-2.12.90.so
+3768608000-3768609000 rwxp 00008000 08:01 4407049                        /lib64/librt-2.12.90.so
+3779800000-3779817000 r-xp 00000000 08:01 4407077                        /lib64/libnsl-2.12.90.so
+3779817000-3779a16000 ---p 00017000 08:01 4407077                        /lib64/libnsl-2.12.90.so
+3779a16000-3779a17000 r-xp 00016000 08:01 4407077                        /lib64/libnsl-2.12.90.so
+3779a17000-3779a18000 rwxp 00017000 08:01 4407077                        /lib64/libnsl-2.12.90.so
+3779a18000-3779a1a000 rwxp 00000000 00:00 0 
+7f49f0000000-7f49f0021000 rwxp 00000000 00:00 0 
+7f49f0021000-7f49f4000000 ---p 00000000 00:00 0 
+7f49f4000000-7f49f4092000 rwxp 00000000 00:00 0 
+7f49f4092000-7f49f8000000 ---p 00000000 00:00 0 
+7f49f8000000-7f49f8021000 rwxp 00000000 00:00 0 
+7f49f8021000-7f49fc000000 ---p 00000000 00:00 0 
+7f49fc000000-7f49fc09b000 rwxp 00000000 00:00 0 
+7f49fc09b000-7f4a00000000 ---p 00000000 00:00 0 
+7f4a00000000-7f4a00031000 rwxp 00000000 00:00 0 
+7f4a00031000-7f4a04000000 ---p 00000000 00:00 0 
+7f4a04000000-7f4a04021000 rwxp 00000000 00:00 0 
+7f4a04021000-7f4a08000000 ---p 00000000 00:00 0 
+7f4a08000000-7f4a08021000 rwxp 00000000 00:00 0 
+7f4a08021000-7f4a0c000000 ---p 00000000 00:00 0 
+7f4a0c000000-7f4a0c6f3000 rwxp 00000000 00:00 0 
+7f4a0c6f3000-7f4a10000000 ---p 00000000 00:00 0 
+7f4a10000000-7f4a10021000 rwxp 00000000 00:00 0 
+7f4a10021000-7f4a14000000 ---p 00000000 00:00 0 
+7f4a14000000-7f4a14021000 rwxp 00000000 00:00 0 
+7f4a14021000-7f4a18000000 ---p 00000000 00:00 0 
+7f4a18000000-7f4a18050000 rwxp 00000000 00:00 0 
+7f4a18050000-7f4a1c000000 ---p 00000000 00:00 0 
+7f4a1c000000-7f4a1c021000 rwxp 00000000 00:00 0 
+7f4a1c021000-7f4a20000000 ---p 00000000 00:00 0 
+7f4a20000000-7f4a20021000 rwxp 00000000 00:00 0 
+7f4a20021000-7f4a24000000 ---p 00000000 00:00 0 
+7f4a24000000-7f4a2402b000 rwxp 00000000 00:00 0 
+7f4a2402b000-7f4a28000000 ---p 00000000 00:00 0 
+7f4a28000000-7f4a28021000 rwxp 00000000 00:00 0 
+7f4a28021000-7f4a2c000000 ---p 00000000 00:00 0 
+7f4a2c000000-7f4a2c022000 rwxp 00000000 00:00 0 
+7f4a2c022000-7f4a30000000 ---p 00000000 00:00 0 
+7f4a30000000-7f4a30021000 rwxp 00000000 00:00 0 
+7f4a30021000-7f4a34000000 ---p 00000000 00:00 0 
+7f4a34000000-7f4a34021000 rwxp 00000000 00:00 0 
+7f4a34021000-7f4a38000000 ---p 00000000 00:00 0 
+7f4a38000000-7f4a38258000 rwxp 00000000 00:00 0 
+7f4a38258000-7f4a3c000000 ---p 00000000 00:00 0 
+7f4a3c000000-7f4a3c021000 rwxp 00000000 00:00 0 
+7f4a3c021000-7f4a40000000 ---p 00000000 00:00 0 
+7f4a40000000-7f4a4230a000 rwxp 00000000 00:00 0 
+7f4a4230a000-7f4a44000000 ---p 00000000 00:00 0 
+7f4a44000000-7f4a45f71000 rwxp 00000000 00:00 0 
+7f4a45f71000-7f4a48000000 ---p 00000000 00:00 0 
+7f4a48000000-7f4a4803a000 rwxp 00000000 00:00 0 
+7f4a4803a000-7f4a4c000000 ---p 00000000 00:00 0 
+7f4a4c04e000-7f4a4c051000 ---p 00000000 00:00 0 
+7f4a4c051000-7f4a4c14f000 rwxp 00000000 00:00 0 
+7f4a4c14f000-7f4a4c152000 ---p 00000000 00:00 0 
+7f4a4c152000-7f4a4c250000 rwxp 00000000 00:00 0 
+7f4a4c250000-7f4a4c253000 ---p 00000000 00:00 0 
+7f4a4c253000-7f4a4c351000 rwxp 00000000 00:00 0 
+7f4a4c351000-7f4a4c354000 ---p 00000000 00:00 0 
+7f4a4c354000-7f4a4c452000 rwxp 00000000 00:00 0 
+7f4a4c452000-7f4a4c455000 ---p 00000000 00:00 0 
+7f4a4c455000-7f4a4c553000 rwxp 00000000 00:00 0 
+7f4a4c553000-7f4a4c556000 ---p 00000000 00:00 0 
+7f4a4c556000-7f4a4c654000 rwxp 00000000 00:00 0 
+7f4a4c654000-7f4a4c657000 ---p 00000000 00:00 0 
+7f4a4c657000-7f4a4c755000 rwxp 00000000 00:00 0 
+7f4a4c755000-7f4a4c758000 ---p 00000000 00:00 0 
+7f4a4c758000-7f4a4c856000 rwxp 00000000 00:00 0 
+7f4a4c856000-7f4a4c859000 ---p 00000000 00:00 0 
+7f4a4c859000-7f4a4c957000 rwxp 00000000 00:00 0 
+7f4a4c957000-7f4a4c95a000 ---p 00000000 00:00 0 
+7f4a4c95a000-7f4a4ca58000 rwxp 00000000 00:00 0 
+7f4a4ca58000-7f4a4ca5b000 ---p 00000000 00:00 0 
+7f4a4ca5b000-7f4a4cb59000 rwxp 00000000 00:00 0 
+7f4a4cb59000-7f4a4cb5c000 ---p 00000000 00:00 0 
+7f4a4cb5c000-7f4a4cc5a000 rwxp 00000000 00:00 0 
+7f4a4cc5a000-7f4a4cc5d000 ---p 00000000 00:00 0 
+7f4a4cc5d000-7f4a4cd5b000 rwxp 00000000 00:00 0 
+7f4a4cd5b000-7f4a4cd5e000 ---p 00000000 00:00 0 
+7f4a4cd5e000-7f4a4ce5c000 rwxp 00000000 00:00 0 
+7f4a4ce5c000-7f4a4ce5f000 ---p 00000000 00:00 0 
+7f4a4ce5f000-7f4a4cf5d000 rwxp 00000000 00:00 0 
+7f4a4cf5d000-7f4a4cf60000 ---p 00000000 00:00 0 
+7f4a4cf60000-7f4a4d05e000 rwxp 00000000 00:00 0 
+7f4a4d05e000-7f4a4d061000 ---p 00000000 00:00 0 
+7f4a4d061000-7f4a4d15f000 rwxp 00000000 00:00 0 
+7f4a4d15f000-7f4a4d162000 ---p 00000000 00:00 0 
+7f4a4d162000-7f4a4d260000 rwxp 00000000 00:00 0 
+7f4a4d260000-7f4a4d263000 ---p 00000000 00:00 0 
+7f4a4d263000-7f4a4d361000 rwxp 00000000 00:00 0 
+7f4a4d361000-7f4a4d364000 ---p 00000000 00:00 0 
+7f4a4d364000-7f4a4d462000 rwxp 00000000 00:00 0 
+7f4a4d462000-7f4a4d465000 ---p 00000000 00:00 0 
+7f4a4d465000-7f4a4d563000 rwxp 00000000 00:00 0 
+7f4a4d563000-7f4a4d566000 ---p 00000000 00:00 0 
+7f4a4d566000-7f4a4d664000 rwxp 00000000 00:00 0 
+7f4a4d664000-7f4a4d667000 ---p 00000000 00:00 0 
+7f4a4d667000-7f4a4d765000 rwxp 00000000 00:00 0 
+7f4a4d765000-7f4a4d768000 ---p 00000000 00:00 0 
+7f4a4d768000-7f4a4d866000 rwxp 00000000 00:00 0 
+7f4a4d866000-7f4a4d869000 ---p 00000000 00:00 0 
+7f4a4d869000-7f4a4d967000 rwxp 00000000 00:00 0 
+7f4a4d967000-7f4a4d96a000 ---p 00000000 00:00 0 
+7f4a4d96a000-7f4a4da68000 rwxp 00000000 00:00 0 
+7f4a4da68000-7f4a4da6b000 ---p 00000000 00:00 0 
+7f4a4da6b000-7f4a4db69000 rwxp 00000000 00:00 0 
+7f4a4db69000-7f4a4db6c000 ---p 00000000 00:00 0 
+7f4a4db6c000-7f4a4dc6a000 rwxp 00000000 00:00 0 
+7f4a4dc6a000-7f4a4dc6d000 ---p 00000000 00:00 0 
+7f4a4dc6d000-7f4a4dd6b000 rwxp 00000000 00:00 0 
+7f4a4dd6b000-7f4a4dd6e000 ---p 00000000 00:00 0 
+7f4a4dd6e000-7f4a4de6c000 rwxp 00000000 00:00 0 
+7f4a4de6c000-7f4a4de6f000 ---p 00000000 00:00 0 
+7f4a4de6f000-7f4a4df6d000 rwxp 00000000 00:00 0 
+7f4a4df6d000-7f4a4df70000 ---p 00000000 00:00 0 
+7f4a4df70000-7f4a4e06e000 rwxp 00000000 00:00 0 
+7f4a4e06e000-7f4a4e071000 ---p 00000000 00:00 0 
+7f4a4e071000-7f4a4e16f000 rwxp 00000000 00:00 0 
+7f4a4e16f000-7f4a54000000 r-xp 00000000 08:01 4406743                    /usr/lib/locale/locale-archive
+7f4a54000000-7f4a54021000 rwxp 00000000 00:00 0 
+7f4a54021000-7f4a58000000 ---p 00000000 00:00 0 
+7f4a58000000-7f4a58084000 rwxp 00000000 00:00 0 
+7f4a58084000-7f4a5c000000 ---p 00000000 00:00 0 
+7f4a5c000000-7f4a5c022000 rwxp 00000000 00:00 0 
+7f4a5c022000-7f4a60000000 ---p 00000000 00:00 0 
+7f4a60000000-7f4a60124000 rwxp 00000000 00:00 0 
+7f4a60124000-7f4a64000000 ---p 00000000 00:00 0 
+7f4a64000000-7f4a64021000 rwxp 00000000 00:00 0 
+7f4a64021000-7f4a68000000 ---p 00000000 00:00 0 
+7f4a68000000-7f4a68021000 rwxp 00000000 00:00 0 
+7f4a68021000-7f4a6c000000 ---p 00000000 00:00 0 
+7f4a6c000000-7f4a6c021000 rwxp 00000000 00:00 0 
+7f4a6c021000-7f4a70000000 ---p 00000000 00:00 0 
+7f4a7003a000-7f4a7003d000 ---p 00000000 00:00 0 
+7f4a7003d000-7f4a7013b000 rwxp 00000000 00:00 0 
+7f4a7013b000-7f4a7013e000 ---p 00000000 00:00 0 
+7f4a7013e000-7f4a7023c000 rwxp 00000000 00:00 0 
+7f4a7023c000-7f4a7023f000 ---p 00000000 00:00 0 
+7f4a7023f000-7f4a7033d000 rwxp 00000000 00:00 0 
+7f4a7033d000-7f4a70340000 ---p 00000000 00:00 0 
+7f4a70340000-7f4a7043e000 rwxp 00000000 00:00 0 
+7f4a7043e000-7f4a70441000 ---p 00000000 00:00 0 
+7f4a70441000-7f4a7053f000 rwxp 00000000 00:00 0 
+7f4a7053f000-7f4a70542000 ---p 00000000 00:00 0 
+7f4a70542000-7f4a70640000 rwxp 00000000 00:00 0 
+7f4a70640000-7f4a70643000 ---p 00000000 00:00 0 
+7f4a70643000-7f4a70741000 rwxp 00000000 00:00 0 
+7f4a70741000-7f4a70744000 ---p 00000000 00:00 0 
+7f4a70744000-7f4a70842000 rwxp 00000000 00:00 0 
+7f4a70842000-7f4a70845000 ---p 00000000 00:00 0 
+7f4a70845000-7f4a70943000 rwxp 00000000 00:00 0 
+7f4a70943000-7f4a70946000 ---p 00000000 00:00 0 
+7f4a70946000-7f4a70a44000 rwxp 00000000 00:00 0 
+7f4a70a44000-7f4a70a47000 ---p 00000000 00:00 0 
+7f4a70a47000-7f4a70b45000 rwxp 00000000 00:00 0 
+7f4a70b45000-7f4a70b48000 ---p 00000000 00:00 0 
+7f4a70b48000-7f4a70c46000 rwxp 00000000 00:00 0 
+7f4a70c46000-7f4a70c49000 ---p 00000000 00:00 0 
+7f4a70c49000-7f4a70d47000 rwxp 00000000 00:00 0 
+7f4a70d47000-7f4a70d4a000 ---p 00000000 00:00 0 
+7f4a70d4a000-7f4a70e48000 rwxp 00000000 00:00 0 
+7f4a70e48000-7f4a70e4c000 r-xs 00035000 08:02 2527111                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/ext/sunpkcs11.jar
+7f4a70e4c000-7f4a70e4f000 ---p 00000000 00:00 0 
+7f4a70e4f000-7f4a70f4d000 rwxp 00000000 00:00 0 
+7f4a70f4d000-7f4a70f50000 ---p 00000000 00:00 0 
+7f4a70f50000-7f4a7104e000 rwxp 00000000 00:00 0 
+7f4a7104e000-7f4a71051000 ---p 00000000 00:00 0 
+7f4a71051000-7f4a7114f000 rwxp 00000000 00:00 0 
+7f4a7114f000-7f4a71154000 r-xs 00020000 08:02 10322718                   /home/acontes/ws_git/scheduling.git/lib/ProActive/woden-api-1.0M8.jar
+7f4a71154000-7f4a71164000 r-xs 0012c000 08:02 10322358                   /home/acontes/ws_git/scheduling.git/lib/ProActive/axis2-kernel-1.4.1.jar
+7f4a71164000-7f4a7116a000 r-xs 00037000 08:02 10322351                   /home/acontes/ws_git/scheduling.git/lib/ProActive/annogen-0.1.0.jar
+7f4a7116a000-7f4a71176000 r-xs 00068000 08:02 10322479                   /home/acontes/ws_git/scheduling.git/lib/ProActive/spring-context-2.5.5.jar
+7f4a71176000-7f4a7117a000 r-xs 00020000 08:02 10322343                   /home/acontes/ws_git/scheduling.git/lib/ProActive/XmlSchema-1.4.5.jar
+7f4a7117a000-7f4a7117d000 r-xs 00009000 08:02 10322723                   /home/acontes/ws_git/scheduling.git/lib/ProActive/xmlrpc-client-3.1.jar
+7f4a7117d000-7f4a7117e000 r-xs 00003000 08:02 10322716                   /home/acontes/ws_git/scheduling.git/lib/ProActive/winp-1.5.jar
+7f4a7117e000-7f4a7117f000 r-xs 00004000 08:02 10322699                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-xenserver.jar
+7f4a7117f000-7f4a71181000 r-xs 0000c000 08:02 10322668                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-virtualbox.jar
+7f4a71181000-7f4a71183000 r-xs 00001000 08:02 10322637                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-core.jar
+7f4a71183000-7f4a71185000 r-xs 00028000 08:02 10322636                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualbox-wsdl.jar
+7f4a71185000-7f4a71186000 r-xs 00003000 08:02 10322487                   /home/acontes/ws_git/scheduling.git/lib/ProActive/task-framework-2.4-SNAPSHOT.jar
+7f4a71186000-7f4a71188000 r-xs 00003000 08:02 10322486                   /home/acontes/ws_git/scheduling.git/lib/ProActive/task-deployment-2.4-SNAPSHOT.jar
+7f4a71188000-7f4a7118a000 r-xs 00006000 08:02 10322472                   /home/acontes/ws_git/scheduling.git/lib/ProActive/shellplugin.jar
+7f4a7118a000-7f4a7118c000 r-xs 0000e000 08:02 10322470                   /home/acontes/ws_git/scheduling.git/lib/ProActive/shell-1.4.2.jar
+7f4a7118c000-7f4a7118e000 r-xs 0000f000 08:02 10322437                   /home/acontes/ws_git/scheduling.git/lib/ProActive/julia-mixins-2.5.3-SNAPSHOT.jar
+7f4a7118e000-7f4a71190000 r-xs 00011000 08:02 10322436                   /home/acontes/ws_git/scheduling.git/lib/ProActive/julia-asm-2.5.3-SNAPSHOT.jar
+7f4a71190000-7f4a71193000 r-xs 00022000 08:02 10322430                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jdom.jar
+7f4a71193000-7f4a71199000 r-xs 00044000 08:02 10322417                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jackrabbit-webdav-1.5.2.jar
+7f4a71199000-7f4a7119e000 r-xs 0002d000 08:02 10322416                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jackrabbit-jcr-commons-1.5.2.jar
+7f4a7119e000-7f4a711a4000 r-xs 0005b000 08:02 10322413                   /home/acontes/ws_git/scheduling.git/lib/ProActive/j-interop.jar
+7f4a711a4000-7f4a711a5000 r-xs 00007000 08:02 10322408                   /home/acontes/ws_git/scheduling.git/lib/ProActive/glite-wms-jdlj.jar
+7f4a711a5000-7f4a711aa000 r-xs 0002a000 08:02 10322399                   /home/acontes/ws_git/scheduling.git/lib/ProActive/fractal-adl-2.7-SNAPSHOT.jar
+7f4a711aa000-7f4a711ac000 r-xs 0000d000 08:02 10322383                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-logging-1.1.1.jar
+7f4a711ac000-7f4a711ae000 r-xs 0000e000 08:02 10322372                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cimrepository.jar
+7f4a711ae000-7f4a711b2000 r-xs 00022000 08:02 10322369                   /home/acontes/ws_git/scheduling.git/lib/ProActive/bundlerepository-1.4.3.jar
+7f4a711b2000-7f4a711bc000 r-xs 00079000 08:02 10322367                   /home/acontes/ws_git/scheduling.git/lib/ProActive/bcel-5.2.jar
+7f4a711bc000-7f4a711c1000 r-xs 00024000 08:02 10322362                   /home/acontes/ws_git/scheduling.git/lib/ProActive/batik-svggen.jar
+7f4a711c1000-7f4a711c4000 r-xs 00013000 08:02 10322361                   /home/acontes/ws_git/scheduling.git/lib/ProActive/batik-dom.jar
+7f4a711c4000-7f4a711c6000 r-xs 0000d000 08:02 10322353                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ast-core-2.4-SNAPSHOT.jar
+7f4a711c6000-7f4a711c9000 ---p 00000000 00:00 0 
+7f4a711c9000-7f4a712c7000 rwxp 00000000 00:00 0 
+7f4a712c7000-7f4a712ca000 ---p 00000000 00:00 0 
+7f4a712ca000-7f4a713c8000 rwxp 00000000 00:00 0 
+7f4a713c8000-7f4a713cb000 ---p 00000000 00:00 0 
+7f4a713cb000-7f4a714c9000 rwxp 00000000 00:00 0 
+7f4a714c9000-7f4a714cc000 ---p 00000000 00:00 0 
+7f4a714cc000-7f4a715ca000 rwxp 00000000 00:00 0 
+7f4a715ca000-7f4a715cd000 ---p 00000000 00:00 0 
+7f4a715cd000-7f4a716cb000 rwxp 00000000 00:00 0 
+7f4a716cb000-7f4a716ce000 ---p 00000000 00:00 0 
+7f4a716ce000-7f4a717cc000 rwxp 00000000 00:00 0 
+7f4a717cc000-7f4a717cf000 ---p 00000000 00:00 0 
+7f4a717cf000-7f4a718cd000 rwxp 00000000 00:00 0 
+7f4a718cd000-7f4a718d0000 ---p 00000000 00:00 0 
+7f4a718d0000-7f4a719ce000 rwxp 00000000 00:00 0 
+7f4a719ce000-7f4a719d1000 ---p 00000000 00:00 0 
+7f4a719d1000-7f4a71acf000 rwxp 00000000 00:00 0 
+7f4a71acf000-7f4a71ad2000 ---p 00000000 00:00 0 
+7f4a71ad2000-7f4a71bd0000 rwxp 00000000 00:00 0 
+7f4a71bd0000-7f4a71bd3000 ---p 00000000 00:00 0 
+7f4a71bd3000-7f4a71cd1000 rwxp 00000000 00:00 0 
+7f4a71cd1000-7f4a71cd4000 ---p 00000000 00:00 0 
+7f4a71cd4000-7f4a71dd2000 rwxp 00000000 00:00 0 
+7f4a71dd2000-7f4a71dd5000 ---p 00000000 00:00 0 
+7f4a71dd5000-7f4a71ed3000 rwxp 00000000 00:00 0 
+7f4a71ed3000-7f4a71ed6000 ---p 00000000 00:00 0 
+7f4a71ed6000-7f4a71fd4000 rwxp 00000000 00:00 0 
+7f4a71fd4000-7f4a71fd7000 r-xs 00013000 08:02 2527395                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/jce.jar
+7f4a71fd7000-7f4a71fdf000 r-xs 0008e000 08:02 10322420                   /home/acontes/ws_git/scheduling.git/lib/ProActive/javassist.jar
+7f4a71fdf000-7f4a71fe5000 r-xp 00000000 08:02 2527262                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libmanagement.so
+7f4a71fe5000-7f4a720e4000 ---p 00006000 08:02 2527262                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libmanagement.so
+7f4a720e4000-7f4a720e6000 rwxp 00005000 08:02 2527262                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libmanagement.so
+7f4a720e6000-7f4a720e9000 ---p 00000000 00:00 0 
+7f4a720e9000-7f4a721e7000 rwxp 00000000 00:00 0 
+7f4a721e7000-7f4a721ea000 ---p 00000000 00:00 0 
+7f4a721ea000-7f4a722e8000 rwxp 00000000 00:00 0 
+7f4a722e8000-7f4a722e9000 r-xp 00000000 08:02 2527222                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/librmi.so
+7f4a722e9000-7f4a723e8000 ---p 00001000 08:02 2527222                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/librmi.so
+7f4a723e8000-7f4a723e9000 rwxp 00000000 08:02 2527222                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/librmi.so
+7f4a723e9000-7f4a723ec000 ---p 00000000 00:00 0 
+7f4a723ec000-7f4a724ea000 rwxp 00000000 00:00 0 
+7f4a724ea000-7f4a724ed000 ---p 00000000 00:00 0 
+7f4a724ed000-7f4a725eb000 rwxp 00000000 00:00 0 
+7f4a725eb000-7f4a725ee000 ---p 00000000 00:00 0 
+7f4a725ee000-7f4a726ec000 rwxp 00000000 00:00 0 
+7f4a726ec000-7f4a726ef000 ---p 00000000 00:00 0 
+7f4a726ef000-7f4a727ed000 rwxp 00000000 00:00 0 
+7f4a727ed000-7f4a727f0000 ---p 00000000 00:00 0 
+7f4a727f0000-7f4a728ee000 rwxp 00000000 00:00 0 
+7f4a728ee000-7f4a728f1000 ---p 00000000 00:00 0 
+7f4a728f1000-7f4a729ef000 rwxp 00000000 00:00 0 
+7f4a729ef000-7f4a729f5000 r-xs 00092000 08:02 2527283                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/jsse.jar
+7f4a729f5000-7f4a729f8000 ---p 00000000 00:00 0 
+7f4a729f8000-7f4a72af6000 rwxp 00000000 00:00 0 
+7f4a72af6000-7f4a72afd000 r-xp 00000000 08:02 2527216                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libnio.so
+7f4a72afd000-7f4a72bfc000 ---p 00007000 08:02 2527216                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libnio.so
+7f4a72bfc000-7f4a72bfe000 rwxp 00006000 08:02 2527216                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libnio.so
+7f4a72bfe000-7f4a72c01000 ---p 00000000 00:00 0 
+7f4a72c01000-7f4a72cff000 rwxp 00000000 00:00 0 
+7f4a72cff000-7f4a72d00000 r-xs 00002000 08:02 10322476                   /home/acontes/ws_git/scheduling.git/lib/ProActive/slf4j-log4j12-1.5.3.jar
+7f4a72d00000-7f4a72d03000 r-xs 00014000 08:02 10322468                   /home/acontes/ws_git/scheduling.git/lib/ProActive/servlet-api.jar
+7f4a72d03000-7f4a72d06000 r-xs 0001e000 08:02 10322467                   /home/acontes/ws_git/scheduling.git/lib/ProActive/servlet-api-2.5-6.1.11.jar
+7f4a72d06000-7f4a72d0d000 r-xs 00111000 08:02 2527328                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/resources.jar
+7f4a72d0d000-7f4a72d20000 r-xp 00000000 08:02 2527215                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libnet.so
+7f4a72d20000-7f4a72e21000 ---p 00013000 08:02 2527215                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libnet.so
+7f4a72e21000-7f4a72e24000 rwxp 00014000 08:02 2527215                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libnet.so
+7f4a72e24000-7f4a72e3c000 r-xs 0010f000 08:02 10322123                   /home/acontes/ws_git/scheduling.git/lib/common/script/jython.jar
+7f4a72e3c000-7f4a72e3d000 r-xs 00004000 08:02 10322048                   /home/acontes/ws_git/scheduling.git/lib/common/script/jruby-engine.jar
+7f4a72e3d000-7f4a72e3f000 r-xs 00007000 08:02 10322138                   /home/acontes/ws_git/scheduling.git/lib/common/script/script-js.jar
+7f4a72e3f000-7f4a72e40000 r-xs 00003000 08:02 10322136                   /home/acontes/ws_git/scheduling.git/lib/common/script/script-api.jar
+7f4a72e40000-7f4a72e42000 r-xs 00001000 08:02 10322057                   /home/acontes/ws_git/scheduling.git/lib/common/script/jython-engine.jar
+7f4a72e42000-7f4a72ec0000 r-xs 005e4000 08:02 10322054                   /home/acontes/ws_git/scheduling.git/lib/common/script/jruby.jar
+7f4a72ec0000-7f4a72ec3000 r-xs 00029000 08:02 10322056                   /home/acontes/ws_git/scheduling.git/lib/common/script/jsch-0.1.38.jar
+7f4a72ec3000-7f4a72ecc000 r-xs 000cc000 08:02 10322055                   /home/acontes/ws_git/scheduling.git/lib/common/script/js.jar
+7f4a72ecc000-7f4a72ef2000 r-xs 00240000 08:02 10322672                   /home/acontes/ws_git/scheduling.git/lib/common/derby.jar
+7f4a72ef2000-7f4a72ef4000 r-xs 00002000 08:02 10322490                   /home/acontes/ws_git/scheduling.git/lib/common/rngpack-1.1a.jar
+7f4a72ef4000-7f4a72ef7000 r-xs 00026000 08:02 10322673                   /home/acontes/ws_git/scheduling.git/lib/common/derbytools.jar
+7f4a72ef7000-7f4a72efe000 r-xs 00086000 08:02 10322059                   /home/acontes/ws_git/scheduling.git/lib/common/wstx-lgpl-3.9.2.jar
+7f4a72efe000-7f4a72f0b000 r-xs 0007f000 08:02 10322117                   /home/acontes/ws_git/scheduling.git/lib/common/commons-collections-3.2.jar
+7f4a72f0b000-7f4a72f0d000 r-xs 0000a000 08:02 10322116                   /home/acontes/ws_git/scheduling.git/lib/common/commons-codec-1.3.jar
+7f4a72f0d000-7f4a72f14000 r-xs 000a7000 08:02 10322755                   /home/acontes/ws_git/scheduling.git/lib/common/mysql-connector-java-5.1.7-bin.jar
+7f4a72f14000-7f4a72f18000 r-xs 00033000 08:02 10322677                   /home/acontes/ws_git/scheduling.git/lib/common/xsdlib.jar
+7f4a72f18000-7f4a72f19000 r-xs 00004000 08:02 10322676                   /home/acontes/ws_git/scheduling.git/lib/common/relaxngDatatype.jar
+7f4a72f19000-7f4a72f1c000 r-xs 0002d000 08:02 10322674                   /home/acontes/ws_git/scheduling.git/lib/common/isorelax.jar
+7f4a72f1c000-7f4a72f2b000 r-xs 00095000 08:02 10322675                   /home/acontes/ws_git/scheduling.git/lib/common/msv.jar
+7f4a72f2b000-7f4a72f2e000 r-xs 00031000 08:02 10322531                   /home/acontes/ws_git/scheduling.git/lib/winhpc/rampart-1.3/lib/rampart-core-1.3.jar
+7f4a72f2e000-7f4a72f39000 r-xs 0005b000 08:02 10322542                   /home/acontes/ws_git/scheduling.git/lib/winhpc/rampart-1.3/lib/xmlsec-1.4.0.jar
+7f4a72f39000-7f4a72f3d000 r-xs 00043000 08:02 10322540                   /home/acontes/ws_git/scheduling.git/lib/winhpc/rampart-1.3/lib/wss4j-1.5.3.jar
+7f4a72f3d000-7f4a72f55000 r-xs 000ed000 08:02 10322514                   /home/acontes/ws_git/scheduling.git/lib/winhpc/rampart-1.3/lib/bcprov-jdk15-132.jar
+7f4a72f55000-7f4a72f58000 r-xs 0001f000 08:02 10322522                   /home/acontes/ws_git/scheduling.git/lib/winhpc/rampart-1.3/lib/opensaml-1.1.jar
+7f4a72f58000-7f4a72f5a000 r-xs 0000f000 08:02 10322537                   /home/acontes/ws_git/scheduling.git/lib/winhpc/rampart-1.3/lib/rampart-trust-1.3.jar
+7f4a72f5a000-7f4a72f5e000 r-xs 00023000 08:02 10322533                   /home/acontes/ws_git/scheduling.git/lib/winhpc/rampart-1.3/lib/rampart-policy-1.3.jar
+7f4a72f5e000-7f4a72f70000 r-xs 00105000 08:02 10322492                   /home/acontes/ws_git/scheduling.git/lib/winhpc/WinHPCWebserviceStubs.jar
+7f4a72f70000-7f4a72f74000 r-xs 00022000 08:02 10322496                   /home/acontes/ws_git/scheduling.git/lib/winhpc/axis2-1.4/lib/axiom-dom-1.2.7.jar
+7f4a72f74000-7f4a72f79000 r-xs 00037000 08:02 10322504                   /home/acontes/ws_git/scheduling.git/lib/winhpc/axis2-1.4/lib/axis2-codegen-1.4.jar
+7f4a72f79000-7f4a72f88000 r-xs 00082000 08:02 10322782                   /home/acontes/ws_git/scheduling.git/lib/ec2/typica.jar
+7f4a72f88000-7f4a72f8d000 r-xs 00048000 08:02 10322067                   /home/acontes/ws_git/scheduling.git/lib/hibernate/core/dom4j-1.6.1.jar
+7f4a72f8d000-7f4a72f8f000 r-xs 00002000 08:02 25067811                   /home/acontes/ws_git/scheduling.git/lib/hibernate/core/geronimo-spec-jta-1.0.1B-rc4.jar
+7f4a72f8f000-7f4a72f91000 r-xs 00004000 08:02 10322070                   /home/acontes/ws_git/scheduling.git/lib/hibernate/core/slf4j-api-1.5.6.jar
+7f4a72f91000-7f4a72f97000 r-xs 00067000 08:02 10322066                   /home/acontes/ws_git/scheduling.git/lib/hibernate/core/antlr-2.7.6.jar
+7f4a72f97000-7f4a72fb9000 r-xs 00208000 08:02 10322068                   /home/acontes/ws_git/scheduling.git/lib/hibernate/core/hibernate-core.jar
+7f4a72fb9000-7f4a72fba000 r-xs 00002000 08:02 10322071                   /home/acontes/ws_git/scheduling.git/lib/hibernate/core/slf4j-log4j12-1.5.6.jar
+7f4a72fba000-7f4a72fbf000 r-xs 00040000 08:02 10322063                   /home/acontes/ws_git/scheduling.git/lib/hibernate/annotation/hibernate-annotations.jar
+7f4a72fbf000-7f4a72fc2000 r-xs 0000e000 08:02 10322064                   /home/acontes/ws_git/scheduling.git/lib/hibernate/annotation/hibernate-commons-annotations.jar
+7f4a72fc2000-7f4a72fc5000 r-xs 0000a000 08:02 10322062                   /home/acontes/ws_git/scheduling.git/lib/hibernate/annotation/ejb3-persistence.jar
+7f4a72fc5000-7f4a72fc7000 r-xs 0000d000 08:02 10322729                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ProActive_annotations_CTree.jar
+7f4a72fc7000-7f4a7301d000 r-xs 003b5000 08:02 10322295                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ProActive.jar
+7f4a7301d000-7f4a73024000 r-xs 00053000 08:02 10322442                   /home/acontes/ws_git/scheduling.git/lib/ProActive/log4j.jar
+7f4a73024000-7f4a73026000 r-xs 00000000 08:02 10322475                   /home/acontes/ws_git/scheduling.git/lib/ProActive/simple.jar
+7f4a73026000-7f4a73028000 r-xs 00012000 08:02 10322363                   /home/acontes/ws_git/scheduling.git/lib/ProActive/batik-util.jar
+7f4a73028000-7f4a7303b000 r-xs 000cc000 08:02 10322439                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jung-1.7.4.jar
+7f4a7303b000-7f4a73046000 r-xs 000b3000 08:02 10322357                   /home/acontes/ws_git/scheduling.git/lib/ProActive/axis2-adb-1.4.1.jar
+7f4a73046000-7f4a73055000 r-xs 000b3000 08:02 10322454                   /home/acontes/ws_git/scheduling.git/lib/ProActive/netty-3.2.0.ALPHA2.jar
+7f4a73055000-7f4a73057000 r-xs 00002000 08:02 10322400                   /home/acontes/ws_git/scheduling.git/lib/ProActive/fractal-api-2.0.3-SNAPSHOT.jar
+7f4a73057000-7f4a73060000 r-xs 00052000 08:02 10322360                   /home/acontes/ws_git/scheduling.git/lib/ProActive/batik-awt-util.jar
+7f4a73060000-7f4a73064000 r-xs 00016000 08:02 10322724                   /home/acontes/ws_git/scheduling.git/lib/ProActive/xmlrpc-common-3.1.jar
+7f4a73064000-7f4a73075000 r-xs 0012e000 08:02 10322410                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ibis-1.4.jar
+7f4a73075000-7f4a7308f000 r-xs 001b1000 08:02 10322549                   /home/acontes/ws_git/scheduling.git/lib/ProActive/vim.jar
+7f4a7308f000-7f4a73094000 r-xs 00028000 08:02 10322384                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-net-1.4.1.jar
+7f4a73094000-7f4a73096000 r-xs 00004000 08:02 10322459                   /home/acontes/ws_git/scheduling.git/lib/ProActive/osgi.jar
+7f4a73096000-7f4a73097000 r-xs 00002000 08:02 10322471                   /home/acontes/ws_git/scheduling.git/lib/ProActive/shellgui.jar
+7f4a73097000-7f4a73099000 r-xs 00006000 08:02 10322446                   /home/acontes/ws_git/scheduling.git/lib/ProActive/moduleloader.jar
+7f4a73099000-7f4a7309f000 r-xs 0007a000 08:02 10322720                   /home/acontes/ws_git/scheduling.git/lib/ProActive/wstx-asl-3.2.8.jar
+7f4a7309f000-7f4a730a4000 r-xs 0001d000 08:02 10322388                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-vfs-patched-2.0-SNAPSHOTr13526-tests.jar
+7f4a730a4000-7f4a730a7000 r-xs 00010000 08:02 10322379                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-discovery-0.4.jar
+7f4a730a7000-7f4a730a9000 r-xs 00020000 08:02 10322447                   /home/acontes/ws_git/scheduling.git/lib/ProActive/mofcomp.jar
+7f4a730a9000-7f4a730e3000 r-xs 002c2000 08:02 10322426                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jaxb-xjc-2.1.9.jar
+7f4a730e3000-7f4a730eb000 r-xs 00046000 08:02 10322721                   /home/acontes/ws_git/scheduling.git/lib/ProActive/xenserver-5.0.0-3.jar
+7f4a730eb000-7f4a730ec000 r-xs 0000a000 08:02 10322641                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-hyperv-wmi.jar
+7f4a730ec000-7f4a7310d000 r-xs 00312000 08:02 10322725                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ProActive_examples.jar
+7f4a7310d000-7f4a73110000 r-xs 00015000 08:02 10322411                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ibis-connect-1.0.jar
+7f4a73110000-7f4a73112000 r-xs 0000a000 08:02 10322397                   /home/acontes/ws_git/scheduling.git/lib/ProActive/dtdparser-1.21.jar
+7f4a73112000-7f4a73131000 r-xs 0013c000 08:02 10322368                   /home/acontes/ws_git/scheduling.git/lib/ProActive/bouncycastle.jar
+7f4a73131000-7f4a73138000 r-xs 0007a000 08:02 10322431                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jetty-6.1.18.jar
+7f4a73138000-7f4a73145000 r-xs 000d7000 08:02 10322409                   /home/acontes/ws_git/scheduling.git/lib/ProActive/http-2.0.4.jar
+7f4a73145000-7f4a73146000 r-xs 00004000 08:02 10322678                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-vmware-vi.jar
+7f4a73146000-7f4a73147000 r-xs 00003000 08:02 10322485                   /home/acontes/ws_git/scheduling.git/lib/ProActive/tablelayout.jar
+7f4a73147000-7f4a7315e000 r-xs 00112000 08:02 10322722                   /home/acontes/ws_git/scheduling.git/lib/ProActive/xercesImpl-2.8.1.jar
+7f4a7315e000-7f4a73161000 r-xs 0001c000 08:02 10322355                   /home/acontes/ws_git/scheduling.git/lib/ProActive/axiom-impl-1.2.7.jar
+7f4a73161000-7f4a73169000 r-xs 00049000 08:02 10322359                   /home/acontes/ws_git/scheduling.git/lib/ProActive/backport-util-concurrent-3.1.jar
+7f4a73169000-7f4a7316b000 r-xs 0000a000 08:02 10322378                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-codec-1.3.jar
+7f4a7316b000-7f4a7316e000 r-xs 00011000 08:02 10322466                   /home/acontes/ws_git/scheduling.git/lib/ProActive/servicebinder-0.9.0.jar
+7f4a7316e000-7f4a7316f000 r-xs 00004000 08:02 10322401                   /home/acontes/ws_git/scheduling.git/lib/ProActive/fractal-gcm-api-1.1.1.jar
+7f4a7316f000-7f4a73170000 r-xs 00000000 08:02 10322393                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cryptix.jar
+7f4a73170000-7f4a7317b000 r-xs 000a2000 08:02 10322373                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cog-jglobus-1.2.jar
+7f4a7317b000-7f4a7317e000 r-xs 00027000 08:02 10322435                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jsch-0.1.31.jar
+7f4a7317e000-7f4a73197000 r-xs 001a6000 08:02 10322374                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cog-ogce.jar
+7f4a73197000-7f4a7319d000 r-xs 00071000 08:02 10322395                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cryptix32.jar
+7f4a7319d000-7f4a731a4000 r-xs 00040000 08:02 10322482                   /home/acontes/ws_git/scheduling.git/lib/ProActive/spring-core-2.5.5.jar
+7f4a731a4000-7f4a731aa000 r-xs 00045000 08:02 10322382                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-httpclient-3.1.jar
+7f4a731aa000-7f4a731ac000 r-xs 00007000 08:02 10322719                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ws-commons-util-1.0.2.jar
+7f4a731ac000-7f4a731f4000 r-xs 003fd000 08:02 10322396                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cxf-2.2.2.jar
+7f4a731f4000-7f4a731f9000 r-xs 00040000 08:02 10322443                   /home/acontes/ws_git/scheduling.git/lib/ProActive/mail.jar
+7f4a731f9000-7f4a73206000 r-xs 000ff000 08:02 10322433                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jfreechart-1.0.2.jar
+7f4a73206000-7f4a73208000 r-xs 00008000 08:02 10322438                   /home/acontes/ws_git/scheduling.git/lib/ProActive/julia-runtime-2.5.3-SNAPSHOT.jar
+7f4a73208000-7f4a7320c000 r-xs 0003a000 08:02 10322488                   /home/acontes/ws_git/scheduling.git/lib/ProActive/trilead-ssh2.jar
+7f4a7320c000-7f4a73210000 r-xs 00023000 08:02 10322457                   /home/acontes/ws_git/scheduling.git/lib/ProActive/org.apache.servicemix.bundles.wsdl4j-1.6.1_1.jar
+7f4a73210000-7f4a73216000 r-xs 00046000 08:02 10322429                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jcommon-1.0.6.jar
+7f4a73216000-7f4a7321c000 r-xs 0004f000 08:02 10322370                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cimom.jar
+7f4a7321c000-7f4a7321e000 r-xs 00005000 08:02 10322643                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-libvirt.jar
+7f4a7321e000-7f4a73220000 r-xs 00007000 08:02 10322403                   /home/acontes/ws_git/scheduling.git/lib/ProActive/geronimo-activation_1.1_spec-1.0.2.jar
+7f4a73220000-7f4a73252000 r-xs 0031a000 08:02 10322606                   /home/acontes/ws_git/scheduling.git/lib/ProActive/vim25.jar
+7f4a73252000-7f4a73254000 r-xs 0000a000 08:02 10322680                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-vmware-vix.jar
+7f4a73254000-7f4a73256000 r-xs 00006000 08:02 10322427                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jaxrpc.jar
+7f4a73256000-7f4a73258000 r-xs 00013000 08:02 10322391                   /home/acontes/ws_git/scheduling.git/lib/ProActive/configadmin-1.2.4.jar
+7f4a73258000-7f4a7325a000 r-xs 0000a000 08:02 10322406                   /home/acontes/ws_git/scheduling.git/lib/ProActive/geronimo-jaxws_2.1_spec-1.0.jar
+7f4a7325a000-7f4a73263000 r-xs 0005b000 08:02 10322389                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-vfs-patched-2.0-SNAPSHOTr13526.jar
+7f4a73263000-7f4a73277000 r-xs 00173000 08:02 10322356                   /home/acontes/ws_git/scheduling.git/lib/ProActive/axis.jar
+7f4a73277000-7f4a73299000 r-xs 000f6000 08:02 10322336                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ProActive_tests.jar
+7f4a73299000-7f4a7329e000 r-xs 0002e000 08:02 10322405                   /home/acontes/ws_git/scheduling.git/lib/ProActive/geronimo-javamail_1.4_spec-1.6.jar
+7f4a7329e000-7f4a732a0000 r-xs 00006000 08:02 10322407                   /home/acontes/ws_git/scheduling.git/lib/ProActive/geronimo-stax-api_1.0_spec-1.0.1.jar
+7f4a732a0000-7f4a732a5000 r-xs 00070000 08:02 10322354                   /home/acontes/ws_git/scheduling.git/lib/ProActive/axiom-api-1.2.7.jar
+7f4a732a5000-7f4a732a7000 r-xs 00013000 08:02 10322342                   /home/acontes/ws_git/scheduling.git/lib/ProActive/ProActive_utils.jar
+7f4a732a7000-7f4a732a9000 r-xs 0000e000 08:02 10322418                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jakarta-oro-2.0.8.jar
+7f4a732a9000-7f4a732aa000 r-xs 00008000 08:02 10322377                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-cli-1.1.jar
+7f4a732aa000-7f4a732ac000 r-xs 00007000 08:02 10322448                   /home/acontes/ws_git/scheduling.git/lib/ProActive/neethi-2.0.4.jar
+7f4a732ac000-7f4a732b4000 r-xs 0005c000 08:02 10322715                   /home/acontes/ws_git/scheduling.git/lib/ProActive/wbem.jar
+7f4a732b4000-7f4a732b5000 r-xs 00004000 08:02 10322366                   /home/acontes/ws_git/scheduling.git/lib/ProActive/batik-xml.jar
+7f4a732b5000-7f4a732b7000 r-xs 00002000 08:02 10322473                   /home/acontes/ws_git/scheduling.git/lib/ProActive/shelltui-1.4.2.jar
+7f4a732b7000-7f4a732c5000 r-xs 00081000 08:02 10322376                   /home/acontes/ws_git/scheduling.git/lib/ProActive/colt.jar
+7f4a732c5000-7f4a732cb000 r-xs 00042000 08:02 10322294                   /home/acontes/ws_git/scheduling.git/lib/ProActive/FastInfoset-1.2.3.jar
+7f4a732cb000-7f4a732cf000 r-xs 00035000 08:02 10322477                   /home/acontes/ws_git/scheduling.git/lib/ProActive/soap.jar
+7f4a732cf000-7f4a732d5000 r-xs 0005d000 08:02 10322398                   /home/acontes/ws_git/scheduling.git/lib/ProActive/felix.jar
+7f4a732d5000-7f4a732df000 r-xs 0006d000 08:02 10322478                   /home/acontes/ws_git/scheduling.git/lib/ProActive/spring-beans-2.5.5.jar
+7f4a732df000-7f4a732e1000 r-xs 0000b000 08:02 10322380                   /home/acontes/ws_git/scheduling.git/lib/ProActive/commons-fileupload-1.2.jar
+7f4a732e1000-7f4a732e3000 r-xs 00010000 08:02 10322392                   /home/acontes/ws_git/scheduling.git/lib/ProActive/cryptix-asn1.jar
+7f4a732e3000-7f4a732e4000 r-xs 0000f000 08:02 10322469                   /home/acontes/ws_git/scheduling.git/lib/ProActive/servlet.jar
+7f4a732e4000-7f4a732e6000 r-xs 00003000 08:02 10322464                   /home/acontes/ws_git/scheduling.git/lib/ProActive/saaj-api-1.3.jar
+7f4a732e6000-7f4a732f3000 r-xs 0008b000 08:02 10322640                   /home/acontes/ws_git/scheduling.git/lib/ProActive/virtualization-hyperv-winrm.jar
+7f4a732f3000-7f4a732f7000 r-xs 00027000 08:02 10322432                   /home/acontes/ws_git/scheduling.git/lib/ProActive/jetty-util-6.1.18.jar
+7f4a732f7000-7f4a732f8000 ---p 00000000 00:00 0 
+7f4a732f8000-7f4a733f8000 rwxp 00000000 00:00 0 
+7f4a733f8000-7f4a733fb000 ---p 00000000 00:00 0 
+7f4a733fb000-7f4a734f9000 rwxp 00000000 00:00 0 
+7f4a734f9000-7f4a734fc000 ---p 00000000 00:00 0 
+7f4a734fc000-7f4a735fa000 rwxp 00000000 00:00 0 
+7f4a735fa000-7f4a735fd000 ---p 00000000 00:00 0 
+7f4a735fd000-7f4a736fb000 rwxp 00000000 00:00 0 
+7f4a736fb000-7f4a736fe000 ---p 00000000 00:00 0 
+7f4a736fe000-7f4a737fc000 rwxp 00000000 00:00 0 
+7f4a737fc000-7f4a737ff000 ---p 00000000 00:00 0 
+7f4a737ff000-7f4a738fd000 rwxp 00000000 00:00 0 
+7f4a738fd000-7f4a73900000 ---p 00000000 00:00 0 
+7f4a73900000-7f4a739fe000 rwxp 00000000 00:00 0 
+7f4a739fe000-7f4a739ff000 ---p 00000000 00:00 0 
+7f4a739ff000-7f4a770e0000 rwxp 00000000 00:00 0 
+7f4a770e0000-7f4a79000000 ---p 00000000 00:00 0 
+7f4a79000000-7f4a7e560000 rwxp 00000000 00:00 0 
+7f4a7e560000-7f4ace560000 rwxp 00000000 00:00 0 
+7f4ace560000-7f4ade0b0000 rwxp 00000000 00:00 0 
+7f4ade0b0000-7f4ae0ef0000 ---p 00000000 00:00 0 
+7f4ae0ef0000-7f4af9000000 rwxp 00000000 00:00 0 
+7f4af9000000-7f4af93d0000 rwxp 00000000 00:00 0 
+7f4af93d0000-7f4afc90e000 rwxp 00000000 00:00 0 
+7f4afc90e000-7f4b00000000 ---p 00000000 00:00 0 
+7f4b00000000-7f4b00003000 r-xs 00027000 08:02 2527112                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/ext/sunjce_provider.jar
+7f4b00003000-7f4b0043a000 rwxp 00000000 00:00 0 
+7f4b0043a000-7f4b005d0000 r-xs 02fd0000 08:02 2530261                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/rt.jar
+7f4b005d0000-7f4b005f8000 rwxp 00000000 00:00 0 
+7f4b005f8000-7f4b005f9000 ---p 00000000 00:00 0 
+7f4b005f9000-7f4b006f9000 rwxp 00000000 00:00 0 
+7f4b006f9000-7f4b006fa000 ---p 00000000 00:00 0 
+7f4b006fa000-7f4b007fa000 rwxp 00000000 00:00 0 
+7f4b007fa000-7f4b007fb000 ---p 00000000 00:00 0 
+7f4b007fb000-7f4b008fb000 rwxp 00000000 00:00 0 
+7f4b008fb000-7f4b008fc000 ---p 00000000 00:00 0 
+7f4b008fc000-7f4b00a17000 rwxp 00000000 00:00 0 
+7f4b00a17000-7f4b00a26000 ---p 00000000 00:00 0 
+7f4b00a26000-7f4b00a51000 rwxp 00000000 00:00 0 
+7f4b00a51000-7f4b00cd1000 rwxp 00000000 00:00 0 
+7f4b00cd1000-7f4b00cec000 rwxp 00000000 00:00 0 
+7f4b00cec000-7f4b00cfb000 ---p 00000000 00:00 0 
+7f4b00cfb000-7f4b00d26000 rwxp 00000000 00:00 0 
+7f4b00d26000-7f4b00fa5000 rwxp 00000000 00:00 0 
+7f4b00fa5000-7f4b01024000 rwxp 00000000 00:00 0 
+7f4b01024000-7f4b0103b000 ---p 00000000 00:00 0 
+7f4b0103b000-7f4b010fb000 rwxp 00000000 00:00 0 
+7f4b010fb000-7f4b0110c000 rwxp 00000000 00:00 0 
+7f4b0110c000-7f4b011bc000 rwxp 00000000 00:00 0 
+7f4b011bc000-7f4b011ca000 r-xp 00000000 08:02 2527226                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libzip.so
+7f4b011ca000-7f4b012cc000 ---p 0000e000 08:02 2527226                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libzip.so
+7f4b012cc000-7f4b012cf000 rwxp 00010000 08:02 2527226                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libzip.so
+7f4b012cf000-7f4b012d0000 rwxp 00000000 00:00 0 
+7f4b012d0000-7f4b012d8000 rwxs 00000000 08:01 1534515                    /tmp/hsperfdata_acontes/12939
+7f4b012d8000-7f4b012e3000 r-xp 00000000 08:01 4406632                    /lib64/libnss_files-2.12.90.so
+7f4b012e3000-7f4b014e3000 ---p 0000b000 08:01 4406632                    /lib64/libnss_files-2.12.90.so
+7f4b014e3000-7f4b014e4000 r-xp 0000b000 08:01 4406632                    /lib64/libnss_files-2.12.90.so
+7f4b014e4000-7f4b014e5000 rwxp 0000c000 08:01 4406632                    /lib64/libnss_files-2.12.90.so
+7f4b014e5000-7f4b014ec000 r-xp 00000000 08:02 2527228                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/native_threads/libhpi.so
+7f4b014ec000-7f4b015ed000 ---p 00007000 08:02 2527228                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/native_threads/libhpi.so
+7f4b015ed000-7f4b015ef000 rwxp 00008000 08:02 2527228                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/native_threads/libhpi.so
+7f4b015ef000-7f4b015f1000 rwxp 00000000 00:00 0 
+7f4b015f1000-7f4b015f2000 r-xp 00000000 00:00 0 
+7f4b015f2000-7f4b0161b000 r-xp 00000000 08:02 2527239                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libjava.so
+7f4b0161b000-7f4b0171a000 ---p 00029000 08:02 2527239                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libjava.so
+7f4b0171a000-7f4b01721000 rwxp 00028000 08:02 2527239                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libjava.so
+7f4b01721000-7f4b0172e000 r-xp 00000000 08:02 2527221                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libverify.so
+7f4b0172e000-7f4b0182d000 ---p 0000d000 08:02 2527221                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libverify.so
+7f4b0182d000-7f4b01830000 rwxp 0000c000 08:02 2527221                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/libverify.so
+7f4b01830000-7f4b01833000 ---p 00000000 00:00 0 
+7f4b01833000-7f4b01931000 rwxp 00000000 00:00 0 
+7f4b01931000-7f4b020e6000 r-xp 00000000 08:02 2527246                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/server/libjvm.so
+7f4b020e6000-7f4b021e5000 ---p 007b5000 08:02 2527246                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/server/libjvm.so
+7f4b021e5000-7f4b02370000 rwxp 007b4000 08:02 2527246                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/server/libjvm.so
+7f4b02370000-7f4b023ac000 rwxp 00000000 00:00 0 
+7f4b023ac000-7f4b023b3000 r-xp 00000000 08:02 2527211                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/jli/libjli.so
+7f4b023b3000-7f4b024b4000 ---p 00007000 08:02 2527211                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/jli/libjli.so
+7f4b024b4000-7f4b024b6000 rwxp 00008000 08:02 2527211                    /home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/jli/libjli.so
+7f4b024b6000-7f4b024b8000 rwxp 00000000 00:00 0 
+7fff4a949000-7fff4a96f000 rwxp 00000000 00:00 0                          [stack]
+7fff4a9cf000-7fff4a9d0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djava.security.manager -Dproactive.configuration=/home/acontes/ws_git/scheduling.git/config/proactive/ProActiveConfiguration.xml -Djava.security.policy=/home/acontes/ws_git/scheduling.git/config/security.java.policy-server -Dlog4j.configuration=file:/home/acontes/ws_git/scheduling.git/config/log4j/scheduler-log4j-server -Dproactive.home=/home/acontes/ws_git/scheduling.git -Dpa.scheduler.home=/home/acontes/ws_git/scheduling.git -Dpa.rm.home=/home/acontes/ws_git/scheduling.git -Dderby.stream.error.file=/home/acontes/ws_git/scheduling.git/.logs/derby.log -Xms128m -Xmx2048m 
+java_command: org.ow2.proactive.scheduler.util.SchedulerStarter
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/user/acontes/home/.currentjdk
+PATH=/user/acontes/home/bin:/user/acontes/home/.currentjdk/bin:/user/acontes/home/.currentjdk/bin:/bin:/user/acontes/home/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/user/acontes/home/.currentjdk/bin:/bin:/user/acontes/home/bin:/usr/local/bin:/usr/bin:/bin:.:/user/acontes/home/bin:/usr/local/sbin:/usr/sbin:/sbin:.:/user/acontes/home/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/bin/gnu:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/user/acontes/home/.gem/ruby/1.8/bin
+USERNAME=acontes
+LD_LIBRARY_PATH=/home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64/server:/home/acontes/Softs/Java/jdk1.6.0_20/jre/lib/amd64:/home/acontes/Softs/Java/jdk1.6.0_20/jre/../lib/amd64:/lib64:/usr/lib64:/lib64:/usr/lib64:
+SHELL=/bin/zsh
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x70ffd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x70ffd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x5db510], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x5db260], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x5db260], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x5db260], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x5db260], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Fedora release 14 (Laughlin)
+
+uname:Linux 2.6.35.4-28.fc14.x86_64 #1 SMP Wed Sep 15 01:56:54 UTC 2010 x86_64
+libc:glibc 2.12.90 NPTL 2.12.90 
+rlimit: STACK 8192k, CORE 0k, NPROC 1024, NOFILE 4096, AS infinity
+load average:0.55 0.56 0.54
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 15 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 6034432k(352148k free), swap 4096568k(3430828k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (16.3-b01) for linux-amd64 JRE (1.6.0_20-b02), built on Apr 12 2010 13:57:11 by "java_re" with gcc 3.2.2 (SuSE Linux)
+
+time: Fri Oct 29 14:28:46 2010
+elapsed time: 74496 seconds
+

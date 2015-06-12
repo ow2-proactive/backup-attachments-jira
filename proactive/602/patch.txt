@@ -1,0 +1,24 @@
+### Eclipse Workspace Patch 1.0
+#P PATrunk
+Index: compile/build.xml
+===================================================================
+--- compile/build.xml	(revision 11508)
++++ compile/build.xml	(working copy)
+@@ -355,13 +355,15 @@
+ 			<fileset dir="${cl.extra.dir}" includes="**" />
+ 			<fileset dir="${config.dir}" includes="ProActiveConfiguration.xml" />
+ 			<fileset dir="${osgi.res.dir}" includes="metadata.xml" />
+-			<fileset dir="${compile.dir}" includes="META-INF/services/javax.annotation.processing.Processor"/>
+ 			<indexjars>
+ 				<fileset dir="${lib.dir}">
+ 					<include name="*.jar" />
+ 				</fileset>
+ 			</indexjars>
+-			<fileset dir="${compile.dir}" includes="META-INF/**" />
++			<fileset dir="${compile.dir}" includes="META-INF/**" 
++				excludes="META-INF/services/javax.annotation.processing.Processor 
++				META-INF/services/com.sun.mirror.apt.AnnotationProcessorFactory"
++			/>
+ 		</jar>
+ 
+ 		<copy todir="${deploy.lib.dir}">

@@ -1,0 +1,90 @@
+Hello, I am the server!!
+
+
+2012-03-26 14:57:17.774::INFO:  Logging to STDERR via org.mortbay.log.StdErrLog
+2012-03-26 14:57:17.988::INFO:  jetty-6.1.x
+2012-03-26 14:57:18.100::INFO:  Started SelectChannelConnector@0.0.0.0:59473
+41832@node - [INFO oactive.remoteobject] Remote Object Factory provider <pamr, class org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObjectFactory> found
+41832@node - [INFO oactive.remoteobject] Remote Object Factory provider <pnp, class org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactory> found
+41832@node - [INFO oactive.remoteobject] Remote Object Factory provider <pnps, class org.objectweb.proactive.extensions.pnpssl.PNPSslRemoteObjectFactory> found
+41832@node - [INFO oactive.remoteobject] Remote Object Factory provider <pamrd, class org.objectweb.proactive.extensions.pamrd.PAMRDRemoteObjectFactorySPI$PAMRDRemoteObjectFactory> found
+41832@node - [INFO oactive.remoteobject] Remote Object Factory provider <rmissl, class org.objectweb.proactive.extra.rmissl.RmiSslRemoteObjectFactory> found
+41832@node - [INFO    communication.rmi] Created a new registry on port 1099
+41832@node - [DEBUG oactive.remoteobject]  successfully bound in registry at rmi://node:1099/PA_JVM1913698173
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object PA_JVM1913698173 expose with additionnal protocol : pamr
+41832@node - [DEBUG oactive.remoteobject] registed remote object at PA_JVM1913698173
+41832@node - [DEBUG oactive.remoteobject] registering remote object  at endpoint http://node:59473/PA_JVM1913698173
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object PA_JVM1913698173 expose with additionnal protocol : http
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object PA_JVM1913698173 expose with additionnal protocol : pnp
+41832@node - [DEBUG oactive.remoteobject]  successfully bound in registry at rmi://node:1099/Node526488452
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object Node526488452 expose with additionnal protocol : pamr
+41832@node - [DEBUG oactive.remoteobject] registed remote object at Node526488452
+41832@node - [DEBUG oactive.remoteobject] registering remote object  at endpoint http://node:59473/Node526488452
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object Node526488452 expose with additionnal protocol : http
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object Node526488452 expose with additionnal protocol : pnp
+41832@node - [DEBUG oactive.remoteobject] rmi://node:1099/Node526488452 looked up successfully
+pamr://1/Node526488452
+41832@node - [DEBUG oactive.remoteobject]  successfully bound in registry at rmi://node:1099/-2b7b5e74-1364f14f948--7ff4--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object -2b7b5e74-1364f14f948--7ff4--ea3f85487875c115--2b7b5e74-1364f14f948--8000 expose with additionnal protocol : pamr
+41832@node - [DEBUG oactive.remoteobject] registed remote object at -2b7b5e74-1364f14f948--7ff4--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG oactive.remoteobject] registering remote object  at endpoint http://node:59473/-2b7b5e74-1364f14f948--7ff4--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object -2b7b5e74-1364f14f948--7ff4--ea3f85487875c115--2b7b5e74-1364f14f948--8000 expose with additionnal protocol : http
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object -2b7b5e74-1364f14f948--7ff4--ea3f85487875c115--2b7b5e74-1364f14f948--8000 expose with additionnal protocol : pnp
+pamr://1/-2b7b5e74-1364f14f948--7ff4--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG         runtime.node] NodeFactory: getNode() for rmi://node:1099/Node526488452
+41832@node - [DEBUG    proactive.runtime] proActiveRunTimeURL rmi://node:1099/Node526488452
+41832@node - [DEBUG oactive.remoteobject] rmi://node:1099/Node526488452 looked up successfully
+pamr://1/Node526488452
+41832@node - [DEBUG         runtime.node] NodeFactory: getNode() for rmi://node:1099/Node526488452
+41832@node - [DEBUG    proactive.runtime] proActiveRunTimeURL rmi://node:1099/Node526488452
+41832@node - [DEBUG oactive.remoteobject] rmi://node:1099/Node526488452 looked up successfully
+pamr://1/Node526488452
+41832@node - [DEBUG    proactive.runtime] nodeName Node526488452
+41832@node - [DEBUG oactive.remoteobject]  successfully bound in registry at rmi://node:1099/__PA__HalfbodiesNode965810438
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object __PA__HalfbodiesNode965810438 expose with additionnal protocol : pamr
+41832@node - [DEBUG oactive.remoteobject] registed remote object at __PA__HalfbodiesNode965810438
+41832@node - [DEBUG oactive.remoteobject] registering remote object  at endpoint http://node:59473/__PA__HalfbodiesNode965810438
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object __PA__HalfbodiesNode965810438 expose with additionnal protocol : http
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object __PA__HalfbodiesNode965810438 expose with additionnal protocol : pnp
+41832@node - [DEBUG oactive.remoteobject] rmi://node:1099/__PA__HalfbodiesNode965810438 looked up successfully
+pamr://1/__PA__HalfbodiesNode965810438
+41832@node - [DEBUG oactive.remoteobject]  successfully bound in registry at rmi://node:1099/-2b7b5e74-1364f14f948--7fda--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object -2b7b5e74-1364f14f948--7fda--ea3f85487875c115--2b7b5e74-1364f14f948--8000 expose with additionnal protocol : pamr
+41832@node - [DEBUG oactive.remoteobject] registed remote object at -2b7b5e74-1364f14f948--7fda--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG oactive.remoteobject] registering remote object  at endpoint http://node:59473/-2b7b5e74-1364f14f948--7fda--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object -2b7b5e74-1364f14f948--7fda--ea3f85487875c115--2b7b5e74-1364f14f948--8000 expose with additionnal protocol : http
+41832@node - [DEBUG oactive.remoteobject] [Multi-Protocol] Object -2b7b5e74-1364f14f948--7fda--ea3f85487875c115--2b7b5e74-1364f14f948--8000 expose with additionnal protocol : pnp
+pamr://1/-2b7b5e74-1364f14f948--7fda--ea3f85487875c115--2b7b5e74-1364f14f948--8000
+41832@node - [DEBUG         runtime.node] NodeFactory: getNode() for rmi://node:1099/__PA__HalfbodiesNode965810438
+41832@node - [DEBUG    proactive.runtime] proActiveRunTimeURL rmi://node:1099/__PA__HalfbodiesNode965810438
+41832@node - [DEBUG oactive.remoteobject] rmi://node:1099/__PA__HalfbodiesNode965810438 looked up successfully
+pamr://1/__PA__HalfbodiesNode965810438
+pamr://node/myActiveServerObject
+41832@node - [ERROR   exceptions.one_way] java.lang.NumberFormatException: For input string: "node"
+java.lang.NumberFormatException: For input string: "node"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Long.parseLong(Long.java:410)
+	at java.lang.Long.parseLong(Long.java:468)
+	at org.objectweb.proactive.extensions.pamr.client.AgentImpl.sendMsg(AgentImpl.java:469)
+	at org.objectweb.proactive.extensions.pamr.remoteobject.message.PAMRMessage.send(PAMRMessage.java:116)
+	at org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObject.receiveMessage(PAMRRemoteObject.java:96)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.getRemoteObjectSet(RemoteObjectAdapter.java:465)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.<init>(RemoteObjectAdapter.java:172)
+	at org.objectweb.proactive.api.PARemoteObject.bind(PARemoteObject.java:94)
+	at org.objectweb.proactive.examples.multiprotocol.ServerObject.addProtocol(ServerObject.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.objectweb.proactive.core.mop.MethodCall.execute(MethodCall.java:399)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serveInternal(RequestImpl.java:257)
+	at org.objectweb.proactive.core.body.request.RequestImpl.serve(RequestImpl.java:201)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:626)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:587)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:949)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:180)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:155)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:131)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:323)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:203)
+	at java.lang.Thread.run(Thread.java:662)

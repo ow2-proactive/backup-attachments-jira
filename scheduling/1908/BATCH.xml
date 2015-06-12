@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="urn:proactive:jobdescriptor:3.2"
+        xsi:schemaLocation="urn:proactive:jobdescriptor:3.2 http://www.activeeon.com/public_content/schemas/proactive/jobdescriptor/3.2/schedulerjob.xsd"
+        name="BATCH"
+        priority="normal"
+        cancelJobOnError="false">
+    <variables>
+        <variable name="NAME" value="BATCH"/>
+        <variable name="SCHEDULE" value="* * * * *"/>
+        <variable name="REST_URL" value="http://192.168.1.131:8080/rest"/>
+        <variable name="CREDENTIAL_FILE" value="admin_user.cred"/>
+    </variables>
+    <taskFlow>
+        <task name="Condition">
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        <![CDATA[
+print('I will run a script to select a branch')
+]]>
+                    </code>
+                </script>
+            </scriptExecutable>
+            <controlFlow>
+                <if target="If"
+                    else="Else"
+                    continuation="ScheduleNextExecution">
+                    <script>
+                        <code language="javascript">
+                            <![CDATA[
+branch = "if"
+]]>
+                        </code>
+                    </script>
+                </if>
+            </controlFlow>
+        </task>
+        <task name="If">
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        <![CDATA[
+print('I am running on Windows in the If branch')
+]]>
+                    </code>
+                </script>
+            </scriptExecutable>
+            <controlFlow block="start">
+            </controlFlow>
+        </task>
+        <task name="If1">
+            <depends>
+                <task ref="If"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If2">
+            <depends>
+                <task ref="If1"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If3">
+            <depends>
+                <task ref="If2"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If4">
+            <depends>
+                <task ref="If3"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If5">
+            <depends>
+                <task ref="If4"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If6">
+            <depends>
+                <task ref="If5"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If7">
+            <depends>
+                <task ref="If6"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If8">
+            <depends>
+                <task ref="If7"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If9">
+            <depends>
+                <task ref="If8"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If10">
+            <depends>
+                <task ref="If9"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If11">
+            <depends>
+                <task ref="If10"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If12">
+            <depends>
+                <task ref="If11"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If13">
+            <depends>
+                <task ref="If12"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If14">
+            <depends>
+                <task ref="If13"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If15">
+            <depends>
+                <task ref="If14"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If16">
+            <depends>
+                <task ref="If15"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If17">
+            <depends>
+                <task ref="If16"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If18">
+            <depends>
+                <task ref="If17"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If19">
+            <depends>
+                <task ref="If18"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If20">
+            <depends>
+                <task ref="If19"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If21">
+            <depends>
+                <task ref="If20"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If22">
+            <depends>
+                <task ref="If21"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If23">
+            <depends>
+                <task ref="If22"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If24">
+            <depends>
+                <task ref="If23"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If25">
+            <depends>
+                <task ref="If24"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If26">
+            <depends>
+                <task ref="If25"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If27">
+            <depends>
+                <task ref="If26"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If28">
+            <depends>
+                <task ref="If27"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If29">
+            <depends>
+                <task ref="If28"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If30">
+            <depends>
+                <task ref="If29"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If31">
+            <depends>
+                <task ref="If30"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If32">
+            <depends>
+                <task ref="If31"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If33">
+            <depends>
+                <task ref="If32"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If34">
+            <depends>
+                <task ref="If33"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If35">
+            <depends>
+                <task ref="If34"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If36">
+            <depends>
+                <task ref="If35"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If37">
+            <depends>
+                <task ref="If36"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If38">
+            <depends>
+                <task ref="If37"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If39">
+            <depends>
+                <task ref="If38"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If40">
+            <depends>
+                <task ref="If39"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If41">
+            <depends>
+                <task ref="If40"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If42">
+            <depends>
+                <task ref="If41"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If43">
+            <depends>
+                <task ref="If42"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If44">
+            <depends>
+                <task ref="If43"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If45">
+            <depends>
+                <task ref="If44"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If46">
+            <depends>
+                <task ref="If45"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If47">
+            <depends>
+                <task ref="If46"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If48">
+            <depends>
+                <task ref="If47"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If49">
+            <depends>
+                <task ref="If48"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If50">
+            <depends>
+                <task ref="If49"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If51">
+            <depends>
+                <task ref="If50"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If52">
+            <depends>
+                <task ref="If51"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If53">
+            <depends>
+                <task ref="If52"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If54">
+            <depends>
+                <task ref="If53"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If55">
+            <depends>
+                <task ref="If54"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If56">
+            <depends>
+                <task ref="If55"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If57">
+            <depends>
+                <task ref="If56"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If58">
+            <depends>
+                <task ref="If57"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If59">
+            <depends>
+                <task ref="If58"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If60">
+            <depends>
+                <task ref="If59"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If61">
+            <depends>
+                <task ref="If60"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If62">
+            <depends>
+                <task ref="If61"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If63">
+            <depends>
+                <task ref="If62"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If64">
+            <depends>
+                <task ref="If63"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If65">
+            <depends>
+                <task ref="If64"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If66">
+            <depends>
+                <task ref="If65"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If67">
+            <depends>
+                <task ref="If66"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If68">
+            <depends>
+                <task ref="If67"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If69">
+            <depends>
+                <task ref="If68"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If70">
+            <depends>
+                <task ref="If69"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If71">
+            <depends>
+                <task ref="If70"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If72">
+            <depends>
+                <task ref="If71"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If73">
+            <depends>
+                <task ref="If72"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If74">
+            <depends>
+                <task ref="If73"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If75">
+            <depends>
+                <task ref="If74"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If76">
+            <depends>
+                <task ref="If75"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If77">
+            <depends>
+                <task ref="If76"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If78">
+            <depends>
+                <task ref="If77"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If79">
+            <depends>
+                <task ref="If78"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If80">
+            <depends>
+                <task ref="If79"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If81">
+            <depends>
+                <task ref="If80"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If82">
+            <depends>
+                <task ref="If81"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If83">
+            <depends>
+                <task ref="If82"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If84">
+            <depends>
+                <task ref="If83"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If85">
+            <depends>
+                <task ref="If84"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If86">
+            <depends>
+                <task ref="If85"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If87">
+            <depends>
+                <task ref="If86"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If88">
+            <depends>
+                <task ref="If87"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If89">
+            <depends>
+                <task ref="If88"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If90">
+            <depends>
+                <task ref="If89"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If91">
+            <depends>
+                <task ref="If90"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If92">
+            <depends>
+                <task ref="If91"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If93">
+            <depends>
+                <task ref="If92"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If94">
+            <depends>
+                <task ref="If93"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If95">
+            <depends>
+                <task ref="If94"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If96">
+            <depends>
+                <task ref="If95"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If97">
+            <depends>
+                <task ref="If96"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If98">
+            <depends>
+                <task ref="If97"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If99">
+            <depends>
+                <task ref="If98"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="If100">
+            <depends>
+                <task ref="If99"/>
+            </depends>
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        print('Im a task')
+                    </code>
+                </script>
+            </scriptExecutable>
+            <controlFlow block="end"></controlFlow>
+        </task>
+
+        <task name="Else">
+            <scriptExecutable>
+                <script>
+                    <code language="javascript">
+                        <![CDATA[
+print('I am running on Linux in the If branch')
+]]>
+                    </code>
+                </script>
+            </scriptExecutable>
+        </task>
+        <task name="ScheduleNextExecution" maxNumberOfExecution="100" walltime="300">
+            <inputFiles>
+                <files includes="*.xml" accessMode="transferFromGlobalSpace"/>
+                <files includes="*.cred" accessMode="transferFromGlobalSpace"/>
+            </inputFiles>
+            <scriptExecutable>
+                <script>
+                    <file path="${pa.scheduler.home}/addons/resubmit.groovy">
+                    </file>
+                </script>
+            </scriptExecutable>
+        </task>
+
+    </taskFlow>
+</job>

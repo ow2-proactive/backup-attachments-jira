@@ -1,0 +1,552 @@
+diff --git a/src/Core/org/objectweb/proactive/core/util/log/Loggers.java b/src/Core/org/objectweb/proactive/core/util/log/Loggers.java
+index 74336fe..490fbf7 100644
+--- a/src/Core/org/objectweb/proactive/core/util/log/Loggers.java
++++ b/src/Core/org/objectweb/proactive/core/util/log/Loggers.java
+@@ -154,6 +154,7 @@ public interface Loggers {
+     static final public String FORWARDING_CLIENT_TUNNEL = FORWARDING_CLIENT + ".tunnel";
+     static final public String FORWARDING_REMOTE_OBJECT = FORWARDING + ".remoteobject";
+     static final public String FORWARDING_ROUTER_ADMIN = FORWARDING_ROUTER + ".admin";
++    static final public String FORWARDING_CLASSLOADING = FORWARDING + ".classloading";
+     // Exceptions
+     public static final String EXCEPTIONS = CORE + ".exceptions";
+     public static final String EXCEPTIONS_ONE_WAY = EXCEPTIONS + ".one_way";
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/client/ProActiveMessageHandler.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/client/ProActiveMessageHandler.java
+index 26eb279..c0fbf03 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/client/ProActiveMessageHandler.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/client/ProActiveMessageHandler.java
+@@ -39,11 +39,12 @@ import java.util.concurrent.Executors;
+ 
+ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.body.request.Request;
+-import org.objectweb.proactive.core.remoteobject.http.util.HttpMarshaller;
++import org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.DataRequestMessage;
+ import org.objectweb.proactive.extra.messagerouting.remoteobject.message.MessageRoutingMessage;
++import org.objectweb.proactive.extra.messagerouting.remoteobject.util.PamrMarshaller;
+ 
+ 
+ /** Executes a ProActive {@link Request} received and send the response.
+@@ -91,10 +92,17 @@ public class ProActiveMessageHandler implements MessageHandler {
+         private final DataRequestMessage _toProcess;
+         /** the local agent*/
+         private final Agent agent;
++        /** serialization*/
++        private final PamrMarshaller marshaller;
+ 
+         public ProActiveMessageProcessor(DataRequestMessage msg, Agent agent) {
+             this._toProcess = msg;
+             this.agent = agent;
++            // get the runtime URL
++            // if the local Agent has received a DataRequestMessage, 
++            // means that a ProActiveRuntime exists on this machine
++            String runtimeUrl = ProActiveRuntimeImpl.getProActiveRuntime().getURL();
++            this.marshaller = new PamrMarshaller(runtimeUrl);
+         }
+ 
+         public void run() {
+@@ -103,8 +111,8 @@ public class ProActiveMessageHandler implements MessageHandler {
+                 Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
+ 
+                 // Handle the message
+-                MessageRoutingMessage message = (MessageRoutingMessage) HttpMarshaller
+-                        .unmarshallObject(_toProcess.getData());
++                MessageRoutingMessage message = (MessageRoutingMessage) 
++                        this.marshaller.unmarshallObject(_toProcess.getData());
+                 Object result = null;
+                 try {
+                     if (logger.isTraceEnabled()) {
+@@ -117,7 +125,7 @@ public class ProActiveMessageHandler implements MessageHandler {
+                     return;
+                 }
+ 
+-                byte[] resultBytes = HttpMarshaller.marshallObject(result);
++                byte[] resultBytes = this.marshaller.marshallObject(result);
+                 agent.sendReply(_toProcess, resultBytes);
+             } catch (Exception e) {
+                 logger.warn("ProActive Message failed to serve a message", e);
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/message/MessageRoutingMessage.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/message/MessageRoutingMessage.java
+index 885cace..e57e0f6 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/message/MessageRoutingMessage.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/message/MessageRoutingMessage.java
+@@ -34,15 +34,17 @@
+  */
+ package org.objectweb.proactive.extra.messagerouting.remoteobject.message;
+ 
++import java.io.IOException;
+ import java.io.Serializable;
+ import java.net.URI;
+ 
+ import org.apache.log4j.Logger;
+-import org.objectweb.proactive.core.remoteobject.http.util.HttpMarshaller;
++import org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.extra.messagerouting.client.Agent;
+ import org.objectweb.proactive.extra.messagerouting.exceptions.MessageRoutingException;
++import org.objectweb.proactive.extra.messagerouting.remoteobject.util.PamrMarshaller;
+ 
+ 
+ /** Any kind of routed message.
+@@ -71,6 +73,11 @@ public abstract class MessageRoutingMessage implements Serializable {
+      * a getter. It will return null is the response has not yet been received.
+      */
+     protected Object returnedObject;
++    
++    /** serialization
++     *  This field is transient - it has significance only on this host
++     * */
++    private transient final PamrMarshaller marshaller;
+ 
+     protected boolean isAsynchronous = false;
+ 
+@@ -78,6 +85,11 @@ public abstract class MessageRoutingMessage implements Serializable {
+         this.uri = uri;
+         this.agent = agent;
+         this.returnedObject = null;
++        // get the runtime URL
++        // TODO - maybe properly synchronize, to make sure that 
++        // MessageRoutingROF.createRemoteObject() for a PART was called before
++        String runtimeUrl = ProActiveRuntimeImpl.getProActiveRuntime().getURL();
++        this.marshaller = new PamrMarshaller(runtimeUrl);
+     }
+ 
+     /**
+@@ -92,14 +104,20 @@ public abstract class MessageRoutingMessage implements Serializable {
+      */
+     public final void send() throws MessageRoutingException {
+         try {
+-            byte[] bytes = HttpMarshaller.marshallObject(this);
++            byte[] bytes = this.marshaller.marshallObject(this);
+             byte[] response = agent.sendMsg(this.uri, bytes, isAsynchronous);
+             if (!isAsynchronous) {
+-                this.returnedObject = HttpMarshaller.unmarshallObject(response);
++                this.returnedObject = this.marshaller.unmarshallObject(response);
+             }
+         } catch (MessageRoutingException e) {
+             logger.error("Failed to send message to " + this.uri, e);
+             throw e;
+-        }
++        } catch (IOException e) {
++			logger.error("Failed to serialize this message, reason:" + e.getMessage(),e);
++			throw new MessageRoutingException(e);
++		} catch (ClassNotFoundException e) {
++			logger.error("Failed to deserialize the reply for this message, reason:" + e.getMessage(),e);
++			throw new MessageRoutingException(e);
++		}
+     }
+ }
+\ No newline at end of file
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrClassLoader.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrClassLoader.java
+new file mode 100644
+index 0000000..e3bbc20
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrClassLoader.java
+@@ -0,0 +1,169 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util;
++
++import java.io.IOException;
++import java.util.Map;
++import java.util.concurrent.ConcurrentHashMap;
++
++import org.apache.log4j.Logger;
++import org.objectweb.proactive.core.ProActiveException;
++import org.objectweb.proactive.core.runtime.ProActiveRuntime;
++import org.objectweb.proactive.core.runtime.RuntimeFactory;
++import org.objectweb.proactive.core.util.log.Loggers;
++import org.objectweb.proactive.core.util.log.ProActiveLogger;
++
++
++/**
++ * 
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public class PamrClassLoader {
++
++    final static private Logger logger = ProActiveLogger.getLogger(Loggers.FORWARDING_CLASSLOADING);
++
++    private final Map<String, Loader> loaderCache;
++
++    public PamrClassLoader() {
++        loaderCache = new ConcurrentHashMap<String, Loader>();
++    }
++
++    public Class<?> loadClass(String clazzName, String runtimeURL) throws ClassNotFoundException {
++
++        ClassLoader parent = Thread.currentThread().getContextClassLoader();
++        // attempt to load using the parent
++        try {
++            return parent.loadClass(clazzName);
++        } catch (ClassNotFoundException e) {
++            try {
++                Loader pamrLoader = getOrCreateLoader(parent, runtimeURL);
++                return pamrLoader.loadClass(clazzName);
++            } catch (ProActiveException proActiveEx) {
++                if (logger.isDebugEnabled()) {
++                    logger
++                            .debug("Cannot load " +
++                                clazzName +
++                                " using the pamr class loader, reason: cannot look up the runtime where the class data is, at url " +
++                                runtimeURL);
++                }
++                throw e;
++            }
++        }
++    }
++
++    private Loader getOrCreateLoader(ClassLoader parent, String runtimeURL) throws ProActiveException {
++
++        synchronized (loaderCache) {
++            if (loaderCache.containsKey(runtimeURL)) {
++                if (logger.isTraceEnabled()) {
++                    logger.trace("ClassLoader for the URL " + runtimeURL + " found in the cache ");
++                }
++                return loaderCache.get(runtimeURL);
++            }
++
++            // we know that it does not contain the key
++            // hold the loaderCache lock; we want the lookup operation to be performed only once
++            // TODO the lock should be on a per-runtimeURL basis
++            if (logger.isTraceEnabled()) {
++                logger.trace("Did not find ClassLoader for the URL " + runtimeURL +
++                    " in the cache, creating a new one...");
++            }
++            // lookup the remote part
++            ProActiveRuntime rt = RuntimeFactory.getRuntime(runtimeURL);
++            Loader loader = new Loader(parent, rt);
++            loaderCache.put(runtimeURL, loader);
++            if (logger.isTraceEnabled()) {
++                logger.trace("Succesfully created a new ClassLoader for the URL " + runtimeURL);
++            }
++            return loader;
++        }
++
++    }
++
++    private static class Loader extends ClassLoader {
++
++        private final ProActiveRuntime clazzLocation;
++
++        public Loader(ClassLoader parent, ProActiveRuntime runtime) {
++            super(parent);
++            this.clazzLocation = runtime;
++        }
++
++        protected Class<?> findClass(String clazzName) throws ClassNotFoundException {
++            // first, the parent
++            try {
++                Class<?> ret = this.getParent().loadClass(clazzName);
++                if (logger.isTraceEnabled()) {
++                    logger.trace("Class " + clazzName + " loaded by the parent class loader " +
++                        this.getParent());
++                }
++                return ret;
++            } catch (ClassNotFoundException e) {
++                try {
++                    if (clazzLocation == null)
++                        throw new ClassNotFoundException("Cannot load class " + clazzName +
++                            " reason: the remote ProActive runtime where this class resides is not available");
++
++                    byte[] clazzData = readClassData(clazzName);
++                    if (logger.isTraceEnabled()) {
++                        logger.trace("Succeffully downloaded " + clazzName + " class definition ");
++                    }
++                    return defineClass(clazzName, clazzData, 0, clazzData.length);
++                } catch (IOException ioEx) {
++                    if (logger.isDebugEnabled()) {
++                        logger.debug("Cannot load class from the remote ProActive runtime:" + e.getMessage(),
++                                e);
++                    }
++                    throw new ClassNotFoundException(clazzName, ioEx);
++                }
++            }
++        }
++
++        private byte[] readClassData(String clazzName) throws IOException {
++
++            if (logger.isTraceEnabled())
++                logger.trace("Attempt to download class " + clazzName + " from the remote runtime");
++
++            byte[] b = this.clazzLocation.getClassData(clazzName);
++
++            if (b != null && b.length != 0) {
++                return b;
++            } else {
++                throw new IOException("Failed to download " + clazzName + " class definition");
++            }
++
++        }
++
++    }
++
++}
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalInputStream.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalInputStream.java
+new file mode 100644
+index 0000000..a2d7406
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalInputStream.java
+@@ -0,0 +1,78 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.io.ObjectInputStream;
++import java.io.ObjectStreamClass;
++
++
++/**
++ * An input stream which defines the deserialization behaviour 
++ *   while using the ProActive Message Routing protocol
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public class PamrMarshalInputStream extends ObjectInputStream {
++
++    private final PamrClassLoader pamrLoader;
++
++    public PamrMarshalInputStream(InputStream in) throws IOException {
++        super(in);
++        pamrLoader = new PamrClassLoader();
++    }
++
++    @Override
++    protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
++        try {
++            // first, try to resolve the class locally
++            return super.resolveClass(desc);
++        } catch (ClassNotFoundException e) {
++            // try to load the class using the pamr class loader
++            String clazzName = desc.getName();
++            try {
++                String runtimeURL = readRuntimeURL();
++                return this.pamrLoader.loadClass(clazzName, runtimeURL);
++            } catch (ClassCastException e1) {
++                throw new ClassNotFoundException("Cannot load the class " + clazzName +
++                    " - violation of the pamr serialization protocol.");
++            }
++        }
++    }
++
++    private String readRuntimeURL() throws IOException, ClassNotFoundException {
++        // the protocol guarantees that the URL is the next object in the stream
++        return (String) readObject();
++    }
++
++}
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalOutputStream.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalOutputStream.java
+new file mode 100644
+index 0000000..3667798
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalOutputStream.java
+@@ -0,0 +1,61 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util;
++
++import java.io.IOException;
++import java.io.ObjectOutputStream;
++import java.io.OutputStream;
++
++
++/**
++ * An output stream which defines the serialization behaviour 
++ * while using the ProActive Message Routing protocol. 
++ * 
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public class PamrMarshalOutputStream extends ObjectOutputStream {
++
++    private final String localRuntimeUrl;
++
++    public PamrMarshalOutputStream(OutputStream out, String localRuntimeUrl) throws IOException {
++        super(out);
++        this.localRuntimeUrl = localRuntimeUrl;
++    }
++
++    @Override
++    protected void annotateClass(Class<?> cl) throws IOException {
++        // write the local runtime URL
++        writeObject(this.localRuntimeUrl);
++    }
++
++}
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshaller.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshaller.java
+new file mode 100644
+index 0000000..f7ebd51
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshaller.java
+@@ -0,0 +1,80 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util;
++
++import java.io.ByteArrayInputStream;
++import java.io.ByteArrayOutputStream;
++import java.io.IOException;
++
++/**
++ * This class is responsible for the serialization/deserialization process
++ *  for the message routing protocol
++ * 
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public class PamrMarshaller {
++	
++	private final String localRuntimeURL;
++	
++	public PamrMarshaller(String localRuntimeURL) {
++		this.localRuntimeURL = localRuntimeURL;
++	}
++	
++	public byte[] marshallObject(Object o) throws IOException {
++		PamrMarshalOutputStream serializer = null;
++		try {
++			ByteArrayOutputStream baos = new ByteArrayOutputStream();
++			serializer = new PamrMarshalOutputStream(baos, this.localRuntimeURL);
++			serializer.writeObject(o);
++			serializer.flush();
++			return baos.toByteArray();
++		} finally {
++			// cleanup
++			if(serializer!=null)
++				serializer.close(); // this will also close the underlying baos
++		}
++	}
++	
++	public Object unmarshallObject(byte[] bytes) throws IOException, ClassNotFoundException {
++		PamrMarshalInputStream deserializer = null;
++		try {
++			deserializer = new PamrMarshalInputStream(
++				new ByteArrayInputStream(bytes));
++			return deserializer.readObject();
++		} finally {
++			// cleanup
++			if(deserializer!=null)
++				deserializer.close(); // this will also close the underlying bais
++		}
++	}
++}

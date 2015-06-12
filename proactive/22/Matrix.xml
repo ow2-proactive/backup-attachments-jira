@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProActiveDescriptor
+	xmlns="urn:proactive:deployment:3.3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:proactive:deployment:3.3 http://www-sop.inria.fr/oasis/ProActive/schemas/deployment/3.3/deployment.xsd">
+	<componentDefinition>
+		<virtualNodesDefinition>
+			<virtualNode name="matrixNode" property="multiple" />
+		</virtualNodesDefinition>
+	</componentDefinition>
+	<deployment>
+		<mapping>
+			<map virtualNode="matrixNode">
+				<jvmSet>
+					<vmName value="Jvm1" />
+					<vmName value="Jvm2" />
+					<vmName value="oasis-jvm" />
+				</jvmSet>
+			</map>
+		</mapping>
+		<jvms>
+			<jvm name="Jvm1">
+				<creation>
+					<processReference refid="localJVM" />
+				</creation>
+			</jvm>
+			<jvm name="Jvm2">
+				<creation>
+					<processReference refid="localJVM" />
+				</creation>
+			</jvm>
+		    <jvm name="oasis-jvm">
+			<creation>
+			    <processReference refid="oasis-def" />
+			</creation>
+		    </jvm>
+		</jvms>
+	</deployment>
+	<infrastructure>
+		<processes>
+			<processDefinition id="localJVM">
+				<jvmProcess
+					class="org.objectweb.proactive.core.process.JVMNodeProcess" />
+			</processDefinition>
+            <processDefinition id="oasis-def">
+                <processListbyHost
+                    class="org.objectweb.proactive.core.process.rsh.RSHProcessList"
+                    hostlist="
+anaconda
+anaconda
+petawawa
+petawawa
+fidelity
+fidelity
+">
+                   <processReference refid="local-proc"></processReference>
+                </processListbyHost>
+            </processDefinition>
+            <processDefinition id="local-proc">
+                <jvmProcess class="org.objectweb.proactive.core.process.JVMNodeProcess">
+		     <classpath>
+			<absolutePath value="/user/vddoan/home/ProActive/trunk/dist/ProActive/ProActive.jar"/>
+                        <absolutePath value="/user/vddoan/home/picsougrid/PicsouGrid/jars/javassist.jar"/>
+                        <absolutePath value="/user/vddoan/home/picsougrid/PicsouGrid/jars/bouncycastle.jar"/>
+                        <absolutePath value="/user/vddoan/home/picsougrid/PicsouGrid/jars/fractal.jar"/>
+                        <absolutePath value="/user/vddoan/home/picsougrid/PicsouGrid/jars/log4j.jar"/>
+                        <absolutePath value="/user/vddoan/home/picsougrid/PicsouGrid/jars/xercesImpl.jar"/>
+                        <absolutePath value="/user/vddoan/home/picsougrid/PicsouGrid/jars/castor-1.1-xml.jar"/>
+                        <absolutePath value="/user/vddoan/home/picsougrid/PicsouGrid/src/bin"/>
+                    </classpath>
+					<javaPath>
+	 					<absolutePath value="/user/vddoan/home/jdk1.6.0_03/bin/java"/>
+<!--
+/user/fviale/home/bin/jdk1.5.0/bin/java
+
+/user/cmathieu/home/Java/sun/jdk1.5.0_10_i586/bin/java
+/user/cmathieu/home/Java/sun/jdk1.5.0_10_amd64/bin/java
+/user/cmathieu/home/Java/sun/jdk1.6.0_amd64/bin/java
+/user/cmathieu/home/Java/sun/jdk1.6.0_i586/bin/java
+/user/cmathieu/home/Java/sun/jdk1.7.0_amd64/bin/java
+/user/cmathieu/home/Java/sun/jdk1.7.0_i586/bin/java
+
+/user/istokes/home/usr/java/harmony-jdk-551077/bin/java
+/user/istokes/home/usr/java/harmony-jdk-r533000/bin/java
+/user/istokes/home/usr/java/ibm-java2-i386-60/bin/java
+/user/istokes/home/usr/java/ibm-java2-x86_64-60/bin/java
+/user/istokes/home/usr/java/jdk1.5.0_11/bin/java
+/user/istokes/home/usr/java/jdk1.6.0_02/bin/java
+/user/istokes/home/usr/java/jdk1.7ea17/bin/java
+/user/istokes/home/usr/java/jre1.5.0_06/bin/java
+/user/istokes/home/usr/java/jrockit-R27.3.1-6.0_ia32/bin/java
+
+-->
+
+					</javaPath>
+                </jvmProcess>
+            </processDefinition>
+		</processes>
+	</infrastructure>
+</ProActiveDescriptor>

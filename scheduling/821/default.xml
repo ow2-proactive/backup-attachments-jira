@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:proactive:jobdescriptor:dev" xsi:schemaLocation="urn:proactive:jobdescriptor:dev http://www.activeeon.com/public_content/schemas/dev/schedulerjob.xsd" name="Titi">
+  <inputSpace url=""/>
+  <outputSpace url=""/>
+  <taskFlow>
+    <task name="elseBranch">
+      <javaExecutable class="toto.titi.Blah"/>
+    </task>
+    <task name="IfTask">
+      <depends>
+        <task ref="elseBranch"/>
+      </depends>
+      <javaExecutable class="titi.toto.MyClass"/>
+      <flowControl>
+        <if target="ifBranch" join="joinBranch" else="elseBranch">
+          <script>
+            <file path="/home/esalagea/ActiveEon/workflow_editor/runtime-EclipseApplication/workflow/dup.js"/>
+          </script>
+        </if>
+      </flowControl>
+    </task>
+    <task name="joinBranch">
+      <nativeExecutable>
+        <staticCommand value="toto.exec"/>
+      </nativeExecutable>
+      <flowControl block="start"/>
+    </task>
+    <task name="ifBranch">
+      <javaExecutable class="toto.tata.MyClass"/>
+    </task>
+  </taskFlow>
+</job>

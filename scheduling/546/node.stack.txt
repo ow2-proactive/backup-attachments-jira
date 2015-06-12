@@ -1,0 +1,304 @@
+2010-01-12 11:26:44
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (14.0-b12 mixed mode):
+
+"Attach Listener" daemon prio=10 tid=0x00007f9ea4001000 nid=0x66fb waiting on condition [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread" daemon prio=10 tid=0x00007f9e7007d800 nid=0x66a1 in Object.wait() [0x00007f9edde97000..0x00007f9edde97be0]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa0351582f0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	- locked <0x00007fa0351582f0> (a java.lang.ref.ReferenceQueue$Lock)
+	at org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread.run(SoftRefFilesCache.java:79)
+
+"Thread-14" prio=10 tid=0x00007f9e7007c800 nid=0x66a0 in Object.wait() [0x00007f9eddf98000..0x00007f9eddf98c60]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa035113bf0> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.freeze(FileSystemServerImpl.java:646)
+	- locked <0x00007fa035113bf0> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.run(FileSystemServerImpl.java:589)
+
+"org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread" daemon prio=10 tid=0x00007f9e7007b800 nid=0x669d in Object.wait() [0x00007f9ede099000..0x00007f9ede0999e0]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa033cb2458> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	- locked <0x00007fa033cb2458> (a java.lang.ref.ReferenceQueue$Lock)
+	at org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread.run(SoftRefFilesCache.java:79)
+
+"Thread-11" prio=10 tid=0x00007f9e7007b000 nid=0x669c in Object.wait() [0x00007f9ede19a000..0x00007f9ede19aa60]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa033c6dd58> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.freeze(FileSystemServerImpl.java:646)
+	- locked <0x00007fa033c6dd58> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.run(FileSystemServerImpl.java:589)
+
+"org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread" daemon prio=10 tid=0x00007f9e7007a800 nid=0x6699 in Object.wait() [0x00007f9ede29b000..0x00007f9ede29bbe0]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a53c120> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	- locked <0x00007fa03a53c120> (a java.lang.ref.ReferenceQueue$Lock)
+	at org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread.run(SoftRefFilesCache.java:79)
+
+"Thread-8" prio=10 tid=0x00007f9e70076800 nid=0x6698 in Object.wait() [0x00007f9ede39c000..0x00007f9ede39cc60]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a53c220> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.freeze(FileSystemServerImpl.java:646)
+	- locked <0x00007fa03a53c220> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.run(FileSystemServerImpl.java:589)
+
+"org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread" daemon prio=10 tid=0x00007f9e70025800 nid=0x6695 in Object.wait() [0x00007f9ede49d000..0x00007f9ede49d9e0]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a53c398> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	- locked <0x00007fa03a53c398> (a java.lang.ref.ReferenceQueue$Lock)
+	at org.apache.commons.vfs.cache.SoftRefFilesCache$SoftRefReleaseThread.run(SoftRefFilesCache.java:79)
+
+"Thread-5" prio=10 tid=0x00007f9e70017000 nid=0x6694 in Object.wait() [0x00007f9ede5ab000..0x00007f9ede5aba60]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a53c498> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.freeze(FileSystemServerImpl.java:646)
+	- locked <0x00007fa03a53c498> (a java.lang.Object)
+	at org.objectweb.proactive.extensions.vfsprovider.server.FileSystemServerImpl$StreamAutocloseThread.run(FileSystemServerImpl.java:589)
+
+"pool-2-thread-5" prio=10 tid=0x00007f9e84008000 nid=0x6691 waiting on condition [0x00007f9ede8bc000..0x00007f9ede8bcbe0]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00007fa03a53c550> (a java.util.concurrent.SynchronousQueue$TransferStack)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:198)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:424)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:323)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:874)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:945)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+
+"pool-2-thread-3" prio=10 tid=0x00007f9e84004800 nid=0x668f runnable [0x00007f9edeaba000..0x00007f9edeabfce0]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	- locked <0x00007fa0354ed880> (a java.net.SocksSocketImpl)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:163)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	- locked <0x00007fa0354ed088> (a sun.net.www.http.HttpClient)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:837)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:778)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:703)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1026)
+	- locked <0x00007fa0354ec300> (a sun.net.www.protocol.http.HttpURLConnection)
+	at sun.misc.URLClassPath$Loader.getResource(URLClassPath.java:501)
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:168)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:192)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	- locked <0x00007fa0354d5368> (a sun.rmi.server.LoaderHandler$Loader)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:252)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:320)
+	- locked <0x00007fa0354d5368> (a sun.rmi.server.LoaderHandler$Loader)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:434)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:165)
+	at java.rmi.server.RMIClassLoader$2.loadClass(RMIClassLoader.java:620)
+	at java.rmi.server.RMIClassLoader.loadClass(RMIClassLoader.java:247)
+	at sun.rmi.server.MarshalInputStream.resolveClass(MarshalInputStream.java:197)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1575)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1496)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1583)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1496)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1732)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1667)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1323)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.readObject(ConstructorCallImpl.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1849)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1667)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1323)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.readObject(ConstructorCallImpl.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1849)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1667)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1323)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:480)
+	at org.objectweb.proactive.core.mop.MethodCall.readTheObject(MethodCall.java:529)
+	at org.objectweb.proactive.core.mop.MethodCall.readObject(MethodCall.java:524)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1849)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:480)
+	at org.objectweb.proactive.core.body.request.RequestImpl.readTheObject(RequestImpl.java:437)
+	at org.objectweb.proactive.core.body.request.RequestImpl.readObject(RequestImpl.java:432)
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1849)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.objectweb.proactive.core.util.converter.ByteToObjectConverter.readFromStream(ByteToObjectConverter.java:135)
+	at org.objectweb.proactive.core.util.converter.ByteToObjectConverter.standardConvert(ByteToObjectConverter.java:158)
+	at org.objectweb.proactive.core.util.converter.ByteToObjectConverter.convert(ByteToObjectConverter.java:129)
+	at org.objectweb.proactive.core.util.converter.ByteToObjectConverter.access$000(ByteToObjectConverter.java:57)
+	at org.objectweb.proactive.core.util.converter.ByteToObjectConverter$MarshallStream.convert(ByteToObjectConverter.java:75)
+	at org.objectweb.proactive.core.remoteobject.http.util.HttpMarshaller.unmarshallObject(HttpMarshaller.java:71)
+	at org.objectweb.proactive.extra.messagerouting.client.ProActiveMessageHandler$ProActiveMessageProcessor.run(ProActiveMessageHandler.java:106)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+
+"Message routing: message reader for agent 3" daemon prio=10 tid=0x00007fa0dc320800 nid=0x668c runnable [0x00007f9edefd5000..0x00007f9edefd5a60]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:258)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:317)
+	- locked <0x00007fa03a542bf8> (a java.io.BufferedInputStream)
+	at org.objectweb.proactive.extra.messagerouting.client.Tunnel.read(Tunnel.java:105)
+	at org.objectweb.proactive.extra.messagerouting.client.Tunnel.read(Tunnel.java:95)
+	at org.objectweb.proactive.extra.messagerouting.client.Tunnel.readMessage(Tunnel.java:143)
+	at org.objectweb.proactive.extra.messagerouting.client.AgentImpl$MessageReader.readMessage(AgentImpl.java:604)
+	at org.objectweb.proactive.extra.messagerouting.client.AgentImpl$MessageReader.run(AgentImpl.java:578)
+	at java.lang.Thread.run(Thread.java:619)
+
+"pool-1-thread-1 - Acceptor0 SelectChannelConnector@0.0.0.0:60607" prio=10 tid=0x00007fa0dc23e000 nid=0x668b runnable [0x00007f9edf0d6000..0x00007f9edf0d6ae0]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:215)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:65)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:69)
+	- locked <0x00007fa03a555fa8> (a sun.nio.ch.Util$1)
+	- locked <0x00007fa03a555fc0> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x00007fa03a555f30> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:80)
+	at org.mortbay.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:457)
+	at org.mortbay.io.nio.SelectorManager.doSelect(SelectorManager.java:190)
+	at org.mortbay.jetty.nio.SelectChannelConnector.accept(SelectChannelConnector.java:124)
+	at org.mortbay.jetty.AbstractConnector$Acceptor.run(AbstractConnector.java:706)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+
+"Timer-0" daemon prio=10 tid=0x00007fa0dc2a5000 nid=0x668a in Object.wait() [0x00007f9edf2df000..0x00007f9edf2dfb60]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a558018> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x00007fa03a558018> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Low Memory Detector" daemon prio=10 tid=0x00007fa0dc09b000 nid=0x6687 runnable [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread1" daemon prio=10 tid=0x00007fa0dc098000 nid=0x6686 waiting on condition [0x0000000000000000..0x00007f9edf9f9470]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread0" daemon prio=10 tid=0x00007fa0dc096000 nid=0x6685 waiting on condition [0x0000000000000000..0x00007f9edfafa500]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=10 tid=0x00007fa0dc093800 nid=0x6684 runnable [0x0000000000000000..0x00007f9edfbfc670]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=10 tid=0x00007fa0dc074800 nid=0x6683 in Object.wait() [0x00007f9edfcfd000..0x00007f9edfcfda60]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a55a278> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	- locked <0x00007fa03a55a278> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x00007fa0dc072800 nid=0x6682 in Object.wait() [0x00007f9edfdfe000..0x00007f9edfdfeae0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a53ccd8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x00007fa03a53ccd8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=10 tid=0x00007fa0dc008800 nid=0x6678 in Object.wait() [0x00007fa0e30e5000..0x00007fa0e30e5ea0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fa03a55a448> (a java.lang.Object)
+	at java.lang.Object.wait(Object.java:485)
+	at org.objectweb.proactive.core.runtime.StartPARuntime.waitUntilInterupted(StartPARuntime.java:217)
+	- locked <0x00007fa03a55a448> (a java.lang.Object)
+	at org.objectweb.proactive.core.runtime.StartPARuntime.start(StartPARuntime.java:201)
+	at org.objectweb.proactive.core.runtime.StartPARuntime.main(StartPARuntime.java:85)
+
+"VM Thread" prio=10 tid=0x00007fa0dc06c000 nid=0x6681 runnable 
+
+"GC task thread#0 (ParallelGC)" prio=10 tid=0x00007fa0dc012800 nid=0x6679 runnable 
+
+"GC task thread#1 (ParallelGC)" prio=10 tid=0x00007fa0dc014800 nid=0x667a runnable 
+
+"GC task thread#2 (ParallelGC)" prio=10 tid=0x00007fa0dc016000 nid=0x667b runnable 
+
+"GC task thread#3 (ParallelGC)" prio=10 tid=0x00007fa0dc018000 nid=0x667c runnable 
+
+"GC task thread#4 (ParallelGC)" prio=10 tid=0x00007fa0dc01a000 nid=0x667d runnable 
+
+"GC task thread#5 (ParallelGC)" prio=10 tid=0x00007fa0dc01b800 nid=0x667e runnable 
+
+"GC task thread#6 (ParallelGC)" prio=10 tid=0x00007fa0dc01d800 nid=0x667f runnable 
+
+"GC task thread#7 (ParallelGC)" prio=10 tid=0x00007fa0dc01f800 nid=0x6680 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00007fa0dc0a5800 nid=0x6688 waiting on condition 
+
+JNI global references: 1158
+

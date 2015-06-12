@@ -1,0 +1,81 @@
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/MessageRoutingRemoteObjectFactory.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/MessageRoutingRemoteObjectFactory.java
+index d8f74ef..232c933 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/MessageRoutingRemoteObjectFactory.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/MessageRoutingRemoteObjectFactory.java
+@@ -62,6 +62,7 @@ import org.objectweb.proactive.extra.messagerouting.protocol.MagicCookie;
+ import org.objectweb.proactive.extra.messagerouting.remoteobject.message.MessageRoutingRegistryListRemoteObjectsMessage;
+ import org.objectweb.proactive.extra.messagerouting.remoteobject.message.MessageRoutingRemoteObjectLookupMessage;
+ import org.objectweb.proactive.extra.messagerouting.remoteobject.util.MessageRoutingRegistry;
++import org.objectweb.proactive.extra.messagerouting.remoteobject.util.PamrClassLoader;
+ import org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory.MessageRoutingSocketFactorySelector;
+ import org.objectweb.proactive.extra.messagerouting.router.RouterImpl;
+ 
+@@ -79,6 +80,7 @@ public class MessageRoutingRemoteObjectFactory extends AbstractRemoteObjectFacto
+ 
+     final private Agent agent;
+     final private MessageRoutingRegistry registry;
++    final private PamrClassLoader classLoader;
+ 
+     public MessageRoutingRemoteObjectFactory() {
+         // Start the agent and contact the router
+@@ -137,6 +139,8 @@ public class MessageRoutingRemoteObjectFactory extends AbstractRemoteObjectFacto
+ 
+         this.agent = agent;
+         this.registry = MessageRoutingRegistry.singleton;
++        // create the classloader
++        this.classLoader = new PamrClassLoader();
+     }
+ 
+     private void logAndThrowException(String message) {
+@@ -305,4 +309,8 @@ public class MessageRoutingRemoteObjectFactory extends AbstractRemoteObjectFacto
+     public URI getBaseURI() {
+         return URI.create(this.getProtocolId() + "://" + this.agent.getAgentID() + "/");
+     }
++
++    public PamrClassLoader getClassLoader() {
++        return classLoader;
++    }
+ }
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalInputStream.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalInputStream.java
+index 069da89..052fc47 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalInputStream.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/PamrMarshalInputStream.java
+@@ -41,6 +41,13 @@ import java.io.InputStream;
+ import java.io.ObjectInputStream;
+ import java.io.ObjectStreamClass;
+ 
++import org.apache.log4j.Logger;
++import org.objectweb.proactive.core.remoteobject.AbstractRemoteObjectFactory;
++import org.objectweb.proactive.core.remoteobject.exception.UnknownProtocolException;
++import org.objectweb.proactive.core.util.log.ProActiveLogger;
++import org.objectweb.proactive.extra.messagerouting.PAMRConfig;
++import org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory;
++
+ 
+ /**
+  * An input stream which defines the deserialization behaviour
+@@ -53,9 +60,23 @@ public class PamrMarshalInputStream extends ObjectInputStream {
+ 
+     private final PamrClassLoader pamrLoader;
+ 
++    final static private Logger logger = ProActiveLogger
++            .getLogger(PAMRConfig.Loggers.FORWARDING_CLASSLOADING);
++
+     public PamrMarshalInputStream(InputStream in) throws IOException {
+         super(in);
+-        pamrLoader = new PamrClassLoader();
++
++        MessageRoutingRemoteObjectFactory f = null;
++        try {
++            f = (MessageRoutingRemoteObjectFactory) AbstractRemoteObjectFactory
++                    .getRemoteObjectFactory(MessageRoutingRemoteObjectFactory.PROTOCOL_ID);
++        } catch (UnknownProtocolException e) {
++            // Impossible @see org.objectweb.proactive.extra.messagerouting.remoteobject.message.MessageRoutingRemoteObjectLookupMessage.processMessage()
++            ProActiveLogger.logImpossibleException(logger, e);
++        } finally {
++            pamrLoader = f.getClassLoader();
++        }
++
+     }
+ 
+     @Override

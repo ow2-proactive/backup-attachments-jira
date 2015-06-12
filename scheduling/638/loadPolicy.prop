@@ -1,0 +1,5 @@
+url=rmi://pataud:1099/
+schedulerCredentials=/home/cdalmass/Demos/PPS_4-2-0/ProActiveScheduling-2.0.0_core/config/authentication/scheduler.cred
+maxNodes=8
+loadingFactor=2
+

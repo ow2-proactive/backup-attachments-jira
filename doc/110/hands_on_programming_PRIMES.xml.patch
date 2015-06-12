@@ -1,0 +1,16 @@
+diff --git a/doc/pa/guided_tour/hands_on_programming_PRIMES.xml b/doc/pa/guided_tour/hands_on_programming_PRIMES.xml
+index 4230713..05237dd 100644
+--- a/doc/pa/guided_tour/hands_on_programming_PRIMES.xml
++++ b/doc/pa/guided_tour/hands_on_programming_PRIMES.xml
+@@ -304,11 +304,7 @@
+ 		
+ 		<!-- SOLUTION -->
+ 
+-<<<<<<< HEAD:doc/src/guided_tour/hands_on_programming_PRIMES.xml
+-		<section xml:id="SolutionFullCode_17"><info><title>Solution/Full Code</title></info>
+-=======
+ 		<section xml:id="SolutionFullCode_16"><info><title>Solution/Full Code</title></info>
+->>>>>>> FF:doc/src/guided_tour/hands_on_programming_PRIMES.xml
+ 			
+ 
+ 			<para>

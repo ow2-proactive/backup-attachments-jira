@@ -1,0 +1,897 @@
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/client/AgentImpl.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/client/AgentImpl.java
+index 1d2da1d..057c011 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/client/AgentImpl.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/client/AgentImpl.java
+@@ -269,6 +269,9 @@ public class AgentImpl implements Agent, AgentImplMBean {
+                     ErrorMessage em = (ErrorMessage) replyMsg;
+                     if (em.getErrorType() == ErrorType.ERR_INVALID_ROUTER_ID) {
+                         throw new RouterHandshakeException("The router has been restarted. Disconnecting...");
++                    } else if (em.getErrorType() == ErrorType.ERR_MALFORMED_MESSAGE) {
++                        throw new RouterHandshakeException(
++                            "The router received a corrupted version of the original message.");
+                     }
+                 } else {
+                     throw new RouterHandshakeException("Invalid router response: expected a " +
+@@ -501,6 +504,23 @@ public class AgentImpl implements Agent, AgentImplMBean {
+             }
+         }
+ 
++        /**
++         * Unblock the Patient waiting on a particular messageID
++         * @param agentId
++         */
++        private Patient unlockDueToCorruption(Long messageId) {
++            AgentID agent = null;
++            for (Map.Entry<AgentID, Map<Long, Patient>> entry : this.byRemoteAgent.entrySet()) {
++                if (entry.getValue().containsKey(messageId)) {
++                    agent = entry.getKey();
++                    break;
++                }
++            }
++            if (agent == null)
++                return null;
++            return remove(agent, messageId);
++        }
++
+         /** Remove a patient on response arrival */
+         private Patient remove(AgentID agentId, long messageId) {
+             Patient patient = null;
+@@ -691,6 +711,7 @@ public class AgentImpl implements Agent, AgentImplMBean {
+         }
+ 
+         private void handleError(ErrorMessage error) {
++            long messageId = error.getMessageID();
+             switch (error.getErrorType()) {
+                 case ERR_DISCONNECTION_BROADCAST:
+                     /*
+@@ -705,7 +726,6 @@ public class AgentImpl implements Agent, AgentImplMBean {
+                      * router Unlock the sender
+                      */
+                     AgentID sender = error.getSender();
+-                    long messageId = error.getMessageID();
+ 
+                     Patient mbox = mailboxes.remove(sender, messageId);
+                     if (mbox == null) {
+@@ -719,6 +739,32 @@ public class AgentImpl implements Agent, AgentImplMBean {
+                         mbox.setAndUnlock(new MessageRoutingException("Recipient not connected " + sender));
+                     }
+                     break;
++                case ERR_MALFORMED_MESSAGE:
++                    // do we have the faulty AgentID?
++                    AgentID faulty = error.getFaulty();
++                    Patient patient;
++                    if (faulty != null) {
++                        patient = mailboxes.remove(faulty, messageId);
++                    } else {
++                        // harder without the faulty agent id
++                        patient = mailboxes.unlockDueToCorruption(messageId);
++                    }
++                    if (patient == null) {
++                        if (logger.isTraceEnabled()) {
++                            logger
++                                    .trace("The router got a corrupted version of message with ID " +
++                                        messageId);
++                        }
++                    } else {
++                        if (logger.isTraceEnabled()) {
++                            logger.trace("Unlocked " + patient + " due to corruption of message with ID " +
++                                messageId + " on the router side");
++                        }
++
++                        patient
++                                .setAndUnlock(new MessageRoutingException("Message corruption on router side"));
++                    }
++                    break;
+                 default:
+                     logger.warn("Unexpected error received by agent from the router: " + error);
+                     break;
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/exceptions/MalformedMessageException.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/exceptions/MalformedMessageException.java
+index 2828c12..4bc3a59 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/exceptions/MalformedMessageException.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/exceptions/MalformedMessageException.java
+@@ -32,34 +32,86 @@ package org.objectweb.proactive.extra.messagerouting.exceptions;
+ 
+ import java.io.IOException;
+ 
++import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage.ErrorType;
++
+ 
+ /**
+  * This exception should be thrown each time a message
+  * which does not meet the Message Routing Protocol format is
+  * encountered
+- *
++ * 
+  * @author fabratu
+  * @version %G%, %I%
+  * @since ProActive 4.10
+  */
+ public class MalformedMessageException extends IOException {
+ 
++    private final boolean notifySender;
++    private final AgentID recipient;
++    private final AgentID faulty;
++
+     public MalformedMessageException() {
+         super();
++        this.notifySender = false;
++        this.recipient = null;
++        this.faulty = null;
+     }
+ 
+     public MalformedMessageException(String message) {
+         super(message);
++        this.notifySender = false;
++        this.recipient = null;
++        this.faulty = null;
+     }
+ 
+     public MalformedMessageException(Throwable cause) {
+-        super();
+-        this.initCause(cause);
++        super(cause);
++        this.notifySender = false;
++        this.recipient = null;
++        this.faulty = null;
+     }
+ 
+     public MalformedMessageException(String message, Throwable cause) {
+-        super(message);
+-        this.initCause(cause);
++        super(message, cause);
++        this.notifySender = false;
++        this.recipient = null;
++        this.faulty = null;
++    }
++
++    public MalformedMessageException(MalformedMessageException original, AgentID recipient, AgentID faulty) {
++        super(original.getMessage(), original);
++        this.notifySender = true;
++        this.recipient = recipient;
++        this.faulty = faulty;
++    }
++
++    public MalformedMessageException(MalformedMessageException original, AgentID recipient) {
++        super(original.getMessage(), original);
++        this.notifySender = true;
++        this.recipient = recipient;
++        this.faulty = null;
++    }
++
++    /** Notify the message sender of this problem */
++    public MalformedMessageException(MalformedMessageException original, boolean notifySender) {
++        super(original.getMessage(), original);
++        this.notifySender = notifySender;
++        this.recipient = null;
++        this.faulty = null;
++    }
++
++    public boolean mustNotifySender() {
++        return this.notifySender;
++    }
++
++    public AgentID getRecipient() {
++        return this.recipient;
++    }
++
++    public AgentID getFaulty() {
++        return this.faulty;
+     }
+ 
+ }
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/DataMessage.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/DataMessage.java
+index c6ea10b..dd4dd1f 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/DataMessage.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/DataMessage.java
+@@ -39,6 +39,7 @@ import java.util.Arrays;
+ import org.objectweb.proactive.extra.messagerouting.exceptions.MalformedMessageException;
+ import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
+ import org.objectweb.proactive.extra.messagerouting.protocol.TypeHelper;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.Message.MessageType;
+ 
+ 
+ /** A data message
+@@ -156,10 +157,18 @@ public abstract class DataMessage extends Message {
+     static public AgentID readSender(byte[] byteArray, int offset) throws MalformedMessageException {
+         long id = TypeHelper.byteArrayToLong(byteArray, offset + Message.Field.getTotalOffset() +
+             Field.SRC_AGENT_ID.getOffset());
+-        if (id < 0) {
++        if (id >= 0)
++            return new AgentID(id);
++        else if (id == UNKNOWN_AGENT_ID) {
++            // in the case of error messages, the Agent ID could be unknown
++            MessageType type = Message.readType(byteArray, 0);
++            if (type.equals(MessageType.ERR_))
++                return null;
++            else
++                throw new MalformedMessageException("Invalid value for " + Field.SRC_AGENT_ID + " field: " +
++                    id);
++        } else
+             throw new MalformedMessageException("Invalid value for " + Field.SRC_AGENT_ID + " field: " + id);
+-        }
+-        return new AgentID(id);
+     }
+ 
+     /** Reads the recipient of a message
+@@ -177,10 +186,18 @@ public abstract class DataMessage extends Message {
+         long id = TypeHelper.byteArrayToLong(byteArray, offset + Message.Field.getTotalOffset() +
+             Field.DST_AGENT_ID.getOffset());
+ 
+-        if (id < 0) {
+-            throw new MalformedMessageException("Invalid value for " + Field.DST_AGENT_ID + " field: " + id);
+-        }
+-        return new AgentID(id);
++        if (id >= 0)
++            return new AgentID(id);
++        else if (id == UNKNOWN_AGENT_ID) {
++            // in the case of error messages, the Agent ID could be unknown
++            MessageType type = Message.readType(byteArray, 0);
++            if (type.equals(MessageType.ERR_))
++                return null;
++            else
++                throw new MalformedMessageException("Invalid value for " + Field.SRC_AGENT_ID + " field: " +
++                    id);
++        } else
++            throw new MalformedMessageException("Invalid value for " + Field.SRC_AGENT_ID + " field: " + id);
+     }
+ 
+     /** Sender of this message */
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/ErrorMessage.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/ErrorMessage.java
+index 13a8f78..474858b 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/ErrorMessage.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/protocol/message/ErrorMessage.java
+@@ -118,7 +118,13 @@ public class ErrorMessage extends DataMessage {
+          * with an unknown router ID. A such error happens when a router is restarted.
+          * Existing clients try to reconnect the endpoint.
+          */
+-        ERR_INVALID_ROUTER_ID;
++        ERR_INVALID_ROUTER_ID,
++
++        /** A corrupted message was received, and cannot be
++         * properly treated by the receiver.
++         *
++         */
++        ERR_MALFORMED_MESSAGE;
+ 
+         /** Reverse map associating an error type to an ID  */
+         final static Map<Integer, ErrorType> idToErrorType;
+@@ -148,6 +154,8 @@ public class ErrorMessage extends DataMessage {
+                     return "ERR_NOT_CONNECTED_RCPT";
+                 case ERR_UNKNOW_RCPT:
+                     return "ERR_UNKNOW_RCPT";
++                case ERR_MALFORMED_MESSAGE:
++                    return "ERR_MALFORMED_MESSAGE";
+                 default:
+                     return super.toString();
+             }
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/TopLevelProcessor.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/TopLevelProcessor.java
+index 83f80fd..923d1b3 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/TopLevelProcessor.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/TopLevelProcessor.java
+@@ -34,13 +34,17 @@
+  */
+ package org.objectweb.proactive.extra.messagerouting.router;
+ 
++import java.io.IOException;
+ import java.nio.ByteBuffer;
+ 
+ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.extra.messagerouting.exceptions.MalformedMessageException;
++import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.Message;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage.ErrorType;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.Message.MessageType;
+ import org.objectweb.proactive.extra.messagerouting.router.processor.Processor;
+ import org.objectweb.proactive.extra.messagerouting.router.processor.ProcessorDataReply;
+@@ -111,8 +115,37 @@ class TopLevelProcessor implements Runnable {
+                 processor.process();
+             }
+         } catch (MalformedMessageException e) {
+-            // TODO : Send an ERR_
+-            logger.error("Dropping message " + message + ", reason:" + e.getMessage(), e);
++            logger.error("Dropping message " + message + ", reason:" + e.getMessage());
++            logger.debug("Stacktrace:", e);
++            notifySender(e);
++        }
++    }
++
++    private static final long AGENT_ID_UNKNOWN = -1;
++
++    private void notifySender(MalformedMessageException e) {
++        if (e.mustNotifySender()) {
++            logger.debug("The sender will be notified about this.");
++            AgentID recipient = e.getRecipient();
++            if (recipient == null) {
++                // not known by the lower layer => put a phony value
++                recipient = new AgentID(AGENT_ID_UNKNOWN);
++            }
++            AgentID faulty = e.getFaulty();
++            if (faulty == null) {
++                // not known by the lower layer => put a phony value
++                faulty = new AgentID(AGENT_ID_UNKNOWN);
++            }
++            // getting the message ID always succeeds
++            long messageId = Message.readMessageID(message.array(), 0);
++            ErrorMessage errMsg = new ErrorMessage(ErrorType.ERR_MALFORMED_MESSAGE, recipient, faulty,
++                messageId);
++            try {
++                attachment.send(ByteBuffer.wrap(errMsg.toByteArray()));
++            } catch (IOException ioExcp) {
++                logger.warn("Could not send the error message " + errMsg + "  to the sender, reason:" +
++                    ioExcp.getMessage(), ioExcp);
++            }
+         }
+     }
+ }
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataReply.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataReply.java
+index 733ce8e..1b7947a 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataReply.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataReply.java
+@@ -39,8 +39,7 @@ import java.nio.ByteBuffer;
+ import org.objectweb.proactive.extra.messagerouting.exceptions.MalformedMessageException;
+ import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.DataMessage;
+-import org.objectweb.proactive.extra.messagerouting.protocol.message.DataRequestMessage;
+-import org.objectweb.proactive.extra.messagerouting.protocol.message.Message;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.DataReplyMessage;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.Message.MessageType;
+ import org.objectweb.proactive.extra.messagerouting.router.Client;
+ import org.objectweb.proactive.extra.messagerouting.router.RouterImpl;
+@@ -58,25 +57,37 @@ public class ProcessorDataReply extends Processor {
+ 
+     @Override
+     public void process() throws MalformedMessageException {
+-        AgentID agentId = DataMessage.readRecipient(rawMessage.array(), 0);
+-        Client destClient = this.router.getClient(agentId);
++        try {
++            DataReplyMessage replyMsg = new DataReplyMessage(this.rawMessage.array(), 0);
++            AgentID recipient = replyMsg.getRecipient();
++            Client destClient = this.router.getClient(recipient);
+ 
+-        if (destClient != null) {
+-            /* The recipient is known. Try to forward the message.
+-             * If the reply cannot be send now, we have to cache it to send it later.
+-             * We don't want to send a error message to the sender. Our goal is to unblock
+-             * the recipient which is waiting for the reply
+-             */
+-            destClient.sendMessageOrCache(this.rawMessage);
+-        } else {
+-            /* The recipient is unknown.
+-             * 
+-             * We can't do better than dropping the reply. Notifying the sender is useless since
+-             * it will not unblock the recipient. 
+-             */
+-            Message message;
+-            message = new DataRequestMessage(rawMessage.array(), 0);
+-            logger.error("Dropped invalid data reply: unknown recipient. " + message);
++            if (destClient != null) {
++                destClient.sendMessageOrCache(this.rawMessage);
++            } else {
++                /* unknown recipient => malformed message(or attack)
++                 * anyway, inform the sender, maybe the next message will be a valid one
++                 * and we will unlock the recipient
++                 */
++                throw new MalformedMessageException("Invalid data reply message " + replyMsg +
++                    " : unknown recipient.");
++            }
++        } catch (MalformedMessageException e) {
++            AgentID sender;
++            AgentID recipient;
++            try {
++                sender = DataMessage.readSender(this.rawMessage.array(), 0);
++            } catch (MalformedMessageException e1) {
++                // don't know the sender
++                sender = null;
++            }
++            try {
++                recipient = DataMessage.readRecipient(this.rawMessage.array(), 0);
++            } catch (MalformedMessageException e1) {
++                // don't know the recipient
++                recipient = null;
++            }
++            throw new MalformedMessageException(e, sender, recipient);
+         }
+     }
+ }
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataRequest.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataRequest.java
+index e8d28f4..916086e 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataRequest.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorDataRequest.java
+@@ -34,6 +34,7 @@
+  */
+ package org.objectweb.proactive.extra.messagerouting.router.processor;
+ 
++import java.io.IOException;
+ import java.nio.ByteBuffer;
+ 
+ import org.objectweb.proactive.extra.messagerouting.exceptions.MalformedMessageException;
+@@ -41,7 +42,6 @@ import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.DataMessage;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.DataRequestMessage;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage;
+-import org.objectweb.proactive.extra.messagerouting.protocol.message.Message;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage.ErrorType;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.Message.MessageType;
+ import org.objectweb.proactive.extra.messagerouting.router.Client;
+@@ -60,48 +60,67 @@ public class ProcessorDataRequest extends Processor {
+ 
+     @Override
+     public void process() throws MalformedMessageException {
+-        AgentID recipient = DataMessage.readRecipient(rawMessage.array(), 0);
+-        Client destClient = this.router.getClient(recipient);
+ 
+-        if (destClient != null) {
+-            /* The recipient is known. Try to forward the message.
+-             * If an error occurs while sending the message, notify the sender
+-             */
+-            try {
+-                destClient.sendMessage(this.rawMessage);
+-            } catch (Exception e) {
+-                /* Notify the sender of the failure.
+-                 * If the error message cannot be send, the message is cached to be re-send
+-                 * later. If this message is lost, the caller will be blocked forever.
++        try {
++            DataRequestMessage msg = new DataRequestMessage(rawMessage.array(), 0);
++            AgentID recipient = msg.getRecipient();
++            AgentID sender = msg.getSender();
++            long messageId = msg.getMessageID();
++
++            Client destClient = this.router.getClient(recipient);
++
++            if (destClient != null) {
++                /* The recipient is known. Try to forward the message.
++                 * If an error occurs while sending the message, notify the sender
+                  */
+-                AgentID sender = DataMessage.readSender(rawMessage.array(), 0);
+-                long messageId = Message.readMessageID(rawMessage.array(), 0);
+-                ErrorMessage error = new ErrorMessage(ErrorType.ERR_NOT_CONNECTED_RCPT, sender, recipient,
+-                    messageId);
++                try {
++                    destClient.sendMessage(this.rawMessage);
++                } catch (IOException e) {
++                    /* Notify the sender of the failure.
++                     * If the error message cannot be send, the message is cached to be re-send
++                     * later. If this message is lost, the caller will be blocked forever.
++                     */
++                    ErrorMessage error = new ErrorMessage(ErrorType.ERR_NOT_CONNECTED_RCPT, sender,
++                        recipient, messageId);
+ 
+-                Client srcClient = router.getClient(sender);
+-                srcClient.sendMessageOrCache(error.toByteArray());
+-            }
+-        } else {
+-            /* The recipient is unknown.
+-             * If the sender is known an error message is sent (or cached) to unblock it.
+-             * Otherwise the message is dropped (unknown sender & recipient: game over)
+-             */
+-            AgentID sender = DataMessage.readSender(rawMessage.array(), 0);
+-            Client client = router.getClient(sender);
+-            if (client != null) {
+-                long messageId = Message.readMessageID(rawMessage.array(), 0);
+-                ErrorMessage error = new ErrorMessage(ErrorType.ERR_UNKNOW_RCPT, sender, recipient, messageId);
+-                // Cache on error to avoid a blocked a sender
+-                client.sendMessageOrCache(error.toByteArray());
+-                logger.warn("Received invalid data request: unknown recipient: " + recipient +
+-                    ". Sender notified");
++                    Client srcClient = router.getClient(sender);
++                    srcClient.sendMessageOrCache(error.toByteArray());
++                }
+             } else {
+-                // Something is utterly broken: Unknown sender & recipient
+-                Message message;
+-                message = new DataRequestMessage(rawMessage.array(), 0);
+-                logger.error("Dropped invalid data request: unknown sender and recipient. " + message);
++                /* The recipient is unknown.
++                 * If the sender is known an error message is sent (or cached) to unblock it.
++                 * Otherwise the message is dropped (unknown sender & recipient: game over)
++                 */
++                Client client = router.getClient(sender);
++                if (client != null) {
++                    ErrorMessage error = new ErrorMessage(ErrorType.ERR_UNKNOW_RCPT, sender, recipient,
++                        messageId);
++                    // Cache on error to avoid a blocked a sender
++                    client.sendMessageOrCache(error.toByteArray());
++                    logger.warn("Received invalid data request: unknown recipient: " + recipient +
++                        ". Sender notified");
++                } else {
++                    // Something is utterly broken: Unknown sender & recipient
++                    throw new MalformedMessageException("Invalid data request message " + msg +
++                        " : unknown sender and recipient.");
++                }
++            }
++        } catch (MalformedMessageException e) {
++            AgentID sender;
++            AgentID recipient;
++            try {
++                sender = DataMessage.readSender(this.rawMessage.array(), 0);
++            } catch (MalformedMessageException e1) {
++                // don't know the sender
++                sender = null;
++            }
++            try {
++                recipient = DataMessage.readRecipient(this.rawMessage.array(), 0);
++            } catch (MalformedMessageException e1) {
++                // don't know the recipient
++                recipient = null;
+             }
++            throw new MalformedMessageException(e, sender, recipient);
+         }
+ 
+     }
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorRegistrationRequest.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorRegistrationRequest.java
+index e2fd9c8..9193c0d 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorRegistrationRequest.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/router/processor/ProcessorRegistrationRequest.java
+@@ -40,6 +40,7 @@ import java.util.concurrent.atomic.AtomicLong;
+ 
+ import org.objectweb.proactive.extra.messagerouting.exceptions.MalformedMessageException;
+ import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.DataMessage;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.Message;
+ import org.objectweb.proactive.extra.messagerouting.protocol.message.RegistrationMessage;
+@@ -69,13 +70,24 @@ public class ProcessorRegistrationRequest extends Processor {
+     public void process() throws MalformedMessageException {
+         // Message.constructMessage guarantees that the cast is safe. If the message is not a RegistrationRequestMessage,
+         // a @{link MalformedMessageException} will be thrown
+-        RegistrationRequestMessage message = (RegistrationRequestMessage) Message.constructMessage(
+-                this.rawMessage.array(), 0);
+-        AgentID agentId = message.getAgentID();
+-        if (agentId == null) {
+-            connection(message);
+-        } else {
+-            reconnection(message);
++        try {
++            RegistrationRequestMessage message = (RegistrationRequestMessage) Message.constructMessage(
++                    this.rawMessage.array(), 0);
++            AgentID agentId = message.getAgentID();
++            if (agentId == null) {
++                connection(message);
++            } else {
++                reconnection(message);
++            }
++        } catch (MalformedMessageException e) {
++            // try to see who sent it
++            try {
++                AgentID sender = RegistrationMessage.readAgentID(this.rawMessage.array(), 0);
++                throw new MalformedMessageException(e, sender);
++            } catch (MalformedMessageException e1) {
++                // cannot get the sender
++                throw new MalformedMessageException(e, true);
++            }
+         }
+     }
+ 
+diff --git a/src/Tests/functionalTests/messagerouting/BlackBoxRegistered.java b/src/Tests/functionalTests/messagerouting/BlackBoxRegistered.java
+new file mode 100644
+index 0000000..4549962
+--- /dev/null
++++ b/src/Tests/functionalTests/messagerouting/BlackBoxRegistered.java
+@@ -0,0 +1,62 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package functionalTests.messagerouting;
++
++import java.io.IOException;
++
++import org.junit.Before;
++import org.objectweb.proactive.core.util.ProActiveRandom;
++import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.Message;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.RegistrationReplyMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.RegistrationRequestMessage;
++
++
++/**
++ * A Blackbox with the Agent registered to the router
++ *
++ */
++public class BlackBoxRegistered extends BlackBox {
++
++    protected AgentID agentId;
++
++    @Before
++    public void registerAgent() throws IOException {
++        // Connect
++        Message message = new RegistrationRequestMessage(null, ProActiveRandom.nextPosLong(), 0);
++        tunnel.write(message.toByteArray());
++
++        byte[] resp = tunnel.readMessage();
++        RegistrationReplyMessage reply = new RegistrationReplyMessage(resp, 0);
++        agentId = reply.getAgentID();
++    }
++
++}
+diff --git a/src/Tests/functionalTests/messagerouting/router/blackbox/TestDataCorruption.java b/src/Tests/functionalTests/messagerouting/router/blackbox/TestDataCorruption.java
+new file mode 100644
+index 0000000..a77a71f
+--- /dev/null
++++ b/src/Tests/functionalTests/messagerouting/router/blackbox/TestDataCorruption.java
+@@ -0,0 +1,116 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package functionalTests.messagerouting.router.blackbox;
++
++import java.io.IOException;
++
++import junit.framework.Assert;
++
++import org.junit.Test;
++import org.objectweb.proactive.core.util.ProActiveRandom;
++import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.DataReplyMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.DataRequestMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage.ErrorType;
++
++import functionalTests.messagerouting.BlackBoxRegistered;
++
++
++/**
++* Test how the router handles
++ * corrupted data messages
++ */
++public class TestDataCorruption extends BlackBoxRegistered {
++
++    @Test
++    public void testRequest() throws IOException {
++        long invalidID = -ProActiveRandom.nextPosLong();
++        AgentID invalidAgentID = new AgentID(invalidID);
++        long msgId = ProActiveRandom.nextPosLong();
++
++        DataRequestMessage msg = new DataRequestMessage(this.agentId, invalidAgentID, msgId, null);
++        tunnel.write(msg.toByteArray());
++
++        byte[] resp = tunnel.readMessage();
++        // expect to get ERR_MALFORMED_MESSAGE
++        ErrorMessage err = new ErrorMessage(resp, 0);
++        Assert.assertEquals(ErrorType.ERR_MALFORMED_MESSAGE, err.getErrorType());
++        Assert.assertEquals(msgId, err.getMessageID());
++        // router knows the recipient only
++        Assert.assertEquals(null, err.getFaulty());
++        Assert.assertEquals(this.agentId, err.getRecipient());
++
++        msg = new DataRequestMessage(invalidAgentID, this.agentId, msgId, null);
++        tunnel.write(msg.toByteArray());
++
++        resp = tunnel.readMessage();
++        // expect to get ERR_MALFORMED_MESSAGE
++        err = new ErrorMessage(resp, 0);
++        Assert.assertEquals(ErrorType.ERR_MALFORMED_MESSAGE, err.getErrorType());
++        Assert.assertEquals(msgId, err.getMessageID());
++        // router knows the faulty agent
++        Assert.assertEquals(this.agentId, err.getFaulty());
++        Assert.assertEquals(null, err.getRecipient());
++    }
++
++    @Test
++    public void testReply() throws IOException {
++        long invalidID = -ProActiveRandom.nextPosLong();
++        AgentID invalidAgentID = new AgentID(invalidID);
++        long msgId = ProActiveRandom.nextPosLong();
++
++        DataReplyMessage msg = new DataReplyMessage(this.agentId, invalidAgentID, msgId, null);
++        tunnel.write(msg.toByteArray());
++
++        byte[] resp = tunnel.readMessage();
++        // expect to get ERR_MALFORMED_MESSAGE
++        ErrorMessage err = new ErrorMessage(resp, 0);
++        Assert.assertEquals(ErrorType.ERR_MALFORMED_MESSAGE, err.getErrorType());
++        Assert.assertEquals(msgId, err.getMessageID());
++        // router knows the recipient only
++        Assert.assertEquals(null, err.getFaulty());
++        Assert.assertEquals(this.agentId, err.getRecipient());
++
++        msg = new DataReplyMessage(invalidAgentID, this.agentId, msgId, null);
++        tunnel.write(msg.toByteArray());
++
++        resp = tunnel.readMessage();
++        // expect to get ERR_MALFORMED_MESSAGE
++        err = new ErrorMessage(resp, 0);
++        Assert.assertEquals(ErrorType.ERR_MALFORMED_MESSAGE, err.getErrorType());
++        Assert.assertEquals(msgId, err.getMessageID());
++        // router knows the faulty agent
++        Assert.assertEquals(this.agentId, err.getFaulty());
++        Assert.assertEquals(null, err.getRecipient());
++    }
++
++}
+diff --git a/src/Tests/functionalTests/messagerouting/router/blackbox/TestRegistrationCorruption.java b/src/Tests/functionalTests/messagerouting/router/blackbox/TestRegistrationCorruption.java
+new file mode 100644
+index 0000000..1910c31
+--- /dev/null
++++ b/src/Tests/functionalTests/messagerouting/router/blackbox/TestRegistrationCorruption.java
+@@ -0,0 +1,96 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package functionalTests.messagerouting.router.blackbox;
++
++import java.io.IOException;
++
++import junit.framework.Assert;
++
++import org.junit.Test;
++import org.objectweb.proactive.core.util.ProActiveRandom;
++import org.objectweb.proactive.extra.messagerouting.protocol.AgentID;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.Message;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.RegistrationReplyMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.RegistrationRequestMessage;
++import org.objectweb.proactive.extra.messagerouting.protocol.message.ErrorMessage.ErrorType;
++
++import functionalTests.messagerouting.BlackBox;
++
++
++/**
++ * Test how the router handles
++ * corrupted registration messages
++ */
++public class TestRegistrationCorruption extends BlackBox {
++
++    private static final long UNKNOWN_AGENT_ID = -1;
++    private static final AgentID unknown = null;
++
++    @Test
++    public void test() throws IOException {
++        long invalidAgentID;
++        do {
++            invalidAgentID = -ProActiveRandom.nextPosLong();
++        } while (invalidAgentID == UNKNOWN_AGENT_ID);
++        long invalidRouterID = -ProActiveRandom.nextPosLong();
++        long msgId = ProActiveRandom.nextPosLong();
++
++        Message message = new RegistrationRequestMessage(new AgentID(invalidAgentID), msgId, 0);
++        tunnel.write(message.toByteArray());
++
++        byte[] resp = tunnel.readMessage();
++        // expect to get ERR_MALFORMED_MESSAGE
++        ErrorMessage err = new ErrorMessage(resp, 0);
++        Assert.assertEquals(ErrorType.ERR_MALFORMED_MESSAGE, err.getErrorType());
++        Assert.assertEquals(msgId, err.getMessageID());
++        // router has no additional information
++        Assert.assertEquals(unknown, err.getRecipient());
++        Assert.assertEquals(unknown, err.getFaulty());
++
++        // Connect
++        message = new RegistrationRequestMessage(null, msgId, 0);
++        tunnel.write(message.toByteArray());
++
++        resp = tunnel.readMessage();
++        RegistrationReplyMessage reply = (RegistrationReplyMessage) Message.constructMessage(resp, 0);
++        AgentID myAgentId = reply.getAgentID();
++
++        message = new RegistrationRequestMessage(myAgentId, msgId, invalidRouterID);
++        tunnel.write(message.toByteArray());
++
++        resp = tunnel.readMessage();
++        // expect to get ERR_MALFORMED_MESSAGE
++        err = new ErrorMessage(resp, 0);
++        Assert.assertEquals(ErrorType.ERR_MALFORMED_MESSAGE, err.getErrorType());
++        Assert.assertEquals(msgId, err.getMessageID());
++    }
++}
+diff --git a/src/Tests/functionalTests/messagerouting/router/blackbox/TestUnknownSender.java b/src/Tests/functionalTests/messagerouting/router/blackbox/TestUnknownSender.java
+index 07427fa..0ffba05 100644
+--- a/src/Tests/functionalTests/messagerouting/router/blackbox/TestUnknownSender.java
++++ b/src/Tests/functionalTests/messagerouting/router/blackbox/TestUnknownSender.java
+@@ -56,11 +56,11 @@ public class TestUnknownSender extends BlackBox {
+ 
+     /* - Connect to the router
+      * - Send a message to a non existent recipient with a bogus sender
+-     * - Do nothing since the router will drop the message
++     * - The router will reply with a ERR_MALFORMED_MESSAGE error message
+      */
+ 
+     @Test
+-    public void testNOK() throws IOException, InstantiationException {
++    public void testNOK() throws IOException {
+         AgentID srcAgentID = new AgentID(ProActiveRandom.nextPosLong());
+         AgentID dstAgentID = new AgentID(ProActiveRandom.nextPosLong());
+         long msgId = ProActiveRandom.nextPosLong();
+@@ -68,9 +68,14 @@ public class TestUnknownSender extends BlackBox {
+         Message message = new DataRequestMessage(srcAgentID, dstAgentID, msgId, null);
+         tunnel.write(message.toByteArray());
+ 
+-        // Since both src and dst agent are unknown, the router will drop this message
+-        // Their is no clean way to check that "no message has been send by the router"
+-        // and I don't want to wait for the timeout
++        // router should reply with a ErrorMessage, code ERR_MALFORMED_MESSAGE
++        byte[] resp = tunnel.readMessage();
++        ErrorMessage errMsg = new ErrorMessage(resp, 0);
++        Assert.assertEquals(errMsg.getErrorType(), ErrorType.ERR_MALFORMED_MESSAGE);
++        Assert.assertEquals(errMsg.getRecipient(), srcAgentID);
++        // faulty is the dstAgent; this is because on the agent side we should unlock the waiter
++        Assert.assertEquals(errMsg.getFaulty(), dstAgentID);
++
+     }
+ 
+     /* - Connect to the router

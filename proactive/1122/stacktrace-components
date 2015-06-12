@@ -1,0 +1,641 @@
+org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T1981410686[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@17bf9b45,org.objectweb.proactive.core.component.ContentDescription@246adb31)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.adl.ADLException: [ADL-001] Unable to execute some of the tasks Caused by: An error occurs while executing task :"T1981410686[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@17bf9b45,org.objectweb.proactive.core.component.ContentDescription@246adb31)]"
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:163)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T1981410686[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@17bf9b45,org.objectweb.proactive.core.component.ContentDescription@246adb31)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	... 9 more
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T212165140[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@33262bf4,org.objectweb.proactive.core.component.ContentDescription@f0fba68)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.adl.ADLException: [ADL-001] Unable to execute some of the tasks Caused by: An error occurs while executing task :"T212165140[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@33262bf4,org.objectweb.proactive.core.component.ContentDescription@f0fba68)]"
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:163)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T212165140[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@33262bf4,org.objectweb.proactive.core.component.ContentDescription@f0fba68)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	... 9 more
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+10. null
+11. null
+12. null
+org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T1656368712[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@44dd20b6,org.objectweb.proactive.core.component.ContentDescription@118eb00c)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.adl.ADLException: [ADL-001] Unable to execute some of the tasks Caused by: An error occurs while executing task :"T1656368712[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@44dd20b6,org.objectweb.proactive.core.component.ContentDescription@118eb00c)]"
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:163)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T1656368712[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@44dd20b6,org.objectweb.proactive.core.component.ContentDescription@118eb00c)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	... 9 more
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T615394662[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@1d5c0c91,org.objectweb.proactive.core.component.ContentDescription@63d12a6)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.adl.ADLException: [ADL-001] Unable to execute some of the tasks Caused by: An error occurs while executing task :"T615394662[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@1d5c0c91,org.objectweb.proactive.core.component.ContentDescription@63d12a6)]"
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:163)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T615394662[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@1d5c0c91,org.objectweb.proactive.core.component.ContentDescription@63d12a6)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	... 9 more
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T88615143[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@2b8f73cb,org.objectweb.proactive.core.component.ContentDescription@56fb2ac4)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more
+org.objectweb.fractal.adl.ADLException: [ADL-001] Unable to execute some of the tasks Caused by: An error occurs while executing task :"T88615143[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@2b8f73cb,org.objectweb.proactive.core.component.ContentDescription@56fb2ac4)]"
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:163)
+	at fr.inria.oasis.proactive.components.test.Main.createComponent(Main.java:78)
+	at fr.inria.oasis.proactive.components.test.Main.access$0(Main.java:76)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:49)
+	at fr.inria.oasis.proactive.components.test.Main$1.call(Main.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.objectweb.fractal.task.core.TaskExecutionException: An error occurs while executing task :"T88615143[CreateTask(fr.inria.oasis.proactive.components.test.Slave,org.objectweb.proactive.core.component.ControllerDescription@2b8f73cb,org.objectweb.proactive.core.component.ContentDescription@56fb2ac4)]"
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:112)
+	at org.objectweb.fractal.task.core.BasicScheduler.schedule(BasicScheduler.java:47)
+	at org.objectweb.fractal.adl.BasicFactory.newComponent(BasicFactory.java:160)
+	... 9 more
+Caused by: org.objectweb.fractal.api.factory.InstantiationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:261)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl$ObjectsContainer.createFComponent(PAImplementationBuilderImpl.java:194)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createFComponent(PAImplementationBuilderImpl.java:168)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationBuilderImpl.createComponent(PAImplementationBuilderImpl.java:82)
+	at org.objectweb.proactive.core.component.adl.implementations.PAImplementationCompiler$CreateTask.execute(PAImplementationCompiler.java:242)
+	at org.objectweb.fractal.task.core.BasicScheduler.doSchedule(BasicScheduler.java:110)
+	... 11 more
+Caused by: org.objectweb.proactive.ActiveObjectCreationException: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:504)
+	at org.objectweb.proactive.core.component.Fractive.commonInstanciation(Fractive.java:541)
+	at org.objectweb.proactive.core.component.Fractive.newFcInstance(Fractive.java:257)
+	... 16 more
+Caused by: org.objectweb.proactive.core.ProActiveException: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:283)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.<init>(UniversalBodyProxy.java:174)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.MOP.createProxyObject(MOP.java:853)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:273)13. null
+14. null
+15. null
+
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:177)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1172)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:1165)
+	at org.objectweb.proactive.api.PAActiveObject.newActive(PAActiveObject.java:493)
+	... 18 more
+Caused by: org.objectweb.proactive.core.ProActiveRuntimeException: Could not create controller 'org.objectweb.proactive.core.component.control.PAPriorityControllerImpl' while instantiating 'fr.inria.oasis.proactive.components.test.Slave' component (please check your configuration file /org/objectweb/proactive/core/component/config/default-component-config.xml) : Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:457)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.<init>(PAComponentImpl.java:159)
+	at org.objectweb.proactive.core.body.ProActiveMetaObjectFactory$ProActiveComponentFactoryImpl.newPAComponent(ProActiveMetaObjectFactory.java:498)
+	at org.objectweb.proactive.core.component.body.ComponentBodyImpl.<init>(ComponentBodyImpl.java:102)
+	at org.objectweb.proactive.core.body.ActiveBody.<init>(ActiveBody.java:114)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.objectweb.proactive.core.mop.ConstructorCallImpl.execute(ConstructorCallImpl.java:143)
+	at org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl.createBody(ProActiveRuntimeImpl.java:931)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.createLocalBody(UniversalBodyProxy.java:264)
+	... 29 more
+Caused by: org.objectweb.proactive.core.component.exceptions.InterfaceGenerationFailedException: Cannot generate meta object representative on interface [priority-controller] with signature [org.etsi.uri.gcm.api.control.PriorityController] with javassist
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:251)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.createController(PAComponentImpl.java:310)
+	at org.objectweb.proactive.core.component.identity.PAComponentImpl.addControllers(PAComponentImpl.java:432)
+	... 40 more
+Caused by: java.lang.ClassCastException: CgeneratedorgCPetsiCPuriCPgcmCPapiCPcontrolCPPriorityCControllerCOpriorityCIcontroller cannot be cast to org.objectweb.proactive.core.component.PAInterfaceImpl
+	at org.objectweb.proactive.core.component.gen.MetaObjectInterfaceClassGenerator.generateInterface(MetaObjectInterfaceClassGenerator.java:243)
+	... 42 more

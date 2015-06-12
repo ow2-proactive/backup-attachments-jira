@@ -1,0 +1,23 @@
+------------- Testing with String -------------
+Tokenization:
+[/bin/bash, -c, echo, toto;echo, tata]
+Running:
+
+0
+
+------------- Testing with String[] ------------------
+Running:
+toto
+tata
+0
+------------- Testing with String and double quotes -------------
+Tokenization:
+[/bin/bash, -c, "echo, toto;echo, tata"]
+Running:
+2
+
+------------- Testing with String and simple quotes -------------
+Tokenization:
+[/bin/bash, -c, 'echo, toto;echo, tata']
+Running:
+2

@@ -1,0 +1,77 @@
+From 714f324c89ad768f6a3eae49e713caa48c771a52 Mon Sep 17 00:00:00 2001
+From: acontes <arnaud.contes@activeeon.com>
+Date: Mon, 8 Feb 2010 15:28:44 +0100
+Subject: [PATCH] PROACTIVE-787 patch v1
+
+---
+ .../core/body/proxy/AbstractBodyProxy.java         |    6 +++---
+ .../core/body/proxy/UniversalBodyProxy.java        |   10 ++++++++++
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/src/Core/org/objectweb/proactive/core/body/proxy/AbstractBodyProxy.java b/src/Core/org/objectweb/proactive/core/body/proxy/AbstractBodyProxy.java
+index 31beeee..6a40870 100644
+--- a/src/Core/org/objectweb/proactive/core/body/proxy/AbstractBodyProxy.java
++++ b/src/Core/org/objectweb/proactive/core/body/proxy/AbstractBodyProxy.java
+@@ -88,9 +88,9 @@ public abstract class AbstractBodyProxy extends AbstractProxy implements BodyPro
+     //
+     // -- implements BodyProxy -----------------------------------------------
+     //
+-    public UniqueID getBodyID() {
+-        return getBody().getID();
+-    }
++//    public UniqueID getBodyID() {
++//        return getBody().getID();
++//    }
+ 
+     //
+     // -- implements Proxy -----------------------------------------------
+diff --git a/src/Core/org/objectweb/proactive/core/body/proxy/UniversalBodyProxy.java b/src/Core/org/objectweb/proactive/core/body/proxy/UniversalBodyProxy.java
+index 7340587..bcf6dc3 100644
+--- a/src/Core/org/objectweb/proactive/core/body/proxy/UniversalBodyProxy.java
++++ b/src/Core/org/objectweb/proactive/core/body/proxy/UniversalBodyProxy.java
+@@ -50,6 +50,7 @@ import org.objectweb.proactive.api.PAActiveObject;
+ import org.objectweb.proactive.core.Constants;
+ import org.objectweb.proactive.core.ProActiveException;
+ import org.objectweb.proactive.core.ProActiveRuntimeException;
++import org.objectweb.proactive.core.UniqueID;
+ import org.objectweb.proactive.core.body.AbstractBody;
+ import org.objectweb.proactive.core.body.ActiveBody;
+ import org.objectweb.proactive.core.body.BodyImpl;
+@@ -98,6 +99,7 @@ public class UniversalBodyProxy extends AbstractBodyProxy implements java.io.Ser
+     protected transient UniversalBody universalBody;
+     protected transient boolean isLocal;
+     private transient GCTag tag;
++    private UniqueID cachedBodyId;
+     private static ThreadLocal<Collection<UniversalBodyProxy>> incomingReferences = new ThreadLocal<Collection<UniversalBodyProxy>>() {
+         @Override
+         protected synchronized Collection<UniversalBodyProxy> initialValue() {
+@@ -117,6 +119,7 @@ public class UniversalBodyProxy extends AbstractBodyProxy implements java.io.Ser
+ 
+     public UniversalBodyProxy(UniversalBody body) {
+         this.universalBody = body;
++        this.cachedBodyId = this.universalBody.getID();
+         System.out.println("UniversalBodyProxy.UniversalBodyProxy(UniversalBody body)");
+         // this.isLocal = LocalBodyStore.getInstance().getLocalBody(getBodyID()) != null;
+     }
+@@ -185,6 +188,9 @@ public class UniversalBodyProxy extends AbstractBodyProxy implements java.io.Ser
+             if (GarbageCollector.dgcIsEnabled()) {
+                 ((AbstractBody) PAActiveObject.getBodyOnThis()).updateReference(this);
+             }
++
++            // cache the body ID
++            cachedBodyId = this.universalBody.getID();
+         }
+     }
+ 
+@@ -625,4 +631,8 @@ public class UniversalBodyProxy extends AbstractBodyProxy implements java.io.Ser
+         assert this.tag == null;
+         this.tag = tag;
+     }
++
++    public UniqueID getBodyID() {
++        return cachedBodyId;
++    }
+ }
+-- 
+1.6.6
+

@@ -1,0 +1,114 @@
+From e9e6835cc760b6403514ef78c432487e26d57862 Mon Sep 17 00:00:00 2001
+From: acontes <arnaud.contes@activeeon.com>
+Date: Fri, 28 Sep 2012 12:01:08 +0200
+Subject: [PATCH] amqpssh test 1
+
+Change-Id: I74b3d920fadb453438cf3a686670dea6fed826ac
+---
+ README.txt                                         |    2 +-
+ src/Core/org/objectweb/proactive/Main.java         |    2 +-
+ .../amqp/remoteobject/AMQPSSHSocket.java           |   46 ++++++++++++++++++++
+ .../remoteobject/ConnectionAndChannelFactory.java  |    2 +
+ 4 files changed, 50 insertions(+), 2 deletions(-)
+ create mode 100644 src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/AMQPSSHSocket.java
+
+diff --git a/README.txt b/README.txt
+index eed04d2..26812e7 100644
+--- a/README.txt
++++ b/README.txt
+@@ -1,6 +1,6 @@
+ Thanks for your interest in ProActive.
+ 
+-ProActive $Id$
++ProActive 2012-09-27
+ 
+ You can find the documentation of ProActive in the docs directory:
+ 
+diff --git a/src/Core/org/objectweb/proactive/Main.java b/src/Core/org/objectweb/proactive/Main.java
+index 838f040..d188236 100644
+--- a/src/Core/org/objectweb/proactive/Main.java
++++ b/src/Core/org/objectweb/proactive/Main.java
+@@ -50,7 +50,7 @@ import org.objectweb.proactive.core.util.ProActiveInet;
+ 
+ 
+ public class Main {
+-    static final private String PA_VERSION = "$Id$";
++    static final private String PA_VERSION = "2012-09-27";
+ 
+     /**
+      * Returns the version number
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/AMQPSSHSocket.java b/src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/AMQPSSHSocket.java
+new file mode 100644
+index 0000000..621c9a6
+--- /dev/null
++++ b/src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/AMQPSSHSocket.java
+@@ -0,0 +1,46 @@
++package org.objectweb.proactive.extensions.amqp.remoteobject;
++
++import java.io.IOException;
++import java.net.InetAddress;
++import java.net.Socket;
++import java.net.UnknownHostException;
++
++import javax.net.SocketFactory;
++
++import org.objectweb.proactive.extensions.pamr.remoteobject.util.socketfactory.PAMRSshSocketFactory;
++
++public class AMQPSSHSocket extends SocketFactory {
++
++    private PAMRSshSocketFactory ssf = new  PAMRSshSocketFactory();
++    
++    
++    @Override
++    public Socket createSocket(String host, int port) throws IOException,
++	    UnknownHostException {
++	return ssf.createSocket(host, port);
++    }
++
++    @Override
++    public Socket createSocket(InetAddress host, int port) throws IOException {
++	
++	return null;
++    }
++
++    @Override
++    public Socket createSocket(String host, int port, InetAddress localHost,
++	    int localPort) throws IOException, UnknownHostException {
++	
++	return null;
++    }
++
++    @Override
++    public Socket createSocket(InetAddress address, int port,
++	    InetAddress localAddress, int localPort) throws IOException {
++	
++	return null;
++    }
++
++    }
++
++    
++
+diff --git a/src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/ConnectionAndChannelFactory.java b/src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/ConnectionAndChannelFactory.java
+index 5f76a65..a83d0c2 100644
+--- a/src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/ConnectionAndChannelFactory.java
++++ b/src/Extensions/org/objectweb/proactive/extensions/amqp/remoteobject/ConnectionAndChannelFactory.java
+@@ -46,6 +46,7 @@ import java.util.Map;
+ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.extensions.amqp.AMQPConfig;
++import org.objectweb.proactive.extensions.pamr.remoteobject.util.socketfactory.PAMRSshSocketFactory;
+ 
+ import com.rabbitmq.client.Channel;
+ import com.rabbitmq.client.Connection;
+@@ -149,6 +150,7 @@ public class ConnectionAndChannelFactory {
+             factory.setUsername(connectionParameters.getUsername());
+             factory.setPassword(connectionParameters.getPassword());
+             factory.setVirtualHost(connectionParameters.getVhost());
++            factory.setSocketFactory(new AMQPSSHSocket());
+             Connection c = factory.newConnection();
+             c.addShutdownListener(new AMQPShutDownListener(c.toString()));
+ 
+-- 
+1.7.10.4
+

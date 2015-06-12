@@ -1,0 +1,167 @@
+Index: src/scheduler/src/org/ow2/proactive/scheduler/ext/mapreduce/PAMapReduceJob.java
+===================================================================
+--- src/scheduler/src/org/ow2/proactive/scheduler/ext/mapreduce/PAMapReduceJob.java	(revision 20192)
++++ src/scheduler/src/org/ow2/proactive/scheduler/ext/mapreduce/PAMapReduceJob.java	(working copy)
+@@ -162,25 +162,30 @@
+                 logger.debug("The path of the additional classpath folder is '" +
+                     schedulerAdditionalClasspathFolder + "'");
+ 
+-                File file = new File(schedulerAdditionalClasspathFolder);
+-                String[] fileNameList = file.list(new FilenameFilter() {
+-                    protected File file = null;
+-
+-                    @Override
+-                    public boolean accept(File dir, String name) {
+-                        file = new File(dir.getPath() + File.separator + name);
+-                        if (file.isHidden()) {
+-                            return false;
++                ForkEnvironment forkEnvironment = new ForkEnvironment();
++                /*
++                 * We must explicitly add the list of the jars the ProActive MapReduce API needs
++                 * and only them (not all the files that we may find inside the "$SCHEDULER_HOME/addons/" or
++                 * "$SCHEDULER_HOME/dist/lib/" folders)
++                 */
++                String jarNameListString = PAMapReduceFrameworkProperties
++                        .getPropertyAsString(PAMapReduceFrameworkProperties.MAP_REDUCE_JARS.key);
++                if (jarNameListString != null) {
++                    String[] jarNameList = jarNameListString.replaceAll("\\s+", " ").replaceAll("[,\\s]+",
++                            ",").split(",", 0);
++                    if (jarNameList.length > 0) {
++                        for (String jarName : jarNameList) {
++                            forkEnvironment.addAdditionalClasspath(schedulerAdditionalClasspathFolder +
++                                jarName);
++                            logger.debug("Adding the following jar to the classpath '" +
++                                schedulerAdditionalClasspathFolder + jarName + "'");
+                         }
+-                        return true;
+                     }
+-                });
+-                ForkEnvironment forkEnvironment = new ForkEnvironment();
+-                if ((fileNameList != null) && (fileNameList.length > 0)) {
+-                    for (String fileName : fileNameList) {
+-                        forkEnvironment.addAdditionalClasspath(schedulerAdditionalClasspathFolder + fileName);
+-                    }
+                 }
++
++                /*
++                 * Specify the parameter for the forked environment
++                 */
+                 String[] jvmArgumentArray = paMapReduceJobConfiguration.getJVMArguments();
+                 if (jvmArgumentArray != null) {
+                     for (int i = 0; i < jvmArgumentArray.length; i++) {
+Index: src/scheduler/src/org/ow2/proactive/scheduler/ext/mapreduce/PAMapReduceFrameworkProperties.java
+===================================================================
+--- src/scheduler/src/org/ow2/proactive/scheduler/ext/mapreduce/PAMapReduceFrameworkProperties.java	(revision 20192)
++++ src/scheduler/src/org/ow2/proactive/scheduler/ext/mapreduce/PAMapReduceFrameworkProperties.java	(working copy)
+@@ -18,15 +18,21 @@
+  * {@link PAMapReduceFrameworkProperties} contains all the ProActive MapReduce
+  * Framework properties. Those properties can be used to pass arguments to the
+  * XxxxxPATask that compose the ProActive MapReduce workflow
+- *
++ * 
+  * @author The ProActive Team
+- *
++ * 
+  *         TODO maybe we have to change all the name of the properties from
+  *         WORKFLOW_xxxx into PA_MAPREDUCE_xxxx
+- *
++ * 
+  */
+ public enum PAMapReduceFrameworkProperties {
+ 
++    /**
++     * This property lists the name of the jars needed by the ProActive
++     * MapReduce API
++     */
++    MAP_REDUCE_JARS("org.ow2.proactive.scheduler.ext.mapreduce.jars", PropertyType.STRING),
++
+     WORKFLOW_FILE_SYSTEM_LOCALHOST_NAME("org.ow2.proactive.scheduler.ext.mapreduce.localhost.name",
+             PropertyType.STRING),
+ 
+@@ -584,7 +590,7 @@
+ 
+     /**
+      * Create a new instance of {@link PAMapReduceFrameworkProperties}
+-     *
++     * 
+      * @param key
+      *            the key of the instance
+      * @param propertyType
+@@ -597,7 +603,7 @@
+ 
+     /**
+      * Retrieve the properties from the default configuration file
+-     *
++     * 
+      * @return the properties
+      */
+     public static Properties getProperties() {
+@@ -647,7 +653,7 @@
+ 
+     /**
+      * Return the key of the specific instance
+-     *
++     * 
+      * @return the key of the specific instance
+      */
+     public String getKey() {
+@@ -656,7 +662,7 @@
+ 
+     /**
+      * Return the type of the specific instance
+-     *
++     * 
+      * @return the type of the specific instance
+      */
+     public PropertyType getType() {
+@@ -665,7 +671,7 @@
+ 
+     /**
+      * Retrieve the value of the specified property as a {@link String}
+-     *
++     * 
+      * @param propertyName
+      *            name of the property whose value must be retrieved
+      * @return the {@link String} that represents the value of the property
+@@ -676,7 +682,7 @@
+ 
+     /**
+      * Retrieve the value of the specified property as a boolean
+-     *
++     * 
+      * @param propertyName
+      *            the name of the property whose value must be retrieved
+      * @return the boolean that represents the value of the property, false if
+@@ -692,7 +698,7 @@
+ 
+     /**
+      * Retrieve the value of the specified property as an int
+-     *
++     * 
+      * @param propertyName
+      *            the name of the property whose value must be retrieved
+      * @return the int that represents the value of the property, "-1" if no
+Index: extensions/mapreduce/proactive.mapreduce.framework.configuration
+===================================================================
+--- extensions/mapreduce/proactive.mapreduce.framework.configuration	(revision 20192)
++++ extensions/mapreduce/proactive.mapreduce.framework.configuration	(working copy)
+@@ -1,4 +1,5 @@
+-#cambiare il nome del file ( abbreviarlo )
++# this property lists the jars needed by the ProActive MapReduce framework
++org.ow2.proactive.scheduler.ext.mapreduce.jars=ProActive_Scheduler-mapreduce.jar, hadoop-0.20.2-core.jar
+ 
+ # utility string to build a pattern to use in matching mapper output file name (intermediate_\d{0,}_<reducerId>)
+ #org.ow2.proactive.scheduler.regex.zeroOrMoreDigits=\\d{0,}
+@@ -37,8 +38,10 @@
+ org.ow2.proactive.scheduler.ext.mapreduce.workflow.reducerPATask.replicationScript.fileName=replicateReducerPATask.js
+ org.ow2.proactive.scheduler.ext.mapreduce.reducerPATask.outputFileTransferPostScript.fileName=reducerPATaskOutputFileTransfer.js
+ 
+-# path to the folder containing additional jars to add to the classpath when creating the fork environment
+-org.ow2.proactive.scheduler.ext.mapreduce.schedulerAdditionalClasspathFolder=addons/
++# path to the folder containing additional jars to add to the classpath when creating the fork environment.
++# This path will be resolved against the $SCHEDULER_HOME
++#org.ow2.proactive.scheduler.ext.mapreduce.schedulerAdditionalClasspathFolder=addons/
++org.ow2.proactive.scheduler.ext.mapreduce.schedulerAdditionalClasspathFolder=dist/lib/
+ 
+ # framework script engine name
+ org.ow2.proactive.scheduler.ext.mapreduce.workflow.scriptEngineName=javascript

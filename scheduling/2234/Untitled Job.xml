@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:proactive:jobdescriptor:3.2"
+     xsi:schemaLocation="urn:proactive:jobdescriptor:3.2 http://www.activeeon.com/public_content/schemas/proactive/jobdescriptor/3.2/schedulerjob.xsd"
+    name="Untitled Job" 
+    priority="normal"
+    cancelJobOnError="false">
+  <description>
+    <![CDATA[ A loop is a set of tasks that will be duplicated and rescheduled.
+        A script allows to control the number of replication by setting the variable 'loop' to true or false. ]]>
+  </description>
+  <taskFlow>
+    <task name="Start"
+    maxNumberOfExecution="99">
+      <scriptExecutable>
+        <script>
+          <code language="javascript">
+            <![CDATA[
+print('Loop block start ' + java.lang.System.getProperty('pas.task.iteration'))
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+      <controlFlow block="start"></controlFlow>
+    </task>
+    <task name="Loop"
+    maxNumberOfExecution="99">
+      <depends>
+        <task ref="Start"/>
+      </depends>
+      <scriptExecutable>
+        <script>
+          <code language="javascript">
+            <![CDATA[
+print('Loop block end ' + java.lang.System.getProperty('pas.task.iteration'))
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+      <controlFlow  block="end">
+        <loop target="Start">
+          <script>
+            <code language="javascript">
+              <![CDATA[
+loop = true
+]]>
+            </code>
+          </script>
+        </loop>
+      </controlFlow>
+    </task>
+  </taskFlow>
+</job>

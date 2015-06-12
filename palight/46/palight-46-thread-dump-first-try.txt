@@ -1,0 +1,245 @@
+2015-02-23 09:59:55
+Full thread dump OpenJDK 64-Bit Server VM (23.25-b01 mixed mode):
+
+"Attach Listener" daemon prio=10 tid=0x00007f31d4001000 nid=0x19a1 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"pool-1-thread-2" prio=10 tid=0x00007f32003bd000 nid=0x1974 waiting for monitor entry [0x00007f31edf0e000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:176)
+	- waiting to lock <0x00000000ec65c970> (a org.objectweb.proactive.core.mop.MOPClassLoader)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:162)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:91)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getResource(MOPClassLoader.java:319)
+	at javassist.LoaderClassPath.find(LoaderClassPath.java:87)
+	at javassist.ClassPoolTail.find(ClassPoolTail.java:354)
+	at javassist.ClassPool.find(ClassPool.java:590)
+	at javassist.ClassPool.createCtClass(ClassPool.java:574)
+	at javassist.ClassPool.get0(ClassPool.java:539)
+	- locked <0x00000000ecfc17b8> (a javassist.ClassPool)
+	at javassist.ClassPool.get(ClassPool.java:447)
+	at javassist.compiler.MemberResolver.lookupClass0(MemberResolver.java:477)
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:409)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:319)
+	at javassist.compiler.MemberResolver.resolveJvmClassName(MemberResolver.java:512)
+	at javassist.compiler.MemberCodeGen.resolveClassName(MemberCodeGen.java:1145)
+	at javassist.compiler.CodeGen.atDeclarator(CodeGen.java:712)
+	at javassist.compiler.ast.Declarator.accept(Declarator.java:100)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:292)
+	at javassist.compiler.Javac.compileBody(Javac.java:223)
+	at javassist.CtBehavior.setBody(CtBehavior.java:438)
+	at javassist.CtBehavior.setBody(CtBehavior.java:412)
+	at javassist.CtConstructor.setBody(CtConstructor.java:217)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.createStaticInitializer(JavassistByteCodeStubBuilder.java:612)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.create(JavassistByteCodeStubBuilder.java:231)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:108)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:95)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+
+"pool-1-thread-1" prio=10 tid=0x00007f32003bb800 nid=0x1973 waiting for monitor entry [0x00007f31ee00f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at javassist.ClassPool.get0(ClassPool.java:526)
+	- waiting to lock <0x00000000ecfc17b8> (a javassist.ClassPool)
+	at javassist.ClassPool.get(ClassPool.java:447)
+	at javassist.compiler.MemberResolver.searchImports(MemberResolver.java:455)
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:412)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:319)
+	at javassist.compiler.MemberResolver.resolveJvmClassName(MemberResolver.java:512)
+	at javassist.compiler.MemberCodeGen.resolveClassName(MemberCodeGen.java:1145)
+	at javassist.compiler.CodeGen.atDeclarator(CodeGen.java:712)
+	at javassist.compiler.ast.Declarator.accept(Declarator.java:100)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:292)
+	at javassist.compiler.Javac.compileBody(Javac.java:223)
+	at javassist.CtBehavior.setBody(CtBehavior.java:438)
+	at javassist.CtBehavior.setBody(CtBehavior.java:412)
+	at javassist.CtConstructor.setBody(CtConstructor.java:217)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.createStaticInitializer(JavassistByteCodeStubBuilder.java:612)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.create(JavassistByteCodeStubBuilder.java:231)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:243)
+	- locked <0x00000000ec65c970> (a org.objectweb.proactive.core.mop.MOPClassLoader)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:171)
+	at org.objectweb.proactive.core.mop.MOP.createStubClass(MOP.java:609)
+	at org.objectweb.proactive.core.mop.MOP.findStubConstructor(MOP.java:648)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:818)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:270)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:180)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:105)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:95)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+
+"Monitor Ctrl-Break" daemon prio=10 tid=0x00007f3200306000 nid=0x1972 runnable [0x00007f31ee359000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:375)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:478)
+	at java.net.ServerSocket.accept(ServerSocket.java:446)
+	at com.intellij.rt.execution.application.AppMain$1.run(AppMain.java:85)
+	at java.lang.Thread.run(Thread.java:701)
+
+"Low Memory Detector" daemon prio=10 tid=0x00007f3200106000 nid=0x196b runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" daemon prio=10 tid=0x00007f3200103800 nid=0x196a waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" daemon prio=10 tid=0x00007f3200100800 nid=0x1969 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=10 tid=0x00007f32000fe800 nid=0x1968 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=10 tid=0x00007f32000ac000 nid=0x195f in Object.wait() [0x00007f31ef3f2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000ecfc8660> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:133)
+	- locked <0x00000000ecfc8660> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:149)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:189)
+
+"Reference Handler" daemon prio=10 tid=0x00007f32000aa000 nid=0x195e in Object.wait() [0x00007f31ef4f3000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000ecfc8388> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+	- locked <0x00000000ecfc8388> (a java.lang.ref.Reference$Lock)
+
+"main" prio=10 tid=0x00007f320000f800 nid=0x1957 waiting on condition [0x00007f3209ec7000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6735a0> (a java.util.concurrent.FutureTask$Sync)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1037)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1326)
+	at java.util.concurrent.FutureTask$Sync.innerGet(FutureTask.java:257)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:119)
+	at java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:279)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest.testMopConcurrency(MOPConcurrencyTest.java:117)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest.main(MOPConcurrencyTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:622)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+
+"VM Thread" prio=10 tid=0x00007f320009b000 nid=0x195c runnable 
+
+"GC task thread#0 (ParallelGC)" prio=10 tid=0x00007f320001d800 nid=0x1958 runnable 
+
+"GC task thread#1 (ParallelGC)" prio=10 tid=0x00007f320001f800 nid=0x1959 runnable 
+
+"GC task thread#2 (ParallelGC)" prio=10 tid=0x00007f3200021000 nid=0x195a runnable 
+
+"GC task thread#3 (ParallelGC)" prio=10 tid=0x00007f3200023000 nid=0x195b runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00007f3200110800 nid=0x196c waiting on condition 
+
+JNI global references: 172
+
+
+Found one Java-level deadlock:
+=============================
+"pool-1-thread-2":
+  waiting to lock monitor 0x00007f31c4018188 (object 0x00000000ec65c970, a org.objectweb.proactive.core.mop.MOPClassLoader),
+  which is held by "pool-1-thread-1"
+"pool-1-thread-1":
+  waiting to lock monitor 0x00007f31c4015f68 (object 0x00000000ecfc17b8, a javassist.ClassPool),
+  which is held by "pool-1-thread-2"
+
+Java stack information for the threads listed above:
+===================================================
+"pool-1-thread-2":
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:176)
+	- waiting to lock <0x00000000ec65c970> (a org.objectweb.proactive.core.mop.MOPClassLoader)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:162)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:91)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getResource(MOPClassLoader.java:319)
+	at javassist.LoaderClassPath.find(LoaderClassPath.java:87)
+	at javassist.ClassPoolTail.find(ClassPoolTail.java:354)
+	at javassist.ClassPool.find(ClassPool.java:590)
+	at javassist.ClassPool.createCtClass(ClassPool.java:574)
+	at javassist.ClassPool.get0(ClassPool.java:539)
+	- locked <0x00000000ecfc17b8> (a javassist.ClassPool)
+	at javassist.ClassPool.get(ClassPool.java:447)
+	at javassist.compiler.MemberResolver.lookupClass0(MemberResolver.java:477)
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:409)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:319)
+	at javassist.compiler.MemberResolver.resolveJvmClassName(MemberResolver.java:512)
+	at javassist.compiler.MemberCodeGen.resolveClassName(MemberCodeGen.java:1145)
+	at javassist.compiler.CodeGen.atDeclarator(CodeGen.java:712)
+	at javassist.compiler.ast.Declarator.accept(Declarator.java:100)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:292)
+	at javassist.compiler.Javac.compileBody(Javac.java:223)
+	at javassist.CtBehavior.setBody(CtBehavior.java:438)
+	at javassist.CtBehavior.setBody(CtBehavior.java:412)
+	at javassist.CtConstructor.setBody(CtConstructor.java:217)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.createStaticInitializer(JavassistByteCodeStubBuilder.java:612)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.create(JavassistByteCodeStubBuilder.java:231)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:108)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:95)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+"pool-1-thread-1":
+	at javassist.ClassPool.get0(ClassPool.java:526)
+	- waiting to lock <0x00000000ecfc17b8> (a javassist.ClassPool)
+	at javassist.ClassPool.get(ClassPool.java:447)
+	at javassist.compiler.MemberResolver.searchImports(MemberResolver.java:455)
+	at javassist.compiler.MemberResolver.lookupClass(MemberResolver.java:412)
+	at javassist.compiler.MemberResolver.lookupClassByJvmName(MemberResolver.java:319)
+	at javassist.compiler.MemberResolver.resolveJvmClassName(MemberResolver.java:512)
+	at javassist.compiler.MemberCodeGen.resolveClassName(MemberCodeGen.java:1145)
+	at javassist.compiler.CodeGen.atDeclarator(CodeGen.java:712)
+	at javassist.compiler.ast.Declarator.accept(Declarator.java:100)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atStmnt(CodeGen.java:351)
+	at javassist.compiler.ast.Stmnt.accept(Stmnt.java:50)
+	at javassist.compiler.CodeGen.atMethodBody(CodeGen.java:292)
+	at javassist.compiler.Javac.compileBody(Javac.java:223)
+	at javassist.CtBehavior.setBody(CtBehavior.java:438)
+	at javassist.CtBehavior.setBody(CtBehavior.java:412)
+	at javassist.CtConstructor.setBody(CtConstructor.java:217)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.createStaticInitializer(JavassistByteCodeStubBuilder.java:612)
+	at org.objectweb.proactive.core.mop.JavassistByteCodeStubBuilder.create(JavassistByteCodeStubBuilder.java:231)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:243)
+	- locked <0x00000000ec65c970> (a org.objectweb.proactive.core.mop.MOPClassLoader)
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:171)
+	at org.objectweb.proactive.core.mop.MOP.createStubClass(MOP.java:609)
+	at org.objectweb.proactive.core.mop.MOP.findStubConstructor(MOP.java:648)
+	at org.objectweb.proactive.core.mop.MOP.createStubObject(MOP.java:818)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:270)
+	at org.objectweb.proactive.core.mop.MOP.newInstance(MOP.java:180)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:105)
+	at org.objectweb.proactive.core.mop.MOPConcurrencyTest$1.call(MOPConcurrencyTest.java:95)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+
+Found 1 deadlock.
+

@@ -1,0 +1,34 @@
+Node WINHPC-test-1
+URL : deploying://test/WINHPC-test-1
+Node source : test
+Provider : demo
+State : Lost
+Description : The deployment failed because of an error: 
+org.apache.axis2.AxisFault: Error in extracting message properties
+	at org.apache.rampart.handler.RampartSender.invoke(RampartSender.java:70)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:317)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:264)
+	at org.apache.axis2.engine.AxisEngine.send(AxisEngine.java:429)
+	at org.apache.axis2.description.OutInAxisOperationClient.send(OutInAxisOperation.java:401)
+	at org.apache.axis2.description.OutInAxisOperationClient.executeImpl(OutInAxisOperation.java:228)
+	at org.apache.axis2.client.OperationClient.execute(OperationClient.java:163)
+	at org.ggf.schemas.bes._2006._08.bes_factory.HPCBPServiceStub.CreateActivity(HPCBPServiceStub.java:801)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.WinHPCDeployer.sendCreateActivityMessage(WinHPCDeployer.java:136)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.WinHPCDeployer.createActivity(WinHPCDeployer.java:122)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.WinHPCInfrastructure.startNode(WinHPCInfrastructure.java:214)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.WinHPCInfrastructure.access$000(WinHPCInfrastructure.java:63)
+	at org.ow2.proactive.resourcemanager.nodesource.infrastructure.WinHPCInfrastructure$1.run(WinHPCInfrastructure.java:175)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:651)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:676)
+	at java.lang.Thread.run(Thread.java:595)
+Caused by: org.apache.rampart.RampartException: Error in extracting message properties
+	at org.apache.rampart.RampartMessageData.<init>(RampartMessageData.java:286)
+	at org.apache.rampart.MessageBuilder.build(MessageBuilder.java:58)
+	at org.apache.rampart.handler.RampartSender.invoke(RampartSender.java:64)
+	... 15 more
+Caused by: org.apache.axis2.AxisFault: The CLIENT_SIDE parameter is already locked and the value cannot be overridden.
+	at org.apache.axis2.description.AxisDescription.addParameter(AxisDescription.java:100)
+	at org.apache.rampart.RampartMessageData.<init>(RampartMessageData.java:174)
+	... 17 more
+
+Command : cmd /C " java -Djava.security.policy=c:\Scheduler\config\security.java.policy-client -Dproactive.useIPaddress=true -Dproactive.net.netmask=192.168.1.1/24 -Dproactive.rmi.port=2007  -cp \".;c:\Scheduler\dist\lib\script-js.jar;c:\Scheduler\dist\lib\jruby-engine.jar;c:\Scheduler\dist\lib\jython-engine.jar;c:\Scheduler\dist\lib\commons-logging-1.1.1.jar;c:\Scheduler\dist\lib\ProActive_SRM-common.jar;c:\Scheduler\dist\lib\ProActive_ResourceManager.jar;c:\Scheduler\dist\lib\ProActive_Scheduler-worker.jar;c:\Scheduler\dist\lib\ProActive_Scheduler-matsci.jar;c:\Scheduler\dist\lib\commons-httpclient-3.1.jar;c:\Scheduler\dist\lib\commons-codec-1.3.jar;c:\Scheduler\dist\lib\ProActive.jar;c:\Scheduler\addons\" org.ow2.proactive.resourcemanager.utils.RMNodeStarter -v [OBFUSCATED_CRED] -n WINHPC-test-1 -s test -p 30000 -r rmi://slave1:2007/ "

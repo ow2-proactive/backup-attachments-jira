@@ -1,0 +1,16 @@
+diff --git a/src/Core/org/objectweb/proactive/core/component/control/PAGCMLifeCycleControllerImpl.java b/src/Core/org/objectweb/proactive/core/component/control/PAGCMLifeCycleControllerImpl.java
+index 617858c..f3d4a53 100644
+--- a/src/Core/org/objectweb/proactive/core/component/control/PAGCMLifeCycleControllerImpl.java
++++ b/src/Core/org/objectweb/proactive/core/component/control/PAGCMLifeCycleControllerImpl.java
+@@ -251,6 +251,11 @@ public class PAGCMLifeCycleControllerImpl extends AbstractPAController implement
+                 }
+             }
+ 
++            if (owner.getReferenceOnBaseObject() instanceof LifeCycleController)
++            {
++            	((LifeCycleController)owner.getReferenceOnBaseObject()).startFc();
++            }
++
+             //try {
+             //   PAInterface it = (PAInterface) Fractive.getMembraneController(getFcItfOwner());
+             //   Object obj = it.getFcItfImpl();

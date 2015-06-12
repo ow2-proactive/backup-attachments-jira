@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job xmlns="urn:proactive:jobdescriptor:3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	cancelJobOnError="true" name="example" priority="low" projectName="ex"
+	xsi:schemaLocation="urn:proactive:jobdescriptor:3.0 ../../src/scheduler/src/org/ow2/proactive/scheduler/common/xml/schemas/jobdescriptor/3.0/schedulerjob.xsd">
+
+	<variables>
+		<variable name="WORK"
+			value="/u/groasis/shared/fperrina/PS/PS_WORK/demo/2011_01_19_01_16_09_6469256170738497608/849/work" />
+		<variable name="JOB_ARCHIVE"
+			value="/u/groasis/shared/fperrina/PS/PS_REPOSITORY//demo/workflow_image_2011_01_18_01_47_43_934_" />
+		<!--
+			<variable name="root"
+			value="${pa.scheduler.home}/samples/jobs_descriptors/Workflow/image"/>
+		-->
+		<variable name="imgs" value="${WORK}/" />
+		<variable name="SCRIPT_DIR"
+			value="/u/groasis/shared/fperrina/PS/PS_REPOSITORY//demo/workflow_image_2011_01_18_01_47_43_934_/script" />
+	</variables>
+
+	<!--
+		For each image in ${imgs}, this job will split the image in a number
+		of parts depending its size, then for each split image a treatment
+		will be run in parallel before the image is merged
+	-->
+
+	<taskFlow>
+
+		<!-- Split the image in ${imgs} corresponding the current iteration -->
+		<task name="split">
+			<pre>
+				<script>
+					<!-- if at iteration 0, removes output from previous execution -->
+					<file path="${SCRIPT_DIR}/clean_tmp.js">
+						<arguments>
+							<argument value="${imgs}" />
+						</arguments>
+					</file>
+				</script>
+			</pre>
+			<nativeExecutable>
+				<!-- cuts one image in multiple parts -->
+				<staticCommand value="${SCRIPT_DIR}/cut.sh">
+					<arguments>
+						<argument value="${imgs}" />
+					</arguments>
+				</staticCommand>
+			</nativeExecutable>
+			<!-- start block because target of a loop -->
+			<controlFlow block="start">
+				<replicate>
+					<script>
+						<!--
+							will replicate the child task X times, where X is the number of
+							images created by cut.sh
+						-->
+						<file path="${SCRIPT_DIR}/dup.js">
+							<arguments>
+								<argument value="${imgs}" />
+							</arguments>
+						</file>
+					</script>
+				</replicate>
+			</controlFlow>
+		</task>
+
+		<!--
+			applies a filter on one single image part depending the iteration
+			(image) and replication (sub-image) number
+		-->
+		<task name="filter">
+			<depends>
+				<task ref="split" />
+			</depends>
+			<nativeExecutable>
+				<staticCommand value="${SCRIPT_DIR}/filter.sh">
+					<arguments>
+						<argument value="${imgs}/" />
+					</arguments>
+				</staticCommand>
+			</nativeExecutable>
+		</task>
+
+		<!--
+			joins all sub-images for the current iteration and puts the new image
+			in the output folder
+		-->
+		<task name="join">
+			<depends>
+				<task ref="filter" />
+			</depends>
+			<nativeExecutable>
+				<!--
+					join.sh actually makes a mess: there is no way to easily determine
+					which image part goes where without a bit of tagging. The image is
+					poorly merged but the point is not there
+				-->
+				<staticCommand value="${SCRIPT_DIR}/join.sh">
+					<arguments>
+						<argument value="${imgs}" />
+					</arguments>
+				</staticCommand>
+			</nativeExecutable>
+			<!-- end block: looped block -->
+			<controlFlow block="end">
+				<!--
+					while some images are left untreated in the input folder, make
+					another iteration of the treatment
+				-->
+				<loop target="split">
+					<script>
+						<file path="${SCRIPT_DIR}/loop.js">
+							<arguments>
+								<argument value="${imgs}" />
+							</arguments>
+						</file>
+					</script>
+				</loop>
+			</controlFlow>
+		</task>
+	</taskFlow>
+</job>

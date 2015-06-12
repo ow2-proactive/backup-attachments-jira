@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GCMApplication
+	xmlns="http://www-sop.inria.fr/oasis/ProActive/schemas"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www-sop.inria.fr/oasis/ProActive/schemas /user/cmathieu/home/TMP/junit/src/Extra/org/objectweb/proactive/extra/gcmdeployment/schema/ApplicationDescriptorSchema.xsd">
+
+	<!-- broken sample descriptor - remove ? -->
+
+	<application>
+		
+		<proactive  relpath="ProActive">
+			<configuration>
+				<!-- Add base attribute -->
+				<java base="home" relpath="Java/java"/>		
+				<applicationClasspath type="append">
+					<pathElement base="home" relpath="Ping/bin/"/>				
+				</applicationClasspath>
+				<log4jProperties base="home" relpath="Ping/proactive-log4j-forked"/>
+				<securityPolicy base="home"  relpath="Ping/proactive.java.policy"/>
+			</configuration>
+			
+			
+			<virtualNode id="master" capacity="1"/>
+
+			<virtualNode id="slaves" />
+			</virtualNode>
+		</proactive>
+		
+	</application>
+
+	<resources>
+		<nodeProvider id="grid5000ssh">
+			<file path="grid5000ssh.xml"/>
+		</nodeProvider>	
+	</resources>
+
+</GCMApplication>

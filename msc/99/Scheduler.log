@@ -1,0 +1,41 @@
+[INFO 2010-12-02 16:58:31,008] Starting Scheduler, Please wait...
+[INFO 2010-12-02 16:58:33,878] Resource Manager URL was not specified, connection made to the local Resource Manager at rmi://Enterprise.NODE2:1099/
+[INFO 2010-12-02 16:58:33,894] Starting scheduler...
+[INFO 2010-12-02 16:58:33,956] Starting new Scheduler
+[INFO 2010-12-02 16:58:33,956] Creating scheduler frontend...
+[INFO 2010-12-02 16:58:35,126] Setting up scheduler security policy
+[INFO 2010-12-02 16:58:35,126] Scheduler is now ready to be started !
+[INFO 2010-12-02 16:58:35,906] Scheduler Core ready !
+[INFO 2010-12-02 16:58:39,416] Starting Hibernate...
+[INFO 2010-12-02 16:58:39,416] Drop DB : true
+[INFO 2010-12-02 16:58:39,416] Building Hibernate session Factory (configuration File : C:\tmp\LONG_Matlab\bin\windows\..\..\config/scheduler/database/hibernate/hibernate.cfg.xml )
+[INFO 2010-12-02 16:58:50,773] Hibernate successfully started !
+[INFO 2010-12-02 16:58:51,428] Found 0 jobs to retrieve
+[INFO 2010-12-02 16:58:51,600] Scheduler has just been started !
+[INFO 2010-12-02 16:58:52,442] Scheduler successfully created on rmi://Enterprise.NODE2:1099/
+[INFO 2010-12-02 16:59:33,611] demo is trying to connect
+[INFO 2010-12-02 16:59:33,626] User demo logged successfully
+[INFO 2010-12-02 16:59:33,658] demo successfully connected !
+[INFO 2010-12-02 16:59:41,707] New job submitted '1' containing 5 tasks (owner is 'demo')
+[INFO 2010-12-02 17:00:32,407] Task '10001' started on Enterprise.NODE2
+[INFO 2010-12-02 17:00:32,766] Job '1' started
+[INFO 2010-12-02 17:00:33,250] Task '10004' started on Enterprise.NODE2
+[INFO 2010-12-02 17:00:33,796] Task '10002' started on Enterprise.NODE2
+[INFO 2010-12-02 17:00:34,388] Task '10005' started on Enterprise.NODE2
+[INFO 2010-12-02 17:00:46,915] Task '10001' on job '1' terminated
+[INFO 2010-12-02 17:00:57,539] Task '10003' started on Enterprise.NODE2
+[INFO 2010-12-02 17:00:57,554] Task '10004' on job '1' terminated
+[INFO 2010-12-02 17:00:57,804] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2010-12-02 17:00:57,804] Creating query...
+[INFO 2010-12-02 17:00:57,929] Task '10002' on job '1' terminated
+[INFO 2010-12-02 17:00:58,178] Task '10003' on job '1' terminated
+[INFO 2010-12-02 17:00:58,256] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2010-12-02 17:00:58,256] Creating query...
+[INFO 2010-12-02 17:00:58,381] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2010-12-02 17:00:58,381] Creating query...
+[INFO 2010-12-02 17:00:58,490] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2010-12-02 17:00:58,490] Creating query...
+[INFO 2010-12-02 17:01:00,643] Task '10005' on job '1' terminated
+[INFO 2010-12-02 17:01:00,799] Job '1' terminated
+[INFO 2010-12-02 17:01:00,862] Trying to recover class org.ow2.proactive.scheduler.task.TaskResultImpl using 1 conditions
+[INFO 2010-12-02 17:01:00,862] Creating query...

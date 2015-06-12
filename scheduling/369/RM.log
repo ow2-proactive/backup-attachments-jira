@@ -1,0 +1,69 @@
+[INFO 2009-07-23 10:17:24,787] [RM.RMStarter.main] Starting Resource Manager, Please wait...
+[INFO 2009-07-23 10:17:25,870] [RM.NativeMethodAccessorImpl.invoke0] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[INFO 2009-07-23 10:17:25,918] [RM.NativeMethodAccessorImpl.invoke0] jetty-6.1.11
+[INFO 2009-07-23 10:17:26,032] [RM.NativeMethodAccessorImpl.invoke0] Started SelectChannelConnector@0.0.0.0:59264
+[INFO 2009-07-23 10:17:26,079] [RM.RemoteObjectProtocolFactoryRegistry.<clinit>] Remote Object Factory provider <pamr, class org.objectweb.proactive.extra.messagerouting.remoteobject.MessageRoutingRemoteObjectFactory> found
+[INFO 2009-07-23 10:17:26,129] [RM.RegistryHelper.getOrCreateRegistry] Created a new registry on port 1099
+[INFO 2009-07-23 10:17:26,746] [RM.RMFactory.startLocal] New RM core localy started
+[INFO 2009-07-23 10:17:26,747] [RM.RMStarter.main] (Once started, press 'e' to shutdown)
+[INFO 2009-07-23 10:17:26,751] [RM.PAActiveObject.registerByName] Success at binding url rmi://192.168.1.20:1099/40e8e82e-122a6afa5aa--7fcd--2f643de88442ba0f-40e8e82e-122a6afa5aa--8000
+[INFO 2009-07-23 10:17:26,824] [RM.PAActiveObject.registerByName] Success at binding url rmi://192.168.1.20:1099/RMAUTHENTICATION
+[INFO 2009-07-23 10:17:26,887] [RM.PAActiveObject.registerByName] Success at binding url rmi://192.168.1.20:1099/40e8e82e-122a6afa5aa--7f73--2f643de88442ba0f-40e8e82e-122a6afa5aa--8000
+[INFO 2009-07-23 10:17:27,014] [RM.PAActiveObject.registerByName] Success at binding url rmi://192.168.1.20:1099/RMUSER
+[INFO 2009-07-23 10:17:27,160] [RM.PAActiveObject.registerByName] Success at binding url rmi://192.168.1.20:1099/40e8e82e-122a6afa5aa--7ee3--2f643de88442ba0f-40e8e82e-122a6afa5aa--8000
+[INFO 2009-07-23 10:17:27,161] [RM.RMCore.createNodesource] Creating a Node source : Default
+[INFO 2009-07-23 10:17:27,471] [RM.RMCore.createNodesource] Node source : Default has been successfully created
+[INFO 2009-07-23 10:17:27,472] [RM.NodeSource.activate] [Default] Activating the policy Static Policy
+[INFO 2009-07-23 10:17:27,473] [RM.RMCore.initActivity] Resource Manager successfully created on rmi://192.168.1.20:1099/
+[INFO 2009-07-23 10:17:27,497] [RM.NodeSourcePolicy.info] [Default] Acquiring all nodes
+[INFO 2009-07-23 10:17:30,708] [RM.AuthenticationImpl.loginAs] jl is trying to connect as admin
+[INFO 2009-07-23 10:17:30,770] [RM.FileLoginModule.login] authentication succeeded for user 'jl' in group 'admin'
+[INFO 2009-07-23 10:17:30,770] [RM.AuthenticationImpl.loginAs] Logged successfull as a admin : jl
+[INFO 2009-07-23 10:17:45,888] [RM.AuthenticationImpl.loginAs] jl is trying to connect as admin
+[INFO 2009-07-23 10:17:45,888] [RM.FileLoginModule.login] authentication succeeded for user 'jl' in group 'admin'
+[INFO 2009-07-23 10:17:45,889] [RM.AuthenticationImpl.loginAs] Logged successfull as a admin : jl
+[INFO 2009-07-23 10:17:45,980] [RM.NodeSource.internalAddNode] [Default] new node available : rmi://192.168.1.152:1100/agent1
+[INFO 2009-07-23 10:17:46,030] [RM.RMCore.internalAddNodeToCore] New node added, node ID is : rmi://192.168.1.152:1100/agent1, node Source : Default
+[WARN 2009-07-23 10:17:47,496] [RM.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://192.168.1.152:1100/6641ac31-122a6afec4e--7fdf--9069ca78e7450a28-6641ac31-122a6afec4e--8000 when calling receiveReply
+[WARN 2009-07-23 10:17:47,497] [RM.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://192.168.1.152:1100/6641ac31-122a6afec4e--7fdf--9069ca78e7450a28-6641ac31-122a6afec4e--8000 when calling receiveReply
+[ERROR 2009-07-23 10:17:47,500] [RM.BodyImpl$ActiveLocalBodyStrategy.serveInternal] Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:574)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:185)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:171)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:94)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:169)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:77)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveReply(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveReply(UniversalBodyRemoteObjectAdapter.java:173)
+	at org.objectweb.proactive.core.body.reply.ReplyImpl.send(ReplyImpl.java:150)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serveInternal(BodyImpl.java:621)
+	at org.objectweb.proactive.core.body.BodyImpl$ActiveLocalBodyStrategy.serve(BodyImpl.java:525)
+	at org.objectweb.proactive.core.body.AbstractBody.serve(AbstractBody.java:922)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:175)
+	at org.objectweb.proactive.Service.blockingServeOldest(Service.java:150)
+	at org.objectweb.proactive.Service.fifoServing(Service.java:126)
+	at org.objectweb.proactive.core.body.ActiveBody$FIFORunActive.runActivity(ActiveBody.java:317)
+	at org.objectweb.proactive.core.body.ActiveBody.run(ActiveBody.java:197)
+	at java.lang.Thread.run(Thread.java:595)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:520)
+	at java.net.Socket.connect(Socket.java:470)
+	at java.net.Socket.<init>(Socket.java:367)
+	at java.net.Socket.<init>(Socket.java:180)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:22)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:128)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:569)
+	... 18 more
+[INFO 2009-07-23 10:18:12,468] [RM.MOPClassLoader.loadClass] Generating class : pa.stub.java.util._StubLinkedList
+[WARN 2009-07-23 10:24:59,421] [RM.RemoteObjectAdapter.receiveMessage] unable to contact remote object at rmi://192.168.1.152:1100/agent1 when calling getActiveObjects
+[INFO 2009-07-23 10:24:59,422] [RM.NodeSource.detectedPingedDownNode] [Default] Detected down node rmi://192.168.1.152:1100/agent1
+[INFO 2009-07-23 10:24:59,423] [RM.RMCore.internalSetDown] Down node : rmi://192.168.1.152:1100/agent1, from Source : Default

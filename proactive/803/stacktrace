@@ -1,0 +1,36 @@
+ERREUR :  'A bug occured during the XSLT variable replacement. The number of variables and values does not match: #variables=6 #values5'
+org.objectweb.proactive.core.ProActiveException: Failed to create GCMApplication: problem when evaluating variables with document file:/auto/sop-nas2a/u/sop-nas2a/vol/home_oasis/lpellegr/workspace-soa4all/soa4all-space/soa4all-space-overlay-samples/target/soa4all-spaces/deployment/GCMA.xml, see embded message for more details
+	at org.objectweb.proactive.extensions.gcmdeployment.GCMApplication.GCMApplicationImpl.<init>(GCMApplicationImpl.java:288)
+	at org.objectweb.proactive.extensions.gcmdeployment.PAGCMDeployment.loadApplicationDescriptor(PAGCMDeployment.java:109)
+	at org.objectweb.proactive.extensions.gcmdeployment.PAGCMDeployment.loadApplicationDescriptor(PAGCMDeployment.java:91)
+	at eu.soa4all.dsb.space.overlay.deployment.NodeProvider.deploy(NodeProvider.java:61)
+	at eu.soa4all.dsb.space.overlay.deployment.NodeProvider.<init>(NodeProvider.java:55)
+	at eu.soa4all.dsb.space.overlay.samples.launchers.DeploymentLauncher.startNodeProvider(DeploymentLauncher.java:33)
+	at eu.soa4all.dsb.space.overlay.samples.launchers.DeploymentLauncher.startDeployment(DeploymentLauncher.java:87)
+	at eu.soa4all.dsb.space.overlay.samples.launchers.DeploymentLauncher.main(DeploymentLauncher.java:98)
+Caused by: javax.xml.transform.TransformerException: problem when evaluating variables with document file:/auto/sop-nas2a/u/sop-nas2a/vol/home_oasis/lpellegr/workspace-soa4all/soa4all-space/soa4all-space-overlay-samples/target/soa4all-spaces/deployment/GCMA.xml
+	at org.objectweb.proactive.extensions.gcmdeployment.GCMApplication.GCMApplicationParserImpl.<init>(GCMApplicationParserImpl.java:164)
+	at org.objectweb.proactive.extensions.gcmdeployment.GCMApplication.GCMApplicationParserImpl.<init>(GCMApplicationParserImpl.java:127)
+	at org.objectweb.proactive.extensions.gcmdeployment.GCMApplication.GCMApplicationImpl.<init>(GCMApplicationImpl.java:221)
+	... 7 more
+Caused by: javax.xml.transform.TransformerException: java.lang.IllegalStateException: A bug occured during the XSLT variable replacement. The number of variables and values does not match: #variables=6 #values5
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:716)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:313)
+	at org.objectweb.proactive.extensions.gcmdeployment.environment.EnvironmentTransformer.transform(EnvironmentTransformer.java:104)
+	at org.objectweb.proactive.extensions.gcmdeployment.environment.Environment.replaceVariables(Environment.java:116)
+	at org.objectweb.proactive.extensions.gcmdeployment.GCMApplication.GCMApplicationParserImpl.<init>(GCMApplicationParserImpl.java:147)
+	... 9 more
+Caused by: java.lang.IllegalStateException: A bug occured during the XSLT variable replacement. The number of variables and values does not match: #variables=6 #values5
+	at org.objectweb.proactive.extensions.gcmdeployment.environment.ReplaceVariables.init(ReplaceVariables.java:62)
+	at GregorSamsa.http$colon$$slash$$slash$www$dash$sop$dot$inria$dot$fr$slash$oasis$slash$ProActive$slash$schemas$colon$template$dot$0()
+	at GregorSamsa.applyTemplates()
+	at GregorSamsa.transform()
+	at com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet.transform(AbstractTranslet.java:602)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:709)
+	... 13 more
+Exception in thread "main" java.lang.NullPointerException
+	at eu.soa4all.dsb.space.overlay.deployment.NodeProvider.deploy(NodeProvider.java:65)
+	at eu.soa4all.dsb.space.overlay.deployment.NodeProvider.<init>(NodeProvider.java:55)
+	at eu.soa4all.dsb.space.overlay.samples.launchers.DeploymentLauncher.startNodeProvider(DeploymentLauncher.java:33)
+	at eu.soa4all.dsb.space.overlay.samples.launchers.DeploymentLauncher.startDeployment(DeploymentLauncher.java:87)
+	at eu.soa4all.dsb.space.overlay.samples.launchers.DeploymentLauncher.main(DeploymentLauncher.java:98)

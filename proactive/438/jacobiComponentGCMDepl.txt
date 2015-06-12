@@ -1,0 +1,321 @@
+--- GCM application: Jacobi example ---------------------
+ --> This ClassFileServer is listening on port 2026 
+Created a new registry on port 6612 
+Generating class : pa.stub.org.objectweb.proactive.core.jmx.util._StubJMXNotificationListener 
+Generating class : pa.stub.org.objectweb.proactive.gcmdeployment._StubGCMApplication 
+Starting a process on localhost 
+executing command="java" -cp "/user/cdalmass/home/workspace/ProActiveJacobiComponent/dist/lib/ProActive.jar:/user/cdalmass/home/workspace/ProActiveJacobiComponent/dist/lib/ProActive_examples.jar" -Djava.security.policy="../proactive.java.policy" org.objectweb.proactive.extensions.gcmdeployment.core.StartRuntime -p rmi://dalmatie.inria.fr:6612/PA_JVM9360191 -c 2 -i 1 -d 7986450351085190186  &"java" -cp "/user/cdalmass/home/workspace/ProActiveJacobiComponent/dist/lib/ProActive.jar:/user/cdalmass/home/workspace/ProActiveJacobiComponent/dist/lib/ProActive_examples.jar" -Djava.security.policy="../proactive.java.policy" org.objectweb.proactive.extensions.gcmdeployment.core.StartRuntime -p rmi://dalmatie.inria.fr:6612/PA_JVM9360191 -c 2 -i 1 -d 7986450351085190186  
+
+--- using default total width 1680 and total height 1680 ---
+
+
+********************************************************
+Running component version of jacobi computation with the following parameters:
+           total width = 1680
+          total height = 1680
+  number of iterations = 100
+   number of submatrix = 4
+    data sending mode  = multicast
+********************************************************
+
+Starting a ProActiveRuntime on dalmatie.inria.fr  
+Starting a ProActiveRuntime on dalmatie.inria.fr  
+ --> This ClassFileServer is listening on port 2033  
+Detected an existing RMI Registry on port 6612  
+ --> This ClassFileServer is listening on port 2034  
+Jacobi.main()XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Instantiate components...
+Jacobi.main()org.objectweb.proactive.examples.components.jacobi.SubMatrix(840;840,0;0,2;2,100)
+Detected an existing RMI Registry on port 6612  
+Generating class : pa.stub.org.objectweb.proactive.gcmdeployment._StubGCMVirtualNode 
+Generating class : pa.stub.org.objectweb.proactive.examples.components.jacobi._StubSubMatrixComponent 
+Generating class : pa.stub.org.objectweb.proactive.core.component._StubProActiveInterfaceImpl  
+Jacobi.main()org.objectweb.proactive.examples.components.jacobi.SubMatrix(840;840,0;1,2;2,100)
+Jacobi.main()org.objectweb.proactive.examples.components.jacobi.SubMatrix(840;840,1;0,2;2,100)
+Jacobi.main()org.objectweb.proactive.examples.components.jacobi.SubMatrix(840;840,1;1,2;2,100)
+
+Bind components...
+Jacobi.main() components[x][y]: name : component
+org.objectweb.proactive.core.component.type.ProActiveComponentTypeImpl@1ae81ab
+isInternal : false
+
+Cannot generate class : CgeneratedCCgeneratedorgCCPobjectwebCCPproactiveCCPexamplesCCPcomponentsCCPjacobiCCPGathercastDataReceiverCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative  
+ClassServer failed to load class CgeneratedCCgeneratedorgCCPobjectwebCCPproactiveCCPexamplesCCPcomponentsCCPjacobiCCPGathercastDataReceiverCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative  
+java.lang.ClassNotFoundException: CgeneratedCCgeneratedorgCCPobjectwebCCPproactiveCCPexamplesCCPcomponentsCCPjacobiCCPGathercastDataReceiverCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+org.objectweb.fractal.api.factory.InstantiationException: cannot find interface defined in component interface signature : CgeneratedorgCPobjectwebCPproactiveCPexamplesCPcomponentsCPjacobiCPGathercastDataReceiverCOreceiverCgathercastItfProxy 
+	at org.objectweb.proactive.core.component.type.ProActiveInterfaceTypeImpl.checkIsStream(ProActiveInterfaceTypeImpl.java:120) 
+	at org.objectweb.proactive.core.component.type.ProActiveInterfaceTypeImpl.<init>(ProActiveInterfaceTypeImpl.java:104) 
+	at org.objectweb.proactive.core.component.type.ProActiveTypeFactoryImpl.createFcItfType(ProActiveTypeFactoryImpl.java:75) 
+	at org.objectweb.proactive.core.component.gen.RepresentativeInterfaceClassGenerator.generateInterfaceByteCode(RepresentativeInterfaceClassGenerator.java:165) 
+	at org.objectweb.proactive.core.component.gen.Utils.getClassData(Utils.java:213) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:103) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+Caused by: java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPexamplesCPcomponentsCPjacobiCPGathercastDataReceiverCOreceiverCgathercastItfProxy 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.component.type.ProActiveInterfaceTypeImpl.checkIsStream(ProActiveInterfaceTypeImpl.java:117) 
+	... 6 more 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPexamplesCPcomponentsCPjacobiCPSubMatrixAttributesCOattributeCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPfractalCPapiCPcontrolCPNameCControllerCOnameCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPProActiveBindingCControllerCObindingCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPMigrationCControllerCOmigrationCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPMulticastCControllerCOmulticastCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPGathercastCControllerCOgathercastCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPProActiveLifeCCycleCControllerCOlifecycleCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+java.lang.ClassNotFoundException: CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPProActiveSuperCControllerCOsuperCIcontrollerCrepresentative 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200) 
+	at java.security.AccessController.doPrivileged(Native Method) 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306) 
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:276) 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251) 
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319) 
+	at java.lang.Class.forName0(Native Method) 
+	at java.lang.Class.forName(Class.java:169) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:187) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.loadClass(MOPClassLoader.java:153) 
+	at org.objectweb.proactive.core.mop.MOPClassLoader.getClassData(MOPClassLoader.java:82) 
+	at org.objectweb.proactive.core.rmi.FileProcess.getBytes(FileProcess.java:95) 
+	at org.objectweb.proactive.core.rmi.HTTPRequestHandler.run(HTTPRequestHandler.java:158) 
+Generating class : pa.stub.org.objectweb.proactive.examples.components.jacobi._StubSubMatrixComponent  
+unable to contact remote object at rmi://dalmatie.inria.fr:6612/7eb35a27-11b44a7571e--7fe4--8aa30155a4ac21e7-7eb35a27-11b44a7571e--8000 when calling receiveRequest 
+org.objectweb.proactive.core.body.exceptions.SendRequestCommunicationException: Exception occured in reifyAsSynchronous while sending request for methodcall = bindFc
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:265)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.invokeOnBody(AbstractBodyProxy.java:157)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reify(AbstractBodyProxy.java:112)
+	at CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPProActiveBindingCControllerCObindingCIcontrollerCrepresentative.bindFc(CgeneratedorgCPobjectwebCPproactiveCPcoreCPcomponentCPcontrollerCPProActiveBindingCControllerCObindingCIcontrollerCrepresentative.java)
+	at org.objectweb.proactive.examples.components.jacobi.JacobiGCMDeployment.main(JacobiGCMDeployment.java:186)
+Caused by: java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.lang.ClassNotFoundException: CgeneratedCCgeneratedorgCCPobjectwebCCPproactiveCCPexamplesCCPcomponentsCCPjacobiCCPGathercastDataReceiverCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:336)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.objectweb.proactive.core.remoteobject.rmi.RmiRemoteObjectImpl_Stub.receiveMessage(Unknown Source)
+	at org.objectweb.proactive.core.remoteobject.RemoteObjectAdapter.receiveMessage(RemoteObjectAdapter.java:162)
+	at org.objectweb.proactive.core.remoteobject.SynchronousProxy.reify(SynchronousProxy.java:72)
+	at pa.stub.org.objectweb.proactive.core.body._StubUniversalBody.receiveRequest(_StubUniversalBody.java)
+	at org.objectweb.proactive.core.body.UniversalBodyRemoteObjectAdapter.receiveRequest(UniversalBodyRemoteObjectAdapter.java:170)
+	at org.objectweb.proactive.core.body.request.RequestImpl.sendRequest(RequestImpl.java:303)
+	at org.objectweb.proactive.core.body.request.RequestImpl.send(RequestImpl.java:156)
+	at org.objectweb.proactive.core.body.HalfBody$HalfLocalBodyStrategy.sendRequest(HalfBody.java:279)
+	at org.objectweb.proactive.core.body.AbstractBody.sendRequest(AbstractBody.java:950)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequestInternal(UniversalBodyProxy.java:394)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:373)
+	at org.objectweb.proactive.core.body.proxy.UniversalBodyProxy.sendRequest(UniversalBodyProxy.java:321)
+	at org.objectweb.proactive.core.body.proxy.AbstractBodyProxy.reifyAsSynchronous(AbstractBodyProxy.java:263)
+	... 4 more
+Caused by: java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.lang.ClassNotFoundException: CgeneratedCCgeneratedorgCCPobjectwebCCPproactiveCCPexamplesCCPcomponentsCCPjacobiCCPGathercastDataReceiverCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:296)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:885)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: java.lang.ClassNotFoundException: CgeneratedCCgeneratedorgCCPobjectwebCCPproactiveCCPexamplesCCPcomponentsCCPjacobiCCPGathercastDataReceiverCCOreceiverCCgathercastItfProxyCOreceiverCrepresentative
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:434)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:165)
+	at java.rmi.server.RMIClassLoader$2.loadClass(RMIClassLoader.java:620)
+	at java.rmi.server.RMIClassLoader.loadClass(RMIClassLoader.java:247)
+	at sun.rmi.server.MarshalInputStream.resolveClass(MarshalInputStream.java:197)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1575)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1496)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1732)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1667)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1323)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1945)
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:480)
+	at org.objectweb.proactive.core.mop.MethodCall.readTheObject(MethodCall.java:520)
+	at org.objectweb.proactive.core.mop.MethodCall.readObject(MethodCall.java:515)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1846)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1945)
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:480)
+	at org.objectweb.proactive.core.body.request.RequestImpl.readTheObject(RequestImpl.java:401)
+	at org.objectweb.proactive.core.body.request.RequestImpl.readObject(RequestImpl.java:396)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1846)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readArray(ObjectInputStream.java:1667)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1323)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1945)
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:480)
+	at org.objectweb.proactive.core.mop.MethodCall.readTheObject(MethodCall.java:520)
+	at org.objectweb.proactive.core.mop.MethodCall.readObject(MethodCall.java:515)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1846)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1945)
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:480)
+	at org.objectweb.proactive.core.body.request.RequestImpl.readTheObject(RequestImpl.java:401)
+	at org.objectweb.proactive.core.body.request.RequestImpl.readObject(RequestImpl.java:396)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:974)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1846)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at sun.rmi.server.UnicastRef.unmarshalValue(UnicastRef.java:306)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:290)
+	... 9 more
+End of computation.
+---------------------------------------------------------

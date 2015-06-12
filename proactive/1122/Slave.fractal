@@ -1,0 +1,9 @@
+<!DOCTYPE definition PUBLIC "-//objectweb.org//DTD Fractal ADL 2.0//EN" "classpath://org/objectweb/proactive/core/component/adl/xml/proactive.dtd">
+
+<definition name="fr.inria.oasis.proactive.components.test.Slave">
+    <interface signature="fr.inria.oasis.proactive.components.test.Slave" role="server" name="i1"/>
+
+    <content class="fr.inria.oasis.proactive.components.test.SlaveImpl"/>
+
+    <controller desc="primitive"/>
+</definition>

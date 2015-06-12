@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job 
+	xmlns="urn:proactive:jobdescriptor:0.9" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="urn:proactive:jobdescriptor:0.9 http://proactive.inria.fr/schemas/jobdescriptor/0.9/schedulerjob.xsd"
+	
+	name="ProActive" priority="normal" cancelOnException="true">
+	
+	<description>Run Junit Tests with a random JDK</description>
+	
+		<variables>
+			<variable name="COMPILE_DIR" value="/user/cmathieu/home/TMP/JunitBatch/compile"/>		
+		</variables>
+	<taskFlow>
+		<task name="junit" preciousResult="true">
+			<description>Plop</description>
+			<nativeExecutable>
+				<staticCommand	value="bash ${COMPILE_DIR}/randomJunit.sh"/>
+			</nativeExecutable>
+		</task>
+	</taskFlow>
+</job>
+

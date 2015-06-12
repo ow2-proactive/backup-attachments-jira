@@ -1,0 +1,352 @@
+diff --git a/compile/META-INF/services/org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory.MessageRoutingSocketFactorySPI b/compile/META-INF/services/org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory.MessageRoutingSocketFactorySPI
+new file mode 100644
+index 0000000..75089fc
+--- /dev/null
++++ b/compile/META-INF/services/org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory.MessageRoutingSocketFactorySPI
+@@ -0,0 +1,2 @@
++org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory.MessageRoutingPlainSocketFactory
++org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory.MessageRoutingSshSocketFactory
+\ No newline at end of file
+diff --git a/src/Core/org/objectweb/proactive/core/config/PAProperties.java b/src/Core/org/objectweb/proactive/core/config/PAProperties.java
+index c0db450..201672a 100644
+--- a/src/Core/org/objectweb/proactive/core/config/PAProperties.java
++++ b/src/Core/org/objectweb/proactive/core/config/PAProperties.java
+@@ -266,6 +266,11 @@ public enum PAProperties {
+      * 
+      */
+     PA_NET_ROUTER_PORT("proactive.net.router.port", PAPropertiesType.INTEGER),
++    
++    /**
++     * The Socket Factory to use by the message routing protocol
++     */
++    PA_PAMR_SOCKET_FACTORY("proactive.communication.pamr.socketfactory", PAPropertiesType.STRING),
+ 
+     /* ------------------------------------
+      *  RMI
+diff --git a/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml b/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
+index a691351..c1f01a3 100644
+--- a/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
++++ b/src/Core/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
+@@ -20,6 +20,8 @@
+         <prop key="schema.validation" value="true" />
+         <prop key="proactive.communication.protocol" value="rmi" />
+         <prop key="proactive.rmi.port" value="1099" />
++		<!-- by default, use normal sockets for pamr communication -->
++		<prop key="proactive.communication.pamr.socketfactory" value="plain" />
+        
+        <!--<prop key="proactive.java.policy" value="../../../../../../scripts/unix/proactive.java.policy"/>-->
+         <prop key="fractal.provider" value="org.objectweb.proactive.core.component.Fractive" />
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/client/Tunnel.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/client/Tunnel.java
+index f52748a..550318a 100644
+--- a/src/Extra/org/objectweb/proactive/extra/messagerouting/client/Tunnel.java
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/client/Tunnel.java
+@@ -41,6 +41,7 @@ import org.apache.log4j.Logger;
+ import org.objectweb.proactive.core.util.log.Loggers;
+ import org.objectweb.proactive.core.util.log.ProActiveLogger;
+ import org.objectweb.proactive.extra.messagerouting.protocol.TypeHelper;
++import org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory.MessageRoutingSocketFactoryInstaller;
+ 
+ 
+ /** The entity in charge to send and receive data on the wire
+@@ -64,7 +65,8 @@ public class Tunnel {
+     final private String debugString;
+ 
+     public Tunnel(InetAddress routerAddr, int routerPort) throws IOException {
+-        this(new Socket(routerAddr, routerPort));
++        this(MessageRoutingSocketFactoryInstaller.socketFactory.
++        		createSocket(routerAddr.getHostAddress(), routerPort));
+     }
+ 
+     public Tunnel(Socket socket) throws IOException {
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingPlainSocketFactory.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingPlainSocketFactory.java
+new file mode 100644
+index 0000000..31ab1f5
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingPlainSocketFactory.java
+@@ -0,0 +1,51 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory;
++
++import java.io.IOException;
++import java.net.Socket;
++
++/**
++ * The default implementation for message routing socket factory
++ * It offers plain(simple), unsecured sockets
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public class MessageRoutingPlainSocketFactory implements
++		MessageRoutingSocketFactorySPI {
++
++	@Override
++	public Socket createSocket(String host, int port) throws IOException {
++		return new Socket(host,port);
++	}
++
++}
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSocketFactoryInstaller.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSocketFactoryInstaller.java
+new file mode 100644
+index 0000000..aca0fa0
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSocketFactoryInstaller.java
+@@ -0,0 +1,108 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory;
++
++import java.util.Iterator;
++import javax.imageio.spi.ServiceRegistry;
++
++import org.apache.log4j.Logger;
++import org.objectweb.proactive.core.config.PAProperties;
++import org.objectweb.proactive.core.util.log.Loggers;
++import org.objectweb.proactive.core.util.log.ProActiveLogger;
++
++/**
++ * This class will instantiate the appropriate Socket Factory
++ * according to user preferences 
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public class MessageRoutingSocketFactoryInstaller {
++	
++	static final Logger logger = ProActiveLogger.getLogger(Loggers.FORWARDING_CLIENT_TUNNEL);
++
++    public static MessageRoutingSocketFactorySPI socketFactory = installSocketFactory();
++    
++    /**
++     * aliases for the Socket Factories provided with ProActive
++     */
++    private static final String PLAIN_ALIAS = "plain";
++    private static final String SSH_ALIAS = "ssh";
++    
++    private static MessageRoutingSocketFactorySPI installSocketFactory() {
++    	
++    	if(!PAProperties.PA_PAMR_SOCKET_FACTORY.isSet()){
++    		// the user wants the default
++    		return getDefaultSocketFactory();
++    	}
++    	
++    	String socketFactory = PAProperties.PA_PAMR_SOCKET_FACTORY.getValue();
++    	if(socketFactory.equals(PLAIN_ALIAS)){
++    		if(logger.isDebugEnabled())
++    			logger.debug("Installing a simple socket factory for message routing");
++    		return new MessageRoutingPlainSocketFactory();
++    	}
++    	else if(socketFactory.equals(SSH_ALIAS)){
++    		if(logger.isDebugEnabled())
++    			logger.debug("Installing a SSH socket factory for message routing");
++    		return new MessageRoutingSshSocketFactory();
++    	}
++    	else {
++    		// I assume it is a class name; search it through the available service providers
++    		Iterator<MessageRoutingSocketFactorySPI> socketFactories = ServiceRegistry.lookupProviders(MessageRoutingSocketFactorySPI.class);
++    		try {
++    			while (socketFactories.hasNext()) {
++    	            MessageRoutingSocketFactorySPI factory = socketFactories.next();
++    	            if(factory.getClass().getName().equals(socketFactory)) {
++    	            	if(logger.isDebugEnabled())
++    	        			logger.debug("Installing the " + socketFactory + " socket factory for message routing");
++    	            	return factory;
++    	            }
++    			}
++    		}
++    		catch(Error e){
++    			// go for the default
++    			return getDefaultSocketFactory();
++    		}
++    		
++    		// everything else failed => go for the default
++    		if(logger.isDebugEnabled())
++    			logger.debug(socketFactory + " is neither an alias for a socket factory provided with ProActive,\n" +
++    					"	nor a class name for a socket factory which could be found using the service provider mechanisms.\n" +
++    					"	Will instantiate the default, plain socket factory.");
++    		return getDefaultSocketFactory();
++    	}
++	}
++    
++    private static MessageRoutingSocketFactorySPI getDefaultSocketFactory() {
++    	return new MessageRoutingPlainSocketFactory();
++    }
++}
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSocketFactorySPI.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSocketFactorySPI.java
+new file mode 100644
+index 0000000..a673165
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSocketFactorySPI.java
+@@ -0,0 +1,56 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory;
++
++import java.io.IOException;
++import java.net.Socket;
++
++/**
++ * Interface for pluggable socket factories
++ * The loaded implementation will be used to provide the socket 
++ * that is used by the agent to communicate with the router 
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public interface MessageRoutingSocketFactorySPI {
++
++    /**
++     * Create a client socket connected to the specified host and port.
++     * @param  host   the host name
++     * @param  port   the port number
++     * @return a socket connected to the specified host and port.
++     * @exception IOException if an I/O error occurs during socket creation
++     * @since 1.2
++     */
++    public Socket createSocket(String host, int port)
++		throws IOException;
++}
+diff --git a/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSshSocketFactory.java b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSshSocketFactory.java
+new file mode 100644
+index 0000000..3cf3e41
+--- /dev/null
++++ b/src/Extra/org/objectweb/proactive/extra/messagerouting/remoteobject/util/socketfactory/MessageRoutingSshSocketFactory.java
+@@ -0,0 +1,53 @@
++/*
++ * ################################################################
++ *
++ * ProActive: The Java(TM) library for Parallel, Distributed,
++ *            Concurrent computing with Security and Mobility
++ *
++ * Copyright (C) 1997-2009 INRIA/University of Nice-Sophia Antipolis
++ * Contact: proactive@objectweb.org
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License
++ * as published by the Free Software Foundation; either version
++ * 2 of the License, or any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
++ * USA
++ *
++ *  Initial developer(s):               The ProActive Team
++ *                        http://proactive.inria.fr/team_members.htm
++ *  Contributor(s):
++ *
++ * ################################################################
++ */
++package org.objectweb.proactive.extra.messagerouting.remoteobject.util.socketfactory;
++
++import java.io.IOException;
++import java.net.Socket;
++
++import org.objectweb.proactive.core.ssh.rmissh.SshSocket;
++
++/**
++ * This implementation for message routing socket factory
++ * offers secure SSH sockets
++ * @author fabratu
++ * @version %G%, %I%
++ * @since ProActive 4.10
++ */
++public class MessageRoutingSshSocketFactory implements
++		MessageRoutingSocketFactorySPI {
++
++	@Override
++	public Socket createSocket(String host, int port) throws IOException {
++		return new SshSocket(host,port);
++	}
++
++}

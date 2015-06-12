@@ -1,0 +1,698 @@
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Looking for Matlab...
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Checking Processes...
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Starting the Java Process
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Starting a new JVM
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 RegistrationListener] Subscribe JMX Runtime
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 RegistrationListener] Subscribed
+Starting Process:
+["C:\Program, Files\Java\jdk1.6.0_18\jre\bin\java", -Djava.library.path="C:\tmp\LONG_Matlab\dist\lib\7.5\bin\win64", -Dproactive.configuration=file:/C:/Users/ADMINI~1/AppData/Local/Temp/2/c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000/ProActiveConfiguration.xml, -cp, C:\tmp\LONG_Matlab\dist\lib\7.5\bin\win64;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\script-js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jruby-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jython-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-logging-1.1.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_SRM-common.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_ResourceManager.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-worker.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-matsci.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-httpclient-3.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-codec-1.3.jar, -Djava.security.policy=C:\tmp\LONG_Matlab\bin\windows\..\..\config\security.java.policy-client, -Dlog4j.configuration=file:C:\tmp\LONG_Matlab\bin\windows\..\..\config\log4j\defaultNode-log4j, org.objectweb.proactive.core.runtime.StartPARuntime, -d, 1691245532, -c, 1, -p, rmi://Enterprise.NODE2:1099/PA_JVM1319969786]
+With Environment: {
+USERPROFILE=C:\Users\Administrator
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_18
+JAVA_HOME2=C:\Program Files (x86)\Java\jdk1.6.0_14
+SystemDrive=C:
+JAVA_POLICY=file:C:\tmp\LONG_Matlab\bin\windows\..\../config/security.java.policy-server
+Path=C:\Program Files\MATLAB\R2007b\;C:\Program Files\MATLAB\R2007b\bin\win64;C:\Program Files\MATLAB\R2007b\bin;C:\Program Files\Java\jdk1.6.0_18\bin;C:\Program Files\Microsoft HPC Pack\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;C:\Program Files\MATLAB\R2010b\runtime\win64;C:\Program Files\MATLAB\R2010b\bin;C:\Program Files\MATLAB\R2008b\bin;C:\Program Files\MATLAB\R2008b\bin\win64;C:\Program Files\MATLAB\R2007b\bin;C:\Program Files\MATLAB\R2007b\bin\win64;c:\jruby-1.5.1\bin;C:\Program Files\Java\jdk1.6.0_18\bin;C:\Program Files\Microsoft HPC Pack\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;C:\Program Files\MATLAB\R2010b\runtime\win64;C:\Program Files\MATLAB\R2010b\bin;C:\Program Files\MATLAB\R2008b\bin;C:\Program Files\MATLAB\R2008b\bin\win64;C:\Program Files\MATLAB\R2007b\bin;C:\Program Files\MATLAB\R2007b\bin\win64;C:\tmp\LONG_Matlab\dist\lib\7.5\bin\win64
+PROCESSOR_REVISION=0f0b
+CLIENTNAME=pendule
+USERDOMAIN=NODE2
+ALLUSERSPROFILE=C:\ProgramData
+NODE_NAME=c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000
+SESSIONNAME=RDP-Tcp#0
+MATLAB=C:\Program Files\MATLAB\R2007b\bin\matlab.exe
+CCP_HOME=C:\Program Files\Microsoft HPC Pack\
+TMP=C:\Users\ADMINI~1\AppData\Local\Temp\2
+CommonProgramFiles=C:\Program Files\Common Files
+LOGONSERVER=\\NODE2
+PROMPT=$P$G
+VS100COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\
+PROCESSOR_LEVEL=6
+LOCALAPPDATA=C:\Users\Administrator\AppData\Local
+COMPUTERNAME=NODE2
+SystemRoot=C:\Windows
+USERNAME=Administrator
+APPDATA=C:\Users\Administrator\AppData\Roaming
+ProgramData=C:\ProgramData
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+ProgramFiles(x86)=C:\Program Files (x86)
+CCP_SCHEDULER=node1
+PA_SCHEDULER=C:\tmp\LONG_Matlab\bin\windows\..\..
+MATLAB_RESERVE_LO=0
+TEMP=C:\Users\ADMINI~1\AppData\Local\Temp\2
+ProgramFiles=C:\Program Files
+JAVA_CMD="C:\Program Files\Java\jdk1.6.0_18\bin\java.exe" -Dproactive.home="C:\tmp\LONG_Matlab\bin\windows\..\.." -Dproactive.configuration="file:C:\tmp\LONG_Matlab\bin\windows\..\..\config\proactive\ProActiveConfiguration.xml" -Dpa.scheduler.home="C:\tmp\LONG_Matlab\bin\windows\..\.." -Dpa.rm.home="C:\tmp\LONG_Matlab\bin\windows\..\.." -Djava.security.manager -Djava.security.policy="file:C:\tmp\LONG_Matlab\bin\windows\..\../config/security.java.policy-server" -Dlog4j.configuration="file:C:\tmp\LONG_Matlab\bin\windows\..\../config/log4j/rm-log4j-server"
+LOG4J_FILE=file:C:\tmp\LONG_Matlab\bin\windows\..\../config/log4j/rm-log4j-server
+HOMEDRIVE=C:
+OK=1
+=C:=C:\tmp\LONG_Matlab\bin\windows
+CCP_DATA=C:\Program Files\Microsoft HPC Pack\Data\
+VS90COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\Tools\
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 15 Stepping 11, GenuineIntel
+comm=""java" -Dproactive.http.jetty.xml="C:\tmp\LONG_Matlab\bin\windows\..\../config/rm/deployment/jetty.xml" -cp "C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\script-js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jruby-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jython-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-logging-1.1.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_SRM-common.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_ResourceManager.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-worker.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-matsci.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-httpclient-3.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-codec-1.3.jar" -Dlog4j.configuration="file:C:\tmp\LONG_Matlab\bin\windows\..\..\config\log4j\defaultNode-log4j" -Djava.security.policy="C:\tmp\LONG_Matlab\bin\windows\..\..\config\security.java.policy-client" org.objectweb.proactive.core.runtime.StartPARuntime -p rmi://Enterprise.NODE2:1099/PA_JVM607068631 -c 1 -i 1 -d 8724586201483913098 "
+CCP_JOBTEMPLATE=Default
+PROCESSOR_ARCHITECTURE=AMD64
+CLASSPATH=.;C:\tmp\LONG_Matlab\bin\windows\..\..\classes\common;C:\tmp\LONG_Matlab\bin\windows\..\..\classes\resource-manager;C:\tmp\LONG_Matlab\bin\windows\..\..\classes\scheduler;;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\ProActive\ProActive.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\commons-codec-1.3.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\commons-collections-3.2.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\derby.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\derbytools.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\isorelax.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\msv.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\mysql-connector-java-5.1.7-bin.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\relaxngDatatype.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\rngpack-1.1a.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\wstx-lgpl-3.9.2.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\xsdlib.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jruby-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jruby.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jsch-0.1.38.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jython-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jython.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\script-api.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\script-js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\annotation\ejb3-persistence.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\annotation\hibernate-annotations.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\annotation\hibernate-commons-annotations.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\antlr-2.7.6.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\dom4j-1.6.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\geronimo-spec-jta-1.0.1B-rc4.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\hibernate-core.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\slf4j-api-1.5.6.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\slf4j-log4j12-1.5.6.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\addons
+OS=Windows_NT
+FP_NO_HOST_CHECK=NO
+HOMEPATH=\Users\Administrator
+JARS=;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\ProActive\ProActive.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\commons-codec-1.3.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\commons-collections-3.2.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\derby.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\derbytools.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\isorelax.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\msv.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\mysql-connector-java-5.1.7-bin.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\relaxngDatatype.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\rngpack-1.1a.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\wstx-lgpl-3.9.2.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\xsdlib.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jruby-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jruby.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jsch-0.1.38.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jython-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\jython.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\script-api.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\common\script\script-js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\annotation\ejb3-persistence.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\annotation\hibernate-annotations.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\annotation\hibernate-commons-annotations.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\antlr-2.7.6.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\dom4j-1.6.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\geronimo-spec-jta-1.0.1B-rc4.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\hibernate-core.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\slf4j-api-1.5.6.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\lib\hibernate\core\slf4j-log4j12-1.5.6.jar
+nb=4
+MINGW=D:\ccs\fviale\MinGW64
+windir=C:\Windows
+NUMBER_OF_PROCESSORS=8
+PUBLIC=C:\Users\Public
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+ComSpec=C:\Windows\system32\cmd.exe
+}
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Process successfully started
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Adding shutDownHook
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Starting the Threads
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] Threads started
+[Thu Dec 02 17:00:35 GMT+01:00 2010 node2 MatlabTask] waiting for deployment
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [PAProperties] Registering ProActive properties from class org.objectweb.proactive.extensions.pamr.PAMRConfig
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [PAProperties] Registering ProActive properties from class org.objectweb.proactive.extensions.pnp.PNPConfig
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [PAProperties] Registering ProActive properties from class org.objectweb.proactive.extensions.pnpssl.PNPSslConfig
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [PAProperties] Registering ProActive properties from class org.objectweb.proactive.core.config.CentralPAPropertyRepository
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [PAProperties] Registering ProActive properties from class org.objectweb.proactive.core.ssh.proxycommand.ProxyCommandConfig
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.port --> value:0
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.default_heartbeat --> value:9000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.idle_timeout --> value:60000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.authenticate --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.benchmark.class --> value:org.objectweb.proactive.core.remoteobject.benchmark.SelectionOnly
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.ping --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.ping.url --> value:http://pinging.activeeon.com/ping.php
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast.address --> value:230.0.1.1
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast.port --> value:4554
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast.callback.class --> value:org.objectweb.proactive.core.runtime.broadcast.BTCallbackDefaultImpl
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.pamr.socketfactory --> value:plain
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.pamr.connect_timeout --> value:3000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnp.port --> value:0
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnp.default_heartbeat --> value:9000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnp.idle_timeout --> value:60000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.ssh.try_proxy_command --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration] Default Config File is: jar:file:/C:/tmp/LONG_Matlab/dist/lib/ProActive.jar!/org/objectweb/proactive/core/config/ProActiveConfiguration.xml
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.stack_trace --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.protocol.handler.pkgs is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <java.protocol.handler.pkgs, org.objectweb.proactive.core.ssh|org.objectweb.proactive.core.classloading.protocols> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.protocol.handler.pkgs --> value:org.objectweb.proactive.core.ssh|org.objectweb.proactive.core.classloading.protocols
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.ssl.cipher.suites --> value:SSL_DH_anon_WITH_RC4_128_MD5
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.maxMigrationNb --> value:-1
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.blocks_number --> value:8
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.serialization is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <ibis.serialization, ibis> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.serialization --> value:ibis
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.io.serialization.classloader is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <ibis.io.serialization.classloader, org.objectweb.proactive.core.mop.MOPClassLoader> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.io.serialization.classloader --> value:org.objectweb.proactive.core.mop.MOPClassLoader
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.name_server.host is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <ibis.name_server.host, localhost> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.name_server.host --> value:localhost
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.tag.dsf --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mop.writestubondisk --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.blocks_size_kb --> value:512
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.services_number --> value:16
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.locationserver --> value:org.objectweb.proactive.ext.locationserver.LocationServer
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.name_server.key is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <ibis.name_server.key, 1> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.name_server.key --> value:1
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.webservices.elementformdefault --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <gcm.provider, org.objectweb.proactive.core.component.Fractive> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:gcm.provider --> value:org.objectweb.proactive.core.component.Fractive
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.securitymanager --> value:true
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.ttl --> value:-1
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.tagmemory.lease.max --> value:60
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.buffer_size_kb --> value:256
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <schema.validation, true> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:schema.validation --> value:true
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.webservices.framework --> value:axis2
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.implicitgetstubonthis --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.net.disableIPv6 --> value:true
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.log4j.appender.provider --> value:org.objectweb.proactive.core.util.log.remote.ThrottlingProvider
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:components.creation.timeout --> value:10000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.rmi.port --> value:1099
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.gcmd.unix.shell --> value:/bin/sh
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.tagmemory.lease.period --> value:21
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.rmissh.try_normal_first --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.classloading.useHTTP --> value:true
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.maxTimeOnSite --> value:-1
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.future.ac --> value:true
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.protocol --> value:rmi
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.exit_on_empty --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.masterworker.compresstasks --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.locationserver.rmi --> value://localhost/LocationServer
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.stayalive --> value:true
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.test.perf.duration --> value:30000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.masterworker.pingperiod --> value:10000
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.dgc --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.updatingForwarder --> value:false
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration] User Config File is: file:/C:/Users/ADMINI~1/AppData/Local/Temp/2/c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000/ProActiveConfiguration.xml
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.stack_trace --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.ping.url --> value:http://pinging.activeeon.com/ping.php (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnp.port --> value:0 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.ping --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.ssl.cipher.suites --> value:SSL_DH_anon_WITH_RC4_128_MD5 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.authenticate --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.maxMigrationNb --> value:-1 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.blocks_number --> value:8 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.http.jetty.xml --> value:C:\tmp\LONG_Matlab\bin\windows\..\../config/rm/deployment/jetty.xml
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast.port --> value:4554 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.pamr.socketfactory --> value:plain (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.tag.dsf --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.net.nolocal --> value:true
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mop.writestubondisk --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.blocks_size_kb --> value:512 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.services_number --> value:16 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.port --> value:0 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.locationserver --> value:org.objectweb.proactive.ext.locationserver.LocationServer (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.webservices.elementformdefault --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <gcm.provider, org.objectweb.proactive.core.component.Fractive> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:gcm.provider --> value:org.objectweb.proactive.core.component.Fractive (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.securitymanager --> value:true (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:log4j.configuration --> value:file:C:\tmp\LONG_Matlab\bin\windows\..\..\config\log4j\defaultNode-log4j
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.ttl --> value:-1 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.filetransfer.buffer_size_kb --> value:256 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.tagmemory.lease.max --> value:60 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast.callback.class --> value:org.objectweb.proactive.core.runtime.broadcast.BTCallbackDefaultImpl (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.benchmark.class --> value:org.objectweb.proactive.core.remoteobject.benchmark.SelectionOnly (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <schema.validation, true> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:schema.validation --> value:true (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <proactive.codebase, http://Enterprise.NODE2:53061/proactive/classServer/> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.codebase --> value:http://Enterprise.NODE2:53061/proactive/classServer/
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.idle_timeout --> value:60000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.webservices.framework --> value:axis2 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.implicitgetstubonthis --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.net.disableIPv6 --> value:true (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.log4j.appender.provider --> value:org.objectweb.proactive.core.util.log.remote.ThrottlingProvider (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:components.creation.timeout --> value:10000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <java.security.policy, C:\tmp\LONG_Matlab\bin\windows\..\..\config\security.java.policy-client> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.security.policy --> value:C:\tmp\LONG_Matlab\bin\windows\..\..\config\security.java.policy-client
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.pamr.connect_timeout --> value:3000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.rmi.port --> value:1099 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.gcmd.unix.shell --> value:/bin/sh (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.tagmemory.lease.period --> value:21 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.rmissh.try_normal_first --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.ssh.try_proxy_command --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.classloading.useHTTP --> value:true (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.maxTimeOnSite --> value:-1 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.future.ac --> value:true (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.communication.protocol --> value:rmi (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.broadcast.address --> value:230.0.1.1 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.exit_on_empty --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnp.idle_timeout --> value:60000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.masterworker.compresstasks --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnps.default_heartbeat --> value:9000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.locationserver.rmi --> value://localhost/LocationServer (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.runtime.stayalive --> value:true (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.test.perf.duration --> value:30000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.masterworker.pingperiod --> value:10000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.pnp.default_heartbeat --> value:9000 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.dgc --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.mixedlocation.updatingForwarder --> value:false (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.runtime.name is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.runtime.name --> value:Java(TM) SE Runtime Environment
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.protocol.handler.pkgs is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.protocol.handler.pkgs --> value:org.objectweb.proactive.core.ssh|org.objectweb.proactive.core.classloading.protocols (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.boot.library.path is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.boot.library.path --> value:C:\Program Files\Java\jdk1.6.0_18\jre\bin
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vm.version is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vm.version --> value:16.0-b13
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vm.vendor is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vm.vendor --> value:Sun Microsystems Inc.
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vendor.url is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vendor.url --> value:http://java.sun.com/
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property path.separator is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:path.separator --> value:;
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vm.name is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vm.name --> value:Java HotSpot(TM) 64-Bit Server VM
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property file.encoding.pkg is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:file.encoding.pkg --> value:sun.io
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.java.launcher is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.java.launcher --> value:SUN_STANDARD
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property user.country is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:user.country --> value:US
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.os.patch.level is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.os.patch.level --> value:Service Pack 1
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.serialization is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.serialization --> value:ibis (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.io.serialization.classloader is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.io.serialization.classloader --> value:org.objectweb.proactive.core.mop.MOPClassLoader (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vm.specification.name is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vm.specification.name --> value:Java Virtual Machine Specification
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property user.dir is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:user.dir --> value:C:\tmp\LONG_Matlab\bin\windows
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.name_server.host is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.name_server.host --> value:localhost (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.runtime.version is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.runtime.version --> value:1.6.0_18-b07
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.awt.graphicsenv is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.awt.graphicsenv --> value:sun.awt.Win32GraphicsEnvironment
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.endorsed.dirs is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.endorsed.dirs --> value:C:\Program Files\Java\jdk1.6.0_18\jre\lib\endorsed
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property os.arch is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:os.arch --> value:amd64
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.io.tmpdir is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.io.tmpdir --> value:C:\Users\ADMINI~1\AppData\Local\Temp\2\
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property line.separator is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:line.separator --> value:
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vm.specification.vendor is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vm.specification.vendor --> value:Sun Microsystems Inc.
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property user.variant is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:user.variant --> value:
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property os.name is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:os.name --> value:Windows Server 2008
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property ibis.name_server.key is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:ibis.name_server.key --> value:1 (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <gcm.provider, org.objectweb.proactive.core.component.Fractive> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:gcm.provider --> value:org.objectweb.proactive.core.component.Fractive (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:log4j.configuration --> value:file:C:\tmp\LONG_Matlab\bin\windows\..\..\config\log4j\defaultNode-log4j (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.jnu.encoding is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.jnu.encoding --> value:Cp1252
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.library.path is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.library.path --> value:C:\tmp\LONG_Matlab\dist\lib\7.5\bin\win64
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.specification.name is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.specification.name --> value:Java Platform API Specification
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.class.version is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.class.version --> value:50.0
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <proactive.codebase, http://Enterprise.NODE2:53061/proactive/classServer/> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.codebase --> value:http://Enterprise.NODE2:53061/proactive/classServer/ (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <schema.validation, true> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:schema.validation --> value:true (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.management.compiler is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.management.compiler --> value:HotSpot 64-Bit Server Compiler
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property os.version is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:os.version --> value:6.0
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property user.home is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:user.home --> value:C:\Users\Administrator
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <java.security.policy, C:\tmp\LONG_Matlab\bin\windows\..\..\config\security.java.policy-client> as System property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.security.policy --> value:C:\tmp\LONG_Matlab\bin\windows\..\..\config\security.java.policy-client (OVERRIDE)
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property user.timezone is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:user.timezone --> value:GMT+01:00
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.awt.printerjob is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.awt.printerjob --> value:sun.awt.windows.WPrinterJob
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property file.encoding is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:file.encoding --> value:Cp1252
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.specification.version is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.specification.version --> value:1.6
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.class.path is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.class.path --> value:C:\tmp\LONG_Matlab\dist\lib\7.5\bin\win64;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\script-js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jruby-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jython-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-logging-1.1.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_SRM-common.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_ResourceManager.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-worker.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-matsci.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-httpclient-3.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-codec-1.3.jar
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property user.name is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:user.name --> value:Administrator
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vm.specification.version is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vm.specification.version --> value:1.0
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.home is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.home --> value:C:\Program Files\Java\jdk1.6.0_18\jre
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.arch.data.model is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.arch.data.model --> value:64
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property user.language is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:user.language --> value:en
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.specification.vendor is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.specification.vendor --> value:Sun Microsystems Inc.
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property awt.toolkit is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:awt.toolkit --> value:sun.awt.windows.WToolkit
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vm.info is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vm.info --> value:mixed mode
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.version is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.version --> value:1.6.0_18
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.ext.dirs is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.ext.dirs --> value:C:\Program Files\Java\jdk1.6.0_18\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.boot.class.path is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.boot.class.path --> value:C:\Program Files\Java\jdk1.6.0_18\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_18\jre\classes
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vendor is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vendor --> value:Sun Microsystems Inc.
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.configuration --> value:file:/C:/Users/ADMINI~1/AppData/Local/Temp/2/c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000/ProActiveConfiguration.xml
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property file.separator is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:file.separator --> value:\
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property java.vendor.url.bug is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.vendor.url.bug --> value:http://java.sun.com/cgi-bin/bugreport.cgi
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.io.unicode.encoding is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.io.unicode.encoding --> value:UnicodeLittle
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.cpu.endian is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.cpu.endian --> value:little
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.desktop is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.desktop --> value:windows
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] System property sun.cpu.isalist is not a ProActive property
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:sun.cpu.isalist --> value:amd64
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveInet] At least one proactive.net.* property defined. Using the matching algorithm to elect an IP address
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveInet] Discarded /0:0:0:0:0:0:0:1 because of the no loopback criteria
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveInet] Discarded /127.0.0.1 because of the no loopback criteria
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][INFO ] [StartPARuntime] Starting a ProActiveRuntime on Enterprise.NODE2
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [StartPARuntime] **** Starting jvm with classpath C:\tmp\LONG_Matlab\dist\lib\7.5\bin\win64;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\script-js.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jruby-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\jython-engine.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-logging-1.1.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_SRM-common.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_ResourceManager.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-worker.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\ProActive_Scheduler-matsci.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-httpclient-3.1.jar;C:\tmp\LONG_Matlab\bin\windows\..\..\dist\lib\commons-codec-1.3.jar
+[ Thu Dec 02 17:00:36 GMT+01:00 2010 ][node2 OUT][DEBUG] [StartPARuntime] ****              with bootclasspath C:\Program Files\Java\jdk1.6.0_18\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_18\jre\classes
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveRuntimeImpl] ProActive Security Policy (proactive.runtime.security) not set. Runtime Security disabled 
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [Slf4jLog] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container Server@6490832e + SelectChannelConnector@0.0.0.0:0 as connector
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container Server@6490832e + org.objectweb.proactive.core.httpserver.UnboundedThreadPool@162db19d as threadpool
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] parse: file:/C:/tmp/LONG_Matlab/bin/windows/../../config/rm/deployment/jetty.xml
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] parsing: sid=file:/C:/tmp/LONG_Matlab/bin/windows/../../config/rm/deployment/jetty.xml,pid=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] resolveEntity(-//Mort Bay Consulting//DTD Configure//EN, http://jetty.mortbay.org/configure.dtd)
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Redirected entity http://jetty.mortbay.org/configure.dtd --> jar:file:/C:/tmp/LONG_Matlab/dist/lib/http-2.0.4.jar!/org/mortbay/xml/configure_6_0.dtd
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] XML new class java.util.Random
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] XML new class org.mortbay.jetty.servlet.HashSessionIdManager
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] XML Server@6490832e.setSessionIdManager(org.mortbay.jetty.servlet.HashSessionIdManager@26659db7)
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container Server@6490832e + org.mortbay.jetty.servlet.HashSessionIdManager@26659db7 as sessionIdManager
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container Server@6490832e + org.mortbay.jetty.servlet.Context@7a7c3885{/proactive,null} as handler
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container SessionHandler@7162e295 + ServletHandler@1309de5b as handler
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container SessionHandler@7162e295 + org.mortbay.jetty.servlet.HashSessionManager@6ce53220 as sessionManager
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container org.mortbay.jetty.servlet.Context@7a7c3885{/proactive,null} + SessionHandler@7162e295 as handler
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [Slf4jLog] jetty-6.1.x
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started org.mortbay.jetty.servlet.HashSessionIdManager@26659db7
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container org.mortbay.jetty.servlet.Context@7a7c3885{/proactive,null} + ErrorHandler@4abf053f as errorHandler
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started org.mortbay.jetty.servlet.HashSessionManager@6ce53220
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] filterNameMap=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] pathFilters=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] servletFilterMap=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] servletPathMap=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] servletNameMap=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] starting ServletHandler@1309de5b
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started ServletHandler@1309de5b
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] starting SessionHandler@7162e295
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started SessionHandler@7162e295
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] starting org.mortbay.jetty.servlet.Context@7a7c3885{/proactive,null}
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] starting ErrorHandler@4abf053f
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started ErrorHandler@4abf053f
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started org.mortbay.jetty.servlet.Context@7a7c3885{/proactive,null}
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] starting Server@6490832e
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started org.mortbay.jetty.nio.SelectChannelConnector$1@7bd6747b
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [Slf4jLog] Started SelectChannelConnector@0.0.0.0:53194
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started SelectChannelConnector@0.0.0.0:53194
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started Server@6490832e
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.http.port --> value:53194
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [HTTPServer] Started the HTTP server on port 53194
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container ServletHandler@1309de5b + org.objectweb.proactive.core.httpserver.ClassServerServlet-1130907398 as servlet
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] Container ServletHandler@1309de5b + (S=org.objectweb.proactive.core.httpserver.ClassServerServlet-1130907398,[/classServer/*]) as servletMapping
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] filterNameMap=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] pathFilters=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] servletFilterMap=null
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] servletPathMap={/classServer/*=org.objectweb.proactive.core.httpserver.ClassServerServlet-1130907398}
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] servletNameMap={org.objectweb.proactive.core.httpserver.ClassServerServlet-1130907398=org.objectweb.proactive.core.httpserver.ClassServerServlet-1130907398}
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [Slf4jLog] started org.objectweb.proactive.core.httpserver.ClassServerServlet-1130907398
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [HTTPServer] Registered servlet org.objectweb.proactive.core.httpserver.ClassServerServlet with mapping /classServer/*
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <java.rmi.server.codebase, http://Enterprise.NODE2:53194/proactive/classServer/> as System property
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.rmi.server.codebase --> value:http://Enterprise.NODE2:53194/proactive/classServer/
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pamr, class org.objectweb.proactive.extensions.pamr.remoteobject.PAMRRemoteObjectFactory> found
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pnp, class org.objectweb.proactive.extensions.pnp.PNPRemoteObjectFactory> found
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <pnps, class org.objectweb.proactive.extensions.pnpssl.PNPSslRemoteObjectFactory> found
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [RemoteObjectProtocolFactoryRegistry] Remote Object Factory provider <rmissl, class org.objectweb.proactive.extra.rmissl.RmiSslRemoteObjectFactory> found
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <java.rmi.server.codebase, http://Enterprise.NODE2:53194/proactive/classServer/ http://Enterprise.NODE2:53194/proactive/classServer/> as System property
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:java.rmi.server.codebase --> value:http://Enterprise.NODE2:53194/proactive/classServer/ http://Enterprise.NODE2:53194/proactive/classServer/ (OVERRIDE)
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][INFO ] [RegistryHelper] Detected an existing RMI Registry on port 1099
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractRmiRemoteObjectFactory]  successfully bound in registry at rmi://Enterprise.NODE2:1099/PA_JVM867711240
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <proactive.codebase, http://Enterprise.NODE2:53194/proactive/classServer/> as System property
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.codebase --> value:http://Enterprise.NODE2:53194/proactive/classServer/ (OVERRIDE)
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] Exported <proactive.codebase, http://Enterprise.NODE2:53194/proactive/classServer/> as System property
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveConfiguration$CustomProperties] key:proactive.codebase --> value:http://Enterprise.NODE2:53194/proactive/classServer/ (OVERRIDE)
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveRuntimeImpl] Capacity set to 1. Creating the nodes...
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getRemoteObjectSet
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.remoteobject.RemoteObjectSet org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getRemoteObjectSet() throws java.io.IOException
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@6aadae91
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@6aadae91
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@6aadae91
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getClassName
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@9642bd6
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getTargetClass
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:37 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@9642bd6
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getAdapterClass
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@9642bd6
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getVMInformation
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURL
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [RuntimeFactory] proActiveRunTimeURL rmi://Enterprise.NODE2:1099/PA_JVM1319969786
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractRmiRemoteObjectFactory] rmi://Enterprise.NODE2:1099/PA_JVM1319969786 looked up successfully
+[Thu Dec 02 17:00:38 GMT+01:00 2010 node2 RegistrationListener] Notification received
+[Thu Dec 02 17:00:38 GMT+01:00 2010 node2 RegistrationListener] Notification accepted
+[Thu Dec 02 17:00:38 GMT+01:00 2010 node2 RegistrationListener] Creating Node
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = createLocalNode
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.node.Node org.objectweb.proactive.core.runtime.ProActiveRuntime.createLocalNode(java.lang.String,boolean,org.objectweb.proactive.core.security.ProActiveSecurityManager,java.lang.String) throws org.objectweb.proactive.core.node.NodeException,java.rmi.AlreadyBoundException
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractRmiRemoteObjectFactory]  successfully bound in registry at rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractRmiRemoteObjectFactory] rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 looked up successfully
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getRemoteObjectSet
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.remoteobject.RemoteObjectSet org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getRemoteObjectSet() throws java.io.IOException
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getObjectProxy
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getObjectProxy()
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:38 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[Thu Dec 02 17:00:38 GMT+01:00 2010 node2 RegistrationListener] Node Created :org.objectweb.proactive.core.node.NodeImpl@9f966b60
+[Thu Dec 02 17:00:38 GMT+01:00 2010 node2 RegistrationListener] Waking up main thread
+[Thu Dec 02 17:00:38 GMT+01:00 2010 node2 MatlabTask] Deploying Worker
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = createBody
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.body.UniversalBody org.objectweb.proactive.core.runtime.ProActiveRuntime.createBody(java.lang.String,org.objectweb.proactive.core.mop.ConstructorCall,boolean) throws org.objectweb.proactive.core.ProActiveException,org.objectweb.proactive.core.mop.ConstructorCallExecutionFailedException,java.lang.reflect.InvocationTargetException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractRmiRemoteObjectFactory]  successfully bound in registry at rmi://Enterprise.NODE2:1099/82614
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getRemoteObjectSet
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.remoteobject.RemoteObjectSet org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getRemoteObjectSet() throws java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@4b3ec2dd
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@4b3ec2dd
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@4b3ec2dd
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getObjectProxy
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getObjectProxy()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@4b3ec2dd
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractBody] Active Object security Off
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [NodeFactory] NodeFactory: getNode() for rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [RuntimeFactory] proActiveRunTimeURL rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractRmiRemoteObjectFactory] rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 looked up successfully
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getRemoteObjectSet
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.remoteobject.RemoteObjectSet org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getRemoteObjectSet() throws java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getClassName
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@ba8402c
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getTargetClass
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@ba8402c
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getAdapterClass
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@ba8402c
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getVMInformation
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURL
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getLocalNodeProperty
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [NodeFactory] NodeFactory: getNode() for rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [RuntimeFactory] proActiveRunTimeURL rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [AbstractRmiRemoteObjectFactory] rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 looked up successfully
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getRemoteObjectSet
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.remoteobject.RemoteObjectSet org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getRemoteObjectSet() throws java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURI
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.net.URI org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject.getURI() throws org.objectweb.proactive.core.ProActiveException,java.io.IOException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.InternalRemoteRemoteObjectImpl@77762fc7
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getClassName
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.remoteobject.RemoteObject.getClassName()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@ba8402c
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getTargetClass
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getTargetClass()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@ba8402c
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getAdapterClass
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Class org.objectweb.proactive.core.remoteobject.RemoteObject.getAdapterClass()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.remoteobject.RemoteObject
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.remoteobject.RemoteObjectImpl@ba8402c
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getVMInformation
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract org.objectweb.proactive.core.runtime.VMInformation org.objectweb.proactive.core.runtime.ProActiveRuntime.getVMInformation()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getURL
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getURL()
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = getLocalNodeProperty
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.String org.objectweb.proactive.core.runtime.ProActiveRuntime.getLocalNodeProperty(java.lang.String,java.lang.String) throws org.objectweb.proactive.core.ProActiveException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.runtime.ProActiveRuntime
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.objectweb.proactive.core.runtime.ProActiveRuntimeImpl@27bc4ec8
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [ActiveBody] Starting Body
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveRuntimeWrapper] [bodyCreated]#[ProActiveRuntimeWrapper.sendNotification] source=org.objectweb.proactive.core.runtimes:type=Runtime,runtimeUrl=rmi-//Enterprise.NODE2-1099/PA_JVM867711240, userData=org.objectweb.proactive.core.jmx.notification.BodyNotificationData@68fc8e75
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MigratableBody] Body run on node rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 migration=false
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MigratableBody] Body run on node rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 migration=false
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [ProActiveRuntimeImpl] nodeName Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=null
+[Thu Dec 02 17:00:39 GMT+01:00 2010 node2 MatlabTask] Executing the task, try 1
+[Thu Dec 02 17:00:39 GMT+01:00 2010 node2 MatlabTask] Initializing
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = receiveRequest
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject Body for org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker node=rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 id=82614
+[Thu Dec 02 17:00:39 GMT+01:00 2010 node2 MatlabTask] Executing
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: init, destination request queue length: 1
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [BlockingRequestQueueImpl] Adding request init
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: init, destination request queue length: 0
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [RequestImpl] Serving init
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = init
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public void org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker.init(java.lang.String,java.util.ArrayList,org.ow2.proactive.scheduler.ext.matlab.common.PASolveMatlabGlobalConfig,org.ow2.proactive.scheduler.ext.matlab.common.PASolveMatlabTaskConfig,org.ow2.proactive.scheduler.ext.matlab.worker.util.MatlabEngineConfig)
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker
+[ Thu Dec 02 17:00:39 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker@62135133
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = receiveRequest
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [RequestImpl] result: [null]
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [voidRequestServed]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: init, destination request queue length: 0
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject Body for org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker node=rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 id=82614
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=null
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: execute, destination request queue length: 1
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [BlockingRequestQueueImpl] Adding request execute
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: execute, destination request queue length: 0
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [RequestImpl] Serving execute
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = execute
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public java.io.Serializable org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker.execute(int,org.ow2.proactive.scheduler.common.task.TaskResult[]) throws java.lang.Throwable
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker@62135133
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = receiveFTMessage
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract java.lang.Object org.objectweb.proactive.core.body.UniversalBody.receiveFTMessage(org.objectweb.proactive.core.body.ft.internalmsg.FTMessage) throws java.io.IOException
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject Body for org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker node=rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 id=82614
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT]Starting a new Matlab engine:
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT]Matlab home : C:\Program Files\MATLAB\R2007b
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT]Matlab version : 7.5
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT]Matlab lib directory name : bin\win64
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT]Matlab bin directory  : bin
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT]Matlab command name : matlab.exe
+[ Thu Dec 02 17:00:40 GMT+01:00 2010 ][node2 OUT]Ptolemy lib dir : C:\tmp\LONG_Matlab\dist\lib\7.5\bin\win64
+[ Thu Dec 02 17:00:44 GMT+01:00 2010 ][node2 OUT]ptmatlabEngOutputBuffer: set, engine=183896608, p=0x82b19d0, n=2048
+[ Thu Dec 02 17:00:44 GMT+01:00 2010 ][node2 OUT]183896608 = matlabEngine.open(""C:\Program Files\MATLAB\R2007b\bin\matlab.exe" -automation")
+[ Thu Dec 02 17:00:44 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("clear all;")
+[ Thu Dec 02 17:00:44 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("cd('C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718');")
+[ Thu Dec 02 17:00:44 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:44 GMT+01:00 2010 ][node2 OUT]Unzipping source files
+[ Thu Dec 02 17:00:44 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("restoredefaultpath;")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("addpath('C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler');")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("unzip('C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler\MatlabPAsolveSrc_0_4_1.zip','C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler');")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]Contents of C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler\MatlabPAsolveSrc_0_4_1.zip
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler\MatlabPAsolveVarIn_0_4_1.mat
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler\PAsolve.m
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("load('C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler\MatlabPAsolveVarIn_0_4_1.mat');")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("who")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]Your variables are:
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]RESTOREDEFAULTPATH_EXECUTED  in1                          
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]Feeding input:
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]i=0;
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("i=0;")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]Executing Matlab command:
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]out = factorial(in1);
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("out = factorial(in1);
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]Matlab command completed successfully
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]Receiving output:
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("save('C:\Users\ADMINI~1\AppData\Local\Temp\2\PA_JVM1319969786\PA_JVM1319969786_GCMNode-0\1\25718\PAScheduler\MatlabPAsolveVarOut_0_4_1.mat','out','-v7');")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]true
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [RequestImpl] result: [ptolemy.data.BooleanToken]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: execute, destination request queue length: 0
+[Thu Dec 02 17:00:46 GMT+01:00 2010 node2 MatlabTask] Received result
+[Thu Dec 02 17:00:46 GMT+01:00 2010 node2 MatlabTask] Packing memory in Matlabengine
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=null
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = receiveRequest
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public abstract int org.objectweb.proactive.core.body.UniversalBody.receiveRequest(org.objectweb.proactive.core.body.request.Request) throws java.io.IOException,org.objectweb.proactive.core.security.exceptions.RenegotiateSessionException
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = interface org.objectweb.proactive.core.body.UniversalBody
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject Body for org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker node=rmi://Enterprise.NODE2:1099/Matlab_c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000_0 id=82614
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [requestReceived]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: pack, destination request queue length: 1
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [BlockingRequestQueueImpl] Adding request pack
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [servingStarted]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: pack, destination request queue length: 0
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [RequestImpl] Serving pack
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() name = pack
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod = public boolean org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker.pack()
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() reifiedMethod.getDeclaringClass() = class org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [MethodCall] MethodCall.execute() targetObject org.ow2.proactive.scheduler.ext.matlab.worker.AOMatlabWorker@62135133
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]matlabEngine.evalString("pack;")
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [RequestImpl] result: [java.lang.Boolean]
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [replySent]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=Request source: 25718, destination: 82614, methodName: pack, destination request queue length: 0
+[Thu Dec 02 17:00:46 GMT+01:00 2010 node2 MatlabTask] Task completed successfully
+[Thu Dec 02 17:00:46 GMT+01:00 2010 node2 MatlabTask] Killing selection process...
+Killing process 8020
+[Thu Dec 02 17:00:46 GMT+01:00 2010 node2 MatlabTask] Destroying processes with SELECTION_SCRIPT=c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000
+[ Thu Dec 02 17:00:46 GMT+01:00 2010 ][node2 OUT][DEBUG] [BodyWrapper] [waitForRequest]#[BodyWrapper.sendNotification] source=org.objectweb.proactive.core.body:type=AO,aoID=82614, userData=null
+Matched :
+"C:\Program Files\MATLAB\R2007b\bin\win64\MATLAB.exe" "/MLAutomation" "-Embedding" "-r" "a=1,a=1,if a,fid = fopen('C:\Users\ADMINI~1\AppData\Local\Temp\2\c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000\matlabTest1.lock','w'),fclose(fid),else exit(),end;while true,pause(500),a=1,a=1,end;exit()" 
+SELECTION_SCRIPT=c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000
+Killing process 6728
+[Thu Dec 02 17:00:46 GMT+01:00 2010 node2 MatlabTask] Closing output
+[Thu Dec 02 17:00:57 GMT+01:00 2010 node2 MatlabTask] Checking Processes...
+[Thu Dec 02 17:00:57 GMT+01:00 2010 node2 MatlabTask] Executing the task, try 1
+[Thu Dec 02 17:00:57 GMT+01:00 2010 node2 MatlabTask] Initializing
+[Thu Dec 02 17:00:57 GMT+01:00 2010 node2 MatlabTask] Killing selection process...
+Killing process 2544
+[Thu Dec 02 17:00:57 GMT+01:00 2010 node2 MatlabTask] Destroying processes with SELECTION_SCRIPT=c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000
+Matched :
+"C:\Program Files\MATLAB\R2007b\bin\win64\MATLAB.exe" "/MLAutomation" "-Embedding" "-r" "a=1,a=1,if a,fid = fopen('C:\Users\ADMINI~1\AppData\Local\Temp\2\c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000\matlabTest1.lock','w'),fclose(fid),else exit(),end;while true,pause(500),a=1,a=1,end;exit()" 
+SELECTION_SCRIPT=c6cc518bb519b270_74a0d1ba_12ca7ce7ae6__8000
+Killing process 4160
+[Thu Dec 02 17:00:57 GMT+01:00 2010 node2 MatlabTask] Closing output
